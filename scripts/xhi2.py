@@ -210,11 +210,47 @@ def xhi2(muti,thres):
 			xhi2val[x[0]]=xhi2val[x[0]]+y
 	return xhi2val
 			
-			
+
+def distribution_distance_build(p_cooccurrences,dico_termes):
+	epsilon = 0.0
+	distribution_distance={}
+	N = len(dico_termes.keys())
+	for x in range(N):
+		x=x+1
+		for y in range(N):
+			y=y+1
+			if y>x:
+				dist_xy = 0.
+				occ_y = 0.
+				occ_x =0.
+				
+				for z in range(N):
+					z=z+1
+					try:
+						dist_x = float(p_cooccurrences[(x,z,0)])
+					except:
+						dist_x = epsilon
+					occ_x=occ_x+dist_x
+					try:	
+						dist_y = float(p_cooccurrences[(y,z,0)])
+					except:
+						dist_y = epsilon
+					occ_y=float(occ_y+dist_y)
+				#	if dist_x >epsilon or dist_y>epsilon:
+				#		if dist_x>
+				#		dist_xy = dist_xy + dist_x *math.log10((dist_x)/(dist_y))
+					dist_xy = float(dist_xy  +math.sqrt(float(dist_x*dist_y)))
+				if dist_xy>0:
+					distribution_distance[(x,y)]=  - math.log(dist_xy/ math.sqrt(float(occ_x*occ_y)))
+	return distribution_distance
+	
 def export_concepts_xhi2 (xhi2val,p_cooccurrences,dico_termes,dico_lemmes):
 	conceptxhi2 = open(path_req + 'conceptsxhi2.csv','w')
 	for x in dico_termes:
-		conceptxhi2.write(dico_lemmes[x] + '\t' + dico_termes[x] + '\t' + str(p_cooccurrences[(x,x,0)]).replace('.',',') + '\t' + str(xhi2val[x]).replace('.',',')+ '\t' + str(xhi2val[x]*p_cooccurrences[(x,x,0)]).replace('.',',') + '\n' )
+		try:
+			conceptxhi2.write(dico_lemmes[x] + '\t' + dico_termes[x] + '\t' + str(p_cooccurrences[(x,x,0)]).replace('.',',') + '\t' + str(xhi2val[x]).replace('.',',')+ '\t' + str(xhi2val[x]*p_cooccurrences[(x,x,0)]).replace('.',',') + '\n' )
+		except:
+			conceptxhi2.write(dico_lemmes[x] + '\t' + dico_termes[x] + '\t' + '\t' + '\t' +  '\t'+ '\t' + '\t' + '\n' )
 		
 print '\n'		
 dico_termes,dico_lemmes=build_dico()
@@ -231,18 +267,23 @@ years_bins = []
 for y in range(datef-dated+1):
 	years_bins.append(y+dated)
 years_bins=[years_bins]
-#contenu = fonctions_bdd.select_bdd_table(name_bdd,'sem','concept1,concept2,jours,id_b',requete)
 contenu = fonctions_bdd.select_bdd_table(name_bdd,'billets','concepts_id,jours,id',requete)
 print "contenu importé"
 print '\n'
 
 p_cooccurrences = build_cooc_matrix(contenu,years_bins)
 
+distribution_distance = distribution_distance_build(p_cooccurrences,dico_termes)
+print '\nrapprochements suggérés:\n'
+
+for x,y in distribution_distance.iteritems():
+	if y>2:
+		print dico_termes[x[0]] + '\t'+dico_termes[x[1]] + '\t' + str(y) 
 print "matrice de cooccurrence construite"
 muti = build_mutual_information(p_cooccurrences)
 
 
 
-thres=0.6
+thres=0.
 xhi2val = xhi2(muti,thres)
 export_concepts_xhi2(xhi2val,p_cooccurrences,dico_termes,dico_lemmes)
