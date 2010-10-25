@@ -1,0 +1,33 @@
+NN_injection	NN_infection
+NN_planting	NN_planning
+NN_linkage	NN_lineage
+JJ_double-stranded NP_rna	JJ_double-stranded NN_dna
+JJ_viral NP_rna	JJ_viral NN_dna
+NP_rna NN_polymerase NN_i	NP_rna NN_polymerase NP_ii
+NP_rna NN_polymerase NN_i	NP_rna NN_polymerase NP_iii
+NP_rna NN_polymerase NP_ii	NP_rna NN_polymerase NP_iii
+NN_mobility	NN_motility
+JJ_molecular NN_mass	JJ_molecular NN_basis
+NN_class NP_ii NN_molecule	NN_class NN_i NN_molecule
+NN_nucleoside	NN_nucleotide
+NN_deletion	NN_depletion
+JJ_cyclic amp	JJ_cyclic gmp
+cd4+ NN_t NN_cell	cd8+ NN_t NN_cell
+NN_friction	NN_fraction
+JJ_transcriptional NN_repressor	JJ_transcriptional NN_repression
+NP_hepatitis NP_b	NP_hepatitis NP_c
+NN_topography	NN_tomography
+5-bisphosphate	5-trisphosphate
+JJ_cyclic gmp	JJ_cyclic NN_amp
+NN_cytosine	cytokine
+JJ_ribosomal NP_rna	JJ_ribosomal NN_dna
+NN_chromatin	NN_chromatid
+NN_polymerase NP_ii	NN_polymerase NP_iii
+interleukin-1	interleukin-2
+NN_repression	NN_regression
+NP_hepatitis NP_c NN_virus	NP_hepatitis NP_b NN_virus
+JJ_human NN_x NN_chromosome	JJ_human NN_chromosome
+cd4 NN_antigen	cd8 NN_antigen
+NN_network IN_with NN_neuron	NN_network IN_within NN_neuron
+
+NN_effect IN_of	NN_effect IN_on

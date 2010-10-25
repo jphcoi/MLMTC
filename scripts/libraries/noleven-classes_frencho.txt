@@ -1,0 +1,487 @@
+n']_VE_poster PR_par ma_n	o']_VE_poster PR_par st_o
+AD_social KO_et AD_économique	AD_social KO_et AD_écologique
+AD_plus PR_de 3oc	AD_plus PR_de 2oc
+AD_humain PR_de DE_le NO_nature	AD_humain KO_et PR_de DE_le NO_nature
+NO_environnement AD_ne	NO_environnement une
+conférence PR_du NO_part	conférence PR_du NO_partie
+AD_européen PR_du 26.05.10	AD_européen PR_du 31.05.10
+AD_européen PR_du 26.05.10	AD_européen PR_du 11.05.10
+AD_européen PR_du 26.05.10	AD_européen PR_du 02.06.10
+NO_développement AD_durable avec	NO_développement AD_durable des
+NU_deux NO_tour	NU_deux NO_jour
+NO_ministère PR_de DE_le ecologie	NO_ministère PR_de DE_le economie
+VE_rendre PR_du NO_compte	VE_rendre AD_pas NO_compte
+NO_développement AD_rural	développement AD_durable
+NO_développement AD_rural	NO_développement AD_durable
+NO_développement AD_durable un	NO_développement AD_durable dans
+NO_développement AD_durable un	NO_développement AD_durable des
+NO_environnement PR_de NO_travail	NO_environnement KO_et NO_travail
+VE_être PR_en NO_danger	VE_être DE_un NO_danger
+NO_million PR_de NO_tonne	NO_millier PR_de NO_tonne
+AD_ne VE_concerner AD_pas	AD_ne VE_contenir AD_pas
+NO_dizaine PR_de NO_millier	NO_dizaine PR_de NO_million
+AD_ne VE_correspondre AD_pas	AD_ne VE_correspondre AD_plus
+NO_article NU_l	NO_article 6
+AD_publique une	AD_publique AD_ne
+AD_encontre PR_de NO_personne	AD_encontre PR_du NO_personne
+NO_partage	partagez
+courriel	NO_courrier
+VE_devoir VE_progresser PR_de 6	VE_devoir VE_progresser PR_de 5 SY_%
+NO_incitation	NO_invitation
+NO_mesure PR_de NO_précaution	NO_mesure PR_de NO_prévention
+recherche SY_&	NO_recherche m
+VE_être AD_pas DE_le AD_même	VE_être PR_dans DE_le AD_même
+NO_article NU_l	NO_article 4
+NO_environnement AD_ne	environnement un
+VE_consulter DE_le NO_note	VE_consulter DE_le NO_site
+AD_nouveau NO_étude	AD_nouveau NO_étape
+capital	NO_capitale
+VE_falloir AD_encore	VE_faire AD_encore
+VE_être PR_en NO_fait	VE_être DE_un NO_fait
+VE_faire AD_tout	VE_falloir AD_tout
+VE_boucher DE_le NO_puits	VE_boucher DE_le NO_fuite
+% PR_du NO_salaire_% des salaires	% PR_du NO_salarié_% des salariés
++_.line1 +	+_.line2 +
++_.line1 +	+_.line3 +
++_.line2 +	+_.line3 +
+milliard PR_de NO_euro_1 milliards de euros	million PR_de NO_euro_1 millions de euros
+milliard PR_de NO_euro_10 milliards de euros	million PR_de NO_euro_10 millions de euros
+milliard PR_de NO_euro_2 milliards de euros	million PR_de NO_euro_2 millions de euros
+@ord@ en_2009. en	@ord@ un_2009. un
+@ord@ un_2009. un	@ord@ une_2009. une
+milliard PR_de NO_euro_3 milliards de euros	million PR_de NO_euro_3 millions de euros
+milliard PR_de NO_euro_30 milliards de euros	million PR_de NO_euro_30 millions de euros
+milliard PR_de NO_euro_4 milliards de euros	million PR_de NO_euro_4 millions de euros
+milliard PR_de NO_euro_5 milliards de euros	million PR_de NO_euro_5 millions de euros
+milliard PR_de NO_euro_6 milliards de euros	million PR_de NO_euro_6 millions de euros
+milliard PR_de NO_euro_7 milliards de euros	million PR_de NO_euro_7 millions de euros
+milliard PR_de NO_euro_8 milliards de euros	million PR_de NO_euro_8 millions de euros
+afrique PR_du NO_nord_Afrique des Nord	afrique PR_du NO_sud_Afrique des Sud
+amérique PR_du NO_nord_Amérique des Nord	amérique PR_du NO_sud_Amérique des Sud
+europe PR_de DE_le NO_est_Europe de la Est	europe PR_de DE_le NO_ouest_Europe de la Ouest
+.line1 SY_+	.line2 SY_+
+.line1 SY_+	.line3 SY_+
+.line2 SY_+	.line3 SY_+
+NU_@ord@ en	NU_@ord@ un
+NU_@ord@ un	NU_@ord@ une
+NU_xxie NO_siècle	NU_xxe NO_siècle
+VE_avoir VE_avoir NO_droit	VE_avoir DE_le NO_droit
+NO_centaine PR_de NO_milliard	NO_centaine PR_de NO_millier
+commande	NO_commando
+NO_compagne	NO_compagnie
+NO_composante	NO_composant
+NO_conduit	NO_conduite
+coupe PR_du NA_monde	VE_couper PR_du NO_monde
+diffuser	NO_diffuseur
+NO_dizaine PR_de NO_milliard	NO_dizaine PR_de NO_millier
+NO_démocrate	NO_démocratie
+VE_être PR_de AD_nouveau	VE_être DE_un AD_nouveau
+VE_être PR_de AD_nouveau	VE_être PR_à AD_nouveau
+VE_être PR_en AD_bon	VE_être DE_un AD_bon
+VE_être DE_le NO_solution	VE_être DE_un NO_solution
+VE_être AD_pas AD_bon	VE_être AD_pas AD_non
+VE_être AD_pas AD_facile	VE_être AD_plus AD_facile
+VE_être DE_un AD_nouveau	VE_être PR_à AD_nouveau
+VE_être AD_vide	VE_être AD_vite
+VE_faire AD_aussi	VE_falloir AD_aussi
+VE_faire AD_bien	VE_faire NO_rien
+VE_faire AD_bien	VE_falloir AD_bien
+VE_faire AD_donc	VE_falloir AD_donc
+VE_faire AD_plus	VE_falloir AD_plus
+NO_fil PR_du NO_année	NO_fin PR_du NO_année
+NO_infection	NO_injection
+NO_maire PR_de NA_paris	NO_mairie PR_de NA_paris
+NO_milliard PR_de NO_euro	NO_millier PR_de NO_euro
+NO_millier PR_de NO_euro	NO_million PR_de NO_euro
+AD_ne VE_avoir AD_plus	AD_ne VE_aller AD_plus
+AD_ne PR_le VE_faire AD_pas	AD_ne PR_se VE_faire AD_pas
+AD_nouveau NO_forme	AD_nouveau NO_norme
+parametres	parametres+
+AD_petit NO_fille	AD_petit NO_ville
+VE_pouvoir AD_bien	VE_pouvoir AD_rien
+NO_photographe	NO_photographie
+NO_planche	NO_plancher
+id_NO_var en_id	id_NO_var in_id
+NO_ministère PR_de DE_le ecologie	ministère PR_de DE_le economie
+VE_avoir NO_droit	VE_avoir AD_droit
+VE_être DE_le AD_nouveau	VE_être AD_pas AD_nouveau
+NO_produit PR_de NO_base	NO_produit PR_à NO_base
+NO_altitude	NO_attitude
+NO_article NU_l VE_avoir	NO_article NU_l e
+NO_assistance	NO_assistant
+NO_campagne	NO_compagne
+AD_définitivement DE_le NO_fuite	AD_définitivement DE_le NO_puits
+NO_facture	NO_fracture
+NA_france VE_avoir	NA_france VE_aller
+NA_france AD_ne VE_être	NA_france PR_se VE_être
+NO_gouvernement VE_avoir	NO_gouvernement AD_ne
+NO_gouvernement VE_avoir	NO_gouvernement VE_aller
+NO_gouvernement AD_ne	NO_gouvernement VE_aller
+NO_million PR_de NO_litre	NO_million PR_de NO_livre
+NO_million PR_de NO_personne VE_avoir	NO_million PR_de NO_personne VE_être
+NO_ministre PR_de DE_le ecologie	NO_ministre PR_de DE_le economie
+NA_nicolas sarkozy VE_être	NA_nicolas sarkozy PR_se VE_être
+NO_personne VE_avoir VE_être	NO_personne AD_ne VE_être
+NO_personne VE_avoir VE_être	NO_personne PR_se VE_être
+NO_personne AD_ne VE_être	NO_personne AD_ne VE_pouvoir
+NO_personne AD_ne VE_être	NO_personne PR_se VE_être
+NO_personne PR_qui VE_avoir	NO_personne PR_qui AD_ne
+NO_rom PR_de NA_roumanie	NO_rom PR_en NA_roumanie
+NO_réaction	NO_rédaction
+VE_réagir PR_à PR_ce NO_article NU_l	VE_réagir PR_à PR_ce NO_article un
+NO_rédaction	NO_réduction
+NO_régression	NO_répression
+NO_secrétaire AD_général PR_de DE_le AB_onu	NO_secrétaire AD_général PR_de DE_le ump
+VE_avoir PR_en NO_effet	VE_avoir DE_un NO_effet
+NO_actualité PR_du NO_jour actualités AD_précédent	actualités PR_du NO_jour actualités AD_précédent
+america	american
+NA_brice hortefeux VE_être	NA_brice hortefeux PR_se VE_être
+SY_% PR_au NU_premier NO_semestre	SY_% PR_au NU_premier NO_trimestre
+NO_addition	NO_audition
+NO_article VE_avoir VE_être	NO_article NU_l VE_être
+NO_car	car
+NO_centaine PR_de NO_millier	NO_centaine PR_de NO_million
+AD_central NO_nucléaire	NO_centre AD_nucléaire
+NO_chef PR_de DE_le NA_etat VE_avoir	NO_chef PR_de DE_le NA_etat AD_ne
+NO_chirurgie	NO_chirurgien
+NO_colonie	NO_colonne
+NO_commissaire AD_européen	NO_commission AD_européen
+NO_comédie	NO_comédien
+NO_concours	NO_contour
+NO_couleur	NO_coureur
+NU_deux AD_dernier NO_année	NU_dix AD_dernier NO_année
+NO_diplomate	NO_diplomatie
+NO_début PR_de NO_année	NO_début PR_du NO_année
+NO_détection	NO_détention
+economic	economie
+VE_être PR_en NO_droit	VE_être DE_un NO_droit
+VE_être PR_en NO_mesure	VE_être DE_un NO_mesure
+VE_être PR_en NO_réalité	VE_être DE_un NO_réalité
+VE_être DE_le NO_question	VE_être DE_un NO_question
+NA_europe PR_de DE_le NO_est	NA_europe PR_de DE_le NO_ouest
+NO_facteur	NO_fauteur
+VE_faire DE_son NO_entrée	VE_faire DE_son NO_rentrée
+NO_gens PR_du NO_voyage VE_avoir	NO_gens PR_du NO_voyage AD_ne
+NO_gouvernement VE_devoir	NO_gouvernement VE_faire
+NO_gouvernement VE_être	NO_gouvernement VE_vouloir
+NO_gouvernement AD_français VE_avoir	NO_gouvernement AD_français AD_ne
+NO_gouvernement AD_ne VE_être	NO_gouvernement PR_se VE_être
+NO_institut	institute
+NO_intention	NO_invention
+NO_interne	NO_internet
+NO_interne	internet
+NO_issue PR_de DE_le NO_réunion	NO_issue PR_de DE_un NO_réunion
+NO_journalisme	NO_journaliste
+NO_manière	NO_matière
+NO_membre PR_de DE_le NO_famille	NO_membre PR_de DE_leur NO_famille
+VE_mettre PR_au NO_service	VE_mettre PR_en NO_service
+NO_milliard PR_de NO_euro PR_par NO_an	NO_million PR_de NO_euro PR_par NO_an
+NO_milliard PR_de NO_personne	NO_millier PR_de NO_personne
+NO_millier PR_de NO_hectare	NO_million PR_de NO_hectare
+NO_millier PR_de NO_personne	NO_million PR_de NO_personne
+NO_millier PR_de NO_personne VE_avoir	NO_million PR_de NO_personne VE_avoir
+NO_million PR_de NO_personne VE_avoir VE_être	NO_million PR_de NO_personne VE_être
+NO_montage	NO_montagne
+NO_médecine	NO_médecin
+NA_nicolas sarkozy VE_avoir	NA_nicolas sarkozy AD_ne
+NA_nicolas sarkozy VE_devoir	NA_nicolas sarkozy VE_faire
+NO_or	or
+NO_os	os
+NO_partage	partager
+VE_partager PR_ce NO_article	VE_partager DE_le NO_article
+VE_partager PR_ce NO_article	partager DE_le NO_article
+VE_partager DE_le NO_article	partager DE_le NO_article
+NO_pas	pas
+AD_pas PR_de NO_problème	AD_pas DE_le NO_problème
+NO_peintre	NO_peinture
+NO_philosophe	NO_philosophie
+NO_plupart PR_du NO_cas	NO_plupart PR_du NO_pays
+AD_plus PR_de NU_deux NO_an	AD_plus PR_de NU_dix NO_an
+AD_plus PR_de DE_un NO_milliard	AD_plus PR_de DE_un NO_millier
+AD_plus PR_de DE_un NO_millier	AD_plus PR_de DE_un NO_million
+NO_poste	poste
+NU_premier NO_jour	NU_premier NO_tour
+VE_prendre DE_le NO_décision	VE_prendre DE_un NO_décision
+NO_problème PR_ce VE_être	NO_problème AD_ne VE_être
+NO_processeur	NO_professeur
+NO_projection	NO_protection
+NO_présidence	NO_présidente
+NO_président PR_de DE_le NO_commission	NO_président PR_de DE_le NO_mission
+NO_président PR_de DE_le NO_république VE_avoir	NO_président PR_de DE_le NO_république VE_être
+NO_président PR_de DE_le NO_république VE_avoir	NO_président PR_de DE_le NO_république AD_ne
+NO_président PR_de DE_le NO_république VE_être	NO_président PR_de DE_le NO_république AD_ne
+NO_pétrole VE_avoir VE_être	NO_pétrole PR_se VE_être
+NO_rappel PR_à DE_le NO_ordre	VE_rappeler PR_à DE_le NO_ordre
+VE_repartir PR_à DE_le NO_baisse	VE_repartir PR_à DE_le NO_hausse
+VE_revoir PR_à DE_le NO_baisse	VE_revoir PR_à DE_le NO_hausse
+NO_rom AD_ne VE_être	NO_rom PR_se VE_être
+VE_réagir PR_à PR_ce NO_article d	VE_réagir PR_à PR_ce NO_article NU_l
+VE_réagir PR_à PR_ce NO_article d	VE_réagir PR_à PR_ce NO_article u
+VE_réagir PR_à PR_ce NO_article d	VE_réagir PR_à PR_ce NO_article un
+VE_réagir PR_à PR_ce NO_article NU_l	VE_réagir PR_à PR_ce NO_article u
+VE_réagir PR_à PR_ce NO_article u	VE_réagir PR_à PR_ce NO_article un
+NO_résolution	NO_révolution
+sarkozy AD_ne VE_être	sarkozy PR_se VE_être
+sarkozysme	sarkozyste
+NO_sou	sous
+NO_us	us
+NU_xixe NO_siècle	NU_xxe NO_siècle
+partager PR_ce VE_articler	VE_partager DE_le NO_article
+partager PR_ce VE_articler	partager DE_le NO_article
+SY_% PR_du NO_personnel	SY_% PR_du NO_personne
+SY_% PR_pour DE_le NO_ensemble	SY_% PR_sur DE_le NO_ensemble
+NU_@ord@ en	NU_@ord@ et
+NU_@ord@ en	NA_@ord@ on
+NA_@ord@ on	NU_@ord@ un
+VE_avoir VE_déclarer m	VE_avoir VE_déclarer NO_madame
+VE_avoir VE_déclarer PR_à DE_le NO_adresse	VE_avoir VE_déclarer PR_à DE_le NO_presse
+VE_avoir VE_enregistrer DE_un NO_baisse	VE_avoir VE_enregistrer DE_un NO_hausse
+VE_avoir DE_le NO_responsabilité	VE_avoir DE_un NO_responsabilité
+VE_avoir VE_ouvrir DE_le NO_feu	VE_avoir VE_ouvrir DE_le NO_il
+VE_avoir AD_peu PR_de NO_chance	VE_avoir AD_plus PR_de NO_chance
+VE_avoir VE_prendre PR_ce NO_décision	VE_avoir VE_prendre DE_le NO_décision
+VE_avoir VE_revoir PR_à DE_le NO_baisse	VE_avoir VE_revoir PR_à DE_le NO_hausse
+VE_avoir DE_un NO_coût	VE_avoir DE_un NO_goût
+VE_avoir DE_un NO_vie	VE_avoir DE_un NO_vue
+addiction	NO_addition
+NO_administration VE_avoir	NO_administration AD_ne
+VE_avoir VE_faire NO_appel PR_de	VE_avoir VE_faire NO_appel PR_à
+VE_avoir DE_le NO_impression PR_que PR_il	VE_avoir DE_le NO_impression KO_que DE_le
+VE_avoir DE_le NO_sentiment PR_de	VE_avoir DE_le NO_sentiment KO_que
+VE_avoir NO_lieu PR_ce	VE_avoir NO_lieu PR_de
+VE_avoir NO_lieu PR_de	VE_avoir NO_lieu PR_du
+VE_avoir NO_lieu PR_en	VE_avoir NO_lieu DE_un
+NO_accent PR_sur DE_le	NO_accident PR_sur DE_le
+NO_accident	NO_accent
+NO_administration AD_fiscal	NO_administration AD_local
+NO_agriculture NO_crise PR_du NO_lait	NO_agriculture NO_prix PR_du NO_lait
+NO_agriculture DE_le	NO_agriculture NO_lait
+alexandra	NA_alexandre
+NO_agriculture	NO_agriculteur
+alexandra	NA_alexandre
+NO_allocation	NO_allocution
+allocation	NO_allocution
+NO_amendement PR_de DE_le	NO_amendement PR_à DE_le
+NO_aménagement PR_de DE_le	NO_aménagement PR_de DE_un
+NO_aménagement PR_du NO_territoire KO_et	NO_aménagement PR_du NO_territoire DE_le
+NO_aménagement AD_numérique DE_le	aménagement AD_numérique DE_le
+NO_analyse PR_de DE_le	NO_analyste PR_de DE_le
+NO_analyste	NO_analyse
+and his	and this
+this	his
+and other	any other
+and the	and then
+then	the
+and the	and they
+the	they
+and then	and they
+then	they
+NO_année PR_@ord@ en	NO_année PR_@ord@ il
+NO_année PR_@ord@ en	NO_année PR_@ord@ DE_le
+NO_année PR_@ord@ il	NO_année PR_@ord@ DE_le
+NO_année NU_soixante	NO_année AD_suivant
+NO_apparition PR_de DE_le	NO_apparition PR_de DE_un
+NO_appartenance PR_à DE_le	NO_appartenance PR_à DE_un
+VE_appeler	NO_appel
+NO_argent AD_ne	argentine
+NO_article d	NO_article r
+NO_article AD_ne	NO_article une
+AD_ne	une
+VE_articler VE_partager PR_sur twitter l.v.	VE_articler VE_partager PR_sur twitter p.c.
+NO_article u n	NO_article u AD_ne
+AD_ne	n
+NO_article u AD_ne	NO_article une
+NA_asie KO_et	NO_asile KO_et
+NO_asile	NA_asie
+NO_assassin PR_de NO_policier KO_et	NO_assassin PR_de NO_policier KO_ou
+NO_acte AD_politique	NO_acteur AD_politique
+NO_acteur	NO_acte
+NO_acte AD_politique	AD_actuel NO_politique
+NO_actionnaire AD_majoritaire	NO_actionnaire AD_minoritaire
+AD_majoritaire	AD_minoritaire
+NO_activité AD_autour	NO_activité AD_futur
+NO_administration	NO_administrateur
+NO_administration AD_fiscal	NO_administration AD_local
+NO_administration AD_fédéral	NO_administration AD_général
+AD_fédéral	AD_général
+AD_inférieur	AD_intérieur
+NO_affaire AD_ne	NO_affaire AD_net
+AD_ne	AD_net
+NO_agence AD_américain	NO_agent AD_américain
+NO_agence AD_fédéral	NO_agent AD_fédéral
+NO_agence AD_immobilier	NO_agent AD_immobilier
+NO_agence AD_officiel	NO_agenda AD_officiel
+NO_aide AD_extérieur	NO_air AD_extérieur
+NO_aide AD_illégal	NO_aire AD_illégal
+NO_aide	NO_aire
+NO_aide AD_supplémentaire	NO_air AD_supplémentaire
+NA_gautier	NA_gauthier
+NO_allemand AD_ne	NA_allemands AD_ne
+AD_écologique	AD_idéologique
+NO_alternative AD_écologique	NO_alternative AD_économique
+AD_écologique	AD_économique
+AD_américain NO_face	AD_américain NA_france
+NO_américain AD_ne	AD_américain NA_new
+AD_ancien NO_capitaine	AD_ancien NO_capitale
+NO_capitaine	NO_capitale
+AD_ancien NO_collège	AD_ancien NO_collègue
+NO_collège	NO_collègue
+AD_ancien NO_compagne	AD_ancien NO_compagnon
+NO_compagne	NO_compagnon
+AD_ancien NO_garde	AD_ancien NO_gare
+NO_gare	NO_garde
+NO_année AD_alors	NO_année AD_lors
+AD_alors	AD_lors
+NO_année AD_près	NO_année AD_très
+AD_près	AD_très
+NO_an AD_alors	NO_an AD_lors
+AD_alors	AD_lors
+NO_an AD_après	NO_an AD_auprès
+AD_auprès	AD_après
+NO_an AD_après	NO_an AD_près
+AD_près	AD_après
+AD_électrique	AD_électronique
+NO_appareil AD_sécuritaire	NO_apparence AD_sécuritaire
+NO_argument AD_écologique	NO_argument AD_économique
+AD_écologique	AD_économique
+AD_parisien	NA_paris
+NO_association AD_dit	NO_association AD_droit
+NO_attitude AD_irresponsable	NO_attitude AD_responsable
+AD_responsable	AD_irresponsable
+NO_autorité AD_irakien	NO_autorité AD_iranien
+AD_iranien	AD_irakien
+AD_autre NO_acteur	AD_autre NO_facteur
+NO_acteur	NO_facteur
+AD_autre NO_acteur	AD_autre NO_lecteur
+AD_autre NO_analyse	AD_autre NO_analyste
+NO_analyste	NO_analyse
+AD_autre NO_boisson	AD_autre NO_poisson
+NO_poisson	NO_boisson
+AD_autre NO_bout	AD_autre NO_but
+NO_bout	NO_but
+AD_autre NO_camion	AD_autre NO_champion
+AD_autre NO_campagne	AD_autre NO_compagnie
+NO_campagne	NO_compagnie
+AD_autre NO_cas	AD_autre NO_pas
+AD_autre NO_couleur	AD_autre NO_coureur
+NO_couleur	NO_coureur
+AD_autre NO_dispositif	AD_autre NO_disposition
+NO_disposition	NO_dispositif
+AD_autre NO_décision	AD_autre NO_précision
+NO_décision	NO_précision
+AD_autre NO_entité	AD_autre NO_identité
+NO_identité	NO_entité
+AD_autre NO_face	AD_autre NO_race
+NO_race	NO_face
+AD_autre NO_facette	AD_autre NO_recette
+NO_facette	NO_recette
+AD_autre NO_facteur	AD_autre NO_lecteur
+NO_lecteur	NO_facteur
+AD_autre NO_faille	AD_autre NO_famille
+NO_famille	NO_faille
+AD_autre NO_faille	AD_autre NO_fille
+NO_faille	NO_fille
+AD_autre NO_fille	AD_autre NO_ville
+NO_fille	NO_ville
+AD_autre NO_formation	AD_autre NO_information
+NO_formation	NO_information
+AD_autre NO_homme	AD_autre NO_pomme
+NO_homme	NO_pomme
+AD_autre NO_industrie	AD_autre NO_industriel
+NO_industriel	NO_industrie
+AD_autre NO_infection	AD_autre NO_infraction
+NO_infection	NO_infraction
+AD_autre NO_jour	AD_autre NO_tour
+NO_tour	NO_jour
+AD_autre NO_lien	AD_autre NO_lieu
+NO_lieu	NO_lien
+AD_autre NO_ligne	AD_autre NO_signe
+NO_signe	NO_ligne
+AD_autre NO_liste	AD_autre NO_piste
+NO_piste	NO_liste
+AD_autre NO_légion	AD_autre NO_région
+NO_légion	NO_région
+AD_autre NO_maison	AD_autre NO_raison
+NO_raison	NO_maison
+AD_autre NO_manière	AD_autre NO_matière
+NO_manière	NO_matière
+AD_autre NO_marque	AD_autre NO_remarque
+NO_remarque	NO_marque
+AD_autre NO_mode	AD_autre NO_monde
+NO_mode	NO_monde
+AD_autre NO_moment	AD_autre NO_monument
+NO_monument	NO_moment
+AD_autre NO_part	AD_autre NO_parti
+NO_part	NO_parti
+AD_autre NO_parti	AD_autre NO_partie
+NO_partie	NO_parti
+AD_autre NO_pas	AD_autre NO_pays
+NO_pays	NO_pas
+AD_autre NO_personnel	AD_autre NO_personne
+NO_personnel	NO_personne
+AD_autre NO_piste	AD_autre NO_poste
+NO_piste	NO_poste
+AD_autre NO_place	AD_autre NO_plaie
+NO_place	NO_plaie
+AD_autre NO_plan	AD_autre NO_plat
+NO_plat	NO_plan
+AD_autre NO_pollution	AD_autre NO_solution
+NO_pollution	NO_solution
+AD_autre NO_porte	AD_autre NO_poste
+NO_porte	NO_poste
+AD_autre NO_président	AD_autre NO_résident
+NO_président	NO_résident
+AD_autre NO_région	AD_autre NO_réunion
+NO_réunion	NO_région
+AD_autre NO_résolution	AD_autre NO_évolution
+NO_résolution	NO_évolution
+AD_autre NO_terme	AD_autre NO_terre
+NO_terre	NO_terme
+AD_autre NO_vie	AD_autre NO_voie
+NO_voie	NO_vie
+AD_autre NO_voie	AD_autre NO_voix
+NO_voie	NO_voix
+NO_aval AD_définitif	NO_avis AD_définitif
+NO_avance AD_technologique	NO_avancée AD_technologique
+NO_avancée AD_considérable	NO_avantage AD_considérable
+NO_bac AD_scientifique	NO_base AD_scientifique
+NO_baisse AD_ne	NO_baisse AD_net
+AD_ne	AD_net
+NO_banque AD_central	NO_banquier AD_central
+NO_banque AD_français	NO_banquier AD_français
+NO_banque AD_iranien	NO_banque AD_italien
+AD_iranien	AD_italien
+AD_beau NO_fille	AD_beau NO_ville
+NO_ville	NO_fille
+AD_beau NO_maison	AD_beau NO_saison
+NO_saison	NO_maison
+AD_beau NO_vie	AD_beau NO_vue
+NO_bilan AD_écologique	NO_bilan AD_économique
+AD_écologique	AD_économique
+AD_bon NO_cote	AD_bon NO_note
+NO_cote	NO_note
+AD_bon NO_débit	AD_bon NO_début
+NO_début	NO_débit
+AD_bon NO_fille	AD_bon NO_ville
+NO_ville	NO_fille
+AD_bon NO_grain	AD_bon NO_train
+NO_grain	NO_train
+AD_bon NO_mine	AD_bon NO_mise
+NO_mise	NO_mine
+AD_bon NO_mère	AD_bon NO_père
+NO_père	NO_mère
+AD_bon NO_part	AD_bon NO_port
+NO_part	NO_port
+AD_bon NO_plan	AD_bon NO_plat
+NO_plat	NO_plan
+AD_bon NO_raison	AD_bon NO_saison
+NO_raison	NO_saison
+AD_bon NO_terme	AD_bon NO_terre
+NO_terre	NO_terme
+AD_bon NO_terre	AD_bon NO_verre
+NO_verre	NO_terre
+AD_bon NO_vent	AD_bon NO_vente
+NO_vent	NO_vente
+NO_bras AD_dessous	NO_bras AD_dessus
+AD_dessus	AD_dessous
+

@@ -1,0 +1,5 @@
+NP_u.s. NP_food CC_and NP_drug NP_administration	NP_us NP_food CC_and NP_drug NP_administration
+NP_u.s. NP_food CC_and NP_drug NP_administration	NP_us NP_food CC_and NP_drug NP_administration
+NP_u.s. NP_food CC_and NP_drug NP_administration	NP_us NP_food CC_and NP_drug NP_administration
+NP_u.s. NP_food CC_and NP_drug NP_administration	NP_us NP_food CC_and NP_drug NP_administration
+NP_u.s. NP_food CC_and NP_drug NP_administration	NP_us NP_food CC_and NP_drug NP_administration

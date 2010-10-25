@@ -1,0 +1,17 @@
+name_data="../data/docilite/docilite.isi"
+language ='english'
+date_depart = date(1970,1,1)
+freqmin = 20
+ng_filter=[1,2,3,3,3]
+top = 400
+sample=4000000
+dated = 1970
+datef = 2010
+fenetre = 1
+overlap = 0
+dist_type='precision'
+build_link_tables='n'
+maxTermLength=5
+nofigure=1
+user_interface='y'
+

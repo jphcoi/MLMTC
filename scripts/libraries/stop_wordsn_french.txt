@@ -1,0 +1,72 @@
+NO_personnel
+NO_personne
+NO_jour
+NO_loi
+NO_fait
+NO_an
+AD_ne VE_être AD_pas
+NO_foi|fois
+NO_temps
+AD_ne VE_pouvoir AD_pas
+AD_ne VE_vouloir AD_pas
+NO_question
+NO_part
+NO_moi|mois
+NO_heure
+NO_cas
+NO_billet
+NO_propos
+NO_matin
+NO_chose
+NO_moment
+NO_coup
+NO_année
+AD_ne AD_pas
+NO_titre
+NO_point
+NO_peine
+NO_effet
+NO_article
+NO_un
+NO_soir
+NO_partie
+AD_ne VE_avoir AD_pas
+NO_place
+NO_mot
+NO_exemple
+NO_tour
+NO_terme
+NO_sujet
+rss
+NO_moyen
+NO_gens
+NO_charge
+NO_besoin
+alt
+VE_avoir AD_déjà
+AD_ne VE_savoir AD_pas
+VE_avoir AD_donc
+VE_avoir AD_bien
+VE_avoir AD_pas
+nbsp
+AD_ne VE_être AD_pas
+NO_manière
+NO_matière
+il
+qu
+NO_année
+VE_pouvoir AD_pas
+VE_avoir AD_déjà
+NO_intérêt
+VE_savoir AD_pas
+NO_rien
+NO_photo
+NO_ordre
+hui
+et
+NO_début
+NO_doute
+ce
+aujourd
+VE_avoir NO_lieu
+NO_vue
