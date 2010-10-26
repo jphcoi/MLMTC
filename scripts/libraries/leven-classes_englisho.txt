@@ -688,3 +688,11 @@ NN_variance NN_analysis	NN_variance analysis
 NN_variance NN_analysis	NN_variance NN_analyst
 NN_variance NN_analysis	NN_variance NP_analyst
 NN_variance NN_analysis	NN_variance NP_analysis
+NN_effect VB_be	effects VB_be
+NN_effect IN_of	effects IN_of
+NN_effect IN_on	effects IN_on
+NN_food CC_and	NP_food CC_and
+NN_food VB_be	NP_food VB_be
+NN_toxicity CC_and	toxicity CC_and
+NN_toxicity IN_of	toxicity IN_of
+NP_u.s. NP_food CC_and NP_drug	NP_u.s. NN_food CC_and NP_drug

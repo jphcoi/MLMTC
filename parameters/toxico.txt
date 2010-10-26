@@ -1,5 +1,5 @@
 
-name_data="../inout/data/toxico/toxico.isi"
+name_data="../../inout/data/toxico/toxico.isi"
 language ='english'
 date_depart = date(1970,1,1)
 
