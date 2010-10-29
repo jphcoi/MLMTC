@@ -85,14 +85,14 @@ def lire_dico_classes(dico_index_file,language):
 				if not concept in classe_0: 	
 					equivalences_leven_file.write(concept_cl_0 + '\t' + concept +'\n')
 					print concept_cl_0 + '\t' + concept +'\n'
-					print "on rajoute le terme " + concept + " dans la classe de " + concept_cl_0 + ' dans le fichier de correspondance'
+					print "<- on rajoute le terme " + concept + " dans la classe de " + concept_cl_0 + ' dans le fichier de correspondance'
 		for concept in concept_cl_v:
 			try:
 				equivalences_leven_c = equivalences_leven[concept]
 				for c in equivalences_leven_c:
 					if not c in concept_cl_v:
 						concept_cl_v.append(c)	
-						print "on rajoute le terme " + c + " dans la classe de " + concept					
+						print "-> on rajoute le terme " + c + " dans la classe de " + concept					
 			except:
 				pass				
 		concept_corr = '***'.join(concept_cl_v)

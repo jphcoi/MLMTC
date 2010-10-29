@@ -124,7 +124,6 @@ for x in range(nb_sequences+1):
 	print "    + billets numéros "+ str(int(lim_d)+1)+ " à "+  str(int(lim_d)+int(duration)) +" indexés (sur "+ str(Nb_rows) +")"
 	
 	
-
 dictionnaire_treetagged__formes_name = path_req  + "Treetagger_n-lemmes_formes.txt"  
 dictionnaire_treetagged__formemajoritaire_name = path_req  + "Treetagger_n-lemmes_formemajoritaire.txt"
 text_processing.extraire_forme_majoritaire(0,formes,dictionnaire_treetagged__formes_name,dictionnaire_treetagged__formemajoritaire_name)
@@ -188,6 +187,7 @@ def format(value):
     return "%.9f" % value
 
 for x in dictionnaire_frequence_exact:	
+	print str(x) + '\t' + str(correspondance_lemme_forme[x]) +'\t' + (str(format(float(dictionnaire_frequence_exact[x])/N))).replace('.',',') +'\t' + (str(format(float(dictionnaire_frequence_exact_auteur[x])/float(Nb_auteurs)))).replace('.',',')+  '\n'
 	fichier_out.write(str(x) + '\t' + str(correspondance_lemme_forme[x]) +'\t' + (str(format(float(dictionnaire_frequence_exact[x])/N))).replace('.',',') +'\t' + (str(format(float(dictionnaire_frequence_exact_auteur[x])/float(Nb_auteurs)))).replace('.',',')+  '\n')
 print "    + frequences exactes calculees   "+ file_freq_exact
 

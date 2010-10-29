@@ -296,7 +296,8 @@ def select_bdd_table(name_bdd,table,champ,requete):
 
 def select_bdd_table_limite(name_bdd,table,champ,requete,limit):
 	connection,ex = connexion(name_bdd)
-	sortie= ex("SELECT "  + champ +  "   from " +table +" WHERE requete = \'" +requete+ "\'"+ ' LIMIT '+str(limit) ).fetchall()
+	sortie= ex("SELECT "  + champ +  "   from " +table + ' LIMIT '+str(limit) ).fetchall()
+	#print "SELECT "  + champ +  "   from " +table +" WHERE requete = \'" +requete+ "\'"+ ' LIMIT '+str(limit)
 	#print "SELECT "  + champ +  "   from " +table +" WHERE requete = \'" +requete+ "\'"+ ' LIMIT '+str(limit) 
 	#print "       - selection du/des champ(s) " + champ + " de la table " + table +  " dans la bdd " +name_bdd + " avec la requete " +requete
 	sortie_ok = []

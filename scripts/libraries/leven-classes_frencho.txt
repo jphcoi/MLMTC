@@ -3051,7 +3051,6 @@ NO_utilisation PR_du NO_pesticide	NO_usage PR_du NO_pesticide
 NO_vaccin	NO_vaccination
 NO_voiture AD_électrique	NO_véhicule AD_électrique
 NO_voiture AD_électrique	NO_véhicule AD_hybride
-afsset	
 SY_% PR_de NO_femme	SY_% PR_du NO_femme
 SY_% PR_de NO_part	SY_% PR_du NO_part
 VE_avoir PR_de NO_effet	VE_avoir PR_du NO_effet
@@ -11621,3 +11620,138 @@ AD_benoît	NA_benoît
 AD_bien NO_commun	NO_bien AD_commun
 NO_biologie AD_marin	NO_biologiste AD_marin
 AD_bon NA_français	NO_bon AD_français
+grenelle	grenelle PR_de DE_le NO_environnement
+grenelle	grenelle PR_de DE_le environnement
+oms	NO_organisation AD_mondial PR_de DE_le santé
+NO_ministre PR_de DE_le ecologie	NO_ministère PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	ministre PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	ministres PR_de DE_le economie
+deepwater	plateforme deepwater horizon
+deepwater	NO_plate-forme deepwater NO_horizon
+deepwater	plateformes deepwater horizon
+deepwater	plateforme deepwater NO_horizon
+deepwater	plateformes deepwater NO_horizon
+NO_agriculteur	agriculture
+VE_prévenir DE_le NO_risque	NO_prévention PR_du NO_risque
+NO_sécurité AD_sanitaire PR_du NO_aliment	sécurité AD_sanitaire PR_du NO_produit
+NO_santé KO_et DE_le NO_environnement	santé environnement
+NO_santé KO_et DE_le NO_environnement	NO_santé KO_et NO_environnement
+NO_santé KO_et DE_le NO_environnement	santé KO_et NO_environnement
+NO_santé KO_et DE_le NO_environnement	NO_santé KO_et PR_de DE_le NO_environnement
+NO_santé KO_et DE_le NO_environnement	santé NO_environnement
+NO_santé KO_et DE_le NO_environnement	NO_santé environnement
+NO_santé KO_et DE_le NO_environnement	NO_santé KO_et environnement
+NO_santé KO_et DE_le NO_environnement	santé KO_et environnement
+NO_santé KO_et DE_le NO_environnement	santé KO_et DE_le NO_environnement
+NO_santé KO_et DE_le NO_environnement	NO_santé KO_et DE_le environnement
+NO_santé KO_et DE_le NO_environnement	santé KO_et PR_de DE_le NO_environnement
+NO_santé KO_et DE_le NO_environnement	NO_santé KO_et PR_de DE_le environnement
+NO_santé KO_et DE_le NO_environnement	santé AD_environnemental
+NO_santé KO_et DE_le NO_environnement	santé KO_et DE_le environnement
+NO_santé KO_et DE_le NO_environnement	santé KO_et PR_de DE_le environnement
+NO_environnement KO_et DE_le NO_santé	NO_environnement KO_et PR_à DE_le NO_santé
+biocarburant	biocarburants
+NO_industrie AD_agroalimentaire	industrie AD_agroalimentaire
+NO_industrie AD_agroalimentaire	industrie AD_agro-alimentaire
+NO_association AD_écologiste	association AD_écologique
+VE_réduire DE_le NO_émission	VE_réduire DE_le NO_émission PR_de NO_gaz
+VE_réduire DE_le NO_émission	NO_réduction PR_du NO_gaz PR_à NO_effet
+irsn	NO_institut PR_de NO_radioprotection KO_et PR_de NO_sûreté AD_nucléaire
+NO_respect PR_de DE_le NO_environnement	AD_respectueux PR_de DE_le environnement
+ministère PR_de DE_le NO_alimentation	NO_ministère PR_de DE_le NO_alimentation
+VE_fondre AD_structurel NO_européen	fonds AD_structurel européens
+lobbies	lobby
+NO_plantation	plantes
+néolibéral	néolibéralisme
+NO_activité AD_économique	actualité AD_économique
+NO_activité AD_économique	actualités AD_économique
+NO_conseil PR_de NA_etat	conseil PR_de NA_etats
+NO_conseil PR_de NA_etat	NO_conseil PR_de NA_etats
+européen	européens
+NO_docteur	NO_médecin
+NO_docteur	médecine
+NO_activité AD_économique	actualité AD_économique
+NO_activité AD_économique	actualités AD_économique
+NO_agriculteur AD_breton	agriculture AD_breton
+NO_agriculteur AD_conventionnel	agriculture AD_conventionnel
+NO_agriculteur AD_français	agriculture AD_français
+NO_aide AD_extérieur	air AD_extérieur
+NO_arme AD_chimique	NO_armement AD_chimique
+NO_association AD_écologique	association AD_écologiste
+NO_chaine AD_alimentaire	NO_chaîne AD_alimentaire
+AD_combustible NO_nucléaire	NO_combustible AD_nucléaire
+NO_conséquence AD_désastreux	NO_conséquence AD_dévastateur
+NO_conséquence AD_désastreux	NO_conséquence AD_grave
+NO_côte PR_de DE_le NA_louisiane	NO_côte PR_de NA_louisiane
+deepwater	plateforme deepwater horizon
+deepwater	NO_plate-forme deepwater NO_horizon
+deepwater	plateformes deepwater horizon
+deepwater	plateforme deepwater NO_horizon
+deepwater	plateformes deepwater NO_horizon
+AD_directif NO_européen	NO_directive AD_européen
+NO_environnement KO_et DE_le NO_santé	NO_environnement KO_et PR_à DE_le NO_santé
+etats-unis	NA_etat unis
+exxon	exxonmobil
+VE_fondre AD_structurel NO_européen	fonds AD_structurel européens
+NO_gouvernement NA_français	NO_gouvernement AD_français
+NO_gouvernement NA_français	gouvernement AD_français
+grenelle	grenelle PR_de DE_le NO_environnement
+grenelle	grenelle PR_de DE_le environnement
+NO_groupe AD_agro-alimentaire	NO_groupe AD_agroalimentaire
+NO_groupe AD_agro-alimentaire	groupe AD_agroalimentaire
+NO_institut AD_national PR_de NO_veille AD_sanitaire	NO_institut PR_de veille sanitaire*invs
+lobbies	lobby
+NO_maison AD_blanc	NO_maison NA_blanche
+marée AD_noir	NO_marée NA_noire
+marée AD_noir	marée NA_noire
+NO_docteur	NO_médecin
+NO_docteur	médecine
+NO_ministre PR_de DE_le ecologie	NO_ministère PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	ministre PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	ministres PR_de DE_le economie
+NO_ministère PR_du NO_développement AD_durable	meeddm
+NO_naufrage PR_de DE_le NO_plate-forme	NO_naufrage PR_de DE_le plateformes
+oms	NO_organisation AD_mondial PR_de DE_le santé
+NO_organisation PR_du NO_nation AD_uni	onu
+NO_panneau AD_solaire	NO_panneau AD_photovoltaïque
+NO_plantation	plantes
+NO_production AD_pétrolier	NO_production PR_de NO_pétrole
+sanofi	sanofi-aventis
+sanofi	aventis
+NO_substance AD_cancérigène	NO_substance AD_cancérogène
+woods hole oceanographic institution	whoi
+NO_peur	peur
+NO_pollution	polution
+NO_cerveau	cerveau
+ah1n1	a-h1n1
+ah1n1	h1n1
+ah1n1	h1n1v
+anti-h1n1	anti-ah1n1
+NO_connaissance	connaissance
+NO_peur	peur
+NO_pollution	polution
+NO_cerveau	cerveau
+ah1n1	a-h1n1
+ah1n1	h1n1
+ah1n1	h1n1v
+anti-h1n1	anti-ah1n1
+NO_connaissance	connaissance
+biofuel	biofuels
+cd4	cd4+
+cd4	cd4s
+grenelle 1	grenelle i
+grenelle 2	 grenelle ii
+grenelle	 VE_greneler
+co2	dioxyde de carbone
+NO_diamant	diamant
+NO_sperme	sperme
+bioéthique	bioéthiques
+NO_hormone	VE_hormoner
+vache NO_folle|fou	NO_vache NO_folle|fou
+vache NO_folle|fou	vache AD_folle|fou
+vache NO_folle|fou	NO_vache AD_folle|fou
+NO_acide AD_aminé	AD_acide AD_aminé
+NO_cyclone	cyclone
+NO_inondation	inondation
+NO_inondation	inondations
+NO_érosion	erosion
