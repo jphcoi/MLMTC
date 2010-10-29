@@ -213,9 +213,9 @@ overlap = 5
 ################################################
 ################################################
 ################################################
-parametres_file='../parameters/param.txt'
 parametres_file='../parameters/job.txt'
 parametres_file='../parameters/toxico.txt'
+parametres_file='../parameters/param.txt'
 
 #parametres_file='../parameters/docilite.txt'
 

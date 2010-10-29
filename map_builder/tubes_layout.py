@@ -10,6 +10,7 @@ sys.path.append("../scripts/libraries")
 sys.path.append("../scripts")
 import parameters
 import fonctions_lib
+path_req = parameters.path_req
 years_bins = parameters.years_bins
 name_bdd = parameters.name_bdd
 name_data_real=parameters.name_data_real
@@ -209,7 +210,10 @@ def to_dict(points):
 	return dic_points
 		
 def create_js_bar(liste_points,label_tubes):
-	fichier = file('jobs2.js','w')
+	path_req_protovis = path_req + '/' + 'protovis'  + '/'
+	if not os.path.isdir(path_req_protovis):
+		os.makedirs(path_req_protovis)
+	fichier = file(path_req_protovis+'jobs2.js','w')
 	rge_y = range(years_bins[0][0], years_bins[-1][-1]+1)
 	out = 'var years = ' + str(rge_y)+';'
 	dict_0 = dict_init(rge_y,0)
@@ -236,6 +240,7 @@ def create_js_bar(liste_points,label_tubes):
 
 print liste_points
 create_js_bar(liste_points,label_tubes)
+#create_html...
 create_svg(liste_points[:])
  
 # print tubes

@@ -1,17 +1,17 @@
-name_data="../../inout/data/export_MESR_20100722_light.lfl"
-language ='french'
-date_depart = date(2010,1,1)
-freqmin = 2
+name_data="../../inout/data/rares/rares.med"
+language ='english'
+date_depart = date(1975,1,1)
+freqmin = 10
 ng_filter=[1,2,3,3,3]
-top = 400
+top = 500
 sample=4000000
-dated = 2010
+dated = 1975
 datef = 2010
-fenetre = 1
-overlap = 0
+fenetre = 5
+overlap = 5
 dist_type='precision'
 build_link_tables='n'
 maxTermLength=5
 nofigure=1
-user_interface='y'
+user_interface='n'
 

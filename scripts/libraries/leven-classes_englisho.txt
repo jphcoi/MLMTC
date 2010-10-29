@@ -696,3 +696,11 @@ NN_food VB_be	NP_food VB_be
 NN_toxicity CC_and	toxicity CC_and
 NN_toxicity IN_of	toxicity IN_of
 NP_u.s. NP_food CC_and NP_drug	NP_u.s. NN_food CC_and NP_drug
+NN_analysis IN_of DT_the	analysis IN_of DT_the
+NN_analysis IN_of DT_the	NN_analyst IN_of DT_the
+NN_analysis IN_of DT_the	NP_analyst IN_of DT_the
+NN_analysis IN_of DT_the	NP_analysis IN_of DT_the
+JJ_central JJ_nervous NN_system	JJ_central JJ_nervous NP_systems
+NN_management IN_of	NP_management IN_of
+JJ_nervous NN_system	JJ_nervous NP_systems
+NN_type IN_of	type IN_of

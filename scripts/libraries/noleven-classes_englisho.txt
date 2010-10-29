@@ -31,3 +31,4 @@ cd4 NN_antigen	cd8 NN_antigen
 NN_network IN_with NN_neuron	NN_network IN_within NN_neuron
 
 NN_effect IN_of	NN_effect IN_on
+NN_case IN_in	NN_case VB_be
