@@ -264,11 +264,8 @@ except:
 	pass
 print '\n'
 years_bins = []
-print datef
-print dated
-if datef==dated:
-	dated=1
-	datef=500
+datef=datef[0]
+dated=dated[0]
 for y in range(datef-dated+1):
 	years_bins.append(y+dated)
 years_bins=[years_bins]
