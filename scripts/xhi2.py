@@ -264,6 +264,9 @@ except:
 pass
 print '\n'
 years_bins = []
+if dated==datef:
+	dated=1
+	datef=500
 for y in range(datef-dated+1):
 years_bins.append(y+dated)
 years_bins=[years_bins]
