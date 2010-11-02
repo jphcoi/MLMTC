@@ -398,7 +398,7 @@ def indexer_billet(contenu,ngrammes,maxTermLength,include):
 						orig_c[-1]= orig_c[-1]+'</b>'
 						billet_brutv_copie = billet_brutv_copie[:pas] + orig_c +  billet_brutv_copie[pas+ngraz1_long:]
 						if include==1:
-							billet_lemmatise=billet_lemmatise[:idx] + billet_lemmatise[idx+longueur:] 
+							billet_lemmatise=billet_lemmatise[:idx] + ' '+ billet_lemmatise[idx+longueur:] 
 							######AMELIORATION: Enlever les bouts plutôt que de les rajouter...
 							billet_brutv=billet_brutv[:pas] + billet_brutv[pas+ngraz1_long:] 	
 						if dest in formes:

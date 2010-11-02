@@ -105,13 +105,15 @@ billets_id=[]
 ngramme_billets_fit=[]
 ngrammes_auteurs_fit={}
 formes={}
+
 #for x in range(nb_sequences+1):
 for x in range(nb_sequences+1):
 	lim_d = str(size_seq*x)
 	if x<nb_sequences:
 		duration = str(size_seq)
 	else:
-		duration = str(Nb_rows - size_seq*x)
+		duration = str(size_seq)
+		#duration = str(Nb_rows - size_seq*x)
 	#on extrait les champs contenus lemmatises et id de la table
 	contenu = fonctions_bdd.select_bdd_table_limite(name_bdd,'billets','id,content_lemmatise,content,auteur_id',requete,lim_d+','+duration)
 	#on indexe chaque billet et on recupere un triplet qui donne: la liste des ngrammes pour chaque billet, la liste des index des ngrammes pour chaque billet, et l'id des billets - ce script permet egalement de calculer les formes des n-lemmes.
@@ -187,7 +189,7 @@ def format(value):
     return "%.9f" % value
 
 for x in dictionnaire_frequence_exact:	
-	print str(x) + '\t' + str(correspondance_lemme_forme[x]) +'\t' + (str(format(float(dictionnaire_frequence_exact[x])/N))).replace('.',',') +'\t' + (str(format(float(dictionnaire_frequence_exact_auteur[x])/float(Nb_auteurs)))).replace('.',',')+  '\n'
+#	print str(x) + '\t' + str(correspondance_lemme_forme[x]) +'\t' + (str(format(float(dictionnaire_frequence_exact[x])/N))).replace('.',',') +'\t' + (str(format(float(dictionnaire_frequence_exact_auteur[x])/float(Nb_auteurs)))).replace('.',',')+  '\n'
 	fichier_out.write(str(x) + '\t' + str(correspondance_lemme_forme[x]) +'\t' + (str(format(float(dictionnaire_frequence_exact[x])/N))).replace('.',',') +'\t' + (str(format(float(dictionnaire_frequence_exact_auteur[x])/float(Nb_auteurs)))).replace('.',',')+  '\n')
 print "    + frequences exactes calculees   "+ file_freq_exact
 
