@@ -304,7 +304,7 @@ for x in l[:10000]:
 print "matrice de cooccurrence construite"
 
 
-# muti = build_mutual_information(p_cooccurrences)
-# thres=0.
-# xhi2val = xhi2(muti,thres)
-# export_concepts_xhi2(xhi2val,p_cooccurrences,dico_termes,dico_lemmes)
+muti = build_mutual_information(p_cooccurrences)
+thres=0.
+xhi2val = xhi2(muti,thres)
+export_concepts_xhi2(xhi2val,p_cooccurrences,dico_termes,dico_lemmes)
