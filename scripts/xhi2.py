@@ -264,6 +264,8 @@ except:
 	pass
 print '\n'
 years_bins = []
+print datef
+print dated
 if datef==dated:
 	dated=1
 	datef=500
