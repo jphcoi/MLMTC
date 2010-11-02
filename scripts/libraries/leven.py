@@ -125,7 +125,7 @@ def extension_uni(classe_history,deja_uni_couple,deja_uni,xl):
 						classe_history.append(prop) 
 	return classe_history
 	
-def pack_leven(fichier,fichier_out,language,user_interface):
+def pack_leven(fichier,fichier_out,language,user_interface,freqmin):
 	print '\nreduction de la liste avec levenstein\n'
 	fichier = open(fichier,'r')
 	fichier_out = open(fichier_out,'w')
@@ -142,8 +142,8 @@ def pack_leven(fichier,fichier_out,language,user_interface):
 	fichier_name_no = 'libraries/noleven-classes_'+language+'o.txt'
 	equivalences_leven,deja_uni_couple,deja_uni = lire_fichier_classe(fichier_name)
 	noequivalences_leven,deja_nouni_couple,deja_nouni = lire_fichier_classe(fichier_name_no)
-	if user_interface=='n':
-		doute_levenclassesout=open(fichier_name_doute,'a')
+	#if user_interface=='n':
+	doute_levenclassesout=open(fichier_name_doute,'a')
 	levenclassesout=open(fichier_name,'a')
 	nolevenclassesout=open(fichier_name_no,'a')
 	#print 'dans pack-leven'
@@ -231,7 +231,7 @@ def pack_leven(fichier,fichier_out,language,user_interface):
 									except:
 										pass
 									if var=='?':
-										if user_interface == 'y':
+										if user_interface == 'yy':
 											var = raw_input('-> grouper "'+ str([x])  + '" ('+str([xl])+') dans la classe de "' + str([y]) + '" ('+str([yl])+') (y pour accepter, n pour refuser formellement):')
 											if var == 'y':
 												equiv.append(j)
@@ -332,9 +332,11 @@ def pack_leven(fichier,fichier_out,language,user_interface):
 			#si classe dans un autre ordre on arrête tous
 			if not ens_set in coldecol:
 				coldecol.append(ens_set)
-				nlm = nlm + 1
-				resultats.append(chaine + '\t' + formes[numero] +'\t' + str(occur) +  '\n')
-				#fichier_out.write(chaine + '\t' + formes[numero] +'\t' + str(occur) +  '\n')
+				if occur> freqmin:
+					nlm = nlm + 1
+				 
+					resultats.append(chaine + '\t' + formes[numero] +'\t' + str(occur) +  '\n')
+					#fichier_out.write(chaine + '\t' + formes[numero] +'\t' + str(occur) +  '\n')
 	result_ensembles=[]
 	resultats_propres=[]
 	print str(len(resultats)) + ' nlemmes quasi-finaux'
@@ -434,10 +436,10 @@ def pack_rendondance_exact(fichier,fichier_out,maxTermLength,freqmin,language,re
 	vecteurs.reverse()
 	for x in vecteurs:
 		occ_x=occbis[x[1]]
-		#print 'lemme: '+ lemmes[x[1]]  + '\t' + str(occbis[x[1]])
+		print 'lemme: '+ lemmes[x[1]]  + '\t' + str(occbis[x[1]])
 		
 		for sub_cl in x[2]:
-			#print '                ' + lemmes[sub_cl] + '\t' + str(occbis[sub_cl]) +' - '  + str(occbis[x[1]]) +' = '+str(occbis[sub_cl] - occbis[x[1]])
+			print '                ' + lemmes[sub_cl] + '\t' + str(occbis[sub_cl]) +' - '  + str(occbis[x[1]]) +' = '+str(occbis[sub_cl] - occbis[x[1]])
 			#on retire trop ici, si nmax = 4, US food and drug (5) / food and drug administration (5) font perdre chacun 5 à food and drug.
 			occbis[sub_cl] = occbis[sub_cl] - occbis[x[1]]		
 	numero0=-1	

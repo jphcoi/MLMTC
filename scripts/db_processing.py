@@ -173,7 +173,7 @@ except:
 			if not billetprocessed_after_requete%500 or billetprocessed_after_requete == len(contenu) : 
 				print '---------'+str(billetprocessed_after_requete)+ ' traités (export ngrammes sur '+str(Nb_rows)+ ' billets)'
 			billet_lemmatise =  billetlemm[0]
-			dictionnaire_gramme_x = text_processing.ngramme_build(billet_lemmatise.split(),maxTermLength,dictionnaire_gramme_x,language)
+			dictionnaire_gramme_x = text_processing.ngramme_build(billet_lemmatise.split(),maxTermLength,dictionnaire_gramme_x,language,'absolu')
 		dictionnaire_gramme=fonctions_lib.merge(dictionnaire_gramme, dictionnaire_gramme_x, lambda x,y:x+y)
 	fonctions_lib.dumpingin(dictionnaire_gramme,name_export_pkl,requete)
 
@@ -205,5 +205,5 @@ print "\n+++"+str(len(dico_final))+" n-lemmes crees."
 leven.pack_rendondance_exact(filename,filename_redond,maxTermLength,freqmin,language,redondance_manuelle,ng_filter,user_interface)
 print "\n"
 
-leven.pack_leven(filename_redond,filename_redond_leven,language,user_interface)
+leven.pack_leven(filename_redond,filename_redond_leven,language,user_interface,freqmin)
 

@@ -219,6 +219,7 @@ parametres_file='../parameters/param.txt'
 parametres_file='../parameters/MESR.txt'
 
 #parametres_file='../parameters/docilite.txt'
+parametres_file='../parameters/test.txt'
 
 ################################################
 ################################################
@@ -300,7 +301,7 @@ if "home/web/prod" in os.getcwd():
 
 name_data_v = name_data.split('/')
 requete = name_data_v[-2]
-if name_data[-4:] in ['.lfl','.med'] :
+if name_data[-4:] in ['.lfl','.rss'] :
 	requete = name_data_v[-1]
 	if len(Kws)>0:
 		requete = requete + continent + str(len(Kws))

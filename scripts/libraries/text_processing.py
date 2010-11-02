@@ -68,7 +68,7 @@ def notinterdit(language,tag):
 
 def notinterditfin(language,tag):
 	if language=='english':
-		if tag in ['VE','JJ','PR']:
+		if tag in ['VE','JJ','PR','DT','TO','IN','WD','VB','CC']:
 			return False
 		else:
 			return True
@@ -293,7 +293,7 @@ def tag2(word):
 	word = word[1:]		
 	return word
 
-def ngramme_build(billet,maxTermLength,dictionnaire_gramme,language):
+def ngramme_build(billet,maxTermLength,dictionnaire_gramme,language,freq_type):
 	dejavu=[]
 	for termLengthMinusOne in range(maxTermLength): # minusOne because range(maxTermLength)= [0,...,maxTermLength - 1]
 		for i in range(len(billet) - termLengthMinusOne): 
@@ -309,7 +309,12 @@ def ngramme_build(billet,maxTermLength,dictionnaire_gramme,language):
 					if isNotStopWordForClique(term,language)==True:#False not in map(isNotStopWordForClique,wordWindow): # set(wordWindow) ^ stopWordsSet != set([]) no stop word in term	
 						if not term in dejavu:
 							#on ne compte qu'une occurrence par billet
-							dejavu.append(term)
+							#finalement selon le moment il peut être plus prudent de compter l'ensemble des occurrenes notamment pour calculer les poupées russes, il y a donc deux façon de requêter  ngramme_build
+							if freq_type == 'billet':
+								dejavu.append(term)
+							if freq_type == 'absolu':
+								pass
+								
 							if not dictionnaire_gramme.has_key(term):
 								dictionnaire_gramme[term] = 1
 							else:

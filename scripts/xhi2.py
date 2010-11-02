@@ -6,6 +6,7 @@ import math
 from copy import deepcopy
 sys.path.append("/libraries")
 sys.path.append("../map_builder")
+from operator import itemgetter
 
 print "export_networks v0.2 (20091102)"
 print "--------------------------------\n"
@@ -22,6 +23,7 @@ import text_processing
 import misc 
 from datetime import timedelta
 from datetime import date
+freqmin = parameters.freqmin
 
 ###################################
 #######0.quelques parametres#######
@@ -163,7 +165,7 @@ def build_cooc_matrix(contenu, years_bin):
 	print '\n'
 	
 	p_cooccurrences=build_cooc(voisins,nb_billets)
-	return p_cooccurrences
+	return p_cooccurrences,nb_billets[0]
 	
 	
 #muti[(terme1,terme2,intervalle)]=MI(t1,t2,t)
@@ -226,19 +228,18 @@ def distribution_distance_build(p_cooccurrences,dico_termes):
 				
 				for z in range(N):
 					z=z+1
-					try:
-						dist_x = float(p_cooccurrences[(x,z,0)])
-					except:
-						dist_x = epsilon
-					occ_x=occ_x+dist_x
-					try:	
-						dist_y = float(p_cooccurrences[(y,z,0)])
-					except:
-						dist_y = epsilon
+					dist_x=p_cooccurrences.get((x,z,0),0.)
+					# try:
+					# 	dist_x = float(p_cooccurrences[])
+					# except:
+					# 	dist_x = epsilon
+					dist_y=p_cooccurrences.get((y,z,0),0.)
+					# try:	
+					# 	dist_y = float(p_cooccurrences[(y,z,0)])
+					# except:
+					# 	dist_y = epsilon
 					occ_y=float(occ_y+dist_y)
-				#	if dist_x >epsilon or dist_y>epsilon:
-				#		if dist_x>
-				#		dist_xy = dist_xy + dist_x *math.log10((dist_x)/(dist_y))
+					occ_x=float(occ_x+dist_x)
 					dist_xy = float(dist_xy  +math.sqrt(float(dist_x*dist_y)))
 				if dist_xy>0:
 					distribution_distance[(x,y)]=  - math.log(dist_xy/ math.sqrt(float(occ_x*occ_y)))
@@ -264,8 +265,13 @@ except:
 	pass
 print '\n'
 years_bins = []
-datef=datef[0]
-dated=dated[0]
+#traite le multi-type des variables:
+try:
+	datef=datef[0]
+	dated=dated[0]
+except:
+	pass
+	
 for y in range(datef-dated+1):
 	years_bins.append(y+dated)
 years_bins=[years_bins]
@@ -273,19 +279,32 @@ contenu = fonctions_bdd.select_bdd_table(name_bdd,'billets','concepts_id,jours,i
 print "contenu importé"
 print '\n'
 
-p_cooccurrences = build_cooc_matrix(contenu,years_bins)
-
+p_cooccurrences,NN = build_cooc_matrix(contenu,years_bins)
+print 'coocc fabriquées'
 distribution_distance = distribution_distance_build(p_cooccurrences,dico_termes)
 print '\nrapprochements suggérés:\n'
-
+ytot = 0.
+h =0
 for x,y in distribution_distance.iteritems():
-	if y>2:
-		print dico_termes[x[0]] + '\t'+dico_termes[x[1]] + '\t' + str(y) 
+	ytot = ytot + y
+	h = h+1
+ytot = float(ytot / float(h))
+
+l = distribution_distance.items()
+l.sort(key=itemgetter(1),reverse=True)
+dico_final_top={}
+
+synonymes_potentiels = open(path_req + 'synonymes.txt','w')
+
+for x in l[:10000]:
+	couple=x[0]
+	if p_cooccurrences[(couple[0],couple[0],0)]*NN>freqmin and p_cooccurrences[(couple[1],couple[1],0)]*NN>freqmin:
+		print dico_termes[couple[0]] + '\t'+dico_termes[couple[1]] + '\t' + str(float(distribution_distance[couple] / ytot)) 
+		synonymes_potentiels.write(dico_termes[couple[0]] + '\t'+dico_termes[couple[1]] + '\t' + str(float(distribution_distance[couple] / ytot))  + '\n')
 print "matrice de cooccurrence construite"
-muti = build_mutual_information(p_cooccurrences)
 
 
-
-thres=0.
-xhi2val = xhi2(muti,thres)
-export_concepts_xhi2(xhi2val,p_cooccurrences,dico_termes,dico_lemmes)
+# muti = build_mutual_information(p_cooccurrences)
+# thres=0.
+# xhi2val = xhi2(muti,thres)
+# export_concepts_xhi2(xhi2val,p_cooccurrences,dico_termes,dico_lemmes)

@@ -704,3 +704,23 @@ JJ_central JJ_nervous NN_system	JJ_central JJ_nervous NP_systems
 NN_management IN_of	NP_management IN_of
 JJ_nervous NN_system	JJ_nervous NP_systems
 NN_type IN_of	type IN_of
+JJ_hepatic NN_oxalate NN_production	JJ_hepatic NN_oxalate NN_product
+JJ_hepatic NN_oxalate NN_production	JJ_hepatic NN_oxalate NP_product
+hyperoxaluria NN_type PP_i	hyperoxaluria type PP_i
+NN_kidney NN_protein	NN_kidney protein
+VV_limit NN_oxalate NN_production	VV_limit NN_oxalate NN_product
+VV_limit NN_oxalate NN_production	VV_limit NN_oxalate NP_product
+JJ_primary hyperoxaluria NN_type	JJ_primary hyperoxaluria type
+NN_production WD_that VV_lead	NN_product WD_that VV_lead
+NN_production WD_that VV_lead	NP_product WD_that VV_lead
+proteomic NN_analysis	proteomic analysis
+proteomic NN_analysis	proteomic NN_analyst
+proteomic NN_analysis	proteomic NP_analyst
+proteomic NN_analysis	proteomic NP_analysis
+NN_strategy TO_to VV_limit	JJ_strategic TO_to VV_limit
+NN_strategy TO_to VV_limit	NP_strategic TO_to VV_limit
+JJ_therapeutic NN_strategy	JJ_therapeutic JJ_strategic
+JJ_therapeutic NN_strategy	JJ_therapeutic NP_strategic
+NN_oxalate NN_production	NN_oxalate NN_product
+NN_oxalate NN_production	NN_oxalate NP_product
+NN_report	NP_report
