@@ -274,7 +274,7 @@ def select_bdd_table_where_limite(name_bdd,table,champ,sample,requete,where,limi
 			
 def select_bdd_table(name_bdd,table,champ,requete):
 	connection,ex = connexion(name_bdd)
-	sortie= ex("SELECT "  + champ +  "   from " +table +" WHERE requete = \'" +requete+ "\'" ).fetchall()
+	sortie= ex("SELECT "  + champ +  "   from " +table ).fetchall()
 	#print "       - selection du/des champ(s) " + champ + " de la table " + table +  " dans la bdd " +name_bdd + " avec la requete " +requete
 	sortie_ok = []
 	for sor in sortie:
