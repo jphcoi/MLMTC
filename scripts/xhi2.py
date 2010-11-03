@@ -338,10 +338,10 @@ dico_final_top={}
 
 synonymes_potentiels = open(path_req + 'synonymes.txt','w')
 
-for x in l[:10]:
+for x in l:
 	couple=x[0]
 	if p_cooccurrences[(couple[0],couple[0],0)]*NN>freqmin and p_cooccurrences[(couple[1],couple[1],0)]*NN>freqmin:
-		print dico_termes[couple[0]] + '\t'+dico_termes[couple[1]] + '\t' + str(float(distribution_distance[couple])) 
+		#print dico_termes[couple[0]] + '\t'+dico_termes[couple[1]] + '\t' + str(float(distribution_distance[couple])) 
 		synonymes_potentiels.write(dico_termes[couple[0]] + '\t'+dico_termes[couple[1]] + '\t' + str(float(distribution_distance[couple]))  + '\n')
 print "matrice de cooccurrence construite"
 
