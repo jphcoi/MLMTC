@@ -50,6 +50,31 @@ def merge(d1, d2, merge=lambda x,y:y):
             result[k] = v
     return result
 
+def merge_prod(d1, d2, merge=lambda x,y:y):
+    """
+    Merges two dictionaries, non-destructively, combining 
+    values on duplicate keys as defined by the optional merge
+    function.  The default behavior replaces the values in d1
+    with corresponding values in d2.  (There is no other generally
+    applicable merge strategy, but often you'll have homogeneous 
+    types in your dicts, so specifying a merge technique can be 
+    valuable.)
+
+    Examples:
+
+    >>> d1
+    {'a': 1, 'c': 3, 'b': 2}
+    >>> merge(d1, d1)
+    {'a': 1, 'c': 3, 'b': 2}
+    >>> merge(d1, d1, lambda x,y: x+y)
+    {'a': 2, 'c': 6, 'b': 4}
+
+    """
+    result = {}
+    for k,v in d2.iteritems():
+        if k in d1:
+            result[k] = merge(d1[k], v)
+    return result
 
 def dumpingin(data,datastr,requete):
 	try:

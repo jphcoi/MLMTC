@@ -13,6 +13,7 @@ print "--------------------------------\n"
 
 import parameters
 import fonctions_bdd
+import fonctions_lib
 import parseur
 import os
 import glob
@@ -118,9 +119,17 @@ def build_voisins(contenu,years_bin):
 							voisins[(con_1,intervalle)]=temp
 	return voisins 
 
+def unique(liste):
+	liste_u=[]
+	for x in liste:
+		if not x in liste_u:
+			liste_u.append(x)
+	return liste_u
 	
 def build_cooc(voisins,nb_billets):
 	p_cooccurrences={}
+	p_cooccurences_lignes={}
+
 	#p_cooccurrences[terme1,terme2,intervalle] = proba du terme
 	compt=0
 	waiting_time = len(voisins)
@@ -137,16 +146,17 @@ def build_cooc(voisins,nb_billets):
 			dict_temp[terme2] = 0
 		for terme2 in y:
 			dict_temp[terme2] = dict_temp[terme2]  + 1
+		p_cooccurences_lignes[terme1] = dict_temp
 		for terme2 in voisinage:
 			p_cooccurrences[(terme1,terme2,inter)] = float(dict_temp[terme2]) / N
-		
+			
 	#print p_cooccurrences
 	print '\n'
 	
 	print 'matrice temporelle de cooccurrence ecrite'
 	print '\n'
 	
-	return p_cooccurrences
+	return p_cooccurrences,p_cooccurences_lignes
 
 
 
@@ -164,8 +174,8 @@ def build_cooc_matrix(contenu, years_bin):
 	print "variable voisins construite"
 	print '\n'
 	
-	p_cooccurrences=build_cooc(voisins,nb_billets)
-	return p_cooccurrences,nb_billets[0]
+	p_cooccurrences,p_cooccurrences_lignes=build_cooc(voisins,nb_billets)
+	return p_cooccurrences,nb_billets[0],p_cooccurrences_lignes
 	
 	
 #muti[(terme1,terme2,intervalle)]=MI(t1,t2,t)
@@ -213,11 +223,22 @@ def xhi2(muti,thres):
 	return xhi2val
 			
 
-def distribution_distance_build(p_cooccurrences,dico_termes):
+
+def distribution_distance_build(p_cooccurrences,dico_termes,p_cooccurrences_lignes):
 	epsilon = 0.0
 	distribution_distance={}
 	N = len(dico_termes.keys())
+	Ncoocc = {}
+	for x,t in p_cooccurrences_lignes.iteritems():
+		Ncoocc[x]=sum(t.values())
+#	print p_cooccurrences_lignes[1]
+#	print Ncoocc
+	compt=0
+	waiting_time= N
 	for x in range(N):
+		compt+=1
+		if not compt%100:
+			print '       (#'+str(compt)+' sur '+str(waiting_time)+")"		
 		x=x+1
 		for y in range(N):
 			y=y+1
@@ -225,24 +246,43 @@ def distribution_distance_build(p_cooccurrences,dico_termes):
 				dist_xy = 0.
 				occ_y = 0.
 				occ_x =0.
+				try:
+					dic_ligne_x = p_cooccurrences_lignes[x]
+					dic_ligne_y = p_cooccurrences_lignes[y]
+					#print dic_ligne_x
+					#print dic_ligne_y
+					#c'est le nombre brut de cooccurences qui est enregistre
+#					formes=fonctions_lib.merge(formes, formes_x, lambda x,y: fonctions_lib.merge(x,y,lambda x,y:x+y))
+					#print fonctions_lib.merge_prod(dic_ligne_x, dic_ligne_y , lambda x,y:(float(x*y)))
+					
+					# print Ncoocc[x]
+					# print Ncoocc[y]
+					# print dic_ligne_x
+					# print dic_ligne_y
+					# print sum(fonctions_lib.merge_prod(dic_ligne_x, dic_ligne_y , lambda x,y:math.sqrt(float(x*y))).values())
+					# print math.sqrt(float(Ncoocc[x])*float(Ncoocc[y]))
+					# print 'res : \t'+str(dico_termes[x]) +'\t'+ str(dico_termes[y]) +'\t'+ str(sum(fonctions_lib.merge_prod(dic_ligne_x, dic_ligne_y , lambda x,y:math.sqrt(float(x*y))).values()) / math.sqrt(float(Ncoocc[x])*float(Ncoocc[y])))
+					distribution_distance[(x,y)]  =  sum(fonctions_lib.merge_prod(dic_ligne_x, dic_ligne_y , lambda x,y:math.sqrt(float(x*y))).values()) / math.sqrt(float(Ncoocc[x])*float(Ncoocc[y]))
+				except:
+					pass
 				
-				for z in range(N):
-					z=z+1
-					dist_x=p_cooccurrences.get((x,z,0),0.)
-					# try:
-					# 	dist_x = float(p_cooccurrences[])
-					# except:
-					# 	dist_x = epsilon
-					dist_y=p_cooccurrences.get((y,z,0),0.)
-					# try:	
-					# 	dist_y = float(p_cooccurrences[(y,z,0)])
-					# except:
-					# 	dist_y = epsilon
-					occ_y=float(occ_y+dist_y)
-					occ_x=float(occ_x+dist_x)
-					dist_xy = float(dist_xy  +math.sqrt(float(dist_x*dist_y)))
-				if dist_xy>0:
-					distribution_distance[(x,y)]=  - math.log(dist_xy/ math.sqrt(float(occ_x*occ_y)))
+				# for z in range(N):
+				# 	z=z+1
+				# 	dist_x=p_cooccurrences.get((x,z,0),0.)
+				# 	# try:
+				# 	# 	dist_x = float(p_cooccurrences[])
+				# 	# except:
+				# 	# 	dist_x = epsilon
+				# 	dist_y=p_cooccurrences.get((y,z,0),0.)
+				# 	# try:	
+				# 	# 	dist_y = float(p_cooccurrences[(y,z,0)])
+				# 	# except:
+				# 	# 	dist_y = epsilon
+				# 	occ_y=float(occ_y+dist_y)
+				# 	occ_x=float(occ_x+dist_x)
+				# 	dist_xy = float(dist_xy  +math.sqrt(float(dist_x*dist_y)))
+				# if dist_xy>0:
+				# 	distribution_distance[(x,y)]=  - math.log(dist_xy/ math.sqrt(float(occ_x*occ_y)))
 	return distribution_distance
 	
 def export_concepts_xhi2 (xhi2val,p_cooccurrences,dico_termes,dico_lemmes):
@@ -278,17 +318,19 @@ years_bins=[years_bins]
 contenu = fonctions_bdd.select_bdd_table(name_bdd,'billets','concepts_id,jours,id',requete)
 print "contenu importé"
 print '\n'
-
-p_cooccurrences,NN = build_cooc_matrix(contenu,years_bins)
+from time import time
+timeavt = time()
+p_cooccurrences,NN,p_cooccurrences_lignes = build_cooc_matrix(contenu,years_bins)
 print 'coocc fabriquées'
-distribution_distance = distribution_distance_build(p_cooccurrences,dico_termes)
+timeapres = timeavt
+timeavt = time()
+print 'duree de la derniere etape : ' + str( timeavt-timeapres) + '\n'
+distribution_distance = distribution_distance_build(p_cooccurrences,dico_termes,p_cooccurrences_lignes)
 print '\nrapprochements suggérés:\n'
-ytot = 0.
-h =0
-for x,y in distribution_distance.iteritems():
-	ytot = ytot + y
-	h = h+1
-ytot = float(ytot / float(h))
+timeapres = timeavt
+timeavt = time()
+print 'duree de la derniere etape : ' + str(timeavt-timeapres) + '\n'
+
 
 l = distribution_distance.items()
 l.sort(key=itemgetter(1),reverse=True)
@@ -296,11 +338,11 @@ dico_final_top={}
 
 synonymes_potentiels = open(path_req + 'synonymes.txt','w')
 
-for x in l[:10000]:
+for x in l[:10]:
 	couple=x[0]
 	if p_cooccurrences[(couple[0],couple[0],0)]*NN>freqmin and p_cooccurrences[(couple[1],couple[1],0)]*NN>freqmin:
-		print dico_termes[couple[0]] + '\t'+dico_termes[couple[1]] + '\t' + str(float(distribution_distance[couple] / ytot)) 
-		synonymes_potentiels.write(dico_termes[couple[0]] + '\t'+dico_termes[couple[1]] + '\t' + str(float(distribution_distance[couple] / ytot))  + '\n')
+		print dico_termes[couple[0]] + '\t'+dico_termes[couple[1]] + '\t' + str(float(distribution_distance[couple])) 
+		synonymes_potentiels.write(dico_termes[couple[0]] + '\t'+dico_termes[couple[1]] + '\t' + str(float(distribution_distance[couple]))  + '\n')
 print "matrice de cooccurrence construite"
 
 
