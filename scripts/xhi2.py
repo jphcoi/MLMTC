@@ -237,7 +237,7 @@ def distribution_distance_build(p_cooccurrences,dico_termes,p_cooccurrences_lign
 	waiting_time= N
 	for x in range(N):
 		compt+=1
-		if not compt%100:
+		if not compt%10:
 			print '       (#'+str(compt)+' sur '+str(waiting_time)+")"		
 		x=x+1
 		for y in range(N):
