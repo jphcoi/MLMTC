@@ -380,45 +380,46 @@ def indexer_billet(contenu,ngrammes,maxTermLength,include):
 		#ngramme_fit_index=[]
 		for ngraz in items:#zip(ngrammes,nn):
 			for ngra in ngraz[0].split('***'):
-				ngraz1_long = ngra.count(' ')+1
-				#version anciennce
-				#chaine=' '+str(ngra)+' ','utf-8'
-				chaine=unicode(' '+str(ngra)+' ','utf-8')
-				if chaine in billet_lemmatise:
-					ngramme_fit.append(ngraz[0])
-					dest = ngraz[0]
-					idx = billet_lemmatise.find(chaine)
-					clause_include_0 = 0
-					while chaine in billet_lemmatise and clause_include_0 == 0:
+				if len(ngra)>0:
+					ngraz1_long = ngra.count(' ')+1
+					#version anciennce
+					#chaine=' '+str(ngra)+' ','utf-8'
+					chaine=unicode(' '+str(ngra)+' ','utf-8')
+					if chaine in billet_lemmatise:
+						ngramme_fit.append(ngraz[0])
+						dest = ngraz[0]
 						idx = billet_lemmatise.find(chaine)
+						clause_include_0 = 0
+						while chaine in billet_lemmatise and clause_include_0 == 0:
+							idx = billet_lemmatise.find(chaine)
 						
-						longueur = len(ngra)+1
-						avant = billet_lemmatise[:idx]
-						pas = len(avant.split())
+							longueur = len(ngra)+1
+							avant = billet_lemmatise[:idx]
+							pas = len(avant.split())
 					
-						orig = billet_brutv[pas:pas+ngraz1_long]	
-						orig_c = billet_brutv[pas:pas+ngraz1_long]
-						orig = ' '.join(orig)
-						orig_c[0]='<b>'+orig_c[0]
-						orig_c[-1]= orig_c[-1]+'</b>'
-						billet_brutv_copie = billet_brutv_copie[:pas] + orig_c +  billet_brutv_copie[pas+ngraz1_long:]
-						if include==1:
-							billet_lemmatise=billet_lemmatise[:idx] + ' '+ billet_lemmatise[idx+longueur:] 
-							######AMELIORATION: Enlever les bouts plutôt que de les rajouter...
-							billet_brutv=billet_brutv[:pas] + billet_brutv[pas+ngraz1_long:] 	
-						if dest in formes:
-							dico_dest = formes[dest]
-							if orig in dico_dest:
-								dico_dest[orig] = dico_dest[orig] + 1
-							else:	
+							orig = billet_brutv[pas:pas+ngraz1_long]	
+							orig_c = billet_brutv[pas:pas+ngraz1_long]
+							orig = ' '.join(orig)
+							orig_c[0]='<b>'+orig_c[0]
+							orig_c[-1]= orig_c[-1]+'</b>'
+							billet_brutv_copie = billet_brutv_copie[:pas] + orig_c +  billet_brutv_copie[pas+ngraz1_long:]
+							if include==1:
+								billet_lemmatise=billet_lemmatise[:idx] + ' '+ billet_lemmatise[idx+longueur:] 
+								######AMELIORATION: Enlever les bouts plutôt que de les rajouter...
+								billet_brutv=billet_brutv[:pas] + billet_brutv[pas+ngraz1_long:] 	
+							if dest in formes:
+								dico_dest = formes[dest]
+								if orig in dico_dest:
+									dico_dest[orig] = dico_dest[orig] + 1
+								else:	
+									dico_dest[orig] = 1
+								formes[dest]=dico_dest
+							else:
+								dico_dest = {}
 								dico_dest[orig] = 1
-							formes[dest]=dico_dest
-						else:
-							dico_dest = {}
-							dico_dest[orig] = 1
-							formes[dest] = dico_dest
-						if include == 0:
-							clause_include_0 = 1
+								formes[dest] = dico_dest
+							if include == 0:
+								clause_include_0 = 1
 		#mise à jour du champ content
 		nouveau_contenu.append((billet_id,' '.join(billet_brutv_copie)))
 		ngrammes_fit.append(ngramme_fit)

@@ -340,11 +340,14 @@ synonymes_potentiels = open(path_req + 'synonymes.txt','w')
 
 for x in l:
 	couple=x[0]
-	if p_cooccurrences[(couple[0],couple[0],0)]*NN>freqmin and p_cooccurrences[(couple[1],couple[1],0)]*NN>freqmin:
+	#if p_cooccurrences[(couple[0],couple[0],0)]*NN>freqmin and p_cooccurrences[(couple[1],couple[1],0)]*NN>freqmin:
 		#print dico_termes[couple[0]] + '\t'+dico_termes[couple[1]] + '\t' + str(float(distribution_distance[couple])) 
-		synonymes_potentiels.write(dico_termes[couple[0]] + '\t'+dico_termes[couple[1]] + '\t' + str(float(distribution_distance[couple]))  + '\n')
-print "matrice de cooccurrence construite"
+	synonymes_potentiels.write(dico_termes[couple[0]] + '\t'+dico_termes[couple[1]] + '\t' + str(float(distribution_distance[couple]))  + '\n')
 
+timeapres = timeavt
+timeavt = time()
+print 'duree de la derniere etape : ' + str(timeavt-timeapres) + '\n'
+print "matrice de cooccurrence construite"
 
 muti = build_mutual_information(p_cooccurrences)
 thres=0.
