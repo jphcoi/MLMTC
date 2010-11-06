@@ -724,3 +724,86 @@ JJ_therapeutic NN_strategy	JJ_therapeutic NP_strategic
 NN_oxalate NN_production	NN_oxalate NN_product
 NN_oxalate NN_production	NN_oxalate NP_product
 NN_report	NP_report
+NN_report	NP_report
+JJ_antibiotic	NN_antibiotic
+NN_arteritis	NN_arthritis
+NN_association	NP_association
+NN_cancer	NP_cancer
+NP_case NP_report	NN_case NN_report
+NN_center	NP_center
+JJ_characteristic	NN_characteristic
+JJ_clinical	clinical
+JJ_complex	NN_complex
+VV_compute tomographic	VV_compute NN_tomography
+NN_tomography	tomographic
+NP_ct NN_scan	NP_ct VV_scan
+NN_scan	VV_scan
+JJ_differential	NN_differential
+JJ_differential NN_diagnosis	NN_differential NN_diagnosis
+JJ_differential	NN_differential
+NN_disease	NP_disease
+NN_disease	diseases
+NP_disease	diseases
+NN_dna	NP_dna
+eosinophilia	JJ_eosinophilic
+JJ_epidemiologic	JJ_epidemiological
+JJ_european	NP_european
+JJ_fluid	NN_fluid
+JJ_future	NN_future
+NN_g	NP_g
+JJ_genetic	NN_genetics
+NN_group	NP_group
+NN_hepatitis	NP_hepatitis
+JJ_histologic NN_examination	JJ_histological NN_examination
+JJ_histological	JJ_histologic
+histopathologic	JJ_histopathological
+histopathologic NN_examination	JJ_histopathological NN_examination
+JJ_histopathological	histopathologic
+NN_hospital	NP_hospital
+NN_i	NP_i
+JJ_internal	NN_interval
+JJ_joint	NN_joint
+NN_l	NP_l
+JJ_large NN_b-cell NN_lymphoma	JJ_large NN_cell NN_lymphoma
+NN_b-cell	NN_cell
+NN_leukaemia	NN_leukemia
+NN_m	NP_m
+JJ_mean NN_age	VV_mean NN_age
+JJ_mean	VV_mean
+JJ_mean NN_follow-up	JJ_median NN_follow-up
+JJ_medical	NP_medical
+JJ_national	NP_national
+JJ_newborn	NN_newborn
+non-specific	nonspecific
+NN_orphan	orphan
+JJ_paediatric	JJ_pediatric
+JJ_pathologic NN_finding	JJ_pathological NN_finding
+JJ_pathologic	JJ_pathological
+JJ_patient	NN_patient
+NN_patient PO_'	NN_patient PO_'s
+PO_'	PO_'s
+NN_patient VV_do	NN_patient VV_die
+JJ_rare	rare
+JJ_rare NN_disease	rare NP_disease
+JJ_rare NN_disease	rare diseases
+rare NP_disease	rare diseases
+diseases	NP_disease
+JJ_rare NN_disease VV_characterise	JJ_rare NN_disease VV_characterize
+VV_characterize	VV_characterise
+JJ_reported NN_case	VV_report NN_case
+JJ_reported	VV_report
+VV_report DT_the NN_case	VV_report CD_two NN_case
+NN_review	NP_review
+NN_review IN_of DT_the NN_literature	NP_review IN_of DT_the NN_literature
+NP_review	NN_review
+NN_review IN_of DT_the NN_literature	VV_review DT_the NN_literature
+NP_review IN_of DT_the NN_literature	VV_review DT_the NN_literature
+NN_s	NP_s
+JJ_standard	NN_standard
+NN_study	NP_study
+NN_study NN_design	NP_study NP_design
+NN_syndrome	syndrome
+NN_treatment	NP_treatment
+NN_type NN_i	NN_type PP_i
+PP_i	NN_i
+JJ_variable	NN_variable

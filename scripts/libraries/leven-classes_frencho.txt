@@ -11755,3 +11755,123 @@ NO_cyclone	cyclone
 NO_inondation	inondation
 NO_inondation	inondations
 NO_érosion	erosion
+ademe	NO_Agence PR_de DE_le NO_environnement KO_et PR_de DE_le NO_maîtrise PR_de DE_le NO_énergie
+aedes	NO_Agence AD_européenne PR_pour DE_le NO_développement KO_et DE_la NO_santé
+NO_agriculteur AD_biologique	NO_agriculteur bio
+NO_agriculteur AD_biologique	agriculteur bio
+NO_agriculture AD_biologique	NO_agriculture bio
+NO_agriculture AD_biologique	agriculture bio
+alzheimer	NO_maladie PR_de alzheimer
+anrs	NO_Agence AD_Nationale PR_de NO_Recherche PR_sur DE_le NO_sida KO_et DE_le NO_hépatites
+NO_arme AD_biologique	NO_armement AD_biologique
+NO_association PR_de NO_protection PR_de DE_le NO_environnement	association PR_de NO_protection PR_de DE_le NO_environnement
+NO_association PR_de NO_Protection PR_de DE_le NO_Nature	association PR_de NO_protection PR_de DE_le NO_Nature
+NO_autorité PR_de NO_sûreté AD_nucléaire	asn
+NO_banque AD_européen PR_de NO_investissement	bei
+NO_biologie AD_synthétique	NO_biologie PR_de NO_synthèse
+NO_biotechnologie	biotech
+bisphénol	bisphénol A
+bisphénol	bpa
+cac40	cac 40
+NA_cécile duflot	NA_cécile NA_duflot
+NA_chantal jouanno	NA_chantal NA_jouanno
+chat	NO_chat
+chlordécone	NA_chlordécone
+cmu	NO_couverture NO_maladie AD_universel
+NO_composant AD_chimique	NO_composé AD_chimique
+Criirad	NO_Commission DE_de NO_recherche KO_et DE_de NO_information AD_indépendantes PR_sur DE_le NO_radioactivité
+NO_déchet	déchets
+NO_directive AD_européen	AD_directif européens
+NO_directive AD_européen	AD_directif européen
+NA_dominique strauss-kahn	strauss-kahn
+NA_dominique strauss-kahn	DSK
+NO_émission PR_de NO_gaz PR_à NO_effet PR_de NO_serre	NO_émission PR_de gaz PR_à NO_effet PR_de NO_serre
+AD_éolien NO_marin	eoliennes PR_en NO_mer
+AD_éolien NO_marin	AD_éolien NO_offshore
+NA_etat AD_européen	DE_le NO_europe
+NO_éthique	AD_éthique
+fne	NA_france nature environnement
+fne	NA_france NO_nature environnement
+fne	NA_france nature NO_environnement
+fne	NA_france NO_nature NO_environnement
+gsk	GlaxoSmithKline
+NO_impact AD_négatif	NO_impact AD_néfaste
+NO_institut AD_national PR_de NO_veille AD_sanitaire	NO_institut PR_de veille sanitaire
+invs	NO_institut AD_national PR_de NO_veille AD_sanitaire
+invs	NO_institut PR_de veille sanitaire
+NO_laboratoire AD_pharmaceutique	NO_labo AD_pharmaceutique
+ldh	NO_ligue PR_de NO_droit PR_de DE_le NO_homme
+NO_marée AD_noir PR_dans DE_le NO_golfe	NO_marée AD_noir PR_du NO_golfe
+NO_marée AD_noir PR_dans DE_le NO_golfe	marée AD_noir PR_du NO_golfe
+NO_marée AD_noir PR_dans DE_le NO_golfe	NO_marée AD_noir PR_du golfe
+NO_marée AD_noir PR_dans DE_le NO_golfe	marée AD_noir PR_du golfe
+NO_médecin AD_général	NO_docteur AD_général
+NO_médecin AD_général	docteur AD_général
+NO_médecin AD_nucléaire	NO_docteur AD_nucléaire
+NO_médecin AD_nucléaire	docteur AD_nucléaire
+NO_médecine AD_vétérinaire	médecine AD_vétérinaire
+NO_organisation PR_du NO_nation AD_uni	NO_nation AD_uni
+NO_organisation PR_du NO_nation AD_uni	NO_nation VE_unir
+NO_organisation PR_du NO_nation AD_uni	nations unies
+NO_opérateur télécoms	NO_opérateur AD_téléphonique
+NO_opérateur télécoms	NO_opérateur AD_mobile
+NO_pays PR_en NO_développement	NO_pays PR_en NO_voie PR_de NO_développement
+NO_pays PR_en NO_développement	pays PR_en NO_voie PR_de NO_développement
+NO_pays PR_en NO_développement	NO_pays PR_en NO_voie PR_de développement
+NO_pays PR_en NO_développement	pays PR_en NO_voie PR_de développement
+NO_pays PR_en NO_développement	NO_pays PR_en voie PR_de développement
+NO_protection PR_de DE_le NO_environnement	NO_défense PR_de DE_le NO_environnement
+NO_protection PR_de DE_le NO_environnement	NO_défense PR_de DE_le environnement
+NO_protection PR_de DE_le NO_environnement	NO_défenseur PR_de DE_le NO_environnement
+NO_protocole PR_de NA_kyoto	protocole PR_de NA_kyoto
+NO_qualité PR_de DE_le NO_eau	NO_qualité PR_du NO_eau
+NO_qualité PR_de DE_le NO_eau	NO_qualité PR_du eau
+NO_réacteur epr	epr
+NO_réchauffement AD_climatique	NO_réchauffement AD_global
+NO_réchauffement AD_climatique	NO_réchauffement AD_planétaire
+NO_réchauffement AD_climatique	NO_réchauffement PR_de DE_le NO_planète
+VE_réduire DE_son NO_émission	VE_réduire DE_le NO_émission
+VE_réduire DE_son NO_émission	VE_réduire DE_leur NO_émission
+NO_risque PR_de NO_cancer	VE_risquer PR_de NO_cancer
+NA_bachelot	bachelot
+NA_bachelot	roselyne bachelot-narquin
+NO_salle PR_de NO_injection	NO_salle PR_de NO_shoot
+NO_santé PR_au NO_travail	NO_santé PR_du NO_travailleur
+NO_secteur PR_de DE_le NO_énergie	NO_secteur AD_énergétique
+NO_secteur PR_de DE_le NO_énergie	secteur AD_énergétique
+NO_sécurité AD_social	NO_sécu
+NO_sinistré PR_de DE_le NO_tempête xynthia	NO_sinistré PR_de xynthia
+véolia	veolia
+wi-fi	wi-fi
+NO_dystonie	dystonie
+NO_trouble AD_mental	NO_trouble AD_psychiatrique
+NO_trouble AD_mental	NO_trouble AD_psychique
+NO_trouble AD_mental	NO_trouble AD_psychologique
+NO_arme AD_biologique	
+inserm	NO_institut AD_national PR_de DE_le NO_santé KO_et PR_de DE_le NO_recherche
+inserm	NO_institut national PR_de DE_le NO_santé KO_et PR_de DE_le NO_recherche
+inserm	NO_institut AD_national PR_de DE_le santé KO_et PR_de DE_le NO_recherche
+inserm	NO_institut nationale PR_de DE_le NO_santé KO_et PR_de DE_le NO_recherche
+inserm	NO_institut national PR_de DE_le santé KO_et PR_de DE_le NO_recherche
+inserm	NO_institut nationale PR_de DE_le santé KO_et PR_de DE_le NO_recherche
+NO_ministre PR_de DE_le ecologie	NO_ministère PR_du NO_développement AD_durable
+NO_ministre PR_de DE_le ecologie	NO_ministre PR_du NO_développement AD_durable
+NO_ministre PR_de DE_le ecologie	ministère PR_du NO_développement AD_durable
+NO_ministre PR_de DE_le ecologie	NO_ministère PR_du développement AD_durable
+NO_ministre PR_de DE_le ecologie	ministre PR_du NO_développement AD_durable
+NO_ministre PR_de DE_le ecologie	NO_ministre PR_du développement AD_durable
+NO_ministre PR_de DE_le ecologie	ministère PR_du développement AD_durable
+NO_ministre PR_de DE_le ecologie	ministres PR_du NO_développement AD_durable
+NO_ministre PR_de DE_le ecologie	ministre PR_du développement AD_durable
+NO_ministre PR_de DE_le ecologie	ministres PR_du développement AD_durable
+NO_ministre PR_de DE_le ecologie	meeddm
+NO_ministre PR_de DE_le ecologie	NO_ministre PR_de DE_le NO_environnement
+NO_ministre PR_de DE_le ecologie	NO_ministère PR_de DE_le NO_environnement
+NO_ministre PR_de DE_le ecologie	ministre PR_de DE_le NO_environnement
+NO_ministre PR_de DE_le ecologie	NO_ministre PR_de DE_le environnement
+NO_ministre PR_de DE_le ecologie	ministère PR_de DE_le NO_environnement
+NO_ministre PR_de DE_le ecologie	NO_ministère PR_de DE_le environnement
+NO_ministre PR_de DE_le ecologie	ministres PR_de DE_le NO_environnement
+NO_ministre PR_de DE_le ecologie	ministre PR_de DE_le environnement
+NO_ministre PR_de DE_le ecologie	ministère PR_de DE_le environnement
+NO_ministre PR_de DE_le ecologie	ministres PR_de DE_le environnement

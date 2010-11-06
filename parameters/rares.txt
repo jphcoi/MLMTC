@@ -1,0 +1,17 @@
+name_data="../../inout/data/rares/RareDiseaseTS.isi"
+language ='english'
+date_depart = date(1970,1,1)
+freqmin = 15
+ng_filter=[1,2,2,2,2]
+top = 2000
+sample=4000000
+dated = 1991
+datef = 2010
+fenetre = 3
+overlap = 3
+dist_type='precision'
+build_link_tables='n'
+maxTermLength=5
+nofigure=0
+user_interface='y'
+
