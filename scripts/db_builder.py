@@ -87,7 +87,7 @@ print "      - par exemple, champs[0] = ",champs[0]
 #on remplit la bdd avec les infos extraites
 
 champs_name = "(title,date,permalink,site,categorie1,categorie2,categorie3,content,href,requete,identifiant_unique)"#on n'enregistre pas le html brut
-if  name_data[-4:] in [".lfl",'.rss']:#export au format .lfl: linkfluence type III ou IV
+if  name_data[-4:] in [".lfl",'.rss','.doc']:#export au format .lfl: linkfluence type III ou IV
 	fonctions_bdd.remplir_table_billets_lfl(name_bdd,'billets',champs,champs_name,requete)
 else:
 	fonctions_bdd.remplir_table_billets(name_bdd,'billets',champs,champs_name,requete)

@@ -1,0 +1,17 @@
+name_data="../../inout/data/docti/docti.doc"
+language ='french'
+date_depart = date(2000,1,1)
+freqmin = 2
+ng_filter=[1,2,2,2,2,2]
+top = 400
+sample=4000000
+dated = 2010
+datef = 2010
+fenetre = 28
+overlap = 28
+dist_type='precision'
+build_link_tables='n'
+maxTermLength=6
+nofigure=0
+user_interface='y'
+temps_grain = 'months' 

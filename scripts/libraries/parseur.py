@@ -238,7 +238,6 @@ def detecthref(cont):
 
 def date_billet_parser(datee):
 	datee = str(datee)
-#	print datee
 	if ' ' in datee:
 		datev = datee.split(' ')
 	else:
@@ -251,6 +250,14 @@ def date_billet_parser(datee):
 		
 		daate = datev[0]
 		datev = daate.split('-') #a commenter dans le cas du xml seulemnt
+		if len(str(datev[2]))>3:
+			#doctissimo, annee et jour inverse
+			y  = datev[2]
+			datev[2]=datev[0]
+			#bug sur date...
+			datev[2]=15
+			
+			datev[0]=y
 		date_billet = date(int(datev[0]),int(datev[1]),int(datev[2]))
 	else:
 		#date_billet =date(int(datev[0]),1,1)
@@ -261,11 +268,16 @@ def jour_entre(date_billet,date_depart):
 	if len(str(date_billet))<4:
 		return str(date_billet)
 	else:
-		if "201" in str(date_depart):
-			delta = abs(date_billet - date_depart)
-			return delta.days +1
-		else:
-			return str(date_billet)[0:4]
+		try:
+			if parameters.temps_grain!='years':
+				delta= abs(date_billet - date_depart)
+				return delta.days +1
+		except:
+			if "201" in str(date_depart):
+				delta = abs(date_billet - date_depart)
+				return delta.days +1
+			else:
+				return str(date_billet)[0:4]
 
 	
 ###############################
@@ -525,6 +537,79 @@ def extract_champs_fet(filename):
 	file.close()
 	print "---",len(articles),"posts processed."
 	return articles
+
+def utf_weird(content):
+	return content.replace(u'\xc3','').replace(u'\xa8',u'è').replace(u'\xa9',u'é').replace(u'\xa0',u'à').replace(u'\xe9',u'é').replace(u'\xe8',u'è').replace(u'\xaa',u'ê').replace(u'\xa7',u'ç').replace(u'\\u200b',u'').replace(u'\xc3\xa9',u'é').replace(u'\xb4',u'ô').replace(u'xe2',u"'").replace(u'\xef\xac',u"fi")
+
+def extract_champs_doc(filename):
+	#extraction d'un export doctissimo
+	articles=[]
+	print "    - fichier d'articles: \""+filename+"\"..."
+	file=codecs.open(filename,"r","utf8")
+	lines = file.readlines()
+	i=0
+	categ1,categ2,categ3,permalink,contentanchor = '','','','',''
+	clause_titre=0
+	clause_content=0
+	idx = 2
+	line = ''
+	clause=0
+	for lin in lines:
+		if lin[:len(str(idx))+2] == '"'+str(idx)+'"':
+			clause = 1
+		else:
+			line = line + lin
+		if clause==1:
+			line= line.replace("\\n",' ').replace("\n",' ')
+			idx = idx+1
+			linev= line.split('", "')
+			#print linev
+			linev[0] = linev[0][1:]
+			linev[-1] = linev[-1][:-1]
+			
+			categ1 = utf_weird(linev[6])
+			#rôle du doctinaute
+			categ2 = utf_weird(linev[2])
+			#nom liste de discussion
+			
+			title,date,website,contentclean = '',linev[7][:-1],linev[5],linev[9]
+			permalink = linev[1]
+			contentclean = title +' ; ' +contentclean
+			#print unicode(contentclean)
+			#contentclean=(contentclean.encode('utf-8','replace'))
+			#title=title.encode('utf-8','replace')
+			contentclean = utf_weird(contentclean)
+			title= str(idx)
+			website=utf_weird(website)
+			
+			#print [contentclean]
+			# title=title.replace('’','')
+			# 		contentclean=contentclean.replace('’','')
+			# 		title=title.replace('“','"')
+			# 		contentclean=contentclean.replace('“','"')
+			# 		title=title.replace('”','"')
+			# 		contentclean=contentclean.replace('”','"')
+			# 		title=title.replace('–','-')
+			# 		contentclean=contentclean.replace('–','-')
+			# 		title=title.replace('/','-')
+			# 		contentclean=contentclean.replace('/','-')
+			# 		title=title.replace('‘',"'")
+			# 		contentclean=contentclean.replace('‘',"'")
+			# 		title=title.replace('…',"...")
+			# 		contentclean=contentclean.replace('…',"...")
+			contentanchor = linev[-1]
+			if len(contentanchor)>1:
+				contentanchor = "http://forum.doctissimo.fr/" +contentanchor  
+			articles.append([title,date,permalink,website,categ1,categ2,categ3,contentclean,website,contentanchor])#sans le html brut
+			clause= 0
+			line = lin
+	file.close()
+	print "---",len(articles),"posts processed."
+	return articles
+
+
+
+
 
 def extract_champs_csv(filename):
 	articles=[]
@@ -881,13 +966,6 @@ def extract_champs_rss(rss_url,sep):
 				except:
 					permaling = ''
 				contentclean=specialutf8(cleancontent(content))
-#				print '\n'
-#				print encoding
-#				print title.encode('utf-8')
-#				print permalink
-#		 		print day
-				#contentclean= contentclean.encode('utf-8')
-				#articles.append([title,datet,permalink,url,continent,community,territory,title+ '***' + content,author,editorial_links])
 				href = ''
 				#unicode(title) +'***'+ unicode(
 				posts.append([unicode(title),str(day),permalink,rss_url,'','','',contentclean,'rss_url',href])
@@ -917,6 +995,9 @@ def extraire_donnees(name_data,sep):
 		champs = extract_champs_lfl(name_data,sep,continent)
 	if ".rss" == name_data[-4:]:#export au format .lfl: linkfluence type III ou IV
 		champs = extract_champs_rss(name_data,sep)
+	if ".doc" == name_data[-4:]:#export au format .doc: export doctissimo
+		champs = extract_champs_doc(name_data)
+
 	return champs
 
 

@@ -40,3 +40,5 @@ jeudi
 vendredi
 samedi
 dimanche
+messages
+message

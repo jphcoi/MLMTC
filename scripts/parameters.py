@@ -220,6 +220,7 @@ parametres_file='../parameters/MESR.txt'
 
 #parametres_file='../parameters/docilite.txt'
 parametres_file='../parameters/test.txt'
+parametres_file='../parameters/docti.txt'
 
 ################################################
 ################################################
