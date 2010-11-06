@@ -5,6 +5,69 @@ NO_actualité PR_du NO_jour	actualités PR_du NO_jour
 actualités	NO_actualité
 NO_administration	administration
 NO_affaire	affaire
+VE_avoir l NO_air	VE_avoir DE_le NO_air
+DE_le	l
+VE_avoir DE_le NO_impression	VE_avoir DE_le impréssion
+NO_impression	impréssion
+VE_avoir DE_le meme	VE_avoir DE_le memes
+meme	memes
+NO_amitié	amitiés
+anti NO_douleur	anti-douleurs
+anti NO_dépresseur	NO_antidépresseur
+anti AD_inflammatoire	NO_anti-inflammatoire
+VE_atteindre PR_de NO_maladie	VE_atteindre PR_de DE_un NO_maladie
+aujourd hui	aujourdhui
+aujourd'hui	aujourdhui
+NO_ben	ben
+AD_bien PR_ce NO_maladie	AD_bien DE_le NO_maladie
+NO_bisou AD_bon	NO_bisou DE_mon
+AD_bon apres NO_midi	AD_bon PR_après NO_midi
+bonne NO_nuit	bonne nuit
+nuit	NO_nuit
+NA_bretagne	bretagne
+brulure	brulures
+c VE_être DE_le	c' VE_être DE_le
+c	c'
+NO_cause PR_de DE_mon	NO_cause PR_de DE_son
+NO_citation	citation
+VE_connaître PR_ce NO_maladie	VE_connaître DE_le NO_maladie
+NO_coup PR_de NO_cur	coups PR_de NO_cur
+coups	NO_coup
+VE_dire KO_que c	VE_dire KO_que j
+espere PR_de PR_tout NO_cur	VE_espérer PR_de PR_tout NO_cur
+espere KO_que ca	espere KO_que DE_le
+VE_faire PR_de AD_gros NO_bisou	VE_faire DE_un AD_gros NO_bisou
+NO_fait PR_du AD_bien	VE_faire PR_du NO_bien
+NA_fernande	fernande
+NA_florette	florette
+NA_forum	NO_forum
+j PR_en VE_avoir AD_marre	j' PR_en VE_avoir AD_marre
+j espere	j' espere
+NA_lyon	lyon
+NO_maladie PR_de chron	NO_maladie PR_de crohn
+NO_merci d NO_avance	NO_merci PR_de NO_avance
+NO_merci d NO_avance	merci PR_de NO_avance
+AD_même symptomes	AD_même NO_symptôme
+AD_petit NO_chouette	petite-chouette
+AD_petit NO_chouette	petitechouette
+petite-chouette	petitechouette
+NO_premier	premiere
+present	presente
+NO_problème	probléme
+qu PR_il n	qu PR_il AD_ne
+AD_ne	n
+reveille	reveiller
+NO_semaine derniere	NO_semaine AD_dernier
+derniere	AD_dernier
+NO_sep	sep
+NA_serge	NO_serge
+sun chris	sun-chris
+temoignage	temoignages
+NO_traitement PR_de DE_le	NO_traitement PR_à DE_le
+tégéline	tégélines
+VE_voir DE_le NO_médecin	VE_voir DE_un NO_médecin
+¬à ® â SY_ ¥ DE_le	¬à ® â SY_ ¥ â
+NO_évolution PR_de PR_ce NO_maladie	NO_évolution PR_de DE_le NO_maladie
 NO_affaire bettencourt	affaire bettencourt
 NO_affaire	affaire
 NO_affaire AD_étranger	affaires AD_étranger
@@ -13,6 +76,87 @@ NO_agence	agence
 NO_agriculture	agriculture
 NO_aide	aide
 NO_air	air
+VE_avoir l hopital	VE_avoir DE_le hopital
+andouilette	NO_andouillette
+andouilette	andouillette
+NO_andouillette	andouillette
+VE_atteindre PR_de PR_ce NO_maladie	VE_atteindre PR_de DE_le NO_maladie
+VE_atteindre PR_de PR_ce NO_maladie	VE_atteindre PR_de DE_un NO_maladie
+aujourd hui	aujourd'hui
+NO_bien	bien
+NO_bise PR_à PR_tout DE_le NO_monde	NO_bisou PR_à PR_tout DE_le NO_monde
+NO_bisou	bisous
+AD_bon NO_courage	bon NO_courage
+AD_bon	bon
+AD_bon week end	AD_bon NO_week-end
+AD_bon week end	AD_bon weekend
+AD_bon NO_week-end	AD_bon weekend
+NO_week-end	weekend
+c VE_être DE_un	c' VE_être DE_un
+c VE_être AD_vrai	c' VE_être AD_vrai
+carinette	carinettes
+NO_centre anti NO_douleur	NO_centre anti-douleur
+NO_centre anti NO_douleur	NO_centre anti-douleurs
+NO_centre anti-douleur	NO_centre anti-douleurs
+anti-douleur	anti-douleurs
+NO_coucou	coucou
+NO_coucou DE_le NO_fille	coucou DE_le NO_fille
+NO_coucou	coucou
+coucou PR_tout DE_le NO_monde	NO_coucou AD_tout DE_le NO_monde
+NO_courage	courage
+VE_dire KO_que c	VE_dire KO_que ca
+c	ca
+NA_est	NO_est
+VE_être VE_atteindre PR_de PR_ce NO_maladie	VE_être VE_atteindre PR_de DE_le NO_maladie
+NO_fanfan	fanfan
+fibromyalgique	fibromyalgiques
+NA_fleur	NO_fleur
+NA_flo	flo
+NA_france	france
+AD_gros NO_bisou	NO_gros NO_bisou
+AD_gros	NO_gros
+AD_gros NO_bisou	gros NO_bisou
+AD_gros	gros
+NO_gros NO_bisou	gros NO_bisou
+gros	NO_gros
+AD_hier NO_soir	VE_hier NO_soir
+AD_hier	VE_hier
+m url-remplacée	ml url-remplacée
+NO_maladie	maladie
+NO_maladie NO_auto AD_immun	NO_maladie AD_auto-immun
+medecin	medecine
+medecin	medecins
+medecin AD_ne	medecins AD_ne
+medecins	medecin
+medecin AD_traitant	NO_médecin AD_traitant
+NO_médecin	medecin
+medecine	medecins
+medicament	medicaments
+NO_moi	moi
+NO_optimiste	optimiste
+parpaillon	parpaillons
+AD_pas PR_de NO_douleur	AD_pas DE_le NO_douleur
+AD_pas PR_de NO_douleur	AD_plus PR_de NO_douleur
+personne AD_ne	NO_personne AD_ne
+personne	NO_personne
+AD_peu etre	VE_pouvoir etre
+VE_pouvoir etre	peut-etre
+VE_prendre DE_mon NO_main	VE_prendre DE_ton NO_main
+probleme	problemes
+reponse	reponses
+resultat	resultats
+NO_salut	salut
+NA_sophie	NO_sophie
+VE_souhaiter DE_un AD_bon NO_journée	VE_souhaiter DE_un AD_bon NO_soirée
+VE_souhaiter DE_un AD_bon NO_journée AD_gros NO_bisou	VE_souhaiter DE_un AD_bon NO_soirée AD_gros NO_bisou
+NA_sylvie	NO_sylvie
+symptome	symptomes
+symptomes PR_de DE_le	NO_symptôme PR_de DE_le
+AD_tout DE_le NO_monde	tout le NA_monde
+VE_trouver DE_le NO_solution	VE_trouver DE_un NO_solution
+VE_voir DE_mon NO_médecin	VE_voir DE_un NO_médecin
+week end	NO_week-end
+¬à ® â SY_ ¥ DE_le	¬à ® â SY_ ¥ â
 NO_algue AD_vert	algues AD_vert
 algues	NO_algue
 NO_alliance	alliance
@@ -11875,3 +12019,316 @@ NO_ministre PR_de DE_le ecologie	ministres PR_de DE_le NO_environnement
 NO_ministre PR_de DE_le ecologie	ministre PR_de DE_le environnement
 NO_ministre PR_de DE_le ecologie	ministère PR_de DE_le environnement
 NO_ministre PR_de DE_le ecologie	ministres PR_de DE_le environnement
+--------------- ma NO_gitan	--------------- ma gitans
+--------------- AD_mieux KO_que AD_hier KO_mais AD_moins	--------------- AD_mieux PR_que AD_hier KO_mais AD_moins
+VE_avoir VE_décider PR_de VE_faire NO_coucou AD_plus	VE_avoir VE_décider PR_de VE_faire NO_coucou plus
+VE_avoir NO_peur	VE_avoir peur
+NO_aide	aires
+NO_alimentation PR_sans NO_gluten KO_ni NO_laitage gr¢çe	alimentation PR_sans NO_gluten KO_ni NO_laitage gr¢çe
+NO_alimentation PR_sans NO_gluten KO_ni NO_laitage gr¢çe	NO_aliment PR_sans NO_gluten KO_ni NO_laitage gr¢çe
+NO_ange PR_à 24sa DE_le 15	ange PR_à 24sa DE_le 15
+NO_après-midi	KO_après NO_midi
+VE_atteindre PR_de PR_ce NO_maladie	NO_atteinte PR_de PR_ce NO_maladie
+VE_atteindre PR_de DE_le NO_maladie	NO_atteinte PR_de DE_un NO_maladie
+VE_atteindre PR_de DE_le NO_maladie	NO_atteinte PR_de DE_le NO_maladie
+VE_atteindre PR_du NO_syndrome	NO_atteinte PR_du NO_syndrome
+NO_bascule PR_à NO_cause PR_de DE_un NO_canal	NO_bascule PR_à NO_cause PR_de DE_un canal
+AD_bon NO_surprise PR_de DE_le NO_vie	AD_bon NO_surprise PR_de DE_le vie
+NO_canal AD_lombaire AD_étroit AD_non AD_opérable	canal AD_lombaire AD_étroit AD_non AD_opérable
+NO_cause PR_de DE_un NO_canal AD_lombaire AD_étroit	NO_cause PR_de DE_un canal AD_lombaire AD_étroit
+NO_centre anti NO_douleur	centre anti NO_douleur
+NO_centre anti-douleur	centre anti-douleur
+VE_décider PR_de VE_faire NO_coucou AD_plus AD_tôt	VE_décider PR_de VE_faire NO_coucou plus AD_tôt
+AD_entier NO_liberté PR_de VE_être PR_vous AD_même	AD_entier liberté PR_de VE_être PR_vous AD_même
+VE_faire NO_attention	VE_faire attention
+VE_faire NO_coucou AD_plus AD_tôt KO_que AD_prévu	VE_faire NO_coucou plus AD_tôt KO_que AD_prévu
+VE_faire NO_coucou AD_plus AD_tôt KO_que AD_prévu	VE_faire NO_coucou AD_plus AD_tôt PR_que AD_prévu
+VE_faire NO_coucou AD_plus AD_tôt KO_que AD_prévu	VE_faire NO_coucou plus AD_tôt PR_que AD_prévu
+VE_faire NO_peur	VE_faire peur
+NO_gluten KO_ni NO_laitage gr¢çe PR_au NO_centre	NO_gluten KO_ni NO_laitage gr¢çe PR_au centre
+VE_laisser DE_le AD_entier NO_liberté	VE_laisser DE_le AD_entier liberté
+NO_laitage gr¢çe PR_au NO_centre anti-douleurs	NO_laitage gr¢çe PR_au centre anti-douleurs
+NO_merci PR_de DE_ton	merci PR_de DE_ton
+NO_merci PR_de DE_votre	merci PR_de DE_votre
+NO_merci PR_de DE_votre NO_réponse	merci PR_de DE_votre NO_réponse
+NO_merci PR_pour DE_le	merci PR_pour DE_le
+NO_merci PR_pour DE_ton	merci PR_pour DE_ton
+NO_merci PR_pour DE_votre	merci PR_pour DE_votre
+NO_merci PR_pour DE_votre NO_réponse	merci PR_pour DE_votre NO_réponse
+NO_médecin AD_ne	médecine AD_ne
+NO_médecin AD_ne	NO_docteur AD_ne
+NO_médecin AD_ne	docteur AD_ne
+VE_partir VE_rejoindre DE_le NO_ange PR_à 24sa	VE_partir VE_rejoindre DE_le ange PR_à 24sa
+VE_rejoindre DE_le NO_ange PR_à 24sa DE_le	VE_rejoindre DE_le ange PR_à 24sa DE_le
+NO_rien PR_de NO_mortel KO_mais PR_quel NO_vie	NO_rien PR_de NO_mortel KO_mais PR_quel vie
+NO_service	services
+NO_suite PR_à DE_un	suite PR_à DE_un
+NO_sécu	sécurité AD_social
+tens KO_et NO_alimentation PR_sans NO_gluten	tens KO_et alimentation PR_sans NO_gluten
+tens KO_et NO_alimentation PR_sans NO_gluten	tens KO_et NO_aliment PR_sans NO_gluten
+tout le NA_monde	NO_tout le NA_monde
+VE_étaler PR_pour DE_son AD_plus AD_grand NO_plaisir	VE_étaler PR_pour DE_son plus AD_grand NO_plaisir
+NU_@ord@ enfin DE_un AD_bon NO_surprise	NU_@ord@ enfin DE_un bon NO_surprise
+VE_avoir PR_ce NO_maladie	VE_avoir PR_ce maladie
+VE_avoir VE_décider PR_de VE_faire NO_coucou AD_plus	VE_avoir VE_décider PR_de VE_faire coucou plus
+VE_avoir VE_décider PR_de VE_faire NO_coucou AD_plus	VE_avoir VE_décider PR_de VE_faire coucou AD_plus
+VE_avoir DE_le NO_maladie	VE_avoir DE_le maladie
+VE_avoir DE_le NO_maladie PR_de crohn	VE_avoir DE_le maladie PR_de crohn
+VE_avoir DE_un NO_maladie	VE_avoir DE_un maladie
+VE_avoir DE_un NO_vie	VE_avoir DE_un vie
+NO_adresse NO_mail	NO_adresse email
+NO_alimentation PR_sans NO_gluten KO_ni NO_laitage grâçe	alimentation PR_sans NO_gluten KO_ni NO_laitage grâçe
+NO_alimentation PR_sans NO_gluten KO_ni NO_laitage grâçe	NO_aliment PR_sans NO_gluten KO_ni NO_laitage grâçe
+NO_amour PR_de NO_bébé bisous PR_à DE_mon	NO_amour PR_de NO_bébé NO_bisou PR_à DE_mon
+NO_analyse PR_de NO_sang	analyse PR_de NO_sang
+NO_analyse PR_de NO_sang	NO_analyste PR_de NO_sang
+VE_atteindre PR_de PR_ce NO_maladie	NO_atteinte PR_de DE_un NO_maladie
+VE_atteindre PR_de PR_ce NO_maladie	NO_atteinte PR_de DE_le NO_maladie
+VE_atteindre PR_de PR_ce NO_maladie	VE_atteindre PR_de DE_le maladie
+VE_atteindre PR_de PR_ce NO_maladie	VE_atteindre PR_de DE_un maladie
+VE_atteindre PR_de PR_ce NO_maladie	NO_atteinte PR_de PR_ce maladie
+VE_atteindre PR_de PR_ce NO_maladie	NO_atteinte PR_de DE_un maladie
+VE_atteindre PR_de PR_ce NO_maladie	NO_atteinte PR_de DE_le maladie
+VE_atteindre PR_de PR_ce NO_maladie	VE_atteindre PR_de PR_ce maladie
+VE_atteindre PR_de fibromyalgie	NO_atteinte PR_de fibromyalgie
+aujourd hui	AD_aujourd'hui
+AD_autre NO_maladie	AD_autre maladie
+AD_autre NO_personne	AD_autre personne
+AD_beaucoup PR_de NO_courage	AD_beaucoup PR_de courage
+NO_bisou VE_avoir AD_plus	bisous VE_avoir AD_plus
+NO_bisou VE_avoir AD_plus	NO_bisou VE_avoir plus
+NO_bisou VE_avoir AD_plus	bisous VE_avoir plus
+NO_bisou PR_à PR_tout DE_le NO_monde	bisous PR_à PR_tout DE_le NO_monde
+AD_bon NO_année	bon NO_année
+AD_bon NO_chance	bon NO_chance
+AD_bon NO_chose	bon NO_chose
+AD_bon NO_courage	bon courage
+AD_bon NO_courage	AD_bon courage
+AD_bon NO_courage PR_pour DE_le	bon NO_courage PR_pour DE_le
+AD_bon NO_courage PR_pour DE_le	AD_bon courage PR_pour DE_le
+AD_bon NO_courage PR_pour DE_le	bon courage PR_pour DE_le
+AD_bon NO_courage PR_pour DE_ton	bon NO_courage PR_pour DE_ton
+AD_bon NO_courage PR_pour DE_ton	AD_bon courage PR_pour DE_ton
+AD_bon NO_courage PR_pour DE_ton	bon courage PR_pour DE_ton
+AD_bon NO_fin	bon fin
+AD_bon NO_fin	bon NO_fin
+AD_bon NO_fête	bon NO_fête
+AD_bon NO_idée	bon NO_idée
+AD_bon journee	bon journee
+AD_bon NO_journée	bon NO_journée
+AD_bon NO_moment	bon NO_moment
+AD_bon NO_nuit	bon NO_nuit
+AD_bon NO_santé	bon santé
+AD_bon NO_santé	bon NO_santé
+AD_bon NO_semaine	bon NO_semaine
+AD_bon soiree	bon soiree
+AD_bon NO_soirée	bon NO_soirée
+AD_bon NO_surprise PR_de DE_le NO_vie	bon NO_surprise PR_de DE_le vie
+AD_bon NO_surprise PR_de DE_le NO_vie	bon NO_surprise PR_de DE_le NO_vie
+AD_bon NO_vacance	bon NO_vacance
+AD_bon we	bon we
+AD_bon week end	bon NO_week-end
+AD_bon week end	bon weekend
+AD_bon week end	bon week end
+NO_bébé bisous PR_à DE_mon copinautes attendettes	NO_bébé NO_bisou PR_à DE_mon copinautes attendettes
+c VE_être DE_le	ca VE_être DE_le
+c VE_être AD_pas	ca VE_être AD_pas
+c VE_être DE_un	ca VE_être DE_un
+c VE_être AD_vrai	ca VE_être AD_vrai
+c DE_le	ca DE_le
+c AD_pas	ca AD_pas
+c DE_un	ca DE_un
+c DE_un NO_amour PR_de NO_bébé bisous	ca DE_un NO_amour PR_de NO_bébé bisous
+c DE_un NO_amour PR_de NO_bébé bisous	c DE_un NO_amour PR_de NO_bébé NO_bisou
+c DE_un NO_amour PR_de NO_bébé bisous	ca DE_un NO_amour PR_de NO_bébé NO_bisou
+ca VE_faire PR_du AD_bien	c VE_faire PR_du AD_bien
+ca AD_ne	c AD_ne
+ca VE_aller AD_mieux	c VE_aller AD_mieux
+NO_café PR_au NO_lait	café PR_au NO_lait
+NO_centre anti NO_douleur	centre anti-douleur
+NO_centre anti NO_douleur	centre anti-douleurs
+AD_comme ca	AD_comme c
+AD_comme ca	AD_caomme ca
+AD_comment ca	AD_comment c
+AD_comment ca	AD_caomment ca
+NO_commentaire	commentaires
+VE_connaître PR_ce NO_maladie	VE_connaître PR_ce maladie
+coucou PR_tout DE_le NO_monde	coucou AD_tout DE_le NO_monde
+coucou PR_tout DE_le NO_monde	NO_coucou PR_tout DE_le NO_monde
+NO_courage DE_mon AD_grand	courage DE_mon AD_grand
+NO_courage PR_pour DE_ton	courage PR_pour DE_ton
+VE_dire KO_que c	VE_dire PR_que ca
+VE_dire KO_que c	VE_dire PR_que c
+NO_docteur	medecin
+NO_docteur	medecine
+NO_docteur	medecins
+VE_décider PR_de VE_faire NO_coucou AD_plus AD_tôt	VE_décider PR_de VE_faire coucou plus AD_tôt
+VE_décider PR_de VE_faire NO_coucou AD_plus AD_tôt	VE_décider PR_de VE_faire coucou AD_plus AD_tôt
+AD_encore NO_merci	AD_encore merci
+enfin DE_un AD_bon NO_surprise PR_de DE_le	enfin DE_un bon NO_surprise PR_de DE_le
+espere KO_que DE_le	espere PR_que DE_le
+espere KO_que DE_ton	espere PR_que DE_ton
+VE_être VE_atteindre PR_de PR_ce NO_maladie	VE_être NO_atteinte PR_de DE_le NO_maladie
+VE_être VE_atteindre PR_de PR_ce NO_maladie	VE_être VE_atteindre PR_de DE_le maladie
+VE_être VE_atteindre PR_de PR_ce NO_maladie	VE_être NO_atteinte PR_de PR_ce NO_maladie
+VE_être VE_atteindre PR_de PR_ce NO_maladie	VE_être VE_atteindre PR_de PR_ce maladie
+VE_être VE_atteindre PR_de PR_ce NO_maladie	VE_être NO_atteinte PR_de DE_le maladie
+VE_être VE_atteindre PR_de PR_ce NO_maladie	VE_être NO_atteinte PR_de PR_ce maladie
+VE_être DE_un NO_maladie	VE_être DE_un maladie
+NO_face PR_à DE_le	face PR_à DE_le
+VE_faire NO_coucou AD_plus AD_tôt KO_que AD_prévu	VE_faire coucou plus AD_tôt KO_que AD_prévu
+VE_faire NO_coucou AD_plus AD_tôt KO_que AD_prévu	VE_faire coucou AD_plus AD_tôt PR_que AD_prévu
+VE_faire NO_coucou AD_plus AD_tôt KO_que AD_prévu	VE_faire coucou plus AD_tôt PR_que AD_prévu
+VE_faire NO_coucou AD_plus AD_tôt KO_que AD_prévu	VE_faire coucou AD_plus AD_tôt KO_que AD_prévu
+VE_faire PR_de AD_gros NO_bisou	VE_faire PR_de NO_gros NO_bisou
+VE_faire PR_de AD_gros NO_bisou	VE_faire PR_de gros NO_bisou
+VE_faire PR_de AD_gros NO_bisou	VE_faire PR_de AD_gros bisous
+VE_faire PR_de AD_gros NO_bisou	VE_faire PR_de NO_gros bisous
+VE_faire PR_de AD_gros NO_bisou	VE_faire PR_de gros bisous
+VE_faire PR_du NO_bien	VE_faire PR_du bien
+VE_faire PR_du NO_recherche	VE_faire PR_du recherche
+VE_faire PR_du NO_sport	VE_faire PR_du sport
+VE_faire AD_pas KO_que PR_du NO_ami	VE_faire AD_pas PR_que PR_du NO_ami
+VE_faire AD_plein PR_de AD_gros NO_bisou	VE_faire AD_plein PR_de NO_gros NO_bisou
+VE_faire AD_plein PR_de AD_gros NO_bisou	VE_faire AD_plein PR_de gros NO_bisou
+VE_faire AD_plein PR_de AD_gros NO_bisou	VE_faire AD_plein PR_de AD_gros bisous
+VE_faire AD_plein PR_de AD_gros NO_bisou	VE_faire AD_plein PR_de NO_gros bisous
+VE_faire AD_plein PR_de AD_gros NO_bisou	VE_faire AD_plein PR_de gros bisous
+VE_faire DE_un AD_petit NO_coucou	VE_faire DE_un AD_petit coucou
+NO_fin PR_de DE_le	fin PR_de DE_le
+NO_gluten KO_ni NO_laitage grâçe PR_au NO_centre	NO_gluten KO_ni NO_laitage grâçe PR_au centre
+AD_gros NO_bisou	NO_gros bisous
+AD_gros NO_bisou	gros bisous
+AD_gros NO_bisou	AD_gros bisous
+AD_gros NO_bisou PR_à PR_tout DE_le NO_monde	NO_gros NO_bisou PR_à PR_tout DE_le NO_monde
+AD_gros NO_bisou PR_à PR_tout DE_le NO_monde	gros NO_bisou PR_à PR_tout DE_le NO_monde
+AD_gros NO_bisou PR_à PR_tout DE_le NO_monde	AD_gros bisous PR_à PR_tout DE_le NO_monde
+AD_gros NO_bisou PR_à PR_tout DE_le NO_monde	NO_gros bisous PR_à PR_tout DE_le NO_monde
+AD_gros NO_bisou PR_à PR_tout DE_le NO_monde	gros bisous PR_à PR_tout DE_le NO_monde
+AD_gros NO_crise	NO_gros NO_crise
+AD_gros NO_crise	gros NO_crise
+AD_gros NO_douleur	NO_gros NO_douleur
+AD_gros NO_douleur	gros NO_douleur
+AD_gros NO_fatigue	NO_gros NO_fatigue
+AD_gros NO_fatigue	gros NO_fatigue
+AD_gros NO_problème	NO_gros NO_problème
+AD_gros NO_problème	gros NO_problème
+NO_laitage grâçe PR_au NO_centre anti-douleurs	NO_laitage grâçe PR_au centre anti-douleurs
+NO_laitage grâçe PR_au NO_centre anti-douleurs	NO_laitage grâçe PR_au NO_centre anti-douleur
+NO_laitage grâçe PR_au NO_centre anti-douleurs	NO_laitage grâçe PR_au centre anti-douleur
+ma NO_gitan	ma gitans
+NO_maladie NO_auto AD_immun	maladie AD_auto-immun
+NO_maladie NO_auto AD_immun	maladie NO_auto AD_immun
+NO_maladie PR_de crohn	maladie PR_de crohn
+NO_maladie AD_génétique	maladie AD_génétique
+NO_maladie AD_ne	maladie AD_ne
+NO_maladie AD_orphelin	maladie AD_orphelin
+NO_maladie AD_rare	maladie AD_rare
+medecin AD_traitant	NO_médecine AD_traitant
+medecin AD_traitant	médecine AD_traitant
+medecin AD_traitant	NO_docteur AD_traitant
+medecin AD_traitant	docteur AD_traitant
+medecin AD_traitant	medecine AD_traitant
+medecin AD_traitant	medecins AD_traitant
+NO_merci PR_par NO_avance	merci PR_par NO_avance
+moi AD_aussi	NO_moi AD_aussi
+NO_monde KO_et AD_bon	NO_monde KO_et bon
+NO_médecin AD_généraliste	medecin AD_généraliste
+NO_médecin AD_généraliste	medecine AD_généraliste
+NO_médecin AD_généraliste	medecins AD_généraliste
+NO_médecine AD_interne	NO_médecin AD_interne
+NO_médecine AD_interne	médecine AD_interne
+NO_médecine AD_interne	NO_docteur AD_interne
+NO_médecine AD_interne	docteur AD_interne
+NO_médecine AD_interne	medecin AD_interne
+NO_médecine AD_interne	medecine AD_interne
+NO_médecine AD_interne	medecins AD_interne
+AD_même NO_maladie	AD_même maladie
+nathan VE_avoir VE_décider PR_de VE_faire NO_coucou	nathan VE_avoir VE_décider PR_de VE_faire coucou
+AD_ne VE_avoir AD_pas DE_le NO_air	AD_ne VE_avoir AD_pas DE_le air
+VE_nier DE_le NO_dieu KO_que PR_ce NO_monstre	VE_nier DE_le NO_dieu PR_que PR_ce NO_monstre
+nouveaux NO_dossier	nouveaux dossier
+nouveaux NO_dossier	nouveaux dossiers
+AD_pas PR_ce NO_maladie	AD_pas PR_ce maladie
+AD_pas DE_le NO_maladie	AD_pas DE_le maladie
+AD_pas NO_médecin	AD_pas medecin
+AD_pas NO_médecin	AD_pas NO_médecine
+AD_pas NO_médecin	AD_pas NO_docteur
+AD_pas NO_médecin	AD_pas medecine
+AD_pas NO_médecin	AD_pas medecins
+AD_pas NO_médecin	AD_pas médecine
+AD_pas NO_médecin	AD_pas docteur
+VE_passer DE_un AD_bon NO_journée	VE_passer DE_un bon NO_journée
+VE_passer DE_un AD_bon NO_nuit	VE_passer DE_un bon NO_nuit
+AD_petit NO_coucou	AD_petit coucou
+AD_plein PR_de NO_bisou	AD_plein PR_de bisous
+AD_plein PR_de NO_courage	AD_plein PR_de courage
+AD_plein PR_de AD_gros NO_bisou	AD_plein PR_de NO_gros NO_bisou
+AD_plein PR_de AD_gros NO_bisou	AD_plein PR_de gros NO_bisou
+AD_plein PR_de AD_gros NO_bisou	AD_plein PR_de AD_gros bisous
+AD_plein PR_de AD_gros NO_bisou	AD_plein PR_de NO_gros bisous
+AD_plein PR_de AD_gros NO_bisou	AD_plein PR_de gros bisous
+AD_plus PR_de NO_douleur	plus PR_de NO_douleur
+VE_peser 2710kg KO_et c DE_un NO_amour	VE_peser 2710kg KO_et ca DE_un NO_amour
+NO_recherche PR_sur DE_le	recherche PR_sur DE_le
+VE_reprendre DE_le NO_travail	VE_reprendre DE_le travail
+NO_salut DE_le NO_fille	salut DE_le NO_fille
+NO_salut AD_tout DE_le NO_monde	salut AD_tout DE_le NO_monde
+AD_si c	AD_si ca
+NO_site PR_de DE_le	site PR_de DE_le
+VE_souhaiter AD_beaucoup PR_de NO_courage	VE_souhaiter AD_beaucoup PR_de courage
+VE_souhaiter AD_bon NO_courage	VE_souhaiter bon NO_courage
+VE_souhaiter AD_bon NO_courage	VE_souhaiter AD_bon courage
+VE_souhaiter AD_bon NO_courage	VE_souhaiter bon courage
+VE_souhaiter DE_un AD_bon NO_journée	VE_souhaiter DE_un bon NO_soirée
+VE_souhaiter DE_un AD_bon NO_journée	VE_souhaiter DE_un bon NO_journée
+VE_souhaiter DE_un AD_bon NO_journée AD_gros NO_bisou	VE_souhaiter DE_un bon NO_soirée AD_gros NO_bisou
+VE_souhaiter DE_un AD_bon NO_journée AD_gros NO_bisou	VE_souhaiter DE_un AD_bon NO_soirée NO_gros NO_bisou
+VE_souhaiter DE_un AD_bon NO_journée AD_gros NO_bisou	VE_souhaiter DE_un AD_bon NO_soirée gros NO_bisou
+VE_souhaiter DE_un AD_bon NO_journée AD_gros NO_bisou	VE_souhaiter DE_un AD_bon NO_soirée AD_gros bisous
+VE_souhaiter DE_un AD_bon NO_journée AD_gros NO_bisou	VE_souhaiter DE_un bon NO_journée AD_gros NO_bisou
+VE_souhaiter DE_un AD_bon NO_journée AD_gros NO_bisou	VE_souhaiter DE_un AD_bon NO_journée NO_gros NO_bisou
+VE_souhaiter DE_un AD_bon NO_journée AD_gros NO_bisou	VE_souhaiter DE_un AD_bon NO_journée gros NO_bisou
+VE_souhaiter DE_un AD_bon NO_journée AD_gros NO_bisou	VE_souhaiter DE_un AD_bon NO_journée AD_gros bisous
+VE_souhaiter DE_un AD_bon NO_journée AD_gros NO_bisou	VE_souhaiter DE_un bon NO_soirée NO_gros NO_bisou
+VE_souhaiter DE_un AD_bon NO_journée AD_gros NO_bisou	VE_souhaiter DE_un bon NO_soirée gros NO_bisou
+VE_souhaiter DE_un AD_bon NO_journée AD_gros NO_bisou	VE_souhaiter DE_un bon NO_soirée AD_gros bisous
+VE_souhaiter DE_un AD_bon NO_journée AD_gros NO_bisou	VE_souhaiter DE_un AD_bon NO_soirée NO_gros bisous
+VE_souhaiter DE_un AD_bon NO_journée AD_gros NO_bisou	VE_souhaiter DE_un AD_bon NO_soirée gros bisous
+VE_souhaiter DE_un AD_bon NO_journée AD_gros NO_bisou	VE_souhaiter DE_un bon NO_journée NO_gros NO_bisou
+VE_souhaiter DE_un AD_bon NO_journée AD_gros NO_bisou	VE_souhaiter DE_un bon NO_journée gros NO_bisou
+VE_souhaiter DE_un AD_bon NO_journée AD_gros NO_bisou	VE_souhaiter DE_un bon NO_journée AD_gros bisous
+VE_souhaiter DE_un AD_bon NO_journée AD_gros NO_bisou	VE_souhaiter DE_un AD_bon NO_journée NO_gros bisous
+VE_souhaiter DE_un AD_bon NO_journée AD_gros NO_bisou	VE_souhaiter DE_un AD_bon NO_journée gros bisous
+VE_souhaiter DE_un AD_bon NO_journée AD_gros NO_bisou	VE_souhaiter DE_un bon NO_soirée NO_gros bisous
+VE_souhaiter DE_un AD_bon NO_journée AD_gros NO_bisou	VE_souhaiter DE_un bon NO_soirée gros bisous
+VE_souhaiter DE_un AD_bon NO_journée AD_gros NO_bisou	VE_souhaiter DE_un bon NO_journée NO_gros bisous
+VE_souhaiter DE_un AD_bon NO_journée AD_gros NO_bisou	VE_souhaiter DE_un bon NO_journée gros bisous
+VE_souhaiter DE_un AD_bon NO_nuit	VE_souhaiter DE_un bon NO_nuit
+NO_statut PR_pour PR_ce NO_maladie AD_invisible	NO_statut PR_pour PR_ce maladie AD_invisible
+NO_suite VE_avoir DE_un	suite VE_avoir DE_un
+NO_suite PR_à DE_le	suite PR_à DE_le
+AD_tout DE_le NO_monde	NO_tout le NA_monde
+tres AD_bon	tres bon
+NO_témoignage PR_de NO_personne	NO_témoignage PR_de personne
+NO_union VE_faire DE_le NO_force	NO_union VE_faire DE_le force
+NO_vent PR_il VE_aller AD_où AD_bon	NO_vent PR_il VE_aller AD_où bon
+NO_victoire VE_obtenir PR_par DE_le NO_violence	NO_victoire VE_obtenir PR_par DE_le violences
+NO_violence VE_équivaloir PR_à DE_un NO_défaite	violences VE_équivaloir PR_à DE_un NO_défaite
+VE_voir DE_mon NO_médecin	VE_voir DE_un medecin
+VE_voir DE_mon NO_médecin	VE_voir DE_un NO_médecine
+VE_voir DE_mon NO_médecin	VE_voir DE_un NO_docteur
+VE_voir DE_mon NO_médecin	VE_voir DE_mon medecin
+VE_voir DE_mon NO_médecin	VE_voir DE_mon NO_médecine
+VE_voir DE_mon NO_médecin	VE_voir DE_mon NO_docteur
+VE_voir DE_mon NO_médecin	VE_voir DE_un medecine
+VE_voir DE_mon NO_médecin	VE_voir DE_un medecins
+VE_voir DE_mon NO_médecin	VE_voir DE_un médecine
+VE_voir DE_mon NO_médecin	VE_voir DE_un docteur
+VE_voir DE_mon NO_médecin	VE_voir DE_mon medecine
+VE_voir DE_mon NO_médecin	VE_voir DE_mon medecins
+VE_voir DE_mon NO_médecin	VE_voir DE_mon médecine
+VE_voir DE_mon NO_médecin	VE_voir DE_mon docteur
+week end	weekend
+VE_éditer PR_par andouilette DE_le	VE_éditer PR_par NO_andouillette DE_le
+VE_éditer PR_par andouilette DE_le	VE_éditer PR_par andouillette DE_le

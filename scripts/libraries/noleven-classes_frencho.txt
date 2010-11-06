@@ -466,12 +466,24 @@ AD_bon NO_fille	AD_bon NO_ville
 NO_ville	NO_fille
 AD_bon NO_grain	AD_bon NO_train
 NO_grain	NO_train
+j	j'
+NA_charlotte	NO_charlotte
+christie	NA_christine
 AD_bon NO_mine	AD_bon NO_mise
 NO_mise	NO_mine
+NO_vitamine NU_c	NO_vitamine d
 AD_bon NO_mère	AD_bon NO_père
 NO_père	NO_mère
 AD_bon NO_part	AD_bon NO_port
 NO_part	NO_port
+DE_le	l
+d	PR_de
+derniere	derriere
+evelyne	evelynes
+ml	m
+NA_lorraine	NO_lorrain
+NA_paris	NO_pari
+meme NO_cas	meme AD_pas
 AD_bon NO_plan	AD_bon NO_plat
 NO_plat	NO_plan
 AD_bon NO_raison	AD_bon NO_saison

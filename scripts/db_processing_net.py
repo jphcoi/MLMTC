@@ -254,21 +254,6 @@ fonctions_bdd.remplir_table(name_bdd,'concept2billets',con2bill,"(concept,id_b,r
 
 
 
-###################################
-####construction des liens#########
-###################################
-
-#on alimente enfin la table soc liant les index des acteurs entre eux ainsi qu'au jour du lien
-try: 
-	fonctions_bdd.detruire_table(name_bdd,'soc')
-except: 
-	pass
-fonctions_bdd.creer_table_soc(name_bdd,'soc')
-lienssoc = misc.build_social_net(requete,name_bdd,sep,name_data)
-fonctions_bdd.remplir_table(name_bdd,'soc',lienssoc,"(auteur1,auteur2,jours,id_b,requete,identifiant_unique)")
-print "\n--- finished inserting data in table soc."
-
-
 
 
 
@@ -317,5 +302,20 @@ if build_link_tables=='y':
 		fonctions_bdd.remplir_table(name_bdd,'sem',lienssem,"(concept1,concept2,jours,id_b,requete,identifiant_unique)")
 	print "\n--- finished inserting data in tables socsem & sem."
 	
+
+###################################
+####construction des liens#########
+###################################
+
+#on alimente enfin la table soc liant les index des acteurs entre eux ainsi qu'au jour du lien
+try: 
+	fonctions_bdd.detruire_table(name_bdd,'soc')
+except: 
+	pass
+fonctions_bdd.creer_table_soc(name_bdd,'soc')
+lienssoc = misc.build_social_net(requete,name_bdd,sep,name_data)
+fonctions_bdd.remplir_table(name_bdd,'soc',lienssoc,"(auteur1,auteur2,jours,id_b,requete,identifiant_unique)")
+print "\n--- finished inserting data in table soc."
+
 
 
