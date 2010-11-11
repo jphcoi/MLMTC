@@ -16,6 +16,10 @@ NO_développement AD_rural	NO_développement AD_durable
 NO_développement AD_durable un	NO_développement AD_durable dans
 NO_développement AD_durable un	NO_développement AD_durable des
 NO_environnement PR_de NO_travail	NO_environnement KO_et NO_travail
+NO_aide AD_extérieur	NO_air AD_extérieur
+NO_aide AD_illégal	NO_aire AD_illégal
+NO_aide	NO_aire
+NO_aide AD_supplémentaire	NO_air AD_supplémentaire
 VE_être PR_en NO_danger	VE_être DE_un NO_danger
 NO_million PR_de NO_tonne	NO_millier PR_de NO_tonne
 AD_ne VE_concerner AD_pas	AD_ne VE_contenir AD_pas
@@ -466,12 +470,24 @@ AD_bon NO_fille	AD_bon NO_ville
 NO_ville	NO_fille
 AD_bon NO_grain	AD_bon NO_train
 NO_grain	NO_train
+j	j'
+NA_charlotte	NO_charlotte
+christie	NA_christine
 AD_bon NO_mine	AD_bon NO_mise
 NO_mise	NO_mine
+NO_vitamine NU_c	NO_vitamine d
 AD_bon NO_mère	AD_bon NO_père
 NO_père	NO_mère
 AD_bon NO_part	AD_bon NO_port
 NO_part	NO_port
+DE_le	l
+d	PR_de
+derniere	derriere
+evelyne	evelynes
+ml	m
+NA_lorraine	NO_lorrain
+NA_paris	NO_pari
+meme NO_cas	meme AD_pas
 AD_bon NO_plan	AD_bon NO_plat
 NO_plat	NO_plan
 AD_bon NO_raison	AD_bon NO_saison

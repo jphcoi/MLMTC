@@ -216,11 +216,11 @@ overlap = 5
 parametres_file='../parameters/job.txt'
 parametres_file='../parameters/toxico.txt'
 parametres_file='../parameters/param.txt'
-parametres_file='../parameters/MESR.txt'
 
 #parametres_file='../parameters/docilite.txt'
 parametres_file='../parameters/test.txt'
 parametres_file='../parameters/docti.txt'
+parametres_file='../parameters/MESR.txt'
 
 ################################################
 ################################################

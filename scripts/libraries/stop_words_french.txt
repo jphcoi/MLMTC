@@ -42,3 +42,6 @@ samedi
 dimanche
 messages
 message
+---------------
+bonjour
+bonsoir
