@@ -11707,10 +11707,6 @@ NO_agriculture	NO_agriculteur
 NO_agriculteur AD_français	NO_agriculture AD_français
 NO_agriculteur AD_local	NO_agriculture AD_local
 NO_agriculture	NO_agriculteur
-NO_aide AD_extérieur	NO_air AD_extérieur
-NO_aide AD_illégal	NO_aire AD_illégal
-NO_aide	NO_aire
-NO_aide AD_supplémentaire	NO_air AD_supplémentaire
 NA_alain NA_gauthier	NA_alain NA_gautier
 NO_allemand	NA_allemands
 NO_allègement AD_fiscal	NO_allégement AD_fiscal
