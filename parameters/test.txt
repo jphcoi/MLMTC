@@ -1,0 +1,17 @@
+name_data="../../inout/data/test/test.med"
+language ='english'
+date_depart = date(1970,1,1)
+freqmin = 1
+ng_filter=[1,1,1,1,1]
+top = 200
+sample=4000000
+dated = 1980
+datef = 2010
+fenetre = 5
+overlap = 5
+dist_type='precision'
+build_link_tables='n'
+maxTermLength=3
+nofigure=1
+user_interface='y'
+

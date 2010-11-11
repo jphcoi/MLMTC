@@ -5,11 +5,11 @@ date_depart = date(1970,1,1)
 
 maxTermLength = 5
 freqmin = 10
-ng_filter=[1,2,3,3,3]
+ng_filter=[1,2,2,2,2]
 content_indexation='TA'
 
-top = 200
-sample=500
+top = 500
+sample=5000
 
 build_link_tables='y'
 
