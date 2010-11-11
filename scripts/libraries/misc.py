@@ -403,7 +403,8 @@ def build_social_net(requete,name_bdd,sep,name_data):
 							if not id_lien in url_ids: 	
 								url_ids.append(id_lien)
 								for aut_id in auteur_ids:
-									lienssoc.append([aut_id,id_lien,jours,b_id,requete,str(b_id)+'_' + str(aut_id) + '_' + str(id_lien)])
+									if not id_lien ==aut_id:
+										lienssoc.append([aut_id,id_lien,jours,b_id,requete,str(b_id)+'_' + str(aut_id) + '_' + str(id_lien)])
 	return(lienssoc)
 
 def extraire_reseaux(contenu,file_social_net_name):

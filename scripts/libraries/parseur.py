@@ -100,30 +100,56 @@ class XML2DB:
         editorial_links = None
         comments_links = None
         misc_links = None
+        links_list=[]
         for e1 in dom.childNodes:
             if e1.tagName == 'date':
                 datet = ''.join(t.nodeValue for t in e1.childNodes if t.nodeType == t.TEXT_NODE)
-            elif e1.tagName == 'permalink':
+            #elif e1.tagName == 'permalink':
+            elif e1.tagName == 'canon_url':
                 permalink = u''.join(t.nodeValue for t in e1.childNodes if t.nodeType == t.TEXT_NODE)
             elif e1.tagName == 'title':
                 title = u''.join(t.nodeValue for t in e1.childNodes if t.nodeType == t.TEXT_NODE)
+                #print title
             elif e1.tagName == 'author':
                 author = u''.join(t.nodeValue for t in e1.childNodes if t.nodeType == t.TEXT_NODE)
             elif e1.tagName == 'plain_content':
                 content = u''.join(t.nodeValue for t in e1.childNodes if t.nodeType == t.TEXT_NODE)
             elif e1.tagName == 'links':
-                links=[]
-                for t in e1.childNodes:
-                    link = t.toxml()
-                    link = link.split('canon_url=')[1]
-                    links.append(link.split('"')[1].replace('http://','')[:-1])
-                if len(links)>0:
-                    editorial_links = u'***'.join(link for link in links)
-            elif e1.tagName == 'comments_links':
-                comments_links = e1
-            elif e1.tagName == 'misc_links':
-                misc_links = e1
+                links = e1
+                if links is not None:
+      	            for e2 in links.childNodes:
+    	                if e2.tagName == 'link':
+                            targ_postid = -1
+                            targ_blogid = -1
+                            link_type = 0
+                            site = e2.getAttribute('site')
+                            canon_url = e2.getAttribute('canon_url')
+                            url = e2.getAttribute('url')
+                            type = e2.getAttribute('type')
+                            if type == 'editorial':
+                                link_type = 1
+                                links_list.append(site.replace('http://','')[:-1])
+                            #elif type == 'comment':
+                             #   link_type = 2
+ 	                        #print "link_type:"
+                            #print site +'\t' + canon_url+'\t' + url+'\t' + str(link_type)
+                            
+                # links=[]
+                #                 for t in e1.childNodes:
+                #                     link = t.toxml()
+                #                     link = link.split('canon_url=')[1]
+                #                     links.append(link.split('"')[1].replace('http://','')[:-1])
+                #                 if len(links)>0:
+                #                     editorial_links = u'***'.join(link for link in links)
+                #             elif e1.tagName == 'comments_links':
+                #                 comments_links = e1
+                #             elif e1.tagName == 'misc_links':
+                #                 misc_links = e1
         #ts = self.datestr2timestamp(date)
+        if len(links_list)>0:
+            editorial_links = u'***'.join(link for link in links_list)
+        else:
+            editorial_links=u''
         return  datet, permalink, specialutf8(title), author, specialutf8(content),editorial_links
         #self.insert_post(blogid, ts, permalink, title, author, content)
 

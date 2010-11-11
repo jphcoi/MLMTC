@@ -12328,3 +12328,25 @@ VE_voir DE_mon NO_médecin	VE_voir DE_mon docteur
 week end	weekend
 VE_éditer PR_par andouilette DE_le	VE_éditer PR_par NO_andouillette DE_le
 VE_éditer PR_par andouilette DE_le	VE_éditer PR_par andouillette DE_le
+c'	ca
+AD_déjà DE_le NO_intitulé AD_exact	AD_déjà l NO_intitulé AD_exact
+AD_déjà DE_le NO_intitulé AD_exact	AD_déjà DE_le NO_intituDE_leé AD_exact
+VE_être PR_quoi AD_déjà DE_le NO_intitulé	VE_être PR_quoi AD_déjà l NO_intitulé
+VE_être PR_quoi AD_déjà DE_le NO_intitulé	VE_être PR_quoi AD_déjà DE_le NO_intituDE_leé
+NO_image PR_de NO_nature pédopornographique	NO_image PR_de nature pédopornographique
+NO_intitulé AD_exact PR_de DE_le NO_mission	NO_intitulé AD_exact PR_de l NO_mission
+NO_intitulé AD_exact PR_de DE_le NO_mission	NO_intituDE_leé AD_exact PR_de DE_le NO_mission
+NO_ministre	ministère
+NO_ministre	ministres
+NO_ministre PR_de DE_le	NO_ministère PR_de DE_le
+NO_ministre PR_de DE_le	ministre PR_de DE_le
+NO_ministre PR_de DE_le	NO_ministre PR_de l
+NO_ministre PR_de DE_le	ministère PR_de DE_le
+NO_ministre PR_de DE_le	NO_ministère PR_de l
+NO_ministre PR_de DE_le	ministres PR_de DE_le
+NO_ministre PR_de DE_le	ministre PR_de l
+NO_ministre PR_de DE_le	ministère PR_de l
+NO_ministre PR_de DE_le	ministres PR_de l
+national monument	AD_national monument
+national monument	nationale monument
+VE_rechercher PR_tout DE_le NO_image	VE_rechercher PR_tout l NO_image
