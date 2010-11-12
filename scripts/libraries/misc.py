@@ -392,6 +392,11 @@ def build_social_net(requete,name_bdd,sep,name_data):
 			url_ids=[]
 			if len(href_list)>0:
 				hrefs = href_list.split("***")
+				hrefs_propre=[]
+				for hre in hrefs:
+					if len(hre)>1:
+						hrefs_propre.append(hre)
+				hrefs = hrefs_propre
 				hrefs  = map(text_processing.nospace,hrefs)
 				
 				for url in hrefs:
