@@ -202,7 +202,7 @@ filename_redond_leven =  path_req + requete + '_' + str(freqmin) + '_' + 'liste_
 misc.ecrire_liste_lemmes_freq(dico_final,Nb_rows,filename,lemme_maj,freqmin,ng_filter)#on ecrit la liste precedente dans un fichier filename
 print "\n+++"+str(len(dico_final))+" n-lemmes crees."
 #leven.pack_rendondance(filename,filename_redond,maxTermLength,freqmin,language,redondance_manuelle,ng_filter,user_interface)
-leven.pack_rendondance_exact(filename,filename_redond,maxTermLength,freqmin,language,redondance_manuelle,ng_filter,user_interface)
+leven.pack_rendondance_exact(filename,filename_redond,maxTermLength,freqmin,language,ng_filter,user_interface)
 print "\n"
 
 leven.pack_leven(filename_redond,filename_redond_leven,language,user_interface,freqmin)

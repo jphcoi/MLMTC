@@ -360,7 +360,7 @@ def pack_leven(fichier,fichier_out,language,user_interface,freqmin):
 	print str(len(resultats_propres)) + ' nlemmes finaux'
 
 		
-def pack_rendondance_exact(fichier,fichier_out,maxTermLength,freqmin,language,redondance_manuelle,ng_filter,user_interface):
+def pack_rendondance_exact(fichier,fichier_out,maxTermLength,freqmin,language,ng_filter,user_interface):
 	print 'reduction de la liste en intégrant les redondances\n'
 	russe = {}	
 	russe_inv = {}	
