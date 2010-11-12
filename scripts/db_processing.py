@@ -41,7 +41,6 @@ language = parameters.language
 ng_filter=parameters.ng_filter
 top=parameters.top
 sample=parameters.sample
-redondance_manuelle=parameters.redondance_manuelle
 user_interface=parameters.user_interface
 ###################################
 #######1.fonctions utiles##########
