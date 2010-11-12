@@ -1,1 +1,2 @@
 NN_bacterium	JJ_bacterial
+NN_lam	NP_lam

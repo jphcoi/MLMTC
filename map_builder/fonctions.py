@@ -58,7 +58,6 @@ def ecrire_reseau(dist_mat,years_bins,dist_type,seuil,niveau,legende_noeuds):
 		fichier_CF=open(path_req +'reseau' + '/'+ 'reseauCF_'+'niv_'+str(niveau)+'_'+dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt','w')
 		for x,y in dist_mat.iteritems():
 			if x[2]==inter:
-#				print str(x[0])+ '\t' + str(x[1]) + '\t' + str(y) + '\n'
 				if float(dist_mat[x])>seuil:
 					fichier.write(legende_noeuds[(inter,x[0])].replace(' ','_') + '\t' + legende_noeuds[(inter,x[1])].replace(' ','_') + '\t' + str(y) + '\n')
 					fichier_CF.write(str(x[0])+ '\t' + str(x[1]) + '\t' + str(y) + '\n')

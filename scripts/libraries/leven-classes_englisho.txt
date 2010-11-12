@@ -857,3 +857,35 @@ NN_toxicity NN_study	toxicity NP_study
 NN_toxicity NN_study	NN_toxicity NP_study
 NN_toxicity NN_test	toxicity NN_test
 JJ_unintended NN_effect	JJ_unintended effects
+NN_bone NN_disease	NN_bone NP_disease
+NN_bone NN_disease	NN_bone diseases
+NN_case NN_report	NP_case NN_report
+NN_case NN_report	NN_case NP_report
+JJ_differential NN_expression	NN_differential NN_expression
+gorham-stout NN_disease	gorham-stout NP_disease
+gorham-stout NN_disease	gorham-stout diseases
+hyperoxaluria NN_type PP_i	hyperoxaluria type NN_i
+hyperoxaluria NN_type PP_i	hyperoxaluria NN_type NN_i
+hyperoxaluria NN_type PP_i	hyperoxaluria type NP_i
+hyperoxaluria NN_type PP_i	hyperoxaluria NN_type NP_i
+JJ_orbital NN_inflammation NN_syndrome	JJ_orbital NN_inflammation syndrome
+NN_patient VB_be VV_treat	JJ_patient VB_be VV_treat
+JJ_rare NN_disease	JJ_rare NP_disease
+JJ_rare NN_disease	rare NN_disease
+JJ_rare NN_disease	JJ_rare diseases
+JJ_rare NN_disease VV_characterize	rare NN_disease VV_characterise
+JJ_rare NN_disease VV_characterize	JJ_rare NP_disease VV_characterise
+JJ_rare NN_disease VV_characterize	JJ_rare diseases VV_characterise
+JJ_rare NN_disease VV_characterize	rare NN_disease VV_characterize
+JJ_rare NN_disease VV_characterize	JJ_rare NP_disease VV_characterize
+JJ_rare NN_disease VV_characterize	JJ_rare diseases VV_characterize
+JJ_rare NN_disease VV_characterize	rare NP_disease VV_characterise
+JJ_rare NN_disease VV_characterize	rare diseases VV_characterise
+JJ_rare NN_disease VV_characterize	rare NP_disease VV_characterize
+JJ_rare NN_disease VV_characterize	rare diseases VV_characterize
+JJ_rare NN_disease NN_pattern	rare NN_disease NN_pattern
+JJ_rare NN_disease NN_pattern	JJ_rare NP_disease NN_pattern
+JJ_rare NN_disease NN_pattern	JJ_rare diseases NN_pattern
+JJ_rare NN_disease NN_pattern	rare NP_disease NN_pattern
+JJ_rare NN_disease NN_pattern	rare diseases NN_pattern
+VV_report JJ_specific NN_change	JJ_reported JJ_specific NN_change

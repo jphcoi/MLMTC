@@ -17,7 +17,7 @@ def lire_fichier(filename):
 	for ligne in file.readlines():
 		if len(ligne)>1:
 			liste.append(ligne[:-1])
-	print liste
+	print str(len(liste)) + ' élements dans le fichier'
 	return liste
 	
 

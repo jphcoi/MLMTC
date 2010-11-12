@@ -77,135 +77,135 @@ def build_years_bins(fenetre,dated,datef,overlap):
 	
 print "--- initialisation de \"parameters.py\"..."
 
-date_depart = date(2009,7,1)
-lemmadictionary = 0# si nul, on  calcule ou recalcule  le dico de lemmes sur la requete consideree sinon on ne calcule pas
-#name_data = "../data/environnement/environnement-20090706-20091003.txt"
-#name_data = "../data/sante/sante.txt"
-#language = 'french'
-#name_data = "../data/divers/divers.html"
-#language = 'french'
-#name_data = "../data/environnement/environnement-20090706-20091003-light.txt"
-#language = 'french'
-#name_data =  "../data/jean/jean.html"
-#language = 'french'
-#name_data =  "../data/sante-env/sante-env.html"
-name_data,language,date_depart =  "../data/medline/cyto_25.med",'english',date(1970,1,1)
-#name_data =  "../data/FET/exemple.fet"
-name_data,language,date_depart =  "../data/jecfa/jecfa.medline.traite.med",'english',date(1970,1,1)
-name_data,language,date_depart =  "../data/AIDS/pubmed_AIDS_10_format_original.fet",'english',date(1970,1,1)
-name_data,language,date_depart =  "../data/sante-env/sante-env-sept-nov.html",'french',date(2009,8,1)
-name_data,language,date_depart =  "../data/santeORenvironnemnt/santeORenv.txt",'french',date(2009,8,1)
-#name_data,language,date_depart =  "../data/RTGI-light/xac.xml",'french',date(2009,7,1)#regler le path du treetagger
-#name_data,language,date_depart =  "../data/divers/divers.html",'french',date(2009,7,1)#regler le path du treetagger
-#name_data,language,date_depart =  "../data/jean/jean.html",'french',date(2009,8,1)
-#name_data,language,date_depart =  "../data/RTGI-light/xaa.xml",'french',date(2009,8,1)
-name_data,language,date_depart,freqmin =  "../data/Biofuel2009/biofuel.isi",'english',date(1970,1,1),15
-years_bins=[[1990,1991,1992,1993,1994,1990,1995,1996,1997,1998,1999,2000],[2001,2002,2003,2004,2005],[2006,2007,2008],[2009,2010]]
-datef = 2010
-dated = 1991
-fenetre = 20
-overlap = 0
-years_bins = build_years_bins(fenetre,dated,datef,overlap)
-#redondance_manuelle='y'
-
-name_data,language,date_depart,freqmin =  "../data/biodiv/biodiv.isi",'english',date(1970,1,1),10
-maxTermLength = 5
-name_data,language,date_depart,freqmin,ng_filter,top,sample =  "../data/toxico/toxico.isi",'english',date(1970,1,1),20,[1,2,3,4,5],100,100
-
-
-
-dist_type='precision'
-#dist_type='cooc'
-
-
-
-
-
-
-# TO MODIFY
-build_link_tables='y'
-build_link_tables='n'
-redondance_manuelle='y'
-redondance_manuelle='n'
-
-name_data,language,date_depart,freqmin =  "../data/cancer1980/WoSCancerJ19800009.isi",'english',date(1970,1,1),20
-
-
-maxTermLength=4
-datef = 500
-dated = 1
-fenetre = 500
-overlap = 0
-years_bins = build_years_bins(fenetre,dated,datef,overlap)
-
-datef = 2010
-dated = 1991
-fenetre = 20
-overlap = 0
-years_bins = build_years_bins(fenetre,dated,datef,overlap)
-dist_type='precision'
-
-
-name_data,language,date_depart,freqmin,ng_filter,top,sample =  "../data/toxico/toxico.isi",'english',date(1970,1,1),5,[1,2,3,4,5],200,1000
-
-ng_filter,top,sample =[1,2,3,4,5,6],200,100
-#top: nombre maximum approximatif de termes souhaités
-#freqmin: fréquence minimum souhaitées
-#sample: taille du corpus utilisé pour effectuer l'indexation.
-datef = 2010
-dated = 1990
-fenetre = 6
-overlap = 5
-years_bins = build_years_bins(fenetre,dated,datef,overlap)
-
-
-
-
-
-continent=u''
-
-name_data,language,date_depart,freqmin,ng_filter,top,sample =  "../data/rssfeed/liste.rss",'french',date(2010,1,1),2,[1,1,1,0,0],400,300
-
-
-
-content_indexation='T'#Title
-# content_indexation='A'#  Abstract
-content_indexation='TA'#Title + Abstract 
-# content_indexation='TAKW'#Title + Abstract +Key Words
-#content_indexation='KW'#Key words
-#content_indexation='TA'#Title + Abstract 
-
-
-
-
-
-
-
-
-name_data,language,date_depart,freqmin,ng_filter,top,sample =  "../data/nature/nature-abstract.med",'english',date(1970,1,1),2,[1,1.5,2,2,2],5000,5000
-withrequete=0
-dated = 1970
-datef = 2009
-fenetre = 5
-overlap = 5
-years_bins = build_years_bins(fenetre,dated,datef,overlap)
-
-
-
-name_data,language,date_depart,freqmin,ng_filter,top,sample =  "../data/export_MESR_20100722_light.lfl",'french',date(2010,1,1),2,[1,2,3,0,0],400,300
-maxTermLength=5
-#years_bins = [[1980], [2000], [2009]]
-datef = 500
-dated = 1
-fenetre = 500
-overlap = 0
-years_bins = build_years_bins(fenetre,dated,datef,overlap)
-
-name_data,language,date_depart,freqmin,ng_filter,top,sample =  "../data/toxico/toxico.isi",'english',date(1970,1,1),10,[1,2,3,3,3],100,100
-dated = 1990
-datef = 2010
-fenetre = 4
-overlap = 5
+# date_depart = date(2009,7,1)
+# lemmadictionary = 0# si nul, on  calcule ou recalcule  le dico de lemmes sur la requete consideree sinon on ne calcule pas
+# #name_data = "../data/environnement/environnement-20090706-20091003.txt"
+# #name_data = "../data/sante/sante.txt"
+# #language = 'french'
+# #name_data = "../data/divers/divers.html"
+# #language = 'french'
+# #name_data = "../data/environnement/environnement-20090706-20091003-light.txt"
+# #language = 'french'
+# #name_data =  "../data/jean/jean.html"
+# #language = 'french'
+# #name_data =  "../data/sante-env/sante-env.html"
+# name_data,language,date_depart =  "../data/medline/cyto_25.med",'english',date(1970,1,1)
+# #name_data =  "../data/FET/exemple.fet"
+# name_data,language,date_depart =  "../data/jecfa/jecfa.medline.traite.med",'english',date(1970,1,1)
+# name_data,language,date_depart =  "../data/AIDS/pubmed_AIDS_10_format_original.fet",'english',date(1970,1,1)
+# name_data,language,date_depart =  "../data/sante-env/sante-env-sept-nov.html",'french',date(2009,8,1)
+# name_data,language,date_depart =  "../data/santeORenvironnemnt/santeORenv.txt",'french',date(2009,8,1)
+# #name_data,language,date_depart =  "../data/RTGI-light/xac.xml",'french',date(2009,7,1)#regler le path du treetagger
+# #name_data,language,date_depart =  "../data/divers/divers.html",'french',date(2009,7,1)#regler le path du treetagger
+# #name_data,language,date_depart =  "../data/jean/jean.html",'french',date(2009,8,1)
+# #name_data,language,date_depart =  "../data/RTGI-light/xaa.xml",'french',date(2009,8,1)
+# name_data,language,date_depart,freqmin =  "../data/Biofuel2009/biofuel.isi",'english',date(1970,1,1),15
+# years_bins=[[1990,1991,1992,1993,1994,1990,1995,1996,1997,1998,1999,2000],[2001,2002,2003,2004,2005],[2006,2007,2008],[2009,2010]]
+# datef = 2010
+# dated = 1991
+# fenetre = 20
+# overlap = 0
+# years_bins = build_years_bins(fenetre,dated,datef,overlap)
+# #redondance_manuelle='y'
+# 
+# name_data,language,date_depart,freqmin =  "../data/biodiv/biodiv.isi",'english',date(1970,1,1),10
+# maxTermLength = 5
+# name_data,language,date_depart,freqmin,ng_filter,top,sample =  "../data/toxico/toxico.isi",'english',date(1970,1,1),20,[1,2,3,4,5],100,100
+# 
+# 
+# 
+# dist_type='precision'
+# #dist_type='cooc'
+# 
+# 
+# 
+# 
+# 
+# 
+# # TO MODIFY
+# build_link_tables='y'
+# build_link_tables='n'
+# redondance_manuelle='y'
+# redondance_manuelle='n'
+# 
+# name_data,language,date_depart,freqmin =  "../data/cancer1980/WoSCancerJ19800009.isi",'english',date(1970,1,1),20
+# 
+# 
+# maxTermLength=4
+# datef = 500
+# dated = 1
+# fenetre = 500
+# overlap = 0
+# years_bins = build_years_bins(fenetre,dated,datef,overlap)
+# 
+# datef = 2010
+# dated = 1991
+# fenetre = 20
+# overlap = 0
+# years_bins = build_years_bins(fenetre,dated,datef,overlap)
+# dist_type='precision'
+# 
+# 
+# name_data,language,date_depart,freqmin,ng_filter,top,sample =  "../data/toxico/toxico.isi",'english',date(1970,1,1),5,[1,2,3,4,5],200,1000
+# 
+# ng_filter,top,sample =[1,2,3,4,5,6],200,100
+# #top: nombre maximum approximatif de termes souhaités
+# #freqmin: fréquence minimum souhaitées
+# #sample: taille du corpus utilisé pour effectuer l'indexation.
+# datef = 2010
+# dated = 1990
+# fenetre = 6
+# overlap = 5
+# years_bins = build_years_bins(fenetre,dated,datef,overlap)
+# 
+# 
+# 
+# 
+# 
+# continent=u''
+# 
+# name_data,language,date_depart,freqmin,ng_filter,top,sample =  "../data/rssfeed/liste.rss",'french',date(2010,1,1),2,[1,1,1,0,0],400,300
+# 
+# 
+# 
+# content_indexation='T'#Title
+# # content_indexation='A'#  Abstract
+# content_indexation='TA'#Title + Abstract 
+# # content_indexation='TAKW'#Title + Abstract +Key Words
+# #content_indexation='KW'#Key words
+# #content_indexation='TA'#Title + Abstract 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# name_data,language,date_depart,freqmin,ng_filter,top,sample =  "../data/nature/nature-abstract.med",'english',date(1970,1,1),2,[1,1.5,2,2,2],5000,5000
+# withrequete=0
+# dated = 1970
+# datef = 2009
+# fenetre = 5
+# overlap = 5
+# years_bins = build_years_bins(fenetre,dated,datef,overlap)
+# 
+# 
+# 
+# name_data,language,date_depart,freqmin,ng_filter,top,sample =  "../data/export_MESR_20100722_light.lfl",'french',date(2010,1,1),2,[1,2,3,0,0],400,300
+# maxTermLength=5
+# #years_bins = [[1980], [2000], [2009]]
+# datef = 500
+# dated = 1
+# fenetre = 500
+# overlap = 0
+# years_bins = build_years_bins(fenetre,dated,datef,overlap)
+# 
+# name_data,language,date_depart,freqmin,ng_filter,top,sample =  "../data/toxico/toxico.isi",'english',date(1970,1,1),10,[1,2,3,3,3],100,100
+# dated = 1990
+# datef = 2010
+# fenetre = 4
+# overlap = 5
 
 
 ################################################
@@ -213,15 +213,24 @@ overlap = 5
 ################################################
 ################################################
 ################################################
-parametres_file='../parameters/job.txt'
-parametres_file='../parameters/toxico.txt'
-parametres_file='../parameters/param.txt'
 
-#parametres_file='../parameters/docilite.txt'
-parametres_file='../parameters/test.txt'
-parametres_file='../parameters/docti.txt'
-parametres_file='../parameters/MESR.txt'
-parametres_file='../parameters/MESR-light.txt'
+argv = sys.argv
+if len(argv)>1:#print argv
+	parametres_file = '../parameters/' + sys.argv[1] + '.txt'
+else:
+	parametres_file='../parameters/test.txt'
+print parametres_file
+
+
+# parametres_file='../parameters/job.txt'
+# parametres_file='../parameters/toxico.txt'
+# parametres_file='../parameters/param.txt'
+# 
+# #parametres_file='../parameters/docilite.txt'
+# parametres_file='../parameters/test.txt'
+# parametres_file='../parameters/docti.txt'
+# parametres_file='../parameters/MESR.txt'
+# parametres_file='../parameters/MESR-light.txt'
 
 ################################################
 ################################################
@@ -234,6 +243,11 @@ parametres = load_param(parametres_file)
 print '\n'
 print 'parametres: '+str(parametres)
 print '\n'
+
+#default parameters:
+content_indexation='TA'
+withrequete=0
+
 for nom_param,val_param in parametres.iteritems():
 	#print nom_param,val_param
 	t=str(nom_param)+'='	
