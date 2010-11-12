@@ -446,6 +446,35 @@ def extension(champs,dist_mat,years_bins,CF_weight,seuil_aggregation):
 	#print '\n'+str(len(champs_bonus))+ ' élément rapportés \n'
 	return champs_ext
 
+def edges_list(distance_champ):
+	edges = {}
+	for x,y in distance_champ.iteritems():
+		ori = x[0]
+		t = x[2]
+		dest = x[1]
+		if (ori,t) in edges:
+			temp = edges[(ori,t)]
+			temp[dest]= y
+			edges[(ori,t)]=temp
+		else:
+			dico = {}
+			dico[dest]=y
+			edges[(ori,t)]=dico
+	return edges
+
+
+
+def edges_list_reverse(edges):
+	distance_champ = {}
+	for x,y in edges.iteritems():
+		ori = x[0]
+		t = x[1]
+		for z in y:
+			dest = z[0]
+			poid = z[1]
+			distance_champ[(ori,dest,t)]=poid
+	return distance_champ
+	
 dico_termes=fonctions.lexique()#on cree le dictionnaire des termes
 import context_process
 dist_mat = context_process.dist_mat#on recupere la matrice de distance entre termes
@@ -515,6 +544,16 @@ while fini==1:
 		#type_distance='max','moy' ou 'min'
 		type_distance='moy'
 		distance_champ=fonctions.map_champs(champs,dist_mat,type_distance)
+		print distance_champ
+		distance_champ_edges_list=edges_list(distance_champ)
+		print '\n'
+		print distance_champ_edges_list
+		distance_champ_edges_list_seuil=seuiller(distance_champ_edges_list,degmax)
+		print '\n'
+		print distance_champ_edges_list_seuil
+		distance_champ = edges_list_reverse(distance_champ_edges_list_seuil)
+		print '\n'
+		print distance_champ
 		legende_noeuds,legende_noeuds_id=gexf_champ(years_bins,scores,champs,nb_label,dico_termes,sep_label,dist_type,distance_champ,niveau,seuil_net_champ)
 		fonctions.dumpingin(champs,'champs_'+str(niveau))
 		fonctions.dumpingin(distance_champ,'distance_champ_'+str(niveau))	

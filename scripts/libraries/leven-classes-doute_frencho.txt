@@ -4,3 +4,6 @@ VE_poster PR_par zoli pour NA_rose	posté PR_par zoli pour NA_rose
 NA_monsieur z	NO_monsieur z
 NO_monsieur	NA_monsieur
 VE_poster PR_par zoli pour NA_rose	posté PR_par zoli pour NA_rose
+NA_monsieur z	NO_monsieur z
+NO_monsieur	NA_monsieur
+VE_poster PR_par zoli pour NA_rose	posté PR_par zoli pour NA_rose
