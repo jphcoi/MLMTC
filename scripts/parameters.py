@@ -247,7 +247,7 @@ print '\n'
 #default parameters:
 content_indexation='TA'
 withrequete=0
-
+lemmadictionary = 0
 for nom_param,val_param in parametres.iteritems():
 	#print nom_param,val_param
 	t=str(nom_param)+'='	
@@ -350,7 +350,8 @@ except:
 #	print "      + sans calculer le dictionnaire des lemmes"
 #else:
 #	print "      + en calculant le dictionnaire des lemmes"
-	
+
+
 #print "    - \"parameters.py\" initialise.\n"
 
 
