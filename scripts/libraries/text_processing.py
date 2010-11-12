@@ -333,11 +333,12 @@ def nettoyer_url(author):
 
 def nospace(chaine):
 	"enleve les espaces au debut et a la fin"
-	while chaine[0] == ' ' and len(chaine)>3:
-		chaine = chaine[1:]
-	while chaine[-1] == ' 'and len(chaine)>3:
-		chaine = chaine[:-1]
-	return chaine
+	if len(chaine)>0:
+		while chaine[0] == ' ' and len(chaine)>3:
+			chaine = chaine[1:]
+		while chaine[-1] == ' 'and len(chaine)>3:
+			chaine = chaine[:-1]	
+		return chaine
 	
 def indexer_billet(contenu,ngrammes,maxTermLength,include):
 	formes ={}#fournit le dictionnaire des formes majoritaires prises par les n-lemmes	
