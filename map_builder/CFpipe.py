@@ -481,7 +481,7 @@ dist_mat = context_process.dist_mat#on recupere la matrice de distance entre ter
 #p_cooccurrences=context_process.p_cooccurrences#on recupere la matrice de cooccurrences entre termes
 fini=1
 niveau=0
-CF_weight_v = [0.6,0.8,0.5,0.5,0.5]
+CF_weight_v = [0.6,0.6,0.6,0.6,0.6]
 seuil_net_champ_v = [0.,0.,0.,0.,0.]
 taillemin_v=[3,3,3,3,3,3]
 taillemax_v=[30,25,25,25,25,25]
@@ -517,7 +517,7 @@ while fini==1:
 	champs = flat_comm(champs_k,years_bins)#on enleve l'overlap et on remet tout ça dans un ordre agréable
 	
 	#extension
-	seuil_aggregation=0.2
+	seuil_aggregation=0.4
 	if niveau==1:
 		distance_champ=dist_mat
 	champs = extension(champs,distance_champ,years_bins,CF_weight,seuil_aggregation)
