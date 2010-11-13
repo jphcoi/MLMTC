@@ -337,8 +337,6 @@ try:
 		jours = select_bdd_table_champ_simple(name_bdd,'billets','jours')
 		dated = min(jours)
 		datef = max(jours)
-		fenetre = 14
-		overlap = 0
 		years_bins = build_years_bins(fenetre,int(dated[0]),int(datef[0]),overlap)
 except:
 	pass
