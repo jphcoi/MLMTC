@@ -12350,3 +12350,487 @@ NO_ministre PR_de DE_le	ministres PR_de l
 national monument	AD_national monument
 national monument	nationale monument
 VE_rechercher PR_tout DE_le NO_image	VE_rechercher PR_tout l NO_image
+AD_agrochimique	NO_agrochimie
+AD_bactériologique	NO_bactérie
+cardiovasculaire	AD_cardiaque
+cardiovasculaire	AD_cardio-vasculaire
+Criirad	NO_Commission DE_de NO_recherche KO_et DE_de NO_information AD_ind√©pendantes PR_sur DE_le NO_radioactivit√©
+NO_m√©decine AD_v√©t√©rinaire	m√©decine AD_v√©t√©rinaire
+NO_m√©decin AD_v√©t√©rinaire	NO_docteur AD_v√©t√©rinaire
+NO_m√©decin AD_v√©t√©rinaire	docteur AD_v√©t√©rinaire
+NO_agriculture AD_fran√ßais	agriculture AD_fran√ßais
+NO_agriculture AD_biologique	NO_ferme AD_biologique
+NO_agriculture AD_biologique	NO_ferme bio
+AD_génétique	AD_chromosomique
+AD_forestier	NO_forêt
+bio-hacker	bio-hackers
+bio-hacker	biohacker
+bio-hacker	biohackers
+AD_glycémique	NO_glycémie
+NO_biologie AD_synth√©tique	NO_biologie PR_de NO_synth√®se
+NO_culture AD_exp√©rimental	culture AD_exp√©rimental
+NO_culture AD_√©nerg√©tique	culture AD_√©nerg√©tique
+NO_√©levage AD_porcin	NO_√©leveur AD_porcin
+NO_solidarit√© AD_√©cologique	solidarit√© AD_√©cologique
+NO_t√©l√©phone AD_usag√©	NO_t√©l√©phonie AD_usag√©
+NO_vaccin AD_pand√©mique	NO_vaccination AD_pand√©mique
+NO_eau AD_c√¥tier	eau AD_c√¥tier
+NO_aide AD_ext√©rieur	aide AD_ext√©rieur
+NO_aide AD_ext√©rieur	NO_air AD_ext√©rieur
+NO_aide AD_ext√©rieur	air AD_ext√©rieur
+NO_biotechnologie AD_v√©g√©tal	biotechnologies AD_v√©g√©tal
+NO_hygi√®ne AD_alimentaire	hygi√®ne AD_alimentaire
+NO_industrie AD_photovolta√Øque	industrie AD_photovolta√Øque
+NO_code AD_g√©n√©tique	code AD_g√©n√©tique
+NO_d√©veloppement AD_soutenable	d√©veloppement AD_soutenable
+NO_√©levage AD_agricole	NO_√©leveur AD_agricole
+NO_r√©volution AD_√©nerg√©tique	NO_r√©solution AD_√©nerg√©tique
+NO_sant√© AD_sexuel	sant√© AD_sexuel
+NO_centrale AD_hydro√©lectrique	centrale AD_hydro√©lectrique
+NO_d√©veloppement AD_urbain	d√©veloppement AD_urbain
+NO_composant AD_chimique	NO_compos√© AD_chimique
+NO_eau AD_min√©ral	eau AD_min√©ral
+NO_√©leveur AD_britannique	NO_√©levage AD_britannique
+NO_lobby AD_p√©trolier	lobbies AD_p√©trolier
+NO_lobby AD_p√©trolier	lobby AD_p√©trolier
+NO_m√©decin AD_nucl√©aire	NO_docteur AD_nucl√©aire
+NO_m√©decin AD_nucl√©aire	docteur AD_nucl√©aire
+NO_m√©decine AD_nucl√©aire	m√©decine AD_nucl√©aire
+NO_m√©dias AD_dominant	m√©dias AD_dominant
+NO_menace AD_nucl√©aire	VE_menacer AD_nucl√©aire
+NO_biodiversit√© AD_terrestre	biodiversit√© AD_terrestre
+NO_eau AD_sal√©	eau AD_sal√©
+NO_g√©nome AD_humain	NO_g√®ne AD_humain
+NO_r√©seau AD_t√©l√©phonique	r√©seau AD_t√©l√©phonique
+NO_source AD_a√©roportuaire	source AD_a√©roportuaire
+NO_centre AD_m√©dico-social	centre AD_m√©dico-social
+NO_commission AD_m√©dical	commission AD_m√©dical
+NO_√©leveur AD_fran√ßais	NO_√©levage AD_fran√ßais
+NO_cellule AD_photovolta√Øque	NO_capteur AD_photovoltaïque
+NO_d√©veloppement AD_technologique	d√©veloppement AD_technologique
+NO_patrimoine AD_g√©n√©tique	patrimoine AD_g√©n√©tique
+NO_lobby AD_nucl√©aire	lobbies AD_nucl√©aire
+NO_lobby AD_nucl√©aire	lobby AD_nucl√©aire
+NO_secteur AD_photovolta√Øque	secteur AD_photovolta√Øque
+NO_parc AD_photovolta√Øque	parc AD_photovolta√Øque
+NO_sant√© AD_animal	sant√© AD_animal
+NO_sinistr√© PR_de DE_le NO_temp√™te xynthia	NO_sinistr√© PR_de xynthia
+NO_√©levage AD_industriel	NO_√©leveur AD_industriel
+NO_industrie AD_√©lectrique	industrie AD_√©lectrique
+NO_nucl√©aire AD_iranien	nucl√©aire AD_iranien
+NO_acc√®s AD_universel	acc√®s AD_universel
+NO_industrie AD_a√©ronautique	industrie AD_a√©ronautique
+NO_accident AD_nucl√©aire	accident AD_nucl√©aire
+NO_commission AD_s√©natorial	commission AD_s√©natorial
+NO_acide AD_amin√©	AD_acide AD_amin√©
+NO_biodiversit√© AD_marin	biodiversit√© AD_marin
+NO_√©levage AD_bovin	NO_√©leveur AD_bovin
+NO_√©levage AD_ovin	NO_√©leveur AD_ovin
+NO_infection AD_bact√©rien	VE_infecter AD_bact√©rien
+NO_service AD_d√©partemental	service AD_d√©partemental
+NO_service AD_d√©partemental	services AD_d√©partemental
+NO_technologie AD_nucl√©aire	technologies AD_nucl√©aire
+NO_r√©chauffement AD_climatique	NO_r√©chauffement AD_global
+NO_r√©chauffement AD_climatique	NO_r√©chauffement AD_plan√©taire
+NO_r√©chauffement AD_climatique	NO_r√©chauffement PR_de DE_le NO_plan√®te
+NO_√©levage AD_breton	NO_√©leveur AD_breton
+AD_√©olien NO_marin	eoliennes PR_en NO_mer
+AD_√©olien NO_marin	AD_√©olien NO_offshore
+NO_banque AD_europ√©en PR_de NO_investissement	bei
+NO_√©levage AD_intensif	NO_√©leveur AD_intensif
+NO_march√© AD_noir	march√© AD_noir
+NO_m√©decin AD_g√©n√©ral	NO_docteur AD_g√©n√©ral
+NO_m√©decin AD_g√©n√©ral	docteur AD_g√©n√©ral
+NO_m√©decine AD_g√©n√©ral	m√©decine AD_g√©n√©ral
+NO_sant√© AD_maternel	sant√© AD_maternel
+NO_soci√©t√© AD_p√©trolier	soci√©t√© AD_p√©trolier
+NO_d√©veloppement AD_r√©gional	d√©veloppement AD_r√©gional
+NO_appareil AD_√©lectrique	NO_appareil AD_√©lectronique
+NO_grippe AD_pand√©mique	grippe AD_pand√©mique
+NO_service AD_p√©trolier	service AD_p√©trolier
+NO_service AD_p√©trolier	services AD_p√©trolier
+NO_apiculture	NO_apiculteur
+NO_apiculture	apiculteur
+NO_apiculture	apiculture
+NO_h√¥pital AD_psychiatrique	h√¥pital AD_psychiatrique
+NO_laboratoire AD_fran√ßais	laboratoire AD_fran√ßais
+NO_usage PR_du NO_pesticide	NO_utilisation PR_de NO_pesticide
+bio√©thique	bio√©thiques
+NO_s√©curit√© AD_maritime	s√©curit√© AD_maritime
+NO_substance AD_canc√©rig√®ne	NO_substance AD_canc√©rog√®ne
+NO_autorit√© PR_de NO_s√ªret√© AD_nucl√©aire	asn
+NO_laboratoire AD_am√©ricain	laboratoire AD_am√©ricain
+NO_ministre AD_chinois	NO_minist√®re AD_chinois
+NO_ministre AD_chinois	minist√®re AD_chinois
+NO_service AD_v√©t√©rinaire	service AD_v√©t√©rinaire
+NO_service AD_v√©t√©rinaire	services AD_v√©t√©rinaire
+NO_air AD_int√©rieur	air AD_int√©rieur
+anrs	NO_Agence AD_Nationale PR_de NO_Recherche PR_sur DE_le NO_sida KO_et DE_le NO_h√©patites
+NO_d√©veloppement AD_industriel	d√©veloppement AD_industriel
+NO_secteur PR_de DE_le NO_√©nergie	NO_secteur AD_√©nerg√©tique
+NO_secteur PR_de DE_le NO_√©nergie	secteur AD_√©nerg√©tique
+v√©olia	veolia
+NO_administration AD_fran√ßais	administration AD_fran√ßais
+bioterrorisme	bioterrorismes
+bioterrorisme	bio-terrorisme
+bioterrorisme	bioterreur
+bioterrorisme	bio-terreur
+biosenseur	biosenseurs
+biosenseur	bio-senseur
+biosenseur	bio-senseurs
+NO_champ AD_magn√©tique	NO_champ AD_√©lectromagn√©tique
+NO_champ AD_magn√©tique	NO_champ AD_√©lectrique
+NO_d√©veloppement AD_agricole	d√©veloppement AD_agricole
+NO_march√© AD_automobile	march√© AD_automobile
+NO_march√© AD_chinois	march√© AD_chinois
+NO_vaccin AD_antigrippal	NO_vaccination PR_contre DE_le NO_grippe
+NO_vaccin AD_antigrippal	NO_vaccination PR_contre DE_le grippe
+NO_vaccin AD_antigrippal	NO_vaccin PR_contre DE_le NO_grippe
+NO_vaccin AD_antigrippal	NO_vaccin PR_contre DE_le grippe
+NO_site AD_ill√©gal	site AD_ill√©gal
+NO_groupe AD_agro-alimentaire	NO_compagnie AD_agro-alimentaire
+NO_groupe AD_agro-alimentaire	compagnie AD_agro-alimentaire
+NO_groupe AD_agro-alimentaire	NO_compagnie AD_agroalimentaire
+NO_groupe AD_agro-alimentaire	compagnie AD_agroalimentaire
+NO_groupe AD_agro-alimentaire	NO_firme AD_agro-alimentaire
+NO_groupe AD_agro-alimentaire	firme AD_agro-alimentaire
+NO_groupe AD_agro-alimentaire	NO_firme AD_agroalimentaire
+NO_groupe AD_agro-alimentaire	firme AD_agroalimentaire
+AD_combustible NO_nucl√©aire	AD_combustible nucl√©aire
+AD_combustible NO_nucl√©aire	NO_combustible AD_nucl√©aire
+NO_nucl√©aire AD_fran√ßais	nucl√©aire AD_fran√ßais
+NO_d√©veloppement AD_humain	d√©veloppement AD_humain
+NO_travail AD_p√©nible	travail AD_p√©nible
+NO_ann√©e AD_international PR_de DE_le NO_biodiversit√©	ann√©e AD_international PR_de DE_le NO_biodiversit√©
+NO_√©levage AD_laitier	NO_√©leveur AD_laitier
+minist√®re PR_de DE_le NO_alimentation	ministre PR_de DE_le NO_alimentation
+minist√®re PR_de DE_le NO_alimentation	NO_minist√®re PR_de DE_le NO_alimentation
+NO_r√©acteur epr	epr
+chlord√©cone	NA_chlord√©cone
+NO_plan PR_de NO_pr√©vention	plan PR_de NO_pr√©vention
+NO_danger PR_pour DE_le NO_sant√©	AD_dangereux PR_pour DE_le NO_sant√©
+NO_d√©veloppement AD_rural	d√©veloppement AD_rural
+NO_r√©volution AD_industriel	NO_r√©solution AD_industriel
+afsset	agence AD_fran√ßais PR_de NO_s√©curit√© AD_sanitaire PR_de DE_le NO_environnement
+afsset	agence fran√ßaise PR_de s√©curit√© sanitaire PR_de DE_le NO_environnement
+afsset	NO_agence AD_fran√ßais PR_de NO_s√©curit√© AD_sanitaire PR_de DE_le NO_environnement
+NO_mouvement AD_√©cologiste	mouvement AD_√©cologiste
+NO_h√¥pital AD_public	h√¥pital AD_public
+NO_commerce AD_√©quitable	commerce AD_√©quitable
+NO_sant√© AD_mental	sant√© AD_mental
+NO_agence AD_oc√©anique	agence AD_oc√©anique
+NO_environnement KO_et DE_le NO_sant√©	NO_environnement KO_et PR_de DE_le NO_sant√©
+NO_environnement KO_et DE_le NO_sant√©	NO_environnement KO_et PR_√† DE_le NO_sant√©
+bisph√©nol	bisph√©nol A
+bisph√©nol	bpa
+NO_cons√©quence AD_d√©sastreux	NO_cons√©quence AD_d√©vastateur
+NO_cons√©quence AD_d√©sastreux	NO_cons√©quence AD_grave
+NO_pand√©mie PR_de NO_grippe	NO_pand√©mie PR_de grippe
+NO_libert√© AD_fondamental	libert√© AD_fondamental
+VE_pr√©server DE_le NO_biodiversit√©	NO_pr√©servation PR_de DE_le NO_biodiversit√©
+NO_soci√©t√© PR_de NO_biotechnologie	soci√©t√© PR_de NO_biotechnologie
+NO_direction AD_g√©n√©ral PR_de DE_le NO_sant√©	NO_direction AD_g√©n√©ral PR_de DE_le sant√©
+irsn	NO_institut PR_de NO_radioprotection KO_et PR_de NO_s√ªret√© AD_nucl√©aire
+NO_march√© AD_pharmaceutique	march√© AD_pharmaceutique
+NO_mar√©e AD_vert	mar√©e AD_vert
+VE_pr√©server DE_le NO_environnement	NO_pr√©servation PR_de DE_le NO_environnement
+NO_production AD_p√©trolier	NO_production PR_de NO_p√©trole
+VE_toucher PR_par DE_le NO_mar√©e AD_noir	VE_toucher PR_par DE_le mar√©e AD_noir
+NO_impact AD_n√©gatif	NO_impact AD_n√©faste
+NO_industrie AD_nucl√©aire	industrie AD_nucl√©aire
+NO_secteur AD_p√©trolier	secteur AD_p√©trolier
+NO_fin PR_de DE_le NO_pand√©mie	fin PR_de DE_le NO_pand√©mie
+NO_prix PR_de DE_le NO_√©lectricit√©	prix PR_de DE_le NO_√©lectricit√©
+NO_sant√© PR_du NO_population	NO_sant√© PR_de DE_le NO_population
+NO_sant√© AD_humain	sant√© AD_humain
+aedes	NO_Agence AD_europ√©enne PR_pour DE_le NO_d√©veloppement KO_et DE_la NO_sant√©
+NO_d√©veloppement PR_du NO_√©nergie AD_renouvelable	d√©veloppement PR_du NO_√©nergie AD_renouvelable
+NO_probl√®me PR_de NO_sant√© AD_publique	NO_probl√®me PR_de sant√© AD_publique
+NO_consommation AD_√©lectrique	consommation AD_√©lectrique
+NO_garde-c√¥te AD_am√©ricain	gardes-c√¥tes AD_am√©ricain
+NO_co√ªt PR_de DE_le NO_mar√©e AD_noir	NO_co√ªt PR_de DE_le mar√©e AD_noir
+NO_centrale AD_√©lectrique	centrale AD_√©lectrique
+NO_d√©veloppement AD_√©conomique KO_et NO_emploi	d√©veloppement AD_√©conomique KO_et NO_emploi
+NO_d√©veloppement AD_√©conomique KO_et NO_emploi	NO_d√©veloppement AD_√©conomique KO_et emploi
+NO_d√©veloppement AD_√©conomique KO_et NO_emploi	d√©veloppement AD_√©conomique KO_et emploi
+NO_prix PR_du NO_c√©r√©ale	prix PR_du NO_c√©r√©ale
+NO_politique PR_de NO_d√©veloppement	politique PR_de NO_d√©veloppement
+NO_politique PR_de NO_d√©veloppement	NO_politique PR_de d√©veloppement
+NO_politique PR_de NO_d√©veloppement	politique PR_de d√©veloppement
+NO_r√©seau PR_de NO_distribution	r√©seau PR_de NO_distribution
+NO_sant√© KO_et DE_le NO_environnement	NO_sant√© NO_environnement
+NO_sant√© KO_et DE_le NO_environnement	NO_sant√© AD_environnemental
+NO_sant√© KO_et DE_le NO_environnement	sant√© environnement
+NO_sant√© KO_et DE_le NO_environnement	NO_sant√© KO_et NO_environnement
+NO_sant√© KO_et DE_le NO_environnement	sant√© KO_et NO_environnement
+NO_sant√© KO_et DE_le NO_environnement	NO_sant√© KO_et PR_de DE_le NO_environnement
+NO_sant√© KO_et DE_le NO_environnement	sant√© NO_environnement
+NO_sant√© KO_et DE_le NO_environnement	NO_sant√© environnement
+NO_sant√© KO_et DE_le NO_environnement	NO_sant√© KO_et environnement
+NO_sant√© KO_et DE_le NO_environnement	sant√© KO_et environnement
+NO_sant√© KO_et DE_le NO_environnement	sant√© KO_et DE_le NO_environnement
+NO_sant√© KO_et DE_le NO_environnement	NO_sant√© KO_et DE_le environnement
+NO_sant√© KO_et DE_le NO_environnement	sant√© KO_et PR_de DE_le NO_environnement
+NO_sant√© KO_et DE_le NO_environnement	NO_sant√© KO_et PR_de DE_le environnement
+NO_sant√© KO_et DE_le NO_environnement	sant√© AD_environnemental
+NO_sant√© KO_et DE_le NO_environnement	sant√© KO_et DE_le environnement
+NO_sant√© KO_et DE_le NO_environnement	sant√© KO_et PR_de DE_le environnement
+NO_qualit√© PR_de NO_service	NO_qualit√© PR_du NO_service
+NO_c√¥te PR_de NA_louisiane	NO_c√¥te PR_de DE_le NA_louisiane
+NO_recherche KO_et NO_d√©veloppement	recherche KO_et NO_d√©veloppement
+NO_recherche KO_et NO_d√©veloppement	NO_recherche KO_et d√©veloppement
+NO_recherche KO_et NO_d√©veloppement	recherche KO_et d√©veloppement
+NO_recherche KO_et NO_d√©veloppement	recherche SY_& d√©veloppement
+NO_site AD_nucl√©aire	site AD_nucl√©aire
+NO_r√©seau AD_√©lectrique	r√©seau AD_√©lectrique
+NO_association AD_√©cologiste	association AD_√©cologiste
+NO_association AD_√©cologiste	NO_association AD_√©cologique
+NO_association AD_√©cologiste	association AD_√©cologique
+NO_acc√®s PR_√† DE_le NO_eau AD_potable	NO_acc√®s PR_√† DE_le eau AD_potable
+NO_prix PR_du NO_p√©trole	prix PR_du NO_p√©trole
+NO_pied PR_de NO_vigne transg√©nique	NO_pied PR_de NO_vigne transg√©niques
+NO_neurone	AD_neurologique
+NO_eau AD_us√©	eau AD_us√©
+antir√©troviral	antir√©troviraux
+NA_etat AD_europ√©en	NA_etats AD_europ√©en
+NA_etat AD_europ√©en	DE_le NO_europe
+afssa	agence AD_fran√ßais PR_de NO_s√©curit√© AD_sanitaire PR_de NO_aliment
+afssa	agence fran√ßaise PR_de s√©curit√© sanitaire PR_de NO_aliment
+afssa	NO_agence AD_fran√ßais PR_de NO_s√©curit√© AD_sanitaire PR_de NO_aliment
+NO_service PR_de NO_sant√©	service PR_de NO_sant√©
+NO_service PR_de NO_sant√©	NO_service PR_de sant√©
+NO_service PR_de NO_sant√©	services PR_de NO_sant√©
+NO_service PR_de NO_sant√©	service PR_de sant√©
+NO_service PR_de NO_sant√©	services PR_de sant√©
+NO_industrie AD_p√©trolier	industrie AD_p√©trolier
+NO_r√©duction PR_du NO_gaz PR_√† NO_effet PR_de NO_serre	VE_r√©duire DE_le NO_√©mission PR_de NO_gaz
+NO_r√©duction PR_du NO_gaz PR_√† NO_effet PR_de NO_serre	NO_r√©duction PR_du NO_gaz PR_√† NO_effet
+NO_√©tablissement PR_de NO_sant√©	NO_√©tablissement PR_de sant√©
+NO_march√© AD_public	march√© AD_public
+agence AD_fran√ßais PR_de NO_s√©curit√© AD_sanitaire	NO_agence AD_fran√ßais PR_de NO_s√©curit√© AD_sanitaire
+agence AD_fran√ßais PR_de NO_s√©curit√© AD_sanitaire	agence AD_fran√ßais PR_de s√©curit√© AD_sanitaire
+agence AD_fran√ßais PR_de NO_s√©curit√© AD_sanitaire	NO_agence AD_fran√ßais PR_de s√©curit√© AD_sanitaire
+agence AD_fran√ßais PR_de NO_s√©curit√© AD_sanitaire	agence fran√ßaise PR_de s√©curit√© sanitaire
+NO_march√© AD_√©mergent	march√© AD_√©mergent
+NO_sant√© PR_au NO_travail	sant√© PR_au NO_travail
+NO_sant√© PR_au NO_travail	NO_sant√© PR_au travail
+NO_sant√© PR_au NO_travail	sant√© PR_au travail
+NO_sant√© PR_au NO_travail	NO_sant√© PR_du NO_travailleur
+NO_nappe PR_de NO_p√©trole	NO_nappe PR_de AD_brut
+NO_s√©curit√© AD_alimentaire	s√©curit√© AD_alimentaire
+anses	agence AD_nationale VE_charger PR_de DE_le NO_s√©curit√© AD_sanitaire PR_de DE_le NO_alimentation
+anses	agence fran√ßaise PR_de s√©curit√© sanitaire PR_de DE_le NO_alimentation
+anses	NO_agence AD_nationale VE_charger PR_de DE_le NO_s√©curit√© AD_sanitaire PR_de DE_le NO_alimentation
+NO_recherche AD_m√©dical	recherche AD_m√©dical
+NO_lutte PR_contre DE_le NO_changement AD_climatique	NO_lutte PR_contre DE_le NO_r√©chauffement AD_climatique
+NO_origine PR_de DE_le NO_mar√©e AD_noir	NO_origine PR_de DE_le mar√©e AD_noir
+NO_agence AD_r√©gional PR_de NO_sant√©	agence AD_r√©gional PR_de NO_sant√©
+NO_agence AD_r√©gional PR_de NO_sant√©	NO_agence AD_r√©gional PR_de sant√©
+NO_agence AD_r√©gional PR_de NO_sant√©	agence AD_r√©gional PR_de sant√©
+NO_engrais	NO_fertilisant
+NO_principe PR_de NO_pr√©caution	NO_principe PR_de NO_pr√©caution AD_ne
+NO_principe PR_de NO_pr√©caution	principe PR_de NO_pr√©caution
+NO_qualit√© PR_de NO_vie	NO_qualit√© PR_de vie
+NO_service AD_m√©t√©orologique	service AD_m√©t√©orologique
+NO_service AD_m√©t√©orologique	services AD_m√©t√©orologique
+n√©olib√©ral	n√©olib√©rale
+n√©olib√©ral	n√©olib√©ralisme
+NO_parc AD_√©olien	parc AD_√©olien
+NO_√©nergie AD_fossile	NO_carburant AD_fossile
+NO_√©nergie AD_fossile	NO_hydrocarbure
+NO_√©nergie AD_fossile	NO_combustible AD_fossile
+NO_directive AD_europ√©en	AD_directif NO_europ√©en
+NO_directive AD_europ√©en	AD_directif europ√©ens
+NO_directive AD_europ√©en	AD_directif europ√©en
+NO_mise PR_sur DE_le NO_march√©	NO_mise PR_sur DE_le march√©
+NO_cha√Æne AD_alimentaire	NO_chaine AD_alimentaire
+NO_ministre PR_de DE_le NO_enseignement AD_sup√©rieur	NO_minist√®re PR_de DE_le NO_enseignement AD_sup√©rieur
+NO_ministre PR_de DE_le NO_enseignement AD_sup√©rieur	ministre PR_de DE_le NO_enseignement AD_sup√©rieur
+NO_ministre PR_de DE_le NO_enseignement AD_sup√©rieur	minist√®re PR_de DE_le NO_enseignement AD_sup√©rieur
+NO_ministre PR_de DE_le NO_enseignement AD_sup√©rieur	ministres PR_de DE_le NO_enseignement AD_sup√©rieur
+NO_syst√®me PR_de NO_sant√©	NO_syst√®me PR_de sant√©
+NO_incendie PR_de NO_for√™t	incendie PR_de NO_for√™t
+NO_√©rosion	erosion
+NO_qualit√© PR_de DE_le NO_eau	NO_qualit√© PR_de DE_le eau
+NO_qualit√© PR_de DE_le NO_eau	qualit√© PR_de DE_le NO_eau
+NO_qualit√© PR_de DE_le NO_eau	NO_qualit√© PR_du NO_eau
+NO_qualit√© PR_de DE_le NO_eau	NO_qualit√© PR_du eau
+afssaps	agence AD_fran√ßais PR_de NO_s√©curit√© AD_sanitaire PR_de NO_produit PR_de NO_sant√©
+afssaps	agence fran√ßaise PR_de s√©curit√© sanitaire PR_de NO_produit PR_de NO_sant√©
+afssaps	NO_agence AD_fran√ßais PR_de NO_s√©curit√© AD_sanitaire PR_de NO_produit PR_de NO_sant√©
+NO_pays PR_en NO_d√©veloppement	pays PR_en NO_d√©veloppement
+NO_pays PR_en NO_d√©veloppement	NO_pays PR_en d√©veloppement
+NO_pays PR_en NO_d√©veloppement	pays PR_en d√©veloppement
+NO_pays PR_en NO_d√©veloppement	NO_pays PR_en NO_voie PR_de NO_d√©veloppement
+NO_pays PR_en NO_d√©veloppement	pays PR_en NO_voie PR_de NO_d√©veloppement
+NO_pays PR_en NO_d√©veloppement	NO_pays PR_en NO_voie PR_de d√©veloppement
+NO_pays PR_en NO_d√©veloppement	pays PR_en NO_voie PR_de d√©veloppement
+NO_pays PR_en NO_d√©veloppement	NO_pays PR_en voie PR_de d√©veloppement
+NO_professionnel PR_de NO_sant√©	NO_professionnel PR_de sant√©
+NO_professionnel PR_de NO_sant√©	NO_professionnel PR_de DE_le NO_sant√©
+NO_qualit√© PR_de DE_le NO_air	NO_qualit√© PR_de DE_le air
+NO_√©tat PR_de NO_sant√©	NO_√©tat PR_de sant√©
+transg√©nique	transg√©niques
+NO_esp√©rance PR_de NO_vie	NO_esp√©rance PR_de vie
+VE_pr√©venir DE_le NO_risque	NO_pr√©vention PR_de DE_un NO_risque
+VE_pr√©venir DE_le NO_risque	NO_pr√©vention PR_du NO_risque
+NO_gaz PR_√† NO_effet PR_de NO_serre	gaz PR_√† NO_effet PR_de NO_serre
+NO_politique AD_√©conomique	politique AD_√©conomique
+NO_politique AD_√©conomique	AD_politique KO_et AD_√©conomique
+ademe	NO_Agence PR_de DE_le NO_environnement KO_et PR_de DE_le NO_ma√Ætrise PR_de DE_le NO_√©nergie
+NO_am√©nagement PR_du NO_territoire	NO_am√©nagement PR_du territoire
+NO_plate-forme AD_p√©trolier	plateforme AD_p√©trolier
+NO_plate-forme AD_p√©trolier	plateformes AD_p√©trolier
+NO_d√©veloppement AD_√©conomique	d√©veloppement AD_√©conomique
+NO_march√© AD_financier	march√© AD_financier
+NO_secteur AD_priv√©	secteur AD_priv√©
+NO_dur√©e PR_de NO_vie	NO_dur√©e PR_de vie
+eurod√©put√©e	eurod√©put√©s
+NO_activit√© AD_√©conomique	NO_actualit√© AD_√©conomique
+NO_activit√© AD_√©conomique	actualit√© AD_√©conomique
+NO_activit√© AD_√©conomique	actualit√©s AD_√©conomique
+NO_panneau AD_solaire	NO_panneau AD_photovolta√Øque
+NO_voiture AD_√©lectrique	NO_v√©hicule AD_√©lectrique
+NO_voiture AD_√©lectrique	NO_v√©hicule AD_hybride
+NO_voiture AD_√©lectrique	NO_automobile AD_√©lectrique
+NA_c√©cile duflot	NA_c√©cile NA_duflot
+NO_march√© AD_mondial	march√© AD_mondial
+NO_consommation AD_√©nerg√©tique	NO_consommation PR_de NO_√©nergie
+NO_consommation AD_√©nerg√©tique	consommation PR_de NO_√©nergie
+NO_consommation AD_√©nerg√©tique	consommation AD_√©nerg√©tique
+NO_probl√®me PR_de NO_sant√©	NO_probl√®me PR_de sant√©
+NO_√©mission PR_de NO_gaz PR_√† NO_effet PR_de NO_serre	NO_√©mission PR_de gaz PR_√† NO_effet PR_de NO_serre
+NO_hygi√®ne	hygi√®ne
+NA_am√©rique AD_latin	NA_am√©rique latine
+NO_soci√©t√© AD_civil	soci√©t√© AD_civil
+NO_op√©rateur t√©l√©coms	NO_op√©rateur AD_t√©l√©phonique
+NO_op√©rateur t√©l√©coms	NO_op√©rateur AD_mobile
+inserm	NO_institut AD_national PR_de DE_le NO_sant√© KO_et PR_de DE_le NO_recherche
+inserm	NO_institut national PR_de DE_le NO_sant√© KO_et PR_de DE_le NO_recherche
+inserm	NO_institut AD_national PR_de DE_le sant√© KO_et PR_de DE_le NO_recherche
+inserm	NO_institut nationale PR_de DE_le NO_sant√© KO_et PR_de DE_le NO_recherche
+inserm	NO_institut national PR_de DE_le sant√© KO_et PR_de DE_le NO_recherche
+inserm	NO_institut nationale PR_de DE_le sant√© KO_et PR_de DE_le NO_recherche
+NO_√©thique	AD_√©thique
+NO_g√®ne	NO_g√©nome
+NO_lutte PR_contre DE_le NO_mar√©e AD_noir	NO_lutte PR_contre DE_le mar√©e AD_noir
+NO_lutte PR_contre DE_le NO_mar√©e AD_noir	VE_lutter PR_contre DE_le NO_mar√©e AD_noir
+NO_lutte PR_contre DE_le NO_mar√©e AD_noir	NO_lutte PR_contre DE_le NO_mar√©e
+NO_lutte PR_contre DE_le NO_mar√©e AD_noir	VE_lutter PR_contre DE_le NO_mar√©e
+VE_fondre AD_structurel NO_europ√©en	fonds AD_structurel NO_europ√©en
+VE_fondre AD_structurel NO_europ√©en	fonds AD_structurel europ√©ens
+AD_central NO_nucl√©aire	NO_centrale AD_nucl√©aire
+AD_central NO_nucl√©aire	centrale AD_nucl√©aire
+AD_central NO_nucl√©aire	AD_central nucl√©aire
+NO_protection PR_de DE_le NO_environnement	NO_d√©fense PR_de DE_le NO_environnement
+NO_protection PR_de DE_le NO_environnement	NO_d√©fense PR_de DE_le environnement
+NO_protection PR_de DE_le NO_environnement	NO_d√©fenseur PR_de DE_le NO_environnement
+NO_projet PR_de NO_loi PR_de NO_r√©forme	NO_projet PR_de NO_loi PR_de r√©forme
+NO_d√©put√© AD_europ√©en	VE_d√©puter AD_europ√©en
+NO_mati√®re NU_premier	NO_mati√®re NA_premier
+NO_pays AD_√©mergent	pays AD_√©mergent
+NO_s√©curit√© AD_social	s√©curit√© AD_social
+NO_s√©curit√© AD_social	NO_s√©cu
+NO_gouvernement AD_am√©ricain	gouvernement AD_am√©ricain
+NO_personne AD_√¢g√©	personnes AD_√¢g√©
+NO_m√©tropole	m√©tropole
+NO_rivi√®re	rivi√®res
+NA_europe ecologie	NA_europe NO_√©cologie
+NO_mar√©e AD_noir PR_dans DE_le NO_golfe	mar√©e AD_noir PR_dans DE_le NO_golfe
+NO_mar√©e AD_noir PR_dans DE_le NO_golfe	NO_mar√©e AD_noir PR_dans DE_le golfe
+NO_mar√©e AD_noir PR_dans DE_le NO_golfe	mar√©e AD_noir PR_dans DE_le golfe
+NO_mar√©e AD_noir PR_dans DE_le NO_golfe	NO_mar√©e AD_noir PR_du NO_golfe
+NO_mar√©e AD_noir PR_dans DE_le NO_golfe	mar√©e AD_noir PR_du NO_golfe
+NO_mar√©e AD_noir PR_dans DE_le NO_golfe	NO_mar√©e AD_noir PR_du golfe
+NO_mar√©e AD_noir PR_dans DE_le NO_golfe	mar√©e AD_noir PR_du golfe
+NO_groupe AD_p√©trolier	groupe AD_p√©trolier
+NO_nucl√©aire	nucl√©aire
+NO_caf√©	caf√©
+oms	NO_organisation AD_mondial PR_de DE_le NO_sant√©
+oms	NO_organisation AD_mondial PR_de DE_le sant√©
+NO_t√©l√©phone AD_mobile	NO_t√©l√©phonie AD_mobile
+NO_t√©l√©phone AD_mobile	NO_t√©l√©phone AD_portable
+NO_t√©l√©phone AD_mobile	NO_t√©l√©phonie AD_portable
+NO_ministre PR_de DE_le NO_agriculture	NO_minist√®re PR_de DE_le NO_agriculture
+NO_ministre PR_de DE_le NO_agriculture	minist√®re PR_de DE_le NO_agriculture
+NO_ministre PR_de DE_le NO_agriculture	NO_minist√®re PR_de DE_le agriculture
+NO_ministre PR_de DE_le NO_agriculture	minist√®re PR_de DE_le agriculture
+NO_d√©chet	d√©chets
+NO_parlement AD_europ√©en	NO_parlemenairet AD_europ√©en
+NO_parlement AD_europ√©en	NO_parlementaire AD_europ√©en
+NO_oc√©an	oc√©ans
+europ√©en	NO_europ√©en
+europ√©en	europ√©ens
+NO_sant√© AD_publique	sant√© AD_publique
+NO_sant√© AD_publique	sant√© publique
+NO_sant√© AD_publique	NO_sant√© publique
+cancer	AD_cancéreux
+NO_élevage AD_biologique	NO_élevage bio
+NO_élevage AD_biologique	NO_éleveur bio
+NO_√©nergie AD_renouvelable	energies AD_renouvelable
+NO_√©nergie AD_renouvelable	energie AD_renouvelable
+NO_assembl√©e AD_national	NO_assembl√©e national
+NO_assembl√©e AD_national	NO_assembl√©e nationale
+NO_biodiversit√©	biodiversit√©
+NO_gouvernement NA_fran√ßais	gouvernement NA_fran√ßais
+NO_gouvernement NA_fran√ßais	NO_gouvernement AD_fran√ßais
+NO_gouvernement NA_fran√ßais	gouvernement AD_fran√ßais
+NO_humanit√©	humanit√©
+NO_√©levage	NO_√©leveur
+NO_ministre PR_de DE_le NO_sant√©	NO_ministre PR_de DE_le sant√©
+NO_ministre PR_de DE_le NO_sant√©	NO_minist√®re PR_de DE_le sant√©
+NO_ministre PR_de DE_le NO_sant√©	ministre PR_de DE_le sant√©
+NO_ministre PR_de DE_le NO_sant√©	minist√®re PR_de DE_le sant√©
+NO_ministre PR_de DE_le NO_sant√©	NO_minist√®re PR_de DE_le NO_sant√©
+NO_ministre PR_de DE_le NO_sant√©	ministre PR_de DE_le NO_sant√©
+NO_ministre PR_de DE_le NO_sant√©	ministres PR_de DE_le sant√©
+NO_ministre PR_de DE_le NO_sant√©	minist√®re PR_de DE_le NO_sant√©
+NO_ministre PR_de DE_le NO_sant√©	ministres PR_de DE_le NO_sant√©
+NO_ministre PR_de DE_le ecologie	NO_minist√®re PR_de DE_le ecologie
+NO_ministre PR_de DE_le ecologie	minist√®re PR_de DE_le ecologie
+NO_ministre PR_de DE_le ecologie	NO_ministre PR_de DE_le NO_√©cologie
+NO_ministre PR_de DE_le ecologie	minist√®re PR_de DE_le NO_√©cologie
+NO_ministre PR_de DE_le ecologie	NO_minist√®re PR_de DE_le NO_√©cologie
+NO_ministre PR_de DE_le ecologie	NO_minist√®re PR_du NO_d√©veloppement AD_durable
+NO_ministre PR_de DE_le ecologie	NO_ministre PR_du NO_d√©veloppement AD_durable
+NO_ministre PR_de DE_le ecologie	minist√®re PR_du NO_d√©veloppement AD_durable
+NO_ministre PR_de DE_le ecologie	NO_minist√®re PR_du d√©veloppement AD_durable
+NO_ministre PR_de DE_le ecologie	ministre PR_du NO_d√©veloppement AD_durable
+NO_ministre PR_de DE_le ecologie	NO_ministre PR_du d√©veloppement AD_durable
+NO_ministre PR_de DE_le ecologie	minist√®re PR_du d√©veloppement AD_durable
+NO_ministre PR_de DE_le ecologie	ministres PR_du NO_d√©veloppement AD_durable
+NO_ministre PR_de DE_le ecologie	ministre PR_du d√©veloppement AD_durable
+NO_ministre PR_de DE_le ecologie	ministres PR_du d√©veloppement AD_durable
+NO_ministre PR_de DE_le ecologie	NO_minist√®re PR_de DE_le NO_environnement
+NO_ministre PR_de DE_le ecologie	minist√®re PR_de DE_le NO_environnement
+NO_ministre PR_de DE_le ecologie	NO_minist√®re PR_de DE_le environnement
+NO_ministre PR_de DE_le ecologie	minist√®re PR_de DE_le environnement
+NO_ministre PR_de DE_le economie	minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le economie	NO_minist√®re PR_de DE_le economie
+ecologie	NO_√©cologie
+NO_pr√©tention	NO_pr√©vention
+NO_h√¥pital	h√¥pital
+NO_r√©solution	NO_r√©volution
+NO_solidarit√©	solidarit√©
+NO_secr√©taire PR_de NA_etat	secr√©taire PR_de NA_etat
+NO_secr√©taire PR_de NA_etat	NO_secr√©taire PR_de NA_etats
+NO_secr√©taire PR_de NA_etat	secr√©taire PR_de NA_etats
+NO_d√©veloppement AD_durable	d√©veloppement AD_durable
+NO_d√©veloppement AD_durable	d√©veloppement durable
+NO_d√©veloppement AD_durable	NO_d√©veloppement durable
+mar√©e AD_noir	NO_mar√©e AD_noir
+mar√©e AD_noir	NO_mar√©e NA_noire
+mar√©e AD_noir	mar√©e NA_noire
+NO_docteur	NO_m√©decine
+NO_docteur	NO_m√©decin
+NO_docteur	m√©decine
+NO_m√©dias	m√©dias
+NO_universit√©	universit√©
+NO_universit√©	universit√©s
+NO_biologie AD_synthétique	NO_biologie PR_de NO_synth√®se
+NO_aide AD_extérieur	NO_air AD_extérieur
+NO_cellule AD_photovoltaïque	NO_capteur AD_photovoltaïque
+NO_énergie AD_fossile	NO_carburant AD_fossile
+NO_énergie AD_fossile	NO_hydrocarbure
+NO_énergie AD_fossile	NO_combustible AD_fossile
+ademe	NO_Agence PR_de DE_le NO_environnement KO_et PR_de DE_le NO_ma√Ætrise PR_de DE_le NO_énergie

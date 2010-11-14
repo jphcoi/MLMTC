@@ -1,9 +1,10 @@
-name_data="../../inout/data/MESR_20100715_20100915.lfl"
+name_data_old="../../inout/data/MESR_20100715_20100915.lfl"
+name_data="../../inout/data/MESR.lfl"
 language ='french'
 date_depart =  date(2010,1,1)
-freqmin = 5
+freqmin = 500
 ng_filter=[1,2,3,3,3]
-top = 5000
+top = 500
 sample=4000000
 dated = 2010
 datef = 2010
@@ -15,5 +16,6 @@ maxTermLength=5
 nofigure=0
 user_interface='n'
 withrequete=1
+continent='societe'
 
 

@@ -481,7 +481,7 @@ dist_mat = context_process.dist_mat#on recupere la matrice de distance entre ter
 #p_cooccurrences=context_process.p_cooccurrences#on recupere la matrice de cooccurrences entre termes
 fini=1
 niveau=0
-CF_weight_v = [0.3,0.8,0.5,0.5,0.5]
+CF_weight_v = [0.6,0.8,0.5,0.5,0.5]
 seuil_net_champ_v = [0.,0.,0.,0.,0.]
 taillemin_v=[3,3,3,3,3,3]
 taillemax_v=[30,25,25,25,25,25]
@@ -544,16 +544,16 @@ while fini==1:
 		#type_distance='max','moy' ou 'min'
 		type_distance='moy'
 		distance_champ=fonctions.map_champs(champs,dist_mat,type_distance)
-		#print distance_champ
+		print distance_champ
 		distance_champ_edges_list=edges_list(distance_champ)
-		#print '\n'
-		#print distance_champ_edges_list
+		print '\n'
+		print distance_champ_edges_list
 		distance_champ_edges_list_seuil=seuiller(distance_champ_edges_list,degmax)
-		#print '\n'
-		#print distance_champ_edges_list_seuil
+		print '\n'
+		print distance_champ_edges_list_seuil
 		distance_champ = edges_list_reverse(distance_champ_edges_list_seuil)
-		#print '\n'
-		#print distance_champ
+		print '\n'
+		print distance_champ
 		legende_noeuds,legende_noeuds_id=gexf_champ(years_bins,scores,champs,nb_label,dico_termes,sep_label,dist_type,distance_champ,niveau,seuil_net_champ)
 		fonctions.dumpingin(champs,'champs_'+str(niveau))
 		fonctions.dumpingin(distance_champ,'distance_champ_'+str(niveau))	

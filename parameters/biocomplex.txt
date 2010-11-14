@@ -1,0 +1,22 @@
+
+name_data="../../inout/data/biocomplex/biocomplex.isi"
+language ='english'
+date_depart = date(1970,1,1)
+
+maxTermLength = 5
+freqmin = 10
+ng_filter=[1,2,2,2,2]
+content_indexation='TA'
+
+top = 2000
+sample=50000
+
+build_link_tables='y'
+
+dated = 1970
+datef = 2010
+fenetre = 5
+overlap = 5
+dist_type='precision'
+nofigure=0
+user_interface='y'

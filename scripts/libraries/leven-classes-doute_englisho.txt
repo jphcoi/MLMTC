@@ -1,2 +1,59 @@
 NN_bacterium	JJ_bacterial
 NN_lam	NP_lam
+JJ_acid	NN_acid
+JJ_alternative	NN_alternative
+NN_angstrom	angstrom
+NN_b	NP_b
+NN_bacterium	JJ_bacterial
+JJ_beta	NN_beta
+JJ_binding NN_site	VV_bind NN_site
+JJ_binding	VV_bind
+NN_cell	cells
+JJ_chemical	NN_chemical
+JJ_constant	NN_constant
+JJ_core	NN_core
+NN_culture	JJ_cultured
+JJ_current	NN_current
+NN_datum NN_set	NN_datum VV_set
+NN_set	VV_set
+NN_delta	NP_delta
+NN_dna VV_bind	dna-binding
+JJ_dynamic	NN_dynamics
+NN_e	NP_e
+JJ_enhanced	NN_enhancer
+NN_feedback	feedback
+JJ_folding	NN_folding
+NN_gene	NP_gene
+NN_gene JJ_regulatory NN_network	JJ_genetic JJ_regulatory NN_network
+JJ_genetic	NN_gene
+genomic	genomics
+NN_h	NP_h
+NN_homolog	NN_homology
+JJ_human	NP_human
+NN_hydrogen NN_bond NN_network	NN_hydrogen VV_bond NN_network
+NN_bond	VV_bond
+NP_ii	ii
+NP_iii	iii
+NN_inhibitor	JJ_inhibitory
+JJ_intermediate	NN_intermediate
+NN_k	NP_k
+NN_kappa NN_b	NN_kappa NP_b
+NP_b	NN_b
+JJ_kinetic	NN_kinetics
+JJ_light	NN_light
+JJ_mass	NN_mass
+NN_mitochondrion	JJ_mitochondrial
+NN_n	NP_n
+NN_network	NP_network
+NN_network	NP_networks
+NP_network	NP_networks
+NN_r	NP_r
+NN_regulator	JJ_regulatory
+NN_science	NP_science
+tgf NN_beta	tgf-beta
+NN_transcription	JJ_transcriptional
+NN_type NP_ii	NN_type NP_iii
+NP_ii	NP_iii
+JJ_vertebrate	NN_vertebrate
+NP_vitro	vitro
+JJ_wild NN_type	wild-type
