@@ -124,14 +124,14 @@ def phylogenie(niv_max):
 			fichier_lex_os=open(path_req + 'lexique'  +'/' + 'lexique_one_step_' + 'niv_' + str(niveau) + '_' + dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt','r')
 			lignes_lex_os= fichier_lex_os.readlines()
 			print fichier_lex_os
-			print indexs
+			#print indexs
 			if niveau>1:
 				for ligne in lignes_lex_os:
 					lignev=ligne[:-1].split('\t')
 					#print str(niveau)+'_'+str(lignev[0])+'_'+str(inter) + '->'
 					for dessous in lignev[1].split(' '):
 						#print '+++++++++'+str(niveau-1)+'_'+str(dessous)+'_'+str(inter)
-						print (indexs[str(niveau)+'_'+str(lignev[0])+'_'+str(inter)],indexs[str(niveau-1)+'_'+str(dessous)+'_'+str(inter)]) 
+						#print (indexs[str(niveau)+'_'+str(lignev[0])+'_'+str(inter)],indexs[str(niveau-1)+'_'+str(dessous)+'_'+str(inter)]) 
 						map_edges[(indexs[str(niveau)+'_'+str(lignev[0])+'_'+str(inter)],indexs[str(niveau-1)+'_'+str(dessous)+'_'+str(inter)])]='1.0001'
 						map_edges[(indexs[str(niveau-1)+'_'+str(dessous)+'_'+str(inter)],indexs[str(niveau)+'_'+str(lignev[0])+'_'+str(inter)])]='1.0001'
 						temp = map_dessous.get(indexs[str(niveau)+'_'+str(lignev[0])+'_'+str(inter)],[])
