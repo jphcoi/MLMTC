@@ -158,7 +158,7 @@ def build_cooc_matrix(contenu, years_bin):
 def build_mutual_information(p_cooccurrences):
 	muti={}
 	for x,y in p_cooccurrences.iteritems():
-		muti[x]=math.log10( y/(p_cooccurrences[(x[0],x[0],x[2])]*p_cooccurrences[(x[1],x[1],x[2])]))
+		muti[x]=math.log10( y/float((p_cooccurrences[(x[0],x[0],x[2])]*p_cooccurrences[(x[1],x[1],x[2])])))
 		#print str(p_cooccurrences[(x[0],x[0],x[2])])+'\t'+ str(p_cooccurrences[(x[1],x[1],x[2])])+'\t'+str(y)
 		#print str(muti[x])
 	return muti
