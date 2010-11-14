@@ -483,15 +483,16 @@ fini=1
 niveau=0
 CF_weight_v = [0.6,0.6,0.6,0.6,0.6]
 seuil_net_champ_v = [0.,0.,0.,0.,0.]
-taillemin_v=[3,3,3,3,3,3]
+taillemin_v=[6,6,6,6,6,6]
 taillemax_v=[30,25,25,25,25,25]
 kmin_v = [4,4,4,4,4,4]
 kmin_v = [5,5,5,5,5,5]
 kmin_v = [5,5,5,5,5,5]
-kmin_v = [3,3,3,3,3,3]
+degmax=6
+kmin_v = [4,4,4,4,4,4]
 
 nb_label_v = [2,3,4,5,6,7]
-degmax=5
+
 type_score='combine'
 info={}
 lenchampsfinal={}
