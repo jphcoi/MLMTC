@@ -9,7 +9,7 @@ import sys
 
 sys.path.append("../scripts/libraries")
 sys.path.append("../scripts")
-sys.path.append("../../MLMTC/install/lib/python/hcluster/") 
+sys.path.append("~/Bureau/mapping/MLMTC/install/lib/python") 
 import os
 import parameters
 from hcluster import pdist, linkage, dendrogram,centroid,weighted
