@@ -9,7 +9,7 @@ import sys
 
 sys.path.append("../scripts/libraries")
 sys.path.append("../scripts")
-sys.path.append("~/iscpif/users/cointet/install") 
+sys.path.append("/iscpif/users/cointet/install") 
 import os
 import parameters
 from hcluster import pdist, linkage, dendrogram,centroid,weighted
