@@ -9,7 +9,7 @@ import sys
 
 sys.path.append("../scripts/libraries")
 sys.path.append("../scripts")
-sys.path.append("../../install/lib/python/hcluster") 
+sys.path.append("../../MLMTC/install/lib/python/hcluster/") 
 import os
 import parameters
 from hcluster import pdist, linkage, dendrogram,centroid,weighted
