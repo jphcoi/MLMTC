@@ -227,12 +227,21 @@ def create_js_bar(liste_points,label_tubes):
 		for x in rge_y:
  			points_ranges.append((points_complets[x]))
 		out = out + '\nmen: '
-
-		out = out + str(points_ranges) + ',' + '\n'
-		
-		out = out + 'women: '		
-		out = out + str(points_ranges) + '\n'
+		out = out + str(points_ranges)# + ',' + '\n'
+		print points_ranges
+		#out = out + 'women: '		
+		#out = out + str(points_ranges) + '\n'
 		out = out + '},'
+		#blank part to be blanked...
+		out = out + '\n"'  +label[1:4]+ '"' + ': {'
+		points_ranges=[]
+		for x in rge_y:
+ 			points_ranges.append(4)
+		print points_ranges
+		out = out + '\nmen: '
+		out = out + str(points_ranges)# + ',' + '\n'
+		out = out + '},'
+		
 	out = out[:-1]
 	out = out + "\n};"
 	fichier.write(out)
