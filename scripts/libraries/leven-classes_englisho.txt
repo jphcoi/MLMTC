@@ -1,3 +1,81 @@
+NN_bacterium	JJ_bacterial
+NN_lam	NP_lam
+JJ_acid	NN_acid
+JJ_alternative	NN_alternative
+NN_angstrom	angstrom
+NN_b	NP_b
+NN_bacterium	JJ_bacterial
+JJ_beta	NN_beta
+JJ_binding NN_site	VV_bind NN_site
+JJ_binding	VV_bind
+NN_cell	cells
+JJ_chemical	NN_chemical
+JJ_constant	NN_constant
+JJ_core	NN_core
+NN_culture	JJ_cultured
+JJ_current	NN_current
+NN_datum NN_set	NN_datum VV_set
+NN_set	VV_set
+NN_delta	NP_delta
+NN_dna VV_bind	dna-binding
+JJ_dynamic	NN_dynamics
+NN_e	NP_e
+JJ_enhanced	NN_enhancer
+NN_feedback	feedback
+JJ_folding	NN_folding
+NN_gene	NP_gene
+NN_gene JJ_regulatory NN_network	JJ_genetic JJ_regulatory NN_network
+JJ_genetic	NN_gene
+genomic	genomics
+NN_h	NP_h
+NN_homolog	NN_homology
+JJ_human	NP_human
+NN_hydrogen NN_bond NN_network	NN_hydrogen VV_bond NN_network
+NN_bond	VV_bond
+NP_ii	ii
+NP_iii	iii
+NN_inhibitor	JJ_inhibitory
+JJ_intermediate	NN_intermediate
+NN_k	NP_k
+NN_kappa NN_b	NN_kappa NP_b
+NP_b	NN_b
+JJ_kinetic	NN_kinetics
+JJ_light	NN_light
+JJ_mass	NN_mass
+NN_mitochondrion	JJ_mitochondrial
+NN_n	NP_n
+NN_network	NP_network
+NN_network	NP_networks
+NP_network	NP_networks
+NN_r	NP_r
+NN_regulator	JJ_regulatory
+NN_science	NP_science
+tgf NN_beta	tgf-beta
+NN_transcription	JJ_transcriptional
+NN_type NP_ii	NN_type NP_iii
+NP_ii	NP_iii
+JJ_vertebrate	NN_vertebrate
+NP_vitro	vitro
+JJ_wild NN_type	wild-type
+NN_business NN_planning	NN_business VV_plan
+NN_planning	VV_plan
+NN_business VV_plan	NP_business NP_planning
+NN_care	NP_care
+NN_company	companys
+JJ_financial NN_modeling	JJ_financial VV_model
+VV_model	NN_modeling
+NP_planning NN_analyst	VV_plan NN_analyst
+VV_plan	NP_planning
+NP_planning NP_analyst	VV_plan NN_analyst
+NN_planning NN_process	VV_plan NN_process
+NN_planning	VV_plan
+NN_range NN_planning	NN_range VV_plan
+NN_planning	VV_plan
+NN_staff	NP_staff
+JJ_strategic NN_planning	JJ_strategic VV_plan
+NN_planning	VV_plan
+JJ_strategic VV_plan	NP_strategic NP_planning
+NN_treasury	NP_treasury
 mass-spectrometry	NN_mass NN_spectrometry
 pharmacokinetic	pharmacokinetics
 dna	NN_dna
@@ -1174,3 +1252,461 @@ NN_type NP_iv	type NP_iv
 NN_tyrosine phosphorylation	NN_tyrosine phosphorylating
 JJ_wild NN_type	JJ_wild type
 NN_yeast NN_cell	NN_yeast NN_b-cell
+NP_accounting NP_manager	NN_accounting NP_manager
+NP_accounting NP_manager	NP_accounting NN_manager
+NP_accounting NP_manager	NN_accounting NN_manager
+NN_accounting NN_system	NP_accounting NN_system
+NN_accounting NN_system	NN_accounting NP_systems
+NN_accounting NN_system	NP_accounting NP_systems
+NN_acquisition NN_study	acquisitions NP_study
+NN_acquisition NN_study	NN_acquisition NP_study
+NN_analysis CC_and JJ_special NN_project	analysis CC_and JJ_special NN_project
+NN_analysis CC_and JJ_special NN_project	NN_analyst CC_and JJ_special NN_project
+NN_analysis CC_and JJ_special NN_project	NP_analyst CC_and JJ_special NN_project
+NN_analysis CC_and JJ_special NN_project	NP_analysis CC_and JJ_special NN_project
+NN_analysis CC_and JJ_special NN_project	NN_analysis CC_and JJ_special NP_project
+NN_analysis CC_and JJ_special NN_project	analysis CC_and JJ_special NP_project
+NN_analysis CC_and JJ_special NN_project	NN_analyst CC_and JJ_special NP_project
+NN_analysis CC_and JJ_special NN_project	NP_analyst CC_and JJ_special NP_project
+NN_analysis CC_and JJ_special NN_project	NP_analysis CC_and JJ_special NP_project
+NN_analysis IN_of NN_operation	analysis IN_of NN_operation
+NN_analysis IN_of NN_operation	NN_analyst IN_of NN_operation
+NN_analysis IN_of NN_operation	NP_analyst IN_of NN_operation
+NN_analysis IN_of NN_operation	NP_analysis IN_of NN_operation
+NN_analysis IN_of NN_operation	NN_analysis IN_of NP_operations
+NN_analysis IN_of NN_operation	analysis IN_of NP_operations
+NN_analysis IN_of NN_operation	NN_analyst IN_of NP_operations
+NN_analysis IN_of NN_operation	NP_analyst IN_of NP_operations
+NN_analysis IN_of NN_operation	NP_analysis IN_of NP_operations
+NP_assistant NP_director	JJ_assistant NP_director
+NP_assistant NP_director	NP_assistant NN_director
+NP_assistant NP_director	JJ_assistant NN_director
+JJ_assistant TO_to controller	NP_assistant TO_to controller
+JJ_assistant TO_to controller	JJ_assistant TO_to NN_controller
+JJ_assistant TO_to controller	NP_assistant TO_to NN_controller
+NP_budget NP_analyst	NP_budget NN_analyst
+NP_budget NP_analyst	NP_budget NP_analysis
+NP_budget NP_analyst	NP_budget NN_analysis
+NP_budget NP_analyst	NP_budget analysis
+NN_budget NN_analysis	NN_budget analysis
+NN_budget NN_analysis	NN_budget NN_analyst
+NN_budget NN_analysis	NN_budget NP_analyst
+NN_budget NN_analysis	NN_budget NP_analysis
+NN_business VV_plan	NP_business VV_plan
+NN_business NN_proposal	NP_business NN_proposal
+NN_business NN_unit	NP_business NN_unit
+NN_capital NN_budgeting	NP_capital NN_budgeting
+NN_capital NN_budget	NP_capital NN_budget
+NN_capital NN_expenditure NN_analysis	NP_capital NN_expenditure NN_analysis
+NN_capital NN_expenditure NN_analysis	NN_capital NN_expenditure analysis
+NN_capital NN_expenditure NN_analysis	NN_capital NN_expenditure NN_analyst
+NN_capital NN_expenditure NN_analysis	NN_capital NN_expenditure NP_analyst
+NN_capital NN_expenditure NN_analysis	NN_capital NN_expenditure NP_analysis
+NN_capital NN_expenditure NN_analysis	NP_capital NN_expenditure analysis
+NN_capital NN_expenditure NN_analysis	NP_capital NN_expenditure NN_analyst
+NN_capital NN_expenditure NN_analysis	NP_capital NN_expenditure NP_analyst
+NN_capital NN_expenditure NN_analysis	NP_capital NN_expenditure NP_analysis
+NN_capital NN_investment	NP_capital NN_investment
+NN_capital NN_project	NP_capital NN_project
+NN_capital NN_project	NN_capital NP_project
+NN_capital NN_project	NP_capital NP_project
+NN_cash NN_management	NN_cash NP_management
+NP_chief NP_financial NP_officer	NP_chief JJ_financial NP_officer
+JJ_corporate NN_finance	NP_corporate NN_finance
+JJ_corporate NN_finance	JJ_corporate NP_finance
+JJ_corporate NN_finance	NP_corporate NP_finance
+JJ_corporate NN_plan	NP_corporate NN_plan
+JJ_corporate NN_strategy	NP_corporate NN_strategy
+JJ_corporate NN_strategy	NP_corporate JJ_strategic
+JJ_corporate NN_strategy	NP_corporate NP_strategic
+JJ_corporate NN_strategy	JJ_corporate NP_strategic
+NN_cost NN_analysis	NN_cost analysis
+NN_cost NN_analysis	NN_cost NN_analyst
+NN_cost NN_analysis	NN_cost NP_analyst
+NN_cost NN_analysis	NN_cost NP_analysis
+NN_datum VV_process	NN_data VV_process
+VV_develop NN_business	VV_develop NP_business
+VV_develop JJ_strategic NN_plan	VV_develop NN_strategy NN_plan
+VV_develop JJ_strategic NN_plan	VV_develop NP_strategic NN_plan
+NN_development CC_and NN_implementation	NP_development CC_and NN_implementation
+NN_development NN_program	NP_development NN_program
+NP_director NP_corporate NP_planning	NN_director NP_corporate NP_planning
+NP_director NP_corporate NP_planning	NP_director JJ_corporate NP_planning
+NP_director NP_corporate NP_planning	NP_director NP_corporate NN_planning
+NP_director NP_corporate NP_planning	NN_director JJ_corporate NP_planning
+NP_director NP_corporate NP_planning	NN_director NP_corporate NN_planning
+NP_director NP_corporate NP_planning	NP_director JJ_corporate NN_planning
+NP_director NP_corporate NP_planning	NN_director JJ_corporate NN_planning
+NN_director IN_of NP_corporate	NP_director IN_of NP_corporate
+NN_director IN_of NP_corporate	NN_director IN_of JJ_corporate
+NN_director IN_of NP_corporate	NP_director IN_of JJ_corporate
+NN_duty VV_include JJ_long NN_range NN_planning	duties VV_include JJ_long NN_range NN_planning
+NN_duty VV_include JJ_long NN_range NN_planning	NN_duty VV_include NP_long NN_range NN_planning
+NN_duty VV_include JJ_long NN_range NN_planning	NN_duty VV_include JJ_long NN_range NP_planning
+NN_duty VV_include JJ_long NN_range NN_planning	duties VV_include NP_long NN_range NN_planning
+NN_duty VV_include JJ_long NN_range NN_planning	duties VV_include JJ_long NN_range NP_planning
+NN_duty VV_include JJ_long NN_range NN_planning	NN_duty VV_include NP_long NN_range NP_planning
+NN_duty VV_include JJ_long NN_range NN_planning	duties VV_include NP_long NN_range NP_planning
+NN_duty MD_will VV_include	duties MD_will VV_include
+NN_feasibility NN_study	NN_feasibility NP_study
+JJ_financial NN_control	NP_financial NN_control
+JJ_financial NN_modeling	NP_financial NN_modeling
+JJ_financial VV_model	NP_financial VV_model
+JJ_financial NN_model	NP_financial NN_model
+JJ_financial NN_operation	NP_financial NN_operation
+JJ_financial NN_operation	JJ_financial NP_operations
+JJ_financial NN_operation	NP_financial NP_operations
+JJ_financial NN_opportunity	NP_financial NN_opportunity
+JJ_financial NN_performance	NP_financial NN_performance
+NP_financial planner	JJ_financial planner
+NP_financial planner	NP_financial NN_planner
+NP_financial planner	JJ_financial NN_planner
+NP_financial NP_planning CC_and NP_analysis	JJ_financial NP_planning CC_and NP_analysis
+NP_financial NP_planning CC_and NP_analysis	NP_financial NN_planning CC_and NP_analysis
+NP_financial NP_planning CC_and NP_analysis	NP_financial NP_planning CC_and NN_analyst
+NP_financial NP_planning CC_and NP_analysis	NP_financial NP_planning CC_and NP_analyst
+NP_financial NP_planning CC_and NP_analysis	NP_financial NP_planning CC_and NN_analysis
+NP_financial NP_planning CC_and NP_analysis	JJ_financial NN_planning CC_and NP_analysis
+NP_financial NP_planning CC_and NP_analysis	JJ_financial NP_planning CC_and NN_analyst
+NP_financial NP_planning CC_and NP_analysis	JJ_financial NP_planning CC_and NP_analyst
+NP_financial NP_planning CC_and NP_analysis	JJ_financial NP_planning CC_and NN_analysis
+NP_financial NP_planning CC_and NP_analysis	NP_financial NN_planning CC_and NN_analyst
+NP_financial NP_planning CC_and NP_analysis	NP_financial NN_planning CC_and NP_analyst
+NP_financial NP_planning CC_and NP_analysis	NP_financial NN_planning CC_and NN_analysis
+NP_financial NP_planning CC_and NP_analysis	NP_financial NP_planning CC_and analysis
+NP_financial NP_planning CC_and NP_analysis	JJ_financial NN_planning CC_and NN_analyst
+NP_financial NP_planning CC_and NP_analysis	JJ_financial NN_planning CC_and NP_analyst
+NP_financial NP_planning CC_and NP_analysis	JJ_financial NN_planning CC_and NN_analysis
+NP_financial NP_planning CC_and NP_analysis	JJ_financial NP_planning CC_and analysis
+NP_financial NP_planning CC_and NP_analysis	NP_financial NN_planning CC_and analysis
+NP_financial NP_planning CC_and NP_analysis	JJ_financial NN_planning CC_and analysis
+JJ_financial NN_plan	NP_financial NN_plan
+JJ_financial NN_reporting	NP_financial NN_reporting
+NP_financial NP_services	JJ_financial NP_services
+NP_financial NP_services	NP_financial NN_service
+NP_financial NP_services	JJ_financial NN_service
+JJ_financial NN_statement	NP_financial NN_statement
+JJ_financial NN_system	NP_financial NN_system
+JJ_financial NN_system	JJ_financial NP_systems
+JJ_financial NN_system	NP_financial NP_systems
+JJ_foreign NN_exchange	JJ_foreign NN_exchanger
+JJ_general NN_accounting	JJ_general NP_accounting
+NN_health NN_care	NP_health NN_care
+VV_include NN_analysis	VV_include analysis
+VV_include NN_analysis	VV_include NN_analyst
+VV_include NN_analysis	VV_include NP_analyst
+VV_include NN_analysis	VV_include NP_analysis
+VV_include NN_development	VV_include NP_development
+VV_include NN_merger	VV_include NP_mergers
+VV_include JJ_strategic NN_planning	VV_include NN_strategy NN_planning
+VV_include JJ_strategic NN_planning	VV_include NP_strategic NN_planning
+VV_include JJ_strategic NN_planning	VV_include JJ_strategic NP_planning
+VV_include JJ_strategic NN_planning	VV_include NN_strategy NP_planning
+VV_include JJ_strategic NN_planning	VV_include NP_strategic NP_planning
+NN_individual MD_will	JJ_individual MD_will
+NN_information NN_system	NN_information NP_systems
+NN_investment NN_analysis	NN_investment analysis
+NN_investment NN_analysis	NN_investment NN_analyst
+NN_investment NN_analysis	NN_investment NP_analyst
+NN_investment NN_analysis	NN_investment NP_analysis
+JJ_joint NN_venture	NN_joint NN_venture
+NP_junior NP_financial NP_analyst	NP_junior JJ_financial NP_analyst
+NP_junior NP_financial NP_analyst	NP_junior NP_financial NN_analyst
+NP_junior NP_financial NP_analyst	NP_junior NP_financial NP_analysis
+NP_junior NP_financial NP_analyst	NP_junior NP_financial NN_analysis
+NP_junior NP_financial NP_analyst	NP_junior JJ_financial NN_analyst
+NP_junior NP_financial NP_analyst	NP_junior JJ_financial NP_analysis
+NP_junior NP_financial NP_analyst	NP_junior JJ_financial NN_analysis
+NP_junior NP_financial NP_analyst	NP_junior NP_financial analysis
+NP_junior NP_financial NP_analyst	NP_junior JJ_financial analysis
+JJ_long CC_and JJ_short NN_range NN_planning	NP_long CC_and JJ_short NN_range NN_planning
+JJ_long CC_and JJ_short NN_range NN_planning	JJ_long CC_and JJ_short NN_range NP_planning
+JJ_long CC_and JJ_short NN_range NN_planning	NP_long CC_and JJ_short NN_range NP_planning
+JJ_long CC_and JJ_short NN_term	NP_long CC_and JJ_short NN_term
+JJ_long NN_range NN_business	NP_long NN_range NN_business
+JJ_long NN_range NN_business	JJ_long NN_range NP_business
+JJ_long NN_range NN_business	NP_long NN_range NP_business
+NN_management NN_decision	NP_management NN_decision
+NN_management NN_function	NP_management NN_function
+NN_management NN_information	NP_management NN_information
+NN_management NN_team	NP_management NN_team
+NP_manager NP_business NP_planning	NN_manager NP_business NP_planning
+NP_manager NP_business NP_planning	NP_manager NN_business NP_planning
+NP_manager NP_business NP_planning	NP_manager NP_business NN_planning
+NP_manager NP_business NP_planning	NN_manager NN_business NP_planning
+NP_manager NP_business NP_planning	NN_manager NP_business NN_planning
+NP_manager NP_business NP_planning	NP_manager NN_business NN_planning
+NP_manager NP_business NP_planning	NN_manager NN_business NN_planning
+NP_manager NP_financial NP_analysis	NN_manager NP_financial NP_analysis
+NP_manager NP_financial NP_analysis	NP_manager JJ_financial NP_analysis
+NP_manager NP_financial NP_analysis	NP_manager NP_financial NN_analyst
+NP_manager NP_financial NP_analysis	NP_manager NP_financial NP_analyst
+NP_manager NP_financial NP_analysis	NP_manager NP_financial NN_analysis
+NP_manager NP_financial NP_analysis	NN_manager JJ_financial NP_analysis
+NP_manager NP_financial NP_analysis	NN_manager NP_financial NN_analyst
+NP_manager NP_financial NP_analysis	NN_manager NP_financial NP_analyst
+NP_manager NP_financial NP_analysis	NN_manager NP_financial NN_analysis
+NP_manager NP_financial NP_analysis	NP_manager JJ_financial NN_analyst
+NP_manager NP_financial NP_analysis	NP_manager JJ_financial NP_analyst
+NP_manager NP_financial NP_analysis	NP_manager JJ_financial NN_analysis
+NP_manager NP_financial NP_analysis	NP_manager NP_financial analysis
+NP_manager NP_financial NP_analysis	NN_manager JJ_financial NN_analyst
+NP_manager NP_financial NP_analysis	NN_manager JJ_financial NP_analyst
+NP_manager NP_financial NP_analysis	NN_manager JJ_financial NN_analysis
+NP_manager NP_financial NP_analysis	NN_manager NP_financial analysis
+NP_manager NP_financial NP_analysis	NP_manager JJ_financial analysis
+NP_manager NP_financial NP_analysis	NN_manager JJ_financial analysis
+NP_manager NP_financial NP_planning	NN_manager NP_financial NP_planning
+NP_manager NP_financial NP_planning	NP_manager JJ_financial NP_planning
+NP_manager NP_financial NP_planning	NP_manager NP_financial NN_planning
+NP_manager NP_financial NP_planning	NN_manager JJ_financial NP_planning
+NP_manager NP_financial NP_planning	NN_manager NP_financial NN_planning
+NP_manager NP_financial NP_planning	NP_manager JJ_financial NN_planning
+NP_manager NP_financial NP_planning	NN_manager JJ_financial NN_planning
+NP_manager NP_planning	NN_manager NP_planning
+NP_manager NP_planning	NP_manager NN_planning
+NP_manager NP_planning	NN_manager NN_planning
+NN_market NN_analysis	NP_market NN_analysis
+NN_market NN_analysis	NN_market analysis
+NN_market NN_analysis	NN_market NN_analyst
+NN_market NN_analysis	NN_market NP_analyst
+NN_market NN_analysis	NN_market NP_analysis
+NN_market NN_analysis	NP_market analysis
+NN_market NN_analysis	NP_market NN_analyst
+NN_market NN_analysis	NP_market NP_analyst
+NN_market NN_analysis	NP_market NP_analysis
+NP_market NP_research NP_analyst	NN_market NP_research NP_analyst
+NP_market NP_research NP_analyst	NP_market NN_research NP_analyst
+NP_market NP_research NP_analyst	NP_market NP_research NN_analyst
+NP_market NP_research NP_analyst	NP_market NP_research NP_analysis
+NP_market NP_research NP_analyst	NP_market NP_research NN_analysis
+NP_market NP_research NP_analyst	NN_market NN_research NP_analyst
+NP_market NP_research NP_analyst	NN_market NP_research NN_analyst
+NP_market NP_research NP_analyst	NN_market NP_research NP_analysis
+NP_market NP_research NP_analyst	NN_market NP_research NN_analysis
+NP_market NP_research NP_analyst	NP_market NN_research NN_analyst
+NP_market NP_research NP_analyst	NP_market NN_research NP_analysis
+NP_market NP_research NP_analyst	NP_market NN_research NN_analysis
+NP_market NP_research NP_analyst	NP_market NP_research analysis
+NP_market NP_research NP_analyst	NN_market NN_research NN_analyst
+NP_market NP_research NP_analyst	NN_market NN_research NP_analysis
+NP_market NP_research NP_analyst	NN_market NN_research NN_analysis
+NP_market NP_research NP_analyst	NN_market NP_research analysis
+NP_market NP_research NP_analyst	NP_market NN_research analysis
+NP_market NP_research NP_analyst	NN_market NN_research analysis
+NN_marketing NN_analysis	NP_marketing NN_analysis
+NN_marketing NN_analysis	NN_marketing analysis
+NN_marketing NN_analysis	NN_marketing NN_analyst
+NN_marketing NN_analysis	NN_marketing NP_analyst
+NN_marketing NN_analysis	NN_marketing NP_analysis
+NN_marketing NN_analysis	NP_marketing analysis
+NN_marketing NN_analysis	NP_marketing NN_analyst
+NN_marketing NN_analysis	NP_marketing NP_analyst
+NN_marketing NN_analysis	NP_marketing NP_analysis
+NN_marketing NN_plan	NP_marketing NN_plan
+NN_marketing NN_program	NP_marketing NN_program
+NN_marketing NN_strategy	NP_marketing NN_strategy
+NN_marketing NN_strategy	NN_marketing JJ_strategic
+NN_marketing NN_strategy	NN_marketing NP_strategic
+NN_marketing NN_strategy	NP_marketing JJ_strategic
+NN_marketing NN_strategy	NP_marketing NP_strategic
+NN_marketing NN_study	NP_marketing NN_study
+NN_marketing NN_study	NN_marketing NP_study
+NN_marketing NN_study	NP_marketing NP_study
+JJ_new NN_business NN_venture	NP_new NN_business NN_venture
+JJ_new NN_business NN_venture	JJ_new NP_business NN_venture
+JJ_new NN_business NN_venture	NP_new NP_business NN_venture
+JJ_new NN_market	NP_new NN_market
+JJ_new NN_market	JJ_new NP_market
+JJ_new NN_market	NP_new NP_market
+JJ_operational NN_analysis	JJ_operational analysis
+JJ_operational NN_analysis	JJ_operational NN_analyst
+JJ_operational NN_analysis	JJ_operational NP_analyst
+JJ_operational NN_analysis	JJ_operational NP_analysis
+JJ_operational NN_planning	JJ_operational NP_planning
+NN_planning NN_activity	NP_planning NN_activity
+VV_plan NN_analyst	VV_plan NP_analyst
+VV_plan NN_analyst	VV_plan NP_analysis
+VV_plan NN_analyst	VV_plan NN_analysis
+VV_plan NN_analyst	VV_plan analysis
+NN_planning CC_and NN_control	NP_planning CC_and NN_control
+NN_planning CC_and NN_development	NP_planning CC_and NN_development
+NN_planning CC_and NN_development	NN_planning CC_and NP_development
+NN_planning CC_and NN_development	NP_planning CC_and NP_development
+NN_planning CC_and NN_management	NP_planning CC_and NN_management
+NN_planning CC_and NN_management	NN_planning CC_and NP_management
+NN_planning CC_and NN_management	NP_planning CC_and NP_management
+NN_planning CC_and JJ_special NN_project	NP_planning CC_and JJ_special NN_project
+NN_planning CC_and JJ_special NN_project	NN_planning CC_and JJ_special NP_project
+NN_planning CC_and JJ_special NN_project	NP_planning CC_and JJ_special NP_project
+VV_plan NN_associate	VV_plan NP_associate
+NP_planning NP_director	NN_planning NP_director
+NP_planning NP_director	NP_planning NN_director
+NP_planning NP_director	NN_planning NN_director
+NN_planning NN_effort	NP_planning NN_effort
+NN_planning NN_function	NP_planning NN_function
+NN_planning NN_process	NP_planning NN_process
+NN_planning NN_program	NP_planning NN_program
+NN_planning NN_study	NP_planning NN_study
+NN_planning NN_study	NN_planning NP_study
+NN_planning NN_study	NP_planning NP_study
+NN_planning NN_system	NP_planning NN_system
+NN_planning NN_system	NN_planning NP_systems
+NN_planning NN_system	NP_planning NP_systems
+JJ_potential NN_acquisition	NN_potential NN_acquisition
+JJ_potential NN_acquisition	JJ_potential acquisitions
+JJ_potential NN_acquisition	NN_potential acquisitions
+NN_product NN_analysis	NN_production NN_analysis
+NN_product NN_analysis	NP_product NN_analysis
+NN_product NN_analysis	NN_product analysis
+NN_product NN_analysis	NN_product NN_analyst
+NN_product NN_analysis	NN_product NP_analyst
+NN_product NN_analysis	NN_product NP_analysis
+NN_product NN_analysis	NN_production analysis
+NN_product NN_analysis	NN_production NN_analyst
+NN_product NN_analysis	NN_production NP_analyst
+NN_product NN_analysis	NN_production NP_analysis
+NN_product NN_analysis	NP_product analysis
+NN_product NN_analysis	NP_product NN_analyst
+NN_product NN_analysis	NP_product NP_analyst
+NN_product NN_analysis	NP_product NP_analysis
+NN_product CC_and NN_service	NN_production CC_and NN_service
+NN_product CC_and NN_service	NP_product CC_and NN_service
+NN_product CC_and NN_service	NN_product CC_and NP_services
+NN_product CC_and NN_service	NN_production CC_and NP_services
+NN_product CC_and NN_service	NP_product CC_and NP_services
+NN_product NN_line NN_profitability	NN_production NN_line NN_profitability
+NN_product NN_line NN_profitability	NP_product NN_line NN_profitability
+NN_product NN_planning	NN_production NN_planning
+NN_product NN_planning	NP_product NN_planning
+NN_product NN_planning	NN_product NP_planning
+NN_product NN_planning	NN_production NP_planning
+NN_product NN_planning	NP_product NP_planning
+NN_product NN_profitability	NN_production NN_profitability
+NN_product NN_profitability	NP_product NN_profitability
+NN_profitability NN_analysis	NN_profitability analysis
+NN_profitability NN_analysis	NN_profitability NN_analyst
+NN_profitability NN_analysis	NN_profitability NP_analyst
+NN_profitability NN_analysis	NN_profitability NP_analysis
+NN_profitability NN_study	NN_profitability NP_study
+NN_project NN_management	NP_project NN_management
+NN_project NN_management	NN_project NP_management
+NN_project NN_management	NP_project NP_management
+NN_range NN_planning	NN_range NP_planning
+VV_report RB_directly	JJ_reported RB_directly
+NN_research NN_study	NP_research NN_study
+NN_research NN_study	NN_research NP_study
+NN_research NN_study	NP_research NP_study
+JJ_responsible IN_for VV_develop	responsible IN_for VV_develop
+NN_sale NN_analysis	NN_sale analysis
+NN_sale NN_analysis	NN_sale NN_analyst
+NN_sale NN_analysis	NN_sale NP_analyst
+NN_sale NN_analysis	NN_sale NP_analysis
+NN_sale CC_and NN_marketing	NN_sale CC_and NP_marketing
+JJ_senior NN_analyst	NP_senior NN_analyst
+JJ_senior NN_analyst	JJ_senior NP_analyst
+JJ_senior NN_analyst	JJ_senior NP_analysis
+JJ_senior NN_analyst	JJ_senior NN_analysis
+JJ_senior NN_analyst	NP_senior NP_analyst
+JJ_senior NN_analyst	NP_senior NP_analysis
+JJ_senior NN_analyst	NP_senior NN_analysis
+JJ_senior NN_analyst	JJ_senior analysis
+JJ_senior NN_analyst	NP_senior analysis
+JJ_senior NP_business NN_analyst	NP_senior NP_business NN_analyst
+JJ_senior NP_business NN_analyst	JJ_senior NN_business NN_analyst
+JJ_senior NP_business NN_analyst	JJ_senior NP_business NP_analyst
+JJ_senior NP_business NN_analyst	JJ_senior NP_business NP_analysis
+JJ_senior NP_business NN_analyst	JJ_senior NP_business NN_analysis
+JJ_senior NP_business NN_analyst	NP_senior NN_business NN_analyst
+JJ_senior NP_business NN_analyst	NP_senior NP_business NP_analyst
+JJ_senior NP_business NN_analyst	NP_senior NP_business NP_analysis
+JJ_senior NP_business NN_analyst	NP_senior NP_business NN_analysis
+JJ_senior NP_business NN_analyst	JJ_senior NN_business NP_analyst
+JJ_senior NP_business NN_analyst	JJ_senior NN_business NP_analysis
+JJ_senior NP_business NN_analyst	JJ_senior NN_business NN_analysis
+JJ_senior NP_business NN_analyst	JJ_senior NP_business analysis
+JJ_senior NP_business NN_analyst	NP_senior NN_business NP_analyst
+JJ_senior NP_business NN_analyst	NP_senior NN_business NP_analysis
+JJ_senior NP_business NN_analyst	NP_senior NN_business NN_analysis
+JJ_senior NP_business NN_analyst	NP_senior NP_business analysis
+JJ_senior NP_business NN_analyst	JJ_senior NN_business analysis
+JJ_senior NP_business NN_analyst	NP_senior NN_business analysis
+JJ_senior NP_planning	NP_senior NP_planning
+JJ_senior NP_planning	JJ_senior NN_planning
+JJ_senior NP_planning	NP_senior NN_planning
+JJ_short CC_and JJ_long NN_range NN_planning	JJ_short CC_and NP_long NN_range NN_planning
+JJ_short CC_and JJ_long NN_range NN_planning	JJ_short CC_and JJ_long NN_range NP_planning
+JJ_short CC_and JJ_long NN_range NN_planning	JJ_short CC_and NP_long NN_range NP_planning
+JJ_short CC_and JJ_long NN_range NN_plan	JJ_short CC_and NP_long NN_range NN_plan
+JJ_short CC_and JJ_long NN_term	JJ_short CC_and NP_long NN_term
+JJ_special NN_study	JJ_special NP_study
+NN_statement NN_analysis	NN_statement analysis
+NN_statement NN_analysis	NN_statement NN_analyst
+NN_statement NN_analysis	NN_statement NP_analyst
+NN_statement NN_analysis	NN_statement NP_analysis
+JJ_strategic NN_business	NN_strategy NN_business
+JJ_strategic NN_business	NP_strategic NN_business
+JJ_strategic NN_business	JJ_strategic NP_business
+JJ_strategic NN_business	NN_strategy NP_business
+JJ_strategic NN_business	NP_strategic NP_business
+JJ_strategic NN_business NN_plan	NN_strategy NN_business NN_plan
+JJ_strategic NN_business NN_plan	NP_strategic NN_business NN_plan
+JJ_strategic NN_business NN_plan	JJ_strategic NP_business NN_plan
+JJ_strategic NN_business NN_plan	NN_strategy NP_business NN_plan
+JJ_strategic NN_business NN_plan	NP_strategic NP_business NN_plan
+NP_strategic planner	JJ_strategic planner
+NP_strategic planner	NN_strategy planner
+NP_strategic planner	NP_strategic NN_planner
+NP_strategic planner	JJ_strategic NN_planner
+NP_strategic planner	NN_strategy NN_planner
+JJ_strategic VV_plan	NN_strategy VV_plan
+JJ_strategic VV_plan	NP_strategic VV_plan
+NP_strategic NP_planning NP_analyst	JJ_strategic NP_planning NP_analyst
+NP_strategic NP_planning NP_analyst	NN_strategy NP_planning NP_analyst
+NP_strategic NP_planning NP_analyst	NP_strategic NN_planning NP_analyst
+NP_strategic NP_planning NP_analyst	NP_strategic NP_planning NN_analyst
+NP_strategic NP_planning NP_analyst	NP_strategic NP_planning NP_analysis
+NP_strategic NP_planning NP_analyst	NP_strategic NP_planning NN_analysis
+NP_strategic NP_planning NP_analyst	JJ_strategic NN_planning NP_analyst
+NP_strategic NP_planning NP_analyst	JJ_strategic NP_planning NN_analyst
+NP_strategic NP_planning NP_analyst	JJ_strategic NP_planning NP_analysis
+NP_strategic NP_planning NP_analyst	JJ_strategic NP_planning NN_analysis
+NP_strategic NP_planning NP_analyst	NN_strategy NN_planning NP_analyst
+NP_strategic NP_planning NP_analyst	NN_strategy NP_planning NN_analyst
+NP_strategic NP_planning NP_analyst	NN_strategy NP_planning NP_analysis
+NP_strategic NP_planning NP_analyst	NN_strategy NP_planning NN_analysis
+NP_strategic NP_planning NP_analyst	NP_strategic NN_planning NN_analyst
+NP_strategic NP_planning NP_analyst	NP_strategic NN_planning NP_analysis
+NP_strategic NP_planning NP_analyst	NP_strategic NN_planning NN_analysis
+NP_strategic NP_planning NP_analyst	NP_strategic NP_planning analysis
+NP_strategic NP_planning NP_analyst	JJ_strategic NN_planning NN_analyst
+NP_strategic NP_planning NP_analyst	JJ_strategic NN_planning NP_analysis
+NP_strategic NP_planning NP_analyst	JJ_strategic NN_planning NN_analysis
+NP_strategic NP_planning NP_analyst	JJ_strategic NP_planning analysis
+NP_strategic NP_planning NP_analyst	NN_strategy NN_planning NN_analyst
+NP_strategic NP_planning NP_analyst	NN_strategy NN_planning NP_analysis
+NP_strategic NP_planning NP_analyst	NN_strategy NN_planning NN_analysis
+NP_strategic NP_planning NP_analyst	NN_strategy NP_planning analysis
+NP_strategic NP_planning NP_analyst	NP_strategic NN_planning analysis
+NP_strategic NP_planning NP_analyst	JJ_strategic NN_planning analysis
+NP_strategic NP_planning NP_analyst	NN_strategy NN_planning analysis
+JJ_strategic NN_planning NN_process	NN_strategy NN_planning NN_process
+JJ_strategic NN_planning NN_process	NP_strategic NN_planning NN_process
+JJ_strategic NN_planning NN_process	JJ_strategic NP_planning NN_process
+JJ_strategic NN_planning NN_process	NN_strategy NP_planning NN_process
+JJ_strategic NN_planning NN_process	NP_strategic NP_planning NN_process
+NN_strategy NN_development	JJ_strategic NN_development
+NN_strategy NN_development	NP_strategic NN_development
+NN_strategy NN_development	NN_strategy NP_development
+NN_strategy NN_development	JJ_strategic NP_development
+NN_strategy NN_development	NP_strategic NP_development
+NN_term NN_planning	NN_term NP_planning
+JJ_top NN_management	JJ_top NP_management
+NN_trend NN_analysis	NN_trend analysis
+NN_trend NN_analysis	NN_trend NN_analyst
+NN_trend NN_analysis	NN_trend NP_analyst
+NN_trend NN_analysis	NN_trend NP_analysis
+NN_venture NN_analysis	NN_venture analysis
+NN_venture NN_analysis	NN_venture NN_analyst
+NN_venture NN_analysis	NN_venture NP_analyst
+NN_venture NN_analysis	NN_venture NP_analysis
