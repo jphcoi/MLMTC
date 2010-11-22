@@ -218,7 +218,7 @@ argv = sys.argv
 if len(argv)>1:#print argv
 	parametres_file = '../parameters/' + sys.argv[1] + '.txt'
 else:
-	parametres_file='../parameters/test.txt'
+	parametres_file='../parameters/job.txt'
 print parametres_file
 
 

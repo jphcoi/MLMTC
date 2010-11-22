@@ -270,32 +270,42 @@ def compare_dictionnaire(dist_mat_temp_old,dist_mat_temp):
 		
 dico_termes=build_dico()
 #print dico_termes	
+name_date = str(years_bins[0][0]) + '_' + str(years_bins[0][-1]) + '_'+ str(years_bins[1][0])+ '_'+str(years_bins[-1][-1])
 try:# si on a deja calcule le reseau de proximit
-	
-	p_cooccurrences={}
-	dist_mat={}
-	for inter in range(len(years_bins)):
-		print inter
-		fichier_CF=path_req +'reseau/'+'reseauCF_niv_1_'+dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt'
-		fichier_cooc=path_req +'reseau/'+'reseauCF_niv_cooc__'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt'
-		fichier_gexf = path_req + 'gexf/' + 'reseau_champ_0_'+'_' + dist_type +'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.gexf'		
-		if inter>0:
-			dist_mat_temp_old = deepcopy(dist_mat_temp)
-		dist_mat_temp = lire_dist_mat_file(fichier_CF)
-		p_cooccurrences_temp=lire_dist_mat_file(fichier_cooc)
-		for x,y in dist_mat_temp.iteritems():
-			dist_mat[(int(x[0]),int(x[1]),int(inter))]=y
-		for x,y in p_cooccurrences_temp.iteritems():
-			p_cooccurrences[(int(x[0]),int(x[1]),int(inter))]=y
-		try:
-			os.mkdir(path_req +'gexf')
-		except:
-			pass
-		level={}
-		for x in dico_termes:
-			level[x]=1
-		gexf.gexf_builder(dico_termes,dist_mat_temp,fichier_gexf,level)
-	fonctions.ecrire_dico(dico_termes,dico_termes,dico_termes,1)
+	try:
+		p_cooccurrences = fonctions.dumpingout('p_cooccurrences'+name_date)
+		dist_mat = fonctions.dumpingout('dist_mat'+name_date)
+	except:
+		p_cooccurrences={}
+		dist_mat={}
+		for inter in range(len(years_bins)):
+			print inter
+			fichier_CF=path_req +'reseau/'+'reseauCF_niv_1_'+dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt'
+			fichier_cooc=path_req +'reseau/'+'reseauCF_niv_cooc__'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt'
+			fichier_gexf = path_req + 'gexf/' + 'reseau_champ_0_'+'_' + dist_type +'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.gexf'		
+			if inter>0:
+				dist_mat_temp_old = deepcopy(dist_mat_temp)
+			dist_mat_temp = lire_dist_mat_file(fichier_CF)
+			p_cooccurrences_temp=lire_dist_mat_file(fichier_cooc)
+			for x,y in dist_mat_temp.iteritems():
+				dist_mat[(int(x[0]),int(x[1]),int(inter))]=y
+			for x,y in p_cooccurrences_temp.iteritems():
+				p_cooccurrences[(int(x[0]),int(x[1]),int(inter))]=y
+			try:
+				os.mkdir(path_req +'gexf')
+			except:
+				pass
+			level={}
+			for x in dico_termes:
+				level[x]=1
+			gexf.gexf_builder(dico_termes,dist_mat_temp,fichier_gexf,level)
+			print 'cest fini ou presque'
+		fonctions.ecrire_dico(dico_termes,dico_termes,dico_termes,1)
+		
+		fonctions.dumpingin(p_cooccurrences,'p_cooccurrences'+name_date)
+		fonctions.dumpingin(dist_mat,'dist_mat'+name_date)
+		
+		
 except:# sinon on recalcule du début
 	#contenu = fonctions_bdd.select_bdd_table(name_bdd,'sem','concept1,concept2,jours,id_b',requete)
 	contenu = fonctions_bdd.select_bdd_table(name_bdd,'billets','concepts_id,jours,id',requete)
@@ -307,3 +317,5 @@ except:# sinon on recalcule du début
 	print "matrice de distance construite"
 	fonctions.ecrire_reseau(dist_mat,years_bins,dist_type,seuil,1,dedoubler(dico_termes,years_bins))		 
 	pass
+	
+print 'matrice de cooccurrences et de distance en mémoire'
