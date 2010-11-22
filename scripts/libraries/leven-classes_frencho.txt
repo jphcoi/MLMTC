@@ -12834,3 +12834,38 @@ NO_énergie AD_fossile	NO_carburant AD_fossile
 NO_énergie AD_fossile	NO_hydrocarbure
 NO_énergie AD_fossile	NO_combustible AD_fossile
 ademe	NO_Agence PR_de DE_le NO_environnement KO_et PR_de DE_le NO_ma√Ætrise PR_de DE_le NO_énergie
+NO_nappe PR_de NO_pétrole	NO_nappe PR_de NO_p√©trole
+ministère PR_de DE_le NO_alimentation	minist√®re PR_de DE_le NO_alimentation
+ministère PR_de DE_le NO_alimentation	NO_minist√®re PR_de DE_le NO_alimentation
+NA_etat AD_européen	NA_etat AD_europ√©en
+NA_etat AD_européen	NA_etats AD_europ√©en
+NO_cellule AD_photovoltaïque	NO_cellule AD_photovolta√Øque
+NO_énergie AD_fossile	NO_√©nergie AD_fossile
+NO_médecin AD_nucléaire	médecine AD_nucléaire
+NO_énergie AD_renouvelable	NO_√©nergie AD_renouvelable
+NO_réduction PR_du NO_gaz PR_à NO_effet PR_de NO_serre	VE_réduire DE_son NO_émission
+NO_biologie AD_synthétique	NO_biologie AD_synth√©tique
+NO_médecine AD_vétérinaire	NO_docteur AD_vétérinaire
+NO_médecine AD_vétérinaire	docteur AD_vétérinaire
+NO_banque AD_européen PR_de NO_investissement	NO_banque AD_europ√©en PR_de NO_investissement
+NO_autorité PR_de NO_sûreté AD_nucléaire	NO_autorit√© PR_de NO_s√ªret√© AD_nucl√©aire
+NO_agriculteur AD_biologique	NO_agriculture bio
+NO_agriculteur AD_biologique	agriculture bio
+NO_agriculteur AD_biologique	NO_ferme AD_biologique
+NO_agriculteur AD_biologique	NO_ferme bio
+NO_maladie AD_auto-immun	maladie AD_auto-immun
+NO_maladie AD_auto-immun	maladie NO_auto AD_immun
+véolia	v√©olia
+NO_agriculture AD_français	agriculteurs AD_français
+NO_médecin AD_général	médecine AD_général
+NO_institut AD_national PR_de NO_veille AD_sanitaire	NO_institut PR_de NO_veille AD_sanitaire
+NO_réacteur epr	NO_r√©acteur epr
+NO_cha√Æne AD_alimentaire	NO_chaîne AD_alimentaire
+NO_agriculture AD_breton	agriculteurs AD_breton
+NO_ministre PR_de DE_le ecologie	minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_minist√®re PR_de DE_le economie
+NO_érosion	NO_√©rosion
+AD_éolien NO_marin	AD_√©olien NO_marin
+AD_éolien NO_marin	AD_√©olien NO_offshore
+bisphénol	bisph√©nol
+bisphénol	bisph√©nol A
