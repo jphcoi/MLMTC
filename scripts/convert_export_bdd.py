@@ -23,7 +23,7 @@ subprocess.call(tar_cmd,shell=True)
 
 
 #scp -p cointet@polux.iscpif.fr:Bureau/indexing-tools-v2.7/sorties/export_MESR_20100722.lflsociete174/sauvegarde.gz .
-server = cointet@polux.iscpif.fr
+server = "cointet@polux.iscpif.fr"
 reduced = name_bdd.split('/')[-1]
 scp_cmd = "scp -p " +  name_bdd + '.sql'+ '.gz '  + server + ':/var/lib/mysql/' + reduced + '.sql'+'.gz'
 subprocess.call(scp_cmd,shell=True)
