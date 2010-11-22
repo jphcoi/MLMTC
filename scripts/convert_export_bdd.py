@@ -10,14 +10,16 @@ path_req= parameters.path_req
 #print parameters.name_data_real
 name_bdd =  parameters.name_bdd
 dump_cmd = "sqlite3 "+name_bdd+" .dump > "+name_bdd + '.sql'
+print dump_cmd
 subprocess.call(dump_cmd,shell=True)
 cat_cmd = "cat " + name_bdd + '.sql' + " | sed -e '" + 's/"//' + "g' > " + path_req +  "MysqlDump.sql.temp" 
+print cat_cmd
 subprocess.call(cat_cmd,shell=True)
 mov_cmd = "mv " + path_req +  "MysqlDump.sql.temp "  +  name_bdd + '.sql'
-#print mov_cmd
+print mov_cmd
 subprocess.call(mov_cmd,shell=True)
 tar_cmd = "gzip  "+name_bdd + '.sql'+ '.gz ' +  name_bdd + '.sql'
-#print tar_cmd
+print tar_cmd
 subprocess.call(tar_cmd,shell=True)
 #tar -czvf sauvegarde.gz sauvegarde.sql
 
@@ -26,6 +28,7 @@ subprocess.call(tar_cmd,shell=True)
 server = "cointet@polux.iscpif.fr"
 reduced = name_bdd.split('/')[-1]
 scp_cmd = "scp -p " +  name_bdd + '.sql'+ '.gz '  + server + ':/var/lib/mysql/' + reduced + '.sql'+'.gz'
+print scp_cmd
 subprocess.call(scp_cmd,shell=True)
 
 # ssh_con = "ssh " + parameters.server
