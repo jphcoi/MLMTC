@@ -12,7 +12,7 @@ sys.path.append("../scripts")
 sys.path.append("../install/lib/python") 
 import os
 import parameters
-from hcluster import pdist, linkage, dendrogram,centroid,weighted
+from hcluster import pdist, linkage, dendrogram,centroid,weighted,ward,linkage,complete
 import numpy
 import fonctions
 from numpy.random import rand
@@ -30,6 +30,7 @@ path_req=parameters.path_req
 name_data_real=parameters.name_data_real
 timelimit='1'
 
+
 dist_type=parameters.dist_type
 
 # on peut définir des méthode globales aussi pour toutes les classes.
@@ -44,13 +45,12 @@ def score_compute(type_score,champ,dist_mat,terme,inter):
 	interu=unique(inter)
 	if type_score=='combine':
 		for voisin in champ:
-			for inte in interu:
+			for inte in interu:			
 				multi_inter = inter.count(inte)
 				din,dout=0,0
 				if terme==voisin:
 					din,dout=1,1
 				else:
-				
 					din=float(dist_mat.get((terme,voisin,inte),0.))
 					dout=float(dist_mat.get((voisin,terme,inte),0.))
 				try:
@@ -61,7 +61,10 @@ def score_compute(type_score,champ,dist_mat,terme,inter):
 	
 	
 def label(champ,dist_mat,inter,nb_label,champs=[]):
+	#attention aux champs trop gros!!!!!
 	nb_termes_chp = len(champ)
+	if nb_termes_chp>500:
+		print 'WARNING ' + str(nb_termes_chp) + ' termes, calcul du label long...'
 	score=[]
 	#etape 2, on calcule les statistiques du nombre d'apparition des termes dans les champs
 	termes=[]
@@ -70,7 +73,8 @@ def label(champ,dist_mat,inter,nb_label,champs=[]):
 	##for ch in champs:
 	##	for ter in ch:
 	##		termes.append(ter)
-	#print champ
+	#print len(champ)
+
 	for terme in champ:
 		#print terme
 		#version complexe du calcul qui nécessite un décompte précis de la fréquence de présence du terme dans son champ et dans tous les champs, pb, ça change le label en fonction de l'ensemble des champs => on simplifie donc
@@ -262,6 +266,12 @@ def hierarchical_clustering(nets,dico,dist_mat):
 			for champ2 in champs_liste[ii+1:]:
 					dist_tot.append(float(1.-champs_dist.get((champ1,champ2),0.)))			
 		Z = weighted(dist_tot)
+		print '**************'
+		#print '**************'
+		#print '**************'
+		#dd = dendrogram(Z)
+		#matplotlib.pyplot.show()
+		
 		N=len(champs_liste)-1
 		res_niv_0= Network(champs_liste,champs_dist) 
 		multi_level_dyn_net[(inter,0)] = Network(champs_liste[:],champs_dist) 
@@ -323,15 +333,15 @@ def hierarchical_clustering(nets,dico,dist_mat):
 def build_zoom_log(resolution):
 	loupe = range(resolution)
 	zoom = []
-	for grade in loupe:
-		zoom.append((float(grade)/float(resolution))*(float(grade)/float(resolution)))
+	for grade in loupe[:]:
+		zoom.append(0.05+(float(grade)/float(resolution))*(float(grade)/float(resolution)))
 	return zoom
 	
 def build_zoom(resolution):
 	loupe = range(resolution)
 	zoom = []
-	for grade in loupe:
-		zoom.append(float(grade)/float(resolution))
+	for grade in loupe[:]:
+		zoom.append(0.8 + 2.* float(grade)/float(resolution)/float(resolution))
 	return zoom
 
 def nearest_zoom(fusion_level,zoom):
@@ -566,12 +576,13 @@ def build_tubes(multi_level_dyn_net,resolution_niveau,resolution_continuite,seui
 	dyn_net_zoom=build_dynnet(zoom_niveau,multi_level_dyn_net)
 	zoom_continuite = build_zoom_log(resolution_continuite)
 	tubes={}
+	print zoom_continuite
 	for seuil_intertemp in zoom_continuite:
-		# for zoo,dyn_net in dyn_net_zoom.iteritems():
-		# 	print 'niveau: '+str(zoo)
-		# 	for dyn,net in  dyn_net.iteritems():
-		# 		print '\tperiode ' + str(dyn)+ ', ' + str(net)
-		# print '\n'
+		for zoo,dyn_net in dyn_net_zoom.iteritems():
+			print 'niveau: '+str(zoo)
+			for dyn,net in  dyn_net.iteritems():
+				print '\tperiode ' + str(dyn)+ ', ' + str(net)
+			print '\n'
 
 		type_dist_inter = 'prox'
 		type_dist_inter = 'jaccard'
@@ -590,14 +601,22 @@ def build_tubes(multi_level_dyn_net,resolution_niveau,resolution_continuite,seui
 				termes_ids = []
 				inter = []
 				for ch in chps_liste:
-					termes_ids = termes_ids + map(Terme.get_index,ch.termes.liste_termes)
+					#termes_ids obtenu à partir de la liste intégrale des termes dans les champs 
+					#termes_ids = termes_ids + map(Terme.get_index,ch.termes.liste_termes)
+					######
+					###### ATTENTION
+					######
+					#termes_ids obtenu à partir de la liste des labels des champs 
+					termes_ids = termes_ids + map(Terme.get_index,ch.label.liste_termes)
+					#print termes_ids
 					inter.append(ch.periode)
 					#inter est ici une liste de périodes éventuellement redondantes (de sorte de pondérer les distances lors du calcul des lables par ex)...
 				niveau = [-1]
 				label_tube,rebut = obtain_label(termes_ids,inter,dico,dist_mat)
 				Liste_termes.afficher_liste_termes(label_tube)
 				tube = Tube(chps_liste,label_tube)
-				print Tube.print_elements(tube)
+				#print affichage du tube:
+				#print Tube.print_elements(tube)
 				tube_liste.append(tube)
 			tube_liste_zoo[zoo] = tube_liste
 		tubes[seuil_intertemp] = tube_liste_zoo
@@ -630,6 +649,7 @@ def get_tubes(resolution_niveau = 4,seuil_netermes=  0.5,resolution_continuite =
 		dist_mat = fonctions.dumpingout(param_txt+'dist_mat')
 		dico = fonctions.dumpingout(param_txt+'dico')
 		tubes = fonctions.dumpingout(param_txt+'tubes')
+		#chelou
 		dyn_net_zoom = fonctions.dumpingin(dyn_net_zoom,param_txt+'dyn_net_zoom')
 	
 

@@ -129,6 +129,7 @@ def parser_CFinder(niveau):
 
 def tri_comm(communities,taillemin, taillemax, kmin):
 	champs={}
+	card_champs_pot ={}
 	card_taillemin={}
 	card_taillemax={}
 	card_kmin={}
@@ -145,8 +146,11 @@ def tri_comm(communities,taillemin, taillemax, kmin):
 			card_kmin[inter] = 0  
 		if not inter in card_chpsok:
 			card_chpsok[inter] = 0  
+		if not inter in card_champs_pot:
+			card_champs_pot[inter] = 0  
 				
 		for candidat in y:
+			card_champs_pot[inter]=card_champs_pot[inter]+1
 			if len(candidat)>=taillemin and len(candidat)<=taillemax and int(x[1])>=kmin:
 				candidats.append(candidat)
 				card_chpsok[inter]=card_chpsok[inter]+1
@@ -163,7 +167,8 @@ def tri_comm(communities,taillemin, taillemax, kmin):
 			champs[x]=candidats
 	for inter in card_kmin:
 		chaine.append('***'  + " periode: " + str(inter))
-		chaine.append('*** sur '  + str(card_chpsok[inter]) +' cluster(s) selectionne(s) ')
+		chaine.append('*** sur '  + str(card_champs_pot[inter]) +' cluster(s) potentiel(s) ')
+		chaine.append('*** sur '  + str(card_chpsok[inter]) +' cluster(s) selectionne(s) avant overlap ')
 		chaine.append('*** ôté(s) de '  + str(card_kmin[inter]) +' cluster(s) exclu(s) car de k inférieur à ' + str(kmin))
 		chaine.append('*** ôté(s) de '  + str(card_taillemin[inter]) +' cluster(s) exclu(s) car de taille inférieure à  ' + str(taillemin))
 		chaine.append('*** ôté(s) de '  + str(card_taillemax[inter]) +' cluster(s) exclu(s) car de taille supérieure à  ' + str(taillemax))

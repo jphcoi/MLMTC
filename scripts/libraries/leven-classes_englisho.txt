@@ -1710,3 +1710,78 @@ NN_venture NN_analysis	NN_venture analysis
 NN_venture NN_analysis	NN_venture NN_analyst
 NN_venture NN_analysis	NN_venture NP_analyst
 NN_venture NN_analysis	NN_venture NP_analysis
+NN_accounting	NN_accountant
+NN_administration	JJ_administrative
+NN_analysis	JJ_analytical
+NP_budget	NN_budget
+NP_budget	NN_budgeting
+NN_business NN_plan	NN_business NN_planner
+NN_business NN_plan	NP_business planner
+NN_business NN_plan	NN_business planner
+NN_business NN_plan	NP_business NN_planner
+NN_business NN_plan	NN_business NN_planning
+NN_business NN_plan	NP_business NP_planning
+NN_business NN_plan	NN_business NP_planning
+NN_business NN_plan	NP_business NN_planning
+NN_business NN_plan	NN_business VV_plan
+NN_business NN_plan	NP_business VV_plan
+NN_consultant	NN_consulting
+NN_controller	NN_control
+NN_director	NN_direction
+NN_division	JJ_divisional
+NN_duty MD_will VV_include	NN_duty VV_include JJ_long NN_range NN_planning
+NN_duty MD_will VV_include	duties VV_include JJ_long NN_range NN_planning
+NN_duty MD_will VV_include	NN_duty VV_include NP_long NN_range NN_planning
+NN_duty MD_will VV_include	NN_duty VV_include JJ_long NN_range NP_planning
+NN_duty MD_will VV_include	duties VV_include NP_long NN_range NN_planning
+NN_duty MD_will VV_include	duties VV_include JJ_long NN_range NP_planning
+NN_duty MD_will VV_include	NN_duty VV_include NP_long NN_range NP_planning
+NN_duty MD_will VV_include	duties VV_include NP_long NN_range NP_planning
+JJ_financial NN_modeling	NP_financial VV_model
+NP_financial planner	JJ_financial NN_planning
+NP_financial planner	NP_financial NP_planning
+NP_financial planner	JJ_financial NP_planning
+NP_financial planner	NP_financial NN_planning
+NN_forecasting	NN_forecast
+JJ_long CC_and JJ_short NN_range	JJ_long CC_and JJ_short NN_range NN_planning
+JJ_long CC_and JJ_short NN_range	NP_long CC_and JJ_short NN_range NN_planning
+JJ_long CC_and JJ_short NN_range	JJ_long CC_and JJ_short NN_range NP_planning
+JJ_long CC_and JJ_short NN_range	NP_long CC_and JJ_short NN_range NP_planning
+JJ_long NN_range NN_plan	JJ_long NN_range
+JJ_long NN_range NN_plan	NP_long NP_range
+JJ_long NN_range NN_plan	JJ_long-range
+JJ_long NN_range NN_plan	JJ_long NP_range
+JJ_long NN_range NN_plan	NP_long NN_range
+JJ_long NN_range NN_plan	JJ_long NN_range NN_planning
+JJ_long NN_range NN_plan	JJ_long-range NN_planning
+JJ_long NN_range NN_plan	NP_long NP_range NP_planning
+JJ_long NN_range NN_plan	JJ_long-range NP_planning
+JJ_long NN_range NN_plan	JJ_long NP_range NP_planning
+JJ_long NN_range NN_plan	NP_long NP_range NN_planning
+JJ_long NN_range NN_plan	JJ_long NP_range NN_planning
+JJ_long NN_range NN_plan	NP_long NN_range NN_planning
+JJ_long NN_range NN_plan	JJ_long NN_range NP_planning
+JJ_long NN_range NN_plan	NP_long NN_range NP_planning
+VV_operate NN_plan	JJ_operational NN_planning
+VV_operate NN_plan	JJ_operational NP_planning
+NP_planning NN_analyst	VV_plan NP_analyst
+NP_planning NN_analyst	VV_plan NP_analysis
+NP_planning NN_analyst	VV_plan NN_analysis
+NP_planning NN_analyst	VV_plan analysis
+NN_profit NN_planning	NN_profit NN_plan
+NN_plan	NP_planning
+NN_plan	VV_plan
+NN_plan	NN_planning
+NN_report	NN_reporting
+NN_responsibility	JJ_responsible
+NN_responsibility	responsible
+short-long NN_range	JJ_short CC_and JJ_long NN_range
+short-long NN_range	JJ_short CC_and JJ_long-range
+short-long NN_range	JJ_short CC_and NP_long NN_range
+short-long NN_range	JJ_short CC_and JJ_long NP_range
+short-long NN_range	JJ_short CC_and NP_long NP_range
+JJ_short NN_term	JJ_short NN_term
+JJ_strategic NN_planning	NN_strategy VV_plan
+JJ_strategic NN_planning	NP_strategic VV_plan
+JJ_technical	NN_technique
+NP_vice NP_president	NP_vp
