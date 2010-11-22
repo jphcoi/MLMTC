@@ -12834,6 +12834,7 @@ NO_énergie AD_fossile	NO_carburant AD_fossile
 NO_énergie AD_fossile	NO_hydrocarbure
 NO_énergie AD_fossile	NO_combustible AD_fossile
 ademe	NO_Agence PR_de DE_le NO_environnement KO_et PR_de DE_le NO_ma√Ætrise PR_de DE_le NO_énergie
+<<<<<<< HEAD
 NO_nappe PR_de NO_pétrole	NO_nappe PR_de NO_p√©trole
 ministère PR_de DE_le NO_alimentation	minist√®re PR_de DE_le NO_alimentation
 ministère PR_de DE_le NO_alimentation	NO_minist√®re PR_de DE_le NO_alimentation
@@ -12869,3 +12870,42 @@ AD_éolien NO_marin	AD_√©olien NO_marin
 AD_éolien NO_marin	AD_√©olien NO_offshore
 bisphénol	bisph√©nol
 bisphénol	bisph√©nol A
+=======
+NO_année PR_de DE_le	NO_année PR_de l
+NO_an AD_lors PR_de DE_le	NO_an AD_lors PR_de l
+NO_an AD_lors PR_de DE_le	NO_an AD_DE_leors PR_de DE_le
+NO_avocat PR_dans DE_le NO_procès AD_pénal	NO_avocat PR_dans l NO_procès AD_pénal
+NO_avocat PR_dans DE_le NO_procès AD_pénal	NO_avocat PR_dans DE_le NO_procès AD_pénaDE_le
+canyon national park	canyon AD_national park
+canyon national park	canyon nationale park
+NO_côté PR_de DE_le	NO_côté PR_de l
+VE_être AD_aussi DE_le NO_année	VE_être AD_aussi l NO_année
+NO_expert KO_et DE_le NO_avocat	NO_expert KO_et l NO_avocat
+NO_ministère PR_de DE_le NO_justice	ministre PR_de DE_le NO_justice
+NO_ministère PR_de DE_le NO_justice	NO_ministre PR_de DE_le justice
+NO_ministère PR_de DE_le NO_justice	ministère PR_de DE_le NO_justice
+NO_ministère PR_de DE_le NO_justice	NO_ministère PR_de DE_le justice
+NO_ministère PR_de DE_le NO_justice	ministres PR_de DE_le NO_justice
+NO_ministère PR_de DE_le NO_justice	ministre PR_de DE_le justice
+NO_ministère PR_de DE_le NO_justice	ministère PR_de DE_le justice
+NO_ministère PR_de DE_le NO_justice	ministres PR_de DE_le justice
+NO_ministère PR_de DE_le NO_justice	NO_ministre PR_de l NO_justice
+NO_ministère PR_de DE_le NO_justice	ministre PR_de l NO_justice
+NO_ministère PR_de DE_le NO_justice	NO_ministre PR_de l justice
+NO_ministère PR_de DE_le NO_justice	ministère PR_de l NO_justice
+NO_ministère PR_de DE_le NO_justice	NO_ministère PR_de l justice
+NO_ministère PR_de DE_le NO_justice	ministres PR_de l NO_justice
+NO_ministère PR_de DE_le NO_justice	ministre PR_de l justice
+NO_ministère PR_de DE_le NO_justice	ministère PR_de l justice
+NO_ministère PR_de DE_le NO_justice	ministres PR_de l justice
+NO_ministère PR_de DE_le NO_justice	NO_ministère PR_de l NO_justice
+national park	AD_national park
+national park	nationale park
+NO_partie KO_que DE_le	NO_partie PR_que DE_le
+NO_partie KO_que DE_le	NO_partie KO_que l
+NO_partie KO_que DE_le	NO_partie PR_que l
+NO_rien PR_pour DE_le NO_instant	NO_rien PR_pour l NO_instant
+NO_récusation PR_de DE_le NO_expert	NO_récusation PR_de l NO_expert
+NO_réforme PR_du NO_droit	réforme PR_du NO_droit
+VE_sauver PR_du NO_vie	VE_sauver PR_du vie
+>>>>>>> 4b0158f5fb8c70e544b55ac59c91f50139d7eb1f

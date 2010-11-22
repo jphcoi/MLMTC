@@ -350,7 +350,6 @@ except:
 #	print "      + en calculant le dictionnaire des lemmes"
 
 
-#print "    - \"parameters.py\" initialise.\n"
 
 
 sep = ' *** '
@@ -360,3 +359,7 @@ if nofigure==1:
 		char_int.append(str(i))
 #print char_int
 
+print "    - \"parameters.py\" initialise.\n"
+#for name in dir():
+	#print name 
+	#exec("print "+name)
