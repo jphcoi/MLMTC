@@ -11901,7 +11901,6 @@ NO_agriculteur AD_biologique	NO_agriculteur bio
 NO_agriculteur AD_biologique	agriculteur bio
 NO_agriculture AD_biologique	NO_agriculture bio
 NO_agriculture AD_biologique	agriculture bio
-alzheimer	NO_maladie PR_de alzheimer
 anrs	NO_Agence AD_Nationale PR_de NO_Recherche PR_sur DE_le NO_sida KO_et DE_le NO_hépatites
 NO_arme AD_biologique	NO_armement AD_biologique
 NO_association PR_de NO_protection PR_de DE_le NO_environnement	association PR_de NO_protection PR_de DE_le NO_environnement
