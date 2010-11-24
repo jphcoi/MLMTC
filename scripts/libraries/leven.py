@@ -181,12 +181,12 @@ def pack_leven(fichier,fichier_out,language,user_interface,freqmin):
 			#on commence par alimenter les equivalences par celles qui ont été enregistrées dans le passé
 			try:
 				classe_history = recursive_eq(xl,equivalences_leven)
-				print classe_history
+				#print classe_history
 				# et on etend avec deja_uni 
 			except:
 				classe_history= []
 			print 'ici'
-			print classe_history
+			#print classe_history
 			print deja_uni_couple
 			print deja_uni
 			print xl
