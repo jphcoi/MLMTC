@@ -12518,7 +12518,6 @@ NO_sant√© AD_mental	sant√© AD_mental
 NO_agence AD_oc√©anique	agence AD_oc√©anique
 NO_environnement KO_et DE_le NO_sant√©	NO_environnement KO_et PR_de DE_le NO_sant√©
 NO_environnement KO_et DE_le NO_sant√©	NO_environnement KO_et PR_√† DE_le NO_sant√©
-bisph√©nol	bisph√©nol A
 bisph√©nol	bpa
 NO_cons√©quence AD_d√©sastreux	NO_cons√©quence AD_d√©vastateur
 NO_cons√©quence AD_d√©sastreux	NO_cons√©quence AD_grave
