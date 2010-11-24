@@ -3150,7 +3150,6 @@ NO_faune KO_et DE_le NO_flore	NO_faune KO_et NO_flore
 NO_garde-côte AD_américain	gardes-côtes AD_américain
 NO_gène	NO_génome
 grenelle 1	grenelle NU_i
-VE_greneler PR_de DE_le NO_environnement	grenelle
 grenelle NU_ii	grenelle 2
 NO_impact AD_environnemental	NO_impact PR_sur DE_le NO_environnement
 NO_indemnisation PR_du NO_victime	VE_indemniser DE_le NO_victime
@@ -11760,8 +11759,6 @@ AD_benoît	NA_benoît
 AD_bien NO_commun	NO_bien AD_commun
 NO_biologie AD_marin	NO_biologiste AD_marin
 AD_bon NA_français	NO_bon AD_français
-grenelle	grenelle PR_de DE_le NO_environnement
-grenelle	grenelle PR_de DE_le environnement
 oms	NO_organisation AD_mondial PR_de DE_le santé
 NO_ministre PR_de DE_le ecologie	NO_ministère PR_de DE_le economie
 NO_ministre PR_de DE_le ecologie	ministre PR_de DE_le economie
@@ -11835,8 +11832,6 @@ exxon	exxonmobil
 VE_fondre AD_structurel NO_européen	fonds AD_structurel européens
 NO_gouvernement NA_français	NO_gouvernement AD_français
 NO_gouvernement NA_français	gouvernement AD_français
-grenelle	grenelle PR_de DE_le NO_environnement
-grenelle	grenelle PR_de DE_le environnement
 NO_groupe AD_agro-alimentaire	NO_groupe AD_agroalimentaire
 NO_groupe AD_agro-alimentaire	groupe AD_agroalimentaire
 NO_institut AD_national PR_de NO_veille AD_sanitaire	NO_institut PR_de veille sanitaire*invs
