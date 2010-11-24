@@ -11909,7 +11909,6 @@ NO_autorité PR_de NO_sûreté AD_nucléaire	asn
 NO_banque AD_européen PR_de NO_investissement	bei
 NO_biologie AD_synthétique	NO_biologie PR_de NO_synthèse
 NO_biotechnologie	biotech
-bisphénol	bisphénol A
 bisphénol	bpa
 cac40	cac 40
 NA_cécile duflot	NA_cécile NA_duflot
