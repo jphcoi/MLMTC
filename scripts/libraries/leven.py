@@ -181,11 +181,17 @@ def pack_leven(fichier,fichier_out,language,user_interface,freqmin):
 			#on commence par alimenter les equivalences par celles qui ont été enregistrées dans le passé
 			try:
 				classe_history = recursive_eq(xl,equivalences_leven)
-				#print classe_history
+				print classe_history
 				# et on etend avec deja_uni 
 			except:
 				classe_history= []
+			print 'ici'
+			print classe_history
+			print deja_uni_couple
+			print deja_uni
+			print xl
 			classe_history = extension_uni(classe_history,deja_uni_couple,deja_uni,xl)
+			
 			classe_history_sharp = []
 			for machins in classe_history:
 				if not machins in classe_history_sharp and not machins==xl:
@@ -198,7 +204,8 @@ def pack_leven(fichier,fichier_out,language,user_interface,freqmin):
 			#	print xl,x,classe_history,numero
 			#	print x[0:1].lower()
 			#puis on regarde dans la nouvelle liste s'il y a de nouveaux candidats au poste.
-			#print classe_history
+			print "classe_history"
+			print classe_history
 			for (y,yl) in zip(formes[numero+1:],lemmes[numero+1:]):
 					j=j+1 
 					first_x = x[0:1].lower()
