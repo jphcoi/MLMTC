@@ -122,7 +122,7 @@ def extension_uni(classe_history,deja_uni_couple,deja_uni,xl):
 		for item in x_v:#on itere sur chaque terme des elements de la classe
 			print 'item'
 			print item
-			if item in deja_uni:#on verifie si les termes ont des equivalents deja enregistres 
+			if item in deja_uni:#on verifie si les termes ont des equivalents deja enregistres
 				for item_cl in deja_uni_couple[item]:#on itere parmi tous les equivalents des termes
 					prop = x.replace(item,item_cl)# on remplace un peu brutalement sur la chaine de caractere directement...
 					if not prop in classe_history:
