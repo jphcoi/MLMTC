@@ -11987,7 +11987,6 @@ NO_dystonie	dystonie
 NO_trouble AD_mental	NO_trouble AD_psychiatrique
 NO_trouble AD_mental	NO_trouble AD_psychique
 NO_trouble AD_mental	NO_trouble AD_psychologique
-NO_arme AD_biologique	
 inserm	NO_institut AD_national PR_de DE_le NO_santé KO_et PR_de DE_le NO_recherche
 inserm	NO_institut national PR_de DE_le NO_santé KO_et PR_de DE_le NO_recherche
 inserm	NO_institut AD_national PR_de DE_le santé KO_et PR_de DE_le NO_recherche
