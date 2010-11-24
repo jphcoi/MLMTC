@@ -168,6 +168,7 @@ def pack_leven(fichier,fichier_out,language,user_interface,freqmin):
 		occ.append(vect[2])
 	numero=-1
 	for (x,xl) in zip(formes,lemmes):
+		print x, xl
 		numero=numero+1
 		equiv = []
 		if xl not in colles:
