@@ -401,8 +401,8 @@ def indexer_billet(contenu,ngrammes,maxTermLength,include):
 							orig = billet_brutv[pas:pas+ngraz1_long]	
 							orig_c = billet_brutv[pas:pas+ngraz1_long]
 							orig = ' '.join(orig)
-							orig_c[0]='<b>'+orig_c[0]
-							orig_c[-1]= orig_c[-1]+'</b>'
+							#orig_c[0]='<b>'+orig_c[0]
+							#orig_c[-1]= orig_c[-1]+'</b>'
 							billet_brutv_copie = billet_brutv_copie[:pas] + orig_c +  billet_brutv_copie[pas+ngraz1_long:]
 							if include==1:
 								billet_lemmatise=billet_lemmatise[:idx] + ' '+ billet_lemmatise[idx+longueur:] 

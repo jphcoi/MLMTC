@@ -184,7 +184,7 @@ def pack_leven(fichier,fichier_out,language,user_interface,freqmin):
 		occ.append(vect[2])
 	numero=-1
 	for (x,xl) in zip(formes,lemmes):
-		print x, xl
+		#print x, xl
 		numero=numero+1
 		equiv = []
 		if xl not in colles:
@@ -201,7 +201,7 @@ def pack_leven(fichier,fichier_out,language,user_interface,freqmin):
 				# et on etend avec deja_uni 
 			except:
 				classe_history= []
-			print 'ici'
+			#print 'ici'
 			#print classe_history
 			#print deja_uni_couple
 			#print deja_uni
@@ -221,7 +221,7 @@ def pack_leven(fichier,fichier_out,language,user_interface,freqmin):
 			#	print x[0:1].lower()
 			#puis on regarde dans la nouvelle liste s'il y a de nouveaux candidats au poste.
 			#print "classe_history"
-			#print classe_history
+			print classe_history
 			for (y,yl) in zip(formes[numero+1:],lemmes[numero+1:]):
 					j=j+1 
 					first_x = x[0:1].lower()
