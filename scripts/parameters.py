@@ -5,7 +5,7 @@ import sys,os
 sys.path.append("./libraries")
 import fonctions_lib
 import sqlite3
-
+server = "root@veilledynamique.com"
 def vectoriser(chaine):
 	chaine = chaine[1:-1]
 	return map(int,chaine.split(','))

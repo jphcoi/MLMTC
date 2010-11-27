@@ -1785,3 +1785,34 @@ JJ_strategic NN_planning	NN_strategy VV_plan
 JJ_strategic NN_planning	NP_strategic VV_plan
 JJ_technical	NN_technique
 NP_vice NP_president	NP_vp
+JJ_active	NN_activity
+NN_addition	JJ_additional
+NN_allergen	allergenicity
+NN_animal	JJ_animal
+NN_contaminant	NN_contamination
+NN_development	JJ_developmental
+NN_diet	JJ_dietary
+NN_difference	JJ_different
+JJ_effective	NN_efficacy
+JJ_effective	NN_efficiency
+JJ_environmental	NN_environment
+NN_experiment	JJ_experimental
+NN_feed	NN_feeding
+JJ_female	NN_female
+JJ_high NN_concentration	JJ_high NN_dose
+JJ_high NN_concentration	NN_high-dose
+JJ_human	NN_human
+JJ_industrial	NN_industry
+NN_inhibition	NN_inhibitor
+NN_modification	JJ_modified
+JJ_molecular	NN_molecule
+NN_regulation	JJ_regulatory
+NN_safety	JJ_safe
+NN_sensitivity	JJ_sensitive
+JJ_substantial NN_equivalence	NN_substance NN_equivalence
+NN_synthesis	JJ_synthetic
+NN_test	NN_testing
+JJ_therapeutic	NN_therapy
+NN_toxicology	JJ_toxicological
+vitro	JJ_vitro
+JJ_vivo	vivo

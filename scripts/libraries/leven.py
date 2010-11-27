@@ -109,7 +109,7 @@ def recursive_eq(couple,equivalences_leven):
 	for x in classe_history:
 			new = equivalences_leven[x]
 			for ne in new:
-				if not ne in classe_history and not ne==couple:
+				if not ne in classe_history and not ne==couple and not(map(check_include_more(ne,classe_history))):
 					classe_history.append(ne)		
 	return classe_history
 	
@@ -125,12 +125,13 @@ def extension_uni(classe_history,deja_uni_couple,deja_uni,xl):
 			if item in deja_uni:#on verifie si les termes ont des equivalents deja enregistres
 				for item_cl in deja_uni_couple[item]:#on itere parmi tous les equivalents des termes
 					prop = x.replace(item,item_cl)# on remplace un peu brutalement sur la chaine de caractere directement...
-					clno = 0
-					for cl_hi in classe_history:
-						for cl_his in cl_hi.split(' '):
-							if  prop == cl_his:
-								clno=1
-					if clno ==0:
+					#clno = 0
+					#for cl_hi in classe_history:
+					#	for cl_his in cl_hi.split(' '):
+					#		if  prop == cl_his:
+					#			clno=1
+					#if clno ==0:
+					if not prop in classe_history and not(map(check_include_more(prop,classe_history))):
 						classe_history.append(prop) 
 	return classe_history
 	
