@@ -220,8 +220,8 @@ def pack_leven(fichier,fichier_out,language,user_interface,freqmin):
 			#	print xl,x,classe_history,numero
 			#	print x[0:1].lower()
 			#puis on regarde dans la nouvelle liste s'il y a de nouveaux candidats au poste.
-			print "classe_history"
-			print classe_history
+			#print "classe_history"
+			#print classe_history
 			for (y,yl) in zip(formes[numero+1:],lemmes[numero+1:]):
 					j=j+1 
 					first_x = x[0:1].lower()
@@ -372,7 +372,7 @@ def pack_leven(fichier,fichier_out,language,user_interface,freqmin):
 				clause=0
 			if result_ens <= nlem_cl:
 				idx = result_ensembles.index(result_ens)
-				del ensembles[idx]
+				del result_ensembles[idx]
 				del resultats_propres[idx]
 		if clause==1:
 			result_ensembles.append(nlem_cl)

@@ -1,0 +1,8 @@
+NP_executive	NN_executive
+NP_financial NP_analysis	JJ_financial NN_analyst
+NP_financial NN_analyst	NP_financial NP_analyst
+JJ_senior NP_financial NP_analyst	NP_senior NP_financial NP_analyst
+NP_executive	NN_executive
+NP_financial NP_analysis	JJ_financial NN_analyst
+NP_financial NN_analyst	NP_financial NP_analyst
+JJ_senior NP_financial NP_analyst	NP_senior NP_financial NP_analyst
