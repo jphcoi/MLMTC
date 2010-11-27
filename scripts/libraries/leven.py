@@ -109,7 +109,10 @@ def recursive_eq(couple,equivalences_leven):
 	for x in classe_history:
 			new = equivalences_leven[x]
 			for ne in new:
-				if not ne in classe_history and not ne==couple and not(map(check_include_more(ne,classe_history))):
+				ne_v=[]
+				for j in classe_history:
+					ne_v.append(ne)
+				if not ne in classe_history and not ne==couple and not(map(check_include_more,ne_v,classe_history)):
 					classe_history.append(ne)		
 	return classe_history
 	
@@ -131,7 +134,10 @@ def extension_uni(classe_history,deja_uni_couple,deja_uni,xl):
 					#		if  prop == cl_his:
 					#			clno=1
 					#if clno ==0:
-					if not prop in classe_history and not(map(check_include_more(prop,classe_history))):
+					prop_v=[]
+					for j in classe_history:
+						prop_v.append(prop)
+					if not prop in classe_history and not(map(check_include_more,prop_v,classe_history)):
 						classe_history.append(prop) 
 	return classe_history
 	
