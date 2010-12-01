@@ -57,7 +57,7 @@ def find_sub(dico_pre_trie,elem):
 	sortie=''
 	for el in dico_pre_trie:
 		el_s = set(el.split('***'))
-		if el_s <= elem_s:
+		if el_s <= elem_s or elem_s <=el_s:
 			#print str(el_s) + '\t' + str(elem_s)
 			if dico_pre_trie[el]=='x' or dico_pre_trie[el]=='w':
 				 sortie= dico_pre_trie[el]
@@ -81,7 +81,7 @@ try:
 	print 'on importe le fichier des scores de xhi2 ' + filename_xhi2
 	dico_xhi2 = lire_pretrie(filename_xhi2,4)
 except:
-	print 'pas de fichier de concepts pre-tries ' +filename_pre_trie
+	print 'pas de fichier de scores de xhi2 ' +filename_xhi2
 	dico_xhi2 ={}
 
 
