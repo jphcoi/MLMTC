@@ -73,7 +73,7 @@ def notinterditfin(language,tag):
 		else:
 			return True
 	if language=='french':
-		if tag in ['VE','PR','KO']:
+		if tag in ['VE','PR','KO','DE']:
 			return False
 		else:
 			return True
