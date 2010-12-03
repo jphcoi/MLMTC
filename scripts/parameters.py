@@ -73,100 +73,11 @@ def build_years_bins(fenetre,dated,datef,overlap):
 	for bins in years_bins:
 		if len(bins)>0:
 			year_bins.append(bins)
+	#print year_bins
 	return year_bins
 	
 print "--- initialisation de \"parameters.py\"..."
 
-# date_depart = date(2009,7,1)
-# lemmadictionary = 0# si nul, on  calcule ou recalcule  le dico de lemmes sur la requete consideree sinon on ne calcule pas
-# #name_data = "../data/environnement/environnement-20090706-20091003.txt"
-# #name_data = "../data/sante/sante.txt"
-# #language = 'french'
-# #name_data = "../data/divers/divers.html"
-# #language = 'french'
-# #name_data = "../data/environnement/environnement-20090706-20091003-light.txt"
-# #language = 'french'
-# #name_data =  "../data/jean/jean.html"
-# #language = 'french'
-# #name_data =  "../data/sante-env/sante-env.html"
-# name_data,language,date_depart =  "../data/medline/cyto_25.med",'english',date(1970,1,1)
-# #name_data =  "../data/FET/exemple.fet"
-# name_data,language,date_depart =  "../data/jecfa/jecfa.medline.traite.med",'english',date(1970,1,1)
-# name_data,language,date_depart =  "../data/AIDS/pubmed_AIDS_10_format_original.fet",'english',date(1970,1,1)
-# name_data,language,date_depart =  "../data/sante-env/sante-env-sept-nov.html",'french',date(2009,8,1)
-# name_data,language,date_depart =  "../data/santeORenvironnemnt/santeORenv.txt",'french',date(2009,8,1)
-# #name_data,language,date_depart =  "../data/RTGI-light/xac.xml",'french',date(2009,7,1)#regler le path du treetagger
-# #name_data,language,date_depart =  "../data/divers/divers.html",'french',date(2009,7,1)#regler le path du treetagger
-# #name_data,language,date_depart =  "../data/jean/jean.html",'french',date(2009,8,1)
-# #name_data,language,date_depart =  "../data/RTGI-light/xaa.xml",'french',date(2009,8,1)
-# name_data,language,date_depart,freqmin =  "../data/Biofuel2009/biofuel.isi",'english',date(1970,1,1),15
-# years_bins=[[1990,1991,1992,1993,1994,1990,1995,1996,1997,1998,1999,2000],[2001,2002,2003,2004,2005],[2006,2007,2008],[2009,2010]]
-# datef = 2010
-# dated = 1991
-# fenetre = 20
-# overlap = 0
-# years_bins = build_years_bins(fenetre,dated,datef,overlap)
-# #redondance_manuelle='y'
-# 
-# name_data,language,date_depart,freqmin =  "../data/biodiv/biodiv.isi",'english',date(1970,1,1),10
-# maxTermLength = 5
-# name_data,language,date_depart,freqmin,ng_filter,top,sample =  "../data/toxico/toxico.isi",'english',date(1970,1,1),20,[1,2,3,4,5],100,100
-# 
-# 
-# 
-# dist_type='precision'
-# #dist_type='cooc'
-# 
-# 
-# 
-# 
-# 
-# 
-# # TO MODIFY
-# build_link_tables='y'
-# build_link_tables='n'
-# redondance_manuelle='y'
-# redondance_manuelle='n'
-# 
-# name_data,language,date_depart,freqmin =  "../data/cancer1980/WoSCancerJ19800009.isi",'english',date(1970,1,1),20
-# 
-# 
-# maxTermLength=4
-# datef = 500
-# dated = 1
-# fenetre = 500
-# overlap = 0
-# years_bins = build_years_bins(fenetre,dated,datef,overlap)
-# 
-# datef = 2010
-# dated = 1991
-# fenetre = 20
-# overlap = 0
-# years_bins = build_years_bins(fenetre,dated,datef,overlap)
-# dist_type='precision'
-# 
-# 
-# name_data,language,date_depart,freqmin,ng_filter,top,sample =  "../data/toxico/toxico.isi",'english',date(1970,1,1),5,[1,2,3,4,5],200,1000
-# 
-# ng_filter,top,sample =[1,2,3,4,5,6],200,100
-# #top: nombre maximum approximatif de termes souhaités
-# #freqmin: fréquence minimum souhaitées
-# #sample: taille du corpus utilisé pour effectuer l'indexation.
-# datef = 2010
-# dated = 1990
-# fenetre = 6
-# overlap = 5
-# years_bins = build_years_bins(fenetre,dated,datef,overlap)
-# 
-# 
-# 
-# 
-# 
-# continent=u''
-# 
-# name_data,language,date_depart,freqmin,ng_filter,top,sample =  "../data/rssfeed/liste.rss",'french',date(2010,1,1),2,[1,1,1,0,0],400,300
-# 
-# 
 # 
 # content_indexation='T'#Title
 # # content_indexation='A'#  Abstract
@@ -336,7 +247,12 @@ try:
 	if name_data[-4:] in ['.lfl','.rss']:
 		jours = select_bdd_table_champ_simple(name_bdd,'billets','jours')
 		dated = min(jours)
+		#print 'dated'
+		#print dated
+		dated[0] =  7 * (int(dated[0]) / 7)  + 11 #c'est le jour du 1er janvier 2010 qui dicte cela
+		#print datearr
 		datef = max(jours)
+		#print datef
 		years_bins = build_years_bins(fenetre,int(dated[0]),int(datef[0]),overlap)
 except:
 	pass
