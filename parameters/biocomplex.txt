@@ -20,3 +20,4 @@ overlap = 2
 dist_type='precision'
 nofigure=0
 user_interface='y'
+server='cointet@veille.cortext.org'

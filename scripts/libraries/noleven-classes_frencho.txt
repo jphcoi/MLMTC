@@ -9,6 +9,21 @@ AD_européen PR_du 26.05.10	AD_européen PR_du 11.05.10
 AD_européen PR_du 26.05.10	AD_européen PR_du 02.06.10
 NO_développement AD_durable avec	NO_développement AD_durable des
 NU_deux NO_tour	NU_deux NO_jour
+NO_ami PR_de DE_le	NO_avis PR_de DE_le
+NO_création PR_de DE_le	NO_création PR_de DE_un
+NA_français	NA_françois
+NA_françois	NA_françoise
+NO_écologie	NO_économie
+NO_ministre PR_de DE_le NO_écologie	NO_ministre PR_de DE_le NO_économie
+NO_réacteur	NO_rédacteur
+NO_récolte	NO_révolte
+NO_résultat PR_de DE_le	NO_résultat PR_de DE_un
+NA_réunion	NO_réunion
+NO_vie PR_de DE_le	NO_vue PR_de DE_le
+NO_présentation PR_de DE_le	NO_préservation PR_de DE_le
+NO_préservation	NO_présentation
+NO_proposition PR_de DE_le	NO_proposition PR_de NO_loi
+NA_provence	NO_province
 NO_ministère PR_de DE_le ecologie	NO_ministère PR_de DE_le economie
 VE_rendre PR_du NO_compte	VE_rendre AD_pas NO_compte
 NO_développement AD_rural	développement AD_durable
