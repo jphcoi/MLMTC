@@ -15,8 +15,14 @@ build_link_tables='y'
 
 dated = 1995
 datef = 2010
-fenetre = 1
+fenetre = 10
 overlap = 4
+
+dated = 1995
+datef = 2001
+fenetre = 2
+overlap = 0
+
 dist_type='precision'
 nofigure=1
 user_interface='y'

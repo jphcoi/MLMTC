@@ -14,6 +14,7 @@ print "--------------------------------\n"
 import parameters
 import fonctions_bdd
 import parseur
+import fonctions_lib
 import os
 import glob
 import sys
@@ -168,49 +169,70 @@ def initialiser_zeros(dico_termes):
 	for x in dico_termes:
 		num[x]=0
 	return num
+
+def rajouter_dico_simple_dico(muti2d,couple,cont,valeur):
+	if couple in muti2d:
+		temp = muti2d[couple]
+		if cont in temp:
+			print 'probleme'
+		else:
+			temp[cont] = valeur
+		muti2d[couple] = temp
+	else:
+		temp ={}
+		temp[cont] = valeur
+		muti2d[couple] = temp
+	return muti2d
+	
+def convert_muti3d_muti2d(muti):
+	muti2d={}
+	#on construit également la transposée
+	#muti2d_trans={}
+	for cles,valeur in muti.iteritems():
+		terme = cles[0]
+		cont = cles[1]
+		inter = cles[2]
+		couple  = (terme,inter)
+		couple_trans = (cont,inter)
+		muti2d = rajouter_dico_simple_dico(muti2d,couple,cont,valeur)
+	#	muti2d_trans = rajouter_dico_simple_dico(muti2d_trans,couple_trans,terme,valeur)
+	return muti2d#,muti2d_trans
+
+
 	
 def build_precision(muti):
 	precision={}
+	precisionold={}
 	voisinages_pos={}
 	voisinages={}
-	dico_t={}
+	muti_pos = {}
 	for x, y in muti.iteritems():
 		if y>0:
+			muti_pos[x]=y
 			temp=voisinages_pos.get((x[0],x[2]),[])
 			temp.append(x[1])
 			voisinages_pos[(x[0],x[2])]=temp
-		temp = dico_t.get(x[2],[])
-		if not x[0] in temp:
-			temp.append(x[0])
-		dico_t[x[2]] = temp
 	print "voisinages_pos ecrite"
-	
+	muti=muti_pos
 	compt=0
+	N=len(voisinages_pos.keys())
+	muti2d = convert_muti3d_muti2d(muti)
+	print 'matrice d information mutuelle 2d calculée'
 	for element1,contextes in voisinages_pos.iteritems():
 		terme1 = element1[0]
 		inter = int(element1[1])
 		compt+=1
 		if not compt%100:
-			print '(#'+str(compt)+")"
-		denom=0
-		num=initialiser_zeros(dico_t[inter])
-		for contexte in contextes:
-			MI = muti[(terme1,contexte,inter)]
-			#print MI
-			denom = denom + MI
-			for terme2 in contextes:#dico_t[inter]:#contextes:#dico_t[inter]:#soit on compare par rapport à tous les neuds/ soit uniquement parmi les contextes positifs
-				if not terme2==terme1:
-					try:
-						if muti[(terme2,contexte,inter)]>0:
-							num[terme2]=num[terme2]+ min(MI,muti[(terme2,contexte,inter)])
-					except:
-						pass
-
-		for terme2 in contextes:#dico_t[inter]:#contextes:#dico_t[inter]:#soit on compare par rapport à tous les neuds/ soit uniquement parmi les contextes positifs
-			try:
-				precision[(terme2,terme1,inter)]=float(num[terme2])/denom
-			except:
-				pass
+			print '(#'+str(compt)+" sur "+str(N) +")"
+		MI_terme1 = muti2d[(terme1,inter)]
+		denom = sum(MI_terme1.values())
+		for cont,val in MI_terme1.iteritems():
+			if cont != terme1:
+				MI_terme2 = muti2d[(cont,inter)]
+				somme_min =  fonctions_lib.merge0(MI_terme1, MI_terme2, lambda x,y: min(x,y))
+				precision[(cont,terme1,inter)] = sum(somme_min.values())/denom
+				
+	print 'matrice de precision calculée'
 	return precision
 
 
@@ -270,7 +292,8 @@ def compare_dictionnaire(dist_mat_temp_old,dist_mat_temp):
 		
 dico_termes=build_dico()
 #print dico_termes	
-name_date = str(years_bins[0][0]) + '_' + str(years_bins[0][-1]) + '_'+ str(years_bins[1][0])+ '_'+str(years_bins[-1][-1])
+print years_bins
+name_date = str(years_bins[0][0]) + '_' + str(years_bins[0][-1]) + '_'+ str(years_bins[-1][0])+ '_'+str(years_bins[-1][-1])
 try:# si on a deja calcule le reseau de proximit
 	try:
 		p_cooccurrences = fonctions.dumpingout('p_cooccurrences'+name_date)
@@ -299,7 +322,7 @@ try:# si on a deja calcule le reseau de proximit
 			for x in dico_termes:
 				level[x]=1
 			gexf.gexf_builder(dico_termes,dist_mat_temp,fichier_gexf,level)
-			print 'cest fini ou presque'
+			
 		fonctions.ecrire_dico(dico_termes,dico_termes,dico_termes,1)
 		
 		fonctions.dumpingin(p_cooccurrences,'p_cooccurrences'+name_date)

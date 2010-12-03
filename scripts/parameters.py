@@ -68,13 +68,25 @@ def build_years_bins(fenetre,dated,datef,overlap):
 	years_bins=[]
 	year_bins=[]
 	for i in range((datef-dated+1)/(fenetre)):
-		window = total_window_pert[i*fenetre-overlap:(i+1)*fenetre]
-		years_bins.append(window)
+		#print (i+1)*fenetre+overlap
+		#print len(total_window_pert)
+		if (i+1)*fenetre+overlap<len(total_window_pert):
+			window = total_window_pert[i*fenetre:(i+1)*fenetre+overlap]
+		#print window
+			years_bins.append(window)
 	for bins in years_bins:
 		if len(bins)>0:
 			year_bins.append(bins)
+	#on redecalle vers la droite
+	years_bins_bis = []
+	for intervalles in years_bins:
+		interbis=[]
+		for x in intervalles:
+			interbis.append(x+datef-years_bins[-1][-1])
+		years_bins_bis.append(interbis)
 	#print year_bins
-	return year_bins
+	print years_bins_bis
+	return years_bins_bis
 	
 print "--- initialisation de \"parameters.py\"..."
 
