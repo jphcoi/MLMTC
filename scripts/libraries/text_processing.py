@@ -73,7 +73,7 @@ def notinterditfin(language,tag):
 		else:
 			return True
 	if language=='french':
-		if tag in ['VE','PR','KO']:
+		if tag in ['VE','PR','KO','DE']:
 			return False
 		else:
 			return True
@@ -446,10 +446,11 @@ def define_stop_words(language,name):
 		stopWordsFile = codecs.open(stopword_filename, 'r',encoding='utf8',errors="replace")
 		nstopword=0
 		for word in stopWordsFile.readlines():
-			stopWordsSet.add(str(word.encode("utf8")).strip())
-			#add without accent
-			#stopWordsSet.add(remove_accents(word).strip())
-			nstopword+=1
+			for w in word.split('***'):
+				stopWordsSet.add(str(word.encode("utf8")).strip())
+				#add without accent
+				#stopWordsSet.add(remove_accents(word).strip())
+				nstopword+=1
 		stopWordsFile.close()
 	except:
 		pass
