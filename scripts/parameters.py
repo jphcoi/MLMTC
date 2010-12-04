@@ -70,8 +70,8 @@ def build_years_bins(fenetre,dated,datef,overlap):
 	for i in range((datef-dated+1)/(fenetre)):
 		#print (i+1)*fenetre+overlap
 		#print len(total_window_pert)
-		if (i+1)*fenetre+overlap<len(total_window_pert):
-			window = total_window_pert[i*fenetre:(i+1)*fenetre+overlap]
+		window = total_window_pert[i*fenetre:(i+1)*fenetre+overlap]
+		if (i+1)*fenetre+overlap<len(total_window_pert)+1:
 		#print window
 			years_bins.append(window)
 	for bins in years_bins:
@@ -85,7 +85,7 @@ def build_years_bins(fenetre,dated,datef,overlap):
 			interbis.append(x+datef-years_bins[-1][-1])
 		years_bins_bis.append(interbis)
 	#print year_bins
-	print years_bins_bis
+#	print years_bins_bis
 	return years_bins_bis
 	
 print "--- initialisation de \"parameters.py\"..."
@@ -261,11 +261,21 @@ try:
 		dated = min(jours)
 		#print 'dated'
 		#print dated
-		dated[0] =  7 * (int(dated[0]) / 7)  + 11 #c'est le jour du 1er janvier 2010 qui dicte cela
-		#print datearr
+		prop =  7 * (int(dated[0]) / 7)  + 4 #c'est le jour du 1er janvier 2010 qui dicte cela
+		if prop>=dated[0]:
+			dated[0] = prop
+		else:
+			dated[0]= prop + 7
 		datef = max(jours)
+		prop =  7 * (int(datef[0]) / 7)  + 3 #c'est le jour du 1er janvier 2010 qui dicte cela
+		if prop<=datef[0]:
+			datef[0] = prop
+		else:
+			datef[0]= prop - 7
+
 		#print datef
 		years_bins = build_years_bins(fenetre,int(dated[0]),int(datef[0]),overlap)
+		print years_bins
 except:
 	pass
 
