@@ -22,7 +22,7 @@ from class_def import *
 import fonctions 
 resolution_niveau = 10
 seuil_netermes=  0.4
-resolution_continuite = 4
+resolution_continuite = 2
 proj_thres=0.3
 param_txt = name_data_real+'_res_niv_' + str(resolution_niveau) + '_seuil_netermes_' + str(seuil_netermes) +'_res_cont_'+str(resolution_continuite) +'_proj_thres_'+str(proj_thres)
 
