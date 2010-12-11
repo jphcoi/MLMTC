@@ -229,7 +229,7 @@ for cons in concepts_billets:
 print "    - mise a jour de la table billets avec les index des cocncepts obtenus via la table concepts..."
 print "         (concept_id = # du site dans la table auteurs)"
 try:
-	fonctions_bdd.add_column(name_bdd,'billets','concepts_id','VARCHAR(100)')
+	fonctions_bdd.add_column(name_bdd,'billets','concepts_id','VARCHAR(1500)')
 except:
 	pass
 fonctions_bdd.update_table(name_bdd,'billets','concepts_id',concepts_index)

@@ -39,7 +39,15 @@ treetagger_dir =parameters.treetagger_dir
 years_bins = parameters.years_bins
 dist_type=parameters.dist_type
 
-
+def build_dico():
+	lesidstermes = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'concepts','id')
+	lestermes = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'concepts','forme_principale')
+	dico_termes ={}
+	for x,y in zip(lesidstermes,lestermes):
+		dico_termes[x[0]]=y[0]
+	print 'dictionnaire des termes écrit, taille: '+str(len(dico_termes))
+	return dico_termes
+	
 def lexique():
 	lesidstermes = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'concepts','id')
 	lestermes = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'concepts','forme_principale')
@@ -55,15 +63,25 @@ def ecrire_reseau(dist_mat,years_bins,dist_type,seuil,niveau,legende_noeuds):
 		except:
 			pass
 		fichier=open(path_req + 'reseau'  +'/' + 'reseau_' + 'niv_' + str(niveau) + '_' + dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt','w')
-		fichier_CF=open(path_req +'reseau' + '/'+ 'reseauCF_'+'niv_'+str(niveau)+'_'+dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt','w')
 		for x,y in dist_mat.iteritems():
 			if x[2]==inter:
 				if float(dist_mat[x])>seuil:
 					fichier.write(legende_noeuds[(inter,x[0])].replace(' ','_') + '\t' + legende_noeuds[(inter,x[1])].replace(' ','_') + '\t' + str(y) + '\n')
+		print '------- fichier: reseau_' +str('reseauCF_'+dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt')+ ' ecrit dans le repertoire: '+path_req + 'reseau/'
+
+def ecrire_reseau_CF(dist_mat,years_bins,dist_type,seuil,niveau):		 
+	for inter  in range(len(years_bins)):
+		try:
+			os.mkdir(path_req+'reseau')
+		except:
+			pass
+		fichier_CF=open(path_req +'reseau' + '/'+ 'reseauCF_'+'niv_'+str(niveau)+'_'+dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt','w')
+		for x,y in dist_mat.iteritems():
+			if x[2]==inter:
+				if float(dist_mat[x])>seuil:
 					fichier_CF.write(str(x[0])+ '\t' + str(x[1]) + '\t' + str(y) + '\n')
 #					print 'out'
 		print '------- fichier: reseau_' +str('reseauCF_'+dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt')+ ' ecrit dans le repertoire: '+path_req + 'reseau/'
-
 
 def ecrire_dico(champs,dico_transition,dico_termes,niveau):
 
@@ -137,7 +155,7 @@ def calcul_distance_moy(champ1,champ2,dist_mat,inter1):
 		dist=float(dist)/(len(champ1)*len(champ2))
 	return dist
 
-def calcul_distance(champ1,champ2,dist_mat,inter1,type_distance):
+def calcul_distance(champ1,champ2,dist_mat,inter1,type_distance='moy'):
 	dist = 0.
 	inter1= int(inter1)
 	if len(champ1)>0 and len(champ2)>0:
@@ -148,8 +166,10 @@ def calcul_distance(champ1,champ2,dist_mat,inter1,type_distance):
 				terme2=int(terme2)
 				if terme1==terme2:
 					dist1.append(1)
+					#ce sont des similarites que l'on regarde
 				else:
 					dist1.append(float(dist_mat.get((terme1,terme2,inter1),0)))
+			#print dist1
 			if type_distance=='max':
 				dist=dist+max(dist1)
 			elif type_distance=='moy':

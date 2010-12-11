@@ -29,6 +29,7 @@ name_bdd = parameters.name_bdd
 path_req=parameters.path_req
 name_data_real=parameters.name_data_real
 timelimit='1'
+degmax=5
 
 
 dist_type=parameters.dist_type
@@ -150,9 +151,8 @@ def import_cfpipe(notices,proj_thres,dist_mat,dico):
 		numerotation = -1
 		champs_courants={}#indexés par leur id local
 		liste_liens={}#dle dictionnaire des couples de champs liés dont la valeur = force
-		print " temps : "+str(inter)
 		fichier_lex=open(path_req + 'lexique'  +'/' + 'lexique_' + 'niv_' + str(niveau) + '_' + dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt','r')
-		print 'on recupere la composition des champs dans: \n\t'+path_req + 'lexique'  +'/' + 'lexique_' + 'niv_' + str(niveau) + '_' + dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt'
+		print 'on recupere la composition des champs dans:\t'+path_req + 'lexique'  +'/' + 'lexique_' + 'niv_' + str(niveau) + '_' + dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt'
 		lignes_lex= fichier_lex.readlines()
 		#reseau inter-niveau ou plutôt description micro de chaque niveau
 		element_dessous=[]
@@ -162,27 +162,34 @@ def import_cfpipe(notices,proj_thres,dist_mat,dico):
 			lignev=ligne[:-1].split('\t')
 			composition_termes=map(int,lignev[1].split(' '))
 			champs_ids.append(composition_termes)
-		#etape 3 on réunit toutes les informations utiles sur les champs
+		#etape 2 on réunit toutes les informations utiles sur les champs, y compris leur poid.
 		for ligne in lignes_lex:
-
 			lignev=ligne[:-1].split('\t')
 			composition_termes=map(int,lignev[1].split(' '))
 			numerotation = numerotation + 1
 			poid=[]
 			for i,notice in enumerate(notices):
 				i=i+1
-				if notice[1] in years_bins[inter]:
+				year = notice[1]
+				if year in years_bins[inter]:
+					#ssi l'overlap notice & composition termes est positif, on calcule la distance
 					if len(set(notice[0]) & set(composition_termes))>0:
 						#ici on a le choix sur le type de distance, mais aussi sur la définition de l'orientation de la projection
-						dist = fonctions.calcul_distance(notice[0],composition_termes,dist_mat,inter,type_distance='max')
+						dist = fonctions.calcul_distance(notice[0],composition_termes,dist_mat,inter,type_distance='moy')
+						#on associe une notice à un champ dès qu'elle se situe à une distance supérieure à un seuil de ce champ 
 						if dist>proj_thres:
 							biparti_chp_not[(i,numerotation,inter)]=dist
-							poid.append((i,notice[1]))
+							poid.append((i,year))
 			champs_courants[int(lignev[0])] = construire_champ(composition_termes,numerotation,inter,[numerotation],dico,dist_mat,poid,champs_ids)
 		try:
-			fichier_res=open(path_req +'reseau' + '/'+ 'reseauCF_'+'niv_'+str(niveau)+'_'+dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt','r')
-			print path_req +'reseau' + '/'+ 'reseauCF_'+'niv_'+str(niveau)+'_'+dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt'
+			#version avec degmax
+			fichier_res_name=path_req  + 'reseau/'+'reseauCF_'+'niv_'+str(niveau)+'_'+dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'_degmax_'+str(degmax)+'.txt'
+			#version sans le filtre à degmax
+			fichier_res_name=path_req +'reseau' + '/'+ 'reseauCF_'+'niv_'+str(niveau)+'_'+dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt'
+			fichier_res=open(fichier_res_name,'r')
+			print 'on recupere également les liens entre champs dans le fichier:' + path_req +'reseau' + '/'+ 'reseauCF_'+'niv_'+str(niveau)+'_'+dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt'
 		except:
+			print 'impossible de récupérer les données du fichier: '+fichier_res_name
 			break
 		lignes_res= fichier_res.readlines()
 		#reseau à un niveau donné
@@ -192,9 +199,9 @@ def import_cfpipe(notices,proj_thres,dist_mat,dico):
 			liste_liens[(champs_courants[int(lignev[0])],champs_courants[int(lignev[1])])]=float(force_lien)
 		liste_liens = symmetriser(liste_liens)	
 		#print champs_courants.values()
-		nets[inter] = Network(champs_courants.values(),liste_liens) 
-			#map_edges[(indexs[str(niveau)+'_'+lignev[0]+'_'+str(inter)],indexs[str(niveau)+'_'+lignev[1]+'_'+str(inter)])]=str(lignev[2])
-					
+		net_it = Network(champs_courants.values(),liste_liens) 
+		print net_it
+		nets[inter] = net_it
 	return nets
 
 
@@ -206,8 +213,7 @@ def concatener_liste_liste_termes(liste_liste_termes):
 	return Liste_termes(liste_termes_concatenes)
 
 
-def addnfields(fields_liste,idx,inter,dico,dist_mat):
-	index=idx
+def addnfields(fields_liste,index,inter,dico,dist_mat):
 	periode = fields_liste[0].periode
 	fields_liste_liste_termes=[]
 	nivel = [] 
@@ -254,19 +260,18 @@ def hierarchical_clustering(nets,dico,dist_mat):
 		print 'periode : ' + str(inter)
 		#print net
 		#net.afficher_champs()
-		# on veut construire la liste des distances des champs de la periode consideree
-		dist_tot = []
 		champs_liste = net.champs_liste
 		champs_dist = net.champs_dist
-		#for x in champs_liste:
-		#	print x
+		#on reformate les similarités entre champs pour les transformer en distance
+		dist_tot = []
 		ii = -1
 		for champ1 in champs_liste[:-1]:
 			ii=ii+1
 			for champ2 in champs_liste[ii+1:]:
 					dist_tot.append(float(1.-champs_dist.get((champ1,champ2),0.)))			
+		#print dist_tot
 		Z = weighted(dist_tot)
-		print '**************'
+		print '***periode : ' + str(inter) + 'on calcule le dendrogramme associe'
 		#print '**************'
 		#print '**************'
 		#dd = dendrogram(Z)
@@ -275,10 +280,15 @@ def hierarchical_clustering(nets,dico,dist_mat):
 		N=len(champs_liste)-1
 		res_niv_0= Network(champs_liste,champs_dist) 
 		multi_level_dyn_net[(inter,0)] = Network(champs_liste[:],champs_dist) 
-		
+		#Z ressemble à : [
+		#		 [  2.           6.           0.36216925   2.        ]
+		# 		 [ 10.          15.           0.42559153   2.        ]
+		# 		 [  8.          13.           0.43538316   2.        ]
+		# 		 [  0.          19.           0.43583879   2.        ]
 		for ev_fusion in Z:
 			N=N+1
 			dessous={}
+			#couple de champs qui sont fusionnés
 			fusion_couple = [int(ev_fusion[0]),int(ev_fusion[1])]
 			fusion_level = ev_fusion[2]
 			fields_rm_liste=[]
@@ -339,9 +349,11 @@ def build_zoom_log(resolution):
 	
 def build_zoom(resolution):
 	loupe = range(resolution)
+	print loupe
 	zoom = []
 	for grade in loupe[:]:
-		zoom.append(0.8 + 2.* float(grade)/float(resolution)/float(resolution))
+		#zoom.append(0.8 + 2.* float(grade)/float(resolution)/float(resolution))
+		zoom.append(float(grade)/float(resolution))
 	return zoom
 
 def nearest_zoom(fusion_level,zoom):
@@ -564,10 +576,10 @@ def str_list(str_bdd):
 		jour=-1
 	str_bdd=str_bdd[0]
 	str_bdd=str_bdd.replace('[','').replace(']','')
-	if ',' in str_bdd:
-		return (map(int,str_bdd.split(', ')),jour)
-	else:
-		return([],jour)
+	#if ',' in str_bdd:
+	return (map(int,str_bdd.split(', ')),jour)
+	#else:
+	#	return([],jour)
 	
 	
 
@@ -576,7 +588,7 @@ def build_tubes(multi_level_dyn_net,resolution_niveau,resolution_continuite,seui
 	dyn_net_zoom=build_dynnet(zoom_niveau,multi_level_dyn_net)
 	zoom_continuite = build_zoom_log(resolution_continuite)
 	tubes={}
-	print zoom_continuite
+	print " on construit maintenant les tubes avec les paramétres de seuil intertemporels suivants: "+str(zoom_continuite)
 	for seuil_intertemp in zoom_continuite:
 		for zoo,dyn_net in dyn_net_zoom.iteritems():
 			print 'niveau: '+str(zoo)
@@ -588,7 +600,7 @@ def build_tubes(multi_level_dyn_net,resolution_niveau,resolution_continuite,seui
 		type_dist_inter = 'jaccard'
 		res_intertemp_zoom =  build_res_intertemp(zoom_niveau,seuil_intertemp,dyn_net_zoom,type_dist_inter,dist_mat,seuil_netermes)
 		comp_simple_zoom = composantes_connexes(dyn_net_zoom,res_intertemp_zoom,zoom_niveau)
-		#print comp_simple_zoom
+		
 		tubes_zoo = []
 		tube_liste_zoo = {}
 		print '***********seuil_intertemp' + str(seuil_intertemp)
@@ -596,7 +608,6 @@ def build_tubes(multi_level_dyn_net,resolution_niveau,resolution_continuite,seui
  		for zoo,compo in comp_simple_zoom.iteritems():
 			tube_liste =[]
 			print '***********zoom' + str(zoo)
-			print '\n'
 			for idx, chps_liste in compo.iteritems():
 				termes_ids = []
 				inter = []
@@ -654,10 +665,15 @@ def get_tubes(resolution_niveau = 4,seuil_netermes=  0.5,resolution_continuite =
 	
 
 	except:
-		import context_process 
-		dico=context_process.dico_termes
+		#pour accélerer, on remplace ce qui est commenté par ce qui suit
+		#import context_process 
+		#dico=context_process.dico_termes
+		#dist_mat = context_process.dist_mat
+		
+		dico=fonctions.build_dico()
+		name_date = str(years_bins[0][0]) + '_' + str(years_bins[0][-1]) + '_'+ str(years_bins[1][0])+ '_'+str(years_bins[-1][-1])
+		dist_mat = fonctions.dumpingout('dist_mat'+name_date)
 
-		dist_mat = context_process.dist_mat
 		################################################################################################################################################
 		#on renseigne maintenant les champs pour leur donner leur "importance" respective.
 		#on définit la taille d'un champ en fonction du nombre d'articles dont la projection est "maximale" sur l'ensemble des champs reconstruits.
@@ -665,11 +681,11 @@ def get_tubes(resolution_niveau = 4,seuil_netermes=  0.5,resolution_continuite =
 		################################################################################################################################################
 		notices_str = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'billets','concepts_id,jours')
 		notices = map(str_list,notices_str)
+		#print notices
 		################################################################################################################################################
 		#on importe maintenant les champs au premier niveau.
 		################################################################################################################################################
 		nets = import_cfpipe(notices,proj_thres,dist_mat,dico)
-
 		################################################################################################################################################
 		#on construit le réseau multi-échelle à l'aide de l'algorithme de clustering.
 		################################################################################################################################################
@@ -681,6 +697,7 @@ def get_tubes(resolution_niveau = 4,seuil_netermes=  0.5,resolution_continuite =
 		fonctions.dumpingin(multi_level_dyn_net,param_txt+'multi_level_dyn_net')
 		fonctions.dumpingin(dist_mat,param_txt+'dist_mat')
 		fonctions.dumpingin(dico,param_txt+'dico')
+		
 		tubes,dyn_net_zoom,res_intertemp_zoom = build_tubes(multi_level_dyn_net,resolution_niveau,resolution_continuite,seuil_netermes,dist_mat,dico)
 		fonctions.dumpingin(tubes,param_txt+'tubes')
 		fonctions.dumpingin(dyn_net_zoom,param_txt+'dyn_net_zoom')

@@ -92,8 +92,8 @@ class Champ(Generali):
 	def print_elements(self):
 		"""Method docstring."""
 		chaine  = '\n\t* champ de la periode ' + str(self.periode)+ ' de poids: ' + str(len(self.poids))+ ' dont les elements sont: '
-		chaine =  chaine+self.termes.afficher_liste_termes()
-		chaine = chaine + ' et le label: ' + Liste_termes.afficher_liste_termes(self.label)
+		#chaine =  chaine+self.termes.afficher_liste_termes()
+		#chaine = chaine + ' et le label: ' + Liste_termes.afficher_liste_termes(self.label)
 		return chaine		
 		
 class Tube(Generali):
@@ -126,4 +126,5 @@ class Network(Generali):
 		return "Network: nombre de champs({0}), nombre de liens({1})".format(len(self.champs_liste), len(self.champs_dist))
 	def afficher_champs(self):
 		for champ in self.champs_liste:
-			champ.print_label()
+			print champ.print_elements()
+			

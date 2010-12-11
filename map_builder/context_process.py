@@ -45,15 +45,6 @@ seuil=0.2
 ###################################
 #######export #####################
 ###################################
-
-def build_dico():
-	lesidstermes = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'concepts','id')
-	lestermes = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'concepts','forme_principale')
-	dico_termes ={}
-	for x,y in zip(lesidstermes,lestermes):
-		dico_termes[x[0]]=y[0]
-	print 'dictionnaire des termes écrit, taille: '+str(len(dico_termes))
-	return dico_termes	
 	
 
 
@@ -290,7 +281,7 @@ def compare_dictionnaire(dist_mat_temp_old,dist_mat_temp):
 		
 
 		
-dico_termes=build_dico()
+dico_termes=fonctions.build_dico()
 #print dico_termes	
 print years_bins
 name_date = str(years_bins[0][0]) + '_' + str(years_bins[0][-1]) + '_'+ str(years_bins[1][0])+ '_'+str(years_bins[-1][-1])

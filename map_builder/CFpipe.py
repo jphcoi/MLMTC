@@ -547,9 +547,12 @@ while fini==1:
 		#afficher_tous_champs(champs,scores,nb_label,sep_label,dico_termes,dico_transition)#on affiche tout ça.		
 		#type_distance='max','moy' ou 'min'
 		type_distance='moy'
-		distance_champ=fonctions.map_champs(champs,dist_mat,type_distance)
+		distance_champ=fonctions.map_champs(champs,dist_mat,'moy')
 		#print distance_champ
 		distance_champ_edges_list=edges_list(distance_champ)
+		#version des distances sans la limitation degmax.
+		fonctions.ecrire_reseau_CF(distance_champ,years_bins,dist_type,seuil_net_champ,niveau+1)		 
+		
 		#print '\n'
 		#print distance_champ_edges_list
 		distance_champ_edges_list_seuil=seuiller(distance_champ_edges_list,degmax)
@@ -562,7 +565,7 @@ while fini==1:
 		fonctions.dumpingin(champs,'champs_'+str(niveau))
 		fonctions.dumpingin(distance_champ,'distance_champ_'+str(niveau))	
 		fonctions.ecrire_legende(champs,legende_noeuds,legende_noeuds_id,niveau+1,years_bins)
-		fonctions.ecrire_reseau(distance_champ,years_bins,dist_type,seuil_net_champ,niveau+1,legende_noeuds)		 
+		fonctions.ecrire_reseau(distance_champ,years_bins,dist_type,seuil_net_champ,niveau+1,legende_noeuds)				
 print "niveau vide!"
 
 

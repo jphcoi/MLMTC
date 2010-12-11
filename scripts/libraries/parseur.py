@@ -475,6 +475,7 @@ def extract_champs_isi(filename,sep):
 			dico_article={}
 	file.close()
 	print "---",len(articles),"posts processed."
+	print articles[0]
 	return articles
 
 def extract_champs_medline(filename,sep):

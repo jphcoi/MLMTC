@@ -26,7 +26,7 @@ def drop_table(name_bdd,name_table):
 def creer_table_billets(name_bdd,name_table):
 	connection,ex = connexion(name_bdd)
 	try:
-		ex('CREATE TABLE '+ name_table +' (id INTEGER PRIMARY KEY,title text, date datetime, permalink VARCHAR(500), site VARCHAR(1500), auteur_id VARCHAR(300), categorie1 VARCHAR(20), categorie2 VARCHAR(20), categorie3 VARCHAR(20),content_lemmatise text, content text, href text, jours INTEGER, concepts VARCHAR(2500),identifiant_unique VARCHAR(990) unique,requete VARCHAR(200))')
+		ex('CREATE TABLE '+ name_table +' (id INTEGER PRIMARY KEY,title text, date datetime, permalink VARCHAR(500), site VARCHAR(1500), auteur_id VARCHAR(300), categorie1 VARCHAR(20), categorie2 VARCHAR(20), categorie3 VARCHAR(20),content_lemmatise text, content text, href text, jours INTEGER, concepts text,identifiant_unique VARCHAR(990) unique,requete VARCHAR(200))')
 		print "    + table (billets) \"" +name_table+"\" creee"
 	except:
 		print "    * table (billets) \"" +name_table+"\" deja creee"
