@@ -23,7 +23,10 @@ path_req = parameters.path_req
 years_bins = parameters.years_bins
 name_bdd = parameters.name_bdd
 path_req=parameters.path_req
-timelimit='1'
+try:
+	timelimit=parameters.timelimit
+except:
+	timelimit='1'
 
 dist_type=parameters.dist_type
 sep_label = ' --- '
@@ -244,7 +247,7 @@ def intertemporel(map_corr,map_corr_noeuds,map_edges,seuil_intertemp):
 					liens_temp=liens
 					if valmax==0:
 					 	i=1
-					 	while valmax==0  and inter-i>-2 and i<1:#i<5:#liens à longue distance temporelle
+					 	while valmax==0  and inter-i>-2 and i<timelimit:#i<5:#liens à longue distance temporelle
 					 		
 							tmax = inter-i-1 		
 							index_retro = reindex(liens_temp,map_corr_noeuds,inter-i)
