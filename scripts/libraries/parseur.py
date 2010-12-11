@@ -418,11 +418,11 @@ def process_field(champs_liste,dico_article,sep):
 	#infos[7]=infos[0]
 	infos[7]=infos[7].replace(sep,' ')
 	infos[2]=infos[2]+sep+infos[0]
-	infos[3]=infos[4].lower()
+	infos[3]=infos[3].lower()
 	infos[6]=infos[9].lower()
 	#on remet les DOI à leur place (CR)
 	infos[8]=infos[8].replace('DOI *** ','DOI ')
-	infos[8]=infos[8].replace('DOI *** ','DOI ')
+	infos[8]=infos[4]#.replace('DOI *** ','DOI ')
 	infos.pop()  
 	return infos
 	
@@ -475,7 +475,6 @@ def extract_champs_isi(filename,sep):
 			dico_article={}
 	file.close()
 	print "---",len(articles),"posts processed."
-	print articles[0]
 	return articles
 
 def extract_champs_medline(filename,sep):
