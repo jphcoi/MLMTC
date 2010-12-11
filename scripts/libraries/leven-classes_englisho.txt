@@ -1816,3 +1816,250 @@ JJ_therapeutic	NN_therapy
 NN_toxicology	JJ_toxicological
 vitro	JJ_vitro
 JJ_vivo	vivo
+NP_executive	NN_executive
+NP_financial NP_analysis	JJ_financial NN_analyst
+NP_financial NN_analyst	NP_financial NP_analyst
+JJ_senior NP_financial NP_analyst	NP_senior NP_financial NP_analyst
+NP_executive	NN_executive
+NP_financial NP_analysis	JJ_financial NN_analyst
+NP_financial NN_analyst	NP_financial NP_analyst
+JJ_senior NP_financial NP_analyst	NP_senior NP_financial NP_analyst
+NN_adapter NN_protein	NN_adaptor NN_protein
+JJ_adult	NN_adult
+JJ_aggregate	NN_aggregate
+JJ_alternative VV_splice	NN_alternative VV_splice
+NN_amino NN_acid	JJ_amino-acid
+NN_angstrom NN_resolution	angstrom NN_resolution
+arabidopsis thaliana	arabidopsis-thaliana
+JJ_associated	NN_associate
+NP_atp	atp
+JJ_average	NN_average
+NN_bacillus NN_subtili	bacillus-subtilis
+JJ_beta NN_cell	beta-cells
+JJ_binding	binding
+JJ_binding NN_domain	VV_bind NN_domain
+JJ_binding NN_protein	VV_bind NN_protein
+JJ_binding NN_protein	binding-protein
+VV_bind NN_protein	binding-protein
+JJ_binding NN_site	binding-sites
+VV_bind NN_site	binding-sites
+NN_biology	biology
+brefeldin NP_a	brefeldin-a
+JJ_budding NN_yeast	VV_bud NN_yeast
+JJ_budding	VV_bud
+caenorhabditis elegans	caenorhabditis-elegans
+JJ_camp	NN_camp
+JJ_camp	camp
+JJ_canine NN_kidney NN_cell	JJ_canine kidney-cells
+JJ_central JJ_nervous NN_system	central-nervous-system
+chemokine	chemokines
+NN_class NN_i	NN_class NP_ii
+NP_ii	NN_i
+NN_clock	NP_clock
+co-expressed	coexpressed
+co-expression	coexpression
+VV_coil NN_coil	coiled-coil
+JJ_complex	complex
+NN_complex	complex
+JJ_computational	computationally
+JJ_computational NN_model	JJ_computational NN_modeling
+NN_model	NN_modeling
+JJ_connective NN_tissue	connective tissue
+JJ_connective NN_tissue	connective-tissue
+connective tissue	connective-tissue
+NN_control	NP_control
+NN_control NN_cell	VV_control NN_cell
+VV_control	NN_control
+JJ_core NN_protein	NN_core NN_protein
+NN_crystal NN_structure	crystal-structure
+JJ_crystallographic	NN_crystallography
+NN_cytochrome SY_b	NN_cytochrome SY_c
+NN_data	NP_data
+NN_datum	NP_data
+NN_data NN_set	NN_datum VV_set
+NN_database	database
+JJ_difficult	NN_difficulty
+NP_dna	dna
+NN_dna NN_damage	dna-damage
+NP_dna NN_damage	dna-damage
+NN_domain	domain
+down-regulation	downregulation
+NN_drosophila NN_embryo	drosophila NN_embryo
+drosophila melanogaster	drosophila-melanogaster
+JJ_dynamic	NP_dynamics
+JJ_dynamic NN_behavior	JJ_dynamical NN_behavior
+JJ_dynamical	JJ_dynamic
+JJ_dynamic NN_property	JJ_dynamical NN_property
+JJ_dynamical	JJ_dynamic
+JJ_dynamic NN_system	JJ_dynamical NN_system
+JJ_dynamical	JJ_dynamic
+NN_dynamics	NP_dynamics
+NN_electron NN_microscopy	electron-microscopy
+JJ_embryonic NN_stem NN_cell	JJ_embryonic stem-cells
+JJ_endoplasmic NN_reticulum	endoplasmic-reticulum
+JJ_endothelial NN_cell	endothelial-cells
+JJ_epidermal NN_growth NN_factor	JJ_epidermal growth-factor
+epithelia	JJ_epithelial
+JJ_epithelial NN_cell	epithelial-cells
+JJ_extracellular NN_matrix	extracellular-matrix
+NN_factor	NP_factor
+NN_factor VV_bind	factor-binding
+NN_feedback NN_inhibition	feedback inhibition
+NN_feedback NN_inhibition	NN_feedback NN_inhibitor
+feedback inhibition	NN_feedback NN_inhibitor
+NN_feedback NN_regulation	NN_feedback NN_regulator
+NN_regulator	NN_regulation
+NN_feedback NN_regulation	feedback-regulation
+JJ_filamentous NN_network	NN_filament NN_network
+JJ_filamentous	NN_filament
+JJ_functional genomic	JJ_functional genomics
+NP_g NN_protein	g-protein
+NP_g protein-coupled NN_receptor	g-protein-coupled NN_receptor
+NN_gene NN_expression NN_datum	gene-expression NN_datum
+NN_gene NN_expression NN_profile	NN_gene NN_expression VV_profil
+VV_profil	NN_profile
+NN_gene NN_expression NN_profile	gene-expression NN_profile
+NN_gene NN_ontology	NP_gene ontology
+JJ_general	NN_general
+JJ_genetic NN_analysis	genomic NN_analysis
+genomic	JJ_genetic
+NN_genome NN_sequence	genomic NN_sequence
+genomic	NN_genome
+NN_growth	NP_growth
+NN_growth NN_factor	growth-factor
+NN_growth NN_factor NN_receptor	growth-factor NN_receptor
+NN_growth factor-beta	growth-factor-beta
+haplotype	haplotypes
+hepatocyte	hepatocytes
+JJ_hybrid	NN_hybrid
+NN_hydrogen VV_bond	hydrogen-bonding
+NN_hydrogen VV_bond NN_network	hydrogen-bonding NN_network
+NN_inhibition	inhibition
+VV_interact NN_partner	NN_interaction NN_partner
+VV_interact	NN_interaction
+NP_interaction	NN_interaction
+NP_iv	iv
+NN_kidney NN_cell	kidney-cells
+NN_kinase	kinase
+JJ_knock-out	NN_knockout
+JJ_large NN_scale	JJ_large-scale
+JJ_latter	NN_latter
+NN_ligand VV_bind	ligand-binding
+JJ_mammalian NN_cell	mammalian-cells
+JJ_mass NN_spectrometry	NN_mass NN_spectrometry
+JJ_mass NN_spectrometry	mass-spectrometry
+JJ_mathematical NN_modeling	JJ_mathematical VV_model
+NN_matrix	matrix
+NN_matrix metalloproteinase	NN_matrix metalloproteinases
+metalloproteinases	metalloproteinase
+JJ_maximum	NN_maximum
+NN_membrane	membrane
+NN_membrane NN_protein	membrane-protein
+NN_membrane NN_protein	membrane-proteins
+membrane-protein	membrane-proteins
+NN_messenger NP_rna	messenger-rna
+metalloproteinase	metalloproteinases
+JJ_mitochondrial NN_dna	mitochondrial-dna
+NN_model	NP_model
+JJ_molecular NN_dynamics	molecular-dynamics
+NN_monoclonal NN_antibody	monoclonal-antibodies
+JJ_negative NN_feedback NN_regulation	JJ_negative NN_feedback NN_regulator
+NN_regulator	NN_regulation
+JJ_nervous NN_system	NN_nervous-system
+NN_network VV_base	JJ_network-based
+NN_network IN_of VV_interact	NN_network IN_of NN_interaction
+VV_interact	NN_interaction
+JJ_neural	neural
+JJ_neural NN_network	neural NP_networks
+JJ_neural NN_network	neural-networks
+neural NP_networks	neural-networks
+JJ_neutrophil	NN_neutrophil
+nf NN_kappa	nf-kappa
+nf-kappa	nf-kappab
+nf-kappa NP_b	nf-kappa-b
+nf-kappa NP_b	nf-kappab
+nf-kappa-b	nf-kappab
+JJ_nitric NN_oxide	nitric-oxide
+NP_nmr	nmr
+non-linear	JJ_nonlinear
+JJ_nutrient	NN_nutrient
+NN_ontology	ontology
+ortholog	orthologs
+JJ_parallel	NN_parallel
+NN_pathway	pathway
+NN_plasma NN_membrane	plasma-membrane
+JJ_positive	NN_positive
+post-translational	posttranslational
+post-translational NN_modification	posttranslational NN_modification
+post-translational	posttranslational
+NN_power NN_law	power-law
+JJ_present	NN_present
+NN_protein	proteins
+protein	proteins
+NN_protein CD_1	protein-1
+NN_protein VV_interact	NN_protein NN_interaction
+VV_interact	NN_interaction
+NN_protein NN_interaction	protein-interaction
+NN_protein NN_interaction NN_network	protein-interaction NN_network
+NN_protein NN_kinase	protein-kinase
+NN_protein NN_kinase NP_a	NN_protein NN_kinase NP_c
+NN_protein NN_kinase NP_c	protein-kinase-c
+protein-kinase	protein-kinase-c
+proteoglycan	proteoglycans
+proteomic	proteomics
+NN_q	NP_q
+NP_ras	ras
+NN_rat	rat
+NN_rat NN_liver	rat-liver
+JJ_real NN_time	JJ_real-time
+NN_receptor	receptor
+NN_regulator	NP_regulatory
+JJ_regulatory	NP_regulatory
+NN_rho	NP_rho
+NP_rna	rna
+NN_role	role
+schizosaccharomyces NN_pombe	schizosaccharomyces-pombe
+NN_sea	NP_sea
+NN_side NN_chain	side-chain
+side-chain	side-chains
+NN_signal NN_transduction	signal-transduction
+JJ_skeletal NN_muscle	skeletal-muscle
+JJ_small gtpase	JJ_small gtpases
+gtpases	gtpase
+JJ_smooth NN_muscle	smooth-muscle
+JJ_smooth NN_muscle NN_cell	smooth-muscle NN_cell
+spatio-temporal	JJ_spatiotemporal
+NN_spectra	JJ_spectral
+NN_stem NN_cell	VV_stem NN_cell
+NN_stem	VV_stem
+NN_stem NN_cell	stem-cells
+VV_stem NN_cell	stem-cells
+NN_structure	structure
+NN_structure	JJ_structured
+structure	JJ_structured
+JJ_subject	NN_subject
+NN_system	NP_system
+NN_system NN_biology	NP_systems biology
+JJ_terminal	NN_terminal
+VV_test DT_the NN_hypothesis	VV_test DT_this NN_hypothesis
+NN_time NN_series	time-series
+NN_tissue	tissue
+NP_tnf NN_alpha	tnf-alpha
+NP_trans golgi	trans-golgi
+NP_trans golgi NN_network	trans-golgi NN_network
+NP_trans golgi NN_network	trans-golgi NP_network
+trans-golgi NN_network	trans-golgi NP_network
+NN_transcription NN_network	JJ_transcriptional NN_network
+NN_transcription NN_regulation	JJ_transcriptional NN_regulation
+NN_tumor NN_necrosis NN_factor	tumor-necrosis-factor
+NN_tumor NN_suppressor	JJ_tumor-suppressor
+NN_type NP_i	NN_type PP_i
+PP_i	NP_i
+JJ_visual NN_cortex	visual-cortex
+NN_web	NP_web
+JJ_whole NN_genome	whole-genome
+JJ_wild NN_type	wildtype
+wild-type	wildtype
+NN_x	NP_x
+NN_y	NP_y
+NN_yeast saccharomyces cerevisiae	NN_yeast saccharomyces-cerevisiae

@@ -29,6 +29,21 @@ NP_hepatitis NP_c NN_virus	NP_hepatitis NP_b NN_virus
 JJ_human NN_x NN_chromosome	JJ_human NN_chromosome
 cd4 NN_antigen	cd8 NN_antigen
 NN_network IN_with NN_neuron	NN_network IN_within NN_neuron
-
 NN_effect IN_of	NN_effect IN_on
 NN_case IN_in	NN_case VB_be
+NN_adapter	NN_adaptor
+JJ_evolutionary NN_game	JJ_evolutionary NN_rate
+genomic	JJ_genetic
+NN_interaction MD_can	NN_interaction NN_map
+NN_interaction MD_can	NN_interaction MD_may
+NN_interaction NN_map	NN_interaction MD_may
+JJ_macroscopic	JJ_microscopic
+NN_material	JJ_maternal
+JJ_neural NN_network	JJ_neutral NN_network
+JJ_neutral	JJ_neural
+neural NP_networks	JJ_neutral NN_network
+NN_projection	NN_protection
+VV_regulate NN_gene NN_expression	VV_regulate DT_the NN_expression
+NN_simulation	NN_stimulation
+VV_suggest IN_that EX_there	VV_suggest IN_that PP_they
+
