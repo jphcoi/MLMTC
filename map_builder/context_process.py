@@ -388,11 +388,11 @@ if voisinage_dynamique==1:
 	n=len(years_bins)
 	for x,y in dist_2d.iteritems():
 		moy = float(sum(y.values())) / n
-		if moy > 0.2:
+		if moy > 0.15:
 			dist_2d_vector.append((x[0],x[1],','.join(map(str,add_zeros(y,years_bins))),str("%.3f" %(moy)),'1'))
 	fonctions_bdd.remplir_table(name_bdd,'term_neighbor',dist_2d_vector,"(term1,term2, distances,force,direction)")
 	for x,y in dist_2d_trans.iteritems():
-		if moy >0.2:
+		if moy >0.15:
 			dist_2d_vector_trans.append((x[0],x[1],','.join(map(str,add_zeros(y,years_bins))),str("%.3f" %(moy)),'0'))
 	fonctions_bdd.remplir_table(name_bdd,'term_neighbor',dist_2d_vector_trans,"(term1,term2, distances,force,direction)")
 	#fonctions.ecrire_reseau(dist_mat,years_bins,dist_type,seuil,1,dedoubler(dico_termes,years_bins))		 
