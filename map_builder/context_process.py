@@ -189,6 +189,21 @@ def convert_muti3d_muti2d(muti):
 	#	muti2d_trans = rajouter_dico_simple_dico(muti2d_trans,couple_trans,terme,valeur)
 	return muti2d#,muti2d_trans
 
+def convert_dist_mat3d_dist2d(dist_mat):
+	dist2d={}
+	dist2d_trans={}
+	#on construit également la transposée
+	#muti2d_trans={}
+	for cles,valeur in dist_mat.iteritems():
+		terme1 = cles[0]
+		terme2 = cles[1]
+		inter = cles[2]
+		couple  = (terme1,terme2)
+		couple_trans  = (terme2,terme1)
+		dist2d = rajouter_dico_simple_dico(dist2d,couple,inter,valeur)
+		dist2d_trans = rajouter_dico_simple_dico(dist2d_trans,couple_trans,inter,valeur)
+	return dist2d,dist2d_trans#,muti2d_trans
+
 
 	
 def build_precision(muti):
@@ -285,51 +300,99 @@ dico_termes=fonctions.build_dico()
 #print dico_termes	
 print years_bins
 name_date = str(years_bins[0][0]) + '_' + str(years_bins[0][-1]) + '_'+ str(years_bins[1][0])+ '_'+str(years_bins[-1][-1])
-try:# si on a deja calcule le reseau de proximit
+# try:# si on a deja calcule le reseau de proximit
+# 	try:
+# 		p_cooccurrences = fonctions.dumpingout('p_cooccurrences'+name_date)
+# 		dist_mat = fonctions.dumpingout('dist_mat'+name_date)
+# 	except:
+# 		p_cooccurrences={}
+# 		dist_mat={}
+# 		for inter in range(len(years_bins)):
+# 			print "on traite la période: "  + str(inter)
+# 			fichier_CF=path_req +'reseau/'+'reseauCF_niv_1_'+dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt'
+# 			fichier_cooc=path_req +'reseau/'+'reseauCF_niv_cooc__'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt'
+# 			fichier_gexf = path_req + 'gexf/' + 'reseau_champ_0_'+'_' + dist_type +'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.gexf'		
+# 			if inter>0:
+# 				dist_mat_temp_old = deepcopy(dist_mat_temp)
+# 			dist_mat_temp = lire_dist_mat_file(fichier_CF)
+# 			p_cooccurrences_temp=lire_dist_mat_file(fichier_cooc)
+# 			for x,y in dist_mat_temp.iteritems():
+# 				dist_mat[(int(x[0]),int(x[1]),int(inter))]=y
+# 			for x,y in p_cooccurrences_temp.iteritems():
+# 				p_cooccurrences[(int(x[0]),int(x[1]),int(inter))]=y
+# 			try:
+# 				os.mkdir(path_req +'gexf')
+# 			except:
+# 				pass
+# 			level={}
+# 			for x in dico_termes:
+# 				level[x]=1
+# 			gexf.gexf_builder(dico_termes,dist_mat_temp,fichier_gexf,level)
+# 			
+# 		fonctions.ecrire_dico(dico_termes,dico_termes,dico_termes,1)
+# 		
+# 		fonctions.dumpingin(p_cooccurrences,'p_cooccurrences'+name_date)
+# 		fonctions.dumpingin(dist_mat,'dist_mat'+name_date)
+# 		
+# 		
+# except:# sinon on recalcule du début
+# 	#contenu = fonctions_bdd.select_bdd_table(name_bdd,'sem','concept1,concept2,jours,id_b',requete)
+# 	contenu = fonctions_bdd.select_bdd_table(name_bdd,'billets','concepts_id,jours,id',requete)
+# 	print "contenu importé"
+# 	p_cooccurrences = build_cooc_matrix(contenu,years_bins)
+# 	print "matrice de cooccurrence construite"
+# 	fonctions.ecrire_reseau(p_cooccurrences,years_bins,'',0,'cooc',dedoubler(dico_termes,years_bins))		 	
+# 	dist_mat = distance(dist_type,p_cooccurrences)
+# 	print "matrice de distance construite"
+# 	fonctions.ecrire_reseau(dist_mat,years_bins,dist_type,seuil,1,dedoubler(dico_termes,years_bins))		 
+# 	pass
+# 	
+# print 'matrice de cooccurrences et de distance en mémoire'
+
+def add_zeros(dyn,years_bins):
+	dyna = []
+	for y in range(len(years_bins)):
+		dyna.append("%.3f" %dyn.get(y,0.))
+	return dyna
+
+#construction des voisinages dynamiques:
+voisinage_dynamique=1
+if voisinage_dynamique==1:
+	#on crée la table des voisins
 	try:
-		p_cooccurrences = fonctions.dumpingout('p_cooccurrences'+name_date)
-		dist_mat = fonctions.dumpingout('dist_mat'+name_date)
+		fonctions_bdd.drop_table(name_bdd,'term_neighbor')
 	except:
-		p_cooccurrences={}
-		dist_mat={}
-		for inter in range(len(years_bins)):
-			print "on traite la période: "  + str(inter)
-			fichier_CF=path_req +'reseau/'+'reseauCF_niv_1_'+dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt'
-			fichier_cooc=path_req +'reseau/'+'reseauCF_niv_cooc__'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt'
-			fichier_gexf = path_req + 'gexf/' + 'reseau_champ_0_'+'_' + dist_type +'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.gexf'		
-			if inter>0:
-				dist_mat_temp_old = deepcopy(dist_mat_temp)
-			dist_mat_temp = lire_dist_mat_file(fichier_CF)
-			p_cooccurrences_temp=lire_dist_mat_file(fichier_cooc)
-			for x,y in dist_mat_temp.iteritems():
-				dist_mat[(int(x[0]),int(x[1]),int(inter))]=y
-			for x,y in p_cooccurrences_temp.iteritems():
-				p_cooccurrences[(int(x[0]),int(x[1]),int(inter))]=y
-			try:
-				os.mkdir(path_req +'gexf')
-			except:
-				pass
-			level={}
-			for x in dico_termes:
-				level[x]=1
-			gexf.gexf_builder(dico_termes,dist_mat_temp,fichier_gexf,level)
-			
-		fonctions.ecrire_dico(dico_termes,dico_termes,dico_termes,1)
-		
-		fonctions.dumpingin(p_cooccurrences,'p_cooccurrences'+name_date)
-		fonctions.dumpingin(dist_mat,'dist_mat'+name_date)
-		
-		
-except:# sinon on recalcule du début
-	#contenu = fonctions_bdd.select_bdd_table(name_bdd,'sem','concept1,concept2,jours,id_b',requete)
-	contenu = fonctions_bdd.select_bdd_table(name_bdd,'billets','concepts_id,jours,id',requete)
-	print "contenu importé"
+		pass
+	fonctions_bdd.creer_table_term_neighbor(name_bdd,'term_neighbor')
+	#on importe les données si ce n'est pas déjà fait 
+	try:
+		contenu[0]==1
+	except:
+		contenu = fonctions_bdd.select_bdd_table(name_bdd,'billets','concepts_id,jours,id',requete)
+		print "contenu importé"
+	print "on construit la variable avec tous les jours"
+	years_bins_jour = range(years_bins[0][0],years_bins[-1][-1]+1)
+	#temporairement
+	#years_bins_jour = range(years_bins[0][0],years_bins[0][-3]+1)
+	years_bins=[]
+	for x in years_bins_jour:
+		years_bins.append([x])
+	print years_bins
 	p_cooccurrences = build_cooc_matrix(contenu,years_bins)
-	print "matrice de cooccurrence construite"
-	fonctions.ecrire_reseau(p_cooccurrences,years_bins,'',0,'cooc',dedoubler(dico_termes,years_bins))		 	
+	print "matrice de cooccurrence sur tous les jours construite"
 	dist_mat = distance(dist_type,p_cooccurrences)
 	print "matrice de distance construite"
-	fonctions.ecrire_reseau(dist_mat,years_bins,dist_type,seuil,1,dedoubler(dico_termes,years_bins))		 
-	pass
-	
-print 'matrice de cooccurrences et de distance en mémoire'
+	dist_2d,dist_2d_trans = convert_dist_mat3d_dist2d(dist_mat)
+	dist_2d_vector = []
+	dist_2d_vector_trans=[]
+	n=len(years_bins)
+	for x,y in dist_2d.iteritems():
+		moy = float(sum(y.values())) / n
+		if moy > 0.2:
+			dist_2d_vector.append((x[0],x[1],','.join(map(str,add_zeros(y,years_bins))),str("%.3f" %(moy)),'1'))
+	fonctions_bdd.remplir_table(name_bdd,'term_neighbor',dist_2d_vector,"(term1,term2, distances,force,direction)")
+	for x,y in dist_2d_trans.iteritems():
+		if moy >0.2:
+			dist_2d_vector_trans.append((x[0],x[1],','.join(map(str,add_zeros(y,years_bins))),str("%.3f" %(moy)),'0'))
+	fonctions_bdd.remplir_table(name_bdd,'term_neighbor',dist_2d_vector_trans,"(term1,term2, distances,force,direction)")
+	#fonctions.ecrire_reseau(dist_mat,years_bins,dist_type,seuil,1,dedoubler(dico_termes,years_bins))		 
