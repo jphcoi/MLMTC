@@ -125,7 +125,7 @@ def agency(targets,contenu):
 							#print billet_lemmatise_v[ i-1: i + termLengthMinusOne+2]
 							#print billet_brutv[ i-1: i + termLengthMinusOne+2]
 							#print billet_lemmatise_v[i:i+termLengthMinusOne+1]
-							fin = i
+							fin = i-1
 							debut=i
 							while  billet_lemmatise_v[fin][:3]!='SE_':
 								fin=fin+1
