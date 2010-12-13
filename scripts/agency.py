@@ -161,7 +161,7 @@ nb_sequences = Nb_rows/size_seq
 billets_id=[]
 
 	
-target = ['NN_gene']
+target = ['NN_network']
 #target = ['NN_phosphatase NN_gene']
 def ecrire_phrases(phrase,fichier,fichier2):
 	imax = 0
