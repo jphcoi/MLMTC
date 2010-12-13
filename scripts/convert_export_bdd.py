@@ -13,6 +13,7 @@ dump_cmd = "sqlite3 "+name_bdd+" .dump > "+name_bdd + '.sql'
 print dump_cmd
 subprocess.call(dump_cmd,shell=True)
 cat_cmd = "cat " + name_bdd + '.sql' + " | sed -e '" + 's/"//' + "g' > " + path_req +  "MysqlDump.sql.temp" 
+#autre solution sqlite3 sample.db .dump | python dump_for_mysql.py > dump.sql
 print cat_cmd
 subprocess.call(cat_cmd,shell=True)
 mov_cmd = "mv " + path_req +  "MysqlDump.sql.temp "  +  name_bdd + '.sql'
