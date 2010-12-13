@@ -127,11 +127,11 @@ def agency(targets,contenu):
 							#print billet_lemmatise_v[i:i+termLengthMinusOne+1]
 							fin = i-1
 							debut=i
-							while  billet_lemmatise_v[fin][:3]!='SE_':
-								fin=fin+1
-							while  billet_lemmatise_v[debut][:3]!='SE_':
-								debut=debut-1
 							try:
+								while  billet_lemmatise_v[fin][:3]!='SE_':
+									fin=fin+1
+								while	 billet_lemmatise_v[debut][:3]!='SE_':
+									debut=debut-1
 								type_after=billet_lemmatise_v[i+termLengthMinusOne+1][:3]
 								terme_after=billet_brutv[i+termLengthMinusOne+1]
 								if type_after=='VV_':
