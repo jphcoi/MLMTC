@@ -163,10 +163,6 @@ billets_id=[]
 	
 target = ['NN_gene']
 #target = ['NN_phosphatase NN_gene']
-agency_name=path_req + 'agency_'+str(target)+'.csv'
-agency_name_out=path_req + 'agency_out_'+str(target)+'.csv'
-agency_name2=path_req + 'agency_'+str(target)+'.txt'
-agency_name_out2=path_req + 'agency_out_'+str(target)+'.txt'
 def ecrire_phrases(phrase,fichier,fichier2):
 	imax = 0
 	for x in phrase:
@@ -181,6 +177,11 @@ def ecrire_phrases(phrase,fichier,fichier2):
 		print ext
 		fichier.write(x[0]+'\t'+ext+'\t'+x[1]+'\t'+x[2]+'\t'+x[3]+'\t'+x[4]+'\t'+x[6]+'\n')
 		fichier2.write(x[0]+'\t'+ext+'\t'+'\t'+x[1]+'\n')
+
+agency_name=path_req + 'agency_'+str(target)+'.csv'
+agency_name_out=path_req + 'agency_out_'+str(target)+'.csv'
+agency_name2=path_req + 'agency_'+str(target)+'.txt'
+agency_name_out2=path_req + 'agency_out_'+str(target)+'.txt'
 file_oui = open(agency_name,'w')
 file_no = open(agency_name_out,'w')
 file_oui2 = open(agency_name2,'w')
