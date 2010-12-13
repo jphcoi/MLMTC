@@ -355,44 +355,63 @@ def add_zeros(dyn,years_bins):
 		dyna.append("%.3f" %dyn.get(y,0.))
 	return dyna
 
+
+name_date = str(years_bins[0][0]) + '_' +str(years_bins[-1][-1])
+
 #construction des voisinages dynamiques:
 voisinage_dynamique=1
 if voisinage_dynamique==1:
+	
 	#on crée la table des voisins
 	try:
-		fonctions_bdd.drop_table(name_bdd,'term_neighbor')
+		fonctions_bdd.drop_table(name_bdd,'term_neighbour')
 	except:
 		pass
-	fonctions_bdd.creer_table_term_neighbor(name_bdd,'term_neighbor')
-	#on importe les données si ce n'est pas déjà fait 
+	fonctions_bdd.creer_table_term_neighbor(name_bdd,'term_neighbour')
+	#on importe les données si ce n'est pas déjà fait
 	try:
-		contenu[0]==1
+		
+		dist_2d=fonctions.dumpingout('dist_2d'+name_date)
+		dist_2d_trans=fonctions.dumpingout('dist_2d_trans'+name_date)
+		print 'on charge dist_2d_trans deja calculé'
+		
 	except:
-		contenu = fonctions_bdd.select_bdd_table(name_bdd,'billets','concepts_id,jours,id',requete)
-		print "contenu importé"
-	print "on construit la variable avec tous les jours"
-	years_bins_jour = range(years_bins[0][0],years_bins[-1][-1]+1)
-	#temporairement
-	#years_bins_jour = range(years_bins[0][0],years_bins[0][-3]+1)
-	years_bins=[]
-	for x in years_bins_jour:
-		years_bins.append([x])
-	print years_bins
-	p_cooccurrences = build_cooc_matrix(contenu,years_bins)
-	print "matrice de cooccurrence sur tous les jours construite"
-	dist_mat = distance(dist_type,p_cooccurrences)
-	print "matrice de distance construite"
-	dist_2d,dist_2d_trans = convert_dist_mat3d_dist2d(dist_mat)
+		print 'on calcule dist_2d_trans pour les dates indiquées'
+		try:
+			contenu[0]==1
+		except:
+			contenu = fonctions_bdd.select_bdd_table(name_bdd,'billets','concepts_id,jours,id',requete)
+			print "contenu importé"
+		print "on construit la variable avec tous les jours"
+		years_bins_jour = range(years_bins[0][0],years_bins[-1][-1]+1)
+		#temporairement
+		#years_bins_jour = range(years_bins[0][0],years_bins[0][-3]+1)
+		years_bins=[]
+		for x in years_bins_jour:
+			years_bins.append([x])
+		print years_bins
+		p_cooccurrences = build_cooc_matrix(contenu,years_bins)
+		print "matrice de cooccurrence sur tous les jours construite"
+		dist_mat = distance(dist_type,p_cooccurrences)
+		print "matrice de distance construite"
+		dist_2d,dist_2d_trans = convert_dist_mat3d_dist2d(dist_mat)
+		fonctions.dumpingin(dist_2d,'dist_2d'+name_date)
+		fonctions.dumpingin(dist_2d_trans,'dist_2d_trans'+name_date)
+	
+	
 	dist_2d_vector = []
 	dist_2d_vector_trans=[]
 	n=len(years_bins)
 	for x,y in dist_2d.iteritems():
-		moy = float(sum(y.values())) / n
-		if moy > 0.15:
+		distances=y.values()
+		moy = float(sum(distances) / n)
+		if moy > 0.1:
 			dist_2d_vector.append((x[0],x[1],','.join(map(str,add_zeros(y,years_bins))),str("%.3f" %(moy)),'1'))
-	fonctions_bdd.remplir_table(name_bdd,'term_neighbor',dist_2d_vector,"(term1,term2, distances,force,direction)")
+	fonctions_bdd.remplir_table(name_bdd,'term_neighbour',dist_2d_vector,"(term1,term2, distances,force,direction)")
 	for x,y in dist_2d_trans.iteritems():
-		if moy >0.15:
+		distances=y.values()
+		moy = float(sum(distances) / n)
+		if moy >0.1:
 			dist_2d_vector_trans.append((x[0],x[1],','.join(map(str,add_zeros(y,years_bins))),str("%.3f" %(moy)),'0'))
-	fonctions_bdd.remplir_table(name_bdd,'term_neighbor',dist_2d_vector_trans,"(term1,term2, distances,force,direction)")
+	fonctions_bdd.remplir_table(name_bdd,'term_neighbour',dist_2d_vector_trans,"(term1,term2, distances,force,direction)")
 	#fonctions.ecrire_reseau(dist_mat,years_bins,dist_type,seuil,1,dedoubler(dico_termes,years_bins))		 
