@@ -155,14 +155,6 @@ def agency(targets,contenu):
 								pass								
 	return extraits,extraits_no			
 #il faut découper ici car ça prend trop de RAM
-Nb_rows = fonctions_bdd.count_rows(name_bdd,'billets')
-size_seq = 1000
-nb_sequences = Nb_rows/size_seq
-billets_id=[]
-
-	
-target = ['NN_network***NP_network***NP_networks']
-#target = ['NN_phosphatase NN_gene']
 def ecrire_phrases(phrase,fichier,fichier2):
 	imax = 0
 	for x in phrase:
@@ -177,6 +169,15 @@ def ecrire_phrases(phrase,fichier,fichier2):
 		print ext
 		fichier.write(x[0]+'\t'+ext+'\t'+x[1]+'\t'+x[2]+'\t'+x[3]+'\t'+x[4]+'\t'+x[6]+'\n')
 		fichier2.write(x[0]+'\t'+ext+'\t'+'\t'+x[1]+'\n')
+
+Nb_rows = fonctions_bdd.count_rows(name_bdd,'billets')
+size_seq = 1000
+nb_sequences = Nb_rows/size_seq
+billets_id=[]
+
+
+target = ['NN_network***NP_network***NP_networks']#,'NN_protein***protein***proteins','NN_gene***NP_gene***NN_genetics***genomic***genomics***NN_genome***genome']
+#target = ['NN_phosphatase NN_gene']
 
 agency_name=path_req + 'agency_'+str(target)+'.csv'
 agency_name_out=path_req + 'agency_out_'+str(target)+'.csv'
