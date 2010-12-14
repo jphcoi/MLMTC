@@ -50,7 +50,7 @@ def creer_table_term_neighbor(name_bdd,name_table):
 	connection,ex = connexion(name_bdd)
 	try:
 #		print 'CREATE TABLE '+ name_table +' (id INTEGER PRIMARY KEY,term1 VARCHAR(10), term2 VARCHAR(10), distance text)'
-		ex('CREATE TABLE '+ name_table +' (id INTEGER PRIMARY KEY,term1 VARCHAR(10), term2 VARCHAR(10), distances text, force FLOAT, direction INTEGER(1) )')
+		ex('CREATE TABLE '+ name_table +' (id INTEGER PRIMARY KEY,term1 VARCHAR(10), term2 VARCHAR(10), distances text, force FLOAT, direction INTEGER )')
 	except:
 		print "    * table (term_neighbor) \"" +name_table+"\" deja creee"
 		pass
