@@ -177,8 +177,8 @@ billets_id=[]
 
 
 target = ['NN_network***NP_network***NP_networks']
-target = ['NN_protein***protein***proteins']
 target = ['NN_gene***NP_gene***NN_genetics***genomic***genomics***NN_genome***genome']
+target = ['NN_protein***protein***proteins']
 #target = ['NN_phosphatase NN_gene']
 
 agency_name=path_req + 'agency_'+str(target)+'.csv'
