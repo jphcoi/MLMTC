@@ -576,13 +576,10 @@ def str_list(str_bdd):
 		jour=-1
 	str_bdd=str_bdd[0]
 	str_bdd=str_bdd.replace('[','').replace(']','')
-	#if ',' in str_bdd:
 	try:
 		return (map(int,str_bdd.split(', ')),jour)
 	except:
 		return([],jour)
-	#else:
-	#	return([],jour)
 	
 	
 
