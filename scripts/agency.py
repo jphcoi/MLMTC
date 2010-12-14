@@ -176,7 +176,8 @@ nb_sequences = Nb_rows/size_seq
 billets_id=[]
 
 
-target = ['NN_network***NP_network***NP_networks']#,'NN_protein***protein***proteins','NN_gene***NP_gene***NN_genetics***genomic***genomics***NN_genome***genome']
+target = ['NN_network***NP_network***NP_networks']
+target = ['NN_protein***protein***proteins','NN_gene***NP_gene***NN_genetics***genomic***genomics***NN_genome***genome']
 #target = ['NN_phosphatase NN_gene']
 
 agency_name=path_req + 'agency_'+str(target)+'.csv'
