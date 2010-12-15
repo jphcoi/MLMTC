@@ -67,7 +67,7 @@ def ecrire_reseau(dist_mat,years_bins,dist_type,seuil,niveau,legende_noeuds):
 			if x[2]==inter:
 				if float(dist_mat[x])>seuil:
 					fichier.write(legende_noeuds[(inter,x[0])].replace(' ','_') + '\t' + legende_noeuds[(inter,x[1])].replace(' ','_') + '\t' + str(y) + '\n')
-		print '------- fichier: reseau_' +str('reseauCF_'+dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt')+ ' ecrit dans le repertoire: '+path_req + 'reseau/'
+		print '------- fichier: ' +str('reseau_'+dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt')+ ' ecrit dans le repertoire: '+path_req + 'reseau/'
 
 def ecrire_reseau_CF(dist_mat,years_bins,dist_type,seuil,niveau):		 
 	for inter  in range(len(years_bins)):
@@ -81,7 +81,7 @@ def ecrire_reseau_CF(dist_mat,years_bins,dist_type,seuil,niveau):
 				if float(dist_mat[x])>seuil:
 					fichier_CF.write(str(x[0])+ '\t' + str(x[1]) + '\t' + str(y) + '\n')
 #					print 'out'
-		print '------- fichier: reseau_' +str('reseauCF_'+dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt')+ ' ecrit dans le repertoire: '+path_req + 'reseau/'
+		print '------- fichier: ' +str('reseauCF_'+dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt')+ ' ecrit dans le repertoire: '+path_req + 'reseau/'
 
 def ecrire_dico(champs,dico_transition,dico_termes,niveau):
 

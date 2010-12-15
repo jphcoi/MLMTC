@@ -302,16 +302,19 @@ print years_bins
 name_date = str(years_bins[0][0]) + '_' + str(years_bins[0][-1]) + '_'+ str(years_bins[1][0])+ '_'+str(years_bins[-1][-1])
 try:# si on a deja calcule le reseau de proximit
 	try:
+
 		p_cooccurrences = fonctions.dumpingout('p_cooccurrences'+name_date)
 		dist_mat = fonctions.dumpingout('dist_mat'+name_date)
+		print 'on a chargé les données déjà calaculées'
+		
 	except:
 		p_cooccurrences={}
 		dist_mat={}
 		for inter in range(len(years_bins)):
-			print "on traite la période: "  + str(inter)
 			fichier_CF=path_req +'reseau/'+'reseauCF_niv_1_'+dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt'
 			fichier_cooc=path_req +'reseau/'+'reseauCF_niv_cooc__'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt'
 			fichier_gexf = path_req + 'gexf/' + 'reseau_champ_0_'+'_' + dist_type +'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.gexf'		
+			#print  'on est la'
 			if inter>0:
 				dist_mat_temp_old = deepcopy(dist_mat_temp)
 			dist_mat_temp = lire_dist_mat_file(fichier_CF)
@@ -336,15 +339,19 @@ try:# si on a deja calcule le reseau de proximit
 		
 		
 except:# sinon on recalcule du début
+	print 'on calcule les données de départ'
+
 	#contenu = fonctions_bdd.select_bdd_table(name_bdd,'sem','concept1,concept2,jours,id_b',requete)
 	contenu = fonctions_bdd.select_bdd_table(name_bdd,'billets','concepts_id,jours,id',requete)
 	print "contenu importé"
 	p_cooccurrences = build_cooc_matrix(contenu,years_bins)
 	print "matrice de cooccurrence construite"
-	fonctions.ecrire_reseau(p_cooccurrences,years_bins,'',0,'cooc',dedoubler(dico_termes,years_bins))		 	
+#	fonctions.ecrire_reseau(p_cooccurrences,years_bins,'',0,'cooc',dedoubler(dico_termes,years_bins))		 	
+	fonctions.ecrire_reseau_CF(p_cooccurrences,years_bins,'',0,'cooc')
 	dist_mat = distance(dist_type,p_cooccurrences)
 	print "matrice de distance construite"
-	fonctions.ecrire_reseau(dist_mat,years_bins,dist_type,seuil,1,dedoubler(dico_termes,years_bins))		 
+#	fonctions.ecrire_reseau(dist_mat,years_bins,dist_type,seuil,1,dedoubler(dico_termes,years_bins))		 
+	fonctions.ecrire_reseau_CF(dist_mat,years_bins,dist_type,seuil,1)		 
 	pass
 	
 print 'matrice de cooccurrences et de distance en mémoire'
