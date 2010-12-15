@@ -89,7 +89,7 @@ def seuil_degmax(niveau,degmax,inter):
 	fichier_out = write_reseau(res_seuil,niveau,inter)
 	return fichier_out
 	
-def CFinder_launch(niveau,dico_termes,degmax):
+def CFinder_launch(niveau,dico_termes,degmax,CF_weight):
 	for inter in range(len(years_bins)):
 		if degmax>0:
 			fichier = seuil_degmax(niveau,degmax,inter)	
@@ -487,6 +487,11 @@ dist_mat = context_process.dist_mat#on recupere la matrice de distance entre ter
 fini=1
 niveau=0
 CF_weight_v = [0.5,0.2,0.5,0.5,0.5]
+try:
+	CF_weight_v[0]=parameters.CF_weight0
+except:
+	pass
+	
 seuil_net_champ_v = [0.,0.,0.,0.,0.]
 taillemin_v=[3,3,3,3,3,3]
 taillemax_v=[30,25,25,25,25,25]
@@ -499,6 +504,7 @@ degmax=5
 type_score='combine'
 info={}
 lenchampsfinal={}
+text = ''
 while fini==1:
 	niveau=  niveau+1
 	CF_weight=CF_weight_v[niveau-1]
@@ -511,7 +517,7 @@ while fini==1:
 	print "niveau = "+ str(niveau)
 	
 	dico_transition= lire_dictionnaire_transition(niveau)
-	CFinder_launch(niveau,dico_termes,degmax)#on lance CFinder au besoin
+	CFinder_launch(niveau,dico_termes,degmax,CF_weight)#on lance CFinder au besoin
 	communities =parser_CFinder(niveau)#on récupère les données ainsi produites
 	print " \n- niveau = "+ str(niveau)
 	#print " \n- periode = "+ str(x)
@@ -541,7 +547,14 @@ while fini==1:
 		
 	
 	if fini>0:
-
+		noeuds_presents = []
+		for x in dico_transition.values():
+			for xx in x:
+				if not xx in noeuds_presents:
+					noeuds_presents.append(xx)
+		couverture ='niveau ' + str(niveau) +' : '+ str(len(noeuds_presents)) + ' noeuds présents dans la reconstruction sur ' + str(len(dico_termes.keys()))			
+		print couverture
+		text = text + couverture + '\n'
 		fonctions.ecrire_dico(champs,dico_transition,dico_termes,niveau+1)#ecrit le dictionaire de transition pour la prochaine etape
 		scores = label_champs(champs,nb_label,dico_transition,dico_termes,dist_mat,type_score)#on calcule le label des champs		
 		#afficher_tous_champs(champs,scores,nb_label,sep_label,dico_termes,dico_transition)#on affiche tout ça.		
@@ -572,16 +585,19 @@ print "niveau vide!"
 
 maps_union.union_map(2,seuil_net_champ)
 #print lenchampsfinal.keys()
+logfile = open(Cfinderexport_name(0,0,degmax),'a')
 for x,y in info.iteritems():
-	print '\n'
-	print 'niveau: '+str(x)
+	text= text + '\n'
+	text = text+ 'niveau: '+str(x) + '\n'
 	inter=-1
 	for ligne in y:
 		if '*** periode: ' in ligne:
 			ligne_v = ligne.split('*** periode: ')
 			inter = int(ligne_v[1])
 			
-		print ligne
+		text=text+ ligne + '\n'
 		if inter>-1:
-			print '*** on a conserve ' + str(lenchampsfinal[(x,inter)])	+' champs sur...'
+			text=text+ '*** on a conserve ' + str(lenchampsfinal[(x,inter)])	+' champs sur...' + '\n'
 			inter=-1
+	print text
+	logfile.write(text)	
