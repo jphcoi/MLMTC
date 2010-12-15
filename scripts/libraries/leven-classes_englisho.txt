@@ -2063,3 +2063,70 @@ wild-type	wildtype
 NN_x	NP_x
 NN_y	NP_y
 NN_yeast saccharomyces cerevisiae	NN_yeast saccharomyces-cerevisiae
+NN_gene	NN_genetics
+NN_gene	genomic
+NN_gene	genomics
+NN_gene	NN_genome
+NN_gene	genome
+NN_model	VV_model
+NP_interaction	VV_interact
+NN_control	controller
+inhibition	NN_inhibitor
+inhibition	JJ_inhibitory
+NN_i	ii
+NN_i	NP_iii
+NN_i	iii
+NN_protein NN_kinase	protein-kinase-c
+NN_protein NN_kinase	NN_protein NN_kinase NP_c
+NN_protein NN_kinase	protein NN_kinase NP_c
+NN_protein NN_kinase	NN_protein NN_kinase NP_a
+NN_messenger NP_rna	mrna
+NN_messenger NP_rna	mrnas
+NN_transcription NN_regulation	JJ_transcriptional NN_regulator
+NN_gene JJ_regulatory NN_network	NN_genetics JJ_regulatory NN_network
+NN_protein VV_interact	protein NN_interaction
+NN_protein VV_interact	protein-interaction
+JJ_associated	NP_associate
+NN_datum NN_set	NN_data VV_set
+nf NN_kappa	nf-kappab
+nf NN_kappa	nf-kappa NP_b
+nf NN_kappa	nf-kappa-b
+NN_hydrogen NN_bond NN_network	hydrogel VV_bond NN_network
+NN_hydrogen NN_bond NN_network	hydrogen-bonding NN_network
+NN_direction	NP_director
+NN_side NN_chain	side-chains
+JJ_dynamic NN_system	JJ_dynamical NP_systems
+JJ_long-range	NP_long NN_range
+JJ_long-range	JJ_long-range NN_plan
+JJ_long-range	NP_long NN_range NN_plan
+JJ_long-range	JJ_long NP_range NN_plan
+JJ_long-range	NP_long NP_range NN_plan
+JJ_long-range	JJ_long NN_range NN_planning
+JJ_long-range	JJ_long-range NN_planning
+JJ_long-range	NP_long NP_range NP_planning
+JJ_long-range	JJ_long-range NP_planning
+JJ_long-range	JJ_long NP_range NP_planning
+JJ_long-range	NP_long NP_range NN_planning
+JJ_long-range	JJ_long NP_range NN_planning
+JJ_long-range	NP_long NN_range NN_planning
+JJ_long-range	JJ_long NN_range NP_planning
+JJ_long-range	NP_long NN_range NP_planning
+NN_leukemia	leukaemic
+NN_leukemia	leukaemias
+NN_adapter NN_protein	NN_adaptor protein
+NN_transducer	transduced
+NN_transducer	transduces
+il-6	il-10
+il-6	il-1
+il-6	il-3
+il-6	il-8
+il-6	il-12
+il-6	NN_il-4
+il-6	il-2
+il-6	il-4
+il-6	il-5
+il-6	il-7
+il-6	il-11
+il-6	il-9
+NN_support NN_vector NN_machine	svm
+NP_alzheimer	alzheimers-disease
