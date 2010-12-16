@@ -168,7 +168,11 @@ print 'parametres: '+str(parametres)
 print '\n'
 
 #default parameters:
-content_indexation='TA'
+try:
+	content_indexation=parameters.content_indexation
+except:
+	content_indexation='TA'
+	
 withrequete=0
 lemmadictionary = 0
 for nom_param,val_param in parametres.iteritems():

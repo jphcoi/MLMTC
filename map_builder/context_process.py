@@ -303,7 +303,7 @@ name_date = str(years_bins[0][0]) + '_' + str(years_bins[0][-1]) + '_'+ str(year
 try:# si on a deja calcule le reseau de proximit
 	try:
 
-		p_cooccurrences = fonctions.dumpingout('p_cooccurrences'+name_date)
+		#p_cooccurrences = fonctions.dumpingout('p_cooccurrences'+name_date)
 		dist_mat = fonctions.dumpingout('dist_mat'+name_date)
 		print 'on a chargé les données déjà calaculées'
 		
@@ -334,7 +334,7 @@ try:# si on a deja calcule le reseau de proximit
 			
 		fonctions.ecrire_dico(dico_termes,dico_termes,dico_termes,1)
 		
-		fonctions.dumpingin(p_cooccurrences,'p_cooccurrences'+name_date)
+		#fonctions.dumpingin(p_cooccurrences,'p_cooccurrences'+name_date)
 		fonctions.dumpingin(dist_mat,'dist_mat'+name_date)
 		
 		

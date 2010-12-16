@@ -89,12 +89,22 @@ def seuil_degmax(niveau,degmax,inter):
 	fichier_out = write_reseau(res_seuil,niveau,inter)
 	return fichier_out
 	
+# def dist_cut(fichier,degmax):
+# 	liens_weight = []
+# 	for ligne in open(fichier).readlines():
+# 		liens_weight.append(float(ligne.split('\t')[2]))
+# 	liens_weight.sort()
+# 	print liens_weight
+# 	print len(liens_weight)
+# 	print degmax * len(dico_termes.keys())
+	
 def CFinder_launch(niveau,dico_termes,degmax,CF_weight):
 	for inter in range(len(years_bins)):
 		if degmax>0:
 			fichier = seuil_degmax(niveau,degmax,inter)	
 		else:
 			fichier=path_req  + 'reseau/'+'reseauCF_'+'niv_'+str(niveau)+'_'+dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'_degmax_'+str(degmax)+'.txt'
+		#CF_weight_auto = dist_cut(fichier,degmax)
 		sortie = Cfinderexport_name(niveau,inter,degmax)
 		command_sys = CFinder_CL + " -i "+ fichier +' -t ' +str(timelimit)+" -D -o " + sortie + " -w " + str(CF_weight)
 		print command_sys

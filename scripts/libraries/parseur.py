@@ -20,9 +20,10 @@ import datetime
 import calendar
 import getopt
 import copy, re
-
-def convert(html):
-	return BeautifulSoup(html,convertEntities=BeautifulSoup.HTML_ENTITIES,markupMassage=hexentityMassage).contents[0].string
+import BeautifulSoup
+# 
+# def convert(html):
+# 	return BeautifulSoup(html,convertEntities=BeautifulSoup.HTML_ENTITIES,markupMassage=hexentityMassage).contents[0].string
 
 
 content_indexation=parameters.content_indexation
@@ -409,6 +410,9 @@ def process_field(champs_liste,dico_article,sep):
 		infos[7]=' . '+infos[0]
 	if content_indexation == 'TAKW':
 		infos[7]=infos[0]+' . '+infos[5]+' . '+infos[6]+' . '+infos[7]
+	if content_indexation == 'TAKWA':
+		infos[7]=infos[0]+' . '+' . '+infos[6]+' . '+infos[7]
+
 	if content_indexation == 'KW':
 		infos[7]=infos[5]+' . '+infos[6]
 
@@ -633,7 +637,6 @@ def extract_champs_doc(filename):
 	file.close()
 	print "---",len(articles),"posts processed."
 	return articles
-
 
 
 

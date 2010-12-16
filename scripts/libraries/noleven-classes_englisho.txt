@@ -12,6 +12,9 @@ NN_class NP_ii NN_molecule	NN_class NN_i NN_molecule
 NN_nucleoside	NN_nucleotide
 NN_deletion	NN_depletion
 JJ_cyclic amp	JJ_cyclic gmp
+NN_absorption	NN_adsorption
+macroalgae	microalgae
+macroalgal	microalgal
 cd4+ NN_t NN_cell	cd8+ NN_t NN_cell
 NN_friction	NN_fraction
 JJ_transcriptional NN_repressor	JJ_transcriptional NN_repression

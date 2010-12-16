@@ -1,1 +1,4 @@
 %
+JJ_same
+JJ_short
+JJ_various

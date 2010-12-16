@@ -10,6 +10,42 @@ JJ_binding NN_site	VV_bind NN_site
 JJ_binding	VV_bind
 NN_cell	cells
 JJ_chemical	NN_chemical
+NN_algae	algae
+JJ_blue-green	NP_blue-green
+JJ_blue-green NN_algae	NP_blue-green algae
+JJ_blue-green NN_algae	blue-green-algae
+NP_blue-green algae	blue-green-algae
+JJ_brown NN_alga	JJ_brown NN_algae
+NN_algae	NN_alga
+cyanobacteria	cyanobacterial
+JJ_delta	NN_delta
+JJ_delta	NP_delta
+JJ_green	NP_green
+JJ_green NN_alga	JJ_green NN_algae
+NN_algae	NN_alga
+JJ_green NN_alga	NP_green algae
+JJ_green NN_algae	NP_green algae
+JJ_green NN_algae	green-algae
+NP_green algae	green-algae
+JJ_juvenile	NN_juvenile
+NN_lake	NP_lake
+macroalga	macroalgae
+macroalga	macroalgal
+macroalgae	macroalgal
+macrophyte	macrophytes
+JJ_marine	NP_marine
+microalgae	microalgal
+microcystin	microcystins
+microcystin	microcystis
+microcystins	microcystis
+photosystem PP_i	photosystem NP_ii
+PP_i	NP_ii
+JJ_red NN_alga	JJ_red NN_algae
+NN_algae	NN_alga
+NN_river	NP_river
+NN_substratum	NN_substrate
+JJ_unicellular JJ_green NN_alga	JJ_unicellular JJ_green NN_algae
+NN_algae	NN_alga
 JJ_constant	NN_constant
 JJ_core	NN_core
 NN_culture	JJ_cultured

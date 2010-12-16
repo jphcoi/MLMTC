@@ -401,6 +401,22 @@ def remplir_table_billets(name_bdd,name_table,champs_liste,champs_name,requete):
 	print "    + table \"" + name_table+"\" remplie"
 	
 	#ex("INSERT OR IGNORE INTO billets (title, permalink, content) VALUES (?,?,?)", (champ[1],champ[-1],champ[-2]))
+
+
+# def remplir_table_billets(name_bdd,name_table,champs_liste,champs_name,requete):
+# 	connection, ex = connexion(name_bdd)
+# #	champs_name = "(title,date,permalink,site,categorie1,categorie2,categorie3,content,href,requete,identifiant_unique)"#on n'enregistre pas le html brut
+# #title,datet,permalink,url,continent,community,territory,content,author
+# 	for champ in champs_liste:
+# 		champ[8]=requete
+# 		id_unique=champ[0]+'_'+champ[3]
+# 		champ.append(id_unique)
+# 		ex("INSERT OR IGNORE INTO billets (title, date,permalink,site,categorie1,categorie2,categorie3, content,requete,href,identifiant_unique) VALUES (?,?,?,?,?,?,?,?,?,?,?)", champ)
+# 	connection.commit()
+# 	connection.close()
+# 	print "    + table \"" + name_table+"\" remplie"
+
+
 	
 def isList(obj):
    """isList(obj) -> Returns true if obj is a Python list.
