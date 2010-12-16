@@ -566,7 +566,8 @@ while fini==1:
 			for xx in x:
 				if not xx in noeuds_presents:
 					noeuds_presents.append(xx)
-		couverture ='niveau ' + str(niveau) +' : '+ str(len(noeuds_presents)) + ' noeuds présents dans la reconstruction sur ' + str(len(dico_termes.keys()))			
+		if niveau>1:
+			couverture ='niveau ' + str(niveau) +' : '+ str(len(noeuds_presents)) + ' noeuds présents dans la reconstruction sur ' + str(len(dico_termes.keys()))			
 		print couverture
 		text = text + couverture + '\n'
 		fonctions.ecrire_dico(champs,dico_transition,dico_termes,niveau+1)#ecrit le dictionaire de transition pour la prochaine etape
