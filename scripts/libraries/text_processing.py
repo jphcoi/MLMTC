@@ -93,12 +93,12 @@ def atleast(tag):
 			return False
 	if language=='english':
 		#avec filtre
-		#if tag in ['','NN','NP']:
-		#	return True
-		#else:
-		#	return False
+		if tag in ['','NN','NP']:
+			return True
+		else:
+			return False
 		#sans filtre
-		return True
+		#return True
 		
 def get_tags(wordv):
 	tags=[]
