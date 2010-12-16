@@ -21,9 +21,6 @@ NN_degree NP_c	NN_degree NP_n
 NN_degree NP_c	NN_degree NP_s
 NN_degree	degreesc
 NP_australia	australis
-macroalga	macroalgae
-macroalga	macroalgal
-macroalgae	macroalgal
 macroalgae	microalgae
 macroalgal	microalgal
 NN_absorption	NN_adsorption
