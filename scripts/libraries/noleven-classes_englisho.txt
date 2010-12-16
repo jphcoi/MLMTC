@@ -1,3 +1,32 @@
+spp	sp
+rrna	rdna
+NN_increase	NN_decrease
+JJ_significant NN_decrease	JJ_significant NN_increase
+rrna	rdna
+nodularia	nodularin
+NN_nitrate NN_concentration	NN_nitrogen NN_concentration
+mumol	mol
+macroalgae	microalgae
+NP_marine macroalgae	JJ_marine microalgae
+JJ_marine macroalgae	JJ_marine microalgae
+JJ_marine macroalga	JJ_marine microalgae
+macroalga	microalgae
+macrocystis	microcystis
+macroalga	microalga
+JJ_inorganic NP_c	JJ_inorganic NP_n
+JJ_green macroalgae	JJ_green microalgae
+macroalga	microalgae
+macroalga	microalga
+NN_degree NP_c	NN_degree NP_n
+NN_degree NP_c	NN_degree NP_s
+NN_degree	degreesc
+NP_australia	australis
+macroalga	macroalgae
+macroalga	macroalgal
+macroalgae	macroalgal
+macroalgae	microalgae
+macroalgal	microalgal
+NN_absorption	NN_adsorption
 NN_injection	NN_infection
 NN_planting	NN_planning
 NN_linkage	NN_lineage
