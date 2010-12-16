@@ -527,11 +527,15 @@ while fini==1:
 	champs = flat_comm(champs_k,years_bins)#on enleve l'overlap et on remet tout ça dans un ordre agréable
 	
 	#extension
-	seuil_aggregation=0.2
-	if niveau==1:
-		distance_champ=dist_mat
-	champs = extension(champs,distance_champ,years_bins,CF_weight,seuil_aggregation)
-	# on apparie en calculant un score liant chaque terme aux clusters: score(terme, champ)  = somme_{elements du cluster} [d(terme,elements du cluster)/(somme_{tous les termes} d(element du cluster, tous les termes))] / somme_{voisins du terme} d(terme,voisins)/poids_total_entrant(voisins)
+	try:
+		seuil_aggregation=parameters.seuil_aggregation
+		#seuil_aggregation=0.2
+		if niveau==1:
+			distance_champ=dist_mat
+		champs = extension(champs,distance_champ,years_bins,CF_weight,seuil_aggregation)
+		# on apparie en calculant un score liant chaque terme aux clusters: score(terme, champ)  = somme_{elements du cluster} [d(terme,elements du cluster)/(somme_{tous les termes} d(element du cluster, tous les termes))] / somme_{voisins du terme} d(terme,voisins)/poids_total_entrant(voisins)
+	except:
+		pass
 	nb_champs  = 0
 	nb_champs_min = 100000
 	
