@@ -26,7 +26,7 @@ path_req=parameters.path_req
 try:
 	timelimit=parameters.timelimit
 except:
-	timelimit='1'
+	timelimit=1
 
 dist_type=parameters.dist_type
 sep_label = ' --- '
@@ -523,7 +523,8 @@ def ecrire_tables_cluster_phylo(nodes,edges,sortie,level,time,attribut,sonsbis,f
 
 nivmax= 3
 map_corr,map_corr_noeuds,map_edges,noeuds_label,levels,times,indexsinv,indexs,map_dessous=phylogenie(nivmax)
-seuil_intertemp=0.03
+#seuil_intertemp=0.03
+seuil_intertemp=0.05
 intertemp = intertemporel(map_corr,map_corr_noeuds,map_edges,seuil_intertemp)
 
 #enfin on fusionne les  trois types de liens:
