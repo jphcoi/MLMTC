@@ -184,7 +184,10 @@ for nom_param,val_param in parametres.iteritems():
 	elif '"' in val_param   or  "'" in val_param:
 		t = t + '"' +str(val_param[1:-1])+ '"'
 	else:
-		t = t + str(int(val_param))
+		if '.' in val_param:
+			t = t + str(float(val_param))
+		else:
+			t = t + str(int(val_param))
 	exec(t)
 	
 years_bins = build_years_bins(fenetre,dated,datef,overlap)

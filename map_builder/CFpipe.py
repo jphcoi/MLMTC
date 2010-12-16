@@ -504,7 +504,7 @@ degmax=5
 type_score='combine'
 info={}
 lenchampsfinal={}
-text = ''
+text = 'Couverture:'
 while fini==1:
 	niveau=  niveau+1
 	CF_weight=CF_weight_v[niveau-1]
