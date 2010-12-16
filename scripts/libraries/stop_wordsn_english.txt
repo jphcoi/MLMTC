@@ -2,3 +2,13 @@
 JJ_same
 JJ_short
 JJ_various
+NN_result RB_also
+JJ_previous NN_study
+JJ_previous NP_study
+JJ_serious
+NN_view
+NP_different
+NN_method VH_have
+JJ_open
+JJ_preliminary
+NP_on NP_growth
