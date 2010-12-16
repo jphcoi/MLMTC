@@ -647,9 +647,9 @@ print hierarchie
 #print 'sons'
 #print sonsbis
 try:
-	CF_weight_0=parameters.CF_weight0
+	CF_weight0=parameters.CF_weight0
 except:
-	CF_weight_0=0.5
+	CF_weight0=0.5
 	
 sortie = path_req + 'gexf/' + 'reseau_multilevel_temporel'+'_'+ dist_type +'_'+str(years_bins[0][0])+'-'+str(years_bins[-1][-1])+'_' + str(CF_weight0)+'.gexf'
 #afficher_reseau(map_edgesbis,timesbis,levelsbis,noeuds_labelbis)
