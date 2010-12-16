@@ -646,7 +646,12 @@ print hierarchie
 #print fathersbis
 #print 'sons'
 #print sonsbis
-sortie = path_req + 'gexf/' + 'reseau_multilevel_temporel'+'_'+ dist_type +'_'+str(years_bins[0][0])+'-'+str(years_bins[-1][-1])+'.gexf'
+try:
+	CF_weight_v0=parameters.CF_weight0
+except:
+	CF_weight_v0=0.5
+	
+sortie = path_req + 'gexf/' + 'reseau_multilevel_temporel'+'_'+ dist_type +'_'+str(years_bins[0][0])+'-'+str(years_bins[-1][-1])+'_' + str(CF_weight0)+'.gexf'
 #afficher_reseau(map_edgesbis,timesbis,levelsbis,noeuds_labelbis)
 
 #auteur=7842
