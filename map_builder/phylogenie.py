@@ -651,7 +651,7 @@ try:
 except:
 	CF_weight0=0.5
 	
-sortie = path_req + 'gexf/' + 'reseau_multilevel_temporel'+'_'+ dist_type +'_'+str(years_bins[0][0])+'-'+str(years_bins[-1][-1])+'_' + str(CF_weight0)+'.gexf'
+sortie = path_req + 'gexf/' + 'reseau_multilevel_temporel'+'_'+ dist_type +'_'+str(years_bins[0][0])+'-'+str(years_bins[-1][-1])+'_' + str(CF_weight0).replace('.','')+'.gexf'
 #afficher_reseau(map_edgesbis,timesbis,levelsbis,noeuds_labelbis)
 
 #auteur=7842
