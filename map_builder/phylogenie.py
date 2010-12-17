@@ -23,6 +23,7 @@ path_req = parameters.path_req
 years_bins = parameters.years_bins
 name_bdd = parameters.name_bdd
 path_req=parameters.path_req
+degmax=5
 try:
 	timelimit=parameters.timelimit
 except:
@@ -84,7 +85,8 @@ def phylogenie(niv_max):
 		for niveau in range(niv_max):
 			niveau=niveau+1
 			try:
-				fichier_res=open(path_req +'reseau' + '/'+ 'reseauCF_'+'niv_'+str(niveau)+'_'+dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt','r')
+				fichier_res=open(path_req +'reseau' + '/'+ 'reseauCF_'+'niv_'+str(niveau)+'_'+dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'_degmax_'+str(degmax)+'.txt','r')
+				#fichier_res=open(path_req +'reseau' + '/'+ 'reseauCF_'+'niv_'+str(niveau)+'_'+dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt','r')							
 			except:
 				break
 			
