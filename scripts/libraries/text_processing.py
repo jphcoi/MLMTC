@@ -143,7 +143,7 @@ def isNotStopWordForClique(word, language):
 				if '_' in word:
 					w = word.split('_')[0]
 					if language == 'english':
-						if w in ['NN','NP','JJ']:
+						if w in ['NN','NP']:
 							return True
 					if language == 'french':
 						if w in ['NO','NA']:
