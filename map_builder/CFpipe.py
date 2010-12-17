@@ -566,6 +566,7 @@ while fini==1:
 			for xx in x:
 				if not xx in noeuds_presents:
 					noeuds_presents.append(xx)
+		couverture=''
 		if niveau>1:
 			couverture ='niveau ' + str(niveau) +' : '+ str(len(noeuds_presents)) + ' noeuds présents dans la reconstruction sur ' + str(len(dico_termes.keys()))			
 		print couverture
