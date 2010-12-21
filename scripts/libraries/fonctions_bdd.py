@@ -198,6 +198,13 @@ def count_rows(name_bdd,table):
 	connection.close()	
 	return sortie[0][0]
 
+def count_rows_where(name_bdd,table,where):
+	connection,ex = connexion(name_bdd)
+	sortie= ex("SELECT COUNT(*)  from " +table + ' ' + where).fetchall()
+	print "SELECT COUNT(*)  from " +table + ' ' + where
+	#print '\n' + "comptage de l evolution du nombre de " +champ_nom + " "+ str(champ_val) + " de la table " + table +  " dans la bdd " +name_bdd +'\n'
+	connection.close()
+	return sortie[0][0]
 
 def count(name_bdd,table):
 	connection,ex = connexion(name_bdd)

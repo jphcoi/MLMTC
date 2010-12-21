@@ -141,7 +141,7 @@ def extension_uni(classe_history,deja_uni_couple,deja_uni,xl):
 						classe_history.append(prop) 
 	return classe_history
 	
-def pack_leven(fichier,fichier_out,language,user_interface,freqmin):
+def pack_leven(fichier,fichier_out,language,user_interface,freqmin,Nb_rows = 0):
 	print '\nreduction de la liste avec levenstein\n'
 	fichier = open(fichier,'r')
 	fichier_out = open(fichier_out,'w')
@@ -358,8 +358,10 @@ def pack_leven(fichier,fichier_out,language,user_interface,freqmin):
 				coldecol.append(ens_set)
 				if occur> freqmin:
 					nlm = nlm + 1
-				 
-					resultats.append(chaine + '\t' + formes[numero] +'\t' + str(occur) +  '\n')
+				 	if Nb_rows>0:
+						resultats.append(chaine + '\t' + formes[numero] +'\t' + str(occur) + str(float(occur)/float(Nb_rows)) +  '\n')
+					else:
+						resultats.append(chaine + '\t' + formes[numero] +'\t' + str(occur) +  '\n')
 					#fichier_out.write(chaine + '\t' + formes[numero] +'\t' + str(occur) +  '\n')
 	result_ensembles=[]
 	resultats_propres=[]

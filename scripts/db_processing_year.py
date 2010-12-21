@@ -196,21 +196,19 @@ try:
 	#on verifie si on a deja calcule years
 	print years
 except:
-	
 	annees = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'billets','jours')
 	years = []
 	for an in annees:
 		if not an[0] in years:
 			years.append(an[0])
-	#puis on itere sur chaque tranche:
-	dictionnaire_gramme_year={}
-
+	
+print dictionnaire_gramme_year.keys()
 #puis on itere annee par annee
 for year in years:
 
 	#on trie par fréquence et on exporte le lexique final avec les occurrences 
 	print '\n'
-
+	print year
 	dico_final = misc.freq_tri(dictionnaire_gramme_year[year],freqmin,int(math.floor(top*1.1)),language,ng_filter)#on effectue le tri de notre dictionnaire
 
 	filename = path_req + requete + '_' + str(freqmin) + '_' +str(year) + '_' + 'liste_n-grammes_freq.txt'
@@ -218,12 +216,12 @@ for year in years:
 	filename = path_req + requete + '_' + str(freqmin) + '_' +str(year) + '_'+ 'liste_n-grammes_freq_divers.csv'
 	filename_redond =  path_req + requete + '_' + str(freqmin) +str(year) + '_'+ '_' + 'liste_n-grammes_freq_divers_noredond.csv'
 	filename_redond_leven =  path_req + requete + '_' + str(freqmin)+str(year) + '_' + '_' + 'liste_n-grammes_freq_divers_leven_noredond.csv'
- 
 	misc.ecrire_liste_lemmes_freq(dico_final,Nb_rows,filename,lemme_maj,freqmin,ng_filter)#on ecrit la liste precedente dans un fichier filename
 	print "\n+++"+str(len(dico_final))+" n-lemmes crees."
 	#leven.pack_rendondance(filename,filename_redond,maxTermLength,freqmin,language,redondance_manuelle,ng_filter,user_interface)
 	leven.pack_rendondance_exact(filename,filename_redond,maxTermLength,freqmin,language,ng_filter,user_interface)
 	print "\n"
-
-	leven.pack_leven(filename_redond,filename_redond_leven,language,user_interface,freqmin)
+	Nb_rows = fonctions_bdd.count_rows_where(name_bdd,'billets',' jours = '+ str(year))
+	print Nb_rows
+	leven.pack_leven(filename_redond,filename_redond_leven,language,user_interface,freqmin,Nb_rows)
 
