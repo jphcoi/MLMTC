@@ -1,0 +1,100 @@
+JJ_atomic NN_force	atomic NP_force
+NN_force NN_microscope	NP_force microscopy
+NN_material	materials
+NN_microscope	microscope
+NN_microscope	microscopy
+microscope	NN_microscopy
+microscope	microscopy
+NN_microscopy	microscopy
+nanogram	nanograms
+nanometer	nanometers
+nanometer NN_scale	nanometer-scale
+NN_particle	particles
+NN_quantum	NP_quantum
+VV_scan VV_tunnel NN_microscope	scanning tunneling microscope
+VV_scan VV_tunnel NN_microscope	VV_scan VV_tunnel NN_microscopy
+scanning tunneling microscope	VV_scan VV_tunnel NN_microscopy
+JJ_atomic NN_force	atomic NP_force
+NN_force NN_microscope	NP_force microscopy
+NN_material	materials
+NN_microscope	microscope
+NN_microscope	microscopy
+microscope	NN_microscopy
+microscope	microscopy
+NN_microscopy	microscopy
+nanogram	nanograms
+nanometer	nanometers
+nanometer NN_scale	nanometer-scale
+NN_particle	particles
+NN_quantum	NP_quantum
+VV_scan VV_tunnel NN_microscope	scanning tunneling microscope
+VV_scan VV_tunnel NN_microscope	VV_scan VV_tunnel NN_microscopy
+scanning tunneling microscope	VV_scan VV_tunnel NN_microscopy
+JJ_atomic NN_force	atomic NP_force
+NN_force NN_microscope	NP_force microscopy
+NN_material	materials
+NN_microscope	microscope
+NN_microscope	microscopy
+microscope	NN_microscopy
+microscope	microscopy
+NN_microscopy	microscopy
+nanogram	nanograms
+nanometer	nanometers
+nanometer NN_scale	nanometer-scale
+NN_particle	particles
+NN_quantum	NP_quantum
+VV_scan VV_tunnel NN_microscope	scanning tunneling microscope
+VV_scan VV_tunnel NN_microscope	VV_scan VV_tunnel NN_microscopy
+scanning tunneling microscope	VV_scan VV_tunnel NN_microscopy
+NN_film	films
+NN_material	materials
+nanogram	nanograms
+nanometer	nanometers
+nanometer NN_scale	nanometer-scale
+NN_property	NP_properties
+NN_quantum	NP_quantum
+JJ_atomic NN_force	atomic NP_force
+NN_electron NN_beam	electron-beam
+NN_force NN_microscope	NN_force NN_microscopy
+NN_force NN_microscope	NP_force microscopy
+NN_force NN_microscopy	NP_force microscopy
+NN_microscope	microscope
+NN_microscope	microscopy
+microscope	NN_microscopy
+microscope	microscopy
+NN_microscopy	microscopy
+nanogram	nanograms
+nanometer	nanometers
+nanometer NN_scale	nanometer-scale
+NN_particle	particles
+NN_quantum	NP_quantum
+VV_scan VV_tunnel NN_microscope	scanning tunneling microscope
+VV_scan VV_tunnel NN_microscope	VV_scan VV_tunnel NN_microscopy
+scanning tunneling microscope	VV_scan VV_tunnel NN_microscopy
+NN_silicon	NP_silicon
+NN_film	films
+NN_material	materials
+nanogram	nanograms
+nanometer	nanometers
+nanometer NN_scale	nanometer-scale
+NN_property	NP_properties
+NN_quantum	NP_quantum
+JJ_atomic NN_force	atomic NP_force
+NN_electron NN_beam	electron-beam
+NN_force NN_microscope	NN_force NN_microscopy
+NN_force NN_microscope	NP_force microscopy
+NN_force NN_microscopy	NP_force microscopy
+NN_microscope	microscope
+NN_microscope	microscopy
+microscope	NN_microscopy
+microscope	microscopy
+NN_microscopy	microscopy
+nanogram	nanograms
+nanometer	nanometers
+nanometer NN_scale	nanometer-scale
+NN_particle	particles
+NN_quantum	NP_quantum
+VV_scan VV_tunnel NN_microscope	scanning tunneling microscope
+VV_scan VV_tunnel NN_microscope	VV_scan VV_tunnel NN_microscopy
+scanning tunneling microscope	VV_scan VV_tunnel NN_microscopy
+NN_silicon	NP_silicon
