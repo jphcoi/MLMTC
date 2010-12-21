@@ -386,7 +386,12 @@ def remplir_table_billets(name_bdd,name_table,champs_liste,champs_name,requete):
 				chaine = str(chaine)
 				champ_sql = champ_sql + '\'' +chaine +   '\'' + ','
 			champ_sql = champ_sql +     '\'' +requete +   '\'' 
-			champ_sql = champ_sql + ','+    '\'' +champ[1]+'_'+champ[2].replace("'","popostrophe") +'_'+ requete  +   '\'' 
+			if ".isi" in name_bdd or ".isy" in name_bdd :
+				#version isi pour éliminer les doublons à partir de la liste des identifiants isi: isi:a1996ur12500023
+				champ_sql = champ_sql + ','+    '\'' +champ[6] +   '\'' 
+			else:
+				champ_sql = champ_sql + ','+    '\'' +champ[1]+'_'+champ[2].replace("'","popostrophe") +'_'+ requete  +   '\'' 
+			
 			values = " VALUES (" +str(champ_sql) + ')'
 			commandesql = "INSERT OR IGNORE INTO billets " + champs_name + values
 			ex(commandesql)
