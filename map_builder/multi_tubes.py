@@ -30,7 +30,10 @@ path_req=parameters.path_req
 name_data_real=parameters.name_data_real
 timelimit='1'
 degmax=5
-
+try:
+	CF_weight0 = parameters.CF_weight0
+except:
+	CF_weight0=0.5
 
 dist_type=parameters.dist_type
 
@@ -647,7 +650,9 @@ def build_tubes(multi_level_dyn_net,resolution_niveau,resolution_continuite,seui
 ################################################################################################################################################
 ###parametres de l'ensemble:
 def get_tubes(resolution_niveau = 4,seuil_netermes=  0.5,resolution_continuite = 2	,proj_thres=0.3):
-	param_txt = name_data_real+'_res_niv_' + str(resolution_niveau) + '_seuil_netermes_' + str(seuil_netermes) +'_res_cont_'+str(resolution_continuite) +'_proj_thres_'+str(proj_thres)
+	#param_txt = name_data_real+'_res_niv_' + str(resolution_niveau) + '_seuil_netermes_' + str(seuil_netermes) +'_res_cont_'+str(resolution_continuite) +'_proj_thres_'+str(proj_thres)
+	name_date = str(years_bins[0][0]) + '_' + str(years_bins[0][-1]) + '_'+ str(years_bins[1][0])+ '_'+str(years_bins[-1][-1])
+	param_txt = name_data_real+'_res_niv_' + str(resolution_niveau) + '_seuil_netermes_' + str(seuil_netermes) +'_res_cont_'+str(resolution_continuite) +'_proj_thres_'+str(proj_thres) + name_date  + str(CF_weight0)
 	
 	try:
 		#inutile puisque le try est déjà calculé

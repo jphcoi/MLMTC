@@ -160,7 +160,7 @@ print parametres_file
 ################################################
 ################################################
 ################################################
-
+continent=''
 print os.getcwd()
 parametres = load_param(parametres_file)
 print '\n'
@@ -247,7 +247,7 @@ if "home/web/prod" in os.getcwd():
 
 name_data_v = name_data.split('/')
 requete = name_data_v[-2]
-if name_data[-4:] in ['.lfl','.rss'] :
+if name_data[-4:] in ['.lfl','.rss','.isy'] :
 	requete = name_data_v[-1]
 	if len(Kws)>0:
 		requete = requete + continent + str(len(Kws))

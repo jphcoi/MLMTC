@@ -9,6 +9,8 @@ import sys
 sys.path.append("../scripts/libraries")
 sys.path.append("../scripts")
 import parameters
+import multi_tubes
+
 import fonctions_lib
 path_req = parameters.path_req
 years_bins = parameters.years_bins
@@ -22,51 +24,55 @@ from class_def import *
 import fonctions 
 resolution_niveau = 10
 seuil_netermes=  0.4
-resolution_continuite = 1
+resolution_continuite = 4
 proj_thres=0.3
-param_txt = name_data_real+'_res_niv_' + str(resolution_niveau) + '_seuil_netermes_' + str(seuil_netermes) +'_res_cont_'+str(resolution_continuite) +'_proj_thres_'+str(proj_thres)
-print param_txt
 try:
+	CF_weight0 = parameters.CF_weight0
+except:
+	CF_weight0=0.5
+name_date = str(years_bins[0][0]) + '_' + str(years_bins[0][-1]) + '_'+ str(years_bins[1][0])+ '_'+str(years_bins[-1][-1])
+param_txt = name_data_real+'_res_niv_' + str(resolution_niveau) + '_seuil_netermes_' + str(seuil_netermes) +'_res_cont_'+str(resolution_continuite) +'_proj_thres_'+str(proj_thres) +name_date  + str(CF_weight0)
+print param_txt
+
+try:
+	#recalculer les tubes, alors lancer ligne suivante:
 	#tubes = fonctions.dumpingout(param_txt+'tubessdqklsqkmlsdjslqdkjm')
 	tubes = fonctions.dumpingout(param_txt+'tubes')
-	dyn_net_zoom = fonctions.dumpingout(param_txt+'dyn_net_zoom')
-	res_intertemp_zoom = fonctions.dumpingout(param_txt+'res_intertemp_zoom')
-	
+	#res_intertemp_zoom = fonctions.dumpingout(param_txt+'res_intertemp_zoom')
+	#pas utile
+	#dyn_net_zoom = fonctions.dumpingout(param_txt+'dyn_net_zoom')
+	print 'bravo'
 except:
-	import multi_tubes
 	tubes,dyn_net_zoom,res_intertemp_zoom=multi_tubes.get_tubes(resolution_niveau,seuil_netermes,resolution_continuite,proj_thres)
 	
 	print "des tubes précédemments calculés ont été importés" 
 #tubes[seuil_intertemp][zoo] = liste de tubes
 
-import multi_tubes
 inter_temp_liste = tubes.keys()
 zoom_niveau_v = tubes[inter_temp_liste[0]]
+#zoom_continuite = multi_tubes.build_zoom_log(resolution_continuite)
+
 zoom_niveau=zoom_niveau_v.keys()
 
 #visualisation des données:
-for seuil_inter,tubes_inter in tubes.iteritems():
-	print 'seuil_inter: ' + str(seuil_inter)
-	for zoo,tube_liste in tubes_inter.iteritems():
-		nets = dyn_net_zoom[zoo]
-		print 'zoo ' + str(zoo)
-		for tube1 in tube_liste:
-			for ch1 in tube1.liste_champs:
-				for tube2 in tube_liste:
-				#on cherche les distances entre éléments de tubes, juste pour vérif:
-					for ch2 in tube2.liste_champs:
-						if ch1.periode==ch2.periode:
-							net = nets[ch1.periode]
-							#print net
-							#print '\t' + str((ch1,ch2))
-							#print  '\n\t' + str(ch1.periode)
-							#print  '\t' + str(Liste_termes.afficher_liste_termes(ch1.label))
-							#print  '\t' + Champ.print_elements(ch1)
-							distances  = net.champs_dist
-							for couple in distances.keys():
-								if (ch1,ch2)==couple:
-									pass
-									#print ' force ' + str(distances[couple]) + ' entre ' + str(ch1) + ' et ' +str(ch2)
+visu=0
+if visu==1:
+	for seuil_inter,tubes_inter in tubes.iteritems():
+		print 'seuil_inter: ' + str(seuil_inter)
+		for zoo,tube_liste in tubes_inter.iteritems():
+			nets = dyn_net_zoom[zoo]
+			print 'zoo ' + str(zoo)
+			for tube1 in tube_liste:
+				for ch1 in tube1.liste_champs:
+					for tube2 in tube_liste:
+					#on cherche les distances entre éléments de tubes, juste pour vérif:
+						for ch2 in tube2.liste_champs:
+							if ch1.periode==ch2.periode:
+								net = nets[ch1.periode]
+								distances  = net.champs_dist
+								for couple in distances.keys():
+									if (ch1,ch2)==couple:
+										pass
 
 def unique(liste):
 	liste_u=[]
@@ -87,22 +93,6 @@ def dict_init(keys,val=[]):
 		dicti[key]=val
 	return dicti
 	
-# def create_tube_linear(liste_champs):
-# 	inters = unique(map(Champ.get_periode,liste_champs))
-# 	#print inters
-# 	annees = range(years_bins[inters[0]][0],years_bins[inters[-1]][-1]+1)
-# 	tube_epaisseur = dict_init(annees)
-# 	#print tube_epaisseur
-# 	for champ in liste_champs:
-# 		notices = champ.poids
-# 		#print notices
-# 		annees=years_bins[Champ.get_periode(champ)]
-# 		epais = dict_init(annees)
-# 		for notice in notices:
-# 			epais[notice[1]]=epais[notice[1]]+[notice[0]]
-# 		tube_epaisseur=fonctions_lib.merge(tube_epaisseur,epais,lambda x,y:unique(x+y))
-# 	return tube_epaisseur
-
 def print_l(dict):
 	for x,y in dict.iteritems():
 		print str(x)  + '\t' + str(len(y))
@@ -165,16 +155,8 @@ def to_dict(points):
 	return dic_points
 		
 def create_js_bar(liste_points,label_tubes,niv,fichier):
-#	path_req_protovis = path_req + '/' + 'protovis'  + '/'
-#	if not os.path.isdir(path_req_protovis):
-#		os.makedirs(path_req_protovis)
-#	fichier = file(path_req_protovis+'jobs2-niv' +str(niv)+'.js','w')
 	rge_y = range(years_bins[0][0], years_bins[-1][-1]+1)
-#	out = 'var years = ' + str(rge_y)+';'
 	dict_0 = dict_init(rge_y,0)
-	#print dict_0
-#	out = out + '\n'
-#	out = out + "var jobs = {" 
 	out =''
 	for label,points in zip(label_tubes,liste_points):
 		out = out + '\n"' + str(niv) + '*'  + label[1:] + '"' + ': {'
@@ -184,88 +166,51 @@ def create_js_bar(liste_points,label_tubes,niv,fichier):
  			points_ranges.append((points_complets[x]))
 		out = out + '\n' + str(niv) + ':'
 		out = out + str(points_ranges)# + ',' + '\n'
-		#print points_ranges
-		#out = out + 'women: '		
-		#out = out + str(points_ranges) + '\n'
-		out = out + '},'
-		#blank part to be blanked...
-		# out = out + '\n"'  +label[1:4]+ '"' + ': {'
-		# points_ranges=[]
-		# for x in rge_y:
-		#  			points_ranges.append(4)
-		# print points_ranges
-		# out = out + '\nmen: '
-		# out = out + str(points_ranges)# + ',' + '\n'
-		# out = out + '},'
-	
+		out = out + '},'	
 	fichier.write(out)
 
-continuite_test=0
-tube_fin = tubes[inter_temp_liste[continuite_test]]
-print ' on regarde le seuil de continuite: ' +str(inter_temp_liste[continuite_test])
 
-path_req_protovis = path_req + '/' + 'protovis'  + '/'
-if not os.path.isdir(path_req_protovis):
-	os.makedirs(path_req_protovis)
-fichier = file(path_req_protovis+'jobs.js','w')
-rge_y = range(years_bins[0][0], years_bins[-1][-1]+1)
-out = 'var years = ' + str(rge_y)+';'
-out = out + "var jobs = {" 
-fichier.write(out)
+def export_jobs(continuite_test):
+	tube_fin = tubes[inter_temp_liste[continuite_test]]
+	print ' on regarde le seuil de continuite: ' +str(inter_temp_liste[continuite_test])
+	inter_temp_liste_ord = inter_temp_liste
+	inter_temp_liste_ord.sort()
+	
+	path_req_protovis = path_req + '/' + 'protovis'  + '/'
+	if not os.path.isdir(path_req_protovis):
+		os.makedirs(path_req_protovis)
+	fichier = file(path_req_protovis+'jobs' +str(inter_temp_liste_ord.index(inter_temp_liste[continuite_test]))  +'.js','w')
+	rge_y = range(years_bins[0][0], years_bins[-1][-1]+1)
+	out = 'var years = ' + str(rge_y)+';'
+	out = out + "var jobs = {" 
+	fichier.write(out)
 
-for niv,tube_fin_liste in tube_fin.iteritems():
-	niveau = zoom_niveau.index(niv)
-	niv_ok = int(niv*resolution_niveau)
-	print str(niv),str(niveau),str(niv_ok)
-	liste_points=[]
-	poid_total=0
-	label_tubes = []
+	for niv,tube_fin_liste in tube_fin.iteritems():
+		niveau = zoom_niveau.index(niv)
+		niv_ok = int(niv*resolution_niveau)
+		print str(niv),str(niveau),str(niv_ok)
+		liste_points=[]
+		poid_total=0
+		label_tubes = []
 	
-	for tube in tube_fin_liste:
-		liste_champs= tube.liste_champs
-		#print liste_champs
-		#print Tube.print_elements(tube)
-		label_tube = Liste_termes.afficher_liste_termes(tube.label)
-		label_tubes.append(label_tube)
-		inters = map(Champ.get_periode,liste_champs)
-		if 1:
-		#if not len(list(set(inters))) == len(inters):
-		#	print liste_champs
-		#	for ch in liste_champs:
-		#		print ch.periode
-		#	print 'branching occuring'
-			tube_epaisseur =  find_tube_epaisseur(liste_champs)
-			
-			points = tranforme_points(tube_epaisseur,poid_total,'svg')
-			#print points
-			delta = max(map(get_second,points))
-			liste_points.append(tranforme_points(tube_epaisseur))
-			#print poid_total
-			#poid_total= delta+1
-		# else:
-		# 	if len(inters)>0:	
-		# 		#print inters
-		# 		#print 'no branching occuring'
-		# 		tube_epaisseur =  create_tube_linear(liste_champs)
-		# 		#print tube_epaisseur
-		# 		#print tranforme_points(tube_epaisseur,poid_total)
-		# 		points = tranforme_points(tube_epaisseur,poid_total,'svg')
-		# 		liste_points.append(tranforme_points(tube_epaisseur))
-		# 	
-		# 		#print points
-		# 		delta = max(map(get_second,points))
-		# 		#liste_points.append(points)
-		# 		#print poid_total
-		# 		#poid_total= delta+1
-	
-
-	#print liste_points
-	
-	create_js_bar(liste_points,label_tubes,niv_ok,fichier)
-	#create_html...
-	#create_svg(liste_points[:])
-fichier.write("\n};")
+		for tube in tube_fin_liste:
+			liste_champs= tube.liste_champs
+			label_tube = Liste_termes.afficher_liste_termes(tube.label)
+			label_tubes.append(label_tube)
+			inters = map(Champ.get_periode,liste_champs)
+			if 1:
+				tube_epaisseur =  find_tube_epaisseur(liste_champs)
+				points = tranforme_points(tube_epaisseur,poid_total,'svg')
+				#print points
+				delta = max(map(get_second,points))
+				liste_points.append(tranforme_points(tube_epaisseur))	
+		create_js_bar(liste_points,label_tubes,niv_ok,fichier)
+	fichier.write("\n};")
  
-# print tubes
-# print dyn_net_zoom
-# print res_intertemp_zoom
+	# print tubes
+	# print dyn_net_zoom
+	# print res_intertemp_zoom
+	
+for continuite_test in range(resolution_continuite):
+	print continuite_test
+	export_jobs(continuite_test)

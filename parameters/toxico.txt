@@ -7,7 +7,7 @@ maxTermLength = 5
 freqmin = 10
 ng_filter=[1,2,2,2,2]
 content_indexation='TA'
-CF_weight0=0.6
+CF_weight0=0.4
 top = 500
 sample=5000
 
@@ -15,8 +15,8 @@ build_link_tables='y'
 
 dated = 1995
 datef = 2010
-fenetre = 3
-overlap = 3
+fenetre = 2
+overlap = 2
 dist_type='precision'
 nofigure=1
 user_interface='y'

@@ -440,6 +440,44 @@ def extract_champs_lfl(filename,sep,continent=''):
 	print "---",len(articles),"posts processed."
 	return articles
 
+def isiparse(filename,sep):
+	file=codecs.open(filename,"r","utf8")
+	lines = file.readlines()
+	dico_article = {}
+	champs_liste=['TI','DT','ID','AB','CR','DI','AU','PY','JI','DE','ER','UT']
+	i=-1
+	articles=[]
+	nb_article=0
+	for line in lines:
+		i=i+1
+		dico_article = get_field_raw(champs_liste,line, dico_article,lines,i)
+		if dico_article.has_key('ER'):
+			nb_article +=1
+			if nb_article%100==0:
+				print nb_article
+			categ3,categ2='',''
+			infos= process_field(champs_liste,dico_article,sep)
+			articles.append(infos)#sans le html brut
+			dico_article={}
+	file.close()
+	print "---",len(articles),"posts processed."
+	return articles
+
+
+def extract_champs_isy(dir,sep):
+	articles=[]
+	print "    - répertoire d'articles: \""+dir+"\"..."
+	articles = []
+	for item in [f for f in os.listdir(dir)]:
+		print "année : " +str(item)
+		for item2 in [f for f in os.listdir(dir + '/' +item)]:
+			if item2[0] != '.':
+				fichier = dir +  '/' +item+'/' +item2
+				print fichier
+				articles_file=isiparse(fichier,sep)
+				articles=articles +articles_file
+	return articles
+
 def extract_champs_isi(filename,sep):
 	articles=[]
 	print "    - fichier d'articles: \""+filename+"\"..."
@@ -1025,6 +1063,9 @@ def extraire_donnees(name_data,sep):
 		champs = extract_champs_lfl(name_data,sep,continent)
 	if ".rss" == name_data[-4:]:#export au format .lfl: linkfluence type III ou IV
 		champs = extract_champs_rss(name_data,sep)
+	if ".isy" == name_data[-4:]:#export au format .lfl: linkfluence type III ou IV
+		champs = extract_champs_isy(name_data,sep)
+
 	if ".doc" == name_data[-4:]:#export au format .doc: export doctissimo
 		champs = extract_champs_doc(name_data)
 

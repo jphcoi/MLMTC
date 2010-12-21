@@ -394,7 +394,7 @@ def remplir_table_billets(name_bdd,name_table,champs_liste,champs_name,requete):
 			#print 'youpi'
 			
 		except:
-			print champ
+			#print champ
 			print "il y a un  probleme d'encodage pour remplir la table billets"
 	connection.commit()
 	connection.close()
