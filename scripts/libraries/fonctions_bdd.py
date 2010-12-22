@@ -389,17 +389,17 @@ def remplir_table_billets(name_bdd,name_table,champs_liste,champs_name,requete):
 	
 	#verif des doublons
 	#champs : ['TI','PY','DI','AU','CT','ID','DE','AB','CR','UT']
-	isi_un=[]
-	auteur_source_annee_titre=[]
+	#isi_un=[]
+	#auteur_source_annee_titre=[]
 
 	for champ in champs_liste: 
-		if not champ[-1] in isi_un:
-			isi_un.append(champ[6])
-		auteur_source_annee_titre_val = champ[3] + '_' + champ[4] + '_' +champ[1] + '_' + champ[0]
-		if  not auteur_source_annee_titre_val in auteur_source_annee_titre:
-			auteur_source_annee_titre.append(auteur_source_annee_titre_val)
-		else:
-			print auteur_source_annee_titre_val
+		# if not champ[-1] in isi_un:
+		# 		isi_un.append(champ[6])
+		# 	auteur_source_annee_titre_val = champ[3] + '_' + champ[4] + '_' +champ[1] + '_' + champ[0]
+		# 	if  not auteur_source_annee_titre_val in auteur_source_annee_titre:
+		# 		auteur_source_annee_titre.append(auteur_source_annee_titre_val)
+		# 	else:
+		# 		print auteur_source_annee_titre_val
 		try:
 			champ_sql = ''
 			for ch in champ:
@@ -423,8 +423,8 @@ def remplir_table_billets(name_bdd,name_table,champs_liste,champs_name,requete):
 			#print champ
 			print "il y a un  probleme d'encodage pour remplir la table billets"
 	connection.commit()
-	print str(len(isi_un)) + ' numeros isi uniques'
-	print str(len(auteur_source_annee_titre)) + ' auteur_source_annee_titre dans la base '
+#	print str(len(isi_un)) + ' numeros isi uniques'
+#	print str(len(auteur_source_annee_titre)) + ' auteur_source_annee_titre dans la base '
 
 	connection.close()
 	print "    + table \"" + name_table+"\" remplie"
