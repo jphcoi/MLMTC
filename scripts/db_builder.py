@@ -82,8 +82,6 @@ champs = parseur.extraire_donnees(name_data,sep)
 print len(champs)
 print "    - liste de liste de champs \"champs\" mise a jour."
 print "      - par exemple, champs[0] = ",champs[0]
-#for ch in champs[1]:
-#	print ch
 #on remplit la bdd avec les infos extraites
 
 champs_name = "(title,date,permalink,site,categorie1,categorie2,categorie3,content,href,requete,identifiant_unique)"#on n'enregistre pas le html brut

@@ -396,8 +396,9 @@ def get_field_precise(champ,dico,sep):
 	return valeur
 	
 def process_field(champs_liste,dico_article,sep):
+	#champs_liste=['TI','DT','ID','AB','CR','DI','AU','PY','CT','DE','ER','UT']
 	
-	infos = map(get_field_precise,['TI','PY','DI','AU','JI','ID','DE','AB','CR','UT'],[dico_article,dico_article,dico_article,dico_article,dico_article,dico_article,dico_article,dico_article,dico_article,dico_article],[sep,sep,sep,sep,sep,sep,sep,sep,sep,sep])
+	infos = map(get_field_precise,['TI','PY','DI','AU','CT','ID','DE','AB','CR','UT'],[dico_article,dico_article,dico_article,dico_article,dico_article,dico_article,dico_article,dico_article,dico_article,dico_article],[sep,sep,sep,sep,sep,sep,sep,sep,sep,sep])
 																														#champs_name = "(title,date,permalink,site,categorie1,categorie2,categorie3,content,href,requete,identifiant_unique)"#on n'enregistre pas le html bru	
 	#on aggrege tous les champs contenus (TITRE  + MOTS CLES ID + MOTS CLES DE + ABSTRACT) 	
 	#infos[7]=infos[0]+' . '+infos[5]+' . '+infos[6]+' . '+infos[7]
@@ -427,7 +428,7 @@ def process_field(champs_liste,dico_article,sep):
 	#on remet les DOI à leur place (CR)
 	infos[8]=infos[8].replace('DOI *** ','DOI ')
 	infos[8]=infos[4]#.replace('DOI *** ','DOI ')
-	infos.pop()  
+	infos.pop() 
 	return infos
 	
 
@@ -444,7 +445,9 @@ def isiparse(filename,sep):
 	file=codecs.open(filename,"r","utf8")
 	lines = file.readlines()
 	dico_article = {}
-	champs_liste=['TI','DT','ID','AB','CR','DI','AU','PY','JI','DE','ER','UT']
+	#champs_liste=['TI','DT','ID','AB','CR','DI','AU','PY','JI','DE','ER','UT']
+	#on remplace le champ JI par le champ CT
+	champs_liste=['TI','DT','ID','AB','CR','DI','AU','PY','CT','DE','ER','UT']
 	i=-1
 	articles=[]
 	nb_article=0
@@ -485,7 +488,9 @@ def extract_champs_isi(filename,sep):
 	lines = file.readlines()
 #	categ1,categ2,categ3,permalink,contentanchor = '','','','',''
 	dico_article = {}
-	champs_liste=['TI','DT','ID','AB','CR','DI','AU','PY','JI','DE','ER','UT']
+	#champs_liste=['TI','DT','ID','AB','CR','DI','AU','PY','JI','DE','ER','UT']
+	#on remplace le champ JI par le champ CT
+	champs_liste=['TI','DT','ID','AB','CR','DI','AU','PY','CT','DE','ER','UT']
 	# TI Extraction of Bio-oils from Microalgae
 	# DT Article
 	# ID ACCELERATED SOLVENT-EXTRACTION; SUBCRITICAL WATER EXTRACTION; MICROBIAL

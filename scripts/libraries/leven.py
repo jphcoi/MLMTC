@@ -359,7 +359,7 @@ def pack_leven(fichier,fichier_out,language,user_interface,freqmin,Nb_rows = 0):
 				if occur> freqmin:
 					nlm = nlm + 1
 				 	if Nb_rows>0:
-						resultats.append(chaine + '\t' + formes[numero] +'\t' + str(occur) + str(float(occur)/float(Nb_rows)) +  '\n')
+						resultats.append(chaine + '\t' + formes[numero] +'\t' + str(occur) +'\t' + str(float(occur)/float(Nb_rows)*100.).replace('.',',') +  '\n')
 					else:
 						resultats.append(chaine + '\t' + formes[numero] +'\t' + str(occur) +  '\n')
 					#fichier_out.write(chaine + '\t' + formes[numero] +'\t' + str(occur) +  '\n')

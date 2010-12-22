@@ -175,7 +175,7 @@ except:
 				duration = str(size_seq)
 			else:
 				duration = str(min(Nb_rows - size_seq*x,sample))
-			where = 'jours = ' + str(year) + ' '
+			where = ' where jours = ' + str(year) + ' '
 			contenu = fonctions_bdd.select_bdd_table_where_limite(name_bdd,'billets','content_lemmatise',sample,requete,where,lim_d+','+duration,Nb_rows)
 			for billetlemm in contenu:
 				billetprocessed_after_requete=1+billetprocessed_after_requete
@@ -221,7 +221,7 @@ for year in years:
 	#leven.pack_rendondance(filename,filename_redond,maxTermLength,freqmin,language,redondance_manuelle,ng_filter,user_interface)
 	leven.pack_rendondance_exact(filename,filename_redond,maxTermLength,freqmin,language,ng_filter,user_interface)
 	print "\n"
-	Nb_rows = fonctions_bdd.count_rows_where(name_bdd,'billets',' jours = '+ str(year))
+	Nb_rows = fonctions_bdd.count_rows_where(name_bdd,'billets',' where jours = '+ str(year))
 	print Nb_rows
 	leven.pack_leven(filename_redond,filename_redond_leven,language,user_interface,freqmin,Nb_rows)
 
