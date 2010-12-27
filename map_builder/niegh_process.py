@@ -70,10 +70,17 @@ def build_nbbillet(contenu,years_bin):
 
 
 
+def unique(lis):
+	lisunique=[]
+	for x in lis:
+		if not x in lisunique:
+			lisunique.append(x)
+	return lisunique
+	
 def convert_clique_txt_2_list(clique_txt):
 	if not str(clique_txt)=='None' and not len(str(clique_txt))<3:
 		clique = clique_txt[1:-1].split(', ')
-		return map(int,clique)
+		return unique(list(map(int,clique)))
 	else:
 		return []
 
