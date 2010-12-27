@@ -204,6 +204,8 @@ name_bdd = path_req + requete+ '.db'
 
 
 #decoupage hebdomadaire
+print name_data
+print name_data[-4:]
 try:
 	if name_data[-4:] in ['.lfl','.rss']:
 		jours = select_bdd_table_champ_simple(name_bdd,'billets','jours')
