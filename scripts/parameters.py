@@ -35,10 +35,8 @@ def connexion(name_bdd):
 
 
 def select_bdd_table_champ_simple(name_bdd,table,champ):
-	print name_bdd
 	connection,ex = connexion(name_bdd)
 	sortie= ex("SELECT "  + champ +  "   from " +table ).fetchall()
-	print "SELECT "  + champ +  "   from " +table
 	sortie_ok = []
 	for sor in sortie:
 		soso_v=[]
@@ -206,12 +204,8 @@ name_bdd = path_req + requete+ '.db'
 
 
 #decoupage hebdomadaire
-print name_data
-print name_data[-4:]
 try:
-	print 'ij'
 	if name_data[-4:] in ['.lfl','.rss']:
-		print name_bdd
 		jours = select_bdd_table_champ_simple(name_bdd,'billets','jours')
 		dated = min(jours)
 		prop =  7 * (int(dated[0]) / 7)  + 4 #c'est le jour du 1er janvier 2010 qui dicte cela
@@ -234,9 +228,8 @@ except:
 	pass
 
 
-print dated,datef
+
 years_bins = build_years_bins(fenetre,dated,datef,overlap)
-print years_bins
 years_bins_no_overlap = build_years_bins(fenetre,years_bins[0][0],years_bins[-1][-1],0)
 print years_bins
 print years_bins_no_overlap
@@ -248,11 +241,11 @@ if nofigure==1:
 		char_int.append(str(i))
 
 try:
-	seuil_cooccurrences==1
+	seuil_cooccurrences==parameters.seuil_cooccurrences
 except:
 	seuil_cooccurrences=2
 try:
-	user_interface==1
+	user_interface==parameters.user_interface
 except:
 	user_interface='n'
 
