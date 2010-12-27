@@ -6,6 +6,7 @@ sys.path.append("./libraries")
 import fonctions_lib
 import sqlite3
 server = "root@veilledynamique.com"
+
 def vectoriser(chaine):
 	chaine = chaine[1:-1]
 	return map(int,chaine.split(','))
@@ -63,32 +64,25 @@ def build_total_window(dated,datef):
 
 def build_years_bins(fenetre,dated,datef,overlap):
 	total_window=build_total_window(dated,datef)
-	#annee_min=-int((datef-dated+1)/(fenetre))*(fenetre-overlap)
 	total_window_pert = total_window[:]
 	years_bins=[]
 	year_bins=[]
 	for i in range((datef-dated+1)/(fenetre)):
-		#print (i+1)*fenetre+overlap
-		#print len(total_window_pert)
 		window = total_window_pert[i*fenetre:(i+1)*fenetre+overlap]
 		if (i+1)*fenetre+overlap<len(total_window_pert)+1:
-		#print window
 			years_bins.append(window)
 	for bins in years_bins:
 		if len(bins)>0:
 			year_bins.append(bins)
-	#on redecalle vers la droite
 	years_bins_bis = []
 	for intervalles in years_bins:
 		interbis=[]
 		for x in intervalles:
 			interbis.append(x+datef-years_bins[-1][-1])
 		years_bins_bis.append(interbis)
-	#print year_bins
-#	print years_bins_bis
 	return years_bins_bis
 	
-print "--- initialisation de \"parameters.py\"..."
+print "--- paremeters initialisation ..."
 
 # 
 # content_indexation='T'#Title
@@ -97,77 +91,19 @@ print "--- initialisation de \"parameters.py\"..."
 # # content_indexation='TAKW'#Title + Abstract +Key Words
 # #content_indexation='KW'#Key words
 # #content_indexation='TA'#Title + Abstract 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# name_data,language,date_depart,freqmin,ng_filter,top,sample =  "../data/nature/nature-abstract.med",'english',date(1970,1,1),2,[1,1.5,2,2,2],5000,5000
-# withrequete=0
-# dated = 1970
-# datef = 2009
-# fenetre = 5
-# overlap = 5
-# years_bins = build_years_bins(fenetre,dated,datef,overlap)
-# 
-# 
-# 
-# name_data,language,date_depart,freqmin,ng_filter,top,sample =  "../data/export_MESR_20100722_light.lfl",'french',date(2010,1,1),2,[1,2,3,0,0],400,300
-# maxTermLength=5
-# #years_bins = [[1980], [2000], [2009]]
-# datef = 500
-# dated = 1
-# fenetre = 500
-# overlap = 0
-# years_bins = build_years_bins(fenetre,dated,datef,overlap)
-# 
-# name_data,language,date_depart,freqmin,ng_filter,top,sample =  "../data/toxico/toxico.isi",'english',date(1970,1,1),10,[1,2,3,3,3],100,100
-# dated = 1990
-# datef = 2010
-# fenetre = 4
-# overlap = 5
-
-
-################################################
-################################################
-################################################
-################################################
-################################################
 
 argv = sys.argv
 if len(argv)>1:#print argv
 	parametres_file = '../parameters/' + sys.argv[1] + '.txt'
 else:
-	parametres_file='../parameters/job.txt'
-print parametres_file
-
-
-# parametres_file='../parameters/job.txt'
-# parametres_file='../parameters/toxico.txt'
-# parametres_file='../parameters/param.txt'
-# 
-# #parametres_file='../parameters/docilite.txt'
-# parametres_file='../parameters/test.txt'
-# parametres_file='../parameters/docti.txt'
-# parametres_file='../parameters/MESR.txt'
-# parametres_file='../parameters/MESR-light.txt'
-
-################################################
-################################################
-################################################
-################################################
-################################################
-continent=''
-print os.getcwd()
-parametres = load_param(parametres_file)
-print '\n'
-print 'parametres: '+str(parametres)
-print '\n'
+	parametres_file='../parameters/toxico.txt'
+print 'parameters files loaded from: ' + parametres_file
 
 #default parameters:
+sep = ' *** '
+char_int = ['>','<','(',')','[',']','*','}','{','#','>','<','=','&','|']
+continent=''
+
 try:
 	content_indexation=parameters.content_indexation
 except:
@@ -175,6 +111,18 @@ except:
 	
 withrequete=0
 lemmadictionary = 0
+
+
+
+
+parametres = load_param(parametres_file)
+
+
+
+print '\n'
+print 'parametres: '+str(parametres)
+print '\n'
+
 for nom_param,val_param in parametres.iteritems():
 	#print nom_param,val_param
 	t=str(nom_param)+'='	
@@ -194,9 +142,6 @@ for nom_param,val_param in parametres.iteritems():
 			t = t + str(int(val_param))
 	exec(t)
 	
-years_bins = build_years_bins(fenetre,dated,datef,overlap)
-################################################
-
 
 
 
@@ -208,14 +153,11 @@ if name_data[-4:] in ['.lfl','.med'] and withrequete == 1:
 		pass
 else:
 	Kws = []
-#	print  "    - on ne filtre pas "
 
+#	print  "    - on ne filtre pas "
 #Kws = [u'santé',u'environnement']
 #Kws = ['et']
 #Kws=[]
-
-
-
 
 
 treetagger_dir_jp='/Users/louiseduloquin/Desktop/treetagger/'
@@ -261,13 +203,11 @@ name_bdd = path_req + requete+ '.db'
 
 
 
-
+#decoupage hebdomadaire
 try:
 	if name_data[-4:] in ['.lfl','.rss']:
 		jours = select_bdd_table_champ_simple(name_bdd,'billets','jours')
 		dated = min(jours)
-		#print 'dated'
-		#print dated
 		prop =  7 * (int(dated[0]) / 7)  + 4 #c'est le jour du 1er janvier 2010 qui dicte cela
 		if prop>=dated[0]:
 			dated[0] = prop
@@ -281,30 +221,25 @@ try:
 			datef[0]= prop - 7
 
 		#print datef
-		years_bins = build_years_bins(fenetre,int(dated[0]),int(datef[0]),overlap)
-		print years_bins
+		#years_bins = build_years_bins(fenetre,int(dated[0]),int(datef[0]),overlap)
+		dated = int(dated[0])
+		datef = int(datef[0])
 except:
 	pass
 
 
-#print "    - on traitera les donnees du fichier \""+ name_data_real+"\""
-#print "    - parametres: " + "\n      - name_bdd: \"" +name_bdd  + "\"\n      - name_data: \""+name_data+  "\"\n      - name_data_real: \"" + name_data_real +"\"\n      - maxTermLength: "+ str(maxTermLength)  +"\n      - requete: \"" + requete + "\"\n      - freqmin: " + str(freqmin)#requete = "environnement"
-#if lemmadictionary == 1:
-#	print "      + sans calculer le dictionnaire des lemmes"
-#else:
-#	print "      + en calculant le dictionnaire des lemmes"
 
-
-
-
-sep = ' *** '
-char_int = ['>','<','(',')','[',']','*','}','{','#','>','<','=','&','|']
+years_bins = build_years_bins(fenetre,dated,datef,overlap)
+years_bins_no_overlap = build_years_bins(fenetre,years_bins[0][0],years_bins[-1][-1],0)
+print years_bins
+print years_bins_no_overlap
 if nofigure==1:
 	for i in range(10):
 		char_int.append(str(i))
-#print char_int
+if nofigure==1:
+	for i in range(10):
+		char_int.append(str(i))
+
 
 print "    - \"parameters.py\" initialise.\n"
-#for name in dir():
-	#print name 
-	#exec("print "+name)
+

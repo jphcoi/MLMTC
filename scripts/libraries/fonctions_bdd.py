@@ -181,22 +181,22 @@ def select_bdd_table_champ(name_bdd,table,champ,champ2,b_id):
 	connection.close()
 	return sortie[0][0]
 
-def count_champ(name_bdd,table,champ_nom,champ_val):
-	connection,ex = connexion(name_bdd)
-#	print "SELECT jours,COUNT(*)  from " +table +" WHERE " +champ_nom+ " = " +str(champ_val) +" GROUP BY " +' jours '
-	
-	sortie= ex("SELECT jours,COUNT(*)  from " +table +" WHERE " +champ_nom+ " = " +str(champ_val) +" GROUP BY " +' jours ').fetchall()
-	print '\n' + "comptage de l evolution du nombre de " +champ_nom + " "+ str(champ_val) + " de la table " + table +  " dans la bdd " +name_bdd +'\n'
-	connection.close()	
-	return sortie
-
-
 def count_rows(name_bdd,table):
 	connection,ex = connexion(name_bdd)
 	sortie= ex("SELECT COUNT(*)  from " +table).fetchall()
 	#print '\n' + "comptage de l evolution du nombre de " +champ_nom + " "+ str(champ_val) + " de la table " + table +  " dans la bdd " +name_bdd +'\n'
 	connection.close()	
 	return sortie[0][0]
+
+def count_champ(name_bdd,table,champ_nom,champ_val):
+	connection,ex = connexion(name_bdd)
+#	print "SELECT jours,COUNT(*)  from " +table +" WHERE " +champ_nom+ " = " +str(champ_val) +" GROUP BY " +' jours '	
+	sortie= ex("SELECT jours,COUNT(*)  from " +table +" WHERE " +champ_nom+ " = " +str(champ_val) +" GROUP BY " +' jours ').fetchall()
+	print '\n' + "comptage de l evolution du nombre de " +champ_nom + " "+ str(champ_val) + " de la table " + table +  " dans la bdd " +name_bdd +'\n'
+	connection.close()	
+	return sortie
+
+
 
 def count_rows_where(name_bdd,table,where):
 	connection,ex = connexion(name_bdd)

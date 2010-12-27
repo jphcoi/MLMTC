@@ -64,8 +64,7 @@ else:
 		try:
 			#fonctions_bdd.detruire_table(name_bdd,'billets')
 			pkl_files= 'pkl/'+requete
-			shutil.rmtree(pkl_files)
-				
+			shutil.rmtree(pkl_files)	
 			os.remove(name_bdd)	
 		except:
 			pass

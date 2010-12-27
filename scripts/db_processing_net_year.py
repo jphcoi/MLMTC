@@ -19,6 +19,8 @@ from datetime import timedelta
 from datetime import date
 import parameters
 import fonctions_lib
+import fusion_years
+
 ###################################
 #######0.quelques parametres#######
 ###################################
@@ -101,19 +103,14 @@ def extension(x,y):
 
 #decoupage annuel:
 #on recupere d'abord toutes les années en base
-annees = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'billets','jours')
-years = []
-for an in annees:
-	if not an[0] in years:
-		years.append(an[0])
-		
+years=parameters.years_bins_no_overlap
 
 #puis on itere sur chaque tranche:
 ngrammes_auteurs_fit_year={}
 ngramme_billets_fit_year={}
 formes={}
-for year in years:
-	Nb_rows = fonctions_bdd.count_rows_where(name_bdd,'billets',' where jours = '+ str(year))
+for y,year in enumerate(years):
+	Nb_rows = fonctions_bdd.count_rows_where(name_bdd,'billets'," where jours IN ('" + "','".join(list(map(str,year))) + "') ")
 	#Nb_rows = fonctions_bdd.count_rows(name_bdd,'billets')
 	Nb_auteurs = fonctions_bdd.count_rows(name_bdd,'auteurs')
 	size_seq = 1000
@@ -129,10 +126,7 @@ for year in years:
 			duration = str(size_seq)
 		else:
 			duration = str(size_seq)
-			#duration = str(Nb_rows - size_seq*x)
-		#on extrait les champs contenus lemmatises et id de la table
-#		contenu = fonctions_bdd.select_bdd_table_limite(name_bdd,'billets','id,content_lemmatise,content,auteur_id',requete,lim_d+','+duration)
-		where = '  jours = ' + str(year) + ' '
+		where = " jours IN ('" + "','".join(list(map(str,year))) + "') "
 		sample = '100000000'
 		contenu = fonctions_bdd.select_bdd_table_where_limite(name_bdd,'billets','id,content_lemmatise,content,auteur_id',sample,requete,where,lim_d+','+duration,Nb_rows)
 		
@@ -144,8 +138,8 @@ for year in years:
 		formes=fonctions_lib.merge(formes, formes_x, lambda x,y: fonctions_lib.merge(x,y,lambda x,y:x+y))
 		ngrammes_auteurs_fit=fonctions_lib.merge(ngrammes_auteurs_fit,ngrammes_auteurs_fit_x,lambda x,y : extension(x,y))
 		print "    + billets numéros "+ str(int(lim_d)+1)+ " à "+  str(int(lim_d)+int(duration)) +" indexés (sur "+ str(Nb_rows) +")"
-	ngrammes_auteurs_fit_year[year]=ngrammes_auteurs_fit
-	ngramme_billets_fit_year[year]=ngramme_billets_fit
+	ngrammes_auteurs_fit_year[y]=ngrammes_auteurs_fit
+	ngramme_billets_fit_year[y]=ngramme_billets_fit
 	
 dictionnaire_treetagged__formes_name = path_req  + "Treetagger_n-lemmes_formes.txt"  
 dictionnaire_treetagged__formemajoritaire_name = path_req  + "Treetagger_n-lemmes_formemajoritaire.txt"
@@ -179,11 +173,11 @@ for con in contenu:
 	liste_concepts_dico[con[1]]=con[0]
 
 
-for year in years:
+for y,year in enumerate(years):
 	#on construit la liste des index des concepts dans l'ordre 
 	ngrammes_fit_index=[]
-	ngramme_billets_fit =ngramme_billets_fit_year[year]
-	ngrammes_auteurs_fit=ngrammes_auteurs_fit_year[year]
+	ngramme_billets_fit =ngramme_billets_fit_year[y]
+	ngrammes_auteurs_fit=ngrammes_auteurs_fit_year[y]
 	#on calcule nos stats à l'échelle des auteurs aussi, freq = nombre de blogs parlant d'un terme 
 	dictionnaire_frequence_exact_auteur={}
 	dictionnaire_frequence_exact={}
@@ -205,7 +199,7 @@ for year in years:
 			dictionnaire_frequence_exact_auteur[terme]=dictionnaire_frequence_exact_auteur[terme]+1
 	print "    + liste des index des concepts creee"
 
-	file_freq_exact =  path_req + requete +str(year) + '_' + '_' +  'frequences_exactes.csv'
+	file_freq_exact =  path_req +'years/'+ requete +str(year) + '_'  +  'frequences_exactes.csv'
 	fichier_out =file(file_freq_exact,'w')
 	def format(value):
 	    return "%.9f" % value
@@ -215,3 +209,9 @@ for year in years:
 		fichier_out.write(str(x) + '\t' + str(correspondance_lemme_forme[x]) +'\t' + (str(format(float(dictionnaire_frequence_exact[x])/N))).replace('.',',') +'\t' + (str(format(float(dictionnaire_frequence_exact_auteur[x])/float(Nb_auteurs)))).replace('.',',')+  '\n')
 	print "    + frequences exactes calculees   "+ file_freq_exact
 
+try: 
+	os.mkdir(path_req +'years/')
+except:
+	pass
+	
+fusion_years.fusion('freq')

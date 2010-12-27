@@ -21,6 +21,7 @@ from datetime import date
 import treetaggerwrapper
 import fonctions_lib
 import math
+import fusion_years
 
 print "--- initialisations terminees...\n"
 ###################################
@@ -63,6 +64,10 @@ Nb_rows = fonctions_bdd.count_rows(name_bdd,'billets')
 
 name_export_pkl=requete + '_dico_'+str(sample)+'_'+str(Nb_rows) + '_year'
 name_export_lemme_pkl = requete + '_lemme_'+str(sample)+'_'+str(Nb_rows) 
+
+#on recupere d'abord toutes les années en base
+years=parameters.years_bins_no_overlap
+
 try:
 	print requete + '_' + str(freqmin) + str(sample)
 	if user_interface =='y':
@@ -149,14 +154,8 @@ except:
 	
 	#decoupage annuel:
 	#on recupere d'abord toutes les années en base
-	annees = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'billets','jours')
-	years = []
-	for an in annees:
-		if not an[0] in years:
-			years.append(an[0])
-	#puis on itere sur chaque tranche:
 	dictionnaire_gramme_year={}
-	for year in years:
+	for y,year in enumerate(years):
 		
 		#il faut découper ici car ça prend trop de RAM
 		if sample<Nb_rows:
@@ -175,7 +174,7 @@ except:
 				duration = str(size_seq)
 			else:
 				duration = str(min(Nb_rows - size_seq*x,sample))
-			where = ' where jours = ' + str(year) + ' '
+			where = " jours IN ('" + "','".join(list(map(str,year))) + "') "
 			contenu = fonctions_bdd.select_bdd_table_where_limite(name_bdd,'billets','content_lemmatise',sample,requete,where,lim_d+','+duration,Nb_rows)
 			for billetlemm in contenu:
 				billetprocessed_after_requete=1+billetprocessed_after_requete
@@ -184,44 +183,35 @@ except:
 				billet_lemmatise =  billetlemm[0]
 				dictionnaire_gramme_x = text_processing.ngramme_build(billet_lemmatise.split(),maxTermLength,dictionnaire_gramme_x,language,'absolu')
 			dictionnaire_gramme=fonctions_lib.merge(dictionnaire_gramme, dictionnaire_gramme_x, lambda x,y:x+y)
-		dictionnaire_gramme_year[year] = dictionnaire_gramme
+		dictionnaire_gramme_year[y] = dictionnaire_gramme
 	fonctions_lib.dumpingin(dictionnaire_gramme_year,name_export_pkl,requete)
 
 
 
 
-#decoupage annuel:
-#on recupere d'abord toutes les années en base
-try:
-	#on verifie si on a deja calcule years
-	print years
-except:
-	annees = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'billets','jours')
-	years = []
-	for an in annees:
-		if not an[0] in years:
-			years.append(an[0])
-	
+#decoupage par periode:
 print dictionnaire_gramme_year.keys()
 #puis on itere annee par annee
-for year in years:
-
+try: 
+	os.mkdir(path_req +'years/')
+except:
+	pass
+for y,year in enumerate(years):
 	#on trie par fréquence et on exporte le lexique final avec les occurrences 
 	print '\n'
 	print year
-	dico_final = misc.freq_tri(dictionnaire_gramme_year[year],freqmin,int(math.floor(top*1.1)),language,ng_filter)#on effectue le tri de notre dictionnaire
-
-	filename = path_req + requete + '_' + str(freqmin) + '_' +str(year) + '_' + 'liste_n-grammes_freq.txt'
-	######!!!!!!!#version pour calculer le bruit de fond sur la couronne
-	filename = path_req + requete + '_' + str(freqmin) + '_' +str(year) + '_'+ 'liste_n-grammes_freq_divers.csv'
-	filename_redond =  path_req + requete + '_' + str(freqmin) +str(year) + '_'+ '_' + 'liste_n-grammes_freq_divers_noredond.csv'
-	filename_redond_leven =  path_req + requete + '_' + str(freqmin)+str(year) + '_' + '_' + 'liste_n-grammes_freq_divers_leven_noredond.csv'
+	
+	dico_final = misc.freq_tri(dictionnaire_gramme_year[y],freqmin,int(math.floor(top*1.1)),language,ng_filter)#on effectue le tri de notre dictionnaire
+	filename = path_req +'years/'+ requete + '_' + str(freqmin) + '_' +str(year) + '_'+ 'liste_n-grammes_freq_divers.csv'
+	filename_redond =  path_req +'years/'+ requete + '_' + str(freqmin) +str(year) + '_'+ 'liste_n-grammes_freq_divers_noredond.csv'
+	filename_redond_leven =  path_req +'years/'+ requete + '_' + str(freqmin)+str(year) + '_' 'liste_n-grammes_freq_divers_leven_noredond.csv'
 	misc.ecrire_liste_lemmes_freq(dico_final,Nb_rows,filename,lemme_maj,freqmin,ng_filter)#on ecrit la liste precedente dans un fichier filename
 	print "\n+++"+str(len(dico_final))+" n-lemmes crees."
 	#leven.pack_rendondance(filename,filename_redond,maxTermLength,freqmin,language,redondance_manuelle,ng_filter,user_interface)
 	leven.pack_rendondance_exact(filename,filename_redond,maxTermLength,freqmin,language,ng_filter,user_interface)
 	print "\n"
-	Nb_rows = fonctions_bdd.count_rows_where(name_bdd,'billets',' where jours = '+ str(year))
+	Nb_rows = fonctions_bdd.count_rows_where(name_bdd,'billets'," where jours IN ('" + "','".join(list(map(str,year))) + "') ")
 	print Nb_rows
 	leven.pack_leven(filename_redond,filename_redond_leven,language,user_interface,freqmin,Nb_rows)
 
+fusion_years.fusion('redond')
