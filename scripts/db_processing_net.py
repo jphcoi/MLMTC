@@ -211,11 +211,13 @@ concepts = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'concepts','id,c
 dic_concepts ={}
 for con in concepts:
 	dic_concepts[con[1]] = con[0]
-concepts_billets = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'billets','id,concepts')
+concepts_billets = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'billets','id,concepts,jours')
 
 concepts_index=[]
+billet_jour={}
 for cons in concepts_billets:
 	id_b= cons[0]
+	billet_jour[id_b]=cons[2]
 	if len(cons[1])>0:
 		names =cons[1].split(";")
 		id_conc=[]
@@ -246,11 +248,11 @@ con2bill = []
 for couple in concepts_index:
 	id_b = couple[0]
 	for con in couple[1]:
-		con2bill.append([con,id_b,requete,str(con)+'_'+str(id_b)])
+		con2bill.append([con,id_b,billet_jour[id_b],requete,str(con)+'_'+str(id_b)])
 
 
 
-fonctions_bdd.remplir_table(name_bdd,'concept2billets',con2bill,"(concept,id_b,requete,identifiant_unique)")
+fonctions_bdd.remplir_table(name_bdd,'concept2billets',con2bill,"(concept,id_b,jours,requete,identifiant_unique)")
 
 
 
@@ -272,6 +274,7 @@ if build_link_tables=='y':
 		except: pass
 		fonctions_bdd.creer_table_sociosem(name_bdd,'socsem')
 		fonctions_bdd.creer_table_sem(name_bdd,'sem')
+		creer_table_sem_periode_valuee(name_bdd,'sem_weighted')
 	
 
 	# on construit les reseaux sociosemantique et semantique a partir de la liste des ngrammes associes a chaque index de billet

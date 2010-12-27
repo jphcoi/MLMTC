@@ -50,7 +50,7 @@ def creer_table_term_neighbor(name_bdd,name_table):
 	connection,ex = connexion(name_bdd)
 	try:
 #		print 'CREATE TABLE '+ name_table +' (id INTEGER PRIMARY KEY,term1 VARCHAR(10), term2 VARCHAR(10), distance text)'
-		ex('CREATE TABLE '+ name_table +' (id INTEGER PRIMARY KEY,term1 VARCHAR(10), term2 VARCHAR(10), distances text, force FLOAT, direction INTEGER )')
+		ex('CREATE TABLE '+ name_table +' (id INTEGER PRIMARY KEY,term1 VARCHAR(10), term2 VARCHAR(10), distances text, force_moy FLOAT, direction INTEGER )')
 	except:
 		print "    * table (term_neighbor) \"" +name_table+"\" deja creee"
 		pass
@@ -110,7 +110,7 @@ def creer_table_concept2billets(name_bdd,name_table):
 	connection,ex = connexion(name_bdd)
 	try:
 #		print 'CREATE TABLE '+ name_table +' (id INTEGER PRIMARY KEY,auteurs VARCHAR(200) unique )'
-		ex('CREATE TABLE '+ name_table +' (id INTEGER PRIMARY KEY,concept INTEGER,id_b INTEGER,requete VARCHAR(200),identifiant_unique VARCHAR(20) unique)')
+		ex('CREATE TABLE '+ name_table +' (id INTEGER PRIMARY KEY,concept INTEGER,id_b INTEGER,jours INTEGER,requete VARCHAR(200),identifiant_unique VARCHAR(20) unique)')
 		print "      + table (concept2billets) \"" +name_table+"\" creee"
 	except:
 		print "      * table (concept2billets) \"" +name_table+"\" deja creee"
