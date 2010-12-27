@@ -387,7 +387,8 @@ def indexer_billet(contenu,ngrammes,maxTermLength,include):
 					#chaine=' '+str(ngra)+' ','utf-8'
 					chaine=unicode(' '+str(ngra)+' ','utf-8')
 					if chaine in billet_lemmatise:
-						ngramme_fit.append(ngraz[0])
+						if not ngraz[0] in ngramme_fit:
+							ngramme_fit.append(ngraz[0])
 						dest = ngraz[0]
 						idx = billet_lemmatise.find(chaine)
 						clause_include_0 = 0

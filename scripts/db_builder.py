@@ -63,8 +63,8 @@ else:
 		print 'suppression de la base de données ' + name_data_real
 		try:
 			#fonctions_bdd.detruire_table(name_bdd,'billets')
-			pkl_files= 'pkl/'+requete
-			shutil.rmtree(pkl_files)	
+			pkl_files= '/'.join(path_req.split('/')[:-3]) + '/pkl/'+requete
+			shutil.rmtree(pkl_files)
 			os.remove(name_bdd)	
 		except:
 			pass

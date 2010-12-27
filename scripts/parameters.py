@@ -240,6 +240,14 @@ if nofigure==1:
 	for i in range(10):
 		char_int.append(str(i))
 
+try:
+	seuil_cooccurrences==1
+except:
+	seuil_cooccurrences=2
+try:
+	user_interface==1
+except:
+	user_interface='n'
 
 print "    - \"parameters.py\" initialise.\n"
 

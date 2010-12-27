@@ -20,3 +20,4 @@ overlap = 2
 dist_type='precision'
 nofigure=1
 user_interface='y'
+seuil_cooccurrences=2

@@ -41,6 +41,7 @@ path_req = parameters.path_req
 treetagger_dir =parameters.treetagger_dir
 years_bins = parameters.years_bins
 dist_type=parameters.dist_type
+user_interface=parameters.user_interface
 seuil=0.2
 ###################################
 #######export #####################
@@ -69,25 +70,29 @@ def build_nbbillet(contenu,years_bin):
 	
 
 
-
+def unique(lis):
+	lisunique=[]
+	for x in lis:
+		if not x in lisunique:
+			lisunique.append(x)
+	return lisunique
+	
 def convert_clique_txt_2_list(clique_txt):
 	if not str(clique_txt)=='None' and not len(str(clique_txt))<3:
 		clique = clique_txt[1:-1].split(', ')
-		return map(int,clique)
+		return unique(list(map(int,clique)))
 	else:
 		return []
 
 def build_voisins(contenu,years_bin):
-	#now: 		contenu = liste de [concepts_id,jours,id_billet]
+	#now: contenu = liste de [concepts_id,jours,id_billet]
 	voisins={}
 	#voisins[terme,intervalle] = array(termes co-présents)
 	for y_b in range(len(years_bins)):
 		for ter in dico_termes:
 			voisins[(ter,y_b)]=[]
 	for cont in contenu:
-		intervalle=-1
-		for y_b in years_bins:
-			intervalle+=1
+		for intervalle,y_b in enumerate(years_bins):
 			if cont[1] in y_b:
 				clique = convert_clique_txt_2_list(cont[0])
 				for idx, con_1 in enumerate(clique):
@@ -101,7 +106,7 @@ def build_voisins(contenu,years_bin):
 							temp.append(con_1)
 							voisins[(con_2,intervalle)]=temp
 						else:
-							temp = voisins[(con_2,intervalle)]
+							temp = voisins[(con_1,intervalle)]
 							temp.append(con_1)
 							voisins[(con_1,intervalle)]=temp
 	return voisins 
@@ -127,8 +132,11 @@ def build_cooc(voisins,nb_billets):
 			dict_temp[terme2] = 0
 		for terme2 in y:
 			dict_temp[terme2] = dict_temp[terme2]  + 1
+				
 		for terme2 in voisinage:
-			p_cooccurrences[(terme1,terme2,inter)] = float(dict_temp[terme2]) / N
+			#more than one cooccurrence:
+			if dict_temp[terme2]>=parameters.seuil_cooccurrences:
+				p_cooccurrences[(terme1,terme2,inter)] = float(dict_temp[terme2]) / N
 	print 'matrice temporelle de cooccurrence ecrite'
 	return p_cooccurrences
 
@@ -256,7 +264,6 @@ def build_chavabien(p_cooccurrences):
 def distance(delta,p_cooccurrences):
 	if delta=='precision':
 		muti = build_mutual_information(p_cooccurrences)
-	#	print muti
 		print 'matrice temporelle d information mutuelle ecrite'
 		dist_mat = build_precision(muti)
 		for x,y in dist_mat.iteritems():
@@ -300,14 +307,26 @@ dico_termes=fonctions.build_dico()
 #print dico_termes	
 print years_bins
 name_date = str(years_bins[0][0]) + '_' + str(years_bins[0][-1]) + '_'+ str(years_bins[1][0])+ '_'+str(years_bins[-1][-1])
+
 try:# si on a deja calcule le reseau de proximit
+	if user_interface =='y':
+		var = raw_input('do you wish to try to rebuild cooccurrence matrix  ? (y to rebuild)')
+	else:
+		var='n'	
+		
 	try:
+		if var =='y':
+			fonctions.dumpingout('klqsdjlmsqjdklqsmd')
 
 		#p_cooccurrences = fonctions.dumpingout('p_cooccurrences'+name_date)
 		dist_mat = fonctions.dumpingout('dist_mat'+name_date)
 		print 'on a chargé les données déjà calaculées'
 		
 	except:
+		if var =='y':
+			print 'on reconstruit'
+			fonctions.dumpingout('klqsdjlmsqjdklqsmd')
+
 		p_cooccurrences={}
 		dist_mat={}
 		for inter in range(len(years_bins)):
@@ -356,50 +375,50 @@ except:# sinon on recalcule du début
 	
 print 'matrice de cooccurrences et de distance en mémoire'
 
-def add_zeros(dyn,years_bins):
-	dyna = []
-	for y in range(len(years_bins)):
-		dyna.append("%.3f" %dyn.get(y,0.))
-	return dyna
+# def add_zeros(dyn,years_bins):
+# 	dyna = []
+# 	for y in range(len(years_bins)):
+# 		dyna.append("%.3f" %dyn.get(y,0.))
+# 	return dyna
 
-#construction des voisinages dynamiques:
-voisinage_dynamique=0
-if voisinage_dynamique==1:
-	#on crée la table des voisins
-	try:
-		fonctions_bdd.drop_table(name_bdd,'term_neighbor')
-	except:
-		pass
-	fonctions_bdd.creer_table_term_neighbor(name_bdd,'term_neighbor')
-	#on importe les données si ce n'est pas déjà fait 
-	try:
-		contenu[0]==1
-	except:
-		contenu = fonctions_bdd.select_bdd_table(name_bdd,'billets','concepts_id,jours,id',requete)
-		print "contenu importé"
-	print "on construit la variable avec tous les jours"
-	years_bins_jour = range(years_bins[0][0],years_bins[-1][-1]+1)
-	#temporairement
-	#years_bins_jour = range(years_bins[0][0],years_bins[0][-3]+1)
-	years_bins=[]
-	for x in years_bins_jour:
-		years_bins.append([x])
-	print years_bins
-	p_cooccurrences = build_cooc_matrix(contenu,years_bins)
-	print "matrice de cooccurrence sur tous les jours construite"
-	dist_mat = distance(dist_type,p_cooccurrences)
-	print "matrice de distance construite"
-	dist_2d,dist_2d_trans = convert_dist_mat3d_dist2d(dist_mat)
-	dist_2d_vector = []
-	dist_2d_vector_trans=[]
-	n=len(years_bins)
-	for x,y in dist_2d.iteritems():
-		moy = float(sum(y.values())) / n
-		if moy > 0.15:
-			dist_2d_vector.append((x[0],x[1],','.join(map(str,add_zeros(y,years_bins))),str("%.3f" %(moy)),'1'))
-	fonctions_bdd.remplir_table(name_bdd,'term_neighbor',dist_2d_vector,"(term1,term2, distances,force,direction)")
-	for x,y in dist_2d_trans.iteritems():
-		if moy >0.15:
-			dist_2d_vector_trans.append((x[0],x[1],','.join(map(str,add_zeros(y,years_bins))),str("%.3f" %(moy)),'0'))
-	fonctions_bdd.remplir_table(name_bdd,'term_neighbor',dist_2d_vector_trans,"(term1,term2, distances,force,direction)")
-	#fonctions.ecrire_reseau(dist_mat,years_bins,dist_type,seuil,1,dedoubler(dico_termes,years_bins))		 
+# #construction des voisinages dynamiques:
+# voisinage_dynamique=0
+# if voisinage_dynamique==1:
+# 	#on crée la table des voisins
+# 	try:
+# 		fonctions_bdd.drop_table(name_bdd,'term_neighbor')
+# 	except:
+# 		pass
+# 	fonctions_bdd.creer_table_term_neighbor(name_bdd,'term_neighbor')
+# 	#on importe les données si ce n'est pas déjà fait 
+# 	try:
+# 		contenu[0]==1
+# 	except:
+# 		contenu = fonctions_bdd.select_bdd_table(name_bdd,'billets','concepts_id,jours,id',requete)
+# 		print "contenu importé"
+# 	print "on construit la variable avec tous les jours"
+# 	years_bins_jour = range(years_bins[0][0],years_bins[-1][-1]+1)
+# 	#temporairement
+# 	#years_bins_jour = range(years_bins[0][0],years_bins[0][-3]+1)
+# 	years_bins=[]
+# 	for x in years_bins_jour:
+# 		years_bins.append([x])
+# 	print years_bins
+# 	p_cooccurrences = build_cooc_matrix(contenu,years_bins)
+# 	print "matrice de cooccurrence sur tous les jours construite"
+# 	dist_mat = distance(dist_type,p_cooccurrences)
+# 	print "matrice de distance construite"
+# 	dist_2d,dist_2d_trans = convert_dist_mat3d_dist2d(dist_mat)
+# 	dist_2d_vector = []
+# 	dist_2d_vector_trans=[]
+# 	n=len(years_bins)
+# 	for x,y in dist_2d.iteritems():
+# 		moy = float(sum(y.values())) / n
+# 		if moy > 0.15:
+# 			dist_2d_vector.append((x[0],x[1],','.join(map(str,add_zeros(y,years_bins))),str("%.3f" %(moy)),'1'))
+# 	fonctions_bdd.remplir_table(name_bdd,'term_neighbor',dist_2d_vector,"(term1,term2, distances,force,direction)")
+# 	for x,y in dist_2d_trans.iteritems():
+# 		if moy >0.15:
+# 			dist_2d_vector_trans.append((x[0],x[1],','.join(map(str,add_zeros(y,years_bins))),str("%.3f" %(moy)),'0'))
+# 	fonctions_bdd.remplir_table(name_bdd,'term_neighbor',dist_2d_vector_trans,"(term1,term2, distances,force,direction)")
+# 	#fonctions.ecrire_reseau(dist_mat,years_bins,dist_type,seuil,1,dedoubler(dico_termes,years_bins))		 
