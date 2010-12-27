@@ -37,6 +37,7 @@ def connexion(name_bdd):
 def select_bdd_table_champ_simple(name_bdd,table,champ):
 	connection,ex = connexion(name_bdd)
 	sortie= ex("SELECT "  + champ +  "   from " +table ).fetchall()
+	print "SELECT "  + champ +  "   from " +table
 	sortie_ok = []
 	for sor in sortie:
 		soso_v=[]
