@@ -209,6 +209,7 @@ print name_data[-4:]
 try:
 	if name_data[-4:] in ['.lfl','.rss']:
 		jours = select_bdd_table_champ_simple(name_bdd,'billets','jours')
+		print name_bdd
 		dated = min(jours)
 		prop =  7 * (int(dated[0]) / 7)  + 4 #c'est le jour du 1er janvier 2010 qui dicte cela
 		if prop>=dated[0]:
