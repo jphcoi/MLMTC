@@ -151,13 +151,13 @@ def tri_comm(communities,taillemin, taillemax, kmin):
 		if not inter in card_taillemin:
 			card_taillemin[inter] = 0  
 		if not inter in card_taillemax:
-			card_taillemax[inter] = 0  
+			card_taillemax[inter] = 0
 		if not inter in card_kmin:
-			card_kmin[inter] = 0  
+			card_kmin[inter] = 0
 		if not inter in card_chpsok:
-			card_chpsok[inter] = 0  
+			card_chpsok[inter] = 0
 		if not inter in card_champs_pot:
-			card_champs_pot[inter] = 0  
+			card_champs_pot[inter] = 0
 				
 		for candidat in y:
 			card_champs_pot[inter]=card_champs_pot[inter]+1
@@ -596,8 +596,6 @@ while fini==1:
 		fonctions.ecrire_legende(champs,legende_noeuds,legende_noeuds_id,niveau+1,years_bins)
 		fonctions.ecrire_reseau(distance_champ,years_bins,dist_type,seuil_net_champ,niveau+1,legende_noeuds)				
 print "niveau vide!"
-
-
 
 maps_union.union_map(2,seuil_net_champ)
 #print lenchampsfinal.keys()
