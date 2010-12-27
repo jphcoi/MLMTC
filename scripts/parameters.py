@@ -207,9 +207,12 @@ name_bdd = path_req + requete+ '.db'
 print name_data
 print name_data[-4:]
 try:
+	print 'ij'
 	if name_data[-4:] in ['.lfl','.rss']:
-		jours = select_bdd_table_champ_simple(name_bdd,'billets','jours')
 		print name_bdd
+		print 'skql'
+		jours = select_bdd_table_champ_simple(name_bdd,'billets','jours')
+		
 		dated = min(jours)
 		prop =  7 * (int(dated[0]) / 7)  + 4 #c'est le jour du 1er janvier 2010 qui dicte cela
 		if prop>=dated[0]:
