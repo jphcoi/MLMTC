@@ -35,7 +35,7 @@ def connexion(name_bdd):
 
 
 def select_bdd_table_champ_simple(name_bdd,table,champ):
-	print "SELECT "  + champ +  "   from " +table
+	print name_bdd
 	connection,ex = connexion(name_bdd)
 	sortie= ex("SELECT "  + champ +  "   from " +table ).fetchall()
 	print "SELECT "  + champ +  "   from " +table
