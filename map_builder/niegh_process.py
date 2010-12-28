@@ -40,7 +40,7 @@ requete = parameters.requete
 name_data_real = parameters.name_data_real
 path_req = parameters.path_req
 treetagger_dir =parameters.treetagger_dir
-years_bins = parameters.years_bins
+years_bins = parameters.years_bins_no_overlap
 dist_type=parameters.dist_type
 seuil=0.2
 ###################################
