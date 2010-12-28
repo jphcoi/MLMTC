@@ -329,7 +329,7 @@ fonctions_bdd.creer_table_term_neighbor(name_bdd,'termneighbour')
 #on importe les données si ce n'est pas déjà fait
 try:
 	
-	dist_2d=fonctions.dumpingout('dist_2sd'+name_date)
+	dist_2d=fonctions.dumpingout('dist_2d'+name_date)
 	dist_2d_trans=fonctions.dumpingout('dist_2d_trans'+name_date)
 	print 'on charge dist_2d_trans deja calculé'
 	
