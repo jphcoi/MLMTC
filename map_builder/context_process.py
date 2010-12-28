@@ -8,7 +8,7 @@ from copy import deepcopy
 sys.path.append("../scripts/libraries")
 sys.path.append("../scripts")
 
-print "export_networks v0.2 (20091102)"
+print "context_process.py (20091102)"
 print "--------------------------------\n"
 
 import parameters
@@ -136,7 +136,7 @@ def build_cooc(voisins,nb_billets):
 		for terme2 in voisinage:
 			#more than one cooccurrence:
 			if dict_temp[terme2]>=parameters.seuil_cooccurrences:
-				p_cooccurrences[(terme1,terme2,inter)] = float(dict_temp[terme2]) / N
+				p_cooccurrences[(terme1,terme2,inter)] = float(dict_temp[terme2]) / float(N)
 	print 'matrice temporelle de cooccurrence ecrite'
 	return p_cooccurrences
 
@@ -370,8 +370,7 @@ except:# sinon on recalcule du début
 	dist_mat = distance(dist_type,p_cooccurrences)
 	print "matrice de distance construite"
 #	fonctions.ecrire_reseau(dist_mat,years_bins,dist_type,seuil,1,dedoubler(dico_termes,years_bins))		 
-	fonctions.ecrire_reseau_CF(dist_mat,years_bins,dist_type,seuil,1)		 
-	pass
+	fonctions.ecrire_reseau_CF(dist_mat,years_bins,dist_type,seuil,1)
 	
 print 'matrice de cooccurrences et de distance en mémoire'
 

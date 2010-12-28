@@ -242,11 +242,11 @@ if nofigure==1:
 		char_int.append(str(i))
 
 try:
-	seuil_cooccurrences==parameters.seuil_cooccurrences
+	print seuil_cooccurrences
 except:
 	seuil_cooccurrences=2
 try:
-	user_interface==parameters.user_interface
+	print user_interface
 except:
 	user_interface='n'
 
