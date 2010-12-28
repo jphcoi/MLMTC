@@ -222,8 +222,9 @@ for cons in concepts_billets:
 		names =cons[1].split(";")
 		id_conc=[]
 		for nom in names:
-			conc_name = nom
-			id_conc.append(dic_concepts[conc_name.replace("popostrophe","'")])
+			indexterme = dic_concepts[nom.replace("popostrophe","'")]
+			if not indexterme in id_conc:
+				id_conc.append()
 	else:
 		id_conc=[]
 	concepts_index.append([id_b,id_conc])

@@ -329,7 +329,7 @@ fonctions_bdd.creer_table_term_neighbor(name_bdd,'termneighbour')
 #on importe les données si ce n'est pas déjà fait
 try:
 	
-	dist_2d=fonctions.dumpingout('dist_2d'+name_date)
+	dist_2d=fonctions.dumpingout('dist_2sd'+name_date)
 	dist_2d_trans=fonctions.dumpingout('dist_2d_trans'+name_date)
 	print 'on charge dist_2d_trans deja calculé'
 	
@@ -341,13 +341,13 @@ except:
 		contenu = fonctions_bdd.select_bdd_table(name_bdd,'billets','concepts_id,jours,id',requete)
 		print "contenu importé"
 	print "on construit la variable avec tous les jours"
-	years_bins_jour = range(years_bins[0][0],years_bins[-1][-1]+1)
-	#temporairement
-	#years_bins_jour = range(years_bins[0][0],years_bins[0][-3]+1)
-	years_bins=[]
-	for x in years_bins_jour:
-		years_bins.append([x])
-	print years_bins
+	#on va plutôt calculer les distances par période, c'est moins long!!!
+	#sinon ci dessous version au jour le jour
+	# years_bins_jour = range(years_bins[0][0],years_bins[-1][-1]+1)
+	# 	years_bins=[]
+	# 	for x in years_bins_jour:
+	# 		years_bins.append([x])
+	# 	print years_bins
 	p_cooccurrences = build_cooc_matrix(contenu,years_bins)
 	print "matrice de cooccurrence sur tous les jours construite"
 	dist_mat = distance(dist_type,p_cooccurrences)
