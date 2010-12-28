@@ -39,16 +39,16 @@ language = parameters.language
 #######3.Indexer les billets#######
 ###################################
 
-# #on crée la table concepts
-# #marche une fois sur deux, zarbo, peut-etre unique?...
-# try: 
-# 	fonctions_bdd.detruire_table(name_bdd,'concepts')
-# 	print "on detruit la table concept"
-# except: 
-# 	print "pas de tabe  concept"
-# 
-# print "    + creation de la table \"concepts\" (qui fait office de dictionnaire)..."
-# fonctions_bdd.creer_table_concepts(name_bdd,'concepts')
+#on crée la table concepts
+#marche une fois sur deux, zarbo, peut-etre unique?...
+try: 
+	fonctions_bdd.detruire_table(name_bdd,'concepts')
+	print "on detruit la table concept"
+except: 
+	print "pas de tabe  concept"
+
+print "    + creation de la table \"concepts\" (qui fait office de dictionnaire)..."
+fonctions_bdd.creer_table_concepts(name_bdd,'concepts')
 
 # on indexe a partir de la liste des ngrammes tries
 
