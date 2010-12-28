@@ -261,7 +261,30 @@ fonctions_bdd.remplir_table(name_bdd,'concept2billets',con2bill,"(concept,id_b,j
 
 #on alimente ensuite la table socsem liant les index des acteurs aux index des concepts ainsi qu'au jour du lien
 
-
+def aggreger_periode(liensem):
+	#lienssem.append([con1,con2,jours,b_id,requete,str(b_id)+'_' + str(con1) + '_' + str(con2)])
+	#fonctions_bdd.remplir_table(name_bdd,'sem_weighted',lienssem_weighted,"(concept1,concept2,periode,cooccurrences,requete,identifiant_unique)")
+	years_bins=parameters.years_bins
+	lienssem_weighted_dict={}
+	lienssem_weighted=[]
+	requete=''
+	for ligne in lienssem:
+		con1 =ligne[0]
+		con2 =ligne[1]
+		j =ligne[2]
+		requete=ligne[4]
+		
+		for periode,years in enumerate(years_bins):
+			#uniq = con1+'_'+con2+'_'+str(periode)
+			if int(j) in years:
+				lienssem_weighted_dict[(con1,con2,str(periode))]=lienssem_weighted_dict.get((con1,con2,str(periode)),0)+1
+	for cle,valeurs in lienssem_weighted_dict.iteritems():
+		cooc = list(cle)
+		cooc.append(str(valeurs))
+		cooc.append(requete)
+		cooc.append('_'.join(list(map(str,cle))))
+		lienssem_weighted.append(cooc)
+	return lienssem_weighted
 
 if build_link_tables=='y':
 
@@ -270,11 +293,13 @@ if build_link_tables=='y':
 	if recreer_table_nets ==1:
 		try: fonctions_bdd.detruire_table(name_bdd,'socsem')
 		except: pass
-		try: fonctions_bdd.detruire_table(name_bdd,'sem')
+		try: 
+		#	fonctions_bdd.detruire_table(name_bdd,'sem')
+			fonctions_bdd.detruire_table(name_bdd,'sem_weighted')
 		except: pass
 		fonctions_bdd.creer_table_sociosem(name_bdd,'socsem')
-		fonctions_bdd.creer_table_sem(name_bdd,'sem')
-		creer_table_sem_periode_valuee(name_bdd,'sem_weighted')
+		#fonctions_bdd.creer_table_sem(name_bdd,'sem')
+		fonctions_bdd.creer_table_sem_periode_valuee(name_bdd,'sem_weighted')
 	
 
 	# on construit les reseaux sociosemantique et semantique a partir de la liste des ngrammes associes a chaque index de billet
@@ -302,7 +327,11 @@ if build_link_tables=='y':
 		##on remplit la table socsem
 		fonctions_bdd.remplir_table(name_bdd,'socsem',lienssocsem,"(auteur,concept,jours,id_b,requete,identifiant_unique)")
 		# ##on remplit la table sem
-		fonctions_bdd.remplir_table(name_bdd,'sem',lienssem,"(concept1,concept2,jours,id_b,requete,identifiant_unique)")
+		#fonctions_bdd.remplir_table(name_bdd,'sem',lienssem,"(concept1,concept2,jours,id_b,requete,identifiant_unique)")
+		#ex('CREATE TABLE '+ name_table +' (id INTEGER PRIMARY KEY,concept1 INTEGER,concept2 INTEGER,periode INTEGER,cooccurrences INTEGER,distance float,requete VARCHAR(200),identifiant_unique VARCHAR(20) unique)')
+		lienssem_weighted=aggreger_periode(lienssem)
+		fonctions_bdd.remplir_table(name_bdd,'sem_weighted',lienssem_weighted,"(concept1,concept2,periode,cooccurrences,requete,identifiant_unique)")
+		
 	print "\n--- finished inserting data in tables socsem & sem."
 	
 

@@ -322,10 +322,10 @@ name_date = str(years_bins[0][0]) + '_' +str(years_bins[-1][-1])
 
 #on crée la table des voisins
 try:
-	fonctions_bdd.drop_table(name_bdd,'term_neighbour')
+	fonctions_bdd.drop_table(name_bdd,'termneighbour')
 except:
 	pass
-fonctions_bdd.creer_table_term_neighbor(name_bdd,'term_neighbour')
+fonctions_bdd.creer_table_term_neighbor(name_bdd,'termneighbour')
 #on importe les données si ce n'est pas déjà fait
 try:
 	
@@ -386,8 +386,8 @@ def export_nfirst(dist_2d,dist_1d,direction,nfirst):
 	
 thres = 50
 dist_2d_vector=export_nfirst(dist_2d,dist_1d,'1',thres)
-fonctions_bdd.remplir_table(name_bdd,'term_neighbour',dist_2d_vector,"(term1,term2, distances,force_moy,direction)")
+fonctions_bdd.remplir_table(name_bdd,'termneighbour',dist_2d_vector,"(term1,term2, distances,force_moy,direction)")
 
 dist_2d_vector_trans=export_nfirst(dist_2d_trans,dist_1d_trans,'0',thres)
-fonctions_bdd.remplir_table(name_bdd,'term_neighbour',dist_2d_vector_trans,"(term1,term2,distances,force_moy,direction)")
+fonctions_bdd.remplir_table(name_bdd,'termneighbour',dist_2d_vector_trans,"(term1,term2,distances,force_moy,direction)")
 #fonctions.ecrire_reseau(dist_mat,years_bins,dist_type,seuil,1,dedoubler(dico_termes,years_bins))		 
