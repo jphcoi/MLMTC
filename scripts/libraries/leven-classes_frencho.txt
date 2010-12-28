@@ -13838,3 +13838,501 @@ NO_retrait PR_DU NO_marché	VE_retirer PR_DU NO_marché
 norfenfluramine	norfenfluramines
 valvulopathies	valvulopathie
 AD_résistant PR_au AD_antibiotique	NO_résistance PR_au AD_antibiotique
+AD_résistant PR_au AD_antibiotique	NO_résistance PR_au AD_antibiotique
+norfenfluramine	norfenfluramines
+NO_médecine AD_vétérinaire	NO_docteur AD_vétérinaire
+NO_médecine AD_vétérinaire	docteur AD_vétérinaire
+NO_arme AD_biologique	
+NO_agriculture AD_breton	agriculteurs AD_breton
+NO_médecin AD_nucléaire	médecine AD_nucléaire
+NO_biologie AD_synthétique	NO_biologie AD_synth√©tique
+NO_maladie AD_auto-immun	maladie AD_auto-immun
+NO_maladie AD_auto-immun	maladie NO_auto AD_immun
+NO_cellule AD_photovoltaïque	NO_cellule AD_photovolta√Øque
+NO_médecin AD_général	médecine AD_général
+ministère PR_de DE_le NO_alimentation	minist√®re PR_de DE_le NO_alimentation
+ministère PR_de DE_le NO_alimentation	NO_minist√®re PR_de DE_le NO_alimentation
+valvulopathies	valvulopathie
+NO_banque AD_européen PR_de NO_investissement	NO_banque AD_europ√©en PR_de NO_investissement
+NO_agriculture AD_français	agriculteurs AD_français
+NO_autorité PR_de NO_sûreté AD_nucléaire	NO_autorit√© PR_de NO_s√ªret√© AD_nucl√©aire
+NO_nappe PR_de NO_pétrole	NO_nappe PR_de NO_p√©trole
+AD_éolien NO_marin	AD_√©olien NO_marin
+AD_éolien NO_marin	AD_√©olien NO_offshore
+NO_aide AD_médical PR_de NA_etat	aide AD_médical PR_de NA_etat
+NA_etat AD_européen	NA_etat AD_europ√©en
+NA_etat AD_européen	NA_etats AD_europ√©en
+NO_cha√Æne AD_alimentaire	NO_chaîne AD_alimentaire
+NO_boue AD_rouge	NO_boue AD_toxique
+véolia	v√©olia
+NO_antibiotique	AD_antibiotique
+NO_institut AD_national PR_de NO_veille AD_sanitaire	NO_institut PR_de NO_veille AD_sanitaire
+alzheimer	NO_maladie PR_de alzheimer
+bisphénol	bisph√©nol
+bisphénol	bisph√©nol A
+NO_ministre PR_du NO_finance	NO_ministère PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finances
+NO_ministre PR_du NO_finance	NO_ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finances
+NO_ministre PR_du NO_finance	NO_ministère PR_du finance
+NO_ministre PR_du NO_finance	ministres PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finance
+NO_ministre PR_du NO_finance	NO_ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du finance
+NO_ministre PR_du NO_finance	ministre PR_du NO_finance
+NO_ministre PR_du NO_finance	ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du NO_finance
+NO_confédération paysanne	NO_confédération AD_paysan
+NO_confédération paysanne	confédération AD_paysan
+NO_confédération paysanne	confédération paysan
+NO_érosion	NO_√©rosion
+NO_cohésion AD_social	NO_cohérence AD_social
+h1n1	a-h1n1
+h1n1	h1n1v
+NO_agriculture AD_biologique	agriculteurs AD_biologique
+NO_agriculture AD_biologique	NO_agriculteur bio
+NO_agriculture AD_biologique	agriculteur bio
+sanofi-aventis	aventis
+NA_dominique strauss-kahn	dsk
+NO_émission PR_de co2	NO_émission PR_de gef
+NO_émission PR_de co2	NO_émission PR_de gaz PR_à NO_effet PR_de NO_serre
+vih	sida
+vih	NO_sida
+bachelot	roselyne bachelot-narquin
+NO_hydrocarbure	NO_carburant AD_fossile
+NO_hydrocarbure	NO_combustible AD_fossile
+NO_gouvernement AD_français	gouvernement NA_français
+NO_cancer	AD_cancéreux
+NO_nation AD_uni	NO_organisation PR_du NO_nation VE_unir
+NO_nation AD_uni	onu
+NO_énergie AD_renouvelable	NO_√©nergie AD_renouvelable
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le NO_santé
+NO_marée AD_noir	NO_marée NA_noire
+NO_marée AD_noir	marée NA_noire
+NO_chômage	NO_chômeur
+NO_ministre PR_de DE_le ecologie	minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_ministre PR_de DE_le NO_économie
+NO_enfance	NO_enfant
+sarkozy	sarko
+AD_résistant PR_au AD_antibiotique	NO_résistance PR_au AD_antibiotique
+norfenfluramine	norfenfluramines
+NO_médecine AD_vétérinaire	NO_docteur AD_vétérinaire
+NO_médecine AD_vétérinaire	docteur AD_vétérinaire
+NO_arme AD_biologique	
+NO_agriculture AD_breton	agriculteurs AD_breton
+NO_médecin AD_nucléaire	médecine AD_nucléaire
+NO_biologie AD_synthétique	NO_biologie AD_synth√©tique
+NO_maladie AD_auto-immun	maladie AD_auto-immun
+NO_maladie AD_auto-immun	maladie NO_auto AD_immun
+NO_cellule AD_photovoltaïque	NO_cellule AD_photovolta√Øque
+NO_médecin AD_général	médecine AD_général
+ministère PR_de DE_le NO_alimentation	minist√®re PR_de DE_le NO_alimentation
+ministère PR_de DE_le NO_alimentation	NO_minist√®re PR_de DE_le NO_alimentation
+valvulopathies	valvulopathie
+NO_banque AD_européen PR_de NO_investissement	NO_banque AD_europ√©en PR_de NO_investissement
+NO_agriculture AD_français	agriculteurs AD_français
+NO_autorité PR_de NO_sûreté AD_nucléaire	NO_autorit√© PR_de NO_s√ªret√© AD_nucl√©aire
+NO_nappe PR_de NO_pétrole	NO_nappe PR_de NO_p√©trole
+AD_éolien NO_marin	AD_√©olien NO_marin
+AD_éolien NO_marin	AD_√©olien NO_offshore
+NO_aide AD_médical PR_de NA_etat	aide AD_médical PR_de NA_etat
+NA_etat AD_européen	NA_etat AD_europ√©en
+NA_etat AD_européen	NA_etats AD_europ√©en
+NO_cha√Æne AD_alimentaire	NO_chaîne AD_alimentaire
+NO_boue AD_rouge	NO_boue AD_toxique
+véolia	v√©olia
+NO_antibiotique	AD_antibiotique
+NO_institut AD_national PR_de NO_veille AD_sanitaire	NO_institut PR_de NO_veille AD_sanitaire
+alzheimer	NO_maladie PR_de alzheimer
+bisphénol	bisph√©nol
+bisphénol	bisph√©nol A
+NO_ministre PR_du NO_finance	NO_ministère PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finances
+NO_ministre PR_du NO_finance	NO_ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finances
+NO_ministre PR_du NO_finance	NO_ministère PR_du finance
+NO_ministre PR_du NO_finance	ministres PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finance
+NO_ministre PR_du NO_finance	NO_ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du finance
+NO_ministre PR_du NO_finance	ministre PR_du NO_finance
+NO_ministre PR_du NO_finance	ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du NO_finance
+NO_confédération paysanne	NO_confédération AD_paysan
+NO_confédération paysanne	confédération AD_paysan
+NO_confédération paysanne	confédération paysan
+NO_érosion	NO_√©rosion
+NO_cohésion AD_social	NO_cohérence AD_social
+h1n1	a-h1n1
+h1n1	h1n1v
+NO_agriculture AD_biologique	agriculteurs AD_biologique
+NO_agriculture AD_biologique	NO_agriculteur bio
+NO_agriculture AD_biologique	agriculteur bio
+sanofi-aventis	aventis
+NA_dominique strauss-kahn	dsk
+NO_émission PR_de co2	NO_émission PR_de gef
+NO_émission PR_de co2	NO_émission PR_de gaz PR_à NO_effet PR_de NO_serre
+vih	sida
+vih	NO_sida
+bachelot	roselyne bachelot-narquin
+NO_hydrocarbure	NO_carburant AD_fossile
+NO_hydrocarbure	NO_combustible AD_fossile
+NO_gouvernement AD_français	gouvernement NA_français
+NO_cancer	AD_cancéreux
+NO_nation AD_uni	NO_organisation PR_du NO_nation VE_unir
+NO_nation AD_uni	onu
+NO_énergie AD_renouvelable	NO_√©nergie AD_renouvelable
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le NO_santé
+NO_marée AD_noir	NO_marée NA_noire
+NO_marée AD_noir	marée NA_noire
+NO_chômage	NO_chômeur
+NO_ministre PR_de DE_le ecologie	minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_ministre PR_de DE_le NO_économie
+NO_enfance	NO_enfant
+sarkozy	sarko
+AD_résistant PR_au AD_antibiotique	NO_résistance PR_au AD_antibiotique
+norfenfluramine	norfenfluramines
+NO_médecine AD_vétérinaire	NO_docteur AD_vétérinaire
+NO_médecine AD_vétérinaire	docteur AD_vétérinaire
+NO_arme AD_biologique	
+NO_agriculture AD_breton	agriculteurs AD_breton
+NO_médecin AD_nucléaire	médecine AD_nucléaire
+NO_biologie AD_synthétique	NO_biologie AD_synth√©tique
+NO_maladie AD_auto-immun	maladie AD_auto-immun
+NO_maladie AD_auto-immun	maladie NO_auto AD_immun
+NO_cellule AD_photovoltaïque	NO_cellule AD_photovolta√Øque
+NO_médecin AD_général	médecine AD_général
+ministère PR_de DE_le NO_alimentation	minist√®re PR_de DE_le NO_alimentation
+ministère PR_de DE_le NO_alimentation	NO_minist√®re PR_de DE_le NO_alimentation
+valvulopathies	valvulopathie
+NO_banque AD_européen PR_de NO_investissement	NO_banque AD_europ√©en PR_de NO_investissement
+NO_agriculture AD_français	agriculteurs AD_français
+NO_autorité PR_de NO_sûreté AD_nucléaire	NO_autorit√© PR_de NO_s√ªret√© AD_nucl√©aire
+NO_nappe PR_de NO_pétrole	NO_nappe PR_de NO_p√©trole
+AD_éolien NO_marin	AD_√©olien NO_marin
+AD_éolien NO_marin	AD_√©olien NO_offshore
+NO_aide AD_médical PR_de NA_etat	aide AD_médical PR_de NA_etat
+NA_etat AD_européen	NA_etat AD_europ√©en
+NA_etat AD_européen	NA_etats AD_europ√©en
+NO_cha√Æne AD_alimentaire	NO_chaîne AD_alimentaire
+NO_boue AD_rouge	NO_boue AD_toxique
+véolia	v√©olia
+NO_antibiotique	AD_antibiotique
+NO_institut AD_national PR_de NO_veille AD_sanitaire	NO_institut PR_de NO_veille AD_sanitaire
+alzheimer	NO_maladie PR_de alzheimer
+bisphénol	bisph√©nol
+bisphénol	bisph√©nol A
+NO_ministre PR_du NO_finance	NO_ministère PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finances
+NO_ministre PR_du NO_finance	NO_ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finances
+NO_ministre PR_du NO_finance	NO_ministère PR_du finance
+NO_ministre PR_du NO_finance	ministres PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finance
+NO_ministre PR_du NO_finance	NO_ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du finance
+NO_ministre PR_du NO_finance	ministre PR_du NO_finance
+NO_ministre PR_du NO_finance	ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du NO_finance
+NO_confédération paysanne	NO_confédération AD_paysan
+NO_confédération paysanne	confédération AD_paysan
+NO_confédération paysanne	confédération paysan
+NO_érosion	NO_√©rosion
+NO_cohésion AD_social	NO_cohérence AD_social
+h1n1	a-h1n1
+h1n1	h1n1v
+NO_agriculture AD_biologique	agriculteurs AD_biologique
+NO_agriculture AD_biologique	NO_agriculteur bio
+NO_agriculture AD_biologique	agriculteur bio
+sanofi-aventis	aventis
+NA_dominique strauss-kahn	dsk
+NO_émission PR_de co2	NO_émission PR_de gef
+NO_émission PR_de co2	NO_émission PR_de gaz PR_à NO_effet PR_de NO_serre
+vih	sida
+vih	NO_sida
+bachelot	roselyne bachelot-narquin
+NO_hydrocarbure	NO_carburant AD_fossile
+NO_hydrocarbure	NO_combustible AD_fossile
+NO_gouvernement AD_français	gouvernement NA_français
+NO_cancer	AD_cancéreux
+NO_nation AD_uni	NO_organisation PR_du NO_nation VE_unir
+NO_nation AD_uni	onu
+NO_énergie AD_renouvelable	NO_√©nergie AD_renouvelable
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le NO_santé
+NO_marée AD_noir	NO_marée NA_noire
+NO_marée AD_noir	marée NA_noire
+NO_chômage	NO_chômeur
+NO_ministre PR_de DE_le ecologie	minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_ministre PR_de DE_le NO_économie
+NO_enfance	NO_enfant
+sarkozy	sarko
+AD_résistant PR_au AD_antibiotique	NO_résistance PR_au AD_antibiotique
+norfenfluramine	norfenfluramines
+NO_médecine AD_vétérinaire	NO_docteur AD_vétérinaire
+NO_médecine AD_vétérinaire	docteur AD_vétérinaire
+NO_arme AD_biologique	
+NO_agriculture AD_breton	agriculteurs AD_breton
+NO_médecin AD_nucléaire	médecine AD_nucléaire
+NO_biologie AD_synthétique	NO_biologie AD_synth√©tique
+NO_maladie AD_auto-immun	maladie AD_auto-immun
+NO_maladie AD_auto-immun	maladie NO_auto AD_immun
+NO_cellule AD_photovoltaïque	NO_cellule AD_photovolta√Øque
+NO_médecin AD_général	médecine AD_général
+ministère PR_de DE_le NO_alimentation	minist√®re PR_de DE_le NO_alimentation
+ministère PR_de DE_le NO_alimentation	NO_minist√®re PR_de DE_le NO_alimentation
+valvulopathies	valvulopathie
+NO_banque AD_européen PR_de NO_investissement	NO_banque AD_europ√©en PR_de NO_investissement
+NO_agriculture AD_français	agriculteurs AD_français
+NO_autorité PR_de NO_sûreté AD_nucléaire	NO_autorit√© PR_de NO_s√ªret√© AD_nucl√©aire
+NO_nappe PR_de NO_pétrole	NO_nappe PR_de NO_p√©trole
+AD_éolien NO_marin	AD_√©olien NO_marin
+AD_éolien NO_marin	AD_√©olien NO_offshore
+NO_aide AD_médical PR_de NA_etat	aide AD_médical PR_de NA_etat
+NA_etat AD_européen	NA_etat AD_europ√©en
+NA_etat AD_européen	NA_etats AD_europ√©en
+NO_cha√Æne AD_alimentaire	NO_chaîne AD_alimentaire
+NO_boue AD_rouge	NO_boue AD_toxique
+véolia	v√©olia
+NO_antibiotique	AD_antibiotique
+NO_institut AD_national PR_de NO_veille AD_sanitaire	NO_institut PR_de NO_veille AD_sanitaire
+alzheimer	NO_maladie PR_de alzheimer
+bisphénol	bisph√©nol
+bisphénol	bisph√©nol A
+NO_ministre PR_du NO_finance	NO_ministère PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finances
+NO_ministre PR_du NO_finance	NO_ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finances
+NO_ministre PR_du NO_finance	NO_ministère PR_du finance
+NO_ministre PR_du NO_finance	ministres PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finance
+NO_ministre PR_du NO_finance	NO_ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du finance
+NO_ministre PR_du NO_finance	ministre PR_du NO_finance
+NO_ministre PR_du NO_finance	ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du NO_finance
+NO_confédération paysanne	NO_confédération AD_paysan
+NO_confédération paysanne	confédération AD_paysan
+NO_confédération paysanne	confédération paysan
+NO_érosion	NO_√©rosion
+NO_cohésion AD_social	NO_cohérence AD_social
+h1n1	a-h1n1
+h1n1	h1n1v
+NO_agriculture AD_biologique	agriculteurs AD_biologique
+NO_agriculture AD_biologique	NO_agriculteur bio
+NO_agriculture AD_biologique	agriculteur bio
+sanofi-aventis	aventis
+NA_dominique strauss-kahn	dsk
+NO_émission PR_de co2	NO_émission PR_de gef
+NO_émission PR_de co2	NO_émission PR_de gaz PR_à NO_effet PR_de NO_serre
+vih	sida
+vih	NO_sida
+bachelot	roselyne bachelot-narquin
+NO_hydrocarbure	NO_carburant AD_fossile
+NO_hydrocarbure	NO_combustible AD_fossile
+NO_gouvernement AD_français	gouvernement NA_français
+NO_cancer	AD_cancéreux
+NO_nation AD_uni	NO_organisation PR_du NO_nation VE_unir
+NO_nation AD_uni	onu
+NO_énergie AD_renouvelable	NO_√©nergie AD_renouvelable
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le NO_santé
+NO_marée AD_noir	NO_marée NA_noire
+NO_marée AD_noir	marée NA_noire
+NO_chômage	NO_chômeur
+NO_ministre PR_de DE_le ecologie	minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_ministre PR_de DE_le NO_économie
+NO_enfance	NO_enfant
+sarkozy	sarko
+AD_résistant PR_au AD_antibiotique	NO_résistance PR_au AD_antibiotique
+norfenfluramine	norfenfluramines
+NO_médecine AD_vétérinaire	NO_docteur AD_vétérinaire
+NO_médecine AD_vétérinaire	docteur AD_vétérinaire
+NO_arme AD_biologique	
+NO_agriculture AD_breton	agriculteurs AD_breton
+NO_médecin AD_nucléaire	médecine AD_nucléaire
+NO_biologie AD_synthétique	NO_biologie AD_synth√©tique
+NO_maladie AD_auto-immun	maladie AD_auto-immun
+NO_maladie AD_auto-immun	maladie NO_auto AD_immun
+NO_cellule AD_photovoltaïque	NO_cellule AD_photovolta√Øque
+NO_médecin AD_général	médecine AD_général
+ministère PR_de DE_le NO_alimentation	minist√®re PR_de DE_le NO_alimentation
+ministère PR_de DE_le NO_alimentation	NO_minist√®re PR_de DE_le NO_alimentation
+valvulopathies	valvulopathie
+NO_banque AD_européen PR_de NO_investissement	NO_banque AD_europ√©en PR_de NO_investissement
+NO_agriculture AD_français	agriculteurs AD_français
+NO_autorité PR_de NO_sûreté AD_nucléaire	NO_autorit√© PR_de NO_s√ªret√© AD_nucl√©aire
+NO_nappe PR_de NO_pétrole	NO_nappe PR_de NO_p√©trole
+AD_éolien NO_marin	AD_√©olien NO_marin
+AD_éolien NO_marin	AD_√©olien NO_offshore
+NO_aide AD_médical PR_de NA_etat	aide AD_médical PR_de NA_etat
+NA_etat AD_européen	NA_etat AD_europ√©en
+NA_etat AD_européen	NA_etats AD_europ√©en
+NO_cha√Æne AD_alimentaire	NO_chaîne AD_alimentaire
+NO_boue AD_rouge	NO_boue AD_toxique
+véolia	v√©olia
+NO_antibiotique	AD_antibiotique
+NO_institut AD_national PR_de NO_veille AD_sanitaire	NO_institut PR_de NO_veille AD_sanitaire
+alzheimer	NO_maladie PR_de alzheimer
+bisphénol	bisph√©nol
+bisphénol	bisph√©nol A
+NO_ministre PR_du NO_finance	NO_ministère PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finances
+NO_ministre PR_du NO_finance	NO_ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finances
+NO_ministre PR_du NO_finance	NO_ministère PR_du finance
+NO_ministre PR_du NO_finance	ministres PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finance
+NO_ministre PR_du NO_finance	NO_ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du finance
+NO_ministre PR_du NO_finance	ministre PR_du NO_finance
+NO_ministre PR_du NO_finance	ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du NO_finance
+NO_confédération paysanne	NO_confédération AD_paysan
+NO_confédération paysanne	confédération AD_paysan
+NO_confédération paysanne	confédération paysan
+NO_érosion	NO_√©rosion
+NO_cohésion AD_social	NO_cohérence AD_social
+h1n1	a-h1n1
+h1n1	h1n1v
+NO_agriculture AD_biologique	agriculteurs AD_biologique
+NO_agriculture AD_biologique	NO_agriculteur bio
+NO_agriculture AD_biologique	agriculteur bio
+sanofi-aventis	aventis
+NA_dominique strauss-kahn	dsk
+NO_émission PR_de co2	NO_émission PR_de gef
+NO_émission PR_de co2	NO_émission PR_de gaz PR_à NO_effet PR_de NO_serre
+vih	sida
+vih	NO_sida
+bachelot	roselyne bachelot-narquin
+NO_hydrocarbure	NO_carburant AD_fossile
+NO_hydrocarbure	NO_combustible AD_fossile
+NO_gouvernement AD_français	gouvernement NA_français
+NO_cancer	AD_cancéreux
+NO_nation AD_uni	NO_organisation PR_du NO_nation VE_unir
+NO_nation AD_uni	onu
+NO_énergie AD_renouvelable	NO_√©nergie AD_renouvelable
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le NO_santé
+NO_marée AD_noir	NO_marée NA_noire
+NO_marée AD_noir	marée NA_noire
+NO_chômage	NO_chômeur
+NO_ministre PR_de DE_le ecologie	minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_ministre PR_de DE_le NO_économie
+NO_enfance	NO_enfant
+sarkozy	sarko
+AD_résistant PR_au AD_antibiotique	NO_résistance PR_au AD_antibiotique
+norfenfluramine	norfenfluramines
+NO_médecine AD_vétérinaire	NO_docteur AD_vétérinaire
+NO_médecine AD_vétérinaire	docteur AD_vétérinaire
+NO_arme AD_biologique	
+NO_agriculture AD_breton	agriculteurs AD_breton
+NO_médecin AD_nucléaire	médecine AD_nucléaire
+NO_biologie AD_synthétique	NO_biologie AD_synth√©tique
+NO_maladie AD_auto-immun	maladie AD_auto-immun
+NO_maladie AD_auto-immun	maladie NO_auto AD_immun
+NO_cellule AD_photovoltaïque	NO_cellule AD_photovolta√Øque
+NO_médecin AD_général	médecine AD_général
+ministère PR_de DE_le NO_alimentation	minist√®re PR_de DE_le NO_alimentation
+ministère PR_de DE_le NO_alimentation	NO_minist√®re PR_de DE_le NO_alimentation
+valvulopathies	valvulopathie
+NO_banque AD_européen PR_de NO_investissement	NO_banque AD_europ√©en PR_de NO_investissement
+NO_agriculture AD_français	agriculteurs AD_français
+NO_autorité PR_de NO_sûreté AD_nucléaire	NO_autorit√© PR_de NO_s√ªret√© AD_nucl√©aire
+NO_nappe PR_de NO_pétrole	NO_nappe PR_de NO_p√©trole
+AD_éolien NO_marin	AD_√©olien NO_marin
+AD_éolien NO_marin	AD_√©olien NO_offshore
+NO_aide AD_médical PR_de NA_etat	aide AD_médical PR_de NA_etat
+NA_etat AD_européen	NA_etat AD_europ√©en
+NA_etat AD_européen	NA_etats AD_europ√©en
+NO_cha√Æne AD_alimentaire	NO_chaîne AD_alimentaire
+NO_boue AD_rouge	NO_boue AD_toxique
+véolia	v√©olia
+NO_antibiotique	AD_antibiotique
+NO_institut AD_national PR_de NO_veille AD_sanitaire	NO_institut PR_de NO_veille AD_sanitaire
+alzheimer	NO_maladie PR_de alzheimer
+bisphénol	bisph√©nol
+bisphénol	bisph√©nol A
+NO_ministre PR_du NO_finance	NO_ministère PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finances
+NO_ministre PR_du NO_finance	NO_ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finances
+NO_ministre PR_du NO_finance	NO_ministère PR_du finance
+NO_ministre PR_du NO_finance	ministres PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finance
+NO_ministre PR_du NO_finance	NO_ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du finance
+NO_ministre PR_du NO_finance	ministre PR_du NO_finance
+NO_ministre PR_du NO_finance	ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du NO_finance
+NO_confédération paysanne	NO_confédération AD_paysan
+NO_confédération paysanne	confédération AD_paysan
+NO_confédération paysanne	confédération paysan
+NO_érosion	NO_√©rosion
+NO_cohésion AD_social	NO_cohérence AD_social
+h1n1	a-h1n1
+h1n1	h1n1v
+NO_agriculture AD_biologique	agriculteurs AD_biologique
+NO_agriculture AD_biologique	NO_agriculteur bio
+NO_agriculture AD_biologique	agriculteur bio
+sanofi-aventis	aventis
+NA_dominique strauss-kahn	dsk
+NO_émission PR_de co2	NO_émission PR_de gef
+NO_émission PR_de co2	NO_émission PR_de gaz PR_à NO_effet PR_de NO_serre
+vih	sida
+vih	NO_sida
+bachelot	roselyne bachelot-narquin
+NO_hydrocarbure	NO_carburant AD_fossile
+NO_hydrocarbure	NO_combustible AD_fossile
+NO_gouvernement AD_français	gouvernement NA_français
+NO_cancer	AD_cancéreux
+NO_nation AD_uni	NO_organisation PR_du NO_nation VE_unir
+NO_nation AD_uni	onu
+NO_énergie AD_renouvelable	NO_√©nergie AD_renouvelable
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le NO_santé
+NO_marée AD_noir	NO_marée NA_noire
+NO_marée AD_noir	marée NA_noire
+NO_chômage	NO_chômeur
+NO_ministre PR_de DE_le ecologie	minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_ministre PR_de DE_le NO_économie
+NO_enfance	NO_enfant
+sarkozy	sarko
