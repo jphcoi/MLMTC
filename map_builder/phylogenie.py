@@ -458,8 +458,10 @@ def ecrire_tables_cluster_phylo(nodes,edges,sortie,level,time,attribut,sonsbis,f
 		son = sonsbis[idx]
 		fat = fathersbis[idx]
 		labv = lab.split(sep_label)
+		labv.sort()
 		lab1 = labv[0]
 		lab2 = labv[1]
+		
 		lab_1 = dico_termes_inv[lab1]
 		lab_2 = dico_termes_inv[lab2]
 		label_annee = get_label_annees(tim)

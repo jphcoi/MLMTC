@@ -111,9 +111,9 @@ def creer_table_sem_periode_valuee(name_bdd,name_table):
 	try:
 #		print 'CREATE TABLE '+ name_table +' (id INTEGER PRIMARY KEY,auteurs VARCHAR(200) unique )'
 		ex('CREATE TABLE '+ name_table +' (id INTEGER PRIMARY KEY,concept1 INTEGER,concept2 INTEGER,periode INTEGER,cooccurrences INTEGER,distance float,requete VARCHAR(200),identifiant_unique VARCHAR(20) unique)')
-		print "      + table (sem_weighted) \"" +name_table+"\" creee"
+		print "      + table (semweighted) \"" +name_table+"\" creee"
 	except:
-		print "      * table (sem_weighted) \"" +name_table+"\" deja creee"
+		print "      * table (semweighted) \"" +name_table+"\" deja creee"
 		pass
 	connection.commit()
 	connection.close()
