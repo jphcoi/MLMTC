@@ -231,7 +231,7 @@ except:
 
 years_bins = build_years_bins(fenetre,dated,datef,overlap)
 years_bins_no_overlap = build_years_bins(fenetre,years_bins[0][0],years_bins[-1][-1],0)
-#print years_bins
+print years_bins
 #print years_bins_no_overlap
 
 if nofigure==1:
