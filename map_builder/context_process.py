@@ -307,7 +307,11 @@ dico_termes=fonctions.build_dico()
 #print dico_termes	
 print years_bins
 name_date = str(years_bins[0][0]) + '_' + str(years_bins[0][-1]) + '_'+ str(years_bins[1][0])+ '_'+str(years_bins[-1][-1])
-
+try:
+	os.mkdir(path_req +'gexf')
+except:
+	pass
+			
 try:# si on a deja calcule le reseau de proximit
 	if user_interface =='y':
 		var = raw_input('do you wish to try to rebuild cooccurrence matrix  ? (y to rebuild)')
@@ -337,15 +341,12 @@ try:# si on a deja calcule le reseau de proximit
 			if inter>0:
 				dist_mat_temp_old = deepcopy(dist_mat_temp)
 			dist_mat_temp = lire_dist_mat_file(fichier_CF)
-			p_cooccurrences_temp=lire_dist_mat_file(fichier_cooc)
+			#p_cooccurrences_temp=lire_dist_mat_file(fichier_cooc)
+			print 'on construit maintenant dist_mat pour chaque periode ' + srt(inter)
 			for x,y in dist_mat_temp.iteritems():
 				dist_mat[(int(x[0]),int(x[1]),int(inter))]=y
-			for x,y in p_cooccurrences_temp.iteritems():
-				p_cooccurrences[(int(x[0]),int(x[1]),int(inter))]=y
-			try:
-				os.mkdir(path_req +'gexf')
-			except:
-				pass
+			#for x,y in p_cooccurrences_temp.iteritems():
+			#	p_cooccurrences[(int(x[0]),int(x[1]),int(inter))]=y
 			level={}
 			for x in dico_termes:
 				level[x]=1
