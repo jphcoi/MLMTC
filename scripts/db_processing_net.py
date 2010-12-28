@@ -49,8 +49,8 @@ language = parameters.language
 # 
 # print "    + creation de la table \"concepts\" (qui fait office de dictionnaire)..."
 # fonctions_bdd.creer_table_concepts(name_bdd,'concepts')
-# 
-# # on indexe a partir de la liste des ngrammes tries
+
+# on indexe a partir de la liste des ngrammes tries
 
 filename = path_req + requete + '_' + str(freqmin) + '_' + 'liste_n-grammes_freq_comparatif'  +'_trie' + '.csv' #fichier d'entree trie (rajouter _trie a la fin de la sortie standard)
 #print filename
@@ -224,7 +224,7 @@ for cons in concepts_billets:
 		for nom in names:
 			indexterme = dic_concepts[nom.replace("popostrophe","'")]
 			if not indexterme in id_conc:
-				id_conc.append()
+				id_conc.append(indexterme)
 	else:
 		id_conc=[]
 	concepts_index.append([id_b,id_conc])
