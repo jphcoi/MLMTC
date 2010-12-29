@@ -192,7 +192,7 @@ def convert_muti3d_muti2d(muti):
 		cont = cles[1]
 		inter = cles[2]
 		couple  = (terme,inter)
-		couple_trans = (cont,inter)
+	#	couple_trans = (cont,inter)
 		muti2d = rajouter_dico_simple_dico(muti2d,couple,cont,valeur)
 	#	muti2d_trans = rajouter_dico_simple_dico(muti2d_trans,couple_trans,terme,valeur)
 	return muti2d#,muti2d_trans
@@ -220,7 +220,7 @@ def build_precision(muti):
 	voisinages_pos={}
 	voisinages={}
 	muti_pos = {}
-	for x, y in muti.iteritems():
+	for x,y in muti.iteritems():
 		if y>0:
 			muti_pos[x]=y
 			temp=voisinages_pos.get((x[0],x[2]),[])
@@ -266,10 +266,6 @@ def distance(delta,p_cooccurrences):
 		muti = build_mutual_information(p_cooccurrences)
 		print 'matrice temporelle d information mutuelle ecrite'
 		dist_mat = build_precision(muti)
-		for x,y in dist_mat.iteritems():
-			terme1 = x[0]
-			terme2 = x[1]
-			temps  = x[2]
 		print 'matrice de distance de precision ecrite'
 	if delta=='cooc':
 		dist_mat = build_chavabien(p_cooccurrences)
@@ -301,7 +297,26 @@ def compare_dictionnaire(dist_mat_temp_old,dist_mat_temp):
 				commun += 1
 		return commun, total_old, total_new
 		
-
+def remplir_colonne_distance_sem_weighted(dist_mat):
+	contenu = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'sem_weighted','id,concept1,concept2,periode,cooccurrences')
+	sem_weighted_triplet_id={}
+	for cont in contenu:
+		sem_weighted_triplet_id[(cont[1],cont[2],cont[3])]=cont[0]
+	champs_liste=[]
+	champs_name=[]
+	for x,y in dist_mat.iteritems():
+		if x in sem_weighted_triplet_id:
+			id_triplet = sem_weighted_triplet_id[x]
+			champs_liste.append((id_triplet,y))
+			champs_name.append('distance0')
+		else:
+			#c'est une distance entrante!
+			x=(x[1],x[0],x[2])
+			id_triplet = sem_weighted_triplet_id[x]
+			champs_liste.append((id_triplet,y))
+			champs_name.append('distance1')
+	fonctions_bdd.update_multi_table(name_bdd,'sem_weighted',champs_name,champs_liste)
+	#"remplit la colonne champ_name d'indice id - entree liste de doublon (id, valeur)"
 		
 dico_termes=fonctions.build_dico()
 #print dico_termes	
@@ -311,7 +326,7 @@ try:
 	os.mkdir(path_req +'gexf')
 except:
 	pass
-			
+					
 try:# si on a deja calcule le reseau de proximit
 	if user_interface =='y':
 		var = raw_input('do you wish to try to rebuild cooccurrence matrix  ? (y to rebuild)')
@@ -321,11 +336,12 @@ try:# si on a deja calcule le reseau de proximit
 	try:
 		if var =='y':
 			fonctions.dumpingout('klqsdjlmsqjdklqsmd')
-
+		
 		#p_cooccurrences = fonctions.dumpingout('p_cooccurrences'+name_date)
 		dist_mat = fonctions.dumpingout('dist_mat'+name_date)
-		print 'on a chargé les données déjà calaculées'
-		
+		print 'on a chargé les données déjà calculées'
+		remplir_colonne_distance_sem_weighted(dist_mat)
+
 	except:
 		if var =='y':
 			print 'on reconstruit'
@@ -356,6 +372,8 @@ try:# si on a deja calcule le reseau de proximit
 		
 		#fonctions.dumpingin(p_cooccurrences,'p_cooccurrences'+name_date)
 		fonctions.dumpingin(dist_mat,'dist_mat'+name_date)
+		remplir_colonne_distance_sem_weighted(dist_mat)
+		
 		print 'on a enregistre la variable dist_mat' +name_date + ' en mémoire'
 		
 except:# sinon on recalcule du début

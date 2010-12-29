@@ -110,7 +110,7 @@ def creer_table_sem_periode_valuee(name_bdd,name_table):
 	connection,ex = connexion(name_bdd)
 	try:
 #		print 'CREATE TABLE '+ name_table +' (id INTEGER PRIMARY KEY,auteurs VARCHAR(200) unique )'
-		ex('CREATE TABLE '+ name_table +' (id INTEGER PRIMARY KEY,concept1 INTEGER,concept2 INTEGER,periode INTEGER,cooccurrences INTEGER,distance float)')
+		ex('CREATE TABLE '+ name_table +' (id INTEGER PRIMARY KEY,concept1 INTEGER,concept2 INTEGER,periode INTEGER,cooccurrences INTEGER,distance0 float,distance1 float)')
 		print "      + table (sem_weighted) \"" +name_table+"\" creee"
 	except:
 		print "      * table (sem_weighted) \"" +name_table+"\" deja creee"
@@ -505,6 +505,20 @@ def remplir_table(name_bdd,name_table,champs_liste,champs_name):
 	print "      + table " + name_table+" remplie"
 
 
+def update_multi_table(name_bdd,name_table,champs_name,champs_liste):
+	"remplit la colonne champ_name d'indice id - entree liste de doublon (id, valeur)"
+	connection, ex = connexion(name_bdd)
+	for champ,champ_name in zip(champs_liste,champs_name): 
+		champ_id  = str(champ[0])
+		champ_value =str(champ[1])
+		values = " SET " + champ_name +   ' = '+ champ_value 
+		commandesql = "UPDATE   " + name_table +' '+ values+" WHERE id=" + champ_id
+		#print commandesql
+		ex(commandesql)
+	connection.commit()
+	connection.close()
+	#print "table "+name_table+" remplie avec les champs "  + champs_name
+	
 
 def update_table(name_bdd,name_table,champs_name,champs_liste):
 	"remplit la colonne champ_name d'indice id - entree liste de doublon (id, valeur)"
@@ -515,9 +529,8 @@ def update_table(name_bdd,name_table,champs_name,champs_liste):
 		champ_sql = champ_value.replace("'","popostrophe")#eliminer les quotes simples pour inserer dans la table sql
 		values = " SET " + champs_name +   '= \''+champ_sql +'\''
 		commandesql = "UPDATE   " + name_table +' '+ values+" WHERE id=" + champ_id
-	#	print commandesql
 		ex(commandesql)
-	connection.commit()
+	#connection.commit()
 	connection.close()
 	#print "table "+name_table+" remplie avec les champs "  + champs_name
 	
