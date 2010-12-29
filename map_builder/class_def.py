@@ -70,7 +70,12 @@ class Liste_termes(Generali):
 # 	
 # 		
 		 
-			
+class Doublet_champ(Generali):
+	"""Class Doublet Champ."""
+	def __init__(self,couple_champ):
+		self.index = (couple_champ[0].index,couple_champ[1].index)
+		self.periode = couple_champ[0].periode
+
 class Champ(Generali):
 	"""Class Champ."""
 	def __init__(self,index,periode,niveau,label,termes,poids):
@@ -82,10 +87,15 @@ class Champ(Generali):
 		self.label=label
 		self.termes=termes
 		self.poids = poids
+	def __eq__(self, other):
+		return (self.index  == other.index) and (self.periode == other.periode)
 	def get_label(self):
 		return self.label
 	def get_periode(self):
 		return self.periode
+	def get_index(self):
+		return self.index
+
 	def __str__(self):
 		"""Method docstring."""
 		return "Champ: niveau({0}), periode({1}), label({2},index({3}))".format(self.niveau, self.periode, map(Terme.get_label,self.label.liste_termes),self.index)

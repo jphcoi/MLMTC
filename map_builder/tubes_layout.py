@@ -40,7 +40,7 @@ try:
 	tubes = fonctions.dumpingout(param_txt+'tubes')
 	#res_intertemp_zoom = fonctions.dumpingout(param_txt+'res_intertemp_zoom')
 	#pas utile
-	#dyn_net_zoom = fonctions.dumpingout(param_txt+'dyn_net_zoom')
+	dyn_net_zoom = fonctions.dumpingout(param_txt+'dyn_net_zoom')
 	print 'bravo'
 except:
 	tubes,dyn_net_zoom,res_intertemp_zoom=multi_tubes.get_tubes(resolution_niveau,seuil_netermes,resolution_continuite,proj_thres)
@@ -169,7 +169,51 @@ def create_js_bar(liste_points,label_tubes,niv,fichier):
 		out = out + '},'	
 	fichier.write(out)
 
+def obtain_distance_couplechamps(dyn_net_zoom_zoo,ch1,ch2,inter_compt):
+	distance = None
+	inter=Champ.get_periode(ch1)
+	if Champ.get_periode(ch2)==inter:
+		dyn_net_zoom_zoo_inter = dyn_net_zoom_zoo[inter]
+		distance = 1
+		for couple,distances in dyn_net_zoom_zoo_inter.champs_dist.iteritems():
+			if ch1 in couple and ch2 in couple:
+	 			distance=distances
+		inter_compt[inter]=inter_compt.get(inter,0)+1
+	return distance,inter_compt,inter
+		
 
+def distance_inter_listechamps(liste_champs1,liste_champs2,dyn_net_zoom_zoo,inter_pert):
+	inter_compt={}
+	distance_inter_tube={}
+	proximite={}
+	for ch1 in liste_champs1:
+		for ch2 in liste_champs2:
+			res,inter_compt,inter=obtain_distance_couplechamps(dyn_net_zoom_zoo,ch1,ch2,inter_compt)
+			if res != None:
+				proximite[inter] = proximite.get(inter,0.)+float(res)
+	return proximite,inter_compt
+	
+def expand_network_champ_tubes(tube_fin_liste,dyn_net_zoom_zoo):
+	reseau_tube = {}
+	#dyn_net_zoom_zoo.champs_liste
+	#print dyn_net_zoom_zoo
+	
+	for tube_index1,tube1 in enumerate(tube_fin_liste[:-1]):
+		liste_champs1= tube1.liste_champs
+		inters1 = map(Champ.get_periode,liste_champs1)
+		for tube2 in tube_fin_liste[tube_index1+1:]:
+			liste_champs2= tube2.liste_champs
+			inters2 = map(Champ.get_periode,liste_champs2)
+			#print inters1
+			#print inters2
+			if len(set(inters1).intersection(set(inters2)))>0:
+				proximite,inter_compt=distance_inter_listechamps(liste_champs1,liste_champs2,dyn_net_zoom_zoo,list(set(inters1).intersection(set(inters2))))
+				prox_moy = {}
+				for x,y in  proximite.iteritems():
+					prox_moy[x]= y / float(inter_compt[x]) 
+				reseau_tube[(tube1,tube2)]=prox_moy
+	return reseau_tube		
+		
 def export_jobs(continuite_test):
 	tube_fin = tubes[inter_temp_liste[continuite_test]]
 	print ' on regarde le seuil de continuite: ' +str(inter_temp_liste[continuite_test])
@@ -192,10 +236,13 @@ def export_jobs(continuite_test):
 		liste_points=[]
 		poid_total=0
 		label_tubes = []
-	
+		reseau_tube = expand_network_champ_tubes(tube_fin_liste,dyn_net_zoom[niveau])
+		print reseau_tube
 		for tube in tube_fin_liste:
 			liste_champs= tube.liste_champs
+			reseau_champ_niveau  = dyn_net_zoom[niveau].values()
 			label_tube = Liste_termes.afficher_liste_termes(tube.label)
+			print label_tube
 			label_tubes.append(label_tube)
 			inters = map(Champ.get_periode,liste_champs)
 			if 1:
@@ -214,3 +261,9 @@ def export_jobs(continuite_test):
 for continuite_test in range(resolution_continuite):
 	print continuite_test
 	export_jobs(continuite_test)
+	
+# for x,y in dyn_net_zoom.iteritems():
+# 	print x
+# 	for w,z in y.iteritems():
+# 		print w
+# 		print z.champs_dist

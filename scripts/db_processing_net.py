@@ -177,7 +177,6 @@ for clique in ngramme_billets_fit:
 	ngrammes_fit_index.append(clique_index)
 print "    + liste des index des concepts creee"
 
-
 for aut,clique in ngrammes_auteurs_fit.iteritems():
 	for terme in set(clique):
 		dictionnaire_frequence_exact_auteur[terme]=dictionnaire_frequence_exact_auteur[terme]+1
@@ -232,7 +231,7 @@ for cons in concepts_billets:
 print "    - mise a jour de la table billets avec les index des cocncepts obtenus via la table concepts..."
 print "         (concept_id = # du site dans la table auteurs)"
 try:
-	fonctions_bdd.add_column(name_bdd,'billets','concepts_id','VARCHAR(1500)')
+	fonctions_bdd.add_column(name_bdd,'billets','concepts_id','text')
 except:
 	pass
 fonctions_bdd.update_table(name_bdd,'billets','concepts_id',concepts_index)

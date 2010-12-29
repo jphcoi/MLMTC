@@ -628,7 +628,7 @@ for decoup in range(nb_tranche+1):
 	seuil= decoup*tranche
 	comp= comp_connexes(map_edgesbis,noeuds_labelbis,seuil)
 	composantes_seuil[seuil] = comp
-	print comp
+	#print comp
 
 print '\n'
 hierarchie = {}
@@ -641,7 +641,7 @@ for decoup in range(nb_tranche):
 		for x_a,y_a in composa_avt.iteritems():
 			if set(y)|set(y_a)==set(y_a):
 				hierarchie[(x,decoup+1)] = (x_a,decoup)
-print hierarchie
+#print hierarchie
 				
 		
 

@@ -260,7 +260,7 @@ def unique(liste):
 def hierarchical_clustering(nets,dico,dist_mat):
 	multi_level_dyn_net={}
 	for inter,net in nets.iteritems():
-		print 'periode : ' + str(inter)
+		#print 'periode : ' + str(inter)
 		#print net
 		#net.afficher_champs()
 		champs_liste = net.champs_liste

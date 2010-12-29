@@ -333,16 +333,16 @@ try:# si on a deja calcule le reseau de proximit
 
 		p_cooccurrences={}
 		dist_mat={}
+		print 'on construit la version pkl de dist_mat'
 		for inter in range(len(years_bins)):
 			fichier_CF=path_req +'reseau/'+'reseauCF_niv_1_'+dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt'
 			fichier_cooc=path_req +'reseau/'+'reseauCF_niv_cooc__'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt'
 			fichier_gexf = path_req + 'gexf/' + 'reseau_champ_0_'+'_' + dist_type +'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.gexf'		
-			#print  'on est la'
 			if inter>0:
 				dist_mat_temp_old = deepcopy(dist_mat_temp)
 			dist_mat_temp = lire_dist_mat_file(fichier_CF)
 			#p_cooccurrences_temp=lire_dist_mat_file(fichier_cooc)
-			print 'on construit maintenant dist_mat pour chaque periode ' + srt(inter)
+			print 'on construit maintenant dist_mat pour chaque periode ' + str(inter)
 			for x,y in dist_mat_temp.iteritems():
 				dist_mat[(int(x[0]),int(x[1]),int(inter))]=y
 			#for x,y in p_cooccurrences_temp.iteritems():
@@ -356,7 +356,7 @@ try:# si on a deja calcule le reseau de proximit
 		
 		#fonctions.dumpingin(p_cooccurrences,'p_cooccurrences'+name_date)
 		fonctions.dumpingin(dist_mat,'dist_mat'+name_date)
-		
+		print 'on a enregistre la variable dist_mat' +name_date + ' en mémoire'
 		
 except:# sinon on recalcule du début
 	print 'on calcule les données de départ'
