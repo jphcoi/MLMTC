@@ -321,17 +321,19 @@ if build_link_tables=='y':
 	
 	ll = len(billets_id)
 	vecteurs=decoupe_segment(ll,1000)
+	lienssem=[]
 	for x in vecteurs:
 		print 'on traite les billets: ' + str(x[0])+ ' a ' + str(x[-1]) +' (sur ' + str(ll) +' billets)'
-		lienssocsem,lienssem = misc.build_semantic_nets(billets_id[x[0]:x[-1]],ngrammes_fit_index[x[0]:x[-1]],name_bdd,requete,sep)
+		lienssocsem,lienssem_x = misc.build_semantic_nets(billets_id[x[0]:x[-1]],ngrammes_fit_index[x[0]:x[-1]],name_bdd,requete,sep)
 		##on remplit la table socsem
+		lienssem=lienssem+lienssem_x
 		fonctions_bdd.remplir_table(name_bdd,'socsem',lienssocsem,"(auteur,concept,jours,id_b,requete,identifiant_unique)")
 		# ##on remplit la table sem
 		#fonctions_bdd.remplir_table(name_bdd,'sem',lienssem,"(concept1,concept2,jours,id_b,requete,identifiant_unique)")
 		#ex('CREATE TABLE '+ name_table +' (id INTEGER PRIMARY KEY,concept1 INTEGER,concept2 INTEGER,periode INTEGER,cooccurrences INTEGER,distance float,requete VARCHAR(200),identifiant_unique VARCHAR(20) unique)')
-		lienssem_weighted=aggreger_periode(lienssem)
-		fonctions_bdd.remplir_table(name_bdd,'sem_weighted',lienssem_weighted,"(concept1,concept2,periode,cooccurrences)")
 		
+	lienssem_weighted=aggreger_periode(lienssem)
+	fonctions_bdd.remplir_table(name_bdd,'sem_weighted',lienssem_weighted,"(concept1,concept2,periode,cooccurrences)")
 	print "\n--- finished inserting data in tables socsem & sem."
 	
 
