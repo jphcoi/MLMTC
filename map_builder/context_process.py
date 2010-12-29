@@ -48,6 +48,16 @@ seuil=0.2
 ###################################
 	
 
+def verif_sym(dictionnaire_temp, sym=0):
+	print 'on contrôle la matrice symétrique'
+	for x,y in dictionnaire_temp.iteritems():
+		if not (x[1],x[0],x[2]) in  dictionnaire_temp:
+			print 'ouillllllle'
+		else:
+			if sym>0:
+				if not dictionnaire_temp[(x[1],x[0],x[2])] == y:
+					print 'passym'
+	print 'fin du contrôle'
 
 def init_dictionnary_list(taille,val):
 	dico={}
@@ -264,7 +274,7 @@ def build_chavabien(p_cooccurrences):
 def distance(delta,p_cooccurrences):
 	if delta=='precision':
 		muti = build_mutual_information(p_cooccurrences)
-		print 'matrice temporelle d information mutuelle ecrite'
+		print 'matrice temporelle d information mutuelle ecrite'		
 		dist_mat = build_precision(muti)
 		print 'matrice de distance de precision ecrite'
 	if delta=='cooc':
@@ -305,6 +315,10 @@ def remplir_colonne_distance_sem_weighted(dist_mat):
 	champs_liste=[]
 	champs_name=[]
 	for x,y in dist_mat.iteritems():
+		# if not (x[1],x[0],x[2]) in dist_mat:
+		# 		print (x[1],x[0],x[2])
+		# 	else:
+		# 		print 'ok'
 		if x in sem_weighted_triplet_id:
 			id_triplet = sem_weighted_triplet_id[x]
 			champs_liste.append((id_triplet,y))
@@ -315,11 +329,14 @@ def remplir_colonne_distance_sem_weighted(dist_mat):
 			id_triplet = sem_weighted_triplet_id[x]
 			champs_liste.append((id_triplet,y))
 			champs_name.append('distance1')
+			
 	fonctions_bdd.update_multi_table(name_bdd,'sem_weighted',champs_name,champs_liste)
 	#"remplit la colonne champ_name d'indice id - entree liste de doublon (id, valeur)"
 		
 dico_termes=fonctions.build_dico()
 #print dico_termes	
+
+
 print years_bins
 name_date = str(years_bins[0][0]) + '_' + str(years_bins[0][-1]) + '_'+ str(years_bins[1][0])+ '_'+str(years_bins[-1][-1])
 try:
@@ -339,8 +356,8 @@ try:# si on a deja calcule le reseau de proximit
 		
 		#p_cooccurrences = fonctions.dumpingout('p_cooccurrences'+name_date)
 		dist_mat = fonctions.dumpingout('dist_mat'+name_date)
-		print 'on a chargé les données déjà calculées'
 		remplir_colonne_distance_sem_weighted(dist_mat)
+		print 'on a chargé les données déjà calculées'
 
 	except:
 		if var =='y':
@@ -374,7 +391,7 @@ try:# si on a deja calcule le reseau de proximit
 		fonctions.dumpingin(dist_mat,'dist_mat'+name_date)
 		remplir_colonne_distance_sem_weighted(dist_mat)
 		
-		print 'on a enregistre la variable dist_mat' +name_date + ' en mémoire'
+		print 'on a enregistre la variable dist_mat' +name_date + ' en mémoire et remplit la table sem_weighted avec les distances positives.'
 		
 except:# sinon on recalcule du début
 	print 'on calcule les données de départ'
@@ -392,51 +409,3 @@ except:# sinon on recalcule du début
 	fonctions.ecrire_reseau_CF(dist_mat,years_bins,dist_type,seuil,1)
 	
 print 'matrice de cooccurrences et de distance en mémoire'
-
-# def add_zeros(dyn,years_bins):
-# 	dyna = []
-# 	for y in range(len(years_bins)):
-# 		dyna.append("%.3f" %dyn.get(y,0.))
-# 	return dyna
-
-# #construction des voisinages dynamiques:
-# voisinage_dynamique=0
-# if voisinage_dynamique==1:
-# 	#on crée la table des voisins
-# 	try:
-# 		fonctions_bdd.drop_table(name_bdd,'term_neighbor')
-# 	except:
-# 		pass
-# 	fonctions_bdd.creer_table_term_neighbor(name_bdd,'term_neighbor')
-# 	#on importe les données si ce n'est pas déjà fait 
-# 	try:
-# 		contenu[0]==1
-# 	except:
-# 		contenu = fonctions_bdd.select_bdd_table(name_bdd,'billets','concepts_id,jours,id',requete)
-# 		print "contenu importé"
-# 	print "on construit la variable avec tous les jours"
-# 	years_bins_jour = range(years_bins[0][0],years_bins[-1][-1]+1)
-# 	#temporairement
-# 	#years_bins_jour = range(years_bins[0][0],years_bins[0][-3]+1)
-# 	years_bins=[]
-# 	for x in years_bins_jour:
-# 		years_bins.append([x])
-# 	print years_bins
-# 	p_cooccurrences = build_cooc_matrix(contenu,years_bins)
-# 	print "matrice de cooccurrence sur tous les jours construite"
-# 	dist_mat = distance(dist_type,p_cooccurrences)
-# 	print "matrice de distance construite"
-# 	dist_2d,dist_2d_trans = convert_dist_mat3d_dist2d(dist_mat)
-# 	dist_2d_vector = []
-# 	dist_2d_vector_trans=[]
-# 	n=len(years_bins)
-# 	for x,y in dist_2d.iteritems():
-# 		moy = float(sum(y.values())) / n
-# 		if moy > 0.15:
-# 			dist_2d_vector.append((x[0],x[1],','.join(map(str,add_zeros(y,years_bins))),str("%.3f" %(moy)),'1'))
-# 	fonctions_bdd.remplir_table(name_bdd,'term_neighbor',dist_2d_vector,"(term1,term2, distances,force,direction)")
-# 	for x,y in dist_2d_trans.iteritems():
-# 		if moy >0.15:
-# 			dist_2d_vector_trans.append((x[0],x[1],','.join(map(str,add_zeros(y,years_bins))),str("%.3f" %(moy)),'0'))
-# 	fonctions_bdd.remplir_table(name_bdd,'term_neighbor',dist_2d_vector_trans,"(term1,term2, distances,force,direction)")
-# 	#fonctions.ecrire_reseau(dist_mat,years_bins,dist_type,seuil,1,dedoubler(dico_termes,years_bins))		 
