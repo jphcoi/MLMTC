@@ -559,91 +559,91 @@ for x,y in map_edgesbis.iteritems():
 #maintenant on regroupe les champs dans la phylogénie complète incluant les liens inter-clusters en faisant varier un seuil.
 #on recherche simplement les composantes connexes du graphe.
 #ps limite à 0.30 à l'origine sur les liens inter-clusters à régler dans les paramètres de CFpipe.py: seuil_net_champ_v
-def comp_connexes(liens,noeuds_labelbis,seuil):
-	comp = {}
-	noeuds=[]
-	noeuds_attribues = []
-	#les noeuds sont numerotes de 1 à nbre_noeuds
-	for x in range(len(noeuds_labelbis)):
-		noeuds.append(x+1)
-	#on regroupe les noeuds lies
-	for x,y in liens.iteritems():
-		#print x
-		if float(y)>seuil:
-			ori = x[0]
-			des = x[1]
-			#print str(noeuds_attribues) + 'deja rangés'
-			if ori in noeuds_attribues and not des in noeuds_attribues:
-				for x,y in comp.iteritems():
-					if ori in y:
-						y.append(des)
-						comp[x]=y
-						noeuds_attribues.append(des)
-			if not ori in noeuds_attribues and des in noeuds_attribues:
-				for x,y in comp.iteritems():
-					if des in y:
-						y.append(ori)
-						comp[x]=y
-						noeuds_attribues.append(ori)
-			if ori in noeuds_attribues and des in noeuds_attribues:
-				for x,y in comp.iteritems():
-					if des in y:
-						x_1 = x
-					if ori in y:
-						x_2 = x
-				if not x_1==x_2:
-					temp  = comp[x_1]
-					temp.extend(comp[x_2])
-					comp[x_1] = temp
-					comp[x_2] = []
-			if not ori in noeuds_attribues and not des in noeuds_attribues:
-				noeuds_attribues.append(ori)
-				noeuds_attribues.append(des)
-				comp[len(comp)+1] = [ori,des]
-		#print comp
-	for x in noeuds:
-		if not x in noeuds_attribues:
-			comp[len(comp)+1] = [x]
-	comp_simple={}
-	#comp_simple=[]
-	nb_comp=0
-	for x,y in comp.iteritems():
-		if len(y)>0:
-			nb_comp=nb_comp+1
-			y.sort()
-			comp_simple[nb_comp] = y
-	return comp_simple	
-	
+# def comp_connexes(liens,noeuds_labelbis,seuil):
+# 	comp = {}
+# 	noeuds=[]
+# 	noeuds_attribues = []
+# 	#les noeuds sont numerotes de 1 à nbre_noeuds
+# 	for x in range(len(noeuds_labelbis)):
+# 		noeuds.append(x+1)
+# 	#on regroupe les noeuds lies
+# 	for x,y in liens.iteritems():
+# 		#print x
+# 		if float(y)>seuil:
+# 			ori = x[0]
+# 			des = x[1]
+# 			#print str(noeuds_attribues) + 'deja rangés'
+# 			if ori in noeuds_attribues and not des in noeuds_attribues:
+# 				for x,y in comp.iteritems():
+# 					if ori in y:
+# 						y.append(des)
+# 						comp[x]=y
+# 						noeuds_attribues.append(des)
+# 			if not ori in noeuds_attribues and des in noeuds_attribues:
+# 				for x,y in comp.iteritems():
+# 					if des in y:
+# 						y.append(ori)
+# 						comp[x]=y
+# 						noeuds_attribues.append(ori)
+# 			if ori in noeuds_attribues and des in noeuds_attribues:
+# 				for x,y in comp.iteritems():
+# 					if des in y:
+# 						x_1 = x
+# 					if ori in y:
+# 						x_2 = x
+# 				if not x_1==x_2:
+# 					temp  = comp[x_1]
+# 					temp.extend(comp[x_2])
+# 					comp[x_1] = temp
+# 					comp[x_2] = []
+# 			if not ori in noeuds_attribues and not des in noeuds_attribues:
+# 				noeuds_attribues.append(ori)
+# 				noeuds_attribues.append(des)
+# 				comp[len(comp)+1] = [ori,des]
+# 		#print comp
+# 	for x in noeuds:
+# 		if not x in noeuds_attribues:
+# 			comp[len(comp)+1] = [x]
+# 	comp_simple={}
+# 	#comp_simple=[]
+# 	nb_comp=0
+# 	for x,y in comp.iteritems():
+# 		if len(y)>0:
+# 			nb_comp=nb_comp+1
+# 			y.sort()
+# 			comp_simple[nb_comp] = y
+# 	return comp_simple	
+# 	
 
 
 
 
 
 
-
-composantes_seuil = {}
-nb_tranche=10
-tranche = 1./float(nb_tranche)
-for decoup in range(nb_tranche+1):
-	seuil= decoup*tranche
-	comp= comp_connexes(map_edgesbis,noeuds_labelbis,seuil)
-	composantes_seuil[seuil] = comp
-	#print comp
-
-print '\n'
-hierarchie = {}
-for decoup in range(nb_tranche):
-	seuil= (decoup+1)*tranche
-	seuil_avt = (decoup)*tranche
-	composa =  composantes_seuil[seuil]
-	composa_avt=composantes_seuil[seuil_avt]
-	for x,y in composa.iteritems():
-		for x_a,y_a in composa_avt.iteritems():
-			if set(y)|set(y_a)==set(y_a):
-				hierarchie[(x,decoup+1)] = (x_a,decoup)
-#print hierarchie
-				
-		
+# 
+# composantes_seuil = {}
+# nb_tranche=10
+# tranche = 1./float(nb_tranche)
+# for decoup in range(nb_tranche+1):
+# 	seuil= decoup*tranche
+# 	comp= comp_connexes(map_edgesbis,noeuds_labelbis,seuil)
+# 	composantes_seuil[seuil] = comp
+# 	#print comp
+# 
+# print '\n'
+# hierarchie = {}
+# for decoup in range(nb_tranche):
+# 	seuil= (decoup+1)*tranche
+# 	seuil_avt = (decoup)*tranche
+# 	composa =  composantes_seuil[seuil]
+# 	composa_avt=composantes_seuil[seuil_avt]
+# 	for x,y in composa.iteritems():
+# 		for x_a,y_a in composa_avt.iteritems():
+# 			if set(y)|set(y_a)==set(y_a):
+# 				hierarchie[(x,decoup+1)] = (x_a,decoup)
+# #print hierarchie
+# 				
+# 		
 
 	
 #print ' fathers'
