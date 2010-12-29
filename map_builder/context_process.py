@@ -315,10 +315,6 @@ def remplir_colonne_distance_sem_weighted(dist_mat):
 	champs_liste=[]
 	champs_name=[]
 	for x,y in dist_mat.iteritems():
-		# if not (x[1],x[0],x[2]) in dist_mat:
-		# 		print (x[1],x[0],x[2])
-		# 	else:
-		# 		print 'ok'
 		if x in sem_weighted_triplet_id:
 			id_triplet = sem_weighted_triplet_id[x]
 			champs_liste.append((id_triplet,y))
@@ -333,6 +329,7 @@ def remplir_colonne_distance_sem_weighted(dist_mat):
 	fonctions_bdd.update_multi_table(name_bdd,'sem_weighted',champs_name,champs_liste)
 	#"remplit la colonne champ_name d'indice id - entree liste de doublon (id, valeur)"
 		
+
 dico_termes=fonctions.build_dico()
 #print dico_termes	
 

@@ -64,10 +64,11 @@ def aggreger_periode(liensem):
 				lienssem_weighted_dict[(con1,con2,str(periode))]=lienssem_weighted_dict.get((con1,con2,str(periode)),0)+1
 	for cle,valeurs in lienssem_weighted_dict.iteritems():
 		cooc = list(cle)
-		cooc.append(str(valeurs))
+		if valeurs>=parameters.seuil_cooccurrences:
+			cooc.append(str(valeurs))
 		#cooc.append(requete)
 		#cooc.append('_'.join(list(map(str,cle))))
-		lienssem_weighted.append(cooc)
+			lienssem_weighted.append(cooc)
 	return lienssem_weighted
 
 
