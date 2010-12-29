@@ -38,7 +38,7 @@
 <?py i = 0 ?>
 <?py for source,data in edges.iteritems(): ?>
 <?py 	i += 1 ?>
-<?py 	if float(data)>0.1: ?>
+<?py 	if float(data)>0.02: ?>
       <edge id="#{i}" source="#{source[0]}" target="#{source[1]}" weight="#{data}">
       </edge>
 <?py #endfor ?>
