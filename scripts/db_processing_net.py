@@ -201,7 +201,7 @@ for b_id,ngra in zip(billets_id,ngramme_billets_fit):
 	ngramme_billets_fit_txt.append((b_id,ngratxt))
 	
 for x in ngramme_billets_fit_txt:
-	if 'otivation' in x:
+	if 'otivation' in str(x[1]):
 		print x
 		
 #et on remplit la table des billets avec la liste des concepts histoire d'en garder une trace
