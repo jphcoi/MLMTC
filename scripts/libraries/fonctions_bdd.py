@@ -530,7 +530,7 @@ def update_table(name_bdd,name_table,champs_name,champs_liste):
 		values = " SET " + champs_name +   '= \''+champ_sql +'\''
 		commandesql = "UPDATE   " + name_table +' '+ values+" WHERE id=" + champ_id
 		ex(commandesql)
-	#connection.commit()
+	connection.commit()
 	connection.close()
 	#print "table "+name_table+" remplie avec les champs "  + champs_name
 	
