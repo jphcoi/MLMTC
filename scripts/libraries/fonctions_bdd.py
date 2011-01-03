@@ -60,8 +60,8 @@ def creer_table_term_neighbor(name_bdd,name_table):
 def creer_table_concepts(name_bdd,name_table):
 	connection,ex = connexion(name_bdd)
 	if 1:
-		print 'CREATE TABLE '+ name_table +' (id INTEGER PRIMARY KEY,concepts VARCHAR(500) unique,forme_principale VARCHAR(400) )'
-		ex('CREATE TABLE '+ name_table +' (id INTEGER PRIMARY KEY,concepts VARCHAR(500) unique,forme_principale VARCHAR(400) )')
+		print 'CREATE TABLE '+ name_table +' (id INTEGER PRIMARY KEY,concepts VARCHAR(5000) unique,forme_principale VARCHAR(400) )'
+		ex('CREATE TABLE '+ name_table +' (id INTEGER PRIMARY KEY,concepts VARCHAR(5000) unique,forme_principale VARCHAR(400) )')
 		print "    + table (concepts) \"" +name_table+"\" creee"
 	#except:
 	#	print "    * table (concepts) \"" +name_table+"\" deja creee"
