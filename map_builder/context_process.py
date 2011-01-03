@@ -43,6 +43,7 @@ years_bins = parameters.years_bins
 dist_type=parameters.dist_type
 user_interface=parameters.user_interface
 seuil=0.2
+seuil=0
 ###################################
 #######export #####################
 ###################################
@@ -321,11 +322,13 @@ def remplir_colonne_distance_sem_weighted(dist_mat):
 			champs_name.append('distance0')
 		else:
 			#c'est une distance entrante!
-			x=(x[1],x[0],x[2])
-			id_triplet = sem_weighted_triplet_id[x]
-			champs_liste.append((id_triplet,y))
-			champs_name.append('distance1')
-			
+			try:
+				x=(x[1],x[0],x[2])
+				id_triplet = sem_weighted_triplet_id[x]
+				champs_liste.append((id_triplet,y))
+				champs_name.append('distance1')
+			except:
+				print 'BUG'
 	fonctions_bdd.update_multi_table(name_bdd,'sem_weighted',champs_name,champs_liste)
 	#"remplit la colonne champ_name d'indice id - entree liste de doublon (id, valeur)"
 		
@@ -353,6 +356,8 @@ try:# si on a deja calcule le reseau de proximit
 		
 		#p_cooccurrences = fonctions.dumpingout('p_cooccurrences'+name_date)
 		dist_mat = fonctions.dumpingout('dist_mat'+name_date)
+		
+		print 'donnees chargées'
 		remplir_colonne_distance_sem_weighted(dist_mat)
 		print 'on a chargé les données déjà calculées'
 
@@ -361,7 +366,7 @@ try:# si on a deja calcule le reseau de proximit
 			print 'on reconstruit'
 			fonctions.dumpingout('klqsdjlmsqjdklqsmd')
 
-		p_cooccurrences={}
+		#p_cooccurrences={}
 		dist_mat={}
 		print 'on construit la version pkl de dist_mat'
 		for inter in range(len(years_bins)):
@@ -383,11 +388,11 @@ try:# si on a deja calcule le reseau de proximit
 			gexf.gexf_builder(dico_termes,dist_mat_temp,fichier_gexf,level)
 			
 		fonctions.ecrire_dico(dico_termes,dico_termes,dico_termes,1)
-		
+		print 'dicos ecrits'
 		#fonctions.dumpingin(p_cooccurrences,'p_cooccurrences'+name_date)
 		fonctions.dumpingin(dist_mat,'dist_mat'+name_date)
-		remplir_colonne_distance_sem_weighted(dist_mat)
-		
+		print 'on a dumpé distmat'
+		remplir_colonne_distance_sem_weighted(dist_mat)		
 		print 'on a enregistre la variable dist_mat' +name_date + ' en mémoire et remplit la table sem_weighted avec les distances positives.'
 		
 except:# sinon on recalcule du début

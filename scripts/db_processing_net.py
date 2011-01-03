@@ -286,6 +286,9 @@ def aggreger_periode(liensem):
 		lienssem_weighted.append(cooc)
 	return lienssem_weighted
 
+
+
+
 if build_link_tables=='y':
 
 	print "    + creation des tables relationnelles socsem, sem, soc..."
@@ -326,8 +329,8 @@ if build_link_tables=='y':
 		print 'on traite les billets: ' + str(x[0])+ ' a ' + str(x[-1]) +' (sur ' + str(ll) +' billets)'
 		lienssocsem,lienssem_x = misc.build_semantic_nets(billets_id[x[0]:x[-1]],ngrammes_fit_index[x[0]:x[-1]],name_bdd,requete,sep)
 		##on remplit la table socsem
-		lienssem=lienssem+lienssem_x
 		fonctions_bdd.remplir_table(name_bdd,'socsem',lienssocsem,"(auteur,concept,jours,id_b,requete,identifiant_unique)")
+		lienssem=lienssem+lienssem_x
 		# ##on remplit la table sem
 		#fonctions_bdd.remplir_table(name_bdd,'sem',lienssem,"(concept1,concept2,jours,id_b,requete,identifiant_unique)")
 		#ex('CREATE TABLE '+ name_table +' (id INTEGER PRIMARY KEY,concept1 INTEGER,concept2 INTEGER,periode INTEGER,cooccurrences INTEGER,distance float,requete VARCHAR(200),identifiant_unique VARCHAR(20) unique)')
