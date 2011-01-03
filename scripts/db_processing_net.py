@@ -197,7 +197,10 @@ print "    + frequences exactes calculees   "+ file_freq_exact
 #on inscrit d'abord la liste des concepts indexes dans la table billet.
 ngramme_billets_fit_txt =[]
 for b_id,ngra in zip(billets_id,ngramme_billets_fit):
-	ngratxt = ';'.join(ngra)
+	if len(ngra)==0:
+		ngratxt=''
+	else:
+		ngratxt = ';'.join(ngra)
 	ngramme_billets_fit_txt.append((b_id,ngratxt))
 	
 for x in ngramme_billets_fit_txt:
