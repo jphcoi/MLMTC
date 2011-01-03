@@ -199,7 +199,11 @@ ngramme_billets_fit_txt =[]
 for b_id,ngra in zip(billets_id,ngramme_billets_fit):
 	ngratxt = ';'.join(ngra)
 	ngramme_billets_fit_txt.append((b_id,ngratxt))
-print str(len(ngramme_billets_fit_txt)) + ' indexs à entrer '
+	
+for x in ngramme_billets_fit_txt:
+	if 'otivation' in x:
+		print x
+		
 #et on remplit la table des billets avec la liste des concepts histoire d'en garder une trace
 fonctions_bdd.update_table(name_bdd,'billets','concepts',ngramme_billets_fit_txt)
 
