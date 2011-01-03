@@ -230,7 +230,7 @@ except:
 
 
 years_bins = build_years_bins(fenetre,dated,datef,overlap)
-if requete='biocomplex':#rajouter  periodes 1956-1979 et 1980-1989
+if requete=='biocomplex':#rajouter  periodes 1956-1979 et 1980-1989
 	years_bins = [range(1956,1980),range(1975,1986),range(1980,1990)]+years_bins
 	
 years_bins_no_overlap = build_years_bins(fenetre,years_bins[0][0],years_bins[-1][-1],0)
