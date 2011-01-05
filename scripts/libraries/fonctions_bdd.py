@@ -390,6 +390,9 @@ def remplir_table_billets_lfl(name_bdd,name_table,champs_liste,champs_name,reque
 		champ[8]=requete
 		id_unique=champ[0]+'_'+champ[3]
 		champ.append(id_unique)
+		if site='http://www.letelegramme.com/':
+			contenutag = champ[7]
+			champ[7] = contenutag.split('dans la même rubrique ')[0]
 		ex("INSERT OR IGNORE INTO billets (title, date,permalink,site,categorie1,categorie2,categorie3, content,requete,href,identifiant_unique) VALUES (?,?,?,?,?,?,?,?,?,?,?)", champ)
 	connection.commit()
 	connection.close()
