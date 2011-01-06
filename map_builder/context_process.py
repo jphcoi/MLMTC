@@ -355,6 +355,7 @@ try:# si on a deja calcule le reseau de proximit
 			fonctions.dumpingout('klqsdjlmsqjdklqsmd')
 		
 		#p_cooccurrences = fonctions.dumpingout('p_cooccurrences'+name_date)
+		print 'dist_mat loading...'
 		dist_mat = fonctions.dumpingout('dist_mat'+name_date)
 		
 		print 'donnees chargées'

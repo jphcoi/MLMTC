@@ -23,6 +23,19 @@ def drop_table(name_bdd,name_table):
 	connection.commit()
 	connection.close()
 	
+def insert_select(name_bdd,name_table1,name_table2,requete_where_lemmatise):
+	connection,ex = connexion(name_bdd)
+	sql ="INSERT INTO " + name_table2 + " SELECT * FROM " + name_table1 + " WHERE "
+	N=len(requete_where_lemmatise)
+	for i,x in enumerate(requete_where_lemmatise):
+		sql = sql + " content_lemmatise like " + "'%" + x + "%'" 
+		if i<N-1:
+			sql =sql + ' or '
+	print sql
+	ex(sql)
+	connection.commit()
+	connection.close()
+
 def creer_table_billets(name_bdd,name_table):
 	connection,ex = connexion(name_bdd)
 	try:
@@ -180,6 +193,11 @@ def add_column(name_bdd,name_table,name_col,col_type):
 	connection.commit()
 	connection.close()
 	
+def renommer_table(name_bdd,table1,table2):
+	connection,ex = connexion(name_bdd)
+	ex('ALTER table '+table1+' RENAME TO ' +table2)
+	connection.commit()
+	connection.close()
 
 def detruire_table(name_bdd,table):
 	connection,ex = connexion(name_bdd)
@@ -390,9 +408,9 @@ def remplir_table_billets_lfl(name_bdd,name_table,champs_liste,champs_name,reque
 		champ[8]=requete
 		id_unique=champ[0]+'_'+champ[3]
 		champ.append(id_unique)
-		if champ[3]=='http://www.letelegramme.com/':
-			contenutag = champ[7]
-			champ[7] = contenutag.split('dans la même rubrique ')[0]
+#		if champ[3]=='http://www.letelegramme.com/':
+#			contenutag = champ[7]
+#			champ[7] = contenutag.split('dans la même rubrique ')[0]
 		ex("INSERT OR IGNORE INTO billets (title, date,permalink,site,categorie1,categorie2,categorie3, content,requete,href,identifiant_unique) VALUES (?,?,?,?,?,?,?,?,?,?,?)", champ)
 	connection.commit()
 	connection.close()
