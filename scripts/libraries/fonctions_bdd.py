@@ -26,7 +26,7 @@ def drop_table(name_bdd,name_table):
 def creer_table_billets(name_bdd,name_table):
 	connection,ex = connexion(name_bdd)
 	try:
-		ex('CREATE TABLE '+ name_table +' (id INTEGER PRIMARY KEY,title text, date datetime, permalink VARCHAR(500), site VARCHAR(1500), auteur_id VARCHAR(300), categorie1 VARCHAR(20), categorie2 VARCHAR(20), categorie3 VARCHAR(20),content_lemmatise text, content text, href text, jours INTEGER, concepts text,identifiant_unique VARCHAR(990) unique,requete VARCHAR(200))')
+		ex('CREATE TABLE '+ name_table +' (id INTEGER PRIMARY KEY,title text, date datetime, permalink VARCHAR(1000), site VARCHAR(1500), auteur_id VARCHAR(300), categorie1 VARCHAR(20), categorie2 VARCHAR(20), categorie3 VARCHAR(20),content_lemmatise text, content text, href text, jours INTEGER, concepts text,identifiant_unique VARCHAR(2000) unique,requete VARCHAR(200))')
 		print "    + table (billets) \"" +name_table+"\" creee"
 	except:
 		print "    * table (billets) \"" +name_table+"\" deja creee"
@@ -390,7 +390,8 @@ def remplir_table_billets_lfl(name_bdd,name_table,champs_liste,champs_name,reque
 		champ[8]=requete
 		id_unique=champ[0]+'_'+champ[3]
 		champ.append(id_unique)
-		if site=='http://www.letelegramme.com/':
+		print champ[3]
+		if champ[3]=='http://www.letelegramme.com/':
 			contenutag = champ[7]
 			champ[7] = contenutag.split('dans la même rubrique ')[0]
 		ex("INSERT OR IGNORE INTO billets (title, date,permalink,site,categorie1,categorie2,categorie3, content,requete,href,identifiant_unique) VALUES (?,?,?,?,?,?,?,?,?,?,?)", champ)
