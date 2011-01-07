@@ -53,7 +53,7 @@ name_bdd_temp = '.'.join(name_bdd.split('.')[:-2]) + '_temp.' +'.'.join(name_bdd
 
 #on définit une série de nlemme qui forment la requête
 #specific_nlemmes=['NO_an AD_lors','NO_scène','NO_expert'] 
-specific_nlemmes = misc.lire_dico_classes(path_req + 'query.txt',language)
+specific_nlemmes = misc.lire_dico_classes(path_req + 'query.csv',language)
 print specific_nlemmes
 #on récupère les ids des concepts présents dans la requête dans query_ids
 concepts = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'concepts','id,concepts')
