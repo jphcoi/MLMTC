@@ -29,6 +29,9 @@ print "--- initialisations terminees...\n"
 
 maxTermLength = parameters.maxTermLength
 name_bdd = parameters.name_bdd
+print '\n'
+print name_bdd
+print '\n'
 freqmin = parameters.freqmin
 name_data = parameters.name_data 
 requete = parameters.requete
