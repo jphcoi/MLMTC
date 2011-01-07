@@ -23,6 +23,7 @@ import fonctions_bdd
 import parseur
 import text_processing
 import shutil
+import misc
 ###################################
 #######0.quelques parametres#######
 ###################################
@@ -31,6 +32,8 @@ date_depart = parameters.date_depart
 maxTermLength = parameters.maxTermLength
 name_bdd = parameters.name_bdd
 freqmin = parameters.freqmin
+language = parameters.language
+
 requete = parameters.requete
 name_data = parameters.name_data 
 name_data_real = parameters.name_data_real
@@ -49,9 +52,9 @@ name_bdd_new = '.'.join(name_bdd.split('.')[:-2]) + '_new.' + '.'.join(name_bdd.
 name_bdd_temp = '.'.join(name_bdd.split('.')[:-2]) + '_temp.' +'.'.join(name_bdd.split('.')[-2:])
 
 #on définit une série de nlemme qui forment la requête
-specific_nlemmes=['NO_an AD_lors','NO_scène','NO_expert'] 
-
-
+#specific_nlemmes=['NO_an AD_lors','NO_scène','NO_expert'] 
+specific_nlemmes = misc.lire_dico_classes(path_req + 'query.txt',language)
+print specific_nlemmes
 #on récupère les ids des concepts présents dans la requête dans query_ids
 concepts = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'concepts','id,concepts')
 query_ids =[]
