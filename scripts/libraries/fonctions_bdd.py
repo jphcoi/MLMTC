@@ -26,7 +26,6 @@ def drop_table(name_bdd,name_table):
 def insert_select(name_bdd,name_table1,name_table2,requete):
 	connection,ex = connexion(name_bdd)
 	sql ="INSERT INTO " + name_table2 + " SELECT * FROM " + name_table1 + " WHERE " + requete
-	print sql
 	ex(sql)
 	connection.commit()
 	connection.close()
