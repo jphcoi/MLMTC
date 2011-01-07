@@ -153,8 +153,7 @@ except:
 
 
 	#il faut découper ici car ça prend trop de RAM
-	print Nb_rows
-	print 'ici'
+	
 	if sample<Nb_rows:
 		size_seq = sample
 		nb_sequences=0

@@ -322,9 +322,9 @@ def select_bdd_table_where_limite(name_bdd,table,champ,sample,requete,where,limi
 	connection,ex = connexion(name_bdd)
 #	print "SELECT "  + champ +  "   from " +table +" ORDER by RAND()  LIMIT "+str(sample) +" WHERE " + "requete = \'" +requete+ "\' AND " + str(where)  + ' LIMIT '+str(limit)
 	if sample<Nb_rows:
-		sortie= ex("SELECT "  + champ +  "   from " +table  +" WHERE " + "requete = \'" +requete+ "\' AND " + str(where)  +" ORDER by RANDOM()   LIMIT "+str(sample)).fetchall()
+		sortie= ex("SELECT "  + champ +  "   from " +table  + " WHERE " + str(where)  +" ORDER by RANDOM()   LIMIT "+str(sample)).fetchall()
 	else:
-		sortie= ex("SELECT "  + champ +  "   from " +table  +" WHERE " + "requete = \'" +requete+ "\' AND " + str(where)  +"   LIMIT "+str(limit)).fetchall()
+		sortie= ex("SELECT "  + champ +  "   from " +table  +" WHERE " + str(where)  +"   LIMIT "+str(limit)).fetchall()
 	#print "       - selection du/des champ(s) " + champ + " de la table " + table +  " dans la bdd " +name_bdd + " avec la requete " +requete
 	sortie_ok = []
 #	print "---------nombre de billets traités " + str(len(sortie))
@@ -397,7 +397,7 @@ def select_bdd_table_limite(name_bdd,table,champ,requete,limit):
 
 def select_bdd_table_limit(name_bdd,table,champ,requete,limit):
 	connection,ex = connexion(name_bdd)
-	sortie= ex("SELECT "  + champ +  "   from " +table +" WHERE requete = \'" +requete+ "\'" + " LIMIT " + str(limit) ).fetchall()
+	sortie= ex("SELECT "  + champ +  "   from " +table + " LIMIT " + str(limit) ).fetchall()
 	#print "       - selection du/des champ(s) " + champ + " de la table " + table +  " dans la bdd " +name_bdd + " avec la requete " +requete
 	sortie_ok = []
 	for sor in sortie:
@@ -492,7 +492,7 @@ def remplir_table_billets(name_bdd,name_table,champs_liste,champs_name,requete):
 	#ex("INSERT OR IGNORE INTO billets (title, permalink, content) VALUES (?,?,?)", (champ[1],champ[-1],champ[-2]))
 
 
-# def remplir_table_billets(name_bdd,name_table,champs_liste,champs_name,requete):
+# def remplir_table_billets(name_bdd,name_table,champs_liste,champs_name,f):
 # 	connection, ex = connexion(name_bdd)
 # #	champs_name = "(title,date,permalink,site,categorie1,categorie2,categorie3,content,href,requete,identifiant_unique)"#on n'enregistre pas le html brut
 # #title,datet,permalink,url,continent,community,territory,content,author
