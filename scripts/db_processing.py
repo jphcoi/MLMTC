@@ -133,7 +133,7 @@ except:
 	#print occ_termes_lemmes
 	dictionnaire_treetagged__formes_name = path_req  + "Treetagger_lemmes_formes.txt"  
 	dictionnaire_treetagged__formemajoritaire_name = path_req  + "Treetagger_lemmes_formemajoritaire.txt"  
-	print "+++ creation des fichiers de lemmes:\n       1. \""+dictionnaire_treetagged__formes_name+"\" (toutes les formes des lemmes)\n       2. \""+dictionnaire_treetagged__formemajoritaire_name+"\" (formes majoritaires)"
+	print "+++ création des fichiers de lemmes:\n       1. \""+dictionnaire_treetagged__formes_name+"\" (toutes les formes des lemmes)\n       2. \""+dictionnaire_treetagged__formemajoritaire_name+"\" (formes majoritaires)"
 	lemme_maj = text_processing.extraire_forme_majoritaire(lemmadictionary,occ_termes_lemmes,dictionnaire_treetagged__formes_name,dictionnaire_treetagged__formemajoritaire_name)
 	fonctions_lib.dumpingin(lemme_maj,name_export_lemme_pkl,requete)
 
@@ -153,6 +153,8 @@ except:
 
 
 	#il faut découper ici car ça prend trop de RAM
+	print Nb_rows
+	print 'ici'
 	if sample<Nb_rows:
 		size_seq = sample
 		nb_sequences=0
@@ -162,6 +164,7 @@ except:
 	dictionnaire_gramme = {}#initialisation du dictionnaire de lemmes
 	billetprocessed_after_requete=0 #counts the number of processed posts
 	for x in range(nb_sequences+1):
+
 		dictionnaire_gramme_x={}
 	#	billetprocessed_after_requete=1+billetprocessed_after_requete
 		lim_d = str(size_seq*x)
