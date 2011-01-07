@@ -237,7 +237,7 @@ except:
 	print 'years_bins non calculables pour le moment'
 	
 if requete=='biocomplex':#rajouter  periodes 1956-1979 et 1980-1989
-	years_bins = [range(1957,1980),range(1975,1985),range(1981,1987)]+years_bins
+	years_bins = [range(1955,1980),range(1975,1985),range(1981,1990)]+years_bins
 	
 #print years_bins_no_overlap
 
