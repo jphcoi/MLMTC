@@ -23,18 +23,26 @@ def drop_table(name_bdd,name_table):
 	connection.commit()
 	connection.close()
 	
-def insert_select(name_bdd,name_table1,name_table2,requete_where_lemmatise):
+def insert_select(name_bdd,name_table1,name_table2,requete):
 	connection,ex = connexion(name_bdd)
-	sql ="INSERT INTO " + name_table2 + " SELECT * FROM " + name_table1 + " WHERE "
-	N=len(requete_where_lemmatise)
-	for i,x in enumerate(requete_where_lemmatise):
-		sql = sql + " content_lemmatise like " + "'%" + x + "%'" 
-		if i<N-1:
-			sql =sql + ' or '
+	sql ="INSERT INTO " + name_table2 + " SELECT * FROM " + name_table1 + " WHERE " + requete
 	print sql
 	ex(sql)
 	connection.commit()
 	connection.close()
+
+def insert_select_substring(name_bdd,name_table1,name_table2,entree,champ):
+	connection,ex = connexion(name_bdd)
+	for x in entree:
+		idx = x[0]
+		n = x[1]
+		requete = ' id = '+str(idx)
+		sql ="UPDATE " + name_table2 + ' SET ' +champ  + "= (SELECT SUBSTR(" + champ + ",0," + str(n)+ ") FROM " + name_table1 + " WHERE " + requete  + ") WHERE " + requete
+		print sql
+		ex(sql)
+	connection.commit()
+	connection.close()
+
 
 def creer_table_billets(name_bdd,name_table):
 	connection,ex = connexion(name_bdd)
@@ -213,6 +221,24 @@ def select_bdd_table_champ(name_bdd,table,champ,champ2,b_id):
 	connection.close()
 	return sortie[0][0]
 
+def select_bdd_table_champ_complet(name_bdd,table,champ,champ2,b_id):
+	connection,ex = connexion(name_bdd)
+#	print "SELECT "  + champ +  "   from " +table +" WHERE "+ champ2 +" = \'" +str(b_id)+ "\'" 	
+	print "SELECT "  + champ +  "   from " +table +" WHERE "+ champ2 +" = \'" +str(b_id)+ "\'" 
+	sortie= ex("SELECT "  + champ +  "   from " +table +" WHERE "+ champ2 +" = \'" +str(b_id)+ "\'" ).fetchall()
+	connection.commit()
+	connection.close()
+	return sortie
+
+
+def select_bdd_table_champ(name_bdd,table,champ,champ2,b_id):
+	connection,ex = connexion(name_bdd)
+#	print "SELECT "  + champ +  "   from " +table +" WHERE "+ champ2 +" = \'" +str(b_id)+ "\'" 	
+	sortie= ex("SELECT "  + champ +  "   from " +table +" WHERE "+ champ2 +" = \'" +str(b_id)+ "\'" ).fetchall()
+	connection.commit()
+	connection.close()
+	return sortie[0][0]
+	
 def count_rows(name_bdd,table):
 	connection,ex = connexion(name_bdd)
 	sortie= ex("SELECT COUNT(*)  from " +table).fetchall()
@@ -253,9 +279,9 @@ def delete_field(name_bdd,table,id_b):
 	connection.close()	
 
 	
-def select_bdd_table_champ_simple(name_bdd,table,champ):
+def select_bdd_table_champ_simple(name_bdd,table,champ, where = ' where 1'):
 	connection,ex = connexion(name_bdd)
-	sortie= ex("SELECT "  + champ +  "   from " +table ).fetchall()
+	sortie= ex("SELECT "  + champ +  "   from " +table + ' '  + where ).fetchall()
 	#print "       - selection du/des champ(s) \"" + champ + "\" de la table \"" + table + "\" dans la BDD " +name_bdd
 	sortie_ok = []
 	for sor in sortie:
