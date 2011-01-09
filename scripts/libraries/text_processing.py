@@ -313,14 +313,23 @@ def ngramme_build(billet,maxTermLength,dictionnaire_gramme,language,freq_type):
 							if freq_type == 'billet':
 								dejavu.append(term)
 							if freq_type == 'absolu':
-								pass
-								
+								pass	
 							if not dictionnaire_gramme.has_key(term):
 								dictionnaire_gramme[term] = 1
 							else:
 								dictionnaire_gramme[term] = dictionnaire_gramme[term] + 1
 	return dictionnaire_gramme
-	
+
+def	ngramme_find(billet_lemmatise,dictionnaire_gramme,concept_list):
+	for x in concept_list:
+		term= ' '+x + ' '
+		if term in billet_lemmatise:
+			term = term[1:-1]
+			if not dictionnaire_gramme.has_key(term):
+				dictionnaire_gramme[term] = 1
+			else:
+				dictionnaire_gramme[term] = dictionnaire_gramme[term] + 1
+	return dictionnaire_gramme
 	
 def nettoyer_url(author):
 	if "http://" in author:
