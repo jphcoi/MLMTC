@@ -159,8 +159,9 @@ def trier_dictionnaire(dico):
 def out_doc(dico_new,dico):
 	ratio={}
 	for x,y in dico_new.iteritems():
-		norm = dico[x] 
-		ratio[x] = norm-y
+		if not x==None:
+			norm = dico[x] 
+			ratio[x] = norm-y
 	return ratio
 
 def add_query(query,x):
@@ -169,19 +170,19 @@ def add_query(query,x):
 		print x + ' added to the query '
 	return query
 
-def query_exander():
+def query_exander(query):
 	encore=1
-	query = []
 	while encore==1:
 		#construit la base name_bdd_new en fonction de la query
-		query = select_query(query)
 		id_new_list = fonctions_bdd.select_bdd_table_champ_simple(name_bdd_new,'billets','id')
 		id_new=[]
 		for x in  id_new_list:
 			id_new.append(x[0])
-		dico_new =  fast_ngram_counter(name_bdd_new)
+		dico_new = fast_ngram_counter(name_bdd_new)
+		print dico_new
+		print len(dico_new.keys())
 		dico= fast_ngram_counter(name_bdd,dico_new.keys())
-
+		print len(dico.keys())
 		ratio= out_doc(dico_new,dico)
 		ratio_l = trier_dictionnaire(ratio)
 
@@ -200,6 +201,14 @@ def query_exander():
 					var = raw_input('Do you wish to add "' + x[0] + '" ('+str(x[1])+ ') '+' to the query ?')
 					if var=='y':
 						query =  add_query(query,x[0])
+						champs_name = "(title,date,permalink,site,categorie1,categorie2,categorie3,content,href,requete,identifiant_unique)"#on n'enregistre pas le html brut
+						nouveaux_billets = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'billets',champs_name[1:-1],"where content_lemmatise like '%" + x[0]  +"%'")
+						fonctions_bdd.remplir_table(name_bdd_new,'billets',nouveaux_billets,champs_name)
+
+						#il faut encore faire la copie des billets incriminée dans name_bdd_new
+						############
+						############!!!!!!!!!!!!!!
+						############
 						nb_question=nb_question+1
 					if var=='s':
 						steps=0
@@ -212,7 +221,8 @@ def query_exander():
 			encore=0
 	return query
 
-print query_exander()
+query = select_query()
+print query_exander(query)
 			
 def nettoyer_site(chaine,chainel,site):
 	sortie = fonctions_bdd.select_bdd_table_champ_complet(name_bdd,'billets','id,content,content_lemmatise','site',site)
