@@ -64,7 +64,7 @@ def find_sub(dico_pre_trie,elem):
 		el_s = set(el.split('***'))
 		if el_s <= elem_s or elem_s <=el_s:
 			#print str(el_s) + '\t' + str(elem_s)
-			if dico_pre_trie[el]=='x' or dico_pre_trie[el]=='w' or dico_pre_trie[el]=='u':
+			if dico_pre_trie[el]=='x' or dico_pre_trie[el]=='w' or dico_pre_trie[el]=='u' or dico_pre_trie[el]=='o':
 				 sortie= dico_pre_trie[el]
 			break
 	return sortie
