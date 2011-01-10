@@ -181,6 +181,7 @@ for y,year in enumerate(years):
 	#on calcule nos stats à l'échelle des auteurs aussi, freq = nombre de blogs parlant d'un terme 
 	dictionnaire_frequence_exact_auteur={}
 	dictionnaire_frequence_exact={}
+	N = fonctions_bdd.count_rows_where(name_bdd,'billets'," where jours IN ('" + "','".join(list(map(str,year))) + "') ")
 	for terme in liste_concepts:
 		dictionnaire_frequence_exact[terme[0]]=0
 		dictionnaire_frequence_exact_auteur[terme[0]]=0

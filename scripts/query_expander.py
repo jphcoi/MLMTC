@@ -60,7 +60,10 @@ def select_query(query=[]):
 
 	#specific_nlemmes est la requête de base issue de query.csv.
 	if len(query)==0:
-		specific_nlemmes = misc.lire_dico_classes(path_req + 'query.csv',language)
+		specific_nlemme = misc.lire_dico_classes(path_req + 'query.csv',language)
+		specific_nlemmes=[]
+		for x in specific_nlemme:
+			specific_nlemmes=specific_nlemmes+x.split('***')
 		#######!!!!!!!!!!ATTENTION AUX ""***"" !!!!!!!!!!!!!!
 	else:
 		specific_nlemmes = query
@@ -77,7 +80,7 @@ def select_query(query=[]):
 		#il se peut que la base n'est jamais été indexée
 		pass
 
-	if len(query_ids) == len(specific_nlemmes):
+	try:
 		#tous les termes de la query ont déjà été indexés
 		#print '\n' + str(len(query_ids)) + ' terms in the query.'
 		sous_corpus_idb_vect = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'concept2billets','id_b', ' where concept in '+ str(query_ids).replace('[','(').replace(']',')'))
@@ -85,7 +88,7 @@ def select_query(query=[]):
 		for x in sous_corpus_idb_vect:
 			if not x[0] in sous_corpus_idb:
 				sous_corpus_idb.append(x[0])
-	else:
+	except:
 		#tous les termes de la query n'ont pas encore été indexés, on passe à une méthode like.
 		where_like = " where content_lemmatise like '%"
 		where_like = where_like + "%' or  content_lemmatise like '%".join(specific_nlemmes) + "%'"
@@ -160,9 +163,8 @@ def trier_dictionnaire(dico):
 def out_doc(dico_new,dico):
 	ratio={}
 	for x,y in dico_new.iteritems():
-		if not x==None:
-			norm = dico[x] 
-			ratio[x] = norm-y
+		norm = dico[x]
+		ratio[x] = norm-y
 	return ratio
 
 def add_query(query,x):
@@ -174,42 +176,41 @@ def add_query(query,x):
 def query_exander(query):
 	encore=1
 	while encore==1:
+		dico_new=0
+		dico=0
 		#construit la base name_bdd_new en fonction de la query
 		id_new_list = fonctions_bdd.select_bdd_table_champ_simple(name_bdd_new,'billets','id')
 		id_new=[]
 		for x in  id_new_list:
 			id_new.append(x[0])
-		dico_new = fast_ngram_counter(name_bdd_new)
-		print dico_new
+		dico_new = fast_ngram_counter(name_bdd_new,'')
 		print len(dico_new.keys())
 		dico= fast_ngram_counter(name_bdd,dico_new.keys())
 		print len(dico.keys())
 		ratio= out_doc(dico_new,dico)
 		ratio_l = trier_dictionnaire(ratio)
-
 		steps=100000
 		nb_question=0
+		champs_name = "(id,title,date,permalink,site,categorie1,categorie2,categorie3,content,content_lemmatise,href,requete,identifiant_unique)"#on n'enregistre pas le html brut
 		for x in ratio_l:
 			if nb_question<steps:
 				val = x[1]
 				if val>0:
 					info ='\n'
-					nouveaux_billets = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'billets','id, title, site, content',"where content_lemmatise like '%" + x[0]  +"%'")
+
+					nouveaux_billets = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'billets',champs_name[1:-1],"where content_lemmatise like '%" + x[0]  +"%'")
+					
 					for billets in nouveaux_billets[:9]:
 						if not billets[0] in id_new:
-							info=info +  '*** '+ billets[1] + '(' + billets[2]  + ')' + '\n'
+							info=info +  '*** '+ billets[1] + '(' + billets[4]  + ')' + '\n'
 					print info
+					print dico_new[x[0]]
+					print dico[x[0]]
+
 					var = raw_input('Do you wish to add "' + x[0] + '" ('+str(x[1])+ ') '+' to the query ?')
 					if var=='y':
 						query =  add_query(query,x[0])
-						champs_name = "(title,date,permalink,site,categorie1,categorie2,categorie3,content,href,requete,identifiant_unique)"#on n'enregistre pas le html brut
-						nouveaux_billets = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'billets',champs_name[1:-1],"where content_lemmatise like '%" + x[0]  +"%'")
 						fonctions_bdd.remplir_table(name_bdd_new,'billets',nouveaux_billets,champs_name)
-
-						#il faut encore faire la copie des billets incriminée dans name_bdd_new
-						############
-						############!!!!!!!!!!!!!!
-						############
 						nb_question=nb_question+1
 					if var=='s':
 						steps=0
