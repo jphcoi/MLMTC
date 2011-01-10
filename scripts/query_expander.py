@@ -54,9 +54,12 @@ sep  = ' *** '
 
 name_bdd_new = '.'.join(name_bdd.split('.')[:-2]) + '_new.' + '.'.join(name_bdd.split('.')[-2:])
 
+
+
 def select_query(query=[]):
 	#on définit une nouvelle table et une table billets temporaires
 	name_bdd_temp = '.'.join(name_bdd.split('.')[:-2]) + '_temp.' +'.'.join(name_bdd.split('.')[-2:])
+
 
 	#specific_nlemmes est la requête de base issue de query.csv.
 	if len(query)==0:
@@ -64,9 +67,9 @@ def select_query(query=[]):
 		specific_nlemmes=[]
 		for x in specific_nlemme:
 			specific_nlemmes=specific_nlemmes+x.split('***')
-		#######!!!!!!!!!!ATTENTION AUX ""***"" !!!!!!!!!!!!!!
 	else:
 		specific_nlemmes = query
+	print specific_nlemmes
 	print '\n' + str(len(specific_nlemmes)) +' terms in the query '
 	#on récupère les ids des concepts présents dans la requête dans query_ids
 	query_ids =[]
@@ -82,7 +85,6 @@ def select_query(query=[]):
 
 	try:
 		#tous les termes de la query ont déjà été indexés
-		#print '\n' + str(len(query_ids)) + ' terms in the query.'
 		sous_corpus_idb_vect = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'concept2billets','id_b', ' where concept in '+ str(query_ids).replace('[','(').replace(']',')'))
 		sous_corpus_idb=[]
 		for x in sous_corpus_idb_vect:
@@ -92,7 +94,7 @@ def select_query(query=[]):
 		#tous les termes de la query n'ont pas encore été indexés, on passe à une méthode like.
 		where_like = " where content_lemmatise like '%"
 		where_like = where_like + "%' or  content_lemmatise like '%".join(specific_nlemmes) + "%'"
-		#print where_like
+		print where_like
 		sous_corpus_idb = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'billets','id',where_like )
 
 	print str(len(sous_corpus_idb)) +' documents retrieved \n'
