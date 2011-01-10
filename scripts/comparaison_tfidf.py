@@ -101,8 +101,11 @@ filename_bruit = 	file_freq_exact =  path_req + requete + '_' +  'frequences_exa
 print "on recupere la liste du fichier: "+ filename_req
 try:
 	ngrammes,maj_req = lire_nlemme_freq(filename_req)
+	typ = 'noyear'
+
 except:
 	ngrammes,maj_req = lire_nlemme_freq(filename_req_year)
+	typ = 'year'
 print "on la compare a la liste du fichier: "+ filename_bruit
 try:
 	ngrammes_bruit,maj_bruit = lire_nlemme_freq(filename_bruit)
@@ -133,9 +136,9 @@ for elem in ngrammes:
 			print 'pas de ' + elem + '\n'
 			file.write(elem.decode("utf-8","replace") + '\t' +maj_req[elem].decode("utf-8","replace") +  '\t'+pretrie +'\t' +str(maj_req[elem].count(' ')+1) +'\t'+str(ngrammes[elem][0]).replace('.',',') + '\t'+ '\t'+'\t'+'\t'+str(ngrammes[elem][1]).replace('.',',') + '\t'+ '\t'+ '\t'+ '\t' + xhi2+ '\n')
 	if compar==0:
-		try:
+		if not typ == 'year':
 			file.write(elem.decode("utf-8","replace") + '\t' +maj_req[elem].decode("utf-8","replace") +  '\t'+pretrie +'\t' +str(maj_req[elem].count(' ')+1) +'\t'+str(ngrammes[elem][0]).replace('.',',') + '\t'+ '\t'+'\t'+'\t'+str(ngrammes[elem][1]).replace('.',',') + '\t'+ '\t'+ '\t'+ '\t' + xhi2+ '\n')
-		except:
+		else:
 			#year
 			file.write(elem.decode("utf-8","replace") + '\t' +maj_req[elem].decode("utf-8","replace") +  '\t'+pretrie +'\t' +str(maj_req[elem].count(' ')+1) +'\t'+ngramme[elem] + '\t'+ '\n')
 			
