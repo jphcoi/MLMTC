@@ -67,9 +67,9 @@ def fusion(type_file):
 	liste_fichiers={}
 	years = parameters.years_bins_no_overlap
 	if type_file =='redond':
-		filename_redond_leven_out =  path_req +'years/'+ requete + '_' + str(freqmin)+'_' + str(min(years[0])) + '_' +str(max(years[-1]))+ '_' + 'liste_n-grammes_freq_divers_leven_noredond_totalyears.csv'
+		filename_redond_leven_out =  path_req+ requete + '_' + str(freqmin)+'_' + str(min(years[0])) + '_' +str(max(years[-1]))+ '_' + 'liste_n-grammes_freq_divers_leven_noredond_totalyears.csv'
 	else:
-		filename_redond_leven_out =  path_req + 'years/'+requete + '_' + str(freqmin)+'_' + str(min(years[0])) + '_' +str(max(years[-1]))+ '_' + '_' +  'frequences_exactes_totalyears.csv'
+		filename_redond_leven_out =  path_req +requete + '_' + str(freqmin)+'_' + str(min(years[0])) + '_' +str(max(years[-1]))+ '_' + '_' +  'frequences_exactes_totalyears.csv'
 	for fich in [f for f in os.listdir(dir)]:
 		print fich
 		print 'icii'

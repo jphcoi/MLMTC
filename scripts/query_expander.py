@@ -61,6 +61,7 @@ def select_query(query=[]):
 	#specific_nlemmes est la requête de base issue de query.csv.
 	if len(query)==0:
 		specific_nlemmes = misc.lire_dico_classes(path_req + 'query.csv',language)
+		#######!!!!!!!!!!ATTENTION AUX ""***"" !!!!!!!!!!!!!!
 	else:
 		specific_nlemmes = query
 	print '\n' + str(len(specific_nlemmes)) +' terms in the query '

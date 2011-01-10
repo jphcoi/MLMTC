@@ -44,10 +44,13 @@ def lire_nlemme_freq(fichier):
 	maj ={}
 	for line in file.readlines():
 		linev = line.split('\t')
-		freq=linev[2].replace(',','.')
-		sortie[linev[0]]=float(freq[:-1]) * 100
-		freq_aut=linev[3].replace(',','.')
-		sortie[linev[0]]=(float(freq[:-1]) * 100,float(freq_aut[:-1]) * 100)
+		if 'year' in fichier:
+			sortie[linev[0]] = linev[2:]
+		else:		
+			freq=linev[2].replace(',','.')
+			sortie[linev[0]]=float(freq[:-1]) * 100
+			freq_aut=linev[3].replace(',','.')
+			sortie[linev[0]]=(float(freq[:-1]) * 100,float(freq_aut[:-1]) * 100)
 		maj[linev[0]]=linev[1]
 	return sortie,maj
 
@@ -66,6 +69,8 @@ def find_sub(dico_pre_trie,elem):
 			
 
 filename_req = 	file_freq_exact =  path_req + requete + '_' +  'frequences_exactes.csv'
+filename_req_year =  path_req +requete + '_' + str(freqmin)+'_' + str(min(years[0])) + '_' +str(max(years[-1]))+ '_' + '_' +  'frequences_exactes_totalyears.csv'
+
 filename_pre_trie = path_req + 'concepts_pre_tries.csv' #fichier d'entree trie (rajouter _trie a la fin de la sortie standard)
 filename_xhi2 = path_req + 'conceptsxhi2.csv'
 
@@ -92,7 +97,10 @@ except:
 filename_bruit = 	file_freq_exact =  path_req + requete + '_' +  'frequences_exactes_bruit.csv'
 
 print "on recupere la liste du fichier: "+ filename_req
-ngrammes,maj_req = lire_nlemme_freq(filename_req)
+try:
+	ngrammes,maj_req = lire_nlemme_freq(filename_req)
+except:
+	ngrammes,maj_req = lire_nlemme_freq(filename_req_year)
 print "on la compare a la liste du fichier: "+ filename_bruit
 try:
 	ngrammes_bruit,maj_bruit = lire_nlemme_freq(filename_bruit)
@@ -123,5 +131,10 @@ for elem in ngrammes:
 			print 'pas de ' + elem + '\n'
 			file.write(elem.decode("utf-8","replace") + '\t' +maj_req[elem].decode("utf-8","replace") +  '\t'+pretrie +'\t' +str(maj_req[elem].count(' ')+1) +'\t'+str(ngrammes[elem][0]).replace('.',',') + '\t'+ '\t'+'\t'+'\t'+str(ngrammes[elem][1]).replace('.',',') + '\t'+ '\t'+ '\t'+ '\t' + xhi2+ '\n')
 	if compar==0:
-		file.write(elem.decode("utf-8","replace") + '\t' +maj_req[elem].decode("utf-8","replace") +  '\t'+pretrie +'\t' +str(maj_req[elem].count(' ')+1) +'\t'+str(ngrammes[elem][0]).replace('.',',') + '\t'+ '\t'+'\t'+'\t'+str(ngrammes[elem][1]).replace('.',',') + '\t'+ '\t'+ '\t'+ '\t' + xhi2+ '\n')
+		try:
+			file.write(elem.decode("utf-8","replace") + '\t' +maj_req[elem].decode("utf-8","replace") +  '\t'+pretrie +'\t' +str(maj_req[elem].count(' ')+1) +'\t'+str(ngrammes[elem][0]).replace('.',',') + '\t'+ '\t'+'\t'+'\t'+str(ngrammes[elem][1]).replace('.',',') + '\t'+ '\t'+ '\t'+ '\t' + xhi2+ '\n')
+		except:
+			#year
+			file.write(elem.decode("utf-8","replace") + '\t' +maj_req[elem].decode("utf-8","replace") +  '\t'+pretrie +'\t' +str(maj_req[elem].count(' ')+1) +'\t'+ngramme[elem] + '\t'+ '\n')
+			
 print "fichier "+file_sortie+ 'produit'
