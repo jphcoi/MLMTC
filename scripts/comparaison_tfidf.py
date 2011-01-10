@@ -140,6 +140,6 @@ for elem in ngrammes:
 			file.write(elem.decode("utf-8","replace") + '\t' +maj_req[elem].decode("utf-8","replace") +  '\t'+pretrie +'\t' +str(maj_req[elem].count(' ')+1) +'\t'+str(ngrammes[elem][0]).replace('.',',') + '\t'+ '\t'+'\t'+'\t'+str(ngrammes[elem][1]).replace('.',',') + '\t'+ '\t'+ '\t'+ '\t' + xhi2+ '\n')
 		else:
 			#year
-			file.write(elem.decode("utf-8","replace") + '\t' +maj_req[elem].decode("utf-8","replace") +  '\t'+pretrie +'\t' +str(maj_req[elem].count(' ')+1) +'\t'+''.join(ngrammes[elem]) + '\t'+ '\n')
+			file.write(elem.decode("utf-8","replace") + '\t' +maj_req[elem].decode("utf-8","replace") +  '\t'+pretrie +'\t' +str(maj_req[elem].count(' ')+1) +'\t'+'\t'.join(ngrammes[elem])[:-1] + '\t'+ '\n')
 			
 print "fichier "+file_sortie+ 'produit'
