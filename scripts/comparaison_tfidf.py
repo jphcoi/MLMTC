@@ -25,6 +25,7 @@ name_data = parameters.name_data
 requete = parameters.requete
 name_data_real = parameters.name_data_real
 path_req = parameters.path_req
+years=parameters.years_bins_no_overlap
 
 def lire_pretrie(fichier,colonne):
 	file = open(fichier,'r')
