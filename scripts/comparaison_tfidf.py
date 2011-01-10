@@ -41,6 +41,7 @@ def lire_pretrie(fichier,colonne):
 
 def lire_nlemme_freq(fichier):
 	file = open(fichier,'r')
+	print 'on regarde ' + fichier
 	sortie ={}
 	maj ={}
 	for line in file.readlines():
