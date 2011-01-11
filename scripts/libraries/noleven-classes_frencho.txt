@@ -15,6 +15,38 @@ NA_français	NA_françois
 NA_françois	NA_françoise
 NO_écologie	NO_économie
 NO_ministre PR_de DE_le NO_écologie	NO_ministre PR_de DE_le NO_économie
+médecin	NO_médecine
+12-11-10 NO_communication	15-12-10 NO_communication
+12-11-10	15-12-10
+NO_collectivité eviction non	NO_collectivité eviction oui
+NO_contact AD_direct	NO_contact AD_indirect
+AD_indirect	AD_direct
+NO_produit AD_biologique	NO_produit bio
+bio	AD_biologique
+10 NO_décembre 2010	NU_1er NO_décembre 2010
+11 NO_décembre 2010	NU_1er NO_décembre 2010
+13 NO_décembre 2010	NU_1er NO_décembre 2010
+14 NO_décembre 2010	NU_1er NO_décembre 2010
+15 NO_décembre 2010	NU_1er NO_décembre 2010
+16 NO_décembre 2010	NU_1er NO_décembre 2010
+17 NO_décembre 2010	NU_1er NO_décembre 2010
+18 NO_décembre 2010	NU_1er NO_décembre 2010
+1	NU_1er
+10 NO_décembre 2010	NU_1er NO_décembre 2010
+13 NO_décembre 2010	NU_1er NO_décembre 2010
+14 NO_décembre 2010	NU_1er NO_décembre 2010
+15 NO_décembre 2010	NU_1er NO_décembre 2010
+16 NO_décembre 2010	NU_1er NO_décembre 2010
+17 NO_décembre 2010	NU_1er NO_décembre 2010
+18 NO_décembre 2010	NU_1er NO_décembre 2010
+NO_crise AD_écologique	NO_crise AD_économique
+AD_écologique	AD_économique
+express	expresso
+NO_retrait	NO_retraite
+NO_tarif PR_de NO_achat	NO_tarif PR_de NO_rachat
+NO_rachat	NO_achat
+NO_élection	NO_électron
+NO_émission PR_de NO_gaz	NO_émission PR_de ges
 NO_réacteur	NO_rédacteur
 NO_récolte	NO_révolte
 NO_résultat PR_de DE_le	NO_résultat PR_de DE_un

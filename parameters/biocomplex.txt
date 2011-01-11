@@ -19,5 +19,5 @@ fenetre = 2
 overlap = 2
 dist_type='precision'
 nofigure=0
-user_interface='y'
+user_interface='n'
 server='cointet@veille.cortext.org'
