@@ -84,9 +84,8 @@ def select_query(query=[]):
 		pass
 
 	try:
-		1==0
 		#tous les termes de la query ont déjà été indexés
-		sous_corpus_idb_vect = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'concept2billets','id_b', ' where concept in '+ str(query_ids).replace('[','(').replace(']',')'))
+		sous_corpus_idb_vect = fonctions_bdd.select_bdd_table_champ_simple(*************jesaispas*********,name_bdd,'concept2billets','id_b', ' where concept in '+ str(query_ids).replace('[','(').replace(']',')'))
 		sous_corpus_idb=[]
 		for x in sous_corpus_idb_vect:
 			if not x[0] in sous_corpus_idb:

@@ -15581,3 +15581,5 @@ NO_ministre PR_de DE_le ecologie	NO_minist√®re PR_de DE_le economie
 NO_ministre PR_de DE_le ecologie	NO_ministre PR_de DE_le NO_économie
 NO_enfance	NO_enfant
 sarkozy	sarko
+NO_avant	NO_après
+NO_avant	NO_après
