@@ -280,6 +280,7 @@ def delete_field(name_bdd,table,id_b):
 	
 def select_bdd_table_champ_simple(name_bdd,table,champ, where = ' where 1'):
 	connection,ex = connexion(name_bdd)
+	print "SELECT "  + champ +  "   from " +table + ' '  + where
 	sortie= ex("SELECT "  + champ +  "   from " +table + ' '  + where ).fetchall()
 	#print "       - selection du/des champ(s) \"" + champ + "\" de la table \"" + table + "\" dans la BDD " +name_bdd
 	sortie_ok = []
