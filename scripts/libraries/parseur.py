@@ -587,6 +587,31 @@ def extract_champs_medline(filename,sep):
 #	print "    - such as: ",posts[0]
 	return articles
 
+def detacher_meta(string):
+	digit= re.compile('\d')
+	m = digit.search(string)
+	first_digit = m.start()
+	return string[:first_digit].strip(),string[first_digit:],
+
+def extract_champs_vdn(filename):
+	articles=[]
+	print "    - fichier d'articles: \""+filename+"\"..."
+	i=0
+	categ1,categ2,categ3,permalink,contentanchor = '','','','',''
+	import fonctions_bdd
+	contenu = fonctions_bdd.select_bdd_table_champ_simple(filename,'commentaires',"id,cp,comm_meta,comm_texte")
+	for cont in contenu:
+		title = cont[1]
+		date,website = detacher_meta(cont[2])
+		permalink = cont[2]
+		categ1 = ''
+		categ2 = ''
+		categ3 = ''
+		contentclean = str.strip(cont[3])
+		contentanchor = ''
+		articles.append([title,date,permalink,website,categ1,categ2,categ3,contentclean,contentanchor])#sans le html brut
+	print "---",len(articles),"posts processed."
+	return articles
 
 def extract_champs_db(filename):
 	articles=[]
@@ -1104,6 +1129,8 @@ def extraire_donnees(name_data,sep):
 		champs = extract_champs_doc(name_data)
 	if ".db" == name_data[-3:]:#export au format .sqlite: export doctissimo
 		champs = extract_champs_db(name_data)
+	if ".vdn" == name_data[-3:]:#export au format .sqlite: export doctissimo
+		champs = extract_champs_vdn(name_data)
 
 	return champs
 
