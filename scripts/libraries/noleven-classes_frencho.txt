@@ -547,4 +547,126 @@ AD_bon NO_vent	AD_bon NO_vente
 NO_vent	NO_vente
 NO_bras AD_dessous	NO_bras AD_dessus
 AD_dessus	AD_dessous
-
+22-11-10 NO_communication	24-11-10 NO_communication
+24-11-10	22-11-10
+22-11-10 NO_communication	25-11-10 NO_communication
+22-11-10	25-11-10
+24-11-10 NO_communication	25-11-10 NO_communication
+24-11-10	25-11-10
+NO_organisation AD_mondial	NO_organisation AD_syndical
+01-12-10 NO_communication PR_de DE_le NO_commission	02-12-10 NO_communication PR_de DE_le NO_commission
+02-12-10	01-12-10
+02-12-10 NO_communication	03-12-10 NO_communication
+02-12-10	03-12-10
+25-11-10 NO_communication	26-11-10 NO_communication
+25-11-10	26-11-10
+25-11-10 NO_communication	29-11-10 NO_communication
+29-11-10	25-11-10
+26-11-10 NO_communication	29-11-10 NO_communication
+29-11-10	26-11-10
+NO_internat	NO_internet
+NO_internat	internet
+NO_organisation AD_mondial	NO_organisation AD_syndical
+NO_président PR_du NO_conseil AD_général	NO_président AB_ps PR_du NO_conseil AD_général
+02-12-10 NO_communication	06-12-10 NO_communication
+02-12-10	06-12-10
+02-12-10 NO_communication	07-12-10 NO_communication
+02-12-10	07-12-10
+03-12-10 NO_communication PR_de DE_le NO_commission	06-12-10 NO_communication PR_de DE_le NO_commission
+06-12-10	03-12-10
+06-12-10 NO_communication	07-12-10 NO_communication
+07-12-10	06-12-10
+ministère PR_de DE_le ecologie	NO_ministère PR_de DE_le economie
+ministère PR_de DE_le ecologie	ministère PR_de DE_le economie
+ecologie	economie
+NO_organisation AD_mondial	NO_organisation AD_syndical
+NU_premier NO_phase	NU_premier NO_place
+13-12-10 NO_communication	14-12-10 NO_communication
+14-12-10	13-12-10
+13-12-10 NO_communication	15-12-10 NO_communication
+13-12-10	15-12-10
+13-12-10 NO_communication PR_de DE_le NO_commission	15-12-10 NO_communication PR_de DE_le NO_commission
+13-12-10	15-12-10
+14-12-10 NO_communication	15-12-10 NO_communication
+14-12-10	15-12-10
+NO_organisation AD_mondial	NO_organisation AD_syndical
+20-12-10 NO_communication	21-12-10 NO_communication
+21-12-10	20-12-10
+20-12-10 NO_communication	22-12-10 NO_communication
+20-12-10	22-12-10
+21-12-10 NO_communication	22-12-10 NO_communication
+21-12-10	22-12-10
+NO_article 2	NO_article r
+NO_organisation AD_mondial	NO_organisation AD_syndical
+abou	abu
+NO_procession	NO_profession
+that he	that the
+the	he
+VE_adjoindre PR_au NO_finance	NO_adjoint PR_au NO_finance
+NO_avenir PR_de DE_notre NO_village	NO_avenir PR_de DE_notre NO_ville
+NO_village	NO_ville
+AB_monsieur	m
+m	mr
+NO_campagne	NO_champagne
+capelle	cappelle
+capelle	NO_chapelle
+capelle	chapelle
+NO_commune PR_de AD_plus	NO_commune DE_le AD_plus
+NO_commune KO_et PR_de DE_son NO_habitant	NO_commune KO_et DE_son NO_habitant
+coolzaert	coolzaet
+colzaet	coolzaet
+VE_devenir DE_un NO_village	VE_devenir DE_un NO_ville
+NO_village	NO_ville
+VE_être PR_à DE_le NO_école	VE_être PR_à DE_le NO_écoute
+NO_écoute	NO_école
+VE_faire PR_du NO_porte	VE_faire PR_du NO_sport
+NO_maire	NO_mairie
+NO_monsieur delva	NA_monsieur delvaux
+NO_monsieur delva	NO_monsieur delvaux
+delvaux	delva
+n	n'
+VE_partir PR_de DE_le NO_liste	NO_partie PR_de DE_le NO_liste
+NO_partie	VE_partir
+pour tous	pour vous
+vous	tous
+NO_programme PR_de m	NO_programme PR_de NO_madame
+NO_madame	m
+NO_programme PR_de NO_madame	NO_programme PR_de AB_monsieur
+NO_programme PR_de NO_madame	NO_programme PR_de mr
+NO_village PR_où PR_il VE_faire AD_bon	NO_ville PR_où PR_il VE_faire AD_bon
+NO_village	NO_ville
+NO_ville AD_ne	volle AD_ne
+NO_ville	volle
+VE_avoir DE_le NO_force	VE_avoir DE_le NO_forme
+NO_force	NO_forme
+VE_avoir DE_le hopital	VE_avoir DE_le hospital
+hopital	hospital
+VE_avoir PR_tout DE_le NO_monde	VE_avoir AD_tout DE_le NO_monde
+AD_tout	PR_tout
+VE_avoir PR_tout DE_un AD_bon NO_journée	VE_avoir PR_tout DE_un AD_bon NO_soirée
+AD_beau NO_mère	AD_beau NO_père
+NO_père	NO_mère
+AD_beaucoup PR_de NO_gens	AD_beaucoup PR_de NO_vent
+NO_bise	AD_bis
+AD_bis PR_à PR_tout DE_le NO_monde	NO_bisou PR_à PR_tout DE_le NO_monde
+AD_bis	NO_bisou
+NO_montagne	NA_montaigne
+AD_pas PR_de NO_traitement	AD_plus PR_de NO_traitement
+NO_force	NO_forme
+VE_passer DE_un AD_bon NO_journée	VE_passer DE_un AD_bon NO_soirée
+VE_passer DE_un AD_bon NO_journée AD_gros	VE_passer DE_un AD_bon NO_soirée AD_gros
+VE_passer DE_un AD_très AD_bon NO_journée	VE_passer DE_un AD_très AD_bon NO_soirée
+VE_prendre PR_en NO_main	VE_prendre DE_mon NO_main
+VE_prendre PR_en NO_main	VE_prendre DE_ton NO_main
+NO_profil VE_supprimer DE_le 13-12-2010	NO_profil VE_supprimer DE_le 14-12-2010
+14-12-2010	13-12-2010
+pytchoune	pytchoune3
+VE_souhaiter DE_un AD_bon NO_fin	VE_souhaiter DE_un AD_bon NO_nuit
+VE_supprimer DE_le 13-12-2010 PR_à 23	VE_supprimer DE_le 14-12-2010 PR_à 00
+VE_supprimer DE_le 13-12-2010 PR_à 23	VE_supprimer DE_le 14-12-2010 PR_à 01
+NA_vanessa	vanessan
+vanessa	vanessan
+NO_avenir PR_de DE_notre NO_village	NO_avenir PR_de DE_notre NO_ville
+NO_village	NO_ville
+NO_avenir PR_de DE_notre NO_village	NO_avenir PR_de DE_notre NO_ville
+NO_village	NO_ville
