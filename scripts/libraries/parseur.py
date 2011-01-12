@@ -602,7 +602,8 @@ def extract_champs_vdn(filename):
 	contenu = fonctions_bdd.select_bdd_table_champ_simple(filename,'commentaires',"id,cp,comm_meta,comm_texte")
 	for cont in contenu:
 		title = cont[1]
-		date,website = detacher_meta(cont[2])
+		website,date = detacher_meta(cont[2])
+		website=website.replace("'",' ')
 		permalink = cont[2]
 		categ1 = date
 		date=''
