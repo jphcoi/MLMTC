@@ -470,9 +470,9 @@ def remplir_table_billets(name_bdd,name_table,champs_liste,champs_name,requete):
 				champ_sql = champ_sql + ','+    '\'' +champ[6] +   '\'' 
 			else:
 				if not '.db' in name_bdd:
-					champ_sql = champ_sql + ','+    '\'' +champ[1]+'_'+champ[2].replace("'","popostrophe") +'_'+ requete  +   '\'' 
+					champ_sql = champ_sql + ','+    '\'' +champ[1].replace("'","popostrophe")+'_'+champ[2].replace("'","popostrophe") +'_'+ requete  +   '\'' 
 				else:
-					champ_sql = champ_sql + ','+    '\'' +champ[2] +   '\'' 
+					champ_sql = champ_sql + ','+    '\'' +champ[2].replace("'","popostrophe") +   '\'' 
 			values = " VALUES (" +str(champ_sql) + ')'
 			commandesql = "INSERT OR IGNORE INTO billets " + champs_name + values
 			ex(commandesql)
