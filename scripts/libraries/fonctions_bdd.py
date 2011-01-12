@@ -481,6 +481,7 @@ def remplir_table_billets(name_bdd,name_table,champs_liste,champs_name,requete):
 			
 		except:
 			#print champ
+			print values
 			print "il y a un  probleme d'encodage pour remplir la table billets"
 	connection.commit()
 #	print str(len(isi_un)) + ' numeros isi uniques'
