@@ -1129,7 +1129,7 @@ def extraire_donnees(name_data,sep):
 		champs = extract_champs_doc(name_data)
 	if ".db" == name_data[-3:]:#export au format .sqlite: export doctissimo
 		champs = extract_champs_db(name_data)
-	if ".vdn" == name_data[-3:]:#export au format .sqlite: export doctissimo
+	if ".vdn" == name_data[-4:]:#export au format .sqlite: export doctissimo
 		champs = extract_champs_vdn(name_data)
 
 	return champs
