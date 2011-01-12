@@ -605,7 +605,7 @@ def extract_champs_vdn(filename):
 		date,website = detacher_meta(cont[2])
 		permalink = cont[2]
 		categ1 = date
-		date='2008'
+		date=''
 		categ2 = ''
 		categ3 = ''
 		contentclean = str.strip(cont[3])
