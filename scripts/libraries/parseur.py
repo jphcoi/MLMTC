@@ -292,6 +292,7 @@ def date_billet_parser(datee):
 	return date_billet
 
 def jour_entre(date_billet,date_depart):
+	print date_billet,date_depart
 	if len(str(date_billet))<4:
 		return str(date_billet)
 	else:
