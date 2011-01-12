@@ -587,6 +587,35 @@ def extract_champs_medline(filename,sep):
 #	print "    - such as: ",posts[0]
 	return articles
 
+
+def extract_champs_db(filename):
+	articles=[]
+	print "    - fichier d'articles: \""+filename+"\"..."
+	#file=codecs.open(filename,"r","utf8")
+	#lines = file.readlines()
+	i=0
+	categ1,categ2,categ3,permalink,contentanchor = '','','','',''
+	#clause_titre=0
+	#clause_content=0
+	import fonctions_bdd
+	contenu = fonctions_bdd.select_bdd_table_champ_simple(filename,'maladiesrares',"id,topics,sujet,vues,reponses,auteur,profil,date,heure,contenu,citation,page,hrefs")
+	for cont in contenu:
+#('id','topics','sujet','vues','reponses','auteur','profil','date','heure','contenu','citation','page','hrefs')
+		title = cont[2]
+		date = cont[7]
+		permalink = cont[1]
+		website = cont[5]
+		categ1 = cont[3]
+		categ2 = cont[3]
+		categ3 = cont[6]
+		contentclean = str.strip(cont[9])
+		contentanchor = str.strip(cont[12])
+		articles.append([title,date,permalink,website,categ1,categ2,categ3,contentclean,contentanchor])#sans le html brut
+	print "---",len(articles),"posts processed."
+	return articles
+
+
+
 def extract_champs_fet(filename):
 	articles=[]
 	print "    - fichier d'articles: \""+filename+"\"..."
@@ -1073,6 +1102,8 @@ def extraire_donnees(name_data,sep):
 
 	if ".doc" == name_data[-4:]:#export au format .doc: export doctissimo
 		champs = extract_champs_doc(name_data)
+	if ".db" == name_data[-3:]:#export au format .sqlite: export doctissimo
+		champs = extract_champs_db(name_data)
 
 	return champs
 

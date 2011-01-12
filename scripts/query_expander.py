@@ -51,14 +51,16 @@ print "--- initialisations terminees...\n"
 print "+++ processing raw database \""+name_data+"\" into sql_where database file \""+name_bdd+"\""
 
 sep  = ' *** '
-
-name_bdd_new = '.'.join(name_bdd.split('.')[:-2]) + '_new.' + '.'.join(name_bdd.split('.')[-2:])
-
+if 'lfl' in name_bdd:
+	name_bdd_temp = '.'.join(name_bdd.split('.')[:-2]) + '_temp.' +'.'.join(name_bdd.split('.')[-2:])
+	name_bdd_new = '.'.join(name_bdd.split('.')[:-2]) + '_new.' + '.'.join(name_bdd.split('.')[-2:])
+else:
+	name_bdd_new = '.'.join(name_bdd.split('.')[:-1]) + '_new.' + '.'.join(name_bdd.split('.')[-1:])
+	name_bdd_temp = '.'.join(name_bdd.split('.')[:-1]) + '_temp.' +'.'.join(name_bdd.split('.')[-1:])
 
 
 def select_query(query=[]):
 	#on définit une nouvelle table et une table billets temporaires
-	name_bdd_temp = '.'.join(name_bdd.split('.')[:-2]) + '_temp.' +'.'.join(name_bdd.split('.')[-2:])
 
 
 	#specific_nlemmes est la requête de base issue de query.csv.
@@ -125,7 +127,7 @@ def select_query(query=[]):
 	shutil.copy(name_bdd, name_bdd_new)
 	shutil.copy(name_bdd_temp, name_bdd)
 	os.remove(name_bdd_temp)
-	return specific_nlemmes
+	return specific_nlemmes,fonctions_bdd.count_rows(name_bdd,'billets')
 
 def fast_ngram_counter(name_bdd,concept_list=''):	
 	Nb_rows = fonctions_bdd.count_rows(name_bdd,'billets')
@@ -166,7 +168,7 @@ def out_doc(dico_new,dico):
 	ratio={}
 	for x,y in dico_new.iteritems():
 		norm = dico[x]
-		ratio[x] = norm-y
+		ratio[x] = float(norm)/float(y)
 	return ratio
 
 def add_query(query,x):
@@ -175,13 +177,14 @@ def add_query(query,x):
 		print x + ' added to the query '
 	return query
 
-def query_exander(query):
+def query_exander(query,N):
 	encore=1
 	while encore==1:
 		dico_new=0
 		dico=0
 		#construit la base name_bdd_new en fonction de la query
 		id_new_list = fonctions_bdd.select_bdd_table_champ_simple(name_bdd_new,'billets','id')
+		N_new = len(id_new_list)
 		id_new=[]
 		for x in  id_new_list:
 			id_new.append(x[0])
@@ -197,7 +200,7 @@ def query_exander(query):
 		for x in ratio_l:
 			if nb_question<steps:
 				val = x[1]
-				if val>0:
+				if dico_new[x[0]]!=dico[x[0]]:
 					info ='\n'
 
 					nouveaux_billets = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'billets',champs_name[1:-1],"where content_lemmatise like '%" + x[0]  +"%'")
@@ -206,16 +209,17 @@ def query_exander(query):
 						if not billets[0] in id_new:
 							info=info +  '*** '+ billets[1] + '(' + billets[4]  + ')' + '\n'
 					print info
-					print dico_new[x[0]]
-					print dico[x[0]]
+					print str(dico_new[x[0]]) +' doc. in ( '+str(float(dico_new[x[0]])/float(N_new)*100.) +'% )' + ' vs ' + str(dico[x[0]])+' doc. out ( '+str(float(dico[x[0]])/float(N)*100.) +'% )' + ' => ratio: ' + str(float(dico_new[x[0]])/float(N_new)/(float(dico[x[0]])/float(N)))
 
-					var = raw_input('Do you wish to add "' + x[0] + '" ('+str(x[1])+ ') '+' to the query ?')
+					var = raw_input('Do you wish to add "' + x[0] + '" to the query ?')
 					if var=='y':
 						query =  add_query(query,x[0])
 						fonctions_bdd.remplir_table(name_bdd_new,'billets',nouveaux_billets,champs_name)
 						nb_question=nb_question+1
 					if var=='s':
 						steps=0
+				else:
+					query =  add_query(query,x[0])
 			else:
 				pass
 		print 'query finale'
@@ -225,8 +229,8 @@ def query_exander(query):
 			encore=0
 	return query
 
-query = select_query()
-print query_exander(query)
+query,N = select_query()
+print query_exander(query,N)
 			
 def nettoyer_site(chaine,chainel,site):
 	sortie = fonctions_bdd.select_bdd_table_champ_complet(name_bdd,'billets','id,content,content_lemmatise','site',site)

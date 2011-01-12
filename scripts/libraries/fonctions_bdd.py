@@ -279,8 +279,8 @@ def delete_field(name_bdd,table,id_b):
 
 	
 def select_bdd_table_champ_simple(name_bdd,table,champ, where = ' where 1'):
+	print name_bdd
 	connection,ex = connexion(name_bdd)
-	print "SELECT "  + champ +  "   from " +table + ' '  + where
 	sortie= ex("SELECT "  + champ +  "   from " +table + ' '  + where ).fetchall()
 	#print "       - selection du/des champ(s) \"" + champ + "\" de la table \"" + table + "\" dans la BDD " +name_bdd
 	sortie_ok = []
@@ -434,10 +434,7 @@ def remplir_table_billets_lfl(name_bdd,name_table,champs_liste,champs_name,reque
 		champ[8]=requete
 		id_unique=champ[0]+'_'+champ[3]
 		champ.append(id_unique)
-#		if champ[3]=='http://www.letelegramme.com/':
-#			contenutag = champ[7]
-#			champ[7] = contenutag.split('dans la même rubrique ')[0]
-		ex("INSERT OR IGNORE INTO billets (title, date,permalink,site,categorie1,categorie2,categorie3, content,requete,href,identifiant_unique) VALUES (?,?,?,?,?,?,?,?,?,?,?)", champ)
+		ex("INSERT OR IGNORE INTO billets (title, date,permalink,site,categorie1,categorie2,categorie3,content,requete,href,identifiant_unique) VALUES (?,?,?,?,?,?,?,?,?,?,?)", champ)
 	connection.commit()
 	connection.close()
 	print "    + table \"" + name_table+"\" remplie"
@@ -472,8 +469,10 @@ def remplir_table_billets(name_bdd,name_table,champs_liste,champs_name,requete):
 				#version isi pour éliminer les doublons à partir de la liste des identifiants isi: isi:a1996ur12500023
 				champ_sql = champ_sql + ','+    '\'' +champ[6] +   '\'' 
 			else:
-				champ_sql = champ_sql + ','+    '\'' +champ[1]+'_'+champ[2].replace("'","popostrophe") +'_'+ requete  +   '\'' 
-			
+				if not '.db' in name_bdd:
+					champ_sql = champ_sql + ','+    '\'' +champ[1]+'_'+champ[2].replace("'","popostrophe") +'_'+ requete  +   '\'' 
+				else:
+					champ_sql = champ_sql + ','+    '\'' +champ[2] +   '\'' 
 			values = " VALUES (" +str(champ_sql) + ')'
 			commandesql = "INSERT OR IGNORE INTO billets " + champs_name + values
 			ex(commandesql)
