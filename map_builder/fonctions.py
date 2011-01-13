@@ -206,3 +206,99 @@ def dumpingout(datastr):
 	data = pickle.load(pkl_file)
 	return data
 
+def invert_dict(d):
+    return dict([(v, k) for k, v in d.iteritems()])
+
+def get_label_annees(inter):
+	annees = years_bins[inter]
+	annee_d=str(annees[0])
+	annee_f=str(annees[-1])
+	return annee_d + ' '+annee_f
+
+
+def ecrire_tables_cluster_phylo(nodes,edges,sortie,level,time,attribut,sonsbis,fathersbis,dico_termes,indexs_inv,map_dessous,transition,sep_label):
+	dico_termes_inv = invert_dict(dico_termes)
+	transition_inv = invert_dict(transition)
+	variables_cluster=[]
+	variables_phylo=[]
+	variables_maps=[]
+	try:
+		print 'path_req' + 'site'
+		os.mkdir(path_req + 'site')
+	except:
+		pass
+	
+	fichier_dot=open(path_req + 'site'  +'/' + 'ExportPhyloDetails.dot','w')	
+	fichier_dot.write('digraph arbre_phylogenetique {\n')
+	labels_annees=[]
+	ranks = {}	
+	for idx,lab in nodes.iteritems():
+		#print idx
+		id_cluster_univ=transition_inv[idx]
+		tim = time[idx]
+		lev = level[idx]
+		att = attribut[idx]
+		son = sonsbis[idx]
+		fat = fathersbis[idx]
+		labv = lab.split(sep_label)
+		labv.sort()
+		lab1 = labv[0]
+		lab2 = labv[1]
+		
+		lab_1 = dico_termes_inv[lab1]
+		lab_2 = dico_termes_inv[lab2]
+		label_annee = get_label_annees(tim)
+		index_local = indexs_inv[id_cluster_univ]
+		[niv,numero,inter] = index_local.split('_')
+		if not label_annee in labels_annees:
+			labels_annees.append(label_annee)
+			
+			ranks[str(tim)]=['P' + str(tim)]
+			fichier_dot.write('P' + str(tim) +' [shape = rect ,fontsize=22,label="'+label_annee.replace(' ','-')+ '"]\n')
+			if len(labels_annees)>1:
+				fichier_dot.write('P' + str(tim) + ' -> ' + mem + '\n')
+			mem = 'P' + str(tim)
+			fichier_dot.write
+		temp =  ranks[str(tim)]
+		temp.append('C' + str(tim) + '_' + str(numero))
+		ranks[str(tim)]=temp
+		fichier_dot.write('C' + str(tim) + '_' + str(numero)  +'  [style=filled,fontname=Arial,fontsize=12,peripheries=2,color=lightblue2    ,shape=rect, label="')
+		for con in map_dessous[id_cluster_univ]:
+			con = indexs_inv[con].split('_')[1]
+			variables_cluster.append([idx,numero,lab_1,lab_2,lab,att,lev,label_annee,fat,son,idx,con])
+			fichier_dot.write('\\n'+dico_termes[int(con)])
+		fichier_dot.write('",fontsize=12]\n')
+			
+	#	ex('CREATE TABLE '+ name_table +' (id INTEGER ,id_cluster INTEGER,label_1 INTEGER,label_2 INTEGER,label VARCHAR(300),attribut VARCHAR(300),level INTEGER,periode VARCHAR(50),concept INT, pseudo VARCHAR(10), cluster_size INT, density VARCHAR(10), nb_fathers INT, nb_sons INT, lettre VARCHAR(3), identifiant_unique VARCHAR(20))')
+	variables_cluster_names = "(id_cluster_univ,id_cluster,label_1,label_2,label,attribut,level,periode,nb_fathers , nb_sons,identifiant_unique,concept)"#concept,pseudo , cluster_size , density ,  lettre , ))"
+	fonctions_bdd.remplir_table(name_bdd,'cluster',variables_cluster,variables_cluster_names)
+	
+	for source,streng in edges.iteritems():
+		id_cluster_1_univ=transition_inv[source[0]]
+		id_cluster_2_univ=transition_inv[source[1]]
+		[niv_1,id_cluster_1,inter_1] = indexs_inv[id_cluster_1_univ].split('_')
+		[niv_2,id_cluster_2,inter_2] = indexs_inv[id_cluster_2_univ].split('_')
+		label_annee_1 = get_label_annees(int(inter_1))
+		label_annee_2 = get_label_annees(int(inter_2))
+		if niv_1 == niv_2:
+			if inter_1 == inter_2:
+				variables_maps.append([id_cluster_1,label_annee_1,source[0],id_cluster_2,label_annee_2,source[1],str(streng)])
+				#print streng
+				#activer liens intra temporelles
+				#if float(streng)>0.:			
+					#fichier_dot.write('C'+str(inter_1) + '_' + str(id_cluster_1) + '->' + 'C'+str(inter_2) + '_' + str(id_cluster_2) + ' '  + '[style="setlinewidth(2)",color=green]\n')
+			else:
+				variables_phylo.append([id_cluster_1,label_annee_1,source[0],id_cluster_2,label_annee_2,source[1],str(streng)])
+				fichier_dot.write('C'+str(inter_1) + '_' + str(id_cluster_1) + '->' + 'C'+str(inter_2) + '_' + str(id_cluster_2) + ' '  + '[style="setlinewidth(2)",color=red]\n')
+	for inter,ra in ranks.iteritems():
+		fichier_dot.write('{rank=same;')
+		for x in ra:
+			fichier_dot.write(str(x)+' ')
+		fichier_dot.write('}\n')
+	fichier_dot.write('}\n')
+	variables_phylo_names = "(id_cluster_1,periode_1,id_cluster_1_univ,id_cluster_2,periode_2,id_cluster_2_univ,strength)"
+	variables_maps_names = "(id_cluster_1,periode_1,id_cluster_1_univ,id_cluster_2,periode_2,id_cluster_2_univ,strength)"
+	fonctions_bdd.remplir_table(name_bdd,'phylo',variables_phylo,variables_phylo_names)
+	fonctions_bdd.remplir_table(name_bdd,'maps',variables_maps,variables_maps_names)
+
+

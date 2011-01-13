@@ -21,3 +21,4 @@ dist_type='precision'
 nofigure=1
 user_interface='y'
 seuil_cooccurrences=2
+timelimit=3

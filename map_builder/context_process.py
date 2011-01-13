@@ -328,7 +328,8 @@ def remplir_colonne_distance_sem_weighted(dist_mat):
 				champs_liste.append((id_triplet,y))
 				champs_name.append('distance1')
 			except:
-				print 'BUG'
+				#some distances may be under the threshold.
+				pass
 	fonctions_bdd.update_multi_table(name_bdd,'sem_weighted',champs_name,champs_liste)
 	#"remplit la colonne champ_name d'indice id - entree liste de doublon (id, valeur)"
 		
