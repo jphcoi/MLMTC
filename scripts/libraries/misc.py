@@ -321,14 +321,14 @@ def build_semantic_nets(billets_id,ngramme_billets_fit,name_bdd,requete,sep):
 	lienssocsem = []
 	lienssem = []
 	for b_id,ngra in zip(billets_id,ngramme_billets_fit):
-		auteur = fonctions_bdd.select_bdd_table_champ(name_bdd,'billets','site','id',b_id)
-		auteur = text_processing.nettoyer_url((auteur))
+		auteur_ids = fonctions_bdd.select_bdd_table_champ(name_bdd,'billets','auteur_id','id',b_id)
+		#auteur = text_processing.nettoyer_url((auteur))
 		jours = fonctions_bdd.select_bdd_table_champ(name_bdd,'billets','jours','id',b_id)
-	#	print auteur
-		names =auteur.split(sep)
-		auteur_ids=[]
-		for nom in names:
-			auteur_ids.append(fonctions_bdd.select_bdd_table_champ(name_bdd,'auteurs','id','auteurs',nom))
+		#names =auteur.split(sep)
+		#auteur_ids=[]
+		#for nom in names:
+		#	auteur_ids.append(fonctions_bdd.select_bdd_table_champ(name_bdd,'auteurs','id','auteurs',nom))
+		auteur_ids = auteur_ids[1:-1].split(', ')
 		concept_ids = []
 		for gra in ngra:
 			concept_id = gra
