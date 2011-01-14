@@ -249,8 +249,8 @@ def nettoyer_site(chaine,chainel,site):
 	fonctions_bdd.insert_select_substring(name_bdd,'billets','billets',entreel,'content_lemmatise')
 	
 	
-# chaine = 'avant'
-# chainel = 'avant'
-# site='http://zolucider.blogspot.com/'
+# chaine = '... tags'
+# chainel = 'PU_... tags'
+# site='http://www.letelegramme.com/'
 
 #nettoyer_site(chaine,chainel,site)
