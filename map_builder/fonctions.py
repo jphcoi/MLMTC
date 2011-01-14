@@ -195,6 +195,10 @@ def map_champs(champs0,dist_mat,type_distance):
 	
 
 def dumpingin(data,datastr):
+	try:
+		os.mkdir('../../inout/pkl/'+requete)
+	except:
+		pass
 	output = open('../../inout/pkl/'+requete+'/'+datastr+'.pkl', 'wb')
 	# Pickle dictionary using protocol 0.
 	pickle.dump(data, output)

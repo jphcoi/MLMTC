@@ -312,7 +312,7 @@ def comparaison_inter_temporelle(liens_actuels,liens_forces_actuels,list_liens_p
 	for liens_past,liens_past_force in zip(list_liens_past,list_liens_forces_past):
 		cluster_past_id = cluster_past_id +1
 		nb_liens_communs=len(set(liens_past)&set(liens_actuels))
-		if nb_liens_communs>0:
+		if float(nb_liens_communs) / float(min(len(liens_past),len(liens_actuels)))>1./8.:
 			over=overlap_pondere(liens_past,liens_actuels,liens_past_force,liens_forces_actuels)
 			if over>seuil_intertemp:
 				mapping[cluster_past_id] = over

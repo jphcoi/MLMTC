@@ -48,7 +48,7 @@ sep  = ' *** '
 name_bdd_new = '.'.join(name_bdd.split('.')[:-2]) + '_new.' + '.'.join(name_bdd.split('.')[-2:])
 print name_bdd
 print name_bdd_new
-champs_name = "(title,date,permalink,site,categorie1,categorie2,categorie3,content,href,requete,identifiant_unique)"#on n'enregistre pas le html brut
+champs_name = "(title,date,permalink,site,categorie1,categorie2,categorie3,content_lemmatise,content,href,jours,concepts,identifiant_unique,requete,concepts_id)"#on n'enregistre pas le html brut
 billet_new = fonctions_bdd.select_bdd_table_champ_simple(name_bdd_new,'billets',champs_name[1:-1])
 champs=billet_new
 fonctions_bdd.remplir_table(name_bdd,'billets',champs,champs_name)

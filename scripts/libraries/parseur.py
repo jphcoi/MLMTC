@@ -20,7 +20,6 @@ import datetime
 import calendar
 import getopt
 import copy, re
-import BeautifulSoup
 # 
 # def convert(html):
 # 	return BeautifulSoup(html,convertEntities=BeautifulSoup.HTML_ENTITIES,markupMassage=hexentityMassage).contents[0].string
