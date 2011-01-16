@@ -374,7 +374,7 @@ def intertemporel(map_corr,map_corr_force,map_corr_noeuds,map_edges,seuil_intert
 				keymax,valmax=[],0
 				try:
 					delta = 1
-					while valmax==0 and delta<min(inter,timelimit):#delta<=5:#liens à longue distance temporelle					 		
+					while valmax==0 and delta<min(inter+1,timelimit):#delta<=5:#liens à longue distance temporelle					 		
 							t_past = inter-delta
 							index_retro = reindex(liens_temp,map_corr_noeuds,t_past+1)
 					 		liens_temp = reindex_retro(liens_temp,index_retro)
@@ -393,8 +393,8 @@ def intertemporel(map_corr,map_corr_force,map_corr_noeuds,map_edges,seuil_intert
 						#intertemp donne les antecendents des champs directement sous leur forme labellisee
 				if niveau==1:
 					intertemp[noeud]=[(map_corr_noeuds[(int(inter)-1,1)][idx],0.1)]
-			if niveau==2:
-				print 'periode: '+str(inter) +  ", niveau : " + str(niveau) +', peres: ' + str(descendants)
+		if niveau==2:
+			print 'periode: '+str(inter) +  ", niveau : " + str(niveau) +', peres: ' + str(descendants)
 	return intertemp
 
 
