@@ -737,7 +737,30 @@ def extract_champs_doc(filename):
 	return articles
 
 
-
+def extract_champs_pat(filename):
+	articles=[]
+	print "    - fichier d'articles: \""+filename+"\"..."
+	file=codecs.open(filename,"r","utf8")
+	lines = file.readlines()
+	i=0
+	categ1,categ2,categ3,permalink,contentanchor = '','','','',''
+	for line in lines[1:]:
+		linev= line.split("\t")
+#		clé, clépat, date , language, id_univ, year, abstract, title, IPC
+#		2 - 3 - 7 - 9 - 11 - 12 - 17 - 18 - 19
+		permalink = linev[1]
+		categ1 = linev[2]
+		categ2 = linev[8]
+		categ3  = linev[10]
+		date = linev[11]
+		website = linev[18]
+		title = linev[17]
+		content = linev[16]
+		contentclean = title + '. ' +content
+		articles.append([title,date,permalink,website,categ1,categ2,categ3,contentclean,contentanchor])#sans le html brut
+	file.close()
+	print "---",len(articles),"posts processed."
+	return articles
 
 def extract_champs_csv(filename):
 	articles=[]
@@ -1132,6 +1155,8 @@ def extraire_donnees(name_data,sep):
 		champs = extract_champs_db(name_data)
 	if ".vdn" == name_data[-4:]:#export au format .sqlite: export doctissimo
 		champs = extract_champs_vdn(name_data)
+	if ".pat" == name_data[-4:]:#export au format .sqlite: export doctissimo
+		champs = extract_champs_pat(name_data)
 
 	return champs
 
