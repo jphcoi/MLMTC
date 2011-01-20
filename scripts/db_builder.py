@@ -107,6 +107,7 @@ fonctions_bdd.creer_table_auteurs(name_bdd,'auteurs')
 print "    - remplissage de la table auteurs..."
 sortie = fonctions_bdd.select_bdd_table(name_bdd,'billets','site',requete)
 sites = set()
+sep="***"
 for sor in sortie:
 	print sor
 	print sor[0]
