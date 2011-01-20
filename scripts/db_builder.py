@@ -87,8 +87,11 @@ champs_name = "(title,date,permalink,site,categorie1,categorie2,categorie3,conte
 if  name_data[-4:] in [".lfl",'.rss','.doc']:#export au format .lfl: linkfluence type III ou IV
 	fonctions_bdd.remplir_table_billets_lfl(name_bdd,'billets',champs,champs_name,requete)
 else:
-	#title, date,permalink,site,categorie1,categorie2,categorie3,content,requete,href,identifiant_unique
-	fonctions_bdd.remplir_table_billets(name_bdd,'billets',champs,champs_name,requete)
+	if name_data[-4:] in [".pat"]:
+		fonctions_bdd.remplir_table_billets_propre(name_bdd,'billets',champs,champs_name,requete)
+	else:		
+		#title, date,permalink,site,categorie1,categorie2,categorie3,content,requete,href,identifiant_unique
+		fonctions_bdd.remplir_table_billets(name_bdd,'billets',champs,champs_name,requete)
 ###################################
 #######2.calcul des infos annexes##
 ###################################

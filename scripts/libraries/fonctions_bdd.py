@@ -440,6 +440,18 @@ def remplir_table_billets_lfl(name_bdd,name_table,champs_liste,champs_name,reque
 	print "    + table \"" + name_table+"\" remplie"
 
 
+def remplir_table_billets_propre(name_bdd,name_table,champs_liste,champs_name,requete):
+	connection, ex = connexion(name_bdd)
+	for champ in champs_liste:
+		champ.append(champ[2])
+		#title,date,permalink,website,categ1,categ2,categ3,contentclean,contentanchor
+		ex("INSERT OR IGNORE INTO billets (title, date,permalink,site,categorie1,categorie2,categorie3,content,requete,identifiant_unique) VALUES (?,?,?,?,?,?,?,?,?,?)", champ)
+	connection.commit()
+	connection.close()
+	print "    + table \"" + name_table+"\" remplie"
+
+
+
 def remplir_table_billets(name_bdd,name_table,champs_liste,champs_name,requete):
 	connection, ex = connexion(name_bdd)
 #	champs_name = "(title,date,permalink,site,categorie1,categorie2,categorie3,content_html,content,href,requete,identifiant_unique)"#on enregistre le html brut
