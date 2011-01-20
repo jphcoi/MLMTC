@@ -108,6 +108,7 @@ print "    - remplissage de la table auteurs..."
 sortie = fonctions_bdd.select_bdd_table(name_bdd,'billets','site',requete)
 sites = set()
 for sor in sortie:
+	print sor
 	names =sor[0].split(sep)
 	for nom in names:
 		sites.add(text_processing.nettoyer_url(nom))
