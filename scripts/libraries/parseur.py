@@ -753,9 +753,9 @@ def extract_champs_pat(filename):
 		categ2 = linev[8]
 		categ3  = linev[10]
 		date = linev[11]
-		website = linev[18]
+		website = linev[18][:-1]
 		title = linev[17]
-		content = str(linev[16][:-1])
+		content = str(linev[16])
 		contentclean = title + '. ' +content
 		articles.append([title,date,permalink,website,categ1,categ2,categ3,contentclean,contentanchor])#sans le html brut
 	file.close()
