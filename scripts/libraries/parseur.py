@@ -745,7 +745,7 @@ def extract_champs_pat(filename):
 	i=0
 	categ1,categ2,categ3,permalink,contentanchor = '','','','',''
 	for line in lines:
-		linev= line[:-1].split("\t")
+		linev= line.split("\t")
 #		clé, clépat, date , language, id_univ, year, abstract, title, IPC
 #		2 - 3 - 7 - 9 - 11 - 12 - 17 - 18 - 19
 		permalink = linev[1]
@@ -753,7 +753,7 @@ def extract_champs_pat(filename):
 		categ2 = linev[8]
 		categ3  = linev[10]
 		date = linev[11]
-		website = str(linev[18])
+		website = linev[18].replace("\r\n",'')
 		title = linev[17]
 		content = linev[16]
 		contentclean = title + '. ' +content
