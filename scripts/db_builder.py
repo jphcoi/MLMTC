@@ -78,6 +78,7 @@ else:
 
 #on parse d'abord le fichier de donnees de depart
 champs = parseur.extraire_donnees(name_data,sep)
+print champs
 print len(champs)
 print "    - liste de liste de champs \"champs\" mise a jour."
 print "      - par exemple, champs[0] = ",champs[0]
