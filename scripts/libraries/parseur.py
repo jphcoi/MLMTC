@@ -744,7 +744,7 @@ def extract_champs_pat(filename):
 	lines = file.readlines()
 	i=0
 	categ1,categ2,categ3,permalink,contentanchor = '','','','',''
-	for line in lines[:10]:
+	for line in lines:
 		linev= line.split("\t")
 #		clé, clépat, date , language, id_univ, year, abstract, title, IPC
 #		2 - 3 - 7 - 9 - 11 - 12 - 17 - 18 - 19
