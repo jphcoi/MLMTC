@@ -67,13 +67,6 @@ def read_reseau(niveau,inter):
 		reseau[ori] = temp
 	return reseau
 	
-def seuiller(res,degmax):
-	res_seuil = {}
-	for terme in res:
-		l = res[terme].items()
-		l.sort(key=itemgetter(1),reverse=True)
-		res_seuil[terme]=l[:degmax] 
-	return res_seuil
 
 def write_reseau(res_seuil,niveau,inter):
 	fichier_out=path_req  + 'reseau/'+'reseauCF_'+'niv_'+str(niveau)+'_'+dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'_degmax_'+str(degmax)+'.txt'
@@ -85,7 +78,7 @@ def write_reseau(res_seuil,niveau,inter):
 		
 def seuil_degmax(niveau,degmax,inter):
 	res = read_reseau(niveau,inter)
-	res_seuil = seuiller(res,degmax)
+	res_seuil = fonctions.seuiller(res,degmax)
 	fichier_out = write_reseau(res_seuil,niveau,inter)
 	return fichier_out
 	
@@ -584,7 +577,7 @@ while fini==1:
 		
 		#print '\n'
 		#print distance_champ_edges_list
-		distance_champ_edges_list_seuil=seuiller(distance_champ_edges_list,degmax)
+		distance_champ_edges_list_seuil=fonctions.seuiller(distance_champ_edges_list,degmax)
 		#print '\n'
 		#print distance_champ_edges_list_seuil
 		distance_champ = edges_list_reverse(distance_champ_edges_list_seuil)

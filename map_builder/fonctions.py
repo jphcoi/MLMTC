@@ -23,6 +23,7 @@ from datetime import timedelta
 from datetime import date
 import pickle
 import pprint
+from operator import itemgetter
 
 ###################################
 #######0.quelques parametres#######
@@ -155,9 +156,9 @@ def calcul_distance_moy(champ1,champ2,dist_mat,inter1):
 		dist=float(dist)/(len(champ1)*len(champ2))
 	return dist
 
-def calcul_distance(champ1,champ2,dist_mat,inter1,type_distance='moy'):
+def calcul_distance(champ1,champ2,dist_mat,inter,type_distance='moy'):
 	dist = 0.
-	inter1= int(inter1)
+	inter= int(inter)
 	if len(champ1)>0 and len(champ2)>0:
 		for terme1 in champ1:
 			terme1=int(terme1)
@@ -168,8 +169,7 @@ def calcul_distance(champ1,champ2,dist_mat,inter1,type_distance='moy'):
 					dist1.append(1)
 					#ce sont des similarites que l'on regarde
 				else:
-					dist1.append(float(dist_mat.get((terme1,terme2,inter1),0)))
-			#print dist1
+					dist1.append(float(dist_mat.get((terme1,terme2,inter),0)))
 			if type_distance=='max':
 				dist=dist+max(dist1)
 			elif type_distance=='moy':
@@ -306,3 +306,10 @@ def ecrire_tables_cluster_phylo(nodes,edges,sortie,level,time,attribut,sonsbis,f
 	fonctions_bdd.remplir_table(name_bdd,'maps',variables_maps,variables_maps_names)
 
 
+def seuiller(res,degmax):
+	res_seuil = {}
+	for terme in res:
+		l = res[terme].items()
+		l.sort(key=itemgetter(1),reverse=True)
+		res_seuil[terme]=l[:degmax] 
+	return res_seuil

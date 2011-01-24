@@ -238,6 +238,14 @@ def select_bdd_table_champ(name_bdd,table,champ,champ2,b_id):
 	connection.close()
 	return sortie[0][0]
 	
+def select_bdd_table_champ_complet(name_bdd,table,champ):
+	connection,ex = connexion(name_bdd)
+#	print "SELECT "  + champ +  "   from " +table +" WHERE "+ champ2 +" = \'" +str(b_id)+ "\'" 	
+	sortie= ex("SELECT "  + champ +  "   from " +table  ).fetchall()
+	connection.commit()
+	connection.close()
+	return sortie
+	
 def count_rows(name_bdd,table):
 	connection,ex = connexion(name_bdd)
 	sortie= ex("SELECT COUNT(*)  from " +table).fetchall()
@@ -348,7 +356,7 @@ def select_bdd_table_where_limite(name_bdd,table,champ,sample,requete,where,limi
 	return sortie_ok
 		
 			
-def select_bdd_table(name_bdd,table,champ,requete):
+def select_bdd_table(name_bdd,table,champ,requete=''):
 	connection,ex = connexion(name_bdd)
 	sortie= ex("SELECT "  + champ +  "   from " +table ).fetchall()
 	#print "       - selection du/des champ(s) " + champ + " de la table " + table +  " dans la bdd " +name_bdd + " avec la requete " +requete

@@ -147,7 +147,7 @@ def build_cooc(voisins,nb_billets):
 		for terme2 in voisinage:
 			#more than one cooccurrence:
 			if dict_temp[terme2]>=parameters.seuil_cooccurrences:
-				p_cooccurrences[(terme1,terme2,inter)] = float(dict_temp[terme2]) / float(N)
+				p_cooccurrences[(int(terme1),int(terme2),int(inter))] = float(dict_temp[terme2]) / float(N)
 	print 'matrice temporelle de cooccurrence ecrite'
 	return p_cooccurrences
 
@@ -358,10 +358,9 @@ try:# si on a deja calcule le reseau de proximit
 		#p_cooccurrences = fonctions.dumpingout('p_cooccurrences'+name_date)
 		print 'dist_mat loading...'
 		dist_mat = fonctions.dumpingout('dist_mat'+name_date)
-		
-		print 'donnees chargées'
-		remplir_colonne_distance_sem_weighted(dist_mat)
-		print 'on a chargé les données déjà calculées'
+		print 'dist_mat loaded'
+		#remplir_colonne_distance_sem_weighted(dist_mat)
+		#print 'on a chargé les données déjà calculées'
 
 	except:
 		if var =='y':
@@ -370,20 +369,30 @@ try:# si on a deja calcule le reseau de proximit
 
 		#p_cooccurrences={}
 		dist_mat={}
+		dist_mat_10={}
 		print 'on construit la version pkl de dist_mat'
 		for inter in range(len(years_bins)):
 			fichier_CF=path_req +'reseau/'+'reseauCF_niv_1_'+dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt'
 			fichier_cooc=path_req +'reseau/'+'reseauCF_niv_cooc__'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt'
 			fichier_gexf = path_req + 'gexf/' + 'reseau_champ_0_'+'_' + dist_type +'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.gexf'		
-			if inter>0:
-				dist_mat_temp_old = deepcopy(dist_mat_temp)
+#			if inter>0:
+#				dist_mat_temp_old = deepcopy(dist_mat_temp)
 			dist_mat_temp = lire_dist_mat_file(fichier_CF)
-			#p_cooccurrences_temp=lire_dist_mat_file(fichier_cooc)
+			dist_mat_temp_res = {}
+			for x,y in dist_mat_temp.iteritems():
+				if not int(x[0]) in dist_mat_temp_res:
+					dic = {}	
+				else:
+					dic = dist_mat_temp_res[int(x[0])]
+				dic[int(x[1])]=float(y)
+				dist_mat_temp_res[int(x[0])] = dic
+			dist_mat_temp_res_10 = fonctions.seuiller(dist_mat_temp_res,10)
 			print 'on construit maintenant dist_mat pour chaque periode ' + str(inter)
 			for x,y in dist_mat_temp.iteritems():
 				dist_mat[(int(x[0]),int(x[1]),int(inter))]=y
-			#for x,y in p_cooccurrences_temp.iteritems():
-			#	p_cooccurrences[(int(x[0]),int(x[1]),int(inter))]=y
+			for x,y in dist_mat_temp_res_10.iteritems():
+				for u in y:
+					dist_mat_10[(int(x),int(u[0]),int(inter))]=u[1]
 			level={}
 			for x in dico_termes:
 				level[x]=1
@@ -392,18 +401,34 @@ try:# si on a deja calcule le reseau de proximit
 		fonctions.ecrire_dico(dico_termes,dico_termes,dico_termes,1)
 		print 'dicos ecrits'
 		#fonctions.dumpingin(p_cooccurrences,'p_cooccurrences'+name_date)
+		fonctions.dumpingin(dist_mat_10,'dist_mat_10'+name_date)
+		print 'on a dumpé distmat_10: top 10 de chaque terme'
 		fonctions.dumpingin(dist_mat,'dist_mat'+name_date)
 		print 'on a dumpé distmat'
 		remplir_colonne_distance_sem_weighted(dist_mat)		
-		print 'on a enregistre la variable dist_mat' +name_date + ' en mémoire et remplit la table sem_weighted avec les distances positives.'
+		print 'on a enregistre la variable dist_mat' + name_date + ' en mémoire et remplit la table sem_weighted avec les distances positives.'
 		
 except:# sinon on recalcule du début
 	print 'on calcule les données de départ'
-
-	#contenu = fonctions_bdd.select_bdd_table(name_bdd,'sem','concept1,concept2,jours,id_b',requete)
-	contenu = fonctions_bdd.select_bdd_table(name_bdd,'billets','concepts_id,jours,id',requete)
-	print "contenu importé"
-	p_cooccurrences = build_cooc_matrix(contenu,years_bins)
+	coocs = fonctions_bdd.select_bdd_table(name_bdd,'sem_weighted','concept1,concept2,periode,cooccurrences')
+	contenu = fonctions_bdd.select_bdd_table(name_bdd,'billets','id,jours',requete)
+	nb_billets = build_nbbillet(contenu,years_bins)
+	p_cooccurrences  = {}
+	for cooc in coocs:
+		if int(cooc[3])>=parameters.seuil_cooccurrences:
+			inter = int(cooc[2])
+			terme1 = int(cooc[0])
+			terme2 = int(cooc[1])
+			p = float(cooc[3])/float(nb_billets[inter])
+			p_cooccurrences[(terme1,terme2,inter)] = p
+			if terme2 != terme1:
+				p_cooccurrences[(terme2,terme1,inter)] = p
+	
+	#version concurrente pour calculer p_cooccurrence.
+	#contenu = fonctions_bdd.select_bdd_table(name_bdd,'billets','concepts_id,jours,id',requete)
+	#print "contenu importé"
+	#p_cooccurrences = build_cooc_matrix(contenu,years_bins)
+	
 	print "matrice de cooccurrence construite"
 #	fonctions.ecrire_reseau(p_cooccurrences,years_bins,'',0,'cooc',dedoubler(dico_termes,years_bins))		 	
 	fonctions.ecrire_reseau_CF(p_cooccurrences,years_bins,'',0,'cooc')
