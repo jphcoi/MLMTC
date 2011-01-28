@@ -61,7 +61,7 @@ def add_link(clusters,reseau,type_lien):
 	return clusters
 
 #on récupère les données utiles construites dans phylogenie.py
-def load_data():
+def load_data(orphan_number):
 	champs=['id_cluster_1','periode_1','id_cluster_1_univ','id_cluster_2','periode_2','id_cluster_2_univ','strength']
 	res_maps = fonctions_bdd.select_bdd_table_champ_complet(name_bdd,'maps',','.join(champs))
 	champs=['id_cluster_1','periode_1','id_cluster_1_univ','id_cluster_2','periode_2','id_cluster_2_univ','strength']
@@ -78,7 +78,7 @@ def load_data():
 	for cluster_terme in res_cluster:
 		[id_cluster,periode,id_cluster_univ,label_1,label_2,level,concept,nb_fathers,nb_sons,label] = cluster_terme
 		periode = years_bins_first.index(int(str(periode).split(' ')[0]))
-		if nb_fathers+nb_sons>0:
+		if nb_fathers+nb_sons >= orphan_number:
 			if id_cluster_univ in clusters:
 				dict_id = clusters[id_cluster_univ]
 				temp_concept = dict_id['concepts']
@@ -141,10 +141,10 @@ def width(clusters):
 	return epaisseur,biparti_noticeschamps,biparti_champsnotices	
 
 try:
-	liens_totaux_syn,liens_totaux_dia,clusters = fonctions.dumpingout('liens_totaux_syn'),fonctions.dumpingout('liens_totaux_dia'),fonctions.dumpingout('clusters')
+	liens_totaux_syn,liens_totaux_dia,clusters,years_bins = fonctions.dumpingout('liens_totaux_syn'),fonctions.dumpingout('liens_totaux_dia'),fonctions.dumpingout('clusters'),fonctions.dumpingout('years_bins')
 except:
-	
-	dico_termes,clusters,dist_mat = load_data()
+	orphan_number = 0
+	dico_termes,clusters,dist_mat = load_data(orphan_number)
 	epaisseur,biparti_noticeschamps,biparti_champsnotices=width(clusters)	
 
 	for x,y in epaisseur.iteritems():
@@ -171,4 +171,5 @@ except:
 	fonctions.dumpingin(liens_totaux_syn,'liens_totaux_syn')
 	fonctions.dumpingin(liens_totaux_dia,'liens_totaux_dia')
 	fonctions.dumpingin(clusters,'clusters')
+	fonctions.dumpingin(years_bins,'years_bins')
 network_layout.plot_graph(liens_totaux_syn,liens_totaux_dia,clusters)
