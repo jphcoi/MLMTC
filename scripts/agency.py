@@ -192,6 +192,7 @@ file_oui2 = open(agency_name2,'w')
 file_no2 = open(agency_name_out2,'w')
 phrases_ok,phrases_out=[],[]
 for x in range(nb_sequences+1):
+	print lim_d
 	lim_d = str(size_seq*x)
 	duration = str(size_seq)
 	#on extrait les champs contenus lemmatises et id de la table
