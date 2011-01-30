@@ -175,6 +175,12 @@ except:
 			else:
 				duration = str(min(Nb_rows - size_seq*x,sample))
 			where = " jours IN ('" + "','".join(list(map(str,year))) + "') "
+			where=''
+			for ii,ystr in enumerate(list(map(str,year))):
+				if ii>0:
+					where = where + ' or '
+				where = where + ' jours = ' +"'"+ ystr+"'"
+			#print where
 			contenu = fonctions_bdd.select_bdd_table_where_limite(name_bdd,'billets','content_lemmatise',sample,requete,where,lim_d+','+duration,Nb_rows)
 			for billetlemm in contenu:
 				billetprocessed_after_requete=1+billetprocessed_after_requete
