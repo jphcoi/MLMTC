@@ -162,7 +162,7 @@ except:
 			size_seq = sample
 			nb_sequences=0
 		else:
-			size_seq = 200
+			size_seq = 2000
 			nb_sequences = Nb_rows/size_seq
 		dictionnaire_gramme = {}#initialisation du dictionnaire de lemmes
 		billetprocessed_after_requete=0 #counts the number of processed posts

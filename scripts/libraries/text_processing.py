@@ -312,8 +312,8 @@ def ngramme_build(billet,maxTermLength,dictionnaire_gramme,language,freq_type):
 							#finalement selon le moment il peut être plus prudent de compter l'ensemble des occurrenes notamment pour calculer les poupées russes, il y a donc deux façon de requêter  ngramme_build
 							if freq_type == 'billet':
 								dejavu.append(term)
-							if freq_type == 'absolu':
-								pass
+							#if freq_type == 'absolu':
+							#	pass
 							if not dictionnaire_gramme.has_key(term):
 								dictionnaire_gramme[term] = 1
 							else:
