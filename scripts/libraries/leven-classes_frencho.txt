@@ -16498,3 +16498,1650 @@ NO_boite VE_avoir NO_lettre	NO_boite PR_au NO_lettre
 NO_boite VE_avoir NO_lettre	NO_boite PR_à NO_lettre
 NO_boite PR_au NO_lettre	NO_boite PR_à NO_lettre
 NO_boite PR_au NO_lettre	NO_boîte PR_au NO_lettre
+AD_résistant PR_au AD_antibiotique	NO_résistance PR_au AD_antibiotique
+norfenfluramine	norfenfluramines
+NO_médecine AD_vétérinaire	NO_docteur AD_vétérinaire
+NO_médecine AD_vétérinaire	docteur AD_vétérinaire
+NO_arme AD_biologique	
+NO_agriculture AD_breton	agriculteurs AD_breton
+NO_médecin AD_nucléaire	médecine AD_nucléaire
+NO_biologie AD_synthétique	NO_biologie AD_synth√©tique
+NO_maladie AD_auto-immun	maladie AD_auto-immun
+NO_maladie AD_auto-immun	maladie NO_auto AD_immun
+NO_cellule AD_photovoltaïque	NO_cellule AD_photovolta√Øque
+NO_médecin AD_général	médecine AD_général
+ministère PR_de DE_le NO_alimentation	minist√®re PR_de DE_le NO_alimentation
+ministère PR_de DE_le NO_alimentation	NO_minist√®re PR_de DE_le NO_alimentation
+valvulopathies	valvulopathie
+NO_banque AD_européen PR_de NO_investissement	NO_banque AD_europ√©en PR_de NO_investissement
+NO_agriculture AD_français	agriculteurs AD_français
+NO_autorité PR_de NO_sûreté AD_nucléaire	NO_autorit√© PR_de NO_s√ªret√© AD_nucl√©aire
+NO_nappe PR_de NO_pétrole	NO_nappe PR_de NO_p√©trole
+AD_éolien NO_marin	AD_√©olien NO_marin
+AD_éolien NO_marin	AD_√©olien NO_offshore
+NO_aide AD_médical PR_de NA_etat	aide AD_médical PR_de NA_etat
+NA_etat AD_européen	NA_etat AD_europ√©en
+NA_etat AD_européen	NA_etats AD_europ√©en
+NO_cha√Æne AD_alimentaire	NO_chaîne AD_alimentaire
+NO_boue AD_rouge	NO_boue AD_toxique
+véolia	v√©olia
+NO_antibiotique	AD_antibiotique
+NO_institut AD_national PR_de NO_veille AD_sanitaire	NO_institut PR_de NO_veille AD_sanitaire
+alzheimer	NO_maladie PR_de alzheimer
+bisphénol	bisph√©nol
+bisphénol	bisph√©nol A
+NO_ministre PR_du NO_finance	NO_ministère PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finances
+NO_ministre PR_du NO_finance	NO_ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finances
+NO_ministre PR_du NO_finance	NO_ministère PR_du finance
+NO_ministre PR_du NO_finance	ministres PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finance
+NO_ministre PR_du NO_finance	NO_ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du finance
+NO_ministre PR_du NO_finance	ministre PR_du NO_finance
+NO_ministre PR_du NO_finance	ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du NO_finance
+NO_confédération paysanne	NO_confédération AD_paysan
+NO_confédération paysanne	confédération AD_paysan
+NO_confédération paysanne	confédération paysan
+NO_érosion	NO_√©rosion
+NO_cohésion AD_social	NO_cohérence AD_social
+h1n1	a-h1n1
+h1n1	h1n1v
+NO_agriculture AD_biologique	agriculteurs AD_biologique
+NO_agriculture AD_biologique	NO_agriculteur bio
+NO_agriculture AD_biologique	agriculteur bio
+sanofi-aventis	aventis
+NA_dominique strauss-kahn	dsk
+NO_émission PR_de co2	NO_émission PR_de gef
+NO_émission PR_de co2	NO_émission PR_de gaz PR_à NO_effet PR_de NO_serre
+vih	sida
+vih	NO_sida
+bachelot	roselyne bachelot-narquin
+NO_hydrocarbure	NO_carburant AD_fossile
+NO_hydrocarbure	NO_combustible AD_fossile
+NO_gouvernement AD_français	gouvernement NA_français
+NO_cancer	AD_cancéreux
+NO_nation AD_uni	NO_organisation PR_du NO_nation VE_unir
+NO_nation AD_uni	onu
+NO_énergie AD_renouvelable	NO_√©nergie AD_renouvelable
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le NO_santé
+NO_marée AD_noir	NO_marée NA_noire
+NO_marée AD_noir	marée NA_noire
+NO_chômage	NO_chômeur
+NO_ministre PR_de DE_le ecologie	minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_ministre PR_de DE_le NO_économie
+NO_enfance	NO_enfant
+sarkozy	sarko
+NO_accord PR_de cancun	NO_accord PR_de cancún
+NO_agriculteur	NO_paysan
+NO_agriculture AD_biologique	agriculteurs AD_biologique
+NO_agriculture AD_biologique	NO_agriculteur bio
+NO_agriculture AD_biologique	agriculteur bio
+bisphénol	bisph√©nol
+NO_bonus AD_écologique	NO_bonus-malus AD_écologique
+conseil PR_du NO_ministre	NO_conseil PR_du NO_ministère
+conseil PR_du NO_ministre	NO_conseil PR_du ministre
+conseil PR_du NO_ministre	conseil PR_du NO_ministère
+conseil PR_du NO_ministre	conseil PR_du ministre
+conseil PR_du NO_ministre	NO_conseil PR_du ministère
+conseil PR_du NO_ministre	NO_conseil PR_du ministres
+conseil PR_du NO_ministre	conseil PR_du ministère
+conseil PR_du NO_ministre	conseil PR_du ministres
+NO_consommation PR_de NO_énergie	consommation PR_de NO_énergie
+NO_consommation PR_de NO_énergie	consommation AD_énergétique
+Dgs	NO_Direction AD_générale PR_de DE_la NO_santé
+NO_émission PR_de co2	NO_émission PR_de gef
+NO_émission PR_de co2	NO_émission PR_de gaz PR_à NO_effet PR_de NO_serre
+NO_énergie AD_renouvelable	NO_√©nergie AD_renouvelable
+NO_essence	NO_carburant
+NA_etats-unis	etats-unis
+NA_etats-unis	NA_etat unis
+fni	NO_Fédération AD_Nationale PR_des NO_Infirmiers
+fonds AD_vert	fonds vert
+NO_gouvernement AD_français	gouvernement NA_français
+h1n1	a-h1n1
+h1n1	h1n1v
+homo	NA_homosexualité
+homo	NA_homosexuel
+NO_combustible AD_fossile	NO_carburant AD_fossile
+NO_combustible AD_fossile	NO_hydrocarbure
+invs	NO_institut PR_de veille sanitaire*invs
+NO_marée AD_noir	NO_marée NA_noire
+NO_marée AD_noir	marée NA_noire
+NO_docteur	médecin
+médiator	mediator
+NO_ministre PR_de DE_le ecologie	NO_ministre PR_de DE_le NO_économie
+NO_ministre PR_de DE_le ecologie	minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_minist√®re PR_de DE_le economie
+kosciusko-morizet	NKM
+kosciusko-morizet	NA_nathalie kosciusko-morizet
+NO_nation AD_uni	NO_organisation PR_du NO_nation VE_unir
+NO_nation AD_uni	onu
+NA_nicolas hulot	hulot
+omm	NO_Organisation AD_météorologique AD_mondiale
+VE_présenter PR_du NO_facteur PR_de NO_risque	VE_présenter DE_un NO_risque 
+AD_respectueux PR_de DE_le NO_environnement	NO_respect PR_de DE_le environnement
+VE_retirer PR_du NO_marché	NO_retirait PR_du NO_marché
+bachelot	roselyne bachelot-narquin
+NO_sommet PR_de cancun	sommet PR_de cancun
+NO_sommet PR_de cancun	NO_conférence PR_de cancun
+sniil	NO_Syndicat AD_national PR_des NO_infirmiers KO_et NO_infirmières AD_libérales
+NO_usage PR_du NO_préservatif	NO_utilisation PR_du NO_préservatif
+NO_vaccin PR_contre DE_le NO_grippe	NO_vaccination AD_antigrippal
+NO_vaccin PR_contre DE_le NO_grippe	NO_vaccination PR_contre DE_le NO_grippe
+NO_vaccin PR_contre DE_le NO_grippe	NO_vaccination PR_contre DE_le grippe
+NO_vaccin PR_contre DE_le NO_grippe	NO_vaccin PR_contre DE_le grippe
+NO_véhicule AD_hybride	NO_véhicule AD_électrique
+NO_véhicule AD_hybride	NO_automobile AD_électrique
+AD_résistant PR_au AD_antibiotique	NO_résistance PR_au AD_antibiotique
+norfenfluramine	norfenfluramines
+NO_médecine AD_vétérinaire	NO_docteur AD_vétérinaire
+NO_médecine AD_vétérinaire	docteur AD_vétérinaire
+NO_arme AD_biologique	
+NO_agriculture AD_breton	agriculteurs AD_breton
+NO_médecin AD_nucléaire	médecine AD_nucléaire
+NO_biologie AD_synthétique	NO_biologie AD_synth√©tique
+NO_maladie AD_auto-immun	maladie AD_auto-immun
+NO_maladie AD_auto-immun	maladie NO_auto AD_immun
+NO_cellule AD_photovoltaïque	NO_cellule AD_photovolta√Øque
+NO_médecin AD_général	médecine AD_général
+ministère PR_de DE_le NO_alimentation	minist√®re PR_de DE_le NO_alimentation
+ministère PR_de DE_le NO_alimentation	NO_minist√®re PR_de DE_le NO_alimentation
+valvulopathies	valvulopathie
+NO_banque AD_européen PR_de NO_investissement	NO_banque AD_europ√©en PR_de NO_investissement
+NO_agriculture AD_français	agriculteurs AD_français
+NO_autorité PR_de NO_sûreté AD_nucléaire	NO_autorit√© PR_de NO_s√ªret√© AD_nucl√©aire
+NO_nappe PR_de NO_pétrole	NO_nappe PR_de NO_p√©trole
+AD_éolien NO_marin	AD_√©olien NO_marin
+AD_éolien NO_marin	AD_√©olien NO_offshore
+NO_aide AD_médical PR_de NA_etat	aide AD_médical PR_de NA_etat
+NA_etat AD_européen	NA_etat AD_europ√©en
+NA_etat AD_européen	NA_etats AD_europ√©en
+NO_cha√Æne AD_alimentaire	NO_chaîne AD_alimentaire
+NO_boue AD_rouge	NO_boue AD_toxique
+véolia	v√©olia
+NO_antibiotique	AD_antibiotique
+NO_institut AD_national PR_de NO_veille AD_sanitaire	NO_institut PR_de NO_veille AD_sanitaire
+alzheimer	NO_maladie PR_de alzheimer
+bisphénol	bisph√©nol
+bisphénol	bisph√©nol A
+NO_ministre PR_du NO_finance	NO_ministère PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finances
+NO_ministre PR_du NO_finance	NO_ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finances
+NO_ministre PR_du NO_finance	NO_ministère PR_du finance
+NO_ministre PR_du NO_finance	ministres PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finance
+NO_ministre PR_du NO_finance	NO_ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du finance
+NO_ministre PR_du NO_finance	ministre PR_du NO_finance
+NO_ministre PR_du NO_finance	ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du NO_finance
+NO_confédération paysanne	NO_confédération AD_paysan
+NO_confédération paysanne	confédération AD_paysan
+NO_confédération paysanne	confédération paysan
+NO_érosion	NO_√©rosion
+NO_cohésion AD_social	NO_cohérence AD_social
+h1n1	a-h1n1
+h1n1	h1n1v
+NO_agriculture AD_biologique	agriculteurs AD_biologique
+NO_agriculture AD_biologique	NO_agriculteur bio
+NO_agriculture AD_biologique	agriculteur bio
+sanofi-aventis	aventis
+NA_dominique strauss-kahn	dsk
+NO_émission PR_de co2	NO_émission PR_de gef
+NO_émission PR_de co2	NO_émission PR_de gaz PR_à NO_effet PR_de NO_serre
+vih	sida
+vih	NO_sida
+bachelot	roselyne bachelot-narquin
+NO_hydrocarbure	NO_carburant AD_fossile
+NO_hydrocarbure	NO_combustible AD_fossile
+NO_gouvernement AD_français	gouvernement NA_français
+NO_cancer	AD_cancéreux
+NO_nation AD_uni	NO_organisation PR_du NO_nation VE_unir
+NO_nation AD_uni	onu
+NO_énergie AD_renouvelable	NO_√©nergie AD_renouvelable
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le NO_santé
+NO_marée AD_noir	NO_marée NA_noire
+NO_marée AD_noir	marée NA_noire
+NO_chômage	NO_chômeur
+NO_ministre PR_de DE_le ecologie	minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_ministre PR_de DE_le NO_économie
+NO_enfance	NO_enfant
+sarkozy	sarko
+NO_accord PR_de cancun	NO_accord PR_de cancún
+NO_agriculteur	NO_paysan
+NO_agriculture AD_biologique	agriculteurs AD_biologique
+NO_agriculture AD_biologique	NO_agriculteur bio
+NO_agriculture AD_biologique	agriculteur bio
+bisphénol	bisph√©nol
+NO_bonus AD_écologique	NO_bonus-malus AD_écologique
+conseil PR_du NO_ministre	NO_conseil PR_du NO_ministère
+conseil PR_du NO_ministre	NO_conseil PR_du ministre
+conseil PR_du NO_ministre	conseil PR_du NO_ministère
+conseil PR_du NO_ministre	conseil PR_du ministre
+conseil PR_du NO_ministre	NO_conseil PR_du ministère
+conseil PR_du NO_ministre	NO_conseil PR_du ministres
+conseil PR_du NO_ministre	conseil PR_du ministère
+conseil PR_du NO_ministre	conseil PR_du ministres
+NO_consommation PR_de NO_énergie	consommation PR_de NO_énergie
+NO_consommation PR_de NO_énergie	consommation AD_énergétique
+Dgs	NO_Direction AD_générale PR_de DE_la NO_santé
+NO_émission PR_de co2	NO_émission PR_de gef
+NO_émission PR_de co2	NO_émission PR_de gaz PR_à NO_effet PR_de NO_serre
+NO_énergie AD_renouvelable	NO_√©nergie AD_renouvelable
+NO_essence	NO_carburant
+NA_etats-unis	etats-unis
+NA_etats-unis	NA_etat unis
+fni	NO_Fédération AD_Nationale PR_des NO_Infirmiers
+fonds AD_vert	fonds vert
+NO_gouvernement AD_français	gouvernement NA_français
+h1n1	a-h1n1
+h1n1	h1n1v
+homo	NA_homosexualité
+homo	NA_homosexuel
+NO_combustible AD_fossile	NO_carburant AD_fossile
+NO_combustible AD_fossile	NO_hydrocarbure
+invs	NO_institut PR_de veille sanitaire*invs
+NO_marée AD_noir	NO_marée NA_noire
+NO_marée AD_noir	marée NA_noire
+NO_docteur	médecin
+médiator	mediator
+NO_ministre PR_de DE_le ecologie	NO_ministre PR_de DE_le NO_économie
+NO_ministre PR_de DE_le ecologie	minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_minist√®re PR_de DE_le economie
+kosciusko-morizet	NKM
+kosciusko-morizet	NA_nathalie kosciusko-morizet
+NO_nation AD_uni	NO_organisation PR_du NO_nation VE_unir
+NO_nation AD_uni	onu
+NA_nicolas hulot	hulot
+omm	NO_Organisation AD_météorologique AD_mondiale
+VE_présenter PR_du NO_facteur PR_de NO_risque	VE_présenter DE_un NO_risque 
+AD_respectueux PR_de DE_le NO_environnement	NO_respect PR_de DE_le environnement
+VE_retirer PR_du NO_marché	NO_retirait PR_du NO_marché
+bachelot	roselyne bachelot-narquin
+NO_sommet PR_de cancun	sommet PR_de cancun
+NO_sommet PR_de cancun	NO_conférence PR_de cancun
+sniil	NO_Syndicat AD_national PR_des NO_infirmiers KO_et NO_infirmières AD_libérales
+NO_usage PR_du NO_préservatif	NO_utilisation PR_du NO_préservatif
+NO_vaccin PR_contre DE_le NO_grippe	NO_vaccination AD_antigrippal
+NO_vaccin PR_contre DE_le NO_grippe	NO_vaccination PR_contre DE_le NO_grippe
+NO_vaccin PR_contre DE_le NO_grippe	NO_vaccination PR_contre DE_le grippe
+NO_vaccin PR_contre DE_le NO_grippe	NO_vaccin PR_contre DE_le grippe
+NO_véhicule AD_hybride	NO_véhicule AD_électrique
+NO_véhicule AD_hybride	NO_automobile AD_électrique
+AD_résistant PR_au AD_antibiotique	NO_résistance PR_au AD_antibiotique
+norfenfluramine	norfenfluramines
+NO_médecine AD_vétérinaire	NO_docteur AD_vétérinaire
+NO_médecine AD_vétérinaire	docteur AD_vétérinaire
+NO_arme AD_biologique	
+NO_agriculture AD_breton	agriculteurs AD_breton
+NO_médecin AD_nucléaire	médecine AD_nucléaire
+NO_biologie AD_synthétique	NO_biologie AD_synth√©tique
+NO_maladie AD_auto-immun	maladie AD_auto-immun
+NO_maladie AD_auto-immun	maladie NO_auto AD_immun
+NO_cellule AD_photovoltaïque	NO_cellule AD_photovolta√Øque
+NO_médecin AD_général	médecine AD_général
+ministère PR_de DE_le NO_alimentation	minist√®re PR_de DE_le NO_alimentation
+ministère PR_de DE_le NO_alimentation	NO_minist√®re PR_de DE_le NO_alimentation
+valvulopathies	valvulopathie
+NO_banque AD_européen PR_de NO_investissement	NO_banque AD_europ√©en PR_de NO_investissement
+NO_agriculture AD_français	agriculteurs AD_français
+NO_autorité PR_de NO_sûreté AD_nucléaire	NO_autorit√© PR_de NO_s√ªret√© AD_nucl√©aire
+NO_nappe PR_de NO_pétrole	NO_nappe PR_de NO_p√©trole
+AD_éolien NO_marin	AD_√©olien NO_marin
+AD_éolien NO_marin	AD_√©olien NO_offshore
+NO_aide AD_médical PR_de NA_etat	aide AD_médical PR_de NA_etat
+NA_etat AD_européen	NA_etat AD_europ√©en
+NA_etat AD_européen	NA_etats AD_europ√©en
+NO_cha√Æne AD_alimentaire	NO_chaîne AD_alimentaire
+NO_boue AD_rouge	NO_boue AD_toxique
+véolia	v√©olia
+NO_antibiotique	AD_antibiotique
+NO_institut AD_national PR_de NO_veille AD_sanitaire	NO_institut PR_de NO_veille AD_sanitaire
+alzheimer	NO_maladie PR_de alzheimer
+bisphénol	bisph√©nol
+bisphénol	bisph√©nol A
+NO_ministre PR_du NO_finance	NO_ministère PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finances
+NO_ministre PR_du NO_finance	NO_ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finances
+NO_ministre PR_du NO_finance	NO_ministère PR_du finance
+NO_ministre PR_du NO_finance	ministres PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finance
+NO_ministre PR_du NO_finance	NO_ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du finance
+NO_ministre PR_du NO_finance	ministre PR_du NO_finance
+NO_ministre PR_du NO_finance	ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du NO_finance
+NO_confédération paysanne	NO_confédération AD_paysan
+NO_confédération paysanne	confédération AD_paysan
+NO_confédération paysanne	confédération paysan
+NO_érosion	NO_√©rosion
+NO_cohésion AD_social	NO_cohérence AD_social
+h1n1	a-h1n1
+h1n1	h1n1v
+NO_agriculture AD_biologique	agriculteurs AD_biologique
+NO_agriculture AD_biologique	NO_agriculteur bio
+NO_agriculture AD_biologique	agriculteur bio
+sanofi-aventis	aventis
+NA_dominique strauss-kahn	dsk
+NO_émission PR_de co2	NO_émission PR_de gef
+NO_émission PR_de co2	NO_émission PR_de gaz PR_à NO_effet PR_de NO_serre
+vih	sida
+vih	NO_sida
+bachelot	roselyne bachelot-narquin
+NO_hydrocarbure	NO_carburant AD_fossile
+NO_hydrocarbure	NO_combustible AD_fossile
+NO_gouvernement AD_français	gouvernement NA_français
+NO_cancer	AD_cancéreux
+NO_nation AD_uni	NO_organisation PR_du NO_nation VE_unir
+NO_nation AD_uni	onu
+NO_énergie AD_renouvelable	NO_√©nergie AD_renouvelable
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le NO_santé
+NO_marée AD_noir	NO_marée NA_noire
+NO_marée AD_noir	marée NA_noire
+NO_chômage	NO_chômeur
+NO_ministre PR_de DE_le ecologie	minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_ministre PR_de DE_le NO_économie
+NO_enfance	NO_enfant
+sarkozy	sarko
+NO_accord PR_de cancun	NO_accord PR_de cancún
+NO_agriculteur	NO_paysan
+NO_agriculture AD_biologique	agriculteurs AD_biologique
+NO_agriculture AD_biologique	NO_agriculteur bio
+NO_agriculture AD_biologique	agriculteur bio
+bisphénol	bisph√©nol
+NO_bonus AD_écologique	NO_bonus-malus AD_écologique
+conseil PR_du NO_ministre	NO_conseil PR_du NO_ministère
+conseil PR_du NO_ministre	NO_conseil PR_du ministre
+conseil PR_du NO_ministre	conseil PR_du NO_ministère
+conseil PR_du NO_ministre	conseil PR_du ministre
+conseil PR_du NO_ministre	NO_conseil PR_du ministère
+conseil PR_du NO_ministre	NO_conseil PR_du ministres
+conseil PR_du NO_ministre	conseil PR_du ministère
+conseil PR_du NO_ministre	conseil PR_du ministres
+NO_consommation PR_de NO_énergie	consommation PR_de NO_énergie
+NO_consommation PR_de NO_énergie	consommation AD_énergétique
+Dgs	NO_Direction AD_générale PR_de DE_la NO_santé
+NO_émission PR_de co2	NO_émission PR_de gef
+NO_émission PR_de co2	NO_émission PR_de gaz PR_à NO_effet PR_de NO_serre
+NO_énergie AD_renouvelable	NO_√©nergie AD_renouvelable
+NO_essence	NO_carburant
+NA_etats-unis	etats-unis
+NA_etats-unis	NA_etat unis
+fni	NO_Fédération AD_Nationale PR_des NO_Infirmiers
+fonds AD_vert	fonds vert
+NO_gouvernement AD_français	gouvernement NA_français
+h1n1	a-h1n1
+h1n1	h1n1v
+homo	NA_homosexualité
+homo	NA_homosexuel
+NO_combustible AD_fossile	NO_carburant AD_fossile
+NO_combustible AD_fossile	NO_hydrocarbure
+invs	NO_institut PR_de veille sanitaire*invs
+NO_marée AD_noir	NO_marée NA_noire
+NO_marée AD_noir	marée NA_noire
+NO_docteur	médecin
+médiator	mediator
+NO_ministre PR_de DE_le ecologie	NO_ministre PR_de DE_le NO_économie
+NO_ministre PR_de DE_le ecologie	minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_minist√®re PR_de DE_le economie
+kosciusko-morizet	NKM
+kosciusko-morizet	NA_nathalie kosciusko-morizet
+NO_nation AD_uni	NO_organisation PR_du NO_nation VE_unir
+NO_nation AD_uni	onu
+NA_nicolas hulot	hulot
+omm	NO_Organisation AD_météorologique AD_mondiale
+VE_présenter PR_du NO_facteur PR_de NO_risque	VE_présenter DE_un NO_risque 
+AD_respectueux PR_de DE_le NO_environnement	NO_respect PR_de DE_le environnement
+VE_retirer PR_du NO_marché	NO_retirait PR_du NO_marché
+bachelot	roselyne bachelot-narquin
+NO_sommet PR_de cancun	sommet PR_de cancun
+NO_sommet PR_de cancun	NO_conférence PR_de cancun
+sniil	NO_Syndicat AD_national PR_des NO_infirmiers KO_et NO_infirmières AD_libérales
+NO_usage PR_du NO_préservatif	NO_utilisation PR_du NO_préservatif
+NO_vaccin PR_contre DE_le NO_grippe	NO_vaccination AD_antigrippal
+NO_vaccin PR_contre DE_le NO_grippe	NO_vaccination PR_contre DE_le NO_grippe
+NO_vaccin PR_contre DE_le NO_grippe	NO_vaccination PR_contre DE_le grippe
+NO_vaccin PR_contre DE_le NO_grippe	NO_vaccin PR_contre DE_le grippe
+NO_véhicule AD_hybride	NO_véhicule AD_électrique
+NO_véhicule AD_hybride	NO_automobile AD_électrique
+NO_accord PR_de cancun	NO_accord PR_de cancún
+NO_accord PR_de cancun	cancún
+NO_agriculteur	NO_paysan
+NO_agriculture AD_biologique	agriculteurs AD_biologique
+NO_agriculture AD_biologique	NO_agriculteur bio
+NO_agriculture AD_biologique	agriculteur bio
+NO_agriculture AD_breton	agriculteurs AD_breton
+NO_agriculture AD_français	agriculteurs AD_français
+NO_aide AD_médical PR_de NA_etat	aide AD_médical PR_de NA_etat
+alzheimer	NO_maladie PR_de alzheimer
+NO_antibiotique	AD_antibiotique
+antidiabétique	antidiabétiques
+NO_arme AD_biologique	
+NO_autorité PR_de NO_sûreté AD_nucléaire	NO_autorit√© PR_de NO_s√ªret√© AD_nucl√©aire
+bachelot	roselyne bachelot-narquin
+NO_banque AD_européen PR_de NO_investissement	NO_banque AD_europ√©en PR_de NO_investissement
+NO_biologie AD_synthétique	NO_biologie AD_synth√©tique
+NO_bonus AD_écologique	NO_bonus-malus AD_écologique
+NO_boue AD_rouge	NO_boue AD_toxique
+bisphénol	bisph√©nol
+bisphénol	bisph√©nol A
+NO_cancer	AD_cancéreux
+NO_captation	NO_captage
+cardiovasculaire	cardiovasculaires
+NO_cellule AD_photovoltaïque	NO_cellule AD_photovolta√Øque
+NO_cha√Æne AD_alimentaire	NO_chaîne AD_alimentaire
+NO_champ AD_pétrolifère	NO_champ AD_pétrolier
+NO_chômage	NO_chômeur
+NO_cohésion AD_social	NO_cohérence AD_social
+NO_confédération paysanne	NO_confédération AD_paysan
+NO_confédération paysanne	confédération AD_paysan
+NO_confédération paysanne	confédération paysan
+NA_corinne lepage	lepage
+NO_dengue	dengue
+NO_dépistage PR_du vih	NO_dépistage PR_du sida
+NO_direction AD_général PR_de DE_le NO_santé	DGS
+NA_dominique strauss-kahn	dsk
+NO_émission PR_de co2	NO_émission PR_de gef
+NO_émission PR_de co2	NO_émission PR_de gaz PR_à NO_effet PR_de NO_serre
+energie	NO_énergie
+NO_énergie AD_renouvelable	NO_√©nergie AD_renouvelable
+NO_enfance	NO_enfant
+AD_éolien NO_marin	AD_√©olien NO_marin
+AD_éolien NO_marin	AD_√©olien NO_offshore
+NO_érosion	NO_√©rosion
+NO_essence	NO_carburant
+NA_etat AD_européen	NA_etat AD_europ√©en
+NA_etat AD_européen	NA_etats AD_europ√©en
+fni	NO_Fédération AD_Nationale PR_des NO_Infirmiers
+fonds AD_vert	fonds vert
+gdf NA_suez	gdf-suez
+NO_gouvernement AD_français	gouvernement NA_français
+h1n1	a-h1n1
+h1n1	h1n1v
+homo	NA_homosexualité
+homo	NA_homosexuel
+NO_hydrocarbure	NO_carburant AD_fossile
+NO_hydrocarbure	NO_combustible AD_fossile
+VE_infecter PR_par DE_le vih	VE_infecter PR_par DE_le sida
+NO_infection PR_au vih	NO_infection PR_à vih
+NO_institut AD_national PR_de NO_veille AD_sanitaire	NO_institut PR_de NO_veille AD_sanitaire
+NA_jean-louis borloo	borloo
+josé bové	bové
+NO_lutte PR_contre DE_le vih	NO_lutte PR_contre DE_le NO_sida
+NO_lutte PR_contre DE_le vih	NO_lutte PR_contre DE_le sid
+NO_maladie AD_auto-immun	maladie AD_auto-immun
+NO_maladie AD_auto-immun	maladie NO_auto AD_immun
+NO_marée AD_noir	NO_marée NA_noire
+NO_marée AD_noir	marée NA_noire
+NO_médecine AD_vétérinaire	NO_docteur AD_vétérinaire
+NO_médecine AD_vétérinaire	docteur AD_vétérinaire
+NO_médecin AD_général	médecine AD_général
+NO_médecin AD_nucléaire	médecine AD_nucléaire
+NO_docteur	médecin
+médiator	mediator
+ministère PR_de DE_le NO_alimentation	minist√®re PR_de DE_le NO_alimentation
+ministère PR_de DE_le NO_alimentation	NO_minist√®re PR_de DE_le NO_alimentation
+NO_ministre PR_de DE_le ecologie	minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_ministre PR_de DE_le NO_économie
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le NO_santé
+NO_ministre PR_du NO_finance	NO_ministère PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finances
+NO_ministre PR_du NO_finance	NO_ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finances
+NO_ministre PR_du NO_finance	NO_ministère PR_du finance
+NO_ministre PR_du NO_finance	ministres PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finance
+NO_ministre PR_du NO_finance	NO_ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du finance
+NO_ministre PR_du NO_finance	ministre PR_du NO_finance
+NO_ministre PR_du NO_finance	ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du NO_finance
+NO_mort AD_prématuré	NO_mortalité AD_prématuré
+NO_nappe PR_de NO_pétrole	NO_nappe PR_de NO_p√©trole
+kosciusko-morizet	NKM
+kosciusko-morizet	NA_nathalie kosciusko-morizet
+national oceanic and atmospheric administration	noaa
+NO_nation AD_uni	NO_organisation PR_du NO_nation VE_unir
+NO_nation AD_uni	onu
+NA_nicolas hulot	hulot
+norfenfluramine	norfenfluramines
+NO_office AD_national PR_de DE_le NO_chasse	onc
+omm	NO_Organisation AD_météorologique AD_mondiale
+NO_ouragan katrina	katrina
+NO_patient VE_infecter PR_par DE_le vih	NO_patient VE_infecter PR_par DE_le sida
+NO_pétrole	pétrole
+NO_pétrole	pétrole brut
+VE_présenter PR_du NO_facteur PR_de NO_risque	VE_présenter DE_un NO_risque 
+NO_recyclage	recyclables
+redd	Reducing Emissions from Deforestation and Forest Degradation
+AD_résistant PR_au AD_antibiotique	NO_résistance PR_au AD_antibiotique
+NO_restauration	NO_restaurant
+VE_retirer PR_du NO_marché	NO_retirait PR_du NO_marché
+bachelot	roselyne bachelot-narquin
+sanofi-aventis	aventis
+sarkozy	sarko
+NO_sécurité AD_social	sécu
+sniil	NO_Syndicat AD_national PR_des NO_infirmiers KO_et NO_infirmières AD_libérales
+NO_sommet PR_de cancun	sommet PR_de cancun
+NO_sommet PR_de cancun	NO_conférence PR_de cancun
+NO_sommet PR_de cancun	cancún
+NO_usage PR_du NO_préservatif	NO_utilisation PR_du NO_préservatif
+valvulopathies	valvulopathie
+véolia	v√©olia
+vih	sida
+vih	NO_sida
+NO_virus PR_du NO_sida	NO_virus PR_du vih
+wifi	wi-fi
+NO_accord PR_de cancun	NO_accord PR_de cancún
+NO_accord PR_de cancun	cancún
+NO_agriculteur	NO_paysan
+NO_agriculture AD_biologique	agriculteurs AD_biologique
+NO_agriculture AD_biologique	NO_agriculteur bio
+NO_agriculture AD_biologique	agriculteur bio
+NO_agriculture AD_breton	agriculteurs AD_breton
+NO_agriculture AD_français	agriculteurs AD_français
+NO_aide AD_médical PR_de NA_etat	aide AD_médical PR_de NA_etat
+alzheimer	NO_maladie PR_de alzheimer
+NO_antibiotique	AD_antibiotique
+antidiabétique	antidiabétiques
+NO_arme AD_biologique	
+NO_autorité PR_de NO_sûreté AD_nucléaire	NO_autorit√© PR_de NO_s√ªret√© AD_nucl√©aire
+bachelot	roselyne bachelot-narquin
+NO_banque AD_européen PR_de NO_investissement	NO_banque AD_europ√©en PR_de NO_investissement
+NO_biologie AD_synthétique	NO_biologie AD_synth√©tique
+NO_bonus AD_écologique	NO_bonus-malus AD_écologique
+NO_boue AD_rouge	NO_boue AD_toxique
+bisphénol	bisph√©nol
+bisphénol	bisph√©nol A
+NO_cancer	AD_cancéreux
+NO_captation	NO_captage
+cardiovasculaire	cardiovasculaires
+NO_cellule AD_photovoltaïque	NO_cellule AD_photovolta√Øque
+NO_cha√Æne AD_alimentaire	NO_chaîne AD_alimentaire
+NO_champ AD_pétrolifère	NO_champ AD_pétrolier
+NO_chômage	NO_chômeur
+NO_cohésion AD_social	NO_cohérence AD_social
+NO_confédération paysanne	NO_confédération AD_paysan
+NO_confédération paysanne	confédération AD_paysan
+NO_confédération paysanne	confédération paysan
+NA_corinne lepage	lepage
+NO_dengue	dengue
+NO_dépistage PR_du vih	NO_dépistage PR_du sida
+NO_direction AD_général PR_de DE_le NO_santé	DGS
+NA_dominique strauss-kahn	dsk
+NO_émission PR_de co2	NO_émission PR_de gef
+NO_émission PR_de co2	NO_émission PR_de gaz PR_à NO_effet PR_de NO_serre
+energie	NO_énergie
+NO_énergie AD_renouvelable	NO_√©nergie AD_renouvelable
+NO_enfance	NO_enfant
+AD_éolien NO_marin	AD_√©olien NO_marin
+AD_éolien NO_marin	AD_√©olien NO_offshore
+NO_érosion	NO_√©rosion
+NO_essence	NO_carburant
+NA_etat AD_européen	NA_etat AD_europ√©en
+NA_etat AD_européen	NA_etats AD_europ√©en
+fni	NO_Fédération AD_Nationale PR_des NO_Infirmiers
+fonds AD_vert	fonds vert
+gdf NA_suez	gdf-suez
+NO_gouvernement AD_français	gouvernement NA_français
+h1n1	a-h1n1
+h1n1	h1n1v
+homo	NA_homosexualité
+homo	NA_homosexuel
+NO_hydrocarbure	NO_carburant AD_fossile
+NO_hydrocarbure	NO_combustible AD_fossile
+VE_infecter PR_par DE_le vih	VE_infecter PR_par DE_le sida
+NO_infection PR_au vih	NO_infection PR_à vih
+NO_institut AD_national PR_de NO_veille AD_sanitaire	NO_institut PR_de NO_veille AD_sanitaire
+NA_jean-louis borloo	borloo
+josé bové	bové
+NO_lutte PR_contre DE_le vih	NO_lutte PR_contre DE_le NO_sida
+NO_lutte PR_contre DE_le vih	NO_lutte PR_contre DE_le sid
+NO_maladie AD_auto-immun	maladie AD_auto-immun
+NO_maladie AD_auto-immun	maladie NO_auto AD_immun
+NO_marée AD_noir	NO_marée NA_noire
+NO_marée AD_noir	marée NA_noire
+NO_médecine AD_vétérinaire	NO_docteur AD_vétérinaire
+NO_médecine AD_vétérinaire	docteur AD_vétérinaire
+NO_médecin AD_général	médecine AD_général
+NO_médecin AD_nucléaire	médecine AD_nucléaire
+NO_docteur	médecin
+médiator	mediator
+ministère PR_de DE_le NO_alimentation	minist√®re PR_de DE_le NO_alimentation
+ministère PR_de DE_le NO_alimentation	NO_minist√®re PR_de DE_le NO_alimentation
+NO_ministre PR_de DE_le ecologie	minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_ministre PR_de DE_le NO_économie
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le NO_santé
+NO_ministre PR_du NO_finance	NO_ministère PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finances
+NO_ministre PR_du NO_finance	NO_ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finances
+NO_ministre PR_du NO_finance	NO_ministère PR_du finance
+NO_ministre PR_du NO_finance	ministres PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finance
+NO_ministre PR_du NO_finance	NO_ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du finance
+NO_ministre PR_du NO_finance	ministre PR_du NO_finance
+NO_ministre PR_du NO_finance	ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du NO_finance
+NO_mort AD_prématuré	NO_mortalité AD_prématuré
+NO_nappe PR_de NO_pétrole	NO_nappe PR_de NO_p√©trole
+kosciusko-morizet	NKM
+kosciusko-morizet	NA_nathalie kosciusko-morizet
+national oceanic and atmospheric administration	noaa
+NO_nation AD_uni	NO_organisation PR_du NO_nation VE_unir
+NO_nation AD_uni	onu
+NA_nicolas hulot	hulot
+norfenfluramine	norfenfluramines
+NO_office AD_national PR_de DE_le NO_chasse	onc
+omm	NO_Organisation AD_météorologique AD_mondiale
+NO_ouragan katrina	katrina
+NO_patient VE_infecter PR_par DE_le vih	NO_patient VE_infecter PR_par DE_le sida
+NO_pétrole	pétrole
+NO_pétrole	pétrole brut
+VE_présenter PR_du NO_facteur PR_de NO_risque	VE_présenter DE_un NO_risque 
+NO_recyclage	recyclables
+redd	Reducing Emissions from Deforestation and Forest Degradation
+AD_résistant PR_au AD_antibiotique	NO_résistance PR_au AD_antibiotique
+NO_restauration	NO_restaurant
+VE_retirer PR_du NO_marché	NO_retirait PR_du NO_marché
+bachelot	roselyne bachelot-narquin
+sanofi-aventis	aventis
+sarkozy	sarko
+NO_sécurité AD_social	sécu
+sniil	NO_Syndicat AD_national PR_des NO_infirmiers KO_et NO_infirmières AD_libérales
+NO_sommet PR_de cancun	sommet PR_de cancun
+NO_sommet PR_de cancun	NO_conférence PR_de cancun
+NO_sommet PR_de cancun	cancún
+NO_usage PR_du NO_préservatif	NO_utilisation PR_du NO_préservatif
+valvulopathies	valvulopathie
+véolia	v√©olia
+vih	sida
+vih	NO_sida
+NO_virus PR_du NO_sida	NO_virus PR_du vih
+wifi	wi-fi
+NO_accord PR_de cancun	NO_accord PR_de cancún
+NO_accord PR_de cancun	cancún
+NO_agriculteur	NO_paysan
+NO_agriculture AD_biologique	agriculteurs AD_biologique
+NO_agriculture AD_biologique	NO_agriculteur bio
+NO_agriculture AD_biologique	agriculteur bio
+NO_agriculture AD_breton	agriculteurs AD_breton
+NO_agriculture AD_français	agriculteurs AD_français
+NO_aide AD_médical PR_de NA_etat	aide AD_médical PR_de NA_etat
+alzheimer	NO_maladie PR_de alzheimer
+NO_antibiotique	AD_antibiotique
+antidiabétique	antidiabétiques
+NO_arme AD_biologique	
+NO_autorité PR_de NO_sûreté AD_nucléaire	NO_autorit√© PR_de NO_s√ªret√© AD_nucl√©aire
+bachelot	roselyne bachelot-narquin
+NO_banque AD_européen PR_de NO_investissement	NO_banque AD_europ√©en PR_de NO_investissement
+NO_biologie AD_synthétique	NO_biologie AD_synth√©tique
+NO_bonus AD_écologique	NO_bonus-malus AD_écologique
+NO_boue AD_rouge	NO_boue AD_toxique
+bisphénol	bisph√©nol
+bisphénol	bisph√©nol A
+NO_cancer	AD_cancéreux
+NO_captation	NO_captage
+cardiovasculaire	cardiovasculaires
+NO_cellule AD_photovoltaïque	NO_cellule AD_photovolta√Øque
+NO_cha√Æne AD_alimentaire	NO_chaîne AD_alimentaire
+NO_champ AD_pétrolifère	NO_champ AD_pétrolier
+NO_chômage	NO_chômeur
+NO_cohésion AD_social	NO_cohérence AD_social
+NO_confédération paysanne	NO_confédération AD_paysan
+NO_confédération paysanne	confédération AD_paysan
+NO_confédération paysanne	confédération paysan
+NA_corinne lepage	lepage
+NO_dengue	dengue
+NO_dépistage PR_du vih	NO_dépistage PR_du sida
+NO_direction AD_général PR_de DE_le NO_santé	DGS
+NA_dominique strauss-kahn	dsk
+NO_émission PR_de co2	NO_émission PR_de gef
+NO_émission PR_de co2	NO_émission PR_de gaz PR_à NO_effet PR_de NO_serre
+energie	NO_énergie
+NO_énergie AD_renouvelable	NO_√©nergie AD_renouvelable
+NO_enfance	NO_enfant
+AD_éolien NO_marin	AD_√©olien NO_marin
+AD_éolien NO_marin	AD_√©olien NO_offshore
+NO_érosion	NO_√©rosion
+NO_essence	NO_carburant
+NA_etat AD_européen	NA_etat AD_europ√©en
+NA_etat AD_européen	NA_etats AD_europ√©en
+fni	NO_Fédération AD_Nationale PR_des NO_Infirmiers
+fonds AD_vert	fonds vert
+gdf NA_suez	gdf-suez
+NO_gouvernement AD_français	gouvernement NA_français
+h1n1	a-h1n1
+h1n1	h1n1v
+homo	NA_homosexualité
+homo	NA_homosexuel
+NO_hydrocarbure	NO_carburant AD_fossile
+NO_hydrocarbure	NO_combustible AD_fossile
+VE_infecter PR_par DE_le vih	VE_infecter PR_par DE_le sida
+NO_infection PR_au vih	NO_infection PR_à vih
+NO_institut AD_national PR_de NO_veille AD_sanitaire	NO_institut PR_de NO_veille AD_sanitaire
+NA_jean-louis borloo	borloo
+josé bové	bové
+NO_lutte PR_contre DE_le vih	NO_lutte PR_contre DE_le NO_sida
+NO_lutte PR_contre DE_le vih	NO_lutte PR_contre DE_le sid
+NO_maladie AD_auto-immun	maladie AD_auto-immun
+NO_maladie AD_auto-immun	maladie NO_auto AD_immun
+NO_marée AD_noir	NO_marée NA_noire
+NO_marée AD_noir	marée NA_noire
+NO_médecine AD_vétérinaire	NO_docteur AD_vétérinaire
+NO_médecine AD_vétérinaire	docteur AD_vétérinaire
+NO_médecin AD_général	médecine AD_général
+NO_médecin AD_nucléaire	médecine AD_nucléaire
+NO_docteur	médecin
+médiator	mediator
+ministère PR_de DE_le NO_alimentation	minist√®re PR_de DE_le NO_alimentation
+ministère PR_de DE_le NO_alimentation	NO_minist√®re PR_de DE_le NO_alimentation
+NO_ministre PR_de DE_le ecologie	minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_ministre PR_de DE_le NO_économie
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le NO_santé
+NO_ministre PR_du NO_finance	NO_ministère PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finances
+NO_ministre PR_du NO_finance	NO_ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finances
+NO_ministre PR_du NO_finance	NO_ministère PR_du finance
+NO_ministre PR_du NO_finance	ministres PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finance
+NO_ministre PR_du NO_finance	NO_ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du finance
+NO_ministre PR_du NO_finance	ministre PR_du NO_finance
+NO_ministre PR_du NO_finance	ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du NO_finance
+NO_mort AD_prématuré	NO_mortalité AD_prématuré
+NO_nappe PR_de NO_pétrole	NO_nappe PR_de NO_p√©trole
+kosciusko-morizet	NKM
+kosciusko-morizet	NA_nathalie kosciusko-morizet
+national oceanic and atmospheric administration	noaa
+NO_nation AD_uni	NO_organisation PR_du NO_nation VE_unir
+NO_nation AD_uni	onu
+NA_nicolas hulot	hulot
+norfenfluramine	norfenfluramines
+NO_office AD_national PR_de DE_le NO_chasse	onc
+omm	NO_Organisation AD_météorologique AD_mondiale
+NO_ouragan katrina	katrina
+NO_patient VE_infecter PR_par DE_le vih	NO_patient VE_infecter PR_par DE_le sida
+NO_pétrole	pétrole
+NO_pétrole	pétrole brut
+VE_présenter PR_du NO_facteur PR_de NO_risque	VE_présenter DE_un NO_risque 
+NO_recyclage	recyclables
+redd	Reducing Emissions from Deforestation and Forest Degradation
+AD_résistant PR_au AD_antibiotique	NO_résistance PR_au AD_antibiotique
+NO_restauration	NO_restaurant
+VE_retirer PR_du NO_marché	NO_retirait PR_du NO_marché
+bachelot	roselyne bachelot-narquin
+sanofi-aventis	aventis
+sarkozy	sarko
+NO_sécurité AD_social	sécu
+sniil	NO_Syndicat AD_national PR_des NO_infirmiers KO_et NO_infirmières AD_libérales
+NO_sommet PR_de cancun	sommet PR_de cancun
+NO_sommet PR_de cancun	NO_conférence PR_de cancun
+NO_sommet PR_de cancun	cancún
+NO_usage PR_du NO_préservatif	NO_utilisation PR_du NO_préservatif
+valvulopathies	valvulopathie
+véolia	v√©olia
+vih	sida
+vih	NO_sida
+NO_virus PR_du NO_sida	NO_virus PR_du vih
+wifi	wi-fi
+NO_accord PR_de cancun	NO_accord PR_de cancún
+NO_accord PR_de cancun	cancún
+NO_agriculteur	NO_paysan
+NO_agriculture AD_biologique	agriculteurs AD_biologique
+NO_agriculture AD_biologique	NO_agriculteur bio
+NO_agriculture AD_biologique	agriculteur bio
+NO_agriculture AD_breton	agriculteurs AD_breton
+NO_agriculture AD_français	agriculteurs AD_français
+NO_aide AD_médical PR_de NA_etat	aide AD_médical PR_de NA_etat
+alzheimer	NO_maladie PR_de alzheimer
+NO_antibiotique	AD_antibiotique
+antidiabétique	antidiabétiques
+NO_arme AD_biologique	
+NO_autorité PR_de NO_sûreté AD_nucléaire	NO_autorit√© PR_de NO_s√ªret√© AD_nucl√©aire
+bachelot	roselyne bachelot-narquin
+NO_banque AD_européen PR_de NO_investissement	NO_banque AD_europ√©en PR_de NO_investissement
+NO_biologie AD_synthétique	NO_biologie AD_synth√©tique
+NO_bonus AD_écologique	NO_bonus-malus AD_écologique
+NO_boue AD_rouge	NO_boue AD_toxique
+bisphénol	bisph√©nol
+bisphénol	bisph√©nol A
+NO_cancer	AD_cancéreux
+NO_captation	NO_captage
+cardiovasculaire	cardiovasculaires
+NO_cellule AD_photovoltaïque	NO_cellule AD_photovolta√Øque
+NO_cha√Æne AD_alimentaire	NO_chaîne AD_alimentaire
+NO_champ AD_pétrolifère	NO_champ AD_pétrolier
+NO_chômage	NO_chômeur
+NO_cohésion AD_social	NO_cohérence AD_social
+NO_confédération paysanne	NO_confédération AD_paysan
+NO_confédération paysanne	confédération AD_paysan
+NO_confédération paysanne	confédération paysan
+NA_corinne lepage	lepage
+NO_dengue	dengue
+NO_dépistage PR_du vih	NO_dépistage PR_du sida
+NO_direction AD_général PR_de DE_le NO_santé	DGS
+NA_dominique strauss-kahn	dsk
+NO_émission PR_de co2	NO_émission PR_de gef
+NO_émission PR_de co2	NO_émission PR_de gaz PR_à NO_effet PR_de NO_serre
+energie	NO_énergie
+NO_énergie AD_renouvelable	NO_√©nergie AD_renouvelable
+NO_enfance	NO_enfant
+AD_éolien NO_marin	AD_√©olien NO_marin
+AD_éolien NO_marin	AD_√©olien NO_offshore
+NO_érosion	NO_√©rosion
+NO_essence	NO_carburant
+NA_etat AD_européen	NA_etat AD_europ√©en
+NA_etat AD_européen	NA_etats AD_europ√©en
+fni	NO_Fédération AD_Nationale PR_des NO_Infirmiers
+fonds AD_vert	fonds vert
+gdf NA_suez	gdf-suez
+NO_gouvernement AD_français	gouvernement NA_français
+h1n1	a-h1n1
+h1n1	h1n1v
+homo	NA_homosexualité
+homo	NA_homosexuel
+NO_hydrocarbure	NO_carburant AD_fossile
+NO_hydrocarbure	NO_combustible AD_fossile
+VE_infecter PR_par DE_le vih	VE_infecter PR_par DE_le sida
+NO_infection PR_au vih	NO_infection PR_à vih
+NO_institut AD_national PR_de NO_veille AD_sanitaire	NO_institut PR_de NO_veille AD_sanitaire
+NA_jean-louis borloo	borloo
+josé bové	bové
+NO_lutte PR_contre DE_le vih	NO_lutte PR_contre DE_le NO_sida
+NO_lutte PR_contre DE_le vih	NO_lutte PR_contre DE_le sid
+NO_maladie AD_auto-immun	maladie AD_auto-immun
+NO_maladie AD_auto-immun	maladie NO_auto AD_immun
+NO_marée AD_noir	NO_marée NA_noire
+NO_marée AD_noir	marée NA_noire
+NO_médecine AD_vétérinaire	NO_docteur AD_vétérinaire
+NO_médecine AD_vétérinaire	docteur AD_vétérinaire
+NO_médecin AD_général	médecine AD_général
+NO_médecin AD_nucléaire	médecine AD_nucléaire
+NO_docteur	médecin
+médiator	mediator
+ministère PR_de DE_le NO_alimentation	minist√®re PR_de DE_le NO_alimentation
+ministère PR_de DE_le NO_alimentation	NO_minist√®re PR_de DE_le NO_alimentation
+NO_ministre PR_de DE_le ecologie	minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_ministre PR_de DE_le NO_économie
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le NO_santé
+NO_ministre PR_du NO_finance	NO_ministère PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finances
+NO_ministre PR_du NO_finance	NO_ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finances
+NO_ministre PR_du NO_finance	NO_ministère PR_du finance
+NO_ministre PR_du NO_finance	ministres PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finance
+NO_ministre PR_du NO_finance	NO_ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du finance
+NO_ministre PR_du NO_finance	ministre PR_du NO_finance
+NO_ministre PR_du NO_finance	ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du NO_finance
+NO_mort AD_prématuré	NO_mortalité AD_prématuré
+NO_nappe PR_de NO_pétrole	NO_nappe PR_de NO_p√©trole
+kosciusko-morizet	NKM
+kosciusko-morizet	NA_nathalie kosciusko-morizet
+national oceanic and atmospheric administration	noaa
+NO_nation AD_uni	NO_organisation PR_du NO_nation VE_unir
+NO_nation AD_uni	onu
+NA_nicolas hulot	hulot
+norfenfluramine	norfenfluramines
+NO_office AD_national PR_de DE_le NO_chasse	onc
+omm	NO_Organisation AD_météorologique AD_mondiale
+NO_ouragan katrina	katrina
+NO_patient VE_infecter PR_par DE_le vih	NO_patient VE_infecter PR_par DE_le sida
+NO_pétrole	pétrole
+NO_pétrole	pétrole brut
+VE_présenter PR_du NO_facteur PR_de NO_risque	VE_présenter DE_un NO_risque 
+NO_recyclage	recyclables
+redd	Reducing Emissions from Deforestation and Forest Degradation
+AD_résistant PR_au AD_antibiotique	NO_résistance PR_au AD_antibiotique
+NO_restauration	NO_restaurant
+VE_retirer PR_du NO_marché	NO_retirait PR_du NO_marché
+bachelot	roselyne bachelot-narquin
+sanofi-aventis	aventis
+sarkozy	sarko
+NO_sécurité AD_social	sécu
+sniil	NO_Syndicat AD_national PR_des NO_infirmiers KO_et NO_infirmières AD_libérales
+NO_sommet PR_de cancun	sommet PR_de cancun
+NO_sommet PR_de cancun	NO_conférence PR_de cancun
+NO_sommet PR_de cancun	cancún
+NO_usage PR_du NO_préservatif	NO_utilisation PR_du NO_préservatif
+valvulopathies	valvulopathie
+véolia	v√©olia
+vih	sida
+vih	NO_sida
+NO_virus PR_du NO_sida	NO_virus PR_du vih
+wifi	wi-fi
+NO_accord PR_de cancun	NO_accord PR_de cancún
+NO_accord PR_de cancun	cancún
+NO_agriculteur	NO_paysan
+NO_agriculture AD_biologique	agriculteurs AD_biologique
+NO_agriculture AD_biologique	NO_agriculteur bio
+NO_agriculture AD_biologique	agriculteur bio
+NO_agriculture AD_breton	agriculteurs AD_breton
+NO_agriculture AD_français	agriculteurs AD_français
+NO_aide AD_médical PR_de NA_etat	aide AD_médical PR_de NA_etat
+alzheimer	NO_maladie PR_de alzheimer
+NO_antibiotique	AD_antibiotique
+antidiabétique	antidiabétiques
+NO_arme AD_biologique	
+NO_autorité PR_de NO_sûreté AD_nucléaire	NO_autorit√© PR_de NO_s√ªret√© AD_nucl√©aire
+bachelot	roselyne bachelot-narquin
+NO_banque AD_européen PR_de NO_investissement	NO_banque AD_europ√©en PR_de NO_investissement
+NO_biologie AD_synthétique	NO_biologie AD_synth√©tique
+NO_bonus AD_écologique	NO_bonus-malus AD_écologique
+NO_boue AD_rouge	NO_boue AD_toxique
+bisphénol	bisph√©nol
+bisphénol	bisph√©nol A
+NO_cancer	AD_cancéreux
+NO_captation	NO_captage
+cardiovasculaire	cardiovasculaires
+NO_cellule AD_photovoltaïque	NO_cellule AD_photovolta√Øque
+NO_cha√Æne AD_alimentaire	NO_chaîne AD_alimentaire
+NO_champ AD_pétrolifère	NO_champ AD_pétrolier
+NO_chômage	NO_chômeur
+NO_cohésion AD_social	NO_cohérence AD_social
+NO_confédération paysanne	NO_confédération AD_paysan
+NO_confédération paysanne	confédération AD_paysan
+NO_confédération paysanne	confédération paysan
+NA_corinne lepage	lepage
+NO_dengue	dengue
+NO_dépistage PR_du vih	NO_dépistage PR_du sida
+NO_direction AD_général PR_de DE_le NO_santé	DGS
+NA_dominique strauss-kahn	dsk
+NO_émission PR_de co2	NO_émission PR_de gef
+NO_émission PR_de co2	NO_émission PR_de gaz PR_à NO_effet PR_de NO_serre
+energie	NO_énergie
+NO_énergie AD_renouvelable	NO_√©nergie AD_renouvelable
+NO_enfance	NO_enfant
+AD_éolien NO_marin	AD_√©olien NO_marin
+AD_éolien NO_marin	AD_√©olien NO_offshore
+NO_érosion	NO_√©rosion
+NO_essence	NO_carburant
+NA_etat AD_européen	NA_etat AD_europ√©en
+NA_etat AD_européen	NA_etats AD_europ√©en
+fni	NO_Fédération AD_Nationale PR_des NO_Infirmiers
+fonds AD_vert	fonds vert
+gdf NA_suez	gdf-suez
+NO_gouvernement AD_français	gouvernement NA_français
+h1n1	a-h1n1
+h1n1	h1n1v
+homo	NA_homosexualité
+homo	NA_homosexuel
+NO_hydrocarbure	NO_carburant AD_fossile
+NO_hydrocarbure	NO_combustible AD_fossile
+VE_infecter PR_par DE_le vih	VE_infecter PR_par DE_le sida
+NO_infection PR_au vih	NO_infection PR_à vih
+NO_institut AD_national PR_de NO_veille AD_sanitaire	NO_institut PR_de NO_veille AD_sanitaire
+NA_jean-louis borloo	borloo
+josé bové	bové
+NO_lutte PR_contre DE_le vih	NO_lutte PR_contre DE_le NO_sida
+NO_lutte PR_contre DE_le vih	NO_lutte PR_contre DE_le sid
+NO_maladie AD_auto-immun	maladie AD_auto-immun
+NO_maladie AD_auto-immun	maladie NO_auto AD_immun
+NO_marée AD_noir	NO_marée NA_noire
+NO_marée AD_noir	marée NA_noire
+NO_médecine AD_vétérinaire	NO_docteur AD_vétérinaire
+NO_médecine AD_vétérinaire	docteur AD_vétérinaire
+NO_médecin AD_général	médecine AD_général
+NO_médecin AD_nucléaire	médecine AD_nucléaire
+NO_docteur	médecin
+médiator	mediator
+ministère PR_de DE_le NO_alimentation	minist√®re PR_de DE_le NO_alimentation
+ministère PR_de DE_le NO_alimentation	NO_minist√®re PR_de DE_le NO_alimentation
+NO_ministre PR_de DE_le ecologie	minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_ministre PR_de DE_le NO_économie
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le NO_santé
+NO_ministre PR_du NO_finance	NO_ministère PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finances
+NO_ministre PR_du NO_finance	NO_ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finances
+NO_ministre PR_du NO_finance	NO_ministère PR_du finance
+NO_ministre PR_du NO_finance	ministres PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finance
+NO_ministre PR_du NO_finance	NO_ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du finance
+NO_ministre PR_du NO_finance	ministre PR_du NO_finance
+NO_ministre PR_du NO_finance	ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du NO_finance
+NO_mort AD_prématuré	NO_mortalité AD_prématuré
+NO_nappe PR_de NO_pétrole	NO_nappe PR_de NO_p√©trole
+kosciusko-morizet	NKM
+kosciusko-morizet	NA_nathalie kosciusko-morizet
+national oceanic and atmospheric administration	noaa
+NO_nation AD_uni	NO_organisation PR_du NO_nation VE_unir
+NO_nation AD_uni	onu
+NA_nicolas hulot	hulot
+norfenfluramine	norfenfluramines
+NO_office AD_national PR_de DE_le NO_chasse	onc
+omm	NO_Organisation AD_météorologique AD_mondiale
+NO_ouragan katrina	katrina
+NO_patient VE_infecter PR_par DE_le vih	NO_patient VE_infecter PR_par DE_le sida
+NO_pétrole	pétrole
+NO_pétrole	pétrole brut
+VE_présenter PR_du NO_facteur PR_de NO_risque	VE_présenter DE_un NO_risque 
+NO_recyclage	recyclables
+redd	Reducing Emissions from Deforestation and Forest Degradation
+AD_résistant PR_au AD_antibiotique	NO_résistance PR_au AD_antibiotique
+NO_restauration	NO_restaurant
+VE_retirer PR_du NO_marché	NO_retirait PR_du NO_marché
+bachelot	roselyne bachelot-narquin
+sanofi-aventis	aventis
+sarkozy	sarko
+NO_sécurité AD_social	sécu
+sniil	NO_Syndicat AD_national PR_des NO_infirmiers KO_et NO_infirmières AD_libérales
+NO_sommet PR_de cancun	sommet PR_de cancun
+NO_sommet PR_de cancun	NO_conférence PR_de cancun
+NO_sommet PR_de cancun	cancún
+NO_usage PR_du NO_préservatif	NO_utilisation PR_du NO_préservatif
+valvulopathies	valvulopathie
+véolia	v√©olia
+vih	sida
+vih	NO_sida
+NO_virus PR_du NO_sida	NO_virus PR_du vih
+wifi	wi-fi
+NO_accord PR_de cancun	NO_accord PR_de cancún
+NO_accord PR_de cancun	cancún
+NO_agriculteur	NO_paysan
+NO_agriculture AD_biologique	agriculteurs AD_biologique
+NO_agriculture AD_biologique	NO_agriculteur bio
+NO_agriculture AD_biologique	agriculteur bio
+NO_agriculture AD_breton	agriculteurs AD_breton
+NO_agriculture AD_français	agriculteurs AD_français
+NO_aide AD_médical PR_de NA_etat	aide AD_médical PR_de NA_etat
+alzheimer	NO_maladie PR_de alzheimer
+NO_antibiotique	AD_antibiotique
+antidiabétique	antidiabétiques
+NO_arme AD_biologique	
+NO_autorité PR_de NO_sûreté AD_nucléaire	NO_autorit√© PR_de NO_s√ªret√© AD_nucl√©aire
+bachelot	roselyne bachelot-narquin
+NO_banque AD_européen PR_de NO_investissement	NO_banque AD_europ√©en PR_de NO_investissement
+NO_biologie AD_synthétique	NO_biologie AD_synth√©tique
+NO_bonus AD_écologique	NO_bonus-malus AD_écologique
+NO_boue AD_rouge	NO_boue AD_toxique
+bisphénol	bisph√©nol
+bisphénol	bisph√©nol A
+NO_cancer	AD_cancéreux
+NO_captation	NO_captage
+cardiovasculaire	cardiovasculaires
+NO_cellule AD_photovoltaïque	NO_cellule AD_photovolta√Øque
+NO_cha√Æne AD_alimentaire	NO_chaîne AD_alimentaire
+NO_champ AD_pétrolifère	NO_champ AD_pétrolier
+NO_chômage	NO_chômeur
+NO_cohésion AD_social	NO_cohérence AD_social
+NO_confédération paysanne	NO_confédération AD_paysan
+NO_confédération paysanne	confédération AD_paysan
+NO_confédération paysanne	confédération paysan
+NA_corinne lepage	lepage
+NO_dengue	dengue
+NO_dépistage PR_du vih	NO_dépistage PR_du sida
+NO_direction AD_général PR_de DE_le NO_santé	DGS
+NA_dominique strauss-kahn	dsk
+NO_émission PR_de co2	NO_émission PR_de gef
+NO_émission PR_de co2	NO_émission PR_de gaz PR_à NO_effet PR_de NO_serre
+energie	NO_énergie
+NO_énergie AD_renouvelable	NO_√©nergie AD_renouvelable
+NO_enfance	NO_enfant
+AD_éolien NO_marin	AD_√©olien NO_marin
+AD_éolien NO_marin	AD_√©olien NO_offshore
+NO_érosion	NO_√©rosion
+NO_essence	NO_carburant
+NA_etat AD_européen	NA_etat AD_europ√©en
+NA_etat AD_européen	NA_etats AD_europ√©en
+fni	NO_Fédération AD_Nationale PR_des NO_Infirmiers
+fonds AD_vert	fonds vert
+gdf NA_suez	gdf-suez
+NO_gouvernement AD_français	gouvernement NA_français
+h1n1	a-h1n1
+h1n1	h1n1v
+homo	NA_homosexualité
+homo	NA_homosexuel
+NO_hydrocarbure	NO_carburant AD_fossile
+NO_hydrocarbure	NO_combustible AD_fossile
+VE_infecter PR_par DE_le vih	VE_infecter PR_par DE_le sida
+NO_infection PR_au vih	NO_infection PR_à vih
+NO_institut AD_national PR_de NO_veille AD_sanitaire	NO_institut PR_de NO_veille AD_sanitaire
+NA_jean-louis borloo	borloo
+josé bové	bové
+NO_lutte PR_contre DE_le vih	NO_lutte PR_contre DE_le NO_sida
+NO_lutte PR_contre DE_le vih	NO_lutte PR_contre DE_le sid
+NO_maladie AD_auto-immun	maladie AD_auto-immun
+NO_maladie AD_auto-immun	maladie NO_auto AD_immun
+NO_marée AD_noir	NO_marée NA_noire
+NO_marée AD_noir	marée NA_noire
+NO_médecine AD_vétérinaire	NO_docteur AD_vétérinaire
+NO_médecine AD_vétérinaire	docteur AD_vétérinaire
+NO_médecin AD_général	médecine AD_général
+NO_médecin AD_nucléaire	médecine AD_nucléaire
+NO_docteur	médecin
+médiator	mediator
+ministère PR_de DE_le NO_alimentation	minist√®re PR_de DE_le NO_alimentation
+ministère PR_de DE_le NO_alimentation	NO_minist√®re PR_de DE_le NO_alimentation
+NO_ministre PR_de DE_le ecologie	minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_ministre PR_de DE_le NO_économie
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le NO_santé
+NO_ministre PR_du NO_finance	NO_ministère PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finances
+NO_ministre PR_du NO_finance	NO_ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finances
+NO_ministre PR_du NO_finance	NO_ministère PR_du finance
+NO_ministre PR_du NO_finance	ministres PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finance
+NO_ministre PR_du NO_finance	NO_ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du finance
+NO_ministre PR_du NO_finance	ministre PR_du NO_finance
+NO_ministre PR_du NO_finance	ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du NO_finance
+NO_mort AD_prématuré	NO_mortalité AD_prématuré
+NO_nappe PR_de NO_pétrole	NO_nappe PR_de NO_p√©trole
+kosciusko-morizet	NKM
+kosciusko-morizet	NA_nathalie kosciusko-morizet
+national oceanic and atmospheric administration	noaa
+NO_nation AD_uni	NO_organisation PR_du NO_nation VE_unir
+NO_nation AD_uni	onu
+NA_nicolas hulot	hulot
+norfenfluramine	norfenfluramines
+NO_office AD_national PR_de DE_le NO_chasse	onc
+omm	NO_Organisation AD_météorologique AD_mondiale
+NO_ouragan katrina	katrina
+NO_patient VE_infecter PR_par DE_le vih	NO_patient VE_infecter PR_par DE_le sida
+NO_pétrole	pétrole
+NO_pétrole	pétrole brut
+VE_présenter PR_du NO_facteur PR_de NO_risque	VE_présenter DE_un NO_risque 
+NO_recyclage	recyclables
+redd	Reducing Emissions from Deforestation and Forest Degradation
+AD_résistant PR_au AD_antibiotique	NO_résistance PR_au AD_antibiotique
+NO_restauration	NO_restaurant
+VE_retirer PR_du NO_marché	NO_retirait PR_du NO_marché
+bachelot	roselyne bachelot-narquin
+sanofi-aventis	aventis
+sarkozy	sarko
+NO_sécurité AD_social	sécu
+sniil	NO_Syndicat AD_national PR_des NO_infirmiers KO_et NO_infirmières AD_libérales
+NO_sommet PR_de cancun	sommet PR_de cancun
+NO_sommet PR_de cancun	NO_conférence PR_de cancun
+NO_sommet PR_de cancun	cancún
+NO_usage PR_du NO_préservatif	NO_utilisation PR_du NO_préservatif
+valvulopathies	valvulopathie
+véolia	v√©olia
+vih	sida
+vih	NO_sida
+NO_virus PR_du NO_sida	NO_virus PR_du vih
+wifi	wi-fi
+NO_accord PR_de cancun	NO_accord PR_de cancún
+NO_accord PR_de cancun	cancún
+NO_agriculteur	NO_paysan
+NO_agriculture AD_biologique	agriculteurs AD_biologique
+NO_agriculture AD_biologique	NO_agriculteur bio
+NO_agriculture AD_biologique	agriculteur bio
+NO_agriculture AD_breton	agriculteurs AD_breton
+NO_agriculture AD_français	agriculteurs AD_français
+NO_aide AD_médical PR_de NA_etat	aide AD_médical PR_de NA_etat
+alzheimer	NO_maladie PR_de alzheimer
+NO_antibiotique	AD_antibiotique
+antidiabétique	antidiabétiques
+NO_arme AD_biologique	
+NO_autorité PR_de NO_sûreté AD_nucléaire	NO_autorit√© PR_de NO_s√ªret√© AD_nucl√©aire
+bachelot	roselyne bachelot-narquin
+NO_banque AD_européen PR_de NO_investissement	NO_banque AD_europ√©en PR_de NO_investissement
+NO_biologie AD_synthétique	NO_biologie AD_synth√©tique
+NO_bonus AD_écologique	NO_bonus-malus AD_écologique
+NO_boue AD_rouge	NO_boue AD_toxique
+bisphénol	bisph√©nol
+bisphénol	bisph√©nol A
+NO_cancer	AD_cancéreux
+NO_captation	NO_captage
+cardiovasculaire	cardiovasculaires
+NO_cellule AD_photovoltaïque	NO_cellule AD_photovolta√Øque
+NO_cha√Æne AD_alimentaire	NO_chaîne AD_alimentaire
+NO_champ AD_pétrolifère	NO_champ AD_pétrolier
+NO_chômage	NO_chômeur
+NO_cohésion AD_social	NO_cohérence AD_social
+NO_confédération paysanne	NO_confédération AD_paysan
+NO_confédération paysanne	confédération AD_paysan
+NO_confédération paysanne	confédération paysan
+NA_corinne lepage	lepage
+NO_dengue	dengue
+NO_dépistage PR_du vih	NO_dépistage PR_du sida
+NO_direction AD_général PR_de DE_le NO_santé	DGS
+NA_dominique strauss-kahn	dsk
+NO_émission PR_de co2	NO_émission PR_de gef
+NO_émission PR_de co2	NO_émission PR_de gaz PR_à NO_effet PR_de NO_serre
+energie	NO_énergie
+NO_énergie AD_renouvelable	NO_√©nergie AD_renouvelable
+NO_enfance	NO_enfant
+AD_éolien NO_marin	AD_√©olien NO_marin
+AD_éolien NO_marin	AD_√©olien NO_offshore
+NO_érosion	NO_√©rosion
+NO_essence	NO_carburant
+NA_etat AD_européen	NA_etat AD_europ√©en
+NA_etat AD_européen	NA_etats AD_europ√©en
+fni	NO_Fédération AD_Nationale PR_des NO_Infirmiers
+fonds AD_vert	fonds vert
+gdf NA_suez	gdf-suez
+NO_gouvernement AD_français	gouvernement NA_français
+h1n1	a-h1n1
+h1n1	h1n1v
+homo	NA_homosexualité
+homo	NA_homosexuel
+NO_hydrocarbure	NO_carburant AD_fossile
+NO_hydrocarbure	NO_combustible AD_fossile
+VE_infecter PR_par DE_le vih	VE_infecter PR_par DE_le sida
+NO_infection PR_au vih	NO_infection PR_à vih
+NO_institut AD_national PR_de NO_veille AD_sanitaire	NO_institut PR_de NO_veille AD_sanitaire
+NA_jean-louis borloo	borloo
+josé bové	bové
+NO_lutte PR_contre DE_le vih	NO_lutte PR_contre DE_le NO_sida
+NO_lutte PR_contre DE_le vih	NO_lutte PR_contre DE_le sid
+NO_maladie AD_auto-immun	maladie AD_auto-immun
+NO_maladie AD_auto-immun	maladie NO_auto AD_immun
+NO_marée AD_noir	NO_marée NA_noire
+NO_marée AD_noir	marée NA_noire
+NO_médecine AD_vétérinaire	NO_docteur AD_vétérinaire
+NO_médecine AD_vétérinaire	docteur AD_vétérinaire
+NO_médecin AD_général	médecine AD_général
+NO_médecin AD_nucléaire	médecine AD_nucléaire
+NO_docteur	médecin
+médiator	mediator
+ministère PR_de DE_le NO_alimentation	minist√®re PR_de DE_le NO_alimentation
+ministère PR_de DE_le NO_alimentation	NO_minist√®re PR_de DE_le NO_alimentation
+NO_ministre PR_de DE_le ecologie	minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_ministre PR_de DE_le NO_économie
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le NO_santé
+NO_ministre PR_du NO_finance	NO_ministère PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finances
+NO_ministre PR_du NO_finance	NO_ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finances
+NO_ministre PR_du NO_finance	NO_ministère PR_du finance
+NO_ministre PR_du NO_finance	ministres PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finance
+NO_ministre PR_du NO_finance	NO_ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du finance
+NO_ministre PR_du NO_finance	ministre PR_du NO_finance
+NO_ministre PR_du NO_finance	ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du NO_finance
+NO_mort AD_prématuré	NO_mortalité AD_prématuré
+NO_nappe PR_de NO_pétrole	NO_nappe PR_de NO_p√©trole
+kosciusko-morizet	NKM
+kosciusko-morizet	NA_nathalie kosciusko-morizet
+national oceanic and atmospheric administration	noaa
+NO_nation AD_uni	NO_organisation PR_du NO_nation VE_unir
+NO_nation AD_uni	onu
+NA_nicolas hulot	hulot
+norfenfluramine	norfenfluramines
+NO_office AD_national PR_de DE_le NO_chasse	onc
+omm	NO_Organisation AD_météorologique AD_mondiale
+NO_ouragan katrina	katrina
+NO_patient VE_infecter PR_par DE_le vih	NO_patient VE_infecter PR_par DE_le sida
+NO_pétrole	pétrole
+NO_pétrole	pétrole brut
+VE_présenter PR_du NO_facteur PR_de NO_risque	VE_présenter DE_un NO_risque 
+NO_recyclage	recyclables
+redd	Reducing Emissions from Deforestation and Forest Degradation
+AD_résistant PR_au AD_antibiotique	NO_résistance PR_au AD_antibiotique
+NO_restauration	NO_restaurant
+VE_retirer PR_du NO_marché	NO_retirait PR_du NO_marché
+bachelot	roselyne bachelot-narquin
+sanofi-aventis	aventis
+sarkozy	sarko
+NO_sécurité AD_social	sécu
+sniil	NO_Syndicat AD_national PR_des NO_infirmiers KO_et NO_infirmières AD_libérales
+NO_sommet PR_de cancun	sommet PR_de cancun
+NO_sommet PR_de cancun	NO_conférence PR_de cancun
+NO_sommet PR_de cancun	cancún
+NO_usage PR_du NO_préservatif	NO_utilisation PR_du NO_préservatif
+valvulopathies	valvulopathie
+véolia	v√©olia
+vih	sida
+vih	NO_sida
+NO_virus PR_du NO_sida	NO_virus PR_du vih
+wifi	wi-fi
+NO_accord PR_de cancun	NO_accord PR_de cancún
+NO_accord PR_de cancun	cancún
+NO_agriculteur	NO_paysan
+NO_agriculture AD_biologique	agriculteurs AD_biologique
+NO_agriculture AD_biologique	NO_agriculteur bio
+NO_agriculture AD_biologique	agriculteur bio
+NO_agriculture AD_breton	agriculteurs AD_breton
+NO_agriculture AD_français	agriculteurs AD_français
+NO_aide AD_médical PR_de NA_etat	aide AD_médical PR_de NA_etat
+alzheimer	NO_maladie PR_de alzheimer
+NO_antibiotique	AD_antibiotique
+antidiabétique	antidiabétiques
+NO_arme AD_biologique	
+NO_autorité PR_de NO_sûreté AD_nucléaire	NO_autorit√© PR_de NO_s√ªret√© AD_nucl√©aire
+bachelot	roselyne bachelot-narquin
+NO_banque AD_européen PR_de NO_investissement	NO_banque AD_europ√©en PR_de NO_investissement
+NO_biologie AD_synthétique	NO_biologie AD_synth√©tique
+NO_bonus AD_écologique	NO_bonus-malus AD_écologique
+NO_boue AD_rouge	NO_boue AD_toxique
+bisphénol	bisph√©nol
+bisphénol	bisph√©nol A
+NO_cancer	AD_cancéreux
+NO_captation	NO_captage
+cardiovasculaire	cardiovasculaires
+NO_cellule AD_photovoltaïque	NO_cellule AD_photovolta√Øque
+NO_cha√Æne AD_alimentaire	NO_chaîne AD_alimentaire
+NO_champ AD_pétrolifère	NO_champ AD_pétrolier
+NO_chômage	NO_chômeur
+NO_cohésion AD_social	NO_cohérence AD_social
+NO_confédération paysanne	NO_confédération AD_paysan
+NO_confédération paysanne	confédération AD_paysan
+NO_confédération paysanne	confédération paysan
+NA_corinne lepage	lepage
+NO_dengue	dengue
+NO_dépistage PR_du vih	NO_dépistage PR_du sida
+NO_direction AD_général PR_de DE_le NO_santé	DGS
+NA_dominique strauss-kahn	dsk
+NO_émission PR_de co2	NO_émission PR_de gef
+NO_émission PR_de co2	NO_émission PR_de gaz PR_à NO_effet PR_de NO_serre
+energie	NO_énergie
+NO_énergie AD_renouvelable	NO_√©nergie AD_renouvelable
+NO_enfance	NO_enfant
+AD_éolien NO_marin	AD_√©olien NO_marin
+AD_éolien NO_marin	AD_√©olien NO_offshore
+NO_érosion	NO_√©rosion
+NO_essence	NO_carburant
+NA_etat AD_européen	NA_etat AD_europ√©en
+NA_etat AD_européen	NA_etats AD_europ√©en
+fni	NO_Fédération AD_Nationale PR_des NO_Infirmiers
+fonds AD_vert	fonds vert
+gdf NA_suez	gdf-suez
+NO_gouvernement AD_français	gouvernement NA_français
+h1n1	a-h1n1
+h1n1	h1n1v
+homo	NA_homosexualité
+homo	NA_homosexuel
+NO_hydrocarbure	NO_carburant AD_fossile
+NO_hydrocarbure	NO_combustible AD_fossile
+VE_infecter PR_par DE_le vih	VE_infecter PR_par DE_le sida
+NO_infection PR_au vih	NO_infection PR_à vih
+NO_institut AD_national PR_de NO_veille AD_sanitaire	NO_institut PR_de NO_veille AD_sanitaire
+NA_jean-louis borloo	borloo
+josé bové	bové
+NO_lutte PR_contre DE_le vih	NO_lutte PR_contre DE_le NO_sida
+NO_lutte PR_contre DE_le vih	NO_lutte PR_contre DE_le sid
+NO_maladie AD_auto-immun	maladie AD_auto-immun
+NO_maladie AD_auto-immun	maladie NO_auto AD_immun
+NO_marée AD_noir	NO_marée NA_noire
+NO_marée AD_noir	marée NA_noire
+NO_médecine AD_vétérinaire	NO_docteur AD_vétérinaire
+NO_médecine AD_vétérinaire	docteur AD_vétérinaire
+NO_médecin AD_général	médecine AD_général
+NO_médecin AD_nucléaire	médecine AD_nucléaire
+NO_docteur	médecin
+médiator	mediator
+ministère PR_de DE_le NO_alimentation	minist√®re PR_de DE_le NO_alimentation
+ministère PR_de DE_le NO_alimentation	NO_minist√®re PR_de DE_le NO_alimentation
+NO_ministre PR_de DE_le ecologie	minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_ministre PR_de DE_le NO_économie
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le NO_santé
+NO_ministre PR_du NO_finance	NO_ministère PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finances
+NO_ministre PR_du NO_finance	NO_ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finances
+NO_ministre PR_du NO_finance	NO_ministère PR_du finance
+NO_ministre PR_du NO_finance	ministres PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finance
+NO_ministre PR_du NO_finance	NO_ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du finance
+NO_ministre PR_du NO_finance	ministre PR_du NO_finance
+NO_ministre PR_du NO_finance	ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du NO_finance
+NO_mort AD_prématuré	NO_mortalité AD_prématuré
+NO_nappe PR_de NO_pétrole	NO_nappe PR_de NO_p√©trole
+kosciusko-morizet	NKM
+kosciusko-morizet	NA_nathalie kosciusko-morizet
+national oceanic and atmospheric administration	noaa
+NO_nation AD_uni	NO_organisation PR_du NO_nation VE_unir
+NO_nation AD_uni	onu
+NA_nicolas hulot	hulot
+norfenfluramine	norfenfluramines
+NO_office AD_national PR_de DE_le NO_chasse	onc
+omm	NO_Organisation AD_météorologique AD_mondiale
+NO_ouragan katrina	katrina
+NO_patient VE_infecter PR_par DE_le vih	NO_patient VE_infecter PR_par DE_le sida
+NO_pétrole	pétrole
+NO_pétrole	pétrole brut
+VE_présenter PR_du NO_facteur PR_de NO_risque	VE_présenter DE_un NO_risque 
+NO_recyclage	recyclables
+redd	Reducing Emissions from Deforestation and Forest Degradation
+AD_résistant PR_au AD_antibiotique	NO_résistance PR_au AD_antibiotique
+NO_restauration	NO_restaurant
+VE_retirer PR_du NO_marché	NO_retirait PR_du NO_marché
+bachelot	roselyne bachelot-narquin
+sanofi-aventis	aventis
+sarkozy	sarko
+NO_sécurité AD_social	sécu
+sniil	NO_Syndicat AD_national PR_des NO_infirmiers KO_et NO_infirmières AD_libérales
+NO_sommet PR_de cancun	sommet PR_de cancun
+NO_sommet PR_de cancun	NO_conférence PR_de cancun
+NO_sommet PR_de cancun	cancún
+NO_usage PR_du NO_préservatif	NO_utilisation PR_du NO_préservatif
+valvulopathies	valvulopathie
+véolia	v√©olia
+vih	sida
+vih	NO_sida
+NO_virus PR_du NO_sida	NO_virus PR_du vih
+wifi	wi-fi
+NO_accord PR_de cancun	NO_accord PR_de cancún
+NO_accord PR_de cancun	cancún
+NO_agriculteur	NO_paysan
+NO_agriculture AD_biologique	agriculteurs AD_biologique
+NO_agriculture AD_biologique	NO_agriculteur bio
+NO_agriculture AD_biologique	agriculteur bio
+NO_agriculture AD_breton	agriculteurs AD_breton
+NO_agriculture AD_français	agriculteurs AD_français
+NO_aide AD_médical PR_de NA_etat	aide AD_médical PR_de NA_etat
+alzheimer	NO_maladie PR_de alzheimer
+NO_antibiotique	AD_antibiotique
+antidiabétique	antidiabétiques
+NO_arme AD_biologique	
+NO_autorité PR_de NO_sûreté AD_nucléaire	NO_autorit√© PR_de NO_s√ªret√© AD_nucl√©aire
+bachelot	roselyne bachelot-narquin
+NO_banque AD_européen PR_de NO_investissement	NO_banque AD_europ√©en PR_de NO_investissement
+NO_biologie AD_synthétique	NO_biologie AD_synth√©tique
+NO_bonus AD_écologique	NO_bonus-malus AD_écologique
+NO_boue AD_rouge	NO_boue AD_toxique
+bisphénol	bisph√©nol
+bisphénol	bisph√©nol A
+NO_cancer	AD_cancéreux
+NO_captation	NO_captage
+cardiovasculaire	cardiovasculaires
+NO_cellule AD_photovoltaïque	NO_cellule AD_photovolta√Øque
+NO_cha√Æne AD_alimentaire	NO_chaîne AD_alimentaire
+NO_champ AD_pétrolifère	NO_champ AD_pétrolier
+NO_chômage	NO_chômeur
+NO_cohésion AD_social	NO_cohérence AD_social
+NO_confédération paysanne	NO_confédération AD_paysan
+NO_confédération paysanne	confédération AD_paysan
+NO_confédération paysanne	confédération paysan
+NA_corinne lepage	lepage
+NO_dengue	dengue
+NO_dépistage PR_du vih	NO_dépistage PR_du sida
+NO_direction AD_général PR_de DE_le NO_santé	DGS
+NA_dominique strauss-kahn	dsk
+NO_émission PR_de co2	NO_émission PR_de gef
+NO_émission PR_de co2	NO_émission PR_de gaz PR_à NO_effet PR_de NO_serre
+energie	NO_énergie
+NO_énergie AD_renouvelable	NO_√©nergie AD_renouvelable
+NO_enfance	NO_enfant
+AD_éolien NO_marin	AD_√©olien NO_marin
+AD_éolien NO_marin	AD_√©olien NO_offshore
+NO_érosion	NO_√©rosion
+NO_essence	NO_carburant
+NA_etat AD_européen	NA_etat AD_europ√©en
+NA_etat AD_européen	NA_etats AD_europ√©en
+fni	NO_Fédération AD_Nationale PR_des NO_Infirmiers
+fonds AD_vert	fonds vert
+gdf NA_suez	gdf-suez
+NO_gouvernement AD_français	gouvernement NA_français
+h1n1	a-h1n1
+h1n1	h1n1v
+homo	NA_homosexualité
+homo	NA_homosexuel
+NO_hydrocarbure	NO_carburant AD_fossile
+NO_hydrocarbure	NO_combustible AD_fossile
+VE_infecter PR_par DE_le vih	VE_infecter PR_par DE_le sida
+NO_infection PR_au vih	NO_infection PR_à vih
+NO_institut AD_national PR_de NO_veille AD_sanitaire	NO_institut PR_de NO_veille AD_sanitaire
+NA_jean-louis borloo	borloo
+josé bové	bové
+NO_lutte PR_contre DE_le vih	NO_lutte PR_contre DE_le NO_sida
+NO_lutte PR_contre DE_le vih	NO_lutte PR_contre DE_le sid
+NO_maladie AD_auto-immun	maladie AD_auto-immun
+NO_maladie AD_auto-immun	maladie NO_auto AD_immun
+NO_marée AD_noir	NO_marée NA_noire
+NO_marée AD_noir	marée NA_noire
+NO_médecine AD_vétérinaire	NO_docteur AD_vétérinaire
+NO_médecine AD_vétérinaire	docteur AD_vétérinaire
+NO_médecin AD_général	médecine AD_général
+NO_médecin AD_nucléaire	médecine AD_nucléaire
+NO_docteur	médecin
+médiator	mediator
+ministère PR_de DE_le NO_alimentation	minist√®re PR_de DE_le NO_alimentation
+ministère PR_de DE_le NO_alimentation	NO_minist√®re PR_de DE_le NO_alimentation
+NO_ministre PR_de DE_le ecologie	minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_minist√®re PR_de DE_le economie
+NO_ministre PR_de DE_le ecologie	NO_ministre PR_de DE_le NO_économie
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministre PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le santé
+NO_ministre PR_de DE_le santé	ministère PR_de DE_le NO_santé
+NO_ministre PR_de DE_le santé	ministres PR_de DE_le NO_santé
+NO_ministre PR_du NO_finance	NO_ministère PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finances
+NO_ministre PR_du NO_finance	NO_ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finances
+NO_ministre PR_du NO_finance	NO_ministère PR_du finance
+NO_ministre PR_du NO_finance	ministres PR_du finances
+NO_ministre PR_du NO_finance	ministre PR_du finance
+NO_ministre PR_du NO_finance	ministère PR_du finance
+NO_ministre PR_du NO_finance	NO_ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du finance
+NO_ministre PR_du NO_finance	ministre PR_du NO_finance
+NO_ministre PR_du NO_finance	ministère PR_du NO_finance
+NO_ministre PR_du NO_finance	ministres PR_du NO_finance
+NO_mort AD_prématuré	NO_mortalité AD_prématuré
+NO_nappe PR_de NO_pétrole	NO_nappe PR_de NO_p√©trole
+kosciusko-morizet	NKM
+kosciusko-morizet	NA_nathalie kosciusko-morizet
+national oceanic and atmospheric administration	noaa
+NO_nation AD_uni	NO_organisation PR_du NO_nation VE_unir
+NO_nation AD_uni	onu
+NA_nicolas hulot	hulot
+norfenfluramine	norfenfluramines
+NO_office AD_national PR_de DE_le NO_chasse	onc
+omm	NO_Organisation AD_météorologique AD_mondiale
+NO_ouragan katrina	katrina
+NO_patient VE_infecter PR_par DE_le vih	NO_patient VE_infecter PR_par DE_le sida
+NO_pétrole	pétrole
+NO_pétrole	pétrole brut
+VE_présenter PR_du NO_facteur PR_de NO_risque	VE_présenter DE_un NO_risque 
+NO_recyclage	recyclables
+redd	Reducing Emissions from Deforestation and Forest Degradation
+AD_résistant PR_au AD_antibiotique	NO_résistance PR_au AD_antibiotique
+NO_restauration	NO_restaurant
+VE_retirer PR_du NO_marché	NO_retirait PR_du NO_marché
+bachelot	roselyne bachelot-narquin
+sanofi-aventis	aventis
+sarkozy	sarko
+NO_sécurité AD_social	sécu
+sniil	NO_Syndicat AD_national PR_des NO_infirmiers KO_et NO_infirmières AD_libérales
+NO_sommet PR_de cancun	sommet PR_de cancun
+NO_sommet PR_de cancun	NO_conférence PR_de cancun
+NO_sommet PR_de cancun	cancún
+NO_usage PR_du NO_préservatif	NO_utilisation PR_du NO_préservatif
+valvulopathies	valvulopathie
+véolia	v√©olia
+vih	sida
+vih	NO_sida
+NO_virus PR_du NO_sida	NO_virus PR_du vih
+wifi	wi-fi

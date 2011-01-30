@@ -1,3 +1,4 @@
-./db_builder.py algae
-./db_processing.py algae
-./db_processing_net.py algae
+./db_builder.py $1
+./db_processing.py $1
+./db_processing_net_year.py $1
+
