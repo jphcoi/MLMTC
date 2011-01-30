@@ -140,10 +140,13 @@ def width(clusters):
 			print 'taille nulle'
 	return epaisseur,biparti_noticeschamps,biparti_champsnotices	
 
+
+orphan_number = 1
+
 try:
-	liens_totaux_syn,liens_totaux_dia,clusters,years_bins = fonctions.dumpingout('liens_totaux_syn'),fonctions.dumpingout('liens_totaux_dia'),fonctions.dumpingout('clusters'),fonctions.dumpingout('years_bins')
+	liens_totaux_syn,liens_totaux_dia,clusters,years_bins = fonctions.dumpingout('liens_totaux_syn'+ str(orphan_number)),fonctions.dumpingout('liens_totaux_dia'+ str(orphan_number)),fonctions.dumpingout('clusters'+ str(orphan_number)),fonctions.dumpingout('years_bins'+ str(orphan_number))
 except:
-	orphan_number = 0
+	print 'tubes coordinates being computed'
 	dico_termes,clusters,dist_mat = load_data(orphan_number)
 	epaisseur,biparti_noticeschamps,biparti_champsnotices=width(clusters)	
 
@@ -168,8 +171,8 @@ except:
 			pass
  
 
-	fonctions.dumpingin(liens_totaux_syn,'liens_totaux_syn')
-	fonctions.dumpingin(liens_totaux_dia,'liens_totaux_dia')
-	fonctions.dumpingin(clusters,'clusters')
-	fonctions.dumpingin(years_bins,'years_bins')
+	fonctions.dumpingin(liens_totaux_syn,'liens_totaux_syn' + str(orphan_number))
+	fonctions.dumpingin(liens_totaux_dia,'liens_totaux_dia'+ str(orphan_number))
+	fonctions.dumpingin(clusters,'clusters'+ str(orphan_number))
+	fonctions.dumpingin(years_bins,'years_bins'+ str(orphan_number))
 network_layout.plot_graph(liens_totaux_syn,liens_totaux_dia,clusters)
