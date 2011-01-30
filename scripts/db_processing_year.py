@@ -156,7 +156,7 @@ except:
 	#on recupere d'abord toutes les années en base
 	dictionnaire_gramme_year={}
 	for y,year in enumerate(years):
-		
+		print str(year) + ' being processed '
 		#il faut découper ici car ça prend trop de RAM
 		if sample<Nb_rows:
 			size_seq = sample
