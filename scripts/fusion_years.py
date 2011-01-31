@@ -102,7 +102,7 @@ def fusion(type_file):
 			ngramme = x[0]
 			forme = x[1]
 			valeurs = '\t'.join(x[2:])
-			if type_file =='redond':
+			if type_file =='redond' or type_file == "conceptsxhi2":
 				valeurs = x[3]
 			else:
 				try:

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/Library/Frameworks/Python.framework/Versions/2.6/bin/python
 # -*- coding: utf-8 -*-
 #recupere les liens des trois reseaux pour exporter les reseaux au format texte
 import sys
