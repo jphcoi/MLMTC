@@ -85,6 +85,7 @@ def fusion(type_file):
 	liste_nlemme_forme={}
 	for ye,fi in liste_fichiers.iteritems():
 		fil = open(path_req+'years/'+fi,'r')
+		print fil
 		for x in fil.readlines():
 			x=x[:-1]
 			x = x.split('\t')
@@ -97,7 +98,10 @@ def fusion(type_file):
 			if type_file =='redond':
 				valeurs = x[3]
 			else:
-				valeurs = x[2]
+				try:
+					valeurs = x[2]
+				except:
+					valeurs = '?'
 			if not ngramme in liste_nlemme_forme:
 				liste_nlemme_forme[ngramme] = forme
 				temp = [(ye,valeurs)]
