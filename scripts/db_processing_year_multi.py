@@ -81,7 +81,7 @@ def do_calculation(year):
 			size_seq = sample
 			nb_sequences=0
 		else:
-			size_seq = 2000
+			size_seq = 10000
 			nb_sequences = Nb_rows/size_seq
 		dictionnaire_gramme = {}#initialisation du dictionnaire de lemmes
 		billetprocessed_after_requete=0 #counts the number of processed posts
@@ -101,9 +101,10 @@ def do_calculation(year):
 				where = where + ' jours = ' +"'"+ ystr+"'"
 			#print where
 			contenu = fonctions_bdd.select_bdd_table_where_limite(name_bdd,'billets','content_lemmatise',sample,requete,where,lim_d+','+duration,Nb_rows)
+			Nb_rows=len(contenu)
 			for billetlemm in contenu:
 				billetprocessed_after_requete=1+billetprocessed_after_requete
-				if not billetprocessed_after_requete%500 or billetprocessed_after_requete == len(contenu) : 
+				if not billetprocessed_after_requete%500 or billetprocessed_after_requete == Nb_rows : 
 					print '---------'+str(billetprocessed_after_requete)+ ' traités (export ngrammes sur '+str(Nb_rows)+ ' billets)'
 				billet_lemmatise =  billetlemm[0]
 				dictionnaire_gramme_x = text_processing.ngramme_build(billet_lemmatise.split(),maxTermLength,dictionnaire_gramme_x,language,'absolu')

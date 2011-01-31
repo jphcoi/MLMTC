@@ -60,16 +60,23 @@ def fusion(type_file):
 	if type_file =='redond':
 		filename_redond_leven =  path_req + requete +'years/'+ '_' + str(freqmin)+str(year) + '_' + '_' + 'liste_n-grammes_freq_divers_leven_noredond.csv'
 		marqueur = ']_liste_n-grammes_freq_divers_leven_noredond.csv'
-	else:
+	elif type_file =='freq':
 		file_freq_exact =  path_req + 'years/'+requete +str(year) + '_' + '_' +  'frequences_exactes.csv'
 		marqueur = ']_frequences_exactes.csv'
+	elif type_file =='conceptsxhi2':
+		file_freq_exact =  path_req + 'years/'+requete +str(year) + '_' + '_' +  'conceptsxhi2.csv'
+		marqueur = ']_conceptsxhi2.csv'
+
 	dir = path_req + 'years/'
 	liste_fichiers={}
 	years = parameters.years_bins_no_overlap
 	if type_file =='redond':
 		filename_redond_leven_out =  path_req+ requete + '_' + str(freqmin)+'_' + str(min(years[0])) + '_' +str(max(years[-1]))+ '_' + 'liste_n-grammes_freq_divers_leven_noredond_totalyears.csv'
-	else:
+	elif type_file =='freq':
 		filename_redond_leven_out =  path_req +requete + '_' + str(freqmin)+'_' + str(min(years[0])) + '_' +str(max(years[-1]))+ '_' + '_' +  'frequences_exactes_totalyears.csv'
+	elif type_file =='conceptsxhi2':
+		filename_redond_leven_out =  path_req +requete + '_' + str(freqmin)+'_' + str(min(years[0])) + '_' +str(max(years[-1]))+ '_' + '_' +  'conceptsxhi2_totalyears.csv'
+
 	for fich in [f for f in os.listdir(dir)]:
 		print fich
 		print 'icii'
