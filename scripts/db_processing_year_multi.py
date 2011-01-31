@@ -76,6 +76,9 @@ years=parameters.years_bins_no_overlap
 
 def do_calculation(year):
 		print str(year) + ' being processed '
+		where = " jours IN ('" + "','".join(list(map(str,year))) + "') "
+		contenu = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'billets','jours',where)
+		Nb_rows=len(contenu)
 		#il faut découper ici car ça prend trop de RAM
 		if sample<Nb_rows:
 			size_seq = sample
@@ -101,7 +104,7 @@ def do_calculation(year):
 				where = where + ' jours = ' +"'"+ ystr+"'"
 			#print where
 			contenu = fonctions_bdd.select_bdd_table_where_limite(name_bdd,'billets','content_lemmatise',sample,requete,where,lim_d+','+duration,Nb_rows)
-			Nb_rows=len(contenu)
+			
 			for billetlemm in contenu:
 				billetprocessed_after_requete=1+billetprocessed_after_requete
 				if not billetprocessed_after_requete%500 or billetprocessed_after_requete == Nb_rows : 
