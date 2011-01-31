@@ -201,7 +201,7 @@ except:
 	#decoupage annuel:
 	#on recupere d'abord toutes les années en base
 	dictionnaire_gramme_year={}
-	pool_size = int(multiprocessing.cpu_count() / 2)
+	pool_size = int(multiprocessing.cpu_count() * 2)
 	pool = multiprocessing.Pool(processes=pool_size)
 	pool_outputs = pool.map(do_calculation, years)
 	for y,x in enumerate(pool_outputs):		
