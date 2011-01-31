@@ -142,7 +142,7 @@ def ngramme_fit(year):
 	return ngrammes_auteurs_fit, ngramme_billets_fit,formes_fit
 	
 	
-pool_size = int(multiprocessing.cpu_count() / 2)
+pool_size = int(multiprocessing.cpu_count() / 2 * 3)
 pool = multiprocessing.Pool(processes=pool_size)
 pool_outputs = pool.map(ngramme_fit, years)
 for y,x in enumerate(pool_outputs):		
@@ -231,7 +231,7 @@ try:
 except:
 	pass
 
-pool_size = int(multiprocessing.cpu_count() / 2)
+pool_size = int(multiprocessing.cpu_count() / 2 * 3)
 pool = multiprocessing.Pool(processes=pool_size)
 pool.map(freq_comp, years)
 
