@@ -8,6 +8,7 @@ sys.path.append("/libraries")
 sys.path.append("../map_builder")
 from operator import itemgetter
 import fusion_years
+import multiprocessing
 print "export_networks v0.2 (20091102)"
 print "--------------------------------\n"
 
