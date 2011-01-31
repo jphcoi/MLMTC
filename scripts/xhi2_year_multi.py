@@ -298,7 +298,7 @@ print '\n'
 #years_bins=[years_bins]
 years=parameters.years_bins_no_overlap
 
-for year in years:
+def xhi2_comp(year):
 	print year
 #	contenu = fonctions_bdd.select_bdd_table(name_bdd,'billets','concepts_id,jours,id',requete)
 	where = " jours IN ('" + "','".join(list(map(str,year))) + "') "
@@ -342,4 +342,10 @@ for year in years:
 	thres=0.
 	xhi2val = xhi2(muti,thres)
 	export_concepts_xhi2(xhi2val,p_cooccurrences,dico_termes,dico_lemmes,year)
+	
+	
+pool_size = int(multiprocessing.cpu_count())
+pool = multiprocessing.Pool(processes=pool_size)
+pool.map(xhi2_comp, years)
+
 fusion_years.fusion('conceptsxhi2')

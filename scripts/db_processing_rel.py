@@ -112,7 +112,7 @@ for con in contenu:
 	ngrammes_fit_index.append(con[1].replace('[','').replace(']','').split(', '))
 
 ll = len(billets_id)
-vecteurs=decoupe_segment(ll,1000)
+vecteurs=decoupe_segment(ll,10000)
 lienssem=[]
 for x in vecteurs:
 	print 'on traite les billets: ' + str(x[0])+ ' a ' + str(x[-1]) +' (sur ' + str(ll) +' billets)'
