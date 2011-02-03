@@ -89,6 +89,8 @@ if  name_data[-4:] in [".lfl",'.rss','.doc']:#export au format .lfl: linkfluence
 else:
 	if name_data[-4:] in [".pat"]:
 		fonctions_bdd.remplir_table_billets_propre(name_bdd,'billets',champs,champs_name,requete)
+	elif name_data[-4:] in [".str"]:
+		fonctions_bdd.remplir_table_billets_propre4(name_bdd,'billets',champs,champs_name,requete)
 	else:		
 		#title, date,permalink,site,categorie1,categorie2,categorie3,content,requete,href,identifiant_unique
 		fonctions_bdd.remplir_table_billets(name_bdd,'billets',champs,champs_name,requete)

@@ -189,7 +189,7 @@ class XML2DB:
         for item in [f for f in os.listdir(dir)]:
             fullpath = os.path.join(dir, item)
             if os.path.isdir(fullpath):
-                self.process_dir(fullpath, cycle)
+                self.process_dir(fullpath)
             elif item[-4:] == '.xml':
                 try:
                     dom = parse(fullpath)
@@ -763,6 +763,33 @@ def extract_champs_pat(filename):
 	print "---",len(articles),"posts processed."
 	return articles
 
+def extract_champs_str(filename):
+	articles=[]
+	print "    - fichier d'articles: \""+filename+"\"..."
+	file=codecs.open(filename,"r","utf8")
+	lines = file.readlines()
+	categ1,categ2,categ3,permalink,contentanchor = '','','','',''
+	for i,line in enumerate(lines):
+		line=line.replace("\r\n",'')
+		line=line.replace("\n",'')
+		linev= line.split("\t")
+		genre, age, prof , categ, commentaire = linev[0],linev[1],linev[2],linev[3],linev[4]
+		permalink = i
+		categ1 = genre
+		categ2 = age
+		categ3  = categ
+		categ4  = prof
+		contentanchor=categ4
+		website = i
+		titel = commentaire[:10]
+		title,date='','2010'
+		content = commentaire
+		contentclean = content
+		articles.append([title,date,permalink,website,categ1,categ2,categ3,categ4,contentclean,contentanchor])#sans le html brut
+	file.close()
+	print "---",len(articles),"posts processed."
+	return articles
+
 def extract_champs_csv(filename):
 	articles=[]
 	print "    - fichier d'articles: \""+filename+"\"..."
@@ -1158,6 +1185,8 @@ def extraire_donnees(name_data,sep):
 		champs = extract_champs_vdn(name_data)
 	if ".pat" == name_data[-4:]:#export au format .sqlite: export doctissimo
 		champs = extract_champs_pat(name_data)
+	if ".str" == name_data[-4:]:#export au format .sqlite: export doctissimo
+		champs = extract_champs_str(name_data)
 
 	return champs
 

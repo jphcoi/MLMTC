@@ -490,10 +490,7 @@ dist_mat = context_process.dist_mat#on recupere la matrice de distance entre ter
 fini=1
 niveau=0
 CF_weight_v = [0.5,0.2,0.5,0.5,0.5]
-try:
-	CF_weight_v[0]=parameters.CF_weight0
-except:
-	pass
+
 	
 seuil_net_champ_v = [0.,0.,0.,0.,0.]
 taillemin_v=[3,3,3,3,3,3]
@@ -501,6 +498,15 @@ taillemax_v=[30,25,25,25,25,25]
 kmin_v = [5,5,5,5,5,5]
 kmin_v = [3,3,3,3,3,3]
 kmin_v = [4,4,4,4,4,4]
+try:
+	CF_weight_v[0]=parameters.CF_weight0
+except:
+	pass
+
+try:
+	kmin_v[0]=parameters.kmin0
+except:
+	pass
 
 nb_label_v = [2,3,4,5,6,7]
 degmax=5

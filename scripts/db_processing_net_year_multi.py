@@ -231,7 +231,7 @@ try:
 except:
 	pass
 
-pool_size = int(multiprocessing.cpu_count() / 2 * 3)
+pool_size = int(multiprocessing.cpu_count())
 pool = multiprocessing.Pool(processes=pool_size)
 pool.map(freq_comp, years)
 

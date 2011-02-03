@@ -339,7 +339,10 @@ dico_termes=fonctions.build_dico()
 
 
 print years_bins
-name_date = str(years_bins[0][0]) + '_' + str(years_bins[0][-1]) + '_'+ str(years_bins[1][0])+ '_'+str(years_bins[-1][-1])
+if len(years_bins)>1:
+	name_date = str(years_bins[0][0]) + '_' + str(years_bins[0][-1]) + '_'+ str(years_bins[1][0])+ '_'+str(years_bins[-1][-1])
+else:
+	name_date = str(years_bins[0][0]) + '_' + str(years_bins[0][-1]) + '_'+ str(years_bins[0][0])+ '_'+str(years_bins[-1][-1])
 try:
 	os.mkdir(path_req +'gexf')
 except:
@@ -419,6 +422,7 @@ except:# sinon on recalcule du début
 			inter = int(cooc[2])
 			terme1 = int(cooc[0])
 			terme2 = int(cooc[1])
+
 			p = float(cooc[3])/float(nb_billets[inter])
 			p_cooccurrences[(terme1,terme2,inter)] = p
 			if terme2 != terme1:

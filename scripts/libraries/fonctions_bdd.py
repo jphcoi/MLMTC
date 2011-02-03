@@ -46,7 +46,7 @@ def insert_select_substring(name_bdd,name_table1,name_table2,entree,champ):
 def creer_table_billets(name_bdd,name_table):
 	connection,ex = connexion(name_bdd)
 	try:
-		ex('CREATE TABLE '+ name_table +' (id INTEGER PRIMARY KEY,title text, date datetime, permalink VARCHAR(1000), site VARCHAR(1500), auteur_id VARCHAR(300), categorie1 VARCHAR(20), categorie2 VARCHAR(20), categorie3 VARCHAR(20),content_lemmatise text, content text, href text, jours INTEGER, concepts text,identifiant_unique VARCHAR(2000) unique,requete VARCHAR(200))')
+		ex('CREATE TABLE '+ name_table +' (id INTEGER PRIMARY KEY,title text, date datetime, permalink VARCHAR(1000), site VARCHAR(1500), auteur_id VARCHAR(300), categorie1 VARCHAR(200), categorie2 VARCHAR(200), categorie3 VARCHAR(200), categorie4 VARCHAR(200), categorie5 VARCHAR(200),content_lemmatise text, content text, href text, jours INTEGER, concepts text,identifiant_unique VARCHAR(2000) unique,requete VARCHAR(200))')
 		print "    + table (billets) \"" +name_table+"\" creee"
 	except:
 		print "    * table (billets) \"" +name_table+"\" deja creee"
@@ -460,6 +460,15 @@ def remplir_table_billets_propre(name_bdd,name_table,champs_liste,champs_name,re
 	connection.close()
 	print "    + table \"" + name_table+"\" remplie"
 
+def remplir_table_billets_propre4(name_bdd,name_table,champs_liste,champs_name,requete):
+	connection, ex = connexion(name_bdd)
+	for champ in champs_liste:
+		champ.append(champ[2])
+		#title,date,permalink,website,categ1,categ2,categ3,contentclean,contentanchor
+		ex("INSERT OR IGNORE INTO billets (title, date,permalink,site,categorie1,categorie2,categorie3,categorie4,content,requete,identifiant_unique) VALUES (?,?,?,?,?,?,?,?,?,?,?)", champ)
+	connection.commit()
+	connection.close()
+	print "    + table \"" + name_table+"\" remplie"
 
 
 def remplir_table_billets(name_bdd,name_table,champs_liste,champs_name,requete):

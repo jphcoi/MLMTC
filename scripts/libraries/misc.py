@@ -400,17 +400,17 @@ def build_social_net(requete,name_bdd,sep,name_data):
 				hrefs  = map(text_processing.nospace,hrefs)
 				
 				for url in hrefs:
-					#print str(url)
-					urlok = url.decode('utf-8','replace')
-					url = urlok.replace("popostrophe","'")
-					for aut in dic_auteurs.keys():
-						if aut in url:
-							id_lien = dic_auteurs[aut]
-							if not id_lien in url_ids: 	
-								url_ids.append(id_lien)
-								for aut_id in auteur_ids:
-									if not id_lien ==aut_id:
-										lienssoc.append([aut_id,id_lien,jours,b_id,requete,str(b_id)+'_' + str(aut_id) + '_' + str(id_lien)])
+					if not str(url)=='None':
+						urlok = url.decode('utf-8','replace')
+						url = urlok.replace("popostrophe","'")
+						for aut in dic_auteurs.keys():
+							if aut in url:
+								id_lien = dic_auteurs[aut]
+								if not id_lien in url_ids: 	
+									url_ids.append(id_lien)
+									for aut_id in auteur_ids:
+										if not id_lien ==aut_id:
+											lienssoc.append([aut_id,id_lien,jours,b_id,requete,str(b_id)+'_' + str(aut_id) + '_' + str(id_lien)])
 	return(lienssoc)
 
 def extraire_reseaux(contenu,file_social_net_name):
