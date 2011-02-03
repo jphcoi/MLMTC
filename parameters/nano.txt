@@ -4,12 +4,12 @@ language ='english'
 date_depart = date(1970,1,1)
 
 maxTermLength = 2
-freqmin = 200
-ng_filter=[1,5,2,2,2]
+freqmin = 10
+ng_filter=[1,7,2,2,2]
 content_indexation='TA'
 CF_weight0=0.4
 top = 1000
-sample=5000000000
+sample=30000
 
 build_link_tables='y'
 
@@ -20,3 +20,4 @@ overlap = 0
 dist_type='precision'
 nofigure=0
 user_interface='y'
+
