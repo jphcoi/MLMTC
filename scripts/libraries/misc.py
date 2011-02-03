@@ -91,6 +91,7 @@ def lire_dico_classes(dico_index_file,language):
 				equivalences_leven_c = equivalences_leven[concept]
 				for c in equivalences_leven_c:
 					if not c in concept_cl_v:
+						print 'ici'
 						concept_cl_v.append(c)	
 						print "-> on rajoute le terme " + c + " dans la classe de " + concept					
 			except:
