@@ -13063,7 +13063,6 @@ NO_énergie AD_fossile	NO_carburant AD_fossile
 NO_énergie AD_fossile	NO_hydrocarbure
 NO_énergie AD_fossile	NO_combustible AD_fossile
 ademe	NO_Agence PR_de DE_le NO_environnement KO_et PR_de DE_le NO_ma√Ætrise PR_de DE_le NO_énergie
-<<<<<<< HEAD
 NO_nappe PR_de NO_pétrole	NO_nappe PR_de NO_p√©trole
 ministère PR_de DE_le NO_alimentation	minist√®re PR_de DE_le NO_alimentation
 ministère PR_de DE_le NO_alimentation	NO_minist√®re PR_de DE_le NO_alimentation
@@ -13098,8 +13097,6 @@ NO_érosion	NO_√©rosion
 AD_éolien NO_marin	AD_√©olien NO_marin
 AD_éolien NO_marin	AD_√©olien NO_offshore
 bisphénol	bisph√©nol
-bisphénol	bisph√©nol A
-=======
 NO_année PR_de DE_le	NO_année PR_de l
 NO_an AD_lors PR_de DE_le	NO_an AD_lors PR_de l
 NO_an AD_lors PR_de DE_le	NO_an AD_DE_leors PR_de DE_le
@@ -18145,6 +18142,570 @@ vih	sida
 vih	NO_sida
 NO_virus PR_du NO_sida	NO_virus PR_du vih
 wifi	wi-fi
+changement	NO_changement
+AD_nouveau equipe	AD_nouveau NO_équipe
+AD_déjà PR_en NO_place	deja PR_en NO_place
+NO_ville KO_ou PR_il VE_faire AD_bon	NO_ville PR_où PR_il VE_faire AD_bon
+AD_ne VE_servir VE_avoir NO_rien	AD_ne VE_servir PR_à NO_rien
+VE_trouver DE_un NO_solution	VE_trouver PR_du NO_solution
+j espere	j?espère
+j espere	PR_je VE_espère
+equipe AD_municipal	NO_équipe AD_municipal
+VE_faire PR_du NO_chose	VE_faire PR_quelque NO_chose
+VE_avoir PR_du NO_boulot	VE_avoir PR_du NO_travail
+NA_château	NO_château
+VE_avoir DE_le tete	VE_avoir DE_le NO_tête
+VE_avoir t PR_il AD_pas	a-t-il AD_pas
+AD_bien etre	NO_bien-être
+bla bla	NO_blabla
+renouveau	NO_renouveau
+NO_noël	NA_noël
+NO_noël	noel
+NO_rêve	reve
+defendre	VE_défendre
+defendre	NO_défenseur
+tres AD_bon	trés AD_bon
+nicolas	NA_nicolas
+tres AD_bien	trés AD_bien
+NO_mesdames	NA_mesdames
+gerer	VE_gérer
+reunion	NO_réunion
+reunion	reunions
+NO_boite	NO_boîte
+AD_beaucoup PR_de NO_gens	AD_beaucoup PR_de NO_personne
+AD_beaucoup PR_de NO_gens	AD_beaucoup PR_de NO_monde
+NO_million PR_de NO_euro	NO_million d?euros
+resultat	NO_résultat
+interet	intéret
+espere	espére
+espere	NO_espoir
+espere	VE_espérer
+NO_age	NO_âge
+NO_poste	poste
+VE_mettre PR_en NO_place	NO_mise PR_en place
+NA_euro	d?euros
+NO_présidence	president
+NO_proposition	VE_proposer
+NO_problème	probleme
+NO_problème	problemes
+NO_problème	problémes
+aujourd?hui	aujourd hui
+aujourd?hui	aujourdhui
+aujourd?hui	aujourd'hui
+aujourd?hui	AD_aujourd'hui
+NO_mandat	mandature
+NO_idée	idees
+NO_idée	idee
+NA_monsieur	AB_monsieur
+NA_monsieur	mr
+NA_monsieur	m
+votez	VE_voter
+NO_campagne electorale	NO_campagne AD_électoral
+elections AD_municipal	NO_élection AD_municipal
+NO_élection	éléctions
+NO_élection	elections
+NO_élection	election
+NO_site internet	site NO_internet
+NO_site internet	site internet
+NO_ainé	NO_aîné
+NO_personne AD_âgé	NO_personne agées
+NO_médecin	medecine
+NO_médecin	medecins
+NO_médecin	docteur
+NO_médecin	NO_m√©decine
+NO_médecin	NO_m√©decin
+NO_médecin	m√©decine
+NO_foot	NO_football
+NO_gens PR_du NO_voyage	roms
+NO_gens PR_du NO_voyage	NO_rom
+NO_construction PR_de NO_logement	VE_construire PR_du NO_logement
+NO_terrain PR_de NO_foot	NO_terrain PR_de NO_football
+batiment	batiments
+batiment	NO_bâtiment
+NO_église	eglise
+NO_église	église
+NO_salle PR_du fetes	NO_salle PR_du NO_fête
+NO_fête	fete
+NO_fête	fetes
+education	NO_éducation
+ecole	NO_école
+ecole	ecoles
+NO_état PR_du NO_finance	etat PR_du NO_finance
+VE_augmenter DE_le impots	VE_augmenter DE_le NO_impôt
+impots AD_local	NO_impôt AD_local
+cout	NO_coût
+coute	VE_coûte
+NO_impôt	impots
+NO_impôt	impot
+NO_bénévolat	NO_bénévole
+NO_tram	NO_tramway
+NO_création PR_de NO_emploi	NO_création d?emploi
+commercants	NO_commerçant
+NO_pouvoir PR_de NO_achat	NO_pouvoir d?achat
+reponse	NO_réponse
+ecouter	VE_écouter
+reflexion	NO_réflexion
+debat	NO_débat
+democratie	NO_démocratie
+NO_bêtise	bétises
+NO_programme PR_de m	NO_programme PR_de NA_monsieur
+réglement PR_de NO_compte	NO_règlement PR_de NO_compte
+réglement PR_de NO_compte	réglements PR_de NO_compte
+VE_donner PR_du NO_leçon	NO_donneur PR_de NO_leçon
+NO_critique VE_être AD_facile	NO_critique AD_facile
+NO_gestion AD_communal	NO_gestion PR_de DE_un NO_commune
+NO_porte PR_à NO_porte	NO_porte VE_avoir AD_porte
+conseiller général	NO_conseiller AD_général
+NO_liste d?union	NO_liste PR_de NO_union
+NO_équipe PR_de NA_monsieur	NO_équipe PR_de m
+NO_équipe PR_de NA_monsieur	NO_équipe PR_de AB_monsieur
+deuxieme NO_liste	deuxiéme NO_liste
+tete PR_de NO_liste	NO_tête PR_de NO_liste
+liste	NO_liste
+NO_colistier	collistiers
+VE_retourner DE_mon NO_veste	VE_retourner DE_son NO_veste
+NO_mérite	merite
+NO_boite PR_à NO_lettre	NO_boite PR_au NO_lettre
+NO_boite PR_à NO_lettre	NO_boîte PR_au NO_lettre
+NO_père	pere
+NO_équipe AD_municipal AD_actuel	NO_équipe AD_municipal PR_en NO_place
+sebastien coolzaet	NA_sébastien coolzaet
+AD_saint omer	saint omer
+AD_saint omer	saint-omer
+coudekerque NO_branche	coudekerque branche
+coudekerque NO_branche	coudekerque-branche
+NO_village PR_où PR_il VE_faire AD_bon	NO_village KO_ou PR_il VE_faire AD_bon
+david bailleul	NA_david bailleul
+bethunois	béthunois
+armentieres	armentières
+philippe sanson	NA_philippe sanson
+magnier	NO_magnier
+NO_marquette	marquette
+immercurien	immercuriens
+bethune	NA_béthune
+decobert	décobert
+pasquier	NA_pasquier
+NO_vie PR_de DE_le NO_commune	NO_vie AD_communal
+village	NO_village
+lille	NA_lille
+NO_chapelle	chapelle
+brebieres	brebières
+NA_nivelle	NO_nivelle
+commune	NO_commune
+NO_président PR_de DE_le NO_république	NO_président PR_de DE_le république
+NO_président PR_de DE_le NO_république	NO_présidente PR_de DE_le NO_république
+NO_président PR_de DE_le NO_république	NO_présidence PR_de DE_le république
+NO_président PR_de DE_le NO_république	NO_présidente PR_de DE_le république
+NO_liste AB_ps	NO_liste AD_socialiste
+NO_section AB_ps	NO_section AD_socialiste
+NO_front AD_national	fn
+NO_parti AD_communiste	pcf
+NO_modem	modem
+NA_français	NO_français
+NA_français	NA_françoise
+NO_parti AD_socialiste	ps
+bataille	NO_bataille
+nouvel elan	AD_nouveau elan
+nouvel elan	AD_nouveau NO_élan
+bonne NO_chance	AD_bon NO_chance
+bonne NO_chance	bon NO_chance
+c VE_être AD_vrai	c?est AD_vrai
+votre	DE_votre
+votre	vous
+notre	DE_notre
+notre	nous
+VE_savoir tres AD_bien	VE_savoir trés AD_bien
+NO_merci NO_monsieur DE_le NO_maire	NO_merci AB_monsieur DE_le NO_maire
+NO_merci NA_monsieur	NO_merci NO_monsieur
+NO_merci NA_monsieur	NO_merci m
+NO_merci NA_monsieur	merci AB_monsieur
+NO_merci NA_monsieur	NO_merci AB_monsieur
+AD_cher NA_monsieur	AD_cher NO_monsieur
+VE_faire NO_allusion	NO_faîte NO_allusion
+david	NA_david
+NA_cher	NO_chère
+nemo	némo
+arretez	arrétez
+m	monsieur
+m	NO_monsieur
+m	mr
+m	AB_monsieur
+changement	NO_changement
+AD_nouveau equipe	AD_nouveau NO_équipe
+AD_déjà PR_en NO_place	deja PR_en NO_place
+NO_ville KO_ou PR_il VE_faire AD_bon	NO_ville PR_où PR_il VE_faire AD_bon
+AD_ne VE_servir VE_avoir NO_rien	AD_ne VE_servir PR_à NO_rien
+VE_trouver DE_un NO_solution	VE_trouver PR_du NO_solution
+j espere	j?espère
+j espere	PR_je VE_espère
+equipe AD_municipal	NO_équipe AD_municipal
+VE_faire PR_du NO_chose	VE_faire PR_quelque NO_chose
+VE_avoir PR_du NO_boulot	VE_avoir PR_du NO_travail
+NA_château	NO_château
+VE_avoir DE_le tete	VE_avoir DE_le NO_tête
+VE_avoir t PR_il AD_pas	a-t-il AD_pas
+AD_bien etre	NO_bien-être
+bla bla	NO_blabla
+renouveau	NO_renouveau
+NO_noël	NA_noël
+NO_noël	noel
+NO_rêve	reve
+defendre	VE_défendre
+defendre	NO_défenseur
+tres AD_bon	trés AD_bon
+nicolas	NA_nicolas
+tres AD_bien	trés AD_bien
+NO_mesdames	NA_mesdames
+gerer	VE_gérer
+reunion	NO_réunion
+reunion	reunions
+NO_boite	NO_boîte
+AD_beaucoup PR_de NO_gens	AD_beaucoup PR_de NO_personne
+AD_beaucoup PR_de NO_gens	AD_beaucoup PR_de NO_monde
+NO_million PR_de NO_euro	NO_million d?euros
+resultat	NO_résultat
+interet	intéret
+espere	espére
+espere	NO_espoir
+espere	VE_espérer
+NO_age	NO_âge
+NO_poste	poste
+VE_mettre PR_en NO_place	NO_mise PR_en place
+NA_euro	d?euros
+NO_présidence	president
+NO_proposition	VE_proposer
+NO_problème	probleme
+NO_problème	problemes
+NO_problème	problémes
+aujourd?hui	aujourd hui
+aujourd?hui	aujourdhui
+aujourd?hui	aujourd'hui
+aujourd?hui	AD_aujourd'hui
+NO_mandat	mandature
+NO_idée	idees
+NO_idée	idee
+NA_monsieur	AB_monsieur
+NA_monsieur	mr
+NA_monsieur	m
+votez	VE_voter
+NO_campagne electorale	NO_campagne AD_électoral
+elections AD_municipal	NO_élection AD_municipal
+NO_élection	éléctions
+NO_élection	elections
+NO_élection	election
+NO_site internet	site NO_internet
+NO_site internet	site internet
+NO_ainé	NO_aîné
+NO_personne AD_âgé	NO_personne agées
+NO_médecin	medecine
+NO_médecin	medecins
+NO_médecin	docteur
+NO_médecin	NO_m√©decine
+NO_médecin	NO_m√©decin
+NO_médecin	m√©decine
+NO_foot	NO_football
+NO_gens PR_du NO_voyage	roms
+NO_gens PR_du NO_voyage	NO_rom
+NO_construction PR_de NO_logement	VE_construire PR_du NO_logement
+NO_terrain PR_de NO_foot	NO_terrain PR_de NO_football
+batiment	batiments
+batiment	NO_bâtiment
+NO_église	eglise
+NO_église	église
+NO_salle PR_du fetes	NO_salle PR_du NO_fête
+NO_fête	fete
+NO_fête	fetes
+education	NO_éducation
+ecole	NO_école
+ecole	ecoles
+NO_état PR_du NO_finance	etat PR_du NO_finance
+VE_augmenter DE_le impots	VE_augmenter DE_le NO_impôt
+impots AD_local	NO_impôt AD_local
+cout	NO_coût
+coute	VE_coûte
+NO_impôt	impots
+NO_impôt	impot
+NO_bénévolat	NO_bénévole
+NO_tram	NO_tramway
+NO_création PR_de NO_emploi	NO_création d?emploi
+commercants	NO_commerçant
+NO_pouvoir PR_de NO_achat	NO_pouvoir d?achat
+reponse	NO_réponse
+ecouter	VE_écouter
+reflexion	NO_réflexion
+debat	NO_débat
+democratie	NO_démocratie
+NO_bêtise	bétises
+NO_programme PR_de m	NO_programme PR_de NA_monsieur
+réglement PR_de NO_compte	NO_règlement PR_de NO_compte
+réglement PR_de NO_compte	réglements PR_de NO_compte
+VE_donner PR_du NO_leçon	NO_donneur PR_de NO_leçon
+NO_critique VE_être AD_facile	NO_critique AD_facile
+NO_gestion AD_communal	NO_gestion PR_de DE_un NO_commune
+NO_porte PR_à NO_porte	NO_porte VE_avoir AD_porte
+conseiller général	NO_conseiller AD_général
+NO_liste d?union	NO_liste PR_de NO_union
+NO_équipe PR_de NA_monsieur	NO_équipe PR_de m
+NO_équipe PR_de NA_monsieur	NO_équipe PR_de AB_monsieur
+deuxieme NO_liste	deuxiéme NO_liste
+tete PR_de NO_liste	NO_tête PR_de NO_liste
+liste	NO_liste
+NO_colistier	collistiers
+VE_retourner DE_mon NO_veste	VE_retourner DE_son NO_veste
+NO_mérite	merite
+NO_boite PR_à NO_lettre	NO_boite PR_au NO_lettre
+NO_boite PR_à NO_lettre	NO_boîte PR_au NO_lettre
+NO_père	pere
+NO_équipe AD_municipal AD_actuel	NO_équipe AD_municipal PR_en NO_place
+sebastien coolzaet	NA_sébastien coolzaet
+AD_saint omer	saint omer
+AD_saint omer	saint-omer
+coudekerque NO_branche	coudekerque branche
+coudekerque NO_branche	coudekerque-branche
+NO_village PR_où PR_il VE_faire AD_bon	NO_village KO_ou PR_il VE_faire AD_bon
+david bailleul	NA_david bailleul
+bethunois	béthunois
+armentieres	armentières
+philippe sanson	NA_philippe sanson
+magnier	NO_magnier
+NO_marquette	marquette
+immercurien	immercuriens
+bethune	NA_béthune
+decobert	décobert
+pasquier	NA_pasquier
+NO_vie PR_de DE_le NO_commune	NO_vie AD_communal
+village	NO_village
+lille	NA_lille
+NO_chapelle	chapelle
+brebieres	brebières
+NA_nivelle	NO_nivelle
+commune	NO_commune
+NO_président PR_de DE_le NO_république	NO_président PR_de DE_le république
+NO_président PR_de DE_le NO_république	NO_présidente PR_de DE_le NO_république
+NO_président PR_de DE_le NO_république	NO_présidence PR_de DE_le république
+NO_président PR_de DE_le NO_république	NO_présidente PR_de DE_le république
+NO_liste AB_ps	NO_liste AD_socialiste
+NO_section AB_ps	NO_section AD_socialiste
+NO_front AD_national	fn
+NO_parti AD_communiste	pcf
+NO_modem	modem
+NA_français	NO_français
+NA_français	NA_françoise
+NO_parti AD_socialiste	ps
+bataille	NO_bataille
+nouvel elan	AD_nouveau elan
+nouvel elan	AD_nouveau NO_élan
+bonne NO_chance	AD_bon NO_chance
+bonne NO_chance	bon NO_chance
+c VE_être AD_vrai	c?est AD_vrai
+votre	DE_votre
+votre	vous
+notre	DE_notre
+notre	nous
+VE_savoir tres AD_bien	VE_savoir trés AD_bien
+NO_merci NO_monsieur DE_le NO_maire	NO_merci AB_monsieur DE_le NO_maire
+NO_merci NA_monsieur	NO_merci NO_monsieur
+NO_merci NA_monsieur	NO_merci m
+NO_merci NA_monsieur	merci AB_monsieur
+NO_merci NA_monsieur	NO_merci AB_monsieur
+AD_cher NA_monsieur	AD_cher NO_monsieur
+VE_faire NO_allusion	NO_faîte NO_allusion
+david	NA_david
+NA_cher	NO_chère
+nemo	némo
+arretez	arrétez
+m	monsieur
+m	NO_monsieur
+m	mr
+m	AB_monsieur
+changement	NO_changement
+AD_nouveau equipe	AD_nouveau NO_équipe
+AD_déjà PR_en NO_place	deja PR_en NO_place
+NO_ville KO_ou PR_il VE_faire AD_bon	NO_ville PR_où PR_il VE_faire AD_bon
+AD_ne VE_servir VE_avoir NO_rien	AD_ne VE_servir PR_à NO_rien
+VE_trouver DE_un NO_solution	VE_trouver PR_du NO_solution
+j espere	j?espère
+j espere	PR_je VE_espère
+equipe AD_municipal	NO_équipe AD_municipal
+VE_faire PR_du NO_chose	VE_faire PR_quelque NO_chose
+VE_avoir PR_du NO_boulot	VE_avoir PR_du NO_travail
+NA_château	NO_château
+VE_avoir DE_le tete	VE_avoir DE_le NO_tête
+VE_avoir t PR_il AD_pas	a-t-il AD_pas
+AD_bien etre	NO_bien-être
+bla bla	NO_blabla
+renouveau	NO_renouveau
+NO_noël	NA_noël
+NO_noël	noel
+NO_rêve	reve
+defendre	VE_défendre
+defendre	NO_défenseur
+tres AD_bon	trés AD_bon
+nicolas	NA_nicolas
+tres AD_bien	trés AD_bien
+NO_mesdames	NA_mesdames
+gerer	VE_gérer
+reunion	NO_réunion
+reunion	reunions
+NO_boite	NO_boîte
+AD_beaucoup PR_de NO_gens	AD_beaucoup PR_de NO_personne
+AD_beaucoup PR_de NO_gens	AD_beaucoup PR_de NO_monde
+NO_million PR_de NO_euro	NO_million d?euros
+resultat	NO_résultat
+interet	intéret
+espere	espére
+espere	NO_espoir
+espere	VE_espérer
+NO_age	NO_âge
+NO_poste	poste
+VE_mettre PR_en NO_place	NO_mise PR_en place
+NA_euro	d?euros
+NO_présidence	president
+NO_proposition	VE_proposer
+NO_problème	probleme
+NO_problème	problemes
+NO_problème	problémes
+aujourd?hui	aujourd hui
+aujourd?hui	aujourdhui
+aujourd?hui	aujourd'hui
+aujourd?hui	AD_aujourd'hui
+NO_mandat	mandature
+NO_idée	idees
+NO_idée	idee
+NA_monsieur	AB_monsieur
+NA_monsieur	mr
+NA_monsieur	m
+votez	VE_voter
+NO_campagne electorale	NO_campagne AD_électoral
+elections AD_municipal	NO_élection AD_municipal
+NO_élection	éléctions
+NO_élection	elections
+NO_élection	election
+NO_site internet	site NO_internet
+NO_site internet	site internet
+NO_ainé	NO_aîné
+NO_personne AD_âgé	NO_personne agées
+NO_médecin	medecine
+NO_médecin	medecins
+NO_médecin	docteur
+NO_médecin	NO_m√©decine
+NO_médecin	NO_m√©decin
+NO_médecin	m√©decine
+NO_foot	NO_football
+NO_gens PR_du NO_voyage	roms
+NO_gens PR_du NO_voyage	NO_rom
+NO_construction PR_de NO_logement	VE_construire PR_du NO_logement
+NO_terrain PR_de NO_foot	NO_terrain PR_de NO_football
+batiment	batiments
+batiment	NO_bâtiment
+NO_église	eglise
+NO_église	église
+NO_salle PR_du fetes	NO_salle PR_du NO_fête
+NO_fête	fete
+NO_fête	fetes
+education	NO_éducation
+ecole	NO_école
+ecole	ecoles
+NO_état PR_du NO_finance	etat PR_du NO_finance
+VE_augmenter DE_le impots	VE_augmenter DE_le NO_impôt
+impots AD_local	NO_impôt AD_local
+cout	NO_coût
+coute	VE_coûte
+NO_impôt	impots
+NO_impôt	impot
+NO_bénévolat	NO_bénévole
+NO_tram	NO_tramway
+NO_création PR_de NO_emploi	NO_création d?emploi
+commercants	NO_commerçant
+NO_pouvoir PR_de NO_achat	NO_pouvoir d?achat
+reponse	NO_réponse
+ecouter	VE_écouter
+reflexion	NO_réflexion
+debat	NO_débat
+democratie	NO_démocratie
+NO_bêtise	bétises
+NO_programme PR_de m	NO_programme PR_de NA_monsieur
+réglement PR_de NO_compte	NO_règlement PR_de NO_compte
+réglement PR_de NO_compte	réglements PR_de NO_compte
+VE_donner PR_du NO_leçon	NO_donneur PR_de NO_leçon
+NO_critique VE_être AD_facile	NO_critique AD_facile
+NO_gestion AD_communal	NO_gestion PR_de DE_un NO_commune
+NO_porte PR_à NO_porte	NO_porte VE_avoir AD_porte
+conseiller général	NO_conseiller AD_général
+NO_liste d?union	NO_liste PR_de NO_union
+NO_équipe PR_de NA_monsieur	NO_équipe PR_de m
+NO_équipe PR_de NA_monsieur	NO_équipe PR_de AB_monsieur
+deuxieme NO_liste	deuxiéme NO_liste
+tete PR_de NO_liste	NO_tête PR_de NO_liste
+liste	NO_liste
+NO_colistier	collistiers
+VE_retourner DE_mon NO_veste	VE_retourner DE_son NO_veste
+NO_mérite	merite
+NO_boite PR_à NO_lettre	NO_boite PR_au NO_lettre
+NO_boite PR_à NO_lettre	NO_boîte PR_au NO_lettre
+NO_père	pere
+NO_équipe AD_municipal AD_actuel	NO_équipe AD_municipal PR_en NO_place
+sebastien coolzaet	NA_sébastien coolzaet
+AD_saint omer	saint omer
+AD_saint omer	saint-omer
+coudekerque NO_branche	coudekerque branche
+coudekerque NO_branche	coudekerque-branche
+NO_village PR_où PR_il VE_faire AD_bon	NO_village KO_ou PR_il VE_faire AD_bon
+david bailleul	NA_david bailleul
+bethunois	béthunois
+armentieres	armentières
+philippe sanson	NA_philippe sanson
+magnier	NO_magnier
+NO_marquette	marquette
+immercurien	immercuriens
+bethune	NA_béthune
+decobert	décobert
+pasquier	NA_pasquier
+NO_vie PR_de DE_le NO_commune	NO_vie AD_communal
+village	NO_village
+lille	NA_lille
+NO_chapelle	chapelle
+brebieres	brebières
+NA_nivelle	NO_nivelle
+commune	NO_commune
+NO_président PR_de DE_le NO_république	NO_président PR_de DE_le république
+NO_président PR_de DE_le NO_république	NO_présidente PR_de DE_le NO_république
+NO_président PR_de DE_le NO_république	NO_présidence PR_de DE_le république
+NO_président PR_de DE_le NO_république	NO_présidente PR_de DE_le république
+NO_liste AB_ps	NO_liste AD_socialiste
+NO_section AB_ps	NO_section AD_socialiste
+NO_front AD_national	fn
+NO_parti AD_communiste	pcf
+NO_modem	modem
+NA_français	NO_français
+NA_français	NA_françoise
+NO_parti AD_socialiste	ps
+bataille	NO_bataille
+nouvel elan	AD_nouveau elan
+nouvel elan	AD_nouveau NO_élan
+bonne NO_chance	AD_bon NO_chance
+bonne NO_chance	bon NO_chance
+c VE_être AD_vrai	c?est AD_vrai
+votre	DE_votre
+votre	vous
+notre	DE_notre
+notre	nous
+VE_savoir tres AD_bien	VE_savoir trés AD_bien
+NO_merci NO_monsieur DE_le NO_maire	NO_merci AB_monsieur DE_le NO_maire
+NO_merci NA_monsieur	NO_merci NO_monsieur
+NO_merci NA_monsieur	NO_merci m
+NO_merci NA_monsieur	merci AB_monsieur
+NO_merci NA_monsieur	NO_merci AB_monsieur
+AD_cher NA_monsieur	AD_cher NO_monsieur
+VE_faire NO_allusion	NO_faîte NO_allusion
+david	NA_david
+NA_cher	NO_chère
+nemo	némo
+arretez	arrétez
+m	monsieur
+m	NO_monsieur
+m	mr
+m	AB_monsieur
 changement	NO_changement
 AD_nouveau equipe	AD_nouveau NO_équipe
 AD_déjà PR_en NO_place	deja PR_en NO_place

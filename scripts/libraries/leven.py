@@ -38,28 +38,32 @@ def lire_fichier_classe(fichier_name):
 		classes_leven = levenclassesin.readlines()	
 		for lignes in classes_leven:
 			if len(lignes)>1:
-				termes = lignes[:-1].split('\t')
-				#print termes
-				temp=equivalences_leven.get(termes[0],[])
-				temp.append(termes[1])
-				equivalences_leven[termes[0]]=temp
-				temp=equivalences_leven.get(termes[1],[])
-				temp.append(termes[0])
-				equivalences_leven[termes[1]]=temp	
-				if len(termes[0].split(' '))==1:
-					temp=deja_nouni_couple.get(termes[0],[])
+				try:
+					termes = lignes[:-1].split('\t')
+					temp=equivalences_leven.get(termes[0],[])
 					if not termes[1] in temp:
 						temp.append(termes[1])
-					deja_nouni_couple[termes[0]]=temp
-					temp=deja_nouni_couple.get(termes[1],[])
+						equivalences_leven[termes[0]]=temp
+					temp=equivalences_leven.get(termes[1],[])
 					if not termes[0] in temp:
 						temp.append(termes[0])
-					deja_nouni_couple[termes[1]]=temp
-					unigrammes.append(termes[1])
-					unigrammes.append(termes[0])
+						equivalences_leven[termes[1]]=temp	
+					if len(termes[0].split(' '))==1:
+						temp=deja_nouni_couple.get(termes[0],[])
+						if not termes[1] in temp:
+							temp.append(termes[1])
+							deja_nouni_couple[termes[0]]=temp
+						temp=deja_nouni_couple.get(termes[1],[])
+						if not termes[0] in temp:
+							temp.append(termes[0])
+							deja_nouni_couple[termes[1]]=temp
+						unigrammes.append(termes[1])
+						unigrammes.append(termes[0])
+				except:
+					pass
 		levenclassesin.close()
 	except:
-		pass			
+		pass	
 	return equivalences_leven,deja_nouni_couple,unigrammes
 
 

@@ -62,7 +62,6 @@ def lire_dico_classes(dico_index_file,language):
 	#lancer deux fois potentiellement.
 	fichier_name = 'libraries/leven-classes_'+language+'o.txt'
 	equivalences_leven,x,y = leven.lire_fichier_classe(fichier_name)
-	print equivalences_leven
 	equivalences_leven_file =open(fichier_name,'a')
 	concepts = []
 	nngrammes=[]
