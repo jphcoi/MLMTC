@@ -180,6 +180,22 @@ class XML2DB:
                             pass
         return articles,nb_posts
 
+    def extract_xml(item):
+            articles=[]	      
+            fullpath = item
+            if os.path.isdir(fullpath):
+                items = items + [f for f in os.listdir(fullpath)]
+            elif item[-4:] == '.xml':
+                try:
+                    dom = parse(fullpath)
+                    articles_blog,nb_posts = self.process_xml(dom)
+                    articles= articles_blog
+                    dom.unlink()
+                    print('Imported xml file: %s number %d, [%d / %d]' % (fullpath, self.blogcount, len(articles_blog),nb_posts))
+                except xml.parsers.expat.ExpatError:
+                    print('Error importing xml file: %s' % fullpath)
+            return articles
+
     def process_dir(self, dir):
         """
         Recursively traverse directory tree and process files
@@ -191,19 +207,15 @@ class XML2DB:
             for name in files:
                 items.append(os.path.join(path, name))
         items = [it for it in items if it[-4:]=='.xml']
-        for item in items:
-            fullpath = item
-            if os.path.isdir(fullpath):
-                items = items + [f for f in os.listdir(fullpath)]
-            elif item[-4:] == '.xml':
-                try:
-                    dom = parse(fullpath)
-                    articles_blog,nb_posts = self.process_xml(dom)
-                    articles=articles + articles_blog
-                    dom.unlink()
-                    print('Imported xml file: %s number %d, [%d / %d]' % (fullpath, self.blogcount, len(articles_blog),nb_posts))
-                except xml.parsers.expat.ExpatError:
-                    print('Error importing xml file: %s' % fullpath)
+
+
+        pool_size = multiprocessing.cpu_count() 
+        import multiprocessing
+        pool = multiprocessing.Pool(processes=pool_size)
+        pool_outputs = pool.map(extract_xml, items)
+        articles=[]
+        for pool in pool_outputs:
+            articles= articles+pool
         return articles
 			
 
