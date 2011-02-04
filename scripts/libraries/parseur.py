@@ -186,6 +186,7 @@ class XML2DB:
         """
         articles=[]
         print('Entering directory %s.' % dir)
+        items=[]
         for path, subdirs, files in os.walk(dir):
             for name in files:
                 items.append(os.path.join(path, name))
