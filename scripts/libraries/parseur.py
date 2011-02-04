@@ -212,7 +212,7 @@ class XML2DB:
         import multiprocessing
         pool_size = multiprocessing.cpu_count() 
         pool = multiprocessing.Pool(processes=pool_size)
-        pool_outputs = pool.map(extract_xml, items)
+        pool_outputs = pool.map(self.extract_xml, items)
         articles=[]
         for pool in pool_outputs:
             articles= articles+pool
