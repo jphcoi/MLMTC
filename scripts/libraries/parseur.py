@@ -189,7 +189,7 @@ class XML2DB:
         for item in [f for f in os.listdir(dir)]:
             fullpath = os.path.join(dir, item)
             if os.path.isdir(fullpath):
-                self.process_dir(fullpath)
+                articles=self.process_dir(fullpath)
             elif item[-4:] == '.xml':
                 try:
                     dom = parse(fullpath)
