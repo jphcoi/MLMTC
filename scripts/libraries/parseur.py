@@ -186,10 +186,15 @@ class XML2DB:
         """
         articles=[]
         print('Entering directory %s.' % dir)
-        for item in [f for f in os.listdir(dir)]:
+        for path, subdirs, files in os.walk(dir):
+            for name in files:
+                items.append(os.path.join(path, name))
+        items = [it for it in items if it[-4:]=='.xml']
+        print items
+        for item in items:
             fullpath = os.path.join(dir, item)
             if os.path.isdir(fullpath):
-                articles=self.process_dir(fullpath)
+                items = items + [f for f in os.listdir(fullpath)]
             elif item[-4:] == '.xml':
                 try:
                     dom = parse(fullpath)
