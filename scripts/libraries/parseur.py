@@ -191,8 +191,6 @@ class XML2DB:
             for name in files:
                 items.append(os.path.join(path, name))
         items = [it for it in items if it[-4:]=='.xml']
-        for it in items:
-            print it	   
         for item in items:
             fullpath = item
             if os.path.isdir(fullpath):
@@ -444,7 +442,6 @@ def process_field(champs_liste,dico_article,sep):
 def extract_champs_lfl(filename,sep,continent=''):
 	articles=[]
 	articles=XML2DB(filename, 'telmo.db', continent, '', '').run()
-	print articles
 	print "---",len(articles),"posts processed."
 	return articles
 
