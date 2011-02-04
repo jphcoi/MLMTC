@@ -65,6 +65,8 @@ class XML2DB:
         self.importcount = 0
         self.articles = []
         self.importcount = 0
+        import multiprocessing
+
 	
     def datestr2timestamp(self, str):
         clean_str = str[:19] + 'GMT'
@@ -210,7 +212,6 @@ class XML2DB:
 
 
         pool_size = multiprocessing.cpu_count() 
-        import multiprocessing
         pool = multiprocessing.Pool(processes=pool_size)
         pool_outputs = pool.map(extract_xml, items)
         articles=[]
