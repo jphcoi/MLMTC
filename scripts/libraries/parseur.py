@@ -194,7 +194,7 @@ class XML2DB:
         for it in items:
             print it	   
         for item in items:
-            fullpath = os.path.join(dir, item)
+            fullpath = item
             if os.path.isdir(fullpath):
                 items = items + [f for f in os.listdir(fullpath)]
             elif item[-4:] == '.xml':
