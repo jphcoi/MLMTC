@@ -189,7 +189,7 @@ class XML2DB:
         for item in [f for f in os.listdir(dir)]:
             fullpath = os.path.join(dir, item)
             if os.path.isdir(fullpath):
-                self.process_dir(fullpath)
+                self.process_dir(fullpath, cycle)
             elif item[-4:] == '.xml':
                 try:
                     dom = parse(fullpath)
@@ -437,6 +437,7 @@ def process_field(champs_liste,dico_article,sep):
 def extract_champs_lfl(filename,sep,continent=''):
 	articles=[]
 	articles=XML2DB(filename, 'telmo.db', continent, '', '').run()
+	print articles
 	print "---",len(articles),"posts processed."
 	return articles
 
