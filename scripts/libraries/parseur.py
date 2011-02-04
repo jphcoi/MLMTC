@@ -210,7 +210,7 @@ class XML2DB:
         items = [it for it in items if it[-4:]=='.xml']
 
         import multiprocessing
-        pool_size = multiprocessing.cpu_count() 
+        pool_size = multiprocessing.cpu_count()/5
         pool = multiprocessing.Pool(processes=pool_size)
         pool_outputs = pool.map(self.extract_xml, items)
         articles=[]
