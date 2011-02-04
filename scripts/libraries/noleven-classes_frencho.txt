@@ -670,3 +670,11 @@ NO_avenir PR_de DE_notre NO_village	NO_avenir PR_de DE_notre NO_ville
 NO_village	NO_ville
 NO_avenir PR_de DE_notre NO_village	NO_avenir PR_de DE_notre NO_ville
 NO_village	NO_ville
+AD_pas PR_de NO_question	AD_peu PR_de NO_question
+NO_fin	AD_fin
+AD_pas PR_de NO_question	AD_peu PR_de NO_question
+NO_travail AD_ne VE_être AD_pas	NO_travail AD_ne VE_être AD_plus
+NO_vie PR_au NO_travail	VE_venir PR_au NO_travail
+NO_vie PR_au NO_travail	VE_vivre PR_au NO_travail
+AD_bien VE_être PR_de DE_son NO_salarié	AD_bien VE_être PR_du NO_salarié
+NO_fin	AD_fin

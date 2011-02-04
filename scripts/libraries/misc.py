@@ -61,7 +61,7 @@ def lire_dico_classes(dico_index_file,language):
 	#on contrôle qu'il n'y a pas de differences entre les equivalences du fichier à indexer et le fichier d'equivalence de la langue courante
 	#lancer deux fois potentiellement.
 	fichier_name = 'libraries/leven-classes_'+language+'o.txt'
-	equivalences_leven,x,y = leven.lire_fichier_classe(fichier_name)
+	equivalences_leven,equivalences_leven_uni,unigrammes = leven.lire_fichier_classe(fichier_name)#x=deja_nouni_couple,y=unigrammes
 	equivalences_leven_file =open(fichier_name,'a')
 	concepts = []
 	nngrammes=[]
@@ -88,14 +88,24 @@ def lire_dico_classes(dico_index_file,language):
 					print "<- on rajoute le terme " + concept + " dans la classe de " + concept_cl_0 + ' dans le fichier de correspondance'
 		for concept in concept_cl_v:
 			try:
-				equivalences_leven_c = equivalences_leven[concept]
+				equivalences_leven_cwx = equivalences_leven[concept]
 				for c in equivalences_leven_c:
 					if not c in concept_cl_v:
-						print 'ici'
 						concept_cl_v.append(c)	
 						print "-> on rajoute le terme " + c + " dans la classe de " + concept					
 			except:
 				pass				
+			if ' ' in concept:#on traite maintenant les cas particuliers où un unigramme qui appartient à une classe est inclus dans des ensembles plus larges
+				concept_monos = concept.split(' ')
+				for mono in concept_monos:
+					if mono in equivalences_leven_uni:
+						classe_uni = equivalences_leven_uni[mono]
+						for cl_uni in classe_uni:
+							candidat = concept.replace(mono,cl_uni)
+							if not candidat in concept_cl_v:
+								concept_cl_v.append(candidat)
+								print "- -> on rajoute le terme " + candidat + " dans la classe de " + concept
+
 		concept_corr = '***'.join(concept_cl_v)
 		if not concept_corr in concepts:
 			ens_set=set(concept_corr)
