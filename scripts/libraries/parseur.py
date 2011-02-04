@@ -191,7 +191,8 @@ class XML2DB:
             for name in files:
                 items.append(os.path.join(path, name))
         items = [it for it in items if it[-4:]=='.xml']
-        print items
+        for it in items:
+            print it	   
         for item in items:
             fullpath = os.path.join(dir, item)
             if os.path.isdir(fullpath):
