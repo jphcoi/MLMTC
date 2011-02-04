@@ -181,7 +181,7 @@ class XML2DB:
                             pass
         return articles,nb_posts
 
-    def extract_xml(item):
+    def extract_xml(self,item):
             articles=[]	      
             fullpath = item
             if os.path.isdir(fullpath):
