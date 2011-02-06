@@ -105,7 +105,7 @@ billets_id=[]
 ngramme_billets_fit=[]
 ngrammes_auteurs_fit={}
 formes={}
-
+nb_sequences=0
 #for x in range(nb_sequences+1):
 for x in range(nb_sequences+1):
 	lim_d = str(size_seq*x)
