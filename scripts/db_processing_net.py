@@ -73,7 +73,7 @@ ngrammes = misc.lire_dico_classes(filename,language)
 
 
 #affichage de la liste des 10 premiers concepts
-print "--- les 10 premiers concepts (sur " +str(len(ngrammes))+") : "
+print "--- les 10 premiers 	 (sur " +str(len(ngrammes))+") : "
 for gra in ngrammes[:10]:
 	try:
 		print "    ",str([gra])
