@@ -148,7 +148,7 @@ print "&&&",len(liste_concepts),"concepts now."
 
 #on remplit la table concept
 #print liste_concepts
-fonctions_bdd.remplir_table(name_bdd,'concepts',liste_concepts,"(concepts,forme_principale)")
+fonctions_bdd.remplir_table_propre(name_bdd,'concepts',liste_concepts,"(concepts,forme_principale)")
 
 
 

@@ -582,6 +582,17 @@ def remplir_table(name_bdd,name_table,champs_liste,champs_name):
 	print "      + table " + name_table+" remplie"
 
 
+
+def remplir_table_propre(name_bdd,name_table,champs_liste,champs_name):
+	connection, ex = connexion(name_bdd)
+	for champ in champs_liste:
+		ex("INSERT OR IGNORE INTO "+ name_table + ' ' + champs_name + ','.join('?' * count(champs_name)), champ)
+	connection.commit()
+	connection.close()
+	print "    + table \"" + name_table+"\" remplie"
+
+
+
 def update_multi_table(name_bdd,name_table,champs_name,champs_liste):
 	"remplit la colonne champ_name d'indice id - entree liste de doublon (id, valeur)"
 	connection, ex = connexion(name_bdd)
