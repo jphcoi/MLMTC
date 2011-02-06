@@ -589,7 +589,7 @@ def remplir_table_propre(name_bdd,name_table,champs_liste,champs_name):
 	for champ in champs_liste:
 		insert_cols = ", ".join (champ)
 		insert_qmarks = ", ".join ("?" for _ in champ)
-		sql = "INSERT OR IGNORE  INTO  "+ name_table +  " (%s) VALUES (%s)" % (insert_cols, insert_qmarks)
+		sql = "INSERT OR IGNORE  INTO  "+ name_table +  " (%s) VALUES (%s)" % ( insert_qmarks,insert_cols)
 		print sql
 		ex(sql)
 	connection.commit()
