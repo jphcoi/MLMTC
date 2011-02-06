@@ -588,8 +588,11 @@ def remplir_table_propre(name_bdd,name_table,champs_liste,champs_name):
 	insert_cols = ", ".join (champs_name)
 	insert_qmarks = ", ".join ("?" for _ in champs_liste[0])
 	
-	for champ in champs_liste:
-		champ = list(map(str,champ))
+	for champi in champs_liste:
+		champi = list(map(str,champi))
+		champ=[]
+		for ch in champi:
+			champ.append(ch.decode('utf-8'))
 		sql = "INSERT OR IGNORE  INTO  "+ name_table +  " (%s) VALUES (%s)" % ( insert_cols,insert_qmarks)
 		ex(sql,champ)
 	connection.commit()
