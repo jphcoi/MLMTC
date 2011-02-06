@@ -585,8 +585,10 @@ def remplir_table(name_bdd,name_table,champs_liste,champs_name):
 
 def remplir_table_propre(name_bdd,name_table,champs_liste,champs_name):
 	connection, ex = connexion(name_bdd)
+	
 	for champ in champs_liste:
-		ex("INSERT OR IGNORE INTO "+ name_table + ' ' + champs_name + ','.join('?' * len(champs_name)), champ)
+		print "INSERT OR IGNORE INTO "+ name_table + ' ' + champs_name + ','.join('?' * len(champs_liste[0])), champ
+		ex("INSERT OR IGNORE INTO "+ name_table + ' ' + champs_name + ' ' + ','.join('?' * len(champs_liste[0])), champ)
 	connection.commit()
 	connection.close()
 	print "    + table \"" + name_table+"\" remplie"
