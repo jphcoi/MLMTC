@@ -585,17 +585,18 @@ def remplir_table(name_bdd,name_table,champs_liste,champs_name):
 
 def remplir_table_propre(name_bdd,name_table,champs_liste,champs_name):
 	connection, ex = connexion(name_bdd)
+	insert_cols = ", ".join (champs_name)
+	insert_qmarks = ", ".join ("?" for _ in champs_liste[0])
 	
 	for champ in champs_liste:
-		insert_cols = ", ".join (champ)
-		insert_qmarks = ", ".join ("?" for _ in champ)
-		sql = "INSERT OR IGNORE  INTO  "+ name_table +  " (%s) VALUES (%s)" % ( insert_qmarks,insert_cols)
+		sql = "INSERT OR IGNORE  INTO  "+ name_table +  " (%s) VALUES (%s)" % ( insert_cols,insert_qmarks),champ
 		print sql
 		ex(sql)
 	connection.commit()
 	connection.close()
 	print "    + table \"" + name_table+"\" remplie"
 
+#		ex("INSERT OR IGNORE INTO billets (title, date,permalink,site,categorie1,categorie2,categorie3,categorie4,content,requete,identifiant_unique) VALUES (?,?,?,?,?,?,?,?,?,?,?)", champ)
 
 
 def update_multi_table(name_bdd,name_table,champs_name,champs_liste):
