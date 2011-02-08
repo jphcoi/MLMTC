@@ -322,6 +322,7 @@ def ngramme_build(billet,maxTermLength,dictionnaire_gramme,language,freq_type):
 
 def	ngramme_find(billet_lemmatise,dictionnaire_gramme,concept_list):
 	for x in concept_list:
+		print x
 		term= ' '+x + ' '
 		if term in ' ' + billet_lemmatise +' ':
 			term = term[1:-1]
