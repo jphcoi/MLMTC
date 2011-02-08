@@ -225,7 +225,7 @@ def pack_leven(fichier,fichier_out,language,user_interface,freqmin,Nb_rows = 0):
 			#	print x[0:1].lower()
 			#puis on regarde dans la nouvelle liste s'il y a de nouveaux candidats au poste.
 			#print "classe_history"
-			print classe_history
+			#print classe_history
 			for (y,yl) in zip(formes[numero+1:],lemmes[numero+1:]):
 					j=j+1 
 					first_x = x[0:1].lower()

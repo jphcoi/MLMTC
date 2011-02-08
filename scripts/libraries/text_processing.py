@@ -287,10 +287,10 @@ def tag2(word):
 	for w in words:
 		wv=w.split('_')
 		if len(wv)>1:
-			word = word+' '+wv[0][:2]+'_'+wv[1] 
+			word = word+' '+wv[0][:2]+'_'+''.join(wv[1:])
 		else:
 			word = word+' '+w
-	word = word[1:]		
+	word = word[1:]
 	return word
 
 def ngramme_build(billet,maxTermLength,dictionnaire_gramme,language,freq_type):
@@ -305,6 +305,8 @@ def ngramme_build(billet,maxTermLength,dictionnaire_gramme,language,freq_type):
  			term = ' '.join(wordWindow)
 			if all(map(isNotStopWord,wordWindow)) and not term in stopnWordsSet:
 				term=tag2(term)
+				if '2003' and 'pac' in term:
+					print term
 				if not str(term)=='None':
 					if isNotStopWordForClique(term,language)==True:#False not in map(isNotStopWordForClique,wordWindow): # set(wordWindow) ^ stopWordsSet != set([]) no stop word in term	
 						if not term in dejavu:

@@ -171,6 +171,7 @@ def out_doc(dico_new,dico):
 			norm = dico[x]
 			ratio[x] = float(norm)/float(y)
 		except:
+			print 'et merde'
 			print x
 	return ratio
 
