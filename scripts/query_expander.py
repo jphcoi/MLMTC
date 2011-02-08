@@ -177,7 +177,7 @@ def out_doc(dico_new,dico):
 def add_query(query,x):
 	if x not in query:
 		query.append(x)
-		print x + ' added to the query '
+		#print x + ' added to the query '
 	return query
 
 def query_exander(query,N):
