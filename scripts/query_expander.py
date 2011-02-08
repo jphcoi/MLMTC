@@ -251,8 +251,10 @@ def query_exander(query,N):
 					pass
 		else:
 			fileout=open(path_req + 'query_extension.csv','w')
+			fileout.write('nlemme' + '\t' + ' nb doc. in  ' + '\t' + "pourcentage doc in" +'\t' +  ' nb doc out ' + '\t'+'poucentage doc out' +'\t' +' ratio: ' +'\n')
+
 			for x in ratio_l:
-				fileout.write(str(x[0]) +'\t' + str(dico_new[x[0]]) +' doc. in ( '+str(float(dico_new[x[0]])/float(N_new)*100.) +'% )' + ' vs ' + str(dico[x[0]])+' doc. out ( '+str(float(dico[x[0]])/float(N)*100.) +'% )' + ' => ratio: ' + str(float(dico_new[x[0]])/float(N_new)/(float(dico[x[0]])/float(N))))
+				fileout.write(str(x[0]) +'\t' + str(dico_new[x[0]]) +'\t'+str(float(dico_new[x[0]])/float(N_new)*100.) + '\t' + str(dico[x[0]])+' \t'+str(float(dico[x[0]])/float(N)*100.) +'\t ' + str(float(dico_new[x[0]])/float(N_new)/(float(dico[x[0]])/float(N))) + '\n')
 		print 'query finale'
 		print query
 		var = raw_input('Do you wish to perform a new indexation of the database based on the new query ?')
