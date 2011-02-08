@@ -219,33 +219,39 @@ def query_exander(query,N):
 		steps=100000
 		nb_question=0
 		champs_name = "(id,title,date,permalink,site,categorie1,categorie2,categorie3,content,content_lemmatise,href,requete,identifiant_unique)"#on n'enregistre pas le html brut
-		for x in ratio_l:
-			if nb_question<steps:
-				val = x[1]
-				if dico_new[x[0]]!=dico[x[0]]:
-					info ='\n'
-					#affichage des exemples:
-					exemple=0
-					if exemple >0:
-						nouveaux_billets = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'billets',champs_name[1:-1],"where content_lemmatise like '%" + x[0]  +"%'")
+		mode_dynamique=0
+		 
+		if mode_dynamique==1:
+			for x in ratio_l:
+				if nb_question<steps:
+					val = x[1]
+					if dico_new[x[0]]!=dico[x[0]]:
+						info ='\n'
+						#affichage des exemples:
+						exemple=0
+						if exemple >0:
+							nouveaux_billets = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'billets',champs_name[1:-1],"where content_lemmatise like '%" + x[0]  +"%'")
 					
-						for billets in nouveaux_billets[:9]:
-							if not billets[0] in id_new:
-								info=info +  '*** '+ billets[1] + '(' + billets[4]  + ')' + '\n'
-						print info
+							for billets in nouveaux_billets[:9]:
+								if not billets[0] in id_new:
+									info=info +  '*** '+ billets[1] + '(' + billets[4]  + ')' + '\n'
+							print info
 						print str(dico_new[x[0]]) +' doc. in ( '+str(float(dico_new[x[0]])/float(N_new)*100.) +'% )' + ' vs ' + str(dico[x[0]])+' doc. out ( '+str(float(dico[x[0]])/float(N)*100.) +'% )' + ' => ratio: ' + str(float(dico_new[x[0]])/float(N_new)/(float(dico[x[0]])/float(N)))
 
-					var = raw_input('Do you wish to add "' + x[0] + '" to the query ?')
-					if var=='y':
+						var = raw_input('Do you wish to add "' + x[0] + '" to the query ?')
+						if var=='y':
+							query =  add_query(query,x[0])
+							fonctions_bdd.remplir_table(name_bdd_new,'billets',nouveaux_billets,champs_name)
+							nb_question=nb_question+1
+						if var=='s':
+							steps=0
+					else:
 						query =  add_query(query,x[0])
-						fonctions_bdd.remplir_table(name_bdd_new,'billets',nouveaux_billets,champs_name)
-						nb_question=nb_question+1
-					if var=='s':
-						steps=0
 				else:
-					query =  add_query(query,x[0])
-			else:
-				pass
+					pass
+		else:
+			fileout=open(path_req + 'query_extension.csv','w')
+			fileout.write(str(x[0]) +'\t' + str(dico_new[x[0]]) +' doc. in ( '+str(float(dico_new[x[0]])/float(N_new)*100.) +'% )' + ' vs ' + str(dico[x[0]])+' doc. out ( '+str(float(dico[x[0]])/float(N)*100.) +'% )' + ' => ratio: ' + str(float(dico_new[x[0]])/float(N_new)/(float(dico[x[0]])/float(N))))
 		print 'query finale'
 		print query
 		var = raw_input('Do you wish to perform a new indexation of the database based on the new query ?')
