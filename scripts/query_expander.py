@@ -159,12 +159,12 @@ def fast_ngram_counter_x(input):
 	
 def fast_ngram_counter(name_bdd,concept_list=''):	
 	Nb_rows = fonctions_bdd.count_rows(name_bdd,'billets')
-	size_seq = 200
+	size_seq = 2000
 	nb_sequences = Nb_rows/size_seq
 	dictionnaire_gramme = {}#initialisation du dictionnaire de lemmes
 	billetprocessed_after_requete=0 #counts the number of processed posts
 	import multiprocessing
-	pool_size = multiprocessing.cpu_count() * 2
+	pool_size = multiprocessing.cpu_count()
 	pool = multiprocessing.Pool(processes=pool_size)
 	inputs=[]
 	for x in range(nb_sequences+1):
