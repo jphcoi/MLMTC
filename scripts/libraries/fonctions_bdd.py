@@ -43,10 +43,13 @@ def insert_select_substring(name_bdd,name_table1,name_table2,entree,champ):
 	connection.close()
 
 
-def creer_table_billets(name_bdd,name_table):
+def creer_table_billets(name_bdd,name_table,nb_categ=3):
 	connection,ex = connexion(name_bdd)
 	try:
-		ex('CREATE TABLE '+ name_table +' (id INTEGER PRIMARY KEY,title text, date datetime, permalink VARCHAR(1000), site VARCHAR(1500), auteur_id VARCHAR(300), categorie1 VARCHAR(200), categorie2 VARCHAR(200), categorie3 VARCHAR(200), categorie4 VARCHAR(200), categorie5 VARCHAR(200),content_lemmatise text, content text, href text, jours INTEGER, concepts text,identifiant_unique VARCHAR(2000) unique,requete VARCHAR(200))')
+		if nb_categ==3:
+			ex('CREATE TABLE '+ name_table +' (id INTEGER PRIMARY KEY,title text, date datetime, permalink VARCHAR(1000), site VARCHAR(1500), auteur_id VARCHAR(300), categorie1 VARCHAR(200), categorie2 VARCHAR(200), categorie3 VARCHAR(200),content_lemmatise text, content text, href text, jours INTEGER, concepts text,identifiant_unique VARCHAR(2000) unique,requete VARCHAR(200))')
+		else:
+			ex('CREATE TABLE '+ name_table +' (id INTEGER PRIMARY KEY,title text, date datetime, permalink VARCHAR(1000), site VARCHAR(1500), auteur_id VARCHAR(300), categorie1 VARCHAR(200), categorie2 VARCHAR(200), categorie3 VARCHAR(200), categorie4 VARCHAR(200), categorie5 VARCHAR(200),content_lemmatise text, content text, href text, jours INTEGER, concepts text,identifiant_unique VARCHAR(2000) unique,requete VARCHAR(200))')
 		print "    + table (billets) \"" +name_table+"\" creee"
 	except:
 		print "    * table (billets) \"" +name_table+"\" deja creee"
