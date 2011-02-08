@@ -164,8 +164,8 @@ def fast_ngram_counter(name_bdd,concept_list=''):
 	dictionnaire_gramme = {}#initialisation du dictionnaire de lemmes
 	billetprocessed_after_requete=0 #counts the number of processed posts
 	import multiprocessing
-	pool_size = min(nb_sequences+1,multiprocessing.cpu_count())
-	pool = multiprocessing.Pool(processes=pool_size)*4
+	pool_size = min(nb_sequences+1,multiprocessing.cpu_count()*4)
+	pool = multiprocessing.Pool(processes=pool_size)
 	inputs=[]
 	for x in range(nb_sequences+1):
 		inputs.append((x,size_seq,Nb_rows,sample,nb_sequences,concept_list))
