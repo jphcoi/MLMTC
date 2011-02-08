@@ -159,13 +159,13 @@ def fast_ngram_counter_x(input):
 	
 def fast_ngram_counter(name_bdd,concept_list=''):	
 	Nb_rows = fonctions_bdd.count_rows(name_bdd,'billets')
-	size_seq = 2000
+	size_seq = 5000
 	nb_sequences = Nb_rows/size_seq
 	dictionnaire_gramme = {}#initialisation du dictionnaire de lemmes
 	billetprocessed_after_requete=0 #counts the number of processed posts
 	import multiprocessing
 	pool_size = min(nb_sequences+1,multiprocessing.cpu_count())
-	pool = multiprocessing.Pool(processes=pool_size)
+	pool = multiprocessing.Pool(processes=pool_size)*4
 	inputs=[]
 	for x in range(nb_sequences+1):
 		inputs.append((x,size_seq,Nb_rows,sample,nb_sequences,concept_list))
@@ -224,14 +224,16 @@ def query_exander(query,N):
 				val = x[1]
 				if dico_new[x[0]]!=dico[x[0]]:
 					info ='\n'
-
-					nouveaux_billets = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'billets',champs_name[1:-1],"where content_lemmatise like '%" + x[0]  +"%'")
+					#affichage des exemples:
+					exemple=0
+					if exemple >0:
+						nouveaux_billets = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'billets',champs_name[1:-1],"where content_lemmatise like '%" + x[0]  +"%'")
 					
-					for billets in nouveaux_billets[:9]:
-						if not billets[0] in id_new:
-							info=info +  '*** '+ billets[1] + '(' + billets[4]  + ')' + '\n'
-					print info
-					print str(dico_new[x[0]]) +' doc. in ( '+str(float(dico_new[x[0]])/float(N_new)*100.) +'% )' + ' vs ' + str(dico[x[0]])+' doc. out ( '+str(float(dico[x[0]])/float(N)*100.) +'% )' + ' => ratio: ' + str(float(dico_new[x[0]])/float(N_new)/(float(dico[x[0]])/float(N)))
+						for billets in nouveaux_billets[:9]:
+							if not billets[0] in id_new:
+								info=info +  '*** '+ billets[1] + '(' + billets[4]  + ')' + '\n'
+						print info
+						print str(dico_new[x[0]]) +' doc. in ( '+str(float(dico_new[x[0]])/float(N_new)*100.) +'% )' + ' vs ' + str(dico[x[0]])+' doc. out ( '+str(float(dico[x[0]])/float(N)*100.) +'% )' + ' => ratio: ' + str(float(dico_new[x[0]])/float(N_new)/(float(dico[x[0]])/float(N)))
 
 					var = raw_input('Do you wish to add "' + x[0] + '" to the query ?')
 					if var=='y':
@@ -251,7 +253,8 @@ def query_exander(query,N):
 			encore=0
 	return query
 
-query,N = select_query()
+#query,N = select_query()
+query,N = ['NO_faucheurs AD_volontaires'],284
 print query_exander(query,N)
 			
 def nettoyer_site(chaine,chainel,site):
