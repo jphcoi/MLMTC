@@ -43,7 +43,7 @@ def insert_select_substring(name_bdd,name_table1,name_table2,entree,champ):
 	connection.close()
 
 
-def creer_table_billets(name_bdd,name_table,nb_categ=3):
+def creer_table_billets(name_bdd,name_table,nb_categ=5):
 	connection,ex = connexion(name_bdd)
 	try:
 		if nb_categ==3:

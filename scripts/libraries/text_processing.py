@@ -305,8 +305,6 @@ def ngramme_build(billet,maxTermLength,dictionnaire_gramme,language,freq_type):
  			term = ' '.join(wordWindow)
 			if all(map(isNotStopWord,wordWindow)) and not term in stopnWordsSet:
 				term=tag2(term)
-				if '2003' and 'pac' in term:
-					print term
 				if not str(term)=='None':
 					if isNotStopWordForClique(term,language)==True:#False not in map(isNotStopWordForClique,wordWindow): # set(wordWindow) ^ stopWordsSet != set([]) no stop word in term	
 						if not term in dejavu:
@@ -323,6 +321,7 @@ def ngramme_build(billet,maxTermLength,dictionnaire_gramme,language,freq_type):
 	return dictionnaire_gramme
 
 def	ngramme_find(billet_lemmatise,dictionnaire_gramme,concept_list):
+
 	for x in concept_list:
 		term= ' '+x + ' '
 		if term in ' ' + billet_lemmatise +' ':

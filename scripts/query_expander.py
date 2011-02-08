@@ -129,31 +129,49 @@ def select_query(query=[]):
 	os.remove(name_bdd_temp)
 	return specific_nlemmes,fonctions_bdd.count_rows(name_bdd,'billets')
 
+
+def fast_ngram_counter_x(input):
+	x = input[0]
+	size_seq = input[1]
+	Nb_rows=input[2]
+	sample = input[3]
+	nb_sequences=input[4]
+	concept_list=input[5]
+	dictionnaire_gramme_x={}
+	lim_d = str(size_seq*x)
+	if x<nb_sequences:
+		duration = str(size_seq)
+	else:
+		duration = str(min(Nb_rows - size_seq*x,sample))
+	where=1
+	contenu = fonctions_bdd.select_bdd_table_where_limite(name_bdd,'billets','content_lemmatise',sample,requete,where,lim_d+','+duration,Nb_rows)
+	billetprocessed_after_requete=0
+	for billetlemm in contenu:
+		billetprocessed_after_requete=1+billetprocessed_after_requete
+		if not billetprocessed_after_requete%500 or billetprocessed_after_requete == len(contenu) : 
+			print '---------'+str(billetprocessed_after_requete)+ ' traités (export ngrammes sur '+str(Nb_rows)+ ' billets)'
+		billet_lemmatise =  billetlemm[0]
+		if concept_list=='':
+			dictionnaire_gramme_x = text_processing.ngramme_build(billet_lemmatise.split(),maxTermLength,dictionnaire_gramme_x,language,'billet')
+		else:
+			dictionnaire_gramme_x = text_processing.ngramme_find(billet_lemmatise,dictionnaire_gramme_x,concept_list)
+	return dictionnaire_gramme_x
+	
 def fast_ngram_counter(name_bdd,concept_list=''):	
 	Nb_rows = fonctions_bdd.count_rows(name_bdd,'billets')
 	size_seq = 200
 	nb_sequences = Nb_rows/size_seq
 	dictionnaire_gramme = {}#initialisation du dictionnaire de lemmes
 	billetprocessed_after_requete=0 #counts the number of processed posts
+	import multiprocessing
+	pool_size = multiprocessing.cpu_count() * 2
+	pool = multiprocessing.Pool(processes=pool_size)
+	inputs=[]
 	for x in range(nb_sequences+1):
-		
-		dictionnaire_gramme_x={}
-		lim_d = str(size_seq*x)
-		if x<nb_sequences:
-			duration = str(size_seq)
-		else:
-			duration = str(min(Nb_rows - size_seq*x,sample))
-		where=1
-		contenu = fonctions_bdd.select_bdd_table_where_limite(name_bdd,'billets','content_lemmatise',sample,requete,where,lim_d+','+duration,Nb_rows)
-		for billetlemm in contenu:
-			billetprocessed_after_requete=1+billetprocessed_after_requete
-			if not billetprocessed_after_requete%500 or billetprocessed_after_requete == len(contenu) : 
-				print '---------'+str(billetprocessed_after_requete)+ ' traités (export ngrammes sur '+str(Nb_rows)+ ' billets)'
-			billet_lemmatise =  billetlemm[0]
-			if concept_list=='':
-				dictionnaire_gramme_x = text_processing.ngramme_build(billet_lemmatise.split(),maxTermLength,dictionnaire_gramme_x,language,'billet')
-			else:
-				dictionnaire_gramme_x = text_processing.ngramme_find(billet_lemmatise,dictionnaire_gramme_x,concept_list)
+		inputs.append((x,size_seq,Nb_rows,sample,nb_sequences,concept_list))
+	pool_outputs = pool.map(fast_ngram_counter_x, inputs)	
+	dictionnaire_gramme={}
+	for dictionnaire_gramme_x in pool_outputs:
 		dictionnaire_gramme=fonctions_lib.merge(dictionnaire_gramme, dictionnaire_gramme_x, lambda x,y:x+y)
 	if concept_list=='':
 		dictionnaire_gramme = misc.freq_tri(dictionnaire_gramme,freqmin,int(math.floor(top*1.1)),language,ng_filter)#on effectue le tri de notre dictionnaire
