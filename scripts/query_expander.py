@@ -167,8 +167,11 @@ def trier_dictionnaire(dico):
 def out_doc(dico_new,dico):
 	ratio={}
 	for x,y in dico_new.iteritems():
-		norm = dico[x]
-		ratio[x] = float(norm)/float(y)
+		try:
+			norm = dico[x]
+			ratio[x] = float(norm)/float(y)
+		except:
+			print x
 	return ratio
 
 def add_query(query,x):
