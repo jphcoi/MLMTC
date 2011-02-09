@@ -137,6 +137,7 @@ def fast_ngram_counter_x(input):
 	sample = input[3]
 	nb_sequences=input[4]
 	concept_list=input[5]
+	name_bdd = input[6]
 	dictionnaire_gramme_x={}
 	lim_d = str(size_seq*x)
 	if x<nb_sequences:
@@ -168,7 +169,7 @@ def fast_ngram_counter(name_bdd,concept_list=''):
 	pool = multiprocessing.Pool(processes=pool_size)
 	inputs=[]
 	for x in range(nb_sequences+1):
-		inputs.append((x,size_seq,Nb_rows,sample,nb_sequences,concept_list))
+		inputs.append((x,size_seq,Nb_rows,sample,nb_sequences,concept_list,name_bdd))
 	pool_outputs = pool.map(fast_ngram_counter_x, inputs)	
 	dictionnaire_gramme={}
 	for dictionnaire_gramme_x in pool_outputs:
@@ -251,10 +252,11 @@ def query_exander(query,N):
 					pass
 		else:
 			fileout=open(path_req + 'query_extension.csv','w')
+			print path_req + 'query_extension.csv'
 			fileout.write('nlemme' + '\t' + ' nb doc. in  ' + '\t' + "pourcentage doc in" +'\t' +  ' nb doc out ' + '\t'+'poucentage doc out' +'\t' +' ratio: ' +'\n')
-
 			for x in ratio_l:
 				fileout.write(str(x[0]) +'\t' + str(dico_new[x[0]]) +'\t'+str(float(dico_new[x[0]])/float(N_new)*100.) + '\t' + str(dico[x[0]])+' \t'+str(float(dico[x[0]])/float(N)*100.) +'\t ' + str(float(dico_new[x[0]])/float(N_new)/(float(dico[x[0]])/float(N))) + '\n')
+				print str(x[0]) +'\t' + str(dico_new[x[0]]) +'\t'+str(float(dico_new[x[0]])/float(N_new)*100.) + '\t' + str(dico[x[0]])+' \t'+str(float(dico[x[0]])/float(N)*100.) +'\t ' + str(float(dico_new[x[0]])/float(N_new)/(float(dico[x[0]])/float(N))) + '\n'
 		print 'query finale'
 		print query
 		var = raw_input('Do you wish to perform a new indexation of the database based on the new query ?')
@@ -262,8 +264,8 @@ def query_exander(query,N):
 			encore=0
 	return query
 
-#query,N = select_query()
-query,N = ['NO_faucheurs AD_volontaires'],284
+query,N = select_query()
+#query,N = ['NO_faucheurs AD_volontaires'],284
 print query_exander(query,N)
 			
 def nettoyer_site(chaine,chainel,site):
