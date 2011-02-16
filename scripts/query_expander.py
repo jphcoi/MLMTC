@@ -95,7 +95,7 @@ def select_query(query=[]):
 	except:
 		#tous les termes de la query n'ont pas encore été indexés, on passe à une méthode like.
 		where_like = " where content_lemmatise like '%"
-		where_like = where_like + "%' or  content_lemmatise like '% ".join(specific_nlemmes) + " %'"
+		where_like = where_like + " %' or  content_lemmatise like '% ".join(specific_nlemmes) + " %'"
 		print where_like
 		sous_corpus_idb = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'billets','id',where_like )
 
