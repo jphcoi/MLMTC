@@ -95,7 +95,7 @@ def select_query(query=[]):
 	except:
 		#tous les termes de la query n'ont pas encore été indexés, on passe à une méthode like.
 		where_like = " where content_lemmatise like '%"
-		where_like = where_like + "%' or  content_lemmatise like '%".join(specific_nlemmes) + "%'"
+		where_like = where_like + "%' or  content_lemmatise like '% ".join(specific_nlemmes) + " %'"
 		print where_like
 		sous_corpus_idb = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'billets','id',where_like )
 
@@ -231,7 +231,7 @@ def query_exander(query,N):
 						#affichage des exemples:
 						exemple=0
 						if exemple >0:
-							nouveaux_billets = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'billets',champs_name[1:-1],"where content_lemmatise like '%" + x[0]  +"%'")
+							nouveaux_billets = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'billets',champs_name[1:-1],"where content_lemmatise like '% " + x[0]  +" %'")
 					
 							for billets in nouveaux_billets[:9]:
 								if not billets[0] in id_new:
