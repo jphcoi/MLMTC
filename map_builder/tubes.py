@@ -22,6 +22,7 @@ import fonctions_lib
 import network_layout
 path_req = parameters.path_req
 years_bins = parameters.years_bins
+print years_bins
 name_bdd = parameters.name_bdd
 path_req=parameters.path_req
 degmax=5
@@ -52,10 +53,13 @@ def add_link(clusters,reseau,type_lien):
 		champ1 = liens[2]
 		champ2 = liens[5]
 		if champ1 in clusters and champ2 in clusters:
-			stre = liens[6]
+			stre = float(liens[6])
 			dict_id = clusters[champ1]
 			dico = dict_id.get(type_lien,{})
-			dico[champ2] = stre
+			if type_lien=='dia':
+				dico[champ2] = stre * 10.
+			else:
+				dico[champ2] = stre
 			dict_id[type_lien] = dico
 			clusters[champ1] = dict_id
 	return clusters
@@ -75,6 +79,7 @@ def load_data(orphan_number):
 	years_bins_first = []
 	for years in years_bins:
 		years_bins_first.append(years[0])
+		
 	for cluster_terme in res_cluster:
 		[id_cluster,periode,id_cluster_univ,label_1,label_2,level,concept,nb_fathers,nb_sons,label] = cluster_terme
 		periode = years_bins_first.index(int(str(periode).split(' ')[0]))
@@ -145,6 +150,7 @@ orphan_number = 1
 
 try:
 	liens_totaux_syn,liens_totaux_dia,clusters,years_bins = fonctions.dumpingout('liens_totaux_syn'+ str(orphan_number)),fonctions.dumpingout('liens_totaux_dia'+ str(orphan_number)),fonctions.dumpingout('clusters'+ str(orphan_number)),fonctions.dumpingout('years_bins'+ str(orphan_number))
+	print 'data loaded'
 except:
 	print 'tubes coordinates being computed'
 	dico_termes,clusters,dist_mat = load_data(orphan_number)

@@ -1,4 +1,4 @@
-name_data_old="../../inout/data/MESR_20100715_20100915.lfl"
+name_data_old="../../inout/data/MESR.lfl"
 name_data="../../inout/data/MESR.lfl"
 language ='french'
 date_depart =  date(2010,1,1)
@@ -15,7 +15,7 @@ build_link_tables='y'
 maxTermLength=5
 nofigure=0
 user_interface='n'
-withrequete=1
-continent='societe'
+withrequete=0
+continent=''
 
 

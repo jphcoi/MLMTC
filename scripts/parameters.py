@@ -206,7 +206,13 @@ name_bdd = path_req + requete+ '.db'
 #decoupage hebdomadaire
 try:
 	if name_data[-4:] in ['.lfl','.rss']:
-		jours = select_bdd_table_champ_simple(name_bdd,'billets','jours')
+		try:
+			jours = select_bdd_table_champ_simple(name_bdd,'billets','jours')
+		except:
+			try:
+				jours = select_bdd_table_champ_simple(name_bdd,'socsem','jours')	
+			except:
+				pass
 		dated = min(jours)
 		prop =  7 * (int(dated[0]) / 7)  + 4 #c'est le jour du 1er janvier 2010 qui dicte cela
 		if prop>=dated[0]:
@@ -226,13 +232,12 @@ try:
 		datef = int(datef[0])
 except:
 	pass
-
+	
 
 
 try:
 	years_bins = build_years_bins(fenetre,dated,datef,overlap)
 	years_bins_no_overlap = build_years_bins(fenetre,years_bins[0][0],years_bins[-1][-1],0)
-	print years_bins
 except:
 	print 'years_bins non calculables pour le moment'
 	
