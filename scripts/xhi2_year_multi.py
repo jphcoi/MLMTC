@@ -83,7 +83,7 @@ def build_nbbillet(contenu,years_bin):
 			if jour in val:
 				n_cl =  len(convert_clique_txt_2_list(concepts_ids))
 				#nb_billets[idx]=nb_billets[idx]+1
-				nb_billets[idx]=nb_billets[idx]+n_cl*(n_cl)/2
+				nb_billets[idx]=nb_billets[idx]+n_cl*(n_cl-1)/2
 	return nb_billets
 
 
@@ -158,7 +158,7 @@ def build_cooc(voisins,nb_billets):
 		terme2=x[1]
 		inter= x[2]
 		p_cooccurrences_ordre1[(terme1,inter)] = p_cooccurrences_ordre1.get((terme1,inter),0.) + y
-		p_cooccurrences_ordre1[(terme2,inter)] = p_cooccurrences_ordre1.get((terme1,inter),0.) + y
+		p_cooccurrences_ordre1[(terme2,inter)] = p_cooccurrences_ordre1.get((terme2,inter),0.) + y
 	
 	#print p_cooccurrences
 	print '\n'
@@ -200,8 +200,8 @@ def build_mutual_information(p_cooccurrences,p_cooccurrences_ordre1,nb_billets):
 				#muti[x]=math.log((y-T)*(y-T)/T,2)
 				expected =nb_billets[inter] *  p_cooccurrences_ordre1[(terme1,inter)]*p_cooccurrences_ordre1[(terme2,inter)]
 				xhi2 = (p_cooccurrences.get((terme1,terme2,inter),0.) - expected)**2 / expected
-				if xhi2>250:
-					print dico_termes[terme1],'\t',dico_termes[terme2],'\t',xhi2
+				#if xhi2>25000:
+				#	print dico_termes[terme1],'\t',dico_termes[terme2],'\t',xhi2
 				muti[x] = xhi2
 	return muti
 
