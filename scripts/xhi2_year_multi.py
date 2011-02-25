@@ -78,9 +78,12 @@ def build_nbbillet(contenu,years_bin):
 	nb_billets = init_dictionnary_list(len(years_bins),0)
 	for cont in contenu:
 		jour = cont[1]
+		concepts_ids = cont[0]
 		for idx, val in enumerate(years_bins):
 			if jour in val:
-				nb_billets[idx]=nb_billets[idx]+1
+				n_cl =  len(convert_clique_txt_2_list(concepts_ids))
+				#nb_billets[idx]=nb_billets[idx]+1
+				nb_billets[idx]=nb_billets[idx]+n_cl*(n_cl)/2
 	return nb_billets
 
 
@@ -130,7 +133,7 @@ def unique(liste):
 def build_cooc(voisins,nb_billets):
 	p_cooccurrences={}
 	p_cooccurences_lignes={}
-
+	p_cooccurrences_ordre1={}
 	#p_cooccurrences[terme1,terme2,intervalle] = proba du terme
 	compt=0
 	waiting_time = len(voisins)
@@ -150,14 +153,20 @@ def build_cooc(voisins,nb_billets):
 		p_cooccurences_lignes[terme1] = dict_temp
 		for terme2 in voisinage:
 			p_cooccurrences[(terme1,terme2,inter)] = float(dict_temp[terme2]) / N
-			
+	for x,y in p_cooccurrences.iteritems():
+		terme1 = x[0]
+		terme2=x[1]
+		inter= x[2]
+		p_cooccurrences_ordre1[(terme1,inter)] = p_cooccurrences_ordre1.get((terme1,inter),0.) + y
+		p_cooccurrences_ordre1[(terme2,inter)] = p_cooccurrences_ordre1.get((terme1,inter),0.) + y
+	
 	#print p_cooccurrences
 	print '\n'
 	
 	print 'matrice temporelle de cooccurrence ecrite'
 	print '\n'
 	
-	return p_cooccurrences,p_cooccurences_lignes
+	return p_cooccurrences,p_cooccurences_lignes,p_cooccurrences_ordre1
 
 
 
@@ -175,18 +184,25 @@ def build_cooc_matrix(contenu, years_bin):
 	print "variable voisins construite"
 	print '\n'
 	
-	p_cooccurrences,p_cooccurrences_lignes=build_cooc(voisins,nb_billets)
-	return p_cooccurrences,nb_billets[0],p_cooccurrences_lignes
+	p_cooccurrences,p_cooccurrences_lignes,p_cooccurrences_ordre1=build_cooc(voisins,nb_billets)
+	return p_cooccurrences,nb_billets,p_cooccurrences_lignes,p_cooccurrences_ordre1
 	
 	
 #muti[(terme1,terme2,intervalle)]=MI(t1,t2,t)
-def build_mutual_information(p_cooccurrences):
+def build_mutual_information(p_cooccurrences,p_cooccurrences_ordre1,nb_billets):
 	muti={}
-	for x,y in p_cooccurrences.iteritems():
-		T=p_cooccurrences[(x[0],x[0],x[2])]*p_cooccurrences[(x[1],x[1],x[2])]
-		muti[x]=math.log10( y/T )
-		#version andrei
-		#muti[x]=(y-T)*(y-T)/T
+	for x in p_cooccurrences_ordre1:
+		terme1=x[0]
+		inter =x[1]
+		for x2 in p_cooccurrences_ordre1:
+			if x2[0] != terme1 and inter == x2[1]:
+ 				terme2 = x2[0]
+				#muti[x]=math.log((y-T)*(y-T)/T,2)
+				expected =nb_billets[inter] *  p_cooccurrences_ordre1[(terme1,inter)]*p_cooccurrences_ordre1[(terme2,inter)]
+				xhi2 = (p_cooccurrences.get((terme1,terme2,inter),0.) - expected)**2 / expected
+				if xhi2>250:
+					print dico_termes[terme1],'\t',dico_termes[terme2],'\t',xhi2
+				muti[x] = xhi2
 	return muti
 
 def lire_dist_mat_file(fichier_CF):
@@ -256,10 +272,6 @@ def distribution_distance_build(p_cooccurrences,dico_termes,p_cooccurrences_lign
 	return distribution_distance
 	
 def export_concepts_xhi2 (xhi2val,p_cooccurrences,dico_termes,dico_lemmes,year):
-#	file_freq_exact =  path_req +'years/'+ requete +str(year) + '_'  +  'frequences_exactes.csv'
-#	fichier_out =file(file_freq_exact,'w')
-#	def format(value):
-#	    return "%.9f" % value
 	conceptxhi2 = open(path_req +'years/'+ requete +str(year) + '_'  + 'conceptsxhi2.csv','w')
 	for x in dico_termes:
 		try:
@@ -283,20 +295,6 @@ print '\n'
 
 
 
-#traite le multi-type des variables:
-# try:
-# 	datef=datef[0]
-# 	dated=dated[0]
-# except:
-# 	pass
-	
-#dated = years_bins[0][0]
-#datef = years_bins[-1][-1]
-#print dated,datef
-#years_bins = []
-#for y in range(datef-dated+1):
-#	years_bins.append(y+dated)
-#years_bins=[years_bins]
 years=parameters.years_bins_no_overlap
 
 def xhi2_comp(year):
@@ -310,7 +308,7 @@ def xhi2_comp(year):
 	print '\n'
 	from time import time
 	timeavt = time()
-	p_cooccurrences,NN,p_cooccurrences_lignes = build_cooc_matrix(contenu,year)
+	p_cooccurrences,nb_billets,p_cooccurrences_lignes,p_cooccurrences_ordre1 = build_cooc_matrix(contenu,year)
 	print 'coocc fabriquées'
 	timeapres = timeavt
 	timeavt = time()
@@ -339,14 +337,17 @@ def xhi2_comp(year):
 	# print 'duree de la derniere etape : ' + str(timeavt-timeapres) + '\n'
 	# print "matrice de cooccurrence construite"
 
-	muti = build_mutual_information(p_cooccurrences)
+	muti = build_mutual_information(p_cooccurrences,p_cooccurrences_ordre1,nb_billets)
+#	print muti
 	thres=0.
 	xhi2val = xhi2(muti,thres)
 	export_concepts_xhi2(xhi2val,p_cooccurrences,dico_termes,dico_lemmes,year)
 	
-	
+# 	
 pool_size = int(multiprocessing.cpu_count())
 pool = multiprocessing.Pool(processes=pool_size)
+print years
 pool.map(xhi2_comp, years)
-
+# for year in years:
+# 	xhi2_comp(year)
 fusion_years.fusion('conceptsxhi2')
