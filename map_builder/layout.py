@@ -139,7 +139,7 @@ spring_layout=fruchterman_reingold_layout
 def _fruchterman_reingold(A,vert_pos,dim=2,
                           pos=None,
                           fixed=None,
-                          iterations=50,
+                          iterations=5000,
                           weighted=True):
     # Position nodes in adjacency matrix A using Fruchterman-Reingold  
     # Entry point for NetworkX graph is fruchterman_reingold_layout()
@@ -175,7 +175,7 @@ def _fruchterman_reingold(A,vert_pos,dim=2,
     k=np.sqrt(1.0/nnodes) 
     # the initial "temperature"  is about .1 of domain area (=1x1)
     # this is the largest step allowed in the dynamics.
-    t=0.1
+    t=0.5
     # simple cooling scheme.
     # linearly step down by dt on each iteration so last iteration is size dt.
     dt=t/float(iterations+1) 
@@ -192,7 +192,7 @@ def _fruchterman_reingold(A,vert_pos,dim=2,
         # distance between points
         distance=np.sqrt((delta**2).sum(axis=-1))
         #print distance
-        # enforce minimum distance of 0.02
+        # enforce minimum distance of 0.01
         min_dist = 0.01
         distance=np.where(distance<0.01,0.01,distance)
         # displacement "force"

@@ -144,21 +144,16 @@ def build_cooc(voisins,nb_billets):
 		N = nb_billets[x[1]]
 		terme1 = x[0]
 		inter = x[1]
-		voisinage = set(y)
 		dict_temp={}
-		for terme2 in voisinage:
-			dict_temp[terme2] = 0
 		for terme2 in y:
-			dict_temp[terme2] = dict_temp[terme2]  + 1
+			dict_temp[terme2] = dict_temp.get(terme2,0)  + 1
 		p_cooccurences_lignes[terme1] = dict_temp
-		for terme2 in voisinage:
+		for terme2 in dict_temp:
 			p_cooccurrences[(terme1,terme2,inter)] = float(dict_temp[terme2]) / N
 	for x,y in p_cooccurrences.iteritems():
 		terme1 = x[0]
-		terme2=x[1]
 		inter= x[2]
 		p_cooccurrences_ordre1[(terme1,inter)] = p_cooccurrences_ordre1.get((terme1,inter),0.) + y
-		p_cooccurrences_ordre1[(terme2,inter)] = p_cooccurrences_ordre1.get((terme2,inter),0.) + y
 	
 	#print p_cooccurrences
 	print '\n'
@@ -198,8 +193,8 @@ def build_mutual_information(p_cooccurrences,p_cooccurrences_ordre1,nb_billets):
 			if x2[0] != terme1 and inter == x2[1]:
  				terme2 = x2[0]
 				#muti[x]=math.log((y-T)*(y-T)/T,2)
-				expected =nb_billets[inter] *  p_cooccurrences_ordre1[(terme1,inter)]*p_cooccurrences_ordre1[(terme2,inter)]
-				xhi2 = (p_cooccurrences.get((terme1,terme2,inter),0.) - expected)**2 / expected
+				expected = nb_billets[inter] *  p_cooccurrences_ordre1[(terme1,inter)]*p_cooccurrences_ordre1[(terme2,inter)]
+				xhi2 = ( nb_billets[inter]*p_cooccurrences.get((terme1,terme2,inter),0.) - expected)**2 / expected
 				#if xhi2>25000:
 				#	print dico_termes[terme1],'\t',dico_termes[terme2],'\t',xhi2
 				muti[x] = xhi2
@@ -276,7 +271,7 @@ def export_concepts_xhi2 (xhi2val,p_cooccurrences,dico_termes,dico_lemmes,year):
 	for x in dico_termes:
 		try:
 			#conceptxhi2.write(dico_lemmes[x] + '\t' + dico_termes[x] + '\t' + str(p_cooccurrences[(x,x,0)]).replace('.',',') + '\t' + str(xhi2val[x]).replace('.',',')+ '\t' + str(xhi2val[x]*p_cooccurrences[(x,x,0)]).replace('.',',') + '\n' )
-			conceptxhi2.write(dico_lemmes[x] + '\t' + dico_termes[x] + '\t' +  '\t' + str(xhi2val[x]).replace('.',',')+ '\t' +  '\n' )
+			conceptxhi2.write(dico_lemmes[x] + '\t' + dico_termes[x] + '\t' +str(p_cooccurrences[(x,x,years.index(year))]).replace('.',',')+  '\t' + str(xhi2val[x]).replace('.',',')+ '\t' +  '\n' )
 		except:
 			#conceptxhi2.write(dico_lemmes[x] + '\t' + dico_termes[x] + '\t' + '\t' + '\t' +  '\t'+ '\t' + '\t' + '\n' )
 			conceptxhi2.write(dico_lemmes[x] + '\t' + dico_termes[x] + '\t' + '\t' + '\t' +  '\t' + '\n' )
