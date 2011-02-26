@@ -48,6 +48,35 @@ seuil=0.2
 #######export #####################
 ###################################
 
+
+def distribution_distance_build(p_cooccurrences,dico_termes,p_cooccurrences_lignes):
+	epsilon = 0.0
+	distribution_distance={}
+	N = len(dico_termes.keys())
+	Ncoocc = {}
+	for x,t in p_cooccurrences_lignes.iteritems():
+		Ncoocc[x]=sum(t.values())
+	compt=0
+	waiting_time= N
+	for x in range(N):
+		compt+=1
+		if not compt%10:
+			print '       (#'+str(compt)+' sur '+str(waiting_time)+")"		
+		x=x+1
+		for y in range(N):
+			y=y+1
+			if y>x:
+				dist_xy = 0.
+				occ_y = 0.
+				occ_x =0.
+				try:
+					dic_ligne_x = p_cooccurrences_lignes[x]
+					dic_ligne_y = p_cooccurrences_lignes[y]
+					distribution_distance[(x,y)]  =  sum(fonctions_lib.merge_prod(dic_ligne_x, dic_ligne_y , lambda x,y:math.sqrt(float(x*y))).values()) / math.sqrt(float(Ncoocc[x])*float(Ncoocc[y]))
+				except:
+					pass
+	return distribution_distance
+
 def build_dico():
 	lesidstermes = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'concepts','id')
 	leslemmestermes = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'concepts','concepts')
@@ -70,21 +99,34 @@ def init_dictionnary_list(taille,val):
 		dico[x]=val
 	return dico
 
-#billets décrit les concepts utilisé chaque annee
-#billet[annee]=array(id des billets publies)
-#termes=array(id des termes présents)
+def	check_unique(concepts_ids_list):
+	deja = []
+	for con in concepts_ids_list:
+		if con in deja: 
+			print 'alerte'
+		else:
+			deja.append(con)
+		
+
 def build_nbbillet(contenu,years_bin):
-	#now: 		contenu = liste de [concepts_id,jours,id_billet]
-	nb_billets = init_dictionnary_list(len(years_bins),0)
+	#contenu = liste de [concepts_id,jours,id_billet]
+	nb_billets,occurrences={},{}
 	for cont in contenu:
 		jour = cont[1]
 		concepts_ids = cont[0]
-		for idx, val in enumerate(years_bins):
+		for inter, val in enumerate(years):
 			if jour in val:
-				n_cl =  len(convert_clique_txt_2_list(concepts_ids))
-				#nb_billets[idx]=nb_billets[idx]+1
-				nb_billets[idx]=nb_billets[idx]+n_cl*(n_cl-1)/2
-	return nb_billets
+				print inter
+				concepts_ids_list = convert_clique_txt_2_list(concepts_ids)
+				n_cl =  len(concepts_ids_list)
+				#nb_billets[inter]=nb_billets[inter]+1
+				nb_billets[inter]=nb_billets.get(inter,0)+n_cl*(n_cl-1)/2
+				check_unique(concepts_ids_list)
+				for concept in concepts_ids_list:
+					temp = occurrences.get(inter,{})
+					temp[concept] = temp.get(concept,0) + 1
+					occurrences[inter]=temp
+	return nb_billets,occurrences
 
 
 def convert_clique_txt_2_list(clique_txt):
@@ -98,29 +140,24 @@ def build_voisins(contenu,years_bin):
 	#now: 		contenu = liste de [concepts_id,jours,id_billet]
 	voisins={}
 	#voisins[terme,intervalle] = array(termes co-présents)
-	for y_b in range(len(years_bins)):
-		for ter in dico_termes:
-			voisins[(ter,y_b)]=[]
 	for cont in contenu:
-		intervalle=-1
-		for y_b in years_bins:
-			intervalle+=1
+		for inter,y_b in enumerate(years):
 			if cont[1] in y_b:
 				clique = convert_clique_txt_2_list(cont[0])
 				for idx, con_1 in enumerate(clique):
 					for con_2 in clique[idx:]:						
 						if not con_1==con_2:
-							temp = voisins[(con_1,intervalle)]
+							temp = voisins.get((con_1,inter),[])
 							temp.append(con_2)
-							voisins[(con_1,intervalle)]=temp
+							voisins[(con_1,inter)]=temp
 
-							temp = voisins[(con_2,intervalle)]
+							temp = voisins.get((con_2,inter),[])
 							temp.append(con_1)
-							voisins[(con_2,intervalle)]=temp
-						else:
-							temp = voisins[(con_2,intervalle)]
-							temp.append(con_1)
-							voisins[(con_1,intervalle)]=temp
+							voisins[(con_2,inter)]=temp
+						#else:
+						#	temp = voisins[(con_2,inter)]
+						#	temp.append(con_1)
+						#	voisins[(con_1,inter)]=temp
 	return voisins 
 
 def unique(liste):
@@ -135,18 +172,20 @@ def build_cooc(voisins,nb_billets):
 	p_cooccurences_lignes={}
 	p_cooccurrences_ordre1={}
 	#p_cooccurrences[terme1,terme2,intervalle] = proba du terme
-	compt=0
+	
 	waiting_time = len(voisins)
+	compt=0
 	for x,y in voisins.iteritems():
 		compt+=1
 		if not compt%100:
 			print '       (#'+str(compt)+' sur '+str(waiting_time)+")"		
-		N = nb_billets[x[1]]
 		terme1 = x[0]
 		inter = x[1]
+		N = nb_billets[inter]
 		dict_temp={}
 		for terme2 in y:
-			dict_temp[terme2] = dict_temp.get(terme2,0)  + 1
+			if terme1!=terme2:
+				dict_temp[terme2] = dict_temp.get(terme2,0)  + 1
 		p_cooccurences_lignes[terme1] = dict_temp
 		for terme2 in dict_temp:
 			p_cooccurrences[(terme1,terme2,inter)] = float(dict_temp[terme2]) / N
@@ -171,8 +210,12 @@ def build_cooc(voisins,nb_billets):
 
 
 def build_cooc_matrix(contenu, years_bin):
-	nb_billets = build_nbbillet(contenu,years_bin)
-	print "        - "+str(nb_billets[0])+" billets : "
+	inter=years.index(years_bin)
+	nb_billets,occurrences = build_nbbillet(contenu,years_bin)
+	print "        - "+str(nb_billets[inter])+" cooccurrences"
+	#for x,y in occurrences.iteritems():
+	#	print x
+	#	print y
 	print '\n'
 	
 	voisins = build_voisins(contenu,years_bin)
@@ -180,7 +223,7 @@ def build_cooc_matrix(contenu, years_bin):
 	print '\n'
 	
 	p_cooccurrences,p_cooccurrences_lignes,p_cooccurrences_ordre1=build_cooc(voisins,nb_billets)
-	return p_cooccurrences,nb_billets,p_cooccurrences_lignes,p_cooccurrences_ordre1
+	return p_cooccurrences,nb_billets,p_cooccurrences_lignes,p_cooccurrences_ordre1,occurrences
 	
 	
 #muti[(terme1,terme2,intervalle)]=MI(t1,t2,t)
@@ -192,7 +235,6 @@ def build_mutual_information(p_cooccurrences,p_cooccurrences_ordre1,nb_billets):
 		for x2 in p_cooccurrences_ordre1:
 			if x2[0] != terme1 and inter == x2[1]:
  				terme2 = x2[0]
-				#muti[x]=math.log((y-T)*(y-T)/T,2)
 				expected = nb_billets[inter] *  p_cooccurrences_ordre1[(terme1,inter)]*p_cooccurrences_ordre1[(terme2,inter)]
 				xhi2 = ( nb_billets[inter]*p_cooccurrences.get((terme1,terme2,inter),0.) - expected)**2 / expected
 				#if xhi2>25000:
@@ -208,9 +250,9 @@ def lire_dist_mat_file(fichier_CF):
 		dist_mat_temp[(linev[0],linev[1])]=linev[2][:-1]
 	return dist_mat_temp
 
-def dedoubler(dico_termes,years_bins):
+def dedoubler(dico_termes,years):
 	dico_termes_temp={}
-	for inter in range(len(years_bins)):
+	for inter in range(len(years)):
 		for x,y in dico_termes.iteritems():
 			dico_termes_temp[(inter,x)]=y
 	return dico_termes_temp
@@ -236,43 +278,26 @@ def xhi2(muti,thres):
 			
 
 
-def distribution_distance_build(p_cooccurrences,dico_termes,p_cooccurrences_lignes):
-	epsilon = 0.0
-	distribution_distance={}
-	N = len(dico_termes.keys())
-	Ncoocc = {}
-	for x,t in p_cooccurrences_lignes.iteritems():
-		Ncoocc[x]=sum(t.values())
-#	print p_cooccurrences_lignes[1]
-#	print Ncoocc
-	compt=0
-	waiting_time= N
-	for x in range(N):
-		compt+=1
-		if not compt%10:
-			print '       (#'+str(compt)+' sur '+str(waiting_time)+")"		
-		x=x+1
-		for y in range(N):
-			y=y+1
-			if y>x:
-				dist_xy = 0.
-				occ_y = 0.
-				occ_x =0.
-				try:
-					dic_ligne_x = p_cooccurrences_lignes[x]
-					dic_ligne_y = p_cooccurrences_lignes[y]
-					distribution_distance[(x,y)]  =  sum(fonctions_lib.merge_prod(dic_ligne_x, dic_ligne_y , lambda x,y:math.sqrt(float(x*y))).values()) / math.sqrt(float(Ncoocc[x])*float(Ncoocc[y]))
-				except:
-					pass
-	return distribution_distance
 	
-def export_concepts_xhi2 (xhi2val,p_cooccurrences,dico_termes,dico_lemmes,year):
+def export_concepts_xhi2 (xhi2val,p_cooccurrences,dico_termes,dico_lemmes,year,occurrences):
 	conceptxhi2 = open(path_req +'years/'+ requete +str(year) + '_'  + 'conceptsxhi2.csv','w')
+	inter=years.index(year)
 	for x in dico_termes:
 		try:
 			#conceptxhi2.write(dico_lemmes[x] + '\t' + dico_termes[x] + '\t' + str(p_cooccurrences[(x,x,0)]).replace('.',',') + '\t' + str(xhi2val[x]).replace('.',',')+ '\t' + str(xhi2val[x]*p_cooccurrences[(x,x,0)]).replace('.',',') + '\n' )
-			conceptxhi2.write(dico_lemmes[x] + '\t' + dico_termes[x] + '\t' +str(p_cooccurrences[(x,x,years.index(year))]).replace('.',',')+  '\t' + str(xhi2val[x]).replace('.',',')+ '\t' +  '\n' )
+			conceptxhi2.write(dico_lemmes[x] + '\t' + dico_termes[x] + '\t' +str(occurrences[inter][x]).replace('.',',')+  '\t' + str(xhi2val[x]).replace('.',',')+ '\t' +  '\n' )
+			#print dico_lemmes[x] + '\t' + dico_termes[x] + '\t' +str(occurrences[inter][x]).replace('.',',')+  '\t' + str(xhi2val[x]).replace('.',',')+ '\t' +  '\n'
 		except:
+			print dico_termes[x]
+			try:
+				print 'occ:'+str(occurrences[inter][x]).replace('.',',')
+			except:
+				pass
+			try:
+				print 'xhi2:' + str(xhi2val[x]).replace('.',',')
+			except:
+				pass
+				
 			#conceptxhi2.write(dico_lemmes[x] + '\t' + dico_termes[x] + '\t' + '\t' + '\t' +  '\t'+ '\t' + '\t' + '\n' )
 			conceptxhi2.write(dico_lemmes[x] + '\t' + dico_termes[x] + '\t' + '\t' + '\t' +  '\t' + '\n' )
 		
@@ -303,7 +328,8 @@ def xhi2_comp(year):
 	print '\n'
 	from time import time
 	timeavt = time()
-	p_cooccurrences,nb_billets,p_cooccurrences_lignes,p_cooccurrences_ordre1 = build_cooc_matrix(contenu,year)
+	p_cooccurrences,nb_billets,p_cooccurrences_lignes,p_cooccurrences_ordre1,occurrences = build_cooc_matrix(contenu,year)
+	#print occurrences
 	print 'coocc fabriquées'
 	timeapres = timeavt
 	timeavt = time()
@@ -336,7 +362,7 @@ def xhi2_comp(year):
 #	print muti
 	thres=0.
 	xhi2val = xhi2(muti,thres)
-	export_concepts_xhi2(xhi2val,p_cooccurrences,dico_termes,dico_lemmes,year)
+	export_concepts_xhi2(xhi2val,p_cooccurrences,dico_termes,dico_lemmes,year,occurrences)
 	
 # 	
 pool_size = int(multiprocessing.cpu_count())
