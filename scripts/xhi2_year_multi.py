@@ -26,6 +26,7 @@ import misc
 from datetime import timedelta
 from datetime import date
 freqmin = parameters.freqmin
+from operator import itemgetter
 
 ###################################
 #######0.quelques parametres#######
@@ -116,7 +117,6 @@ def build_nbbillet(contenu,years_bin):
 		concepts_ids = cont[0]
 		for inter, val in enumerate(years):
 			if jour in val:
-				print inter
 				concepts_ids_list = convert_clique_txt_2_list(concepts_ids)
 				n_cl =  len(concepts_ids_list)
 				#nb_billets[inter]=nb_billets[inter]+1
@@ -136,29 +136,34 @@ def convert_clique_txt_2_list(clique_txt):
 	else:
 		return []
 
-def build_voisins(contenu,years_bin):
+def build_voisins(contenu,years_bin,occurrences,top=200):
+	
+	inter=years.index(years_bin)
+	occurrences_sorted = sorted(occurrences[inter].iteritems(), key=itemgetter(1))
+	occurrences_sorted_top = occurrences_sorted[-min(len(occurrences_sorted),top):]
+	top_concepts_dic = dict(occurrences_sorted_top)
+	top_concepts=top_concepts_dic.keys()
+
 	#now: 		contenu = liste de [concepts_id,jours,id_billet]
 	voisins={}
 	#voisins[terme,intervalle] = array(termes co-présents)
 	for cont in contenu:
-		for inter,y_b in enumerate(years):
-			if cont[1] in y_b:
-				clique = convert_clique_txt_2_list(cont[0])
-				for idx, con_1 in enumerate(clique):
-					for con_2 in clique[idx:]:						
-						if not con_1==con_2:
-							temp = voisins.get((con_1,inter),[])
-							temp.append(con_2)
-							voisins[(con_1,inter)]=temp
-
-							temp = voisins.get((con_2,inter),[])
-							temp.append(con_1)
-							voisins[(con_2,inter)]=temp
-						#else:
-						#	temp = voisins[(con_2,inter)]
-						#	temp.append(con_1)
-						#	voisins[(con_1,inter)]=temp
-	return voisins 
+		clique = convert_clique_txt_2_list(cont[0])
+		for idx, con_1 in enumerate(clique):
+			for con_2 in clique[idx:]:						
+				if not con_1==con_2 and con_2 in top_concepts:
+					temp = voisins.get((con_1,inter),[])
+					temp.append(con_2)
+					voisins[(con_1,inter)]=temp
+				if not con_1==con_2 and con_1 in top_concepts:
+					temp = voisins.get((con_2,inter),[])
+					temp.append(con_1)
+					voisins[(con_2,inter)]=temp
+				#else:
+				#	temp = voisins[(con_2,inter)]
+				#	temp.append(con_1)
+				#	voisins[(con_1,inter)]=temp
+	return voisins,top_concepts_dic 
 
 def unique(liste):
 	liste_u=[]
@@ -167,12 +172,12 @@ def unique(liste):
 			liste_u.append(x)
 	return liste_u
 	
-def build_cooc(voisins,nb_billets):
+def build_cooc(voisins,nb_billets,inter):
 	p_cooccurrences={}
 	p_cooccurences_lignes={}
 	p_cooccurrences_ordre1={}
 	#p_cooccurrences[terme1,terme2,intervalle] = proba du terme
-	
+	#print occurrences[inter]
 	waiting_time = len(voisins)
 	compt=0
 	for x,y in voisins.iteritems():
@@ -180,7 +185,6 @@ def build_cooc(voisins,nb_billets):
 		if not compt%100:
 			print '       (#'+str(compt)+' sur '+str(waiting_time)+")"		
 		terme1 = x[0]
-		inter = x[1]
 		N = nb_billets[inter]
 		dict_temp={}
 		for terme2 in y:
@@ -218,24 +222,28 @@ def build_cooc_matrix(contenu, years_bin):
 	#	print y
 	print '\n'
 	
-	voisins = build_voisins(contenu,years_bin)
+	voisins,top_concepts_dict = build_voisins(contenu,years_bin,occurrences)
 	print "variable voisins construite"
 	print '\n'
 	
-	p_cooccurrences,p_cooccurrences_lignes,p_cooccurrences_ordre1=build_cooc(voisins,nb_billets)
-	return p_cooccurrences,nb_billets,p_cooccurrences_lignes,p_cooccurrences_ordre1,occurrences
+	p_cooccurrences,p_cooccurrences_lignes,p_cooccurrences_ordre1=build_cooc(voisins,nb_billets,inter)
+	return p_cooccurrences,nb_billets,p_cooccurrences_lignes,p_cooccurrences_ordre1,occurrences,top_concepts_dict
 	
 	
 #muti[(terme1,terme2,intervalle)]=MI(t1,t2,t)
-def build_mutual_information(p_cooccurrences,p_cooccurrences_ordre1,nb_billets):
+def build_mutual_information(p_cooccurrences,p_cooccurrences_ordre1,nb_billets,occurrences,top_concepts_dict):
 	muti={}
+	norm = float(sum(top_concepts_dict.values()))
+	print 'norm:' + str(norm)
 	for x in p_cooccurrences_ordre1:
 		terme1=x[0]
 		inter =x[1]
-		for x2 in p_cooccurrences_ordre1:
-			if x2[0] != terme1 and inter == x2[1]:
- 				terme2 = x2[0]
-				expected = nb_billets[inter] *  p_cooccurrences_ordre1[(terme1,inter)]*p_cooccurrences_ordre1[(terme2,inter)]
+		for x2,freq2 in top_concepts_dict.iteritems():
+			terme2 = x2
+			if terme2 != terme1:
+ 				
+				#expected = nb_billets[inter] *  p_cooccurrences_ordre1[(terme1,inter)]*p_cooccurrences_ordre1[(terme2,inter)]
+				expected = nb_billets[inter] *  p_cooccurrences_ordre1[(terme1,inter)]*freq2/norm
 				xhi2 = ( nb_billets[inter]*p_cooccurrences.get((terme1,terme2,inter),0.) - expected)**2 / expected
 				#if xhi2>25000:
 				#	print dico_termes[terme1],'\t',dico_termes[terme2],'\t',xhi2
@@ -267,13 +275,10 @@ def compare_dictionnaire(dist_mat_temp_old,dist_mat_temp):
 		return commun, total_old, total_new
 		
 
-def xhi2(muti,thres):
+def xhi2(muti):
 	xhi2val={}
-	for x in muti:
-		xhi2val[x[0]]=0.
 	for x,y in muti.iteritems():
-		if y>thres:
-			xhi2val[x[0]]=xhi2val[x[0]]+y
+		xhi2val[x[0]]=xhi2val.get(x[0],0.)+y
 	return xhi2val
 			
 
@@ -328,17 +333,17 @@ def xhi2_comp(year):
 	print '\n'
 	from time import time
 	timeavt = time()
-	p_cooccurrences,nb_billets,p_cooccurrences_lignes,p_cooccurrences_ordre1,occurrences = build_cooc_matrix(contenu,year)
+	p_cooccurrences,nb_billets,p_cooccurrences_lignes,p_cooccurrences_ordre1,occurrences,top_concepts_dict = build_cooc_matrix(contenu,year)
 	#print occurrences
 	print 'coocc fabriquées'
-	timeapres = timeavt
-	timeavt = time()
-	print 'duree de la derniere etape : ' + str( timeavt-timeapres) + '\n'
-	distribution_distance = distribution_distance_build(p_cooccurrences,dico_termes,p_cooccurrences_lignes)
-	print '\nrapprochements suggérés:\n'
-	timeapres = timeavt
-	timeavt = time()
-	print 'duree de la derniere etape : ' + str(timeavt-timeapres) + '\n'
+	#timeapres = timeavt
+	#timeavt = time()
+	#print 'duree de la derniere etape : ' + str( timeavt-timeapres) + '\n'
+	#distribution_distance = distribution_distance_build(p_cooccurrences,dico_termes,p_cooccurrences_lignes)
+	#print '\nrapprochements suggérés:\n'
+	#timeapres = timeavt
+	#timeavt = time()
+	#print 'duree de la derniere etape : ' + str(timeavt-timeapres) + '\n'
 	
 	# 
 	# l = distribution_distance.items()
@@ -358,10 +363,8 @@ def xhi2_comp(year):
 	# print 'duree de la derniere etape : ' + str(timeavt-timeapres) + '\n'
 	# print "matrice de cooccurrence construite"
 
-	muti = build_mutual_information(p_cooccurrences,p_cooccurrences_ordre1,nb_billets)
-#	print muti
-	thres=0.
-	xhi2val = xhi2(muti,thres)
+	muti = build_mutual_information(p_cooccurrences,p_cooccurrences_ordre1,nb_billets,occurrences,top_concepts_dict)
+	xhi2val = xhi2(muti)
 	export_concepts_xhi2(xhi2val,p_cooccurrences,dico_termes,dico_lemmes,year,occurrences)
 	
 # 	
