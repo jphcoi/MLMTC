@@ -72,6 +72,8 @@ def load_data(orphan_number):
 	res_phylo = fonctions_bdd.select_bdd_table_champ_complet(name_bdd,'phylo',','.join(champs))
 	champs=['id_cluster','periode','id_cluster_univ','label_1','label_2','level','concept','nb_fathers','nb_sons','label']
 	res_cluster = fonctions_bdd.select_bdd_table_champ_complet(name_bdd,'cluster',','.join(champs))
+	champs=['jours','concepts_id']
+	occurrences_concepts = fonctions_bdd.select_bdd_table_champ_complet(name_bdd,'billets',','.join(champs))
 	dico_termes=fonctions.lexique()#on cree le dictionnaire des termes
 
 	#on les restructure pour plus de confort d'utilisation.
@@ -103,7 +105,18 @@ def load_data(orphan_number):
 	#clusters[id_cluster_univ]['id_cluster'/'periode'/'label'/'nb_sons'/'nb_fathers'/'concepts']
 	add_link(clusters,res_phylo,'dia')
 	add_link(clusters,res_maps,'syn')
-
+	
+	#on construit la matrice temporelle d'occurrence des termes.
+	occs = {}
+	for occ in occurrences_concepts:	
+		year = occ[0]
+		concept_list = list(map(int,occ[1][1:-1].split(', ')))
+		#print concept_list
+		for conc in concept_list:
+			occs_conc=occs.get(conc,{})
+			occs_conc[year] = 1 + occs_conc.get(year,0)
+			occs[conc]=occs_conc
+	print occs
 	#on récupère dist_mat réseau des distances entre termes.
 	name_date = str(years_bins[0][0]) + '_' + str(years_bins[0][-1]) + '_'+ str(years_bins[1][0])+ '_'+str(years_bins[-1][-1])
 	#version longue et exacte
@@ -149,7 +162,7 @@ def width(clusters):
 orphan_number = 1
 
 try:
-	liens_totaux_syn,liens_totaux_dia,clusters,years_bins = fonctions.dumpingout('liens_totaux_syn'+ str(orphan_number)),fonctions.dumpingout('liens_totaux_dia'+ str(orphan_number)),fonctions.dumpingout('clusters'+ str(orphan_number)),fonctions.dumpingout('years_bins'+ str(orphan_number))
+	liens_totaux_syn,liens_totaux_dia,clusters,years_bins = fonctions.dumpingout('lsiens_totaux_syn'+ str(orphan_number)),fonctions.dumpingout('liens_totaux_dia'+ str(orphan_number)),fonctions.dumpingout('clusters'+ str(orphan_number)),fonctions.dumpingout('years_bins'+ str(orphan_number))
 	print 'data loaded'
 except:
 	print 'tubes coordinates being computed'
@@ -181,4 +194,11 @@ except:
 	fonctions.dumpingin(liens_totaux_dia,'liens_totaux_dia'+ str(orphan_number))
 	fonctions.dumpingin(clusters,'clusters'+ str(orphan_number))
 	fonctions.dumpingin(years_bins,'years_bins'+ str(orphan_number))
-network_layout.plot_graph(liens_totaux_syn,liens_totaux_dia,clusters)
+
+
+
+G,epaisseur_0,pos = network_layout.plot_graph(liens_totaux_syn,liens_totaux_dia,clusters)
+
+# for clu in clusters.values():
+# 	print clu['label']
+# 	print clu['concepts']
