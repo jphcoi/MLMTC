@@ -195,14 +195,16 @@ def build_mutual_information(p_cooccurrences,p_cooccurrences_ordre1,nb_billets):
 		terme1=x[0]
 		inter =x[1]
 		for x2 in p_cooccurrences_ordre1:
-			if x2[0] != terme1 and inter == x2[1]:
- 				terme2 = x2[0]
+			terme2 = x2[0]
+			if terme2!= terme1 and inter == x2[1] and p_cooccurrences_ordre1[(terme2,inter)]> 0.0002:
+ 				
 				#muti[x]=math.log((y-T)*(y-T)/T,2)
-				expected =nb_billets[inter] *  p_cooccurrences_ordre1[(terme1,inter)]*p_cooccurrences_ordre1[(terme2,inter)]
-				xhi2 = (p_cooccurrences.get((terme1,terme2,inter),0.) - expected)**2 / expected
+				#expected =#nb_billets[inter] *  
+				expected = p_cooccurrences_ordre1[(terme1,inter)]*nb_billets[inter]*p_cooccurrences_ordre1[(terme2,inter)]
+				xhi2 = (p_cooccurrences.get((terme1,terme2,inter),0.)*nb_billets[inter] - expected)**2 / expected
 				#if xhi2>25000:
-				#	print dico_termes[terme1],'\t',dico_termes[terme2],'\t',xhi2
-				muti[x] = xhi2
+				#print dico_termes[terme1],'\t',dico_termes[terme2],'\t',p_cooccurrences.get((terme1,terme2,inter),0.) - expected,'\t',xhi2
+				muti[(terme1,terme2,inter)] = xhi2
 	return muti
 
 def lire_dist_mat_file(fichier_CF):
@@ -230,13 +232,10 @@ def compare_dictionnaire(dist_mat_temp_old,dist_mat_temp):
 		return commun, total_old, total_new
 		
 
-def xhi2(muti,thres):
+def xhi2(muti):
 	xhi2val={}
-	for x in muti:
-		xhi2val[x[0]]=0.
 	for x,y in muti.iteritems():
-		if y>thres:
-			xhi2val[x[0]]=xhi2val[x[0]]+y
+		xhi2val[x[0]]=xhi2val.get(x[0],0.)+y
 	return xhi2val
 			
 
@@ -270,16 +269,23 @@ def distribution_distance_build(p_cooccurrences,dico_termes,p_cooccurrences_lign
 				except:
 					pass
 	return distribution_distance
+
+def weird_convert(chaine):
+	return chaine.replace('``_"','')
 	
 def export_concepts_xhi2 (xhi2val,p_cooccurrences,dico_termes,dico_lemmes,year):
 	conceptxhi2 = open(path_req +'years/'+ requete +str(year) + '_'  + 'conceptsxhi2.csv','w')
+	print year
+	print years
+	inter= years.index(year)
+	print inter
 	for x in dico_termes:
 		try:
 			#conceptxhi2.write(dico_lemmes[x] + '\t' + dico_termes[x] + '\t' + str(p_cooccurrences[(x,x,0)]).replace('.',',') + '\t' + str(xhi2val[x]).replace('.',',')+ '\t' + str(xhi2val[x]*p_cooccurrences[(x,x,0)]).replace('.',',') + '\n' )
-			conceptxhi2.write(dico_lemmes[x] + '\t' + dico_termes[x] + '\t' +  '\t' + str(xhi2val[x]).replace('.',',')+ '\t' +  '\n' )
+				conceptxhi2.write(weird_convert(dico_lemmes[x].replace('','')) + '\t' + weird_convert(dico_termes[x].replace('"','')) + '\t' +str(p_cooccurrences[(x,x,inter)]).replace('.',',')+  '\t' + str(xhi2val[x]).replace('.',',')+ '\t' +  '\n' )
 		except:
 			#conceptxhi2.write(dico_lemmes[x] + '\t' + dico_termes[x] + '\t' + '\t' + '\t' +  '\t'+ '\t' + '\t' + '\n' )
-			conceptxhi2.write(dico_lemmes[x] + '\t' + dico_termes[x] + '\t' + '\t' + '\t' +  '\t' + '\n' )
+			conceptxhi2.write(weird_convert(dico_lemmes[x]) + '\t' + weird_convert(dico_termes[x]) + '\t' +' '+ '\t' +' '+ '\t' +' '+  '\t' +' '+ '\n' )
 		
 print '\n'		
 dico_termes,dico_lemmes=build_dico()
@@ -339,15 +345,14 @@ def xhi2_comp(year):
 
 	muti = build_mutual_information(p_cooccurrences,p_cooccurrences_ordre1,nb_billets)
 #	print muti
-	thres=0.
-	xhi2val = xhi2(muti,thres)
+	xhi2val = xhi2(muti)
 	export_concepts_xhi2(xhi2val,p_cooccurrences,dico_termes,dico_lemmes,year)
 	
 # 	
-pool_size = int(multiprocessing.cpu_count())
-pool = multiprocessing.Pool(processes=pool_size)
-print years
-pool.map(xhi2_comp, years)
-# for year in years:
-# 	xhi2_comp(year)
+# pool_size = int(multiprocessing.cpu_count())
+# pool = multiprocessing.Pool(processes=pool_size)
+# print years
+# pool.map(xhi2_comp, years)
+for year in years:
+	xhi2_comp(year)
 fusion_years.fusion('conceptsxhi2')
