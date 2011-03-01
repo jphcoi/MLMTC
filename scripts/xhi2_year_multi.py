@@ -284,8 +284,8 @@ def xhi2(muti):
 
 
 def weirdrep(chaine):
-	return chaine.replace('``_"','')
-	
+	return chaine.replace('``','?').replace('"','?')
+
 def export_concepts_xhi2 (xhi2val,p_cooccurrences,dico_termes,dico_lemmes,year,occurrences):
 	conceptxhi2 = open(path_req +'years/'+ requete +str(year) + '_'  + 'conceptsxhi2.csv','w')
 	inter=years.index(year)
