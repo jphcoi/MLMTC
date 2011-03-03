@@ -18,7 +18,7 @@ import leven
 import misc 
 from datetime import timedelta
 from datetime import date
-import treetaggerwrapper
+#import treetaggerwrapper
 import fonctions_lib
 import math
 
@@ -34,7 +34,7 @@ name_data = parameters.name_data
 requete = parameters.requete
 name_data_real = parameters.name_data_real
 lemmadictionary = parameters.lemmadictionary# si nul, on  calcule ou recalcule  le dico de lemmes sur la requete consideree sinon on ne calcule pas
-treetagger_dir =parameters.treetagger_dir
+#treetagger_dir =parameters.treetagger_dir
 path_req = parameters.path_req
 language = parameters.language
 ng_filter=parameters.ng_filter
