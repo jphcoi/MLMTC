@@ -142,6 +142,10 @@ def build_mutual_information(cooccurrences,cooccurrences_somme,nb_cooc,occurrenc
 
 
 def export_concepts_xhi2 (xhi2val,cooccurrences,cooccurrences_somme,dico_termes,dico_lemmes,year,occurrences):
+	try:
+		os.mkdir(path_req +'years')
+	except:
+		pass
 	conceptxhi2 = open(path_req +'years/'+ requete +str(year) + '_'  + 'conceptsxhi2.csv','w')
 	inter=years.index(year)
 	for x in dico_termes:
