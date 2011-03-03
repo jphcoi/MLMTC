@@ -136,7 +136,7 @@ def convert_clique_txt_2_list(clique_txt):
 	else:
 		return []
 
-def build_voisins(contenu,years_bin,occurrences,top=200):
+def build_voisins(contenu,years_bin,occurrences,top=20000):
 	
 	inter=years.index(years_bin)
 	occurrences_sorted = sorted(occurrences[inter].iteritems(), key=itemgetter(1))
@@ -172,6 +172,8 @@ def unique(liste):
 			liste_u.append(x)
 	return liste_u
 	
+
+#marche pas.
 def build_cooc(voisins,nb_billets,inter):
 	p_cooccurrences={}
 	p_cooccurences_lignes={}
@@ -189,7 +191,7 @@ def build_cooc(voisins,nb_billets,inter):
 		dict_temp={}
 		for terme2 in y:
 			if terme1!=terme2:
-				dict_temp[terme2] = dict_temp.get(terme2,0)  + 1
+				dict_temp[terme2] = dict_temp.get(terme2,0)  + 0.5
 		p_cooccurences_lignes[terme1] = dict_temp
 		for terme2 in dict_temp:
 			p_cooccurrences[(terme1,terme2,inter)] = float(dict_temp[terme2]) / N
@@ -217,9 +219,6 @@ def build_cooc_matrix(contenu, years_bin):
 	inter=years.index(years_bin)
 	nb_billets,occurrences = build_nbbillet(contenu,years_bin)
 	print "        - "+str(nb_billets[inter])+" cooccurrences"
-	#for x,y in occurrences.iteritems():
-	#	print x
-	#	print y
 	print '\n'
 	
 	voisins,top_concepts_dict = build_voisins(contenu,years_bin,occurrences)
@@ -231,23 +230,43 @@ def build_cooc_matrix(contenu, years_bin):
 	
 	
 #muti[(terme1,terme2,intervalle)]=MI(t1,t2,t)
-def build_mutual_information(p_cooccurrences,p_cooccurrences_ordre1,nb_billets,occurrences,top_concepts_dict):
+def build_mutual_information(p_cooccurrences,p_cooccurrences_ordre1,nb_billets,occurrences,top_concepts_dict,version="andrei"):
 	muti={}
-	norm = float(sum(top_concepts_dict.values()))
-	print 'norm:' + str(norm)
-	for x in p_cooccurrences_ordre1:
-		terme1=x[0]
-		inter =x[1]
-		for x2,freq2 in top_concepts_dict.iteritems():
-			terme2 = x2
-			if terme2 != terme1:
+	#rajouter contrainte sur positivité de l'écart (pas besoin de calculer le théorique.)
+	#sur la version actuelle rajouter, pi = sum_j pij 
+	if version=='chinois':
+		norm = float(sum(top_concepts_dict.values()))
+		print 'norm:' + str(norm)
+		for x in p_cooccurrences_ordre1:
+			terme1=x[0]
+			inter =x[1]
+			for x2,freq2 in top_concepts_dict.iteritems():
+				terme2 = x2
+				if terme2 != terme1:
  				
-				#expected = nb_billets[inter] *  p_cooccurrences_ordre1[(terme1,inter)]*p_cooccurrences_ordre1[(terme2,inter)]
-				expected = nb_billets[inter] *  p_cooccurrences_ordre1[(terme1,inter)]*freq2/norm
-				xhi2 = ( nb_billets[inter]*p_cooccurrences.get((terme1,terme2,inter),0.) - expected)**2 / expected
-				#if xhi2>25000:
-				#	print dico_termes[terme1],'\t',dico_termes[terme2],'\t',xhi2
-				muti[x] = xhi2
+					#expected = nb_billets[inter] *  p_cooccurrences_ordre1[(terme1,inter)]*p_cooccurrences_ordre1[(terme2,inter)]
+					expected = nb_billets[inter] *  p_cooccurrences_ordre1[(terme1,inter)]*freq2/norm
+					xhi2 = (nb_billets[inter]*p_cooccurrences.get((terme1,terme2,inter),0.) - expected)**2 / expected
+					#if xhi2>25000:
+					#	print dico_termes[terme1],'\t',dico_termes[terme2],'\t',xhi2
+					muti[x] = xhi2
+	if version=='andrei': 
+		norm=0.
+		for x in p_cooccurrences_ordre1.values():
+			norm += x
+		print 'norm:' + str(norm)
+		for x,cooc in p_cooccurrences.iteritems():
+			terme1=x[0]
+			terme2=x[1]
+			inter =x[2]
+			if terme2 != terme1:
+ 					expected = p_cooccurrences_ordre1[(terme1,inter)] * p_cooccurrences_ordre1[(terme2,inter)] / norm
+					#expected = nb_billets[inter] *  p_cooccurrences_ordre1[(terme1,inter)]*p_cooccurrences_ordre1[(terme2,inter)]
+					#expected = nb_billets[inter] *  p_cooccurrences_ordre1[(terme1,inter)]*freq2/norm
+					xhi2 = (cooc - expected)**2 / expected
+					#if xhi2>25000:
+					#	print dico_termes[terme1],'\t',dico_termes[terme2],'\t',xhi2
+					muti[x] = xhi2
 	return muti
 
 def lire_dist_mat_file(fichier_CF):
@@ -286,13 +305,13 @@ def xhi2(muti):
 def weirdrep(chaine):
 	return chaine.replace('``','?').replace('"','?')
 
-def export_concepts_xhi2 (xhi2val,p_cooccurrences,dico_termes,dico_lemmes,year,occurrences):
+def export_concepts_xhi2 (xhi2val,p_cooccurrences,p_cooccurrences_ordre1,dico_termes,dico_lemmes,year,occurrences):
 	conceptxhi2 = open(path_req +'years/'+ requete +str(year) + '_'  + 'conceptsxhi2.csv','w')
 	inter=years.index(year)
 	for x in dico_termes:
 		try:
 			#conceptxhi2.write(dico_lemmes[x] + '\t' + dico_termes[x] + '\t' + str(p_cooccurrences[(x,x,0)]).replace('.',',') + '\t' + str(xhi2val[x]).replace('.',',')+ '\t' + str(xhi2val[x]*p_cooccurrences[(x,x,0)]).replace('.',',') + '\n' )
-			conceptxhi2.write(weirdrep(dico_lemmes[x]) + '\t' + weirdrep(dico_termes[x]) + '\t' +str(occurrences[inter][x]).replace('.',',')+  '\t' + str(xhi2val[x]).replace('.',',')+ '\t' +  '\n' )
+			conceptxhi2.write(weirdrep(dico_lemmes[x]) + '\t' + weirdrep(dico_termes[x]) + '\t' +str(p_cooccurrences_ordre1[(x,inter)]).replace('.',',')+  '\t' + str(xhi2val[x]).replace('.',',')+ '\t' +  '\n' )
 			#print dico_lemmes[x] + '\t' + dico_termes[x] + '\t' +str(occurrences[inter][x]).replace('.',',')+  '\t' + str(xhi2val[x]).replace('.',',')+ '\t' +  '\n'
 		except:
 			print dico_termes[x]
@@ -336,6 +355,11 @@ def xhi2_comp(year):
 	from time import time
 	timeavt = time()
 	p_cooccurrences,nb_billets,p_cooccurrences_lignes,p_cooccurrences_ordre1,occurrences,top_concepts_dict = build_cooc_matrix(contenu,year)
+	somme=0.
+	for x in p_cooccurrences_ordre1.values():
+		somme += x
+	print 'somme'
+	print somme
 	#print occurrences
 	print 'coocc fabriquées'
 	#timeapres = timeavt
@@ -367,13 +391,13 @@ def xhi2_comp(year):
 
 	muti = build_mutual_information(p_cooccurrences,p_cooccurrences_ordre1,nb_billets,occurrences,top_concepts_dict)
 	xhi2val = xhi2(muti)
-	export_concepts_xhi2(xhi2val,p_cooccurrences,dico_termes,dico_lemmes,year,occurrences)
+	export_concepts_xhi2(xhi2val,p_cooccurrences,p_cooccurrences_ordre1,dico_termes,dico_lemmes,year,occurrences)
 	
 # 	
-pool_size = int(multiprocessing.cpu_count())
-pool = multiprocessing.Pool(processes=pool_size)
-print years
-pool.map(xhi2_comp, years)
-# for year in years:
-# 	xhi2_comp(year)
+# pool_size = int(multiprocessing.cpu_count())
+# pool = multiprocessing.Pool(processes=pool_size)
+# print years
+# pool.map(xhi2_comp, years)
+for year in years:
+	xhi2_comp(year)
 fusion_years.fusion('conceptsxhi2')

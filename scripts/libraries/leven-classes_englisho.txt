@@ -2166,3 +2166,8 @@ il-6	il-11
 il-6	il-9
 NN_support NN_vector NN_machine	svm
 NP_alzheimer	alzheimers-disease
+NN_regulation	NP_regulatory
+NN_inhibition	JJ_inhibitory
+NP_iii	PP_i
+NP_iii	ii
+NP_iii	NP_i

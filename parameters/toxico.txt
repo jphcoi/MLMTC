@@ -13,10 +13,10 @@ sample=5000
 
 build_link_tables='y'
 
-dated = 1995
+dated = 1990
 datef = 2010
-fenetre = 2
-overlap = 2
+fenetre = 20
+overlap = 0
 dist_type='precision'
 nofigure=1
 user_interface='y'
