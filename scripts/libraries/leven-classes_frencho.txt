@@ -13770,3 +13770,100 @@ m	monsieur
 m	NO_monsieur
 m	AB_monsieur
 NO_projet PR_de NO_loi grenelle 2	NO_projet PR_de NO_loi grenelle
+candida	candidas
+NO_objecteur PR_de NO_conscience	NO_objection PR_de NO_conscience
+haut NO_conseil	haut conseil
+AD_petit NO_pot PR_de NO_miel	AD_petit NO_pot PR_de miel
+miel	NO_miel
+haut NO_conseil PR_du NO_biotechnologie	haut conseil PR_du NO_biotechnologie
+haut NO_conseil PR_du NO_biotechnologie	haut conseil PR_du biotechnologies
+haut conseil PR_du NO_biotechnologie	haut conseil PR_du biotechnologies
+AD_ne VE_constituer AD_pas PR_de NO_risque	AD_ne VE_constituer AD_pas DE_un NO_risque
+NA_monsieur mostafaei	NO_monsieur mostafaei
+NO_plateau PR_de saclay	plateau PR_de saclay
+NO_plateau	plateau
+AD_social solidarité système PR_de NO_échange	AD_social solidarité systèmes PR_de NO_échange
+systèmes	système
+solidarité système PR_de NO_échange AD_local	solidarité systèmes PR_de NO_échange AD_local
+systèmes	système
+NO_loi AD_fondamental	loi AD_fondamental
+loi	NO_loi
+NO_lâcher PR_de NO_taureau	VE_lâcher PR_de NO_taureau
+NU_premier AD_central NO_nucléaire	NU_premier NO_centrale AD_nucléaire
+NO_culture PR_de AB_ogm	NO_culture PR_du AB_ogm
+NU_deux NO_rapport	deux NO_rapport
+NU_deux	deux
+haut NO_conseil PR_du NO_biotechnologie	haut conseil PR_du biotechnologies
+NO_résistance PR_au NO_court-noué	AD_résistant PR_au NO_court-noué
+NO_résistance	AD_résistant
+transgène	transgènes
+NO_association PR_au NO_coin PR_du NO_bois	NO_association au coin PR_du bois
+NO_aide PR_au NO_diagnostic PR_du NO_bovin	aide PR_au NO_diagnostic PR_du NO_bovin
+grand NO_pavois	grand pavois
+NO_pavois	pavois
+NO_régime PR_de NO_retraite	NO_régime PR_du NO_retraite
+NO_antenne NO_relais	antennes-relais
+NO_cerveau KO_et PR_de DE_le NO_moelle	cerveau KO_et PR_de DE_le moëlle
+NO_conseil AD_général PR_du gers	conseil AD_général PR_du gers
+NO_institut PR_du NO_cerveau	NO_institut PR_du cerveau
+NO_résistance PR_à NU_deux NO_herbicide	NO_résistance PR_à DE_un NO_herbicide
+NO_culture PR_de AB_ogm	NO_culture PR_du AB_ogm
+ministre PR_de DE_le NO_agriculture	NO_ministère PR_de DE_le NO_agriculture
+NO_proposition PR_de DE_le NO_commission	NO_proposition PR_de DE_le commission
+NO_sud	sud
+NO_culture PR_de AB_ogm	NO_culture PR_du AB_ogm
+de?veloppement AD_durable	NO_développement AD_durable
+NO_développement	de?veloppement
+NO_destruction PR_de AD_bien	NO_destruction PR_de NO_bien
+grézet-cavagnan	grézet-cavagnant
+VE_remettre PR_au NO_gendarme PR_du NO_liste	VE_remettre PR_au NO_gendarme DE_un NO_liste
+NO_culture PR_de AB_ogm	NO_culture PR_du AB_ogm
+NO_désobéissance AD_civil	NO_désobéissance AD_civique
+NO_politique AD_industriel	AD_politique NO_industriel
+NO_réforme PR_de DE_le AD_directif	NO_réforme PR_de DE_le NO_directive
+bisphénol	bisphénols
+NO_ami PR_de DE_le NO_terre	NO_ami PR_de DE_le terre
+NO_enseignement AD_supérieur	NO_enseignement supérieur
+supérieur	AD_supérieur
+NO_industrie PR_du NO_biotechnologie	NO_industriel PR_du NO_biotechnologie
+NO_sortie PR_de DE_le NA_euro	VE_sortir PR_de DE_le NA_euro
+AD_supérieur KO_et PR_de DE_le NO_recherche	supérieur KO_et PR_de DE_le recherche
+NO_commission AD_biblique AD_pontifical	commission biblique pontificale
+ecriture	ecritures
+NA_eglise AD_catholique	NA_eglise catholique
+catholique	AD_catholique
+NO_enseignement AD_supérieur	NO_enseignement supérieur
+supérieur	AD_supérieur
+NA_esprit	NO_esprit
+mon NO_projet	mon projet
+projet	NO_projet
+NO_mystère	mystère
+NO_parole	parole
+NO_parole PR_de NO_dieu	parole PR_de NO_dieu
+parole	NO_parole
+AD_saint ecriture	NA_saintes ecritures
+supérieur KO_et PR_de DE_le recherche	AD_supérieur KO_et DE_le NO_recherche
+NO_contrôle PR_de NO_proportionnalité	VE_contrôler DE_le NO_proportionnalité
+NO_pêche PR_de NO_thon AD_rouge	NO_pêche PR_du NO_thon AD_rouge
+NO_quota PR_de NO_pêche PR_de NO_thon	NO_quota PR_de NO_pêche PR_du NO_thon
+NO_retrait PR_de NO_contenu	NO_retrait PR_du NO_contenu
+code PR_de DE_le santé NO_publique	code PR_de DE_le santé publique
+NO_publique	publique
+conseil AD_supérieur PR_de DE_le NO_audiovisuel	conseil supérieur PR_de DE_le audiovisuel
+NO_enseignement AD_supérieur	NO_enseignement supérieur
+supérieur	AD_supérieur
+gilles-eric seralini	gilles-eric séralini
+seralini	séralini
+grand NO_emprunt	grand emprunt
+emprunt	NO_emprunt
+amnesty international	amnesty AD_international
+international	AD_international
+NO_institut AD_national PR_de DE_le NO_recherche	NO_institut AD_national PR_de DE_le recherche
+NO_sortie PR_de DE_le NA_euro	VE_sortir PR_de DE_le NA_euro
+conseil de DE_le union europeenne	conseil PR_de DE_le NO_union AD_européen
+NO_enseignement AD_supérieur	NO_enseignement supérieur
+supérieur	AD_supérieur
+AD_grand NO_emprunt	grand emprunt
+grand NO_emprunt	grand emprunt
+emprunt	NO_emprunt
+AD_supérieur KO_et PR_de DE_le NO_recherche	supérieur KO_et PR_de DE_le recherche

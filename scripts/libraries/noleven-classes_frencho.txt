@@ -671,10 +671,26 @@ NO_village	NO_ville
 NO_avenir PR_de DE_notre NO_village	NO_avenir PR_de DE_notre NO_ville
 NO_village	NO_ville
 AD_pas PR_de NO_question	AD_peu PR_de NO_question
-NO_fin	AD_fin
 AD_pas PR_de NO_question	AD_peu PR_de NO_question
 NO_travail AD_ne VE_être AD_pas	NO_travail AD_ne VE_être AD_plus
 NO_vie PR_au NO_travail	VE_venir PR_au NO_travail
 NO_vie PR_au NO_travail	VE_vivre PR_au NO_travail
 AD_bien VE_être PR_de DE_son NO_salarié	AD_bien VE_être PR_du NO_salarié
-NO_fin	AD_fin
+NO_agriculture KO_et PR_de DE_le NO_alimentation	NO_agriculture KO_et DE_le NO_alimentation
+NO_culture PR_de PR_ce NO_pomme	NO_culture PR_de DE_le NO_pomme
+NO_changement	NO_chargement
+NO_lâcher	VE_lâcher
+NO_recherche PR_sur DE_le NO_mise	NO_recherche PR_sur DE_le NO_vigne
+afssa ccr rien rien non	afssa ccr rien rien rien
+experts ministres commission AD_européen NO_rien	experts ministres commission AD_européen rien
+NO_rien	rien
+NO_champ PR_de NO_maïs AB_ogm	AB_ha PR_de NO_maïs AB_ogm
+AB_ha	NO_champ
+NO_procès PR_de NA_marmande	AD_près PR_de NA_marmande
+NO_directive	AD_directif
+NO_ville KO_et DE_son NO_région	NO_ville KO_et DE_un NO_région
+NO_industriel	NO_industrie
+NO_sortie	VE_sortir
+NO_droit PR_de NO_auteur	NO_droit PR_de NO_autrui
+NO_sortie	VE_sortir
+NO_commission AD_européen PR_de AD_ne	NO_commission AD_européen AD_ne
