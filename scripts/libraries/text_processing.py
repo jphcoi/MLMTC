@@ -87,7 +87,7 @@ def notinterditall(tag):
 						
 def atleast(tag):
 	if language=='french':
-		if tag in ['','NO','NA']:
+		if tag in ['','NO','NA','AB']:
 			return True
 		else:
 			return False

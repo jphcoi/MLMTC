@@ -79,7 +79,6 @@ def fusion(type_file):
 
 	for fich in [f for f in os.listdir(dir)]:
 		print fich
-		print 'icii'
 		if marqueur in fich and fich[0] != '.':
 			year = find_between(fich,'[',']')
 			year= '[' + year + ']'
@@ -91,8 +90,8 @@ def fusion(type_file):
 	liste_nlemme_freq={}
 	liste_nlemme_forme={}
 	for ye,fi in liste_fichiers.iteritems():
+		print fi
 		fil = open(path_req+'years/'+fi,'r')
-		print fil
 		for x in fil.readlines():
 			x=x[:-1]
 			x = x.split('\t')

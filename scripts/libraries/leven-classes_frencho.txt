@@ -3293,6 +3293,7 @@ NO_nappe PR_de NO_pétrole	NO_nappe PR_de AD_brut
 néolibérale	néolibéralisme
 NO_organisation AD_mondial PR_de DE_le NO_santé	oms
 NO_organisme AD_génétiquement AD_modifié	ogm
+AB_ogm	ogm
 NO_parlement	NO_parlementaire
 NO_parlement AD_européen	NO_parlemenairet AD_européen
 NO_plante	NO_plantation
