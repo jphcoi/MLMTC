@@ -13868,3 +13868,267 @@ AD_grand NO_emprunt	grand emprunt
 grand NO_emprunt	grand emprunt
 emprunt	NO_emprunt
 AD_supérieur KO_et PR_de DE_le NO_recherche	supérieur KO_et PR_de DE_le recherche
+sortir PR_du NO_nucléaire	sortir PR_du nucléaire
+nature environnement	NO_nature environnement
+nature environnement	nature NO_environnement
+nature environnement	NO_nature NO_environnement
+jeunes verts	NO_jeune verts
+jeunes verts	jeunes NO_vert
+jeunes verts	NO_jeune NO_vert
+jeunes verts	jeunes vert
+jeunes verts	NO_jeune vert
+jeunes verts	jeunes AD_vert
+jeunes verts	NO_jeune AD_vert
+amnesty international	amnesty internationale
+NO_alimentation AD_animal	alimentation AD_animal
+NO_proposition PR_de DE_le NO_commission AD_européen	VE_proposer PR_de DE_le NO_commission AD_européen
+NO_proposition PR_de DE_le NO_commission AD_européen	NO_proposition PR_de DE_le commission AD_européen
+NO_proposition PR_de DE_le NO_commission AD_européen	VE_proposer PR_de DE_le commission AD_européen
+NO_plante transgéniques	plantes transgéniques
+NO_plante transgéniques	NO_plantation transgéniques
+NO_plante transgéniques	NO_plante transgénique
+NO_plante transgéniques	plantes transgénique
+NO_plante transgéniques	NO_plantation transgénique
+NO_action PR_de NO_désobéissance AD_civil	action PR_de NO_désobéissance AD_civil
+AD_issu PR_de DE_le NO_agriculture AD_biologique	AD_issu PR_de DE_le agriculture AD_biologique
+AD_issu PR_de DE_le NO_agriculture AD_biologique	AD_issu PR_de DE_le NO_agriculteur AD_biologique
+AD_issu PR_de DE_le NO_agriculture AD_biologique	AD_issu PR_de DE_le agriculteurs AD_biologique
+AD_issu PR_de DE_le NO_agriculture AD_biologique	AD_issu PR_de DE_le NO_paysan AD_biologique
+NO_autorisation PR_de NO_culture	NO_autorisation PR_de culture
+NO_autorisation PR_de NO_culture	VE_autoriser DE_le culture
+NA_etats NO_membre	etat NO_membre
+NO_mise PR_en NO_culture	NO_mise PR_en culture
+NO_fin PR_de NO_après-midi	NO_fin PR_de KO_après NO_midi
+NO_fin PR_de NO_après-midi	fin PR_de KO_après NO_midi
+NO_fin PR_de NO_après-midi	NO_fin PR_de AD_après NO_midi
+NO_fin PR_de NO_après-midi	fin PR_de AD_après NO_midi
+NO_fin PR_de NO_après-midi	NO_fin PR_de aprés NO_midi
+NO_fin PR_de NO_après-midi	fin PR_de aprés NO_midi
+NO_fin PR_de NO_après-midi	NO_fin PR_de PR_après NO_midi
+NO_fin PR_de NO_après-midi	fin PR_de PR_après NO_midi
+NO_culture PR_de NO_organisme AD_génétiquement	culture PR_de NO_organisme AD_génétiquement
+agence bio	NO_agence bio
+haut NO_conseil PR_du NO_biotechnologie	NO_haut NO_conseil PR_du NO_biotechnologie
+haut NO_conseil PR_du NO_biotechnologie	haut NO_conseil PR_du biotechnologies
+haut NO_conseil PR_du NO_biotechnologie	haut NO_conseil PR_du biotech
+haut NO_conseil PR_du NO_biotechnologie	NO_haut conseil PR_du NO_biotechnologie
+haut NO_conseil PR_du NO_biotechnologie	NO_haut NO_conseil PR_du biotechnologies
+haut NO_conseil PR_du NO_biotechnologie	NO_haut NO_conseil PR_du biotech
+haut NO_conseil PR_du NO_biotechnologie	haut conseil PR_du biotech
+haut NO_conseil PR_du NO_biotechnologie	NO_haut conseil PR_du biotechnologies
+haut NO_conseil PR_du NO_biotechnologie	NO_haut conseil PR_du biotech
+NO_ministre PR_de DE_le NO_agriculture	NO_ministre PR_de DE_le NO_agriculteur
+NO_ministre PR_de DE_le NO_agriculture	NO_ministère PR_de DE_le NO_agriculteur
+NO_ministre PR_de DE_le NO_agriculture	ministère PR_de DE_le NO_agriculteur
+NO_ministre PR_de DE_le NO_agriculture	ministre PR_de DE_le NO_agriculteur
+NO_ministre PR_de DE_le NO_agriculture	ministres PR_de DE_le NO_agriculteur
+NO_ministre PR_de DE_le NO_agriculture	NO_minist√®re PR_de DE_le NO_agriculteur
+NO_ministre PR_de DE_le NO_agriculture	minist√®re PR_de DE_le NO_agriculteur
+NO_ministre PR_de DE_le NO_agriculture	NO_ministre PR_de DE_le agriculteurs
+NO_ministre PR_de DE_le NO_agriculture	NO_ministre PR_de DE_le NO_paysan
+NO_ministre PR_de DE_le NO_agriculture	NO_ministère PR_de DE_le agriculteurs
+NO_ministre PR_de DE_le NO_agriculture	NO_ministère PR_de DE_le NO_paysan
+NO_ministre PR_de DE_le NO_agriculture	ministère PR_de DE_le agriculteurs
+NO_ministre PR_de DE_le NO_agriculture	ministère PR_de DE_le NO_paysan
+NO_ministre PR_de DE_le NO_agriculture	ministre PR_de DE_le agriculteurs
+NO_ministre PR_de DE_le NO_agriculture	ministre PR_de DE_le NO_paysan
+NO_ministre PR_de DE_le NO_agriculture	ministres PR_de DE_le agriculteurs
+NO_ministre PR_de DE_le NO_agriculture	ministres PR_de DE_le NO_paysan
+NO_ministre PR_de DE_le NO_agriculture	NO_minist√®re PR_de DE_le agriculteurs
+NO_ministre PR_de DE_le NO_agriculture	NO_minist√®re PR_de DE_le NO_paysan
+NO_ministre PR_de DE_le NO_agriculture	minist√®re PR_de DE_le agriculteurs
+NO_ministre PR_de DE_le NO_agriculture	minist√®re PR_de DE_le NO_paysan
+conseil PR_de NA_etat	conseil PR_de etat
+conseil PR_de NA_etat	NO_conseil PR_de etat
+NO_agriculture AD_biologique	NO_paysan AD_biologique
+NO_agriculture AD_biologique	agriculteurs bio
+NO_agriculture AD_biologique	NO_paysan bio
+NO_an PR_de NO_prison	an PR_de NO_prison
+NO_maïs transgénique	NO_maïs transgéniques
+NA_etats NO_membre DE_le NO_liberté	NA_etat NO_membre DE_le NO_liberté
+NA_etats NO_membre DE_le NO_liberté	NA_etats NO_membre DE_le liberté
+NA_etats NO_membre DE_le NO_liberté	etat NO_membre DE_le NO_liberté
+NA_etats NO_membre DE_le NO_liberté	NA_etat NO_membre DE_le liberté
+NA_etats NO_membre DE_le NO_liberté	etat NO_membre DE_le liberté
+NO_organisme AD_génétiquement AD_modifié	AB_ogm
+NO_crédit PR_de NO_impôt	NO_crédit PR_de impots
+NO_crédit PR_de NO_impôt	NO_crédit PR_de impot
+NO_crédit PR_de NO_impôt	crédit PR_de impots
+NO_crédit PR_de NO_impôt	crédit PR_de impot
+grenelle PR_de DE_le NO_environnement	 VE_greneler PR_de DE_le NO_environnement
+grenelle PR_de DE_le NO_environnement	 VE_greneler PR_de DE_le environnement
+grenelle PR_de DE_le NO_environnement	VE_greneler PR_de DE_le environnement
+NO_ministère PR_de DE_le santé	ministère PR_de DE_le santé
+NO_ministère PR_de DE_le santé	ministre PR_de DE_le santé
+NO_ministère PR_de DE_le santé	ministres PR_de DE_le santé
+NO_ministère PR_de DE_le santé	ministère PR_de DE_le NO_santé
+NO_ministère PR_de DE_le santé	ministre PR_de DE_le NO_santé
+NO_ministère PR_de DE_le santé	ministres PR_de DE_le NO_santé
+NO_empreinte AD_génétique	NO_empreinte AD_chromosomique
+NA_bruno DE_le NO_maire	NA_bruno DE_le maire
+NA_bruno DE_le NO_maire	NA_bruno les maire
+NA_bruno DE_le NO_maire	NA_bruno le NO_maire
+NA_bruno DE_le NO_maire	NA_bruno les NO_maire
+VE_interdire DE_le NO_culture	VE_interdire DE_le culture
+NO_destruction PR_de NO_bien	NO_destruction PR_de bien
+VE_mener PR_à AD_bien DE_le NO_recherche	VE_mener PR_à NO_bien DE_le NO_recherche
+VE_mener PR_à AD_bien DE_le NO_recherche	VE_mener PR_à AD_bien DE_le recherche
+VE_mener PR_à AD_bien DE_le NO_recherche	VE_mener PR_à bien DE_le NO_recherche
+VE_mener PR_à AD_bien DE_le NO_recherche	VE_mener PR_à NO_bien DE_le recherche
+VE_mener PR_à AD_bien DE_le NO_recherche	VE_mener PR_à bien DE_le recherche
+NO_communiqué PR_de NO_presse	NO_communiqué PR_de presse
+NO_communiqué PR_de NO_presse	VE_communiquer PR_de presse
+fne	france nature environnement
+fne	france NO_nature environnement
+fne	france nature NO_environnement
+fne	france NO_nature NO_environnement
+NO_organisme AD_éthique KO_et AD_scientifique AD_indépendant	NO_organisme NO_éthique KO_et AD_scientifique AD_indépendant
+NO_président PR_de DE_le NO_commission AD_européen	president PR_de DE_le NO_commission AD_européen
+NO_président PR_de DE_le NO_commission AD_européen	president PR_de DE_le commission AD_européen
+NO_plante AD_génétiquement VE_modifier PR_en NA_europe	plantes AD_génétiquement VE_modifier PR_en NA_europe
+NO_plante AD_génétiquement VE_modifier PR_en NA_europe	NO_plantation AD_génétiquement VE_modifier PR_en NA_europe
+NO_ministre PR_de DE_le ecologie	NO_ministère PR_de DE_le NO_√©cologie
+NO_ministre PR_de DE_le ecologie	ministre PR_de DE_le NO_écologie
+NO_ministre PR_de DE_le ecologie	ministre PR_de DE_le NO_√©cologie
+NO_ministre PR_de DE_le ecologie	ministère PR_de DE_le NO_√©cologie
+NO_ministre PR_de DE_le ecologie	ministres PR_de DE_le NO_écologie
+NO_ministre PR_de DE_le ecologie	ministres PR_de DE_le NO_√©cologie
+NO_ministre PR_de DE_le ecologie	ministère PR_de DE_le NO_économie
+NO_ministre PR_de DE_le ecologie	NO_ministère PR_de DE_le NO_économie
+NO_ministre PR_de DE_le ecologie	ministre PR_de DE_le NO_économie
+NO_ministre PR_de DE_le ecologie	ministres PR_de DE_le NO_économie
+NO_ministre PR_de DE_le ecologie	NO_minist√®re PR_de DE_le NO_écologie
+NO_ministre PR_de DE_le ecologie	minist√®re PR_de DE_le NO_écologie
+NO_ministre PR_de DE_le ecologie	NO_ministère PR_du NO_d√©veloppement AD_durable
+NO_ministre PR_de DE_le ecologie	ministère PR_du NO_d√©veloppement AD_durable
+NO_ministre PR_de DE_le ecologie	NO_ministère PR_du d√©veloppement AD_durable
+NO_ministre PR_de DE_le ecologie	ministère PR_du d√©veloppement AD_durable
+NO_ministre PR_de DE_le ecologie	minist√®re PR_de DE_le NO_économie
+NO_ministre PR_de DE_le ecologie	NO_minist√®re PR_de DE_le NO_économie
+VE_être VE_prendre PR_en NO_compte	VE_être VE_prendre PR_en comptes
+NO_proposition PR_de DE_le NO_commission	VE_proposer PR_de DE_le NO_commission
+NO_proposition PR_de DE_le NO_commission	VE_proposer PR_de DE_le commission
+NO_organisation AD_mondial PR_de DE_le NO_santé	organisation AD_mondial PR_de DE_le NO_santé
+NO_organisation AD_mondial PR_de DE_le NO_santé	organisation AD_mondial PR_de DE_le santé
+NO_million PR_de NO_citoyen	NO_million PR_de citoyens
+NO_après-midi	aprés NO_midi
+NO_après-midi	PR_après NO_midi
+NA_philippe NA_martin	philippe NA_martin
+NO_téléphone AD_portable	NO_téléphonie AD_mobile
+NO_protection PR_de DE_le NO_environnement	NA_défense PR_de DE_le NO_environnement
+NO_protection PR_de DE_le NO_environnement	NA_défense PR_de DE_le environnement
+NO_protection PR_de DE_le NO_environnement	defendre PR_de DE_le NO_environnement
+NO_protection PR_de DE_le NO_environnement	NO_défenseur PR_de DE_le environnement
+NO_protection PR_de DE_le NO_environnement	NO_d√©fenseur PR_de DE_le environnement
+NO_protection PR_de DE_le NO_environnement	VE_défendre PR_de DE_le NO_environnement
+NO_protection PR_de DE_le NO_environnement	defendre PR_de DE_le environnement
+NO_protection PR_de DE_le NO_environnement	VE_défendre PR_de DE_le environnement
+NO_pomme PR_de NO_terre transgénique	NO_pomme PR_de terre transgénique
+NO_pomme PR_de NO_terre transgénique	NO_pomme PR_de NO_terre transgéniques
+NO_pomme PR_de NO_terre transgénique	NO_pomme PR_de terre transgéniques
+NO_commission AD_ne	NO_commission n
+NO_commission AD_ne	commission n
+NO_commission AD_ne	NO_commissioAD_ne AD_ne
+NO_commission AD_ne	commissioAD_ne AD_ne
+NO_semaine AD_dernier	semaine AD_dernier
+NO_semaine AD_dernier	semaine derniere
+NO_semaine AD_dernier	NO_semaine dernieres
+NO_semaine AD_dernier	semaine dernieres
+AD_alors KO_que DE_le NO_gouvernement	AD_alors PR_que DE_le NO_gouvernement
+AD_alors KO_que DE_le NO_gouvernement	alors KO_que DE_le gouvernement
+AD_alors KO_que DE_le NO_gouvernement	AD_alors PR_que DE_le gouvernement
+AD_alors KO_que DE_le NO_gouvernement	alors PR_que DE_le NO_gouvernement
+AD_alors KO_que DE_le NO_gouvernement	alors PR_que DE_le gouvernement
+NO_pomme PR_de NO_terre amflora	NO_pomme PR_de terre amflora
+NO_citoyen AD_européen	citoyens AD_européen
+NO_principe PR_de NO_précaution	NO_principe PR_de NO_précaution n
+NO_principe PR_de NO_précaution	NO_priAD_necipe PR_de NO_précautioAD_ne AD_ne
+NO_directeur AD_général	NO_directeur général
+NO_investissement PR_de NO_avenir	NO_investissement PR_de avenir
+NO_président PR_de DE_le NO_commission	president PR_de DE_le NO_commission
+NO_président PR_de DE_le NO_commission	president PR_de DE_le commission
+inserm	NO_institut AD_national PR_de DE_le NO_santé KO_et PR_de DE_le recherche
+inserm	NO_institut national PR_de DE_le NO_santé KO_et PR_de DE_le recherche
+inserm	NO_institut AD_national PR_de DE_le santé KO_et PR_de DE_le recherche
+inserm	NO_institut nationale PR_de DE_le NO_santé KO_et PR_de DE_le recherche
+inserm	NO_institut national PR_de DE_le santé KO_et PR_de DE_le recherche
+inserm	NO_institut nationale PR_de DE_le santé KO_et PR_de DE_le recherche
+inserm	NO_institut AD_national PR_de DE_le NO_sant√© KO_et PR_de DE_le recherche
+inserm	NO_institut national PR_de DE_le NO_sant√© KO_et PR_de DE_le recherche
+inserm	NO_institut AD_national PR_de DE_le sant√© KO_et PR_de DE_le recherche
+inserm	NO_institut nationale PR_de DE_le NO_sant√© KO_et PR_de DE_le recherche
+inserm	NO_institut national PR_de DE_le sant√© KO_et PR_de DE_le recherche
+inserm	NO_institut nationale PR_de DE_le sant√© KO_et PR_de DE_le recherche
+NO_gène PR_de NO_résistance	NO_génome PR_de NO_résistance
+NA_hervé NA_georges	NA_hervé NA_george
+NO_président PR_de DE_le NO_association	NO_président PR_de DE_le associations
+NO_président PR_de DE_le NO_association	president PR_de DE_le NO_association
+NO_président PR_de DE_le NO_association	NO_présidence PR_de DE_le associations
+NO_président PR_de DE_le NO_association	NO_présidente PR_de DE_le associations
+NO_président PR_de DE_le NO_association	president PR_de DE_le association
+NO_président PR_de DE_le NO_association	president PR_de DE_le associations
+afsset	agence AD_français PR_de sécurité AD_sanitaire PR_de DE_le NO_environnement
+afsset	agence AD_français PR_de NO_sécurité AD_sanitaire PR_de DE_le environnement
+afsset	NO_agence française PR_de sécurité sanitaire PR_de DE_le NO_environnement
+afsset	agence NA_français PR_de sécurité sanitaire PR_de DE_le NO_environnement
+afsset	agence NO_français PR_de sécurité sanitaire PR_de DE_le NO_environnement
+afsset	agence française PR_de NO_sécurité sanitaire PR_de DE_le NO_environnement
+afsset	agence française PR_de sécurité sanitaire PR_de DE_le environnement
+afsset	NO_agence AD_français PR_de sécurité AD_sanitaire PR_de DE_le NO_environnement
+afsset	NO_agence AD_français PR_de NO_sécurité AD_sanitaire PR_de DE_le environnement
+afsset	agence AD_fran√ßais PR_de NO_s√©curit√© AD_sanitaire PR_de DE_le environnement
+afsset	NO_agence fran√ßaise PR_de s√©curit√© sanitaire PR_de DE_le NO_environnement
+afsset	agence fran√ßaise PR_de s√©curit√© sanitaire PR_de DE_le environnement
+afsset	NO_agence AD_fran√ßais PR_de NO_s√©curit√© AD_sanitaire PR_de DE_le environnement
+afsset	agence AD_français PR_de sécurité AD_sanitaire PR_de DE_le environnement
+afsset	NO_agence NA_français PR_de sécurité sanitaire PR_de DE_le NO_environnement
+afsset	NO_agence NO_français PR_de sécurité sanitaire PR_de DE_le NO_environnement
+afsset	NO_agence française PR_de NO_sécurité sanitaire PR_de DE_le NO_environnement
+afsset	NO_agence française PR_de sécurité sanitaire PR_de DE_le environnement
+afsset	agence NA_françois PR_de sécurité sanitaire PR_de DE_le NO_environnement
+afsset	agence NA_françoise PR_de sécurité sanitaire PR_de DE_le NO_environnement
+afsset	agence NA_français PR_de NO_sécurité sanitaire PR_de DE_le NO_environnement
+afsset	agence NA_français PR_de sécurité sanitaire PR_de DE_le environnement
+afsset	agence NO_français PR_de NO_sécurité sanitaire PR_de DE_le NO_environnement
+afsset	agence NO_français PR_de sécurité sanitaire PR_de DE_le environnement
+afsset	agence française PR_de NO_sécurité sanitaire PR_de DE_le environnement
+afsset	NO_agence AD_français PR_de sécurité AD_sanitaire PR_de DE_le environnement
+afsset	NO_agence fran√ßaise PR_de s√©curit√© sanitaire PR_de DE_le environnement
+afsset	NO_agence NA_françois PR_de sécurité sanitaire PR_de DE_le NO_environnement
+afsset	NO_agence NA_françoise PR_de sécurité sanitaire PR_de DE_le NO_environnement
+afsset	NO_agence NA_français PR_de NO_sécurité sanitaire PR_de DE_le NO_environnement
+afsset	NO_agence NA_français PR_de sécurité sanitaire PR_de DE_le environnement
+afsset	NO_agence NO_français PR_de NO_sécurité sanitaire PR_de DE_le NO_environnement
+afsset	NO_agence NO_français PR_de sécurité sanitaire PR_de DE_le environnement
+afsset	NO_agence française PR_de NO_sécurité sanitaire PR_de DE_le environnement
+afsset	agence NA_françois PR_de NO_sécurité sanitaire PR_de DE_le NO_environnement
+afsset	agence NA_françois PR_de sécurité sanitaire PR_de DE_le environnement
+afsset	agence NA_françoise PR_de NO_sécurité sanitaire PR_de DE_le NO_environnement
+afsset	agence NA_françoise PR_de sécurité sanitaire PR_de DE_le environnement
+afsset	agence NA_français PR_de NO_sécurité sanitaire PR_de DE_le environnement
+afsset	agence NO_français PR_de NO_sécurité sanitaire PR_de DE_le environnement
+afsset	NO_agence NA_françois PR_de NO_sécurité sanitaire PR_de DE_le NO_environnement
+afsset	NO_agence NA_françois PR_de sécurité sanitaire PR_de DE_le environnement
+afsset	NO_agence NA_françoise PR_de NO_sécurité sanitaire PR_de DE_le NO_environnement
+afsset	NO_agence NA_françoise PR_de sécurité sanitaire PR_de DE_le environnement
+afsset	NO_agence NA_français PR_de NO_sécurité sanitaire PR_de DE_le environnement
+afsset	NO_agence NO_français PR_de NO_sécurité sanitaire PR_de DE_le environnement
+afsset	agence NA_françois PR_de NO_sécurité sanitaire PR_de DE_le environnement
+afsset	agence NA_françoise PR_de NO_sécurité sanitaire PR_de DE_le environnement
+afsset	NO_agence NA_françois PR_de NO_sécurité sanitaire PR_de DE_le environnement
+afsset	NO_agence NA_françoise PR_de NO_sécurité sanitaire PR_de DE_le environnement
+NO_million PR_de NO_euro	NO_million PR_de d?euros
+NO_million PR_de NO_euro	NO_million NA_euro
+NO_million PR_de NO_euro	NO_million NO_euro
+NO_organisme PR_de NO_recherche	NO_organisme PR_de recherche
+NO_réforme PR_du NO_retraite	réforme PR_du NO_retraite
+NO_réforme PR_du NO_retraite	NO_réforme PR_du retraites
+NO_réforme PR_du NO_retraite	réforme PR_du AD_retrait
+NO_réforme PR_du NO_retraite	réforme PR_du retraites
+NO_mouvement AD_social	movement AD_social
+NU_premier NO_instance	NA_premier NO_instance
+NU_premier NO_instance	NO_premier NO_instance
+NU_premier NO_instance	premiere NO_instance
+AD_jeune NO_femme	AD_jeune femmes
+NO_manipulation AD_génétique	NO_manipulation AD_chromosomique
+NO_chiffre PR_de NO_affaire	NO_chiffre PR_de VE_affairer
