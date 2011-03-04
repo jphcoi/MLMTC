@@ -4,7 +4,6 @@ JJ_acid	NN_acid
 JJ_alternative	NN_alternative
 NN_angstrom	angstrom
 NN_b	NP_b
-NN_bacterium	JJ_bacterial
 JJ_beta	NN_beta
 JJ_binding NN_site	VV_bind NN_site
 JJ_binding	VV_bind
@@ -22,7 +21,6 @@ JJ_delta	NN_delta
 JJ_delta	NP_delta
 JJ_green	NP_green
 JJ_green NN_alga	JJ_green NN_algae
-NN_algae	NN_alga
 JJ_green NN_alga	NP_green algae
 JJ_green NN_algae	NP_green algae
 JJ_green NN_algae	green-algae
@@ -41,11 +39,9 @@ microcystins	microcystis
 photosystem PP_i	photosystem NP_ii
 PP_i	NP_ii
 JJ_red NN_alga	JJ_red NN_algae
-NN_algae	NN_alga
 NN_river	NP_river
 NN_substratum	NN_substrate
 JJ_unicellular JJ_green NN_alga	JJ_unicellular JJ_green NN_algae
-NN_algae	NN_alga
 JJ_constant	NN_constant
 JJ_core	NN_core
 NN_culture	JJ_cultured
@@ -104,12 +100,9 @@ NP_planning NN_analyst	VV_plan NN_analyst
 VV_plan	NP_planning
 NP_planning NP_analyst	VV_plan NN_analyst
 NN_planning NN_process	VV_plan NN_process
-NN_planning	VV_plan
 NN_range NN_planning	NN_range VV_plan
-NN_planning	VV_plan
 NN_staff	NP_staff
 JJ_strategic NN_planning	JJ_strategic VV_plan
-NN_planning	VV_plan
 JJ_strategic VV_plan	NP_strategic NP_planning
 NN_treasury	NP_treasury
 mass-spectrometry	NN_mass NN_spectrometry
@@ -247,7 +240,6 @@ mitogen	mitogens
 telomeres	telomere
 NN_high-resolution	JJ_high NN_resolution
 neuronal NN_activity	JJ_neural NN_activity
-NN_sequence	sequenced
 NN_class NP_ii NN_molecule	NN_class CD_ii NN_molecule
 beta-chain	JJ_beta NN_chain
 beta-chain	beta-chains
@@ -487,7 +479,6 @@ NN_service	NP_services
 JJ_short CC_and JJ_long NN_range	JJ_short CC_and JJ_long-range
 JJ_strategic	NP_strategic
 JJ_strategic NN_analysis	NN_strategy NN_analysis
-NN_strategy	JJ_strategic
 JJ_strategic NN_planning	NP_strategic NP_planning
 NN_system	NP_systems
 JJ_strategic NN_planning	JJ_strategic NP_planning
@@ -838,7 +829,6 @@ JJ_therapeutic NN_strategy	JJ_therapeutic NP_strategic
 NN_oxalate NN_production	NN_oxalate NN_product
 NN_oxalate NN_production	NN_oxalate NP_product
 NN_report	NP_report
-NN_report	NP_report
 JJ_antibiotic	NN_antibiotic
 NN_arteritis	NN_arthritis
 NN_association	NP_association
@@ -854,7 +844,6 @@ NP_ct NN_scan	NP_ct VV_scan
 NN_scan	VV_scan
 JJ_differential	NN_differential
 JJ_differential NN_diagnosis	NN_differential NN_diagnosis
-JJ_differential	NN_differential
 NN_disease	NP_disease
 NN_disease	diseases
 NP_disease	diseases
@@ -1856,10 +1845,6 @@ NP_executive	NN_executive
 NP_financial NP_analysis	JJ_financial NN_analyst
 NP_financial NN_analyst	NP_financial NP_analyst
 JJ_senior NP_financial NP_analyst	NP_senior NP_financial NP_analyst
-NP_executive	NN_executive
-NP_financial NP_analysis	JJ_financial NN_analyst
-NP_financial NN_analyst	NP_financial NP_analyst
-JJ_senior NP_financial NP_analyst	NP_senior NP_financial NP_analyst
 NN_adapter NN_protein	NN_adaptor NN_protein
 JJ_adult	NN_adult
 JJ_aggregate	NN_aggregate
@@ -1926,9 +1911,7 @@ JJ_dynamic	NP_dynamics
 JJ_dynamic NN_behavior	JJ_dynamical NN_behavior
 JJ_dynamical	JJ_dynamic
 JJ_dynamic NN_property	JJ_dynamical NN_property
-JJ_dynamical	JJ_dynamic
 JJ_dynamic NN_system	JJ_dynamical NN_system
-JJ_dynamical	JJ_dynamic
 NN_dynamics	NP_dynamics
 NN_electron NN_microscopy	electron-microscopy
 JJ_embryonic NN_stem NN_cell	JJ_embryonic stem-cells
@@ -2000,11 +1983,9 @@ NN_model	NP_model
 JJ_molecular NN_dynamics	molecular-dynamics
 NN_monoclonal NN_antibody	monoclonal-antibodies
 JJ_negative NN_feedback NN_regulation	JJ_negative NN_feedback NN_regulator
-NN_regulator	NN_regulation
 JJ_nervous NN_system	NN_nervous-system
 NN_network VV_base	JJ_network-based
 NN_network IN_of VV_interact	NN_network IN_of NN_interaction
-VV_interact	NN_interaction
 JJ_neural	neural
 JJ_neural NN_network	neural NP_networks
 JJ_neural NN_network	neural-networks
@@ -2027,14 +2008,12 @@ NN_plasma NN_membrane	plasma-membrane
 JJ_positive	NN_positive
 post-translational	posttranslational
 post-translational NN_modification	posttranslational NN_modification
-post-translational	posttranslational
 NN_power NN_law	power-law
 JJ_present	NN_present
 NN_protein	proteins
 protein	proteins
 NN_protein CD_1	protein-1
 NN_protein VV_interact	NN_protein NN_interaction
-VV_interact	NN_interaction
 NN_protein NN_interaction	protein-interaction
 NN_protein NN_interaction NN_network	protein-interaction NN_network
 NN_protein NN_kinase	protein-kinase
@@ -2109,9 +2088,6 @@ NP_interaction	VV_interact
 NN_control	controller
 inhibition	NN_inhibitor
 inhibition	JJ_inhibitory
-NN_i	ii
-NN_i	NP_iii
-NN_i	iii
 NN_protein NN_kinase	protein-kinase-c
 NN_protein NN_kinase	NN_protein NN_kinase NP_c
 NN_protein NN_kinase	protein NN_kinase NP_c
@@ -2133,41 +2109,12 @@ NN_direction	NP_director
 NN_side NN_chain	side-chains
 JJ_dynamic NN_system	JJ_dynamical NP_systems
 JJ_long-range	NP_long NN_range
-JJ_long-range	JJ_long-range NN_plan
-JJ_long-range	NP_long NN_range NN_plan
-JJ_long-range	JJ_long NP_range NN_plan
-JJ_long-range	NP_long NP_range NN_plan
-JJ_long-range	JJ_long NN_range NN_planning
-JJ_long-range	JJ_long-range NN_planning
-JJ_long-range	NP_long NP_range NP_planning
-JJ_long-range	JJ_long-range NP_planning
-JJ_long-range	JJ_long NP_range NP_planning
-JJ_long-range	NP_long NP_range NN_planning
-JJ_long-range	JJ_long NP_range NN_planning
-JJ_long-range	NP_long NN_range NN_planning
-JJ_long-range	JJ_long NN_range NP_planning
-JJ_long-range	NP_long NN_range NP_planning
 NN_leukemia	leukaemic
 NN_leukemia	leukaemias
 NN_adapter NN_protein	NN_adaptor protein
 NN_transducer	transduced
 NN_transducer	transduces
-il-6	il-10
-il-6	il-1
-il-6	il-3
-il-6	il-8
-il-6	il-12
-il-6	NN_il-4
-il-6	il-2
-il-6	il-4
-il-6	il-5
-il-6	il-7
-il-6	il-11
-il-6	il-9
 NN_support NN_vector NN_machine	svm
 NP_alzheimer	alzheimers-disease
 NN_regulation	NP_regulatory
 NN_inhibition	JJ_inhibitory
-NP_iii	PP_i
-NP_iii	ii
-NP_iii	NP_i

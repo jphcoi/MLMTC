@@ -17,3 +17,13 @@ for ligne in file_in.readlines():
 		file_out.write(ligne)
 
 
+file_in = open("leven-classes_englisho.txt",'r')
+file_out = open("leven-classes_englisho_nodoublon.txt",'w')
+
+lignes = []
+for ligne in file_in.readlines():
+	if not ligne in lignes:
+		lignes.append(ligne)
+		file_out.write(ligne)
+
+
