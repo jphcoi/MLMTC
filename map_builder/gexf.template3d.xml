@@ -46,6 +46,8 @@
 <?py 	if float(data)>0.02: ?>
       <edge id="#{i}" source="#{source[0]}" target="#{source[1]}" weight="#{data}">
       </edge>
+<?py 	#endif ?>
+
 <?py #endfor ?>
     </edges>
   </graph>

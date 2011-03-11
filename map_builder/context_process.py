@@ -409,6 +409,7 @@ try:# si on a deja calcule le reseau de proximit
 		fonctions.dumpingin(dist_mat,'dist_mat'+name_date)
 		print 'on a dumpé distmat'
 		remplir_colonne_distance_sem_weighted(dist_mat)		
+		remplir_colonne_distance_sem_weighted(dist_mat_res_10)		
 		print 'on a enregistre la variable dist_mat' + name_date + ' en mémoire et remplit la table sem_weighted avec les distances positives.'
 		
 except:# sinon on recalcule du début

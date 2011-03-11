@@ -68,7 +68,7 @@ def notinterdit(language,tag):
 
 def notinterditfin(language,tag):
 	if language=='english':
-		if tag in ['VE','JJ','PR','DT','TO','IN','WD','VB','CC']:
+		if tag in ['VE','JJ','PR','DT','TO','IN','WD','VB','CC','WR','VH']:
 			return False
 		else:
 			return True

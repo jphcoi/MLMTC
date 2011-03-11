@@ -14132,3 +14132,5 @@ NU_premier NO_instance	premiere NO_instance
 AD_jeune NO_femme	AD_jeune femmes
 NO_manipulation AD_génétique	NO_manipulation AD_chromosomique
 NO_chiffre PR_de NO_affaire	NO_chiffre PR_de VE_affairer
+NO_week-end	weekend end
+NO_week-end	NO_week-end end

@@ -15,10 +15,16 @@ import random
 import math
 from copy import deepcopy
 import jsonpickle
+import parameters
+path_req=parameters.path_req
+
 #import layout
 
 
 class Tube:
+	pass
+
+class Edge:
 	pass
 	
 def renormalisation(vpos,periodes):
@@ -320,10 +326,7 @@ def spring_layout_1d(G, periodes,epaisseur,iterations=20, dim=2, node_pos=None):
 
 	
 
-# conn = sqlite3.connect('toxico.db')
-# c = conn.cursor()
-# c.execute('select * from cardiolinks')
-def plot_graph(liens_totaux_syn,liens_totaux_dia,clusters,label = 'a'):
+def plot_graph(liens_totaux_syn,liens_totaux_dia,clusters,label_edges):
 	
 	#on initialise le graphe
 	G=nx.Graph()
@@ -359,10 +362,16 @@ def plot_graph(liens_totaux_syn,liens_totaux_dia,clusters,label = 'a'):
 		if not periode in periodes:
 			periodes.append(periode)
 		try:
-			epaisseur[k] = 4+int(10 * float(row['epaisseur']))
+			epaisseur[k] = 4+int(4 * float(row['epaisseur']))
 		except:
 			epaisseur[k] = 4
 		vert_pos[k] = periode
+	#normalisation des épaisseurs:
+	epaisseur_norm={}
+	width_total = sum(epaisseur.values())
+	for k,width in epaisseur.iteritems():
+		epaisseur_norm[k] = float(width) / width_total * 1000.
+	epaisseur=epaisseur_norm
 	print 'order'
 	#print G.order()
 	vpos_0 = deepcopy(vpos)
@@ -388,44 +397,17 @@ def plot_graph(liens_totaux_syn,liens_totaux_dia,clusters,label = 'a'):
 	#nx.draw_networkx_labels(G,pos,labels,font_size=12,font_color='blue')
 	print 'labels added'
 	i = random.randint(1,10)
-	plt.savefig("/Users/louiseduloquin/Desktop/fichiers en partance/graph" + str(i) + '.png')
+	plt.savefig(path_req + str(i) + '.png')
 	return G,epaisseur_0,pos
 
 
-def plot_graph_json(liens_totaux_syn,liens_totaux_dia,clusters):
-	G,epaisseur,pos = plot_graph(liens_totaux_syn,liens_totaux_dia,clusters,label = 'a')
-	#on initialise le graphe
-	# G=nx.Graph()
-	# forces,edge_colors=[],[]
-	# for lien in liens_totaux_syn:
-	# 	G.add_edge(int(lien[0]), int(lien[1]), weight = float(lien[2]),key = 0)
-	# 	forces.append(4.5*float(lien[2]))
-	# for lien in liens_totaux_dia:
-	# 	G.add_edge(int(lien[0]), int(lien[1]), weight =  float(lien[2]),key = 1)
-	# 	forces.append(4.5*float(lien[2]))
-	# vpos=nx.random_layout(G, dim=2)
-	# epaisseur = {}
-	# periodes=[]
-	# for k,row in clusters.iteritems():
-	# 
-	# 	periode=int(row['periode'])
-	# 
-	# 	vpos[k][1]=periode
-	# 	if not periode in periodes:
-	# 		periodes.append(periode)
-	# 	try:
-	# 		epaisseur[k] = 4+int(10 * float(row['epaisseur']))
-	# 	except:
-	# 		epaisseur[k] = 4
 
-	#pos=spring_layout_1d(G, periodes,epaisseur,iterations=nb_iterations, dim=2,node_pos=vpos)
-	#nx.draw(G,pos)
-	#for x in G.edges(data=True):
-	#	if x[2]['key']==0:
-	#		G.remove_edge(*x[:2])
 
-	#r = []
-	
+def plot_graph_json(liens_totaux_syn,liens_totaux_dia,clusters,label_edges):
+	print clusters
+	G,epaisseur,pos = plot_graph(liens_totaux_syn,liens_totaux_dia,clusters,label_edges)
+	steps = 0
+
 	r = {}
 	r["meta"] = {}
 	r["nodes"] = []
@@ -433,19 +415,45 @@ def plot_graph_json(liens_totaux_syn,liens_totaux_dia,clusters):
 
 
 	r["meta"]["tubes_count"] = len(pos)
-
+	
 	for n in pos:
 		c = Tube()
 
 		c.i = n
 		c.x = float(pos[n][0])
 		c.y = float(pos[n][1])
-		c.width = epaisseur[n]
+		c.width = int(epaisseur[n])
+		try:
+			print clusters[n]['label_node']
+		except:
+			print 'pas de label tube'
+		c.label = clusters[n]['label_node']
+		
+		#c.contain= ? 
+		#c.contained_by= ? 
+		c.level = 0
+		#steps = max(steps, c.y)
 
 		r["nodes"].append(c)
 
-	for e in liens_totaux_dia:
-		r["edges"].append( ( e[0], e[1] ) )
+	for edge,edge_label in zip(liens_totaux_dia,label_edges):
+		#structure objet
+		e= Edge()
+		e.node_parent=edge[0]
+		e.node_child=edge[1]
+		if edge[2]>0.5:
+			e.weak=1
+		else:
+			e.weak=0
+		e.label= edge_label
+		#e.node_label=?
+		#e.weak=1/0
+		r["edges"].append(e)
+		#r["edges"].append( ( e[0], e[1]) )
+	#	r["edges"].append( ( e[0], e[1] ) )
 
-
+	#r["meta"]["steps"] = int(steps + 1)
+	#r["meta"]["start"] = ?
+	#r["meta"]["step"] = ?
+	#r["meta"]["depth"] = ?
 	print jsonpickle.encode(r)

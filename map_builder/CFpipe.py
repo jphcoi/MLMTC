@@ -242,7 +242,7 @@ def afficher_tous_champs(champs,scores,nb_label,sep_label,dico_termes,dico_trans
 				print '\n' + label
 				afficher_champ(c,dico_termes,dico_transition,inter)
 
-def score_compute(type_score,champ_terme,dist_mat,terme,inter):
+def score_compute(champ_terme,dist_mat,terme,inter,type_score='combine'):
 	score_computed = 0.
 	if type_score=='combine':
 		for voisin in champ_terme:
@@ -290,7 +290,7 @@ def label_champs(champs0,nb_label,dico_transition,dico_termes,dist_mat,type_scor
 				ratio = (float(doc_champ)/nb_termes_chp) / (float(doc_total)/len(termes[inter]))
 				#le ratio c'est la proportion  du terme dans le champ normalisee par sa proportion dans tous les champs 
 				#et là on calcule le score a proprement parler:
-				meilleur_voisin = score_compute(type_score,champ_terme,dist_mat,terme,inter)
+				meilleur_voisin = score_compute(champ_terme,dist_mat,terme,inter,type_score)
 				ponderation = math.log10(ratio)
 				score.append(meilleur_voisin*ponderation)
 			scoretrie = score[:]

@@ -1,0 +1,20 @@
+name_data="../../inout/data/faucheurs.lfl"
+language ='french'
+date_depart =  date(2010,1,1)
+freqmin = 6
+ng_filter=[1,2,3,3,3]
+top = 1000
+sample=4000000
+dated = 2010
+datef = 2010
+fenetre = 14
+overlap = 14
+dist_type='precision'
+build_link_tables='y'
+maxTermLength=5
+nofigure=1
+user_interface='y'
+withrequete=0
+continent='societe'
+timelimit=3
+
