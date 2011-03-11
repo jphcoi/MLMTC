@@ -518,13 +518,6 @@ except:
 				except:
 					sym=0.
 				liens_totaux_syn.append((id_univ,voisin,max(stre,sym)))
-		clusters[id_univ]['label_nodes'] = return_label(scores_label[id_univ],40)#on assigne un label composé des 40 premiers termes à l'échelle du noeud		
-		if 'dia' in clu:#on traite les liens asynchro
-			voisins = clu['dia']
-			for voisin,stre in voisins.iteritems():
-				liens_totaux_dia.append((id_univ,voisin,stre))
-				score_label_edge=merge_label(scores_label,[voisin,id_univ])
-				label_edges.append(return_label(score_label_edge))#on assigne un label sur chaque lien intertemporel
 	
 	
 	
@@ -565,6 +558,15 @@ except:
 	for id,clu in clusters_complet.iteritems():
 		print id,clu
 	
+
+	for id_univ,clu in clusters.iteritems():
+		clusters[id_univ]['label_nodes'] = return_label(scores_label[id_univ],40)#on assigne un label composé des 40 premiers termes à l'échelle du noeud		
+		if 'dia' in clu:#on traite les liens asynchro
+			voisins = clu['dia']
+			for voisin,stre in voisins.iteritems():
+				liens_totaux_dia.append((id_univ,voisin,stre))
+				score_label_edge=merge_label(scores_label,[voisin,id_univ])
+				label_edges.append(return_label(score_label_edge))#on assigne un label sur chaque lien intertemporel
 
 	#on reconstruit la composition micro; la position et les labels des métachamps.
 
