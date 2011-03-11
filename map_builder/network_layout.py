@@ -326,7 +326,7 @@ def spring_layout_1d(G, periodes,epaisseur,iterations=20, dim=2, node_pos=None):
 
 	
 
-def plot_graph(liens_totaux_syn,liens_totaux_dia,clusters,label_edges):
+def plot_graph(liens_totaux_syn,liens_totaux_dia,clusters):
 	
 	#on initialise le graphe
 	G=nx.Graph()
@@ -391,21 +391,23 @@ def plot_graph(liens_totaux_syn,liens_totaux_dia,clusters,label_edges):
 	forces_plot=[]
 	for x in forces:
 		forces_plot.append(x*1.4)
-	nx.draw_networkx_edges(G,pos,None,width=forces_plot)
-	nx.draw_networkx_nodes(G,pos,None,epaisseur.values())
+#	nx.draw_networkx_edges(G,pos,None,width=forces_plot)
+#	nx.draw_networkx_nodes(G,pos,None,epaisseur.values())
 	
 	#nx.draw_networkx_labels(G,pos,labels,font_size=12,font_color='blue')
 	print 'labels added'
-	i = random.randint(1,10)
-	plt.savefig(path_req + str(i) + '.png')
+#	i = random.randint(1,10)
+#	plt.savefig(path_req + str(i) + '.png')
 	return G,epaisseur_0,pos
 
 
-
+def get_pos(liens_totaux_syn,liens_totaux_dia,clusters):
+	G,epaisseur_0,pos=plot_graph(liens_totaux_syn,liens_totaux_dia,clusters)
+	return pos
 
 def plot_graph_json(liens_totaux_syn,liens_totaux_dia,clusters,label_edges):
 	print clusters
-	G,epaisseur,pos = plot_graph(liens_totaux_syn,liens_totaux_dia,clusters,label_edges)
+	G,epaisseur,pos = plot_graph(liens_totaux_syn,liens_totaux_dia,clusters)
 	steps = 0
 
 	r = {}

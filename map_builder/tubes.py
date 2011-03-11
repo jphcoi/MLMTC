@@ -285,14 +285,14 @@ def return_label(scores,nb_label=2):
 
 
 
-def	merge_label(scores_label,liste_univ):
-	voisin = liste_univ[0]
-	score_label_edge = scores_label[voisin]
-	for noeud in liste_univ[1:]:
-		score_labeln = scores_label[noeud]
-		for con1,sc1 in score_labeln.iteritems():
-			score_label_edge[con1] =  score_label_edge.get(con1,0.) + sc1
-	return score_label_edge	
+# def	merge_label(scores_label,liste_univ):
+# 	voisin = liste_univ[0]
+# 	score_label_edge = scores_label[voisin]
+# 	for noeud in liste_univ[1:]:
+# 		score_labeln = scores_label[noeud]
+# 		for con1,sc1 in score_labeln.iteritems():
+# 			score_label_edge[con1] =  score_label_edge.get(con1,0.) + sc1
+# 	return score_label_edge	
 
 def reindex(univ2index,temp):
 	temp_index={}
@@ -376,7 +376,7 @@ def h_clustering(clusters):
 	for i,ev_fusion in enumerate(Z[:-max_periode]):
 
 
-		if i>=len(Z)*level/nb_level:
+		if i>=len(Z)*level/nb_level -1:
 			print i,level
 			#on fige le réseau dans son état.
 			if level>0:
@@ -428,11 +428,13 @@ def recup(above,index,pertinents):
 		dessus = above[dessus]
 	return dessus
 
-def get_attribute(list_index,attribute,clusters_complet):
+def get_attribute(list_index,attribute,clusters_complet,type={}):
 	attributes=[]
 	for x in list_index:
-		attributes.append(clusters_complet[x].get(attribute,{}))
+		attributes.append(clusters_complet[x].get(attribute,type))
 	return attributes
+
+
 
 def merge_dicts_list(list_dicts):
 	dict0 = list_dicts[0]
@@ -449,7 +451,7 @@ def merge_list_list(list_list):
 	
 orphan_number = 1
 try:
-	liens_totaux_syn,liens_totaux_dia,clusters,years_bins,label_edges = fonctions.dumpingout('qliens_totaux_syn'+ str(orphan_number)),fonctions.dumpingout('liens_totaux_dia'+ str(orphan_number)),fonctions.dumpingout('clusters'+ str(orphan_number)),fonctions.dumpingout('years_bins'+ str(orphan_number)),fonctions.dumpingout( 'liens_totaux_label'+ str(orphan_number))
+	liens_totaux_syn_0,liens_totaux_dia_0,clusters,years_bins,label_edges = fonctions.dumpingout('qliens_totaux_syn'+ str(orphan_number)),fonctions.dumpingout('liens_totaux_dia'+ str(orphan_number)),fonctions.dumpingout('clusters'+ str(orphan_number)),fonctions.dumpingout('years_bins'+ str(orphan_number)),fonctions.dumpingout( 'liens_totaux_label'+ str(orphan_number))
 	print 'data loaded'
 except:
 	print 'tubes coordinates being computed'
@@ -476,9 +478,8 @@ except:
 	for x,y in epaisseur.iteritems():
 		clusters[x]['epaisseur']=y
 
-	liens_totaux_syn=[]
-	liens_totaux_dia=[]
-	label_edges =[]
+	liens_totaux_syn_0=[]
+	liens_totaux_dia_0=[]
 	scores_label={}
 	
 	#on ordonne les distances dans l'ordre croissant
@@ -517,7 +518,7 @@ except:
 					sym=clusters[voisin]['syn'][id_univ]
 				except:
 					sym=0.
-				liens_totaux_syn.append((id_univ,voisin,max(stre,sym)))
+				liens_totaux_syn_0.append((id_univ,voisin,max(stre,sym)))
 	
 	
 	
@@ -526,7 +527,6 @@ except:
 	for level,clusts in clusters_level.iteritems():
 		print 'level:'+str(level)+':'+str(len(clusts))+' nodes\n'		
 		for index in clusts:
-			
 			clu = clusters.get(index,{})
 			clu['node_parent']=above_propre.get(index,'')
 			clu['node_child']=','.join(list(map(str,below_propre.get(index,[]))))
@@ -534,11 +534,13 @@ except:
  			if level>0:#pour les nouveaux noeuds on complète les informations.
 				clu['periode']=clusters_complet[below_propre[index][0]]['periode']
 			#	138 {'periode': 7, 'level': 0, 'node_parent': 223, 'epaisseur': 10.165800510883372, 'syn': {137: 0.59753930429199997, 139: 0.65850649307499998, 140: 0.52342390664600003}, 'dia': {171: 42.460694525999997, 174: 34.644702170000002}, 'concepts': [329, 387, 5, 140, 235, 21, 42, 341], 'node_child': '', 'nb_fathers': 1, 'label': u'porc --- s\xe9curit\xe9 sanitaire', 'nb_sons': 1}
-				clu['epaisseur'] = sum(get_attribute(below_propre[index],'epaisseur',clusters_complet))
-				#clu['syn']=merge_dicts_list(get_attribute(below_propre[index],'syn',clusters_complet))
-				#clu['dia']=merge_dicts_list(get_attribute(below_propre[index],'dia',clusters_complet))
-				#clu['concepts'] = merge_list_list(get_attribute(below_propre[index],'concepts',clusters_complet))
+				clu['epaisseur'] = sum(get_attribute(below_propre[index],'epaisseur',clusters_complet,0.))
+				
+				clu['syn']=merge_dicts_list(get_attribute(below_propre[index],'syn',clusters_complet))
+				clu['dia']=merge_dicts_list(get_attribute(below_propre[index],'dia',clusters_complet))
+				clu['concepts'] = merge_list_list(get_attribute(below_propre[index],'concepts',clusters_complet))
 				clu['sc_lab']=merge_dicts_list(get_attribute(below_propre[index],'sc_lab',clusters_complet))
+				
 				dia_below = merge_dicts_list(get_attribute(below_propre[index],'dia',clusters_complet))
 				dia_below_above={}
 				for x,val in dia_below.iteritems():
@@ -551,34 +553,105 @@ except:
 				for x,val in syn_below.iteritems():
 					syn_below_above[above[x]]=val
 				clu['syn']=syn_below_above
-				clu['label_nodes'] = return_label(scores_label[id_univ],level+2)#on assigne un label composé des 40 premiers termes à l'échelle du noeud		
-				
+				clu['label_nodes'] = return_label(scores_label[id_univ],level+2)#on assigne un label composé des 40 premiers termes à l'échelle du noeud			
 			clusters_complet[index] = clu
 	nb=0
-	for id,clu in clusters_complet.iteritems():
-		print id,clu
 	
+	for level,clusts in clusters_level.iteritems():
+		print 'level:'+str(level)+':'+str(len(clusts))+' nodes\n'		
 
+		for index in clusts:
+			try:
+				print level,clusters_complet[below_propre[index][0]]['level']
+			except:
+				pass
+
+			try:
+				print level,clusters_complet[above_propre[index][0]]['level']
+			except:
+				pass
+
+
+	#on prépare la liste des liens asyncrhones au niveau 0
 	for id_univ,clu in clusters.iteritems():
-		clusters[id_univ]['label_nodes'] = return_label(scores_label[id_univ],40)#on assigne un label composé des 40 premiers termes à l'échelle du noeud		
+		#clusters[id_univ]['label_nodes'] = return_label(scores_label[id_univ],40)#on assigne un label composé des 40 premiers termes à l'échelle du noeud		
 		if 'dia' in clu:#on traite les liens asynchro
 			voisins = clu['dia']
 			for voisin,stre in voisins.iteritems():
-				liens_totaux_dia.append((id_univ,voisin,stre))
-				score_label_edge=merge_label(scores_label,[voisin,id_univ])
-				label_edges.append(return_label(score_label_edge))#on assigne un label sur chaque lien intertemporel
+				liens_totaux_dia_0.append((id_univ,voisin,stre))
+	try:
+		pos=fonctions.dumpingout('pos'+ str(orphan_number))
+		
+		
+	except:
+		pos = network_layout.get_pos(liens_totaux_syn_0,liens_totaux_dia_0,clusters)
+		fonctions.dumpingin(pos,'pos'+ str(orphan_number))
+	
+	
+	
+	#on moyenne les positions et on calcule les label_edges
+	pos_x={}
+	for index,x in pos.iteritems():
+		pos_x[index] = x[0]
+	print pos_x
+	h=0
+	for level,clusts in clusters_level.iteritems():
+		print 'level:'+str(level)+':'+str(len(clusts))+' nodes\n'		
+		for index in clusts:
+			h +=h
+			clu = clusters_complet[index]
+			
+			if index in pos_x:
+				clu['x'] = pos_x[index]
+			else:
+				pos_moy=[]
+				for under in below_propre[index]:
+					pos_moy.append(clusters_complet[under]['x'])					
+				clu['x'] = sum(pos_moy) / float(len(pos_moy))
+			clusters_complet[index] = clu
 
+	print h
+	print len(clusters_complet.keys())
+	
+	#for id,clu in clusters_complet.iteritems():
+#		if id>0 and id<310:
+			#print id
+			#for voisin,stre in clu['syn'].iteritems():
+				#print clusters_complet[voisin]['x'],stre
+
+	#labellisation effective des liens sur l'ensemble des clusters
+	label_edges={}
+	for id_univ,clu in clusters_complet.iteritems():
+		#clusters[id_univ]['label_nodes'] = return_label(scores_label[id_univ],40)#on assigne un label composé des 40 premiers termes à l'échelle du noeud		
+		if 'dia' in clu:#on traite les liens asynchro
+			voisins = clu['dia']
+			sc_lab_1 = clu['sc_lab']
+			for voisin,stre in voisins.iteritems():
+			#	print voisin
+			#	print clusters_complet[voisin]
+				sc_lab_2 = clusters_complet[voisin]['sc_lab']
+			#	print sc_lab_2
+				label_edges[id_univ,voisin]=return_label(merge_dicts_list([sc_lab_1,sc_lab_2]))#on assigne un label sur chaque lien intertemporel
+				
+
+	
+				
+				
+	
+	
+	
+	
 	#on reconstruit la composition micro; la position et les labels des métachamps.
 
 	#on dump.
-	fonctions.dumpingin(liens_totaux_syn,'liens_totaux_syn' + str(orphan_number))
-	fonctions.dumpingin(liens_totaux_dia,'liens_totaux_dia'+ str(orphan_number))
+	fonctions.dumpingin(liens_totaux_syn_0,'liens_totaux_syn' + str(orphan_number))
+	fonctions.dumpingin(liens_totaux_dia_0,'liens_totaux_dia'+ str(orphan_number))
 	fonctions.dumpingin(label_edges,'liens_totaux_label'+ str(orphan_number))
 	#fonctions.dumpingin(clusters,'clusters'+ str(orphan_number))
 	fonctions.dumpingin(years_bins,'years_bins'+ str(orphan_number))
 
 
 
-#network_layout.plot_graph_json(liens_totaux_syn,liens_totaux_dia,clusters,label_edges)
 
+		
 
