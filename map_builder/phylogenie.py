@@ -27,7 +27,7 @@ degmax=5
 try:
 	timelimit=parameters.timelimit
 except:
-	timelimit=1
+	timelimit=5
 
 dist_type=parameters.dist_type
 sep_label = ' --- '

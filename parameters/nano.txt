@@ -1,5 +1,5 @@
 
-name_data="../../inout/data/nano.isy"
+name_data="../../inout/data/embryo.isy"
 language ='english'
 date_depart = date(1970,1,1)
 
@@ -13,9 +13,9 @@ sample=30000
 
 build_link_tables='y'
 
-dated = 1990
+dated = 1970
 datef = 2010
-fenetre = 1
+fenetre = 5
 overlap = 0
 dist_type='precision'
 nofigure=0

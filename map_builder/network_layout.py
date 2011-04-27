@@ -7,6 +7,8 @@ import networkx as nx
 import numpy as np
 try:
 	import matplotlib.pyplot as plt
+	matplotlib.use('Agg')
+	
 except:
 	pass
 import pyparsing
@@ -391,19 +393,176 @@ def plot_graph(liens_totaux_syn,liens_totaux_dia,clusters):
 	forces_plot=[]
 	for x in forces:
 		forces_plot.append(x*1.4)
-#	nx.draw_networkx_edges(G,pos,None,width=forces_plot)
-#	nx.draw_networkx_nodes(G,pos,None,epaisseur.values())
+	nx.draw_networkx_edges(G,pos,None,width=forces_plot)
+	nx.draw_networkx_nodes(G,pos,None,epaisseur.values())
 	
 	#nx.draw_networkx_labels(G,pos,labels,font_size=12,font_color='blue')
 	print 'labels added'
-#	i = random.randint(1,10)
-#	plt.savefig(path_req + str(i) + '.png')
+	i = random.randint(1,10)
+	plt.savefig(path_req + str(i) + '.png')
 	return G,epaisseur_0,pos
 
 
 def get_pos(liens_totaux_syn,liens_totaux_dia,clusters):
 	G,epaisseur_0,pos=plot_graph(liens_totaux_syn,liens_totaux_dia,clusters)
 	return pos
+
+
+def get_G(clusters,syn=False):
+	G=nx.Graph()
+	for x,clu in clusters.iteritems():
+		G.add_node(x,epaisseur=clu['epaisseur'])
+		if 'dia' in clu:
+			for voisin,stre in clu['dia'].iteritems():
+				G.add_edge(int(x),int(voisin))
+		if syn==True:
+			if 'syn' in clu:
+				for voisin,stre in clu['syn'].iteritems():
+					G.add_edge(int(x),int(voisin),weight=float(stre))
+	return G
+
+def connect(G):
+	return nx.connected_components(G)
+
+
+def plot_graph_G(G,vpos,title):
+	# print '****************\n'
+	# print G.nodes()
+	# print '****************\n'
+	# print G.edes()
+	# print '****************\n'
+	# print vpos.keys()
+	#on initialise le graphe
+	epaisseurs=[]
+	width_e=[]
+	for x in G.nodes():
+		epaisseurs.append(G.node[x].get('epaisseur',1))
+	for x,y in  G.edges():
+		width_e.append(G[x][y].get('weight',1))
+	nx.draw_networkx_edges(G,vpos,width=width_e)
+	nx.draw_networkx_nodes(G,vpos,node_size=epaisseurs)
+
+#	nx.draw_networkx_edges(G,pos,None,width=forces_plot)
+#	nx.draw_networkx_nodes(G,pos,None,epaisseur.values())
+
+ 	#plt.show()
+	labels={}
+	for x in G.nodes():
+		labels[x] =str(x)
+		
+	nx.draw_networkx_labels(G,vpos,labels,font_size=10,font_color='blue')
+	#print 'labels added'
+	#i = random.randint(1,10)
+	plt.savefig(path_req + str(title) + '.png')
+	plt.close('all')
+#traiter les noedus isolés aussi...			
+
+
+
+
+def plot_graph_pos(clusters,title,posx = 0,syn=False):
+
+	#on initialise le graphe
+	G=nx.Graph()
+	stress=[]
+	for x,clu in clusters.iteritems():
+		if 'dia' in clu:
+			for voisin,stre in clu['dia'].iteritems():
+				stress.append(stre)
+	print 'max(stress)'
+	print max(stress)
+	vpos={}
+	strenghts,epaisseurs,labels=[],[],{}
+	for x,clu in clusters.iteritems():
+		G.add_node(x,weight=clu['epaisseur'])
+		if posx==0:
+			if 'x' in clu:
+				vpos[x] = (clu['x'],clu['y'])
+			else:
+				vpos[x] = (random.random(),clu['y'])
+		else:
+			vpos[x] = (posx[x],clu['y'])
+				
+		labels[x]=''
+		epaisseurs.append(clu['epaisseur'])
+		if 'dia' in clu:
+			for voisin,stre in clu['dia'].iteritems():
+				G.add_edge(int(x),int(voisin))
+				#if title==0:
+				#	strenghts.append(.2)
+				#else:
+				strenghts.append(stre/max(stress)*2)
+
+		if syn==True:
+			if 'syn' in clu:
+				for voisin,stre in clu['syn'].iteritems():
+					G.add_edge(int(x),int(voisin))
+					#if title==0:
+					#	strenghts.append(.2)
+					#else:
+					strenghts.append(stre/max(stress)*2 * 10)
+			
+	nx.draw_networkx_edges(G,vpos,None,width=strenghts)
+	nx.draw_networkx_nodes(G,vpos,None,epaisseurs)
+
+#	nx.draw_networkx_edges(G,pos,None,width=forces_plot)
+#	nx.draw_networkx_nodes(G,pos,None,epaisseur.values())
+
+ 	#plt.show()
+
+	nx.draw_networkx_labels(G,vpos,labels,font_size=10,font_color='blue')
+	#print 'labels added'
+	#i = random.randint(1,10)
+	plt.savefig(path_req + str(title) + '.png')
+	plt.close('all')
+#traiter les noedus isolés aussi...			
+
+
+	# print vpos
+	# epaisseur = {}
+	# periodes=[]
+	# vert_pos={}
+	# labels={}
+	# 
+	# for k,row in clusters.iteritems():
+	# 	periode=int(row['periode'])
+	# 	labels[k] = k
+	# 	vpos[k][1]=periode
+	# 	if not periode in periodes:
+	# 		periodes.append(periode)
+	# 	try:
+	# 		epaisseur[k] = 4+int(4 * float(row['epaisseur']))
+	# 	except:
+	# 		epaisseur[k] = 4
+	# 	vert_pos[k] = periode
+	# #normalisation des épaisseurs:
+	# epaisseur_norm={}
+	# width_total = sum(epaisseur.values())
+	# for k,width in epaisseur.iteritems():
+	# 	epaisseur_norm[k] = float(width) / width_total * 1000.
+	# epaisseur=epaisseur_norm
+	# print 'order'
+	# #print G.order()
+	# vpos_0 = deepcopy(vpos)
+	# 
+	# print "computing graph layout"	
+	# #print vpos
+	# 
+	#pos = layout.spring_layout(G,vert_pos,dim=2,pos=None,fixed=None,iterations=500,weighted=True,scale=1)
+	# pos = spring_layout_1d(G,periodes,epaisseur,iterations=nb_iterations,dim=2,node_pos=vpos_0)
+	# epaisseur_0={}
+	# for u,e in epaisseur.iteritems():
+	# 	epaisseur_0[u] =np.power(epaisseur[u],1)
+	# 
+	# for x in G.edges(data=True):
+	# 	if x[2]['key']==0:
+	# 		G.remove_edge(*x[:2])
+	# forces_plot=[]
+	# for x in forces:
+	# 	forces_plot.append(x*1.4)
+
+
+
 
 def plot_graph_json(liens_totaux_syn,liens_totaux_dia,clusters,label_edges):
 	print clusters

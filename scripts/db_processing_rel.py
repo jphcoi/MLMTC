@@ -124,6 +124,9 @@ for x in vecteurs:
 	#fonctions_bdd.remplir_table(name_bdd,'sem',lienssem,"(concept1,concept2,jours,id_b,requete,identifiant_unique)")
 	#ex('CREATE TABLE '+ name_table +' (id INTEGER PRIMARY KEY,concept1 INTEGER,concept2 INTEGER,periode INTEGER,cooccurrences INTEGER,distance float,requete VARCHAR(200),identifiant_unique VARCHAR(20) unique)')
 
+
+print 'on remplit maintenant la table sem_weighted'
+
 lienssem_weighted=aggreger_periode(lienssem)
 fonctions_bdd.remplir_table(name_bdd,'sem_weighted',lienssem_weighted,"(concept1,concept2,periode,cooccurrences)")
 	

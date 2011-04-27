@@ -215,21 +215,53 @@ concepts = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'concepts','id,c
 dic_concepts ={}
 for con in concepts:
 	dic_concepts[con[1]] = con[0]
-concepts_billets = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'billets','id,concepts,jours')
+
+
+
+
+termsandblogs='n'
+try:
+	termsandblogs = parameters.termsandblogs#mix entre termes et blogs.
+except:
+	pass
+
+if termsandblogs=='y':
+	blogs = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'auteurs','id,auteurs')
+	dic_blogs ={}
+	N0 = len(dic_concepts.keys())
+	for blo in blogs:
+		dic_blogs[blo[1]] = int(blo[0])+N0
+
+
+concepts_billets = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'billets','id,concepts,jours,href')
 concepts_index=[]
 billet_jour={}
 for cons in concepts_billets:
 	id_b= cons[0]
 	billet_jour[id_b]=cons[2]
+	
+
+	id_conc=[]
 	if len(cons[1])>0:
 		names =cons[1].split(";")
-		id_conc=[]
 		for nom in names:
 			indexterme = dic_concepts[nom.replace("popostrophe","'")]
 			if not indexterme in id_conc:
 				id_conc.append(indexterme)
-	else:
-		id_conc=[]
+				
+	if termsandblogs=='y':#on rajoute les éléments sociaux
+	
+		if len(cons[3])>0:
+			names =cons[3].split("***")
+			for nom in names:
+				try:
+					indexterme = dic_blogs[nom.replace("popostrophe","'")]					
+					if not indexterme in id_conc:
+						id_conc.append(indexterme)
+				except:
+					pass
+				
+		
 	concepts_index.append([id_b,id_conc])
 
 print "    - mise a jour de la table billets avec les index des cocncepts obtenus via la table concepts..."

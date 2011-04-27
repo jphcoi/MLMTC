@@ -494,7 +494,7 @@ CF_weight_v = [0.5,0.2,0.5,0.5,0.5]
 	
 seuil_net_champ_v = [0.,0.,0.,0.,0.]
 taillemin_v=[3,3,3,3,3,3]
-taillemax_v=[30,25,25,25,25,25]
+taillemax_v=[40,40,40,40,40,40]
 kmin_v = [5,5,5,5,5,5]
 kmin_v = [3,3,3,3,3,3]
 kmin_v = [4,4,4,4,4,4]
@@ -526,6 +526,7 @@ while fini==1:
 	print "niveau = "+ str(niveau)
 	
 	dico_transition= lire_dictionnaire_transition(niveau)
+	
 	CFinder_launch(niveau,dico_termes,degmax,CF_weight)#on lance CFinder au besoin
 	communities =parser_CFinder(niveau)#on récupère les données ainsi produites
 	print " \n- niveau = "+ str(niveau)

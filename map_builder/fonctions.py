@@ -84,6 +84,23 @@ def ecrire_reseau_CF(dist_mat,years_bins,dist_type,seuil,niveau):
 #					print 'out'
 		print '------- fichier: ' +str('reseauCF_'+dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt')+ ' ecrit dans le repertoire: '+path_req + 'reseau/'
 
+
+def ecrire_reseau_CF_inter(dist_mat,inter,dist_type,seuil,niveau):		 
+	#for inter  in range(len(years_bins)):
+	if 1:
+		try:
+			os.mkdir(path_req+'reseau')
+		except:
+			pass
+		fichier_CF=open(path_req +'reseau' + '/'+ 'reseauCF_'+'niv_'+str(niveau)+'_'+dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt','w')
+		for x,y in dist_mat.iteritems():
+			#if x[2]==inter:
+				if float(dist_mat[x])>seuil:
+					fichier_CF.write(str(x[0])+ '\t' + str(x[1]) + '\t' + str(y) + '\n')
+#					print 'out'
+		print '------- fichier: ' +str('reseauCF_'+dist_type+'_'+str(years_bins[inter][0])+'-'+str(years_bins[inter][-1])+'.txt')+ ' ecrit dans le repertoire: '+path_req + 'reseau/'
+
+
 def ecrire_dico(champs,dico_transition,dico_termes,niveau):
 
 	for inter  in range(len(years_bins)):

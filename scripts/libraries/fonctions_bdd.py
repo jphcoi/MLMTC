@@ -294,6 +294,7 @@ def select_bdd_table_champ_simple(name_bdd,table,champ, where = ' where 1'):
 	if not 'where' in where:
 		where = "where " + where 
 	connection,ex = connexion(name_bdd)
+	print "SELECT "  + champ +  "   from " +table + ' '  + where 
 	sortie= ex("SELECT "  + champ +  "   from " +table + ' '  + where ).fetchall()
 	#print "       - selection du/des champ(s) \"" + champ + "\" de la table \"" + table + "\" dans la BDD " +name_bdd
 	sortie_ok = []
@@ -566,7 +567,7 @@ def remplir_table(name_bdd,name_table,champs_liste,champs_name):
 	#	print champ
 		if isList(champ) or istuple(champ):
 			for chaine in champ:
-				if not type(chaine)==type(5):
+				if not type(chaine)==type(5) and not type(chaine)==type(5.):
 					if "\'" in chaine:
 						chaine=(chaine.replace("\'","popostrophe"))
 					chaine = str(chaine)					
