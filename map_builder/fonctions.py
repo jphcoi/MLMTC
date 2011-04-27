@@ -55,6 +55,16 @@ def lexique():
 	dico_termes ={}
 	for x,y in zip(lesidstermes,lestermes):
 		dico_termes[x[0]]=y[0]
+	
+	
+	
+	if termsandblogs=='y':
+		N = len(dico_termes.keys())
+		lesidstermes = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'auteurs','id')
+		lestermes = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'auteurs','auteurs')
+		for x,y in zip(lesidstermes,lestermes):
+			dico_termes[x[0] + N]= y[0] 
+		
 	return dico_termes
 
 def ecrire_reseau(dist_mat,years_bins,dist_type,seuil,niveau,legende_noeuds):		 

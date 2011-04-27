@@ -526,7 +526,6 @@ try:# si on a deja calcule le reseau de proximit
 					dic = dist_mat_temp_res[int(x[0])]
 				dic[int(x[1])]=float(y)
 				dist_mat_temp_res[int(x[0])] = dic
-			print 'la'
 			dist_mat_temp_res_10 = fonctions.seuiller(dist_mat_temp_res,10)
 			print 'on construit maintenant dist_mat pour chaque periode ' + str(inter)
 			for x,y in dist_mat_temp.iteritems():
