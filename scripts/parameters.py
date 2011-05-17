@@ -17,14 +17,15 @@ def load_param(fichier_name):
 	lines  = fichier.readlines()
 	idx = 0
 	for ligne in lines:
-		idx = idx+1
-		if len(ligne)>2:
-			if idx<len(lines):
-				ligne=ligne[:-1]
-			lignev=ligne.split('=')
-			nom_param = lignev[0].replace(' ','')
-			val_param = lignev[1].replace(' ','')
-			parametres[nom_param] = val_param
+		if ligne[0]!='#':
+			idx = idx+1
+			if len(ligne)>2:
+				if idx<len(lines):
+					ligne=ligne[:-1]
+				lignev=ligne.split('=')
+				nom_param = lignev[0].replace(' ','')
+				val_param = lignev[1].replace(' ','')
+				parametres[nom_param] = val_param
 	return parametres
 	
 def connexion(name_bdd):
