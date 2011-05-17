@@ -183,7 +183,7 @@ if "andrei" in os.getcwd():
 if "camille" in os.getcwd():
 	treetagger_dir = treetagger_dir_cam
 	CFinder_CL = "./CFinder_commandline_mac"
-if "david" in os.getcwd():
+if "gitcode" in os.getcwd():
 	treetagger_dir = treetagger_dir_david
 	#CFinder_CL = "./CFinder_commandline.exe"
 	CFinder_CL = "./CFinder_commandline"
