@@ -165,6 +165,9 @@ treetagger_dir_cointet='/Users/jean-philippecointet/Desktop/treetagger/'
 
 treetagger_dir_cam='/Users/camille/src/NLP/'
 treetagger_dir_david='F:\Treetagger\TreeTagger'
+
+treetagger_dir_david='/media/OS/sciences/treetagger/'
+
 treetagger_dir_andrei='C:/Users/andrei/Documents/Projects/Ifris/TreeTagger'
 
 if "duloquin"  in os.getcwd():
@@ -180,9 +183,10 @@ if "andrei" in os.getcwd():
 if "camille" in os.getcwd():
 	treetagger_dir = treetagger_dir_cam
 	CFinder_CL = "./CFinder_commandline_mac"
-if "F:" in os.getcwd():
+if "david" in os.getcwd():
 	treetagger_dir = treetagger_dir_david
-	CFinder_CL = "./CFinder_commandline.exe"
+	#CFinder_CL = "./CFinder_commandline.exe"
+	CFinder_CL = "./CFinder_commandline"
 if "iscpif" in os.getcwd():
 	treetagger_dir = "/iscpif/users/cointet/Bureau/treetagger"
 	CFinder_CL = "./CFinder_commandline"
