@@ -49,7 +49,7 @@ def build_dico():
 	print 'dictionnaire des termes écrit, taille: '+str(len(dico_termes))
 	return dico_termes
 	
-def lexique():
+def lexique(termsandblogs='n'):
 	lesidstermes = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'concepts','id')
 	lestermes = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'concepts','forme_principale')
 	dico_termes ={}

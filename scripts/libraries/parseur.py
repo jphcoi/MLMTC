@@ -55,7 +55,7 @@ def insider(Kws,content):
 #written by Telmo Menezes
 class XML2DB:
     
-    def __init__(self, indir, dbpath, continent, community, territory):
+    def __init__(self, indir, dbpath, continent,community, territory):
         self.indir = indir
         self.dbpath = dbpath
         self.continent = continent
@@ -85,7 +85,7 @@ class XML2DB:
     def accept_blog(self, continent, community, territory):
         if (len(self.continent) > 0) and (continent != self.continent):
             return False
-        if (len(self.community) > 0) and (community != self.community):
+        if (len(self.community) > 0) and (community != self.community):        
             return False
         if (len(self.territory) > 0) and (territory != self.territory):
             return False
@@ -439,9 +439,10 @@ def process_field(champs_liste,dico_article,sep):
 
 
 
-def extract_champs_lfl(filename,sep,continent=''):
+def extract_champs_lfl(filename,sep,continent='',pays=''):
 	articles=[]
-	articles=XML2DB(filename, 'telmo.db', continent, '', '').run()
+	print 'pays', pays
+	articles=XML2DB(filename, 'telmo.db', continent,pays, '').run()
 	print "---",len(articles),"posts processed."
 	return articles
 
@@ -1176,7 +1177,12 @@ def extraire_donnees(name_data,sep):
 			continent = parameters.continent
 		except:
 			continent =''
-		champs = extract_champs_lfl(name_data,sep,continent)
+		try:
+			pays = parameters.pays
+		except:
+			pays =''
+
+		champs = extract_champs_lfl(name_data,sep,continent,pays)
 	if ".rss" == name_data[-4:]:#export au format .lfl: linkfluence type III ou IV
 		champs = extract_champs_rss(name_data,sep)
 	if ".isy" == name_data[-4:]:#export au format .lfl: linkfluence type III ou IV

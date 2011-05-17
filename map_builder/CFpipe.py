@@ -26,6 +26,11 @@ timelimit='1'
 CFinder_CL=parameters.CFinder_CL
 dist_type=parameters.dist_type
 sep_label = ' --- '
+try:
+	termsandblogs=parameters.termsandblogs
+except:
+	termsandblogs='n'
+print termsandblogs
 
 def lire_dictionnaire_transition(niveau):
 	transition = {}
