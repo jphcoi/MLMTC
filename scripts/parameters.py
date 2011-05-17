@@ -169,7 +169,7 @@ treetagger_dir_david='F:\Treetagger\TreeTagger'
 treetagger_dir_david='/media/OS/sciences/treetagger/'
 
 treetagger_dir_andrei='C:/Users/andrei/Documents/Projects/Ifris/TreeTagger'
-
+print os.getcwd()
 if "duloquin"  in os.getcwd():
 	treetagger_dir = treetagger_dir_jp
 	CFinder_CL = "./CFinder_commandline_mac"
