@@ -558,9 +558,19 @@ def istuple(obj):
    """
    return type(obj)==type((1,2))
 
-
+def remplir_table_new(name_bdd,name_table,champs_liste,champs_name):
+	connection, ex = connexion(name_bdd)
+	sql_insert =  'INSERT OR IGNORE INTO ' + name_table+' '+ champs_name + " VALUES("  + ','.join(['?'] * (len(champs_liste[0]))) + ")"	
+	connection.executemany(sql_insert,champs_liste)
+	# for champ in champs_liste: 
+	# 	ex(sql_insert,champ)
+	connection.commit()
+	connection.close()
+	print "      + table " + name_table+" remplie"
+# 	
 def remplir_table(name_bdd,name_table,champs_liste,champs_name):
 	connection, ex = connexion(name_bdd)
+	print 'remplir_table'
 #	champs_name = "(title,date,permalink,site,categorie1,categorie2,categorie3,content_html,content,href,requete,identifiant_unique)"#,content,href,concepts)
 	for champ in champs_liste: 
 		champ_sql = ''

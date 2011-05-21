@@ -27,6 +27,7 @@ from datetime import timedelta
 from datetime import date
 import fonctions
 import multiprocessing
+import time
 ###################################
 #######0.quelques parametres#######
 ###################################
@@ -559,8 +560,12 @@ try:# si on a deja calcule le reseau de proximit
 				deja.append(x)
 				dist1 = dist_mat_10.get((x[1],x[0],x[2]),'')
 				lienssem_weighted.append((x[0],x[1],x[2],dist0,dist1))
-		fonctions_bdd.remplir_table(name_bdd,'sem_weighted',lienssem_weighted,"(concept1,concept2,periode,distance0,distance1)")
-
+		starttime= time.time()
+		
+		fonctions_bdd.remplir_table_new(name_bdd,'sem_weighted',lienssem_weighted,"(concept1,concept2,periode,distance0,distance1)")
+		
+		print '\n\n\ncombien de temps:',time.time()-starttime
+		
 		#remplir_colonne_distance_sem_weighted(dist_mat)		
 		#remplir_colonne_distance_sem_weighted(dist_mat_10)		
 		#print 'on a enregistre la variable dist_mat' + name_date + ' en mémoire et remplit la table sem_weighted avec les distances positives.'

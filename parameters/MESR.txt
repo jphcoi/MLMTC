@@ -1,7 +1,7 @@
 name_data="../../inout/data/MESR-light.lfl"
 language ='french'
 date_depart =  date(2010,1,1)
-freqmin = 5
+freqmin = 3
 ng_filter=[1,2,3,3,3]
 top = 500
 sample=4000000
@@ -13,7 +13,7 @@ dist_type='precision'
 build_link_tables='y'
 maxTermLength=5
 nofigure=0
-user_interface='n'
+user_interface='y'
 withrequete=0
 continent=''
 termsandblogs='n'
