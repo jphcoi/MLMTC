@@ -489,12 +489,14 @@ def edges_list_reverse(edges):
 	return distance_champ
 	
 dico_termes=fonctions.lexique()#on cree le dictionnaire des termes
+print dico_termes
 import context_process
 dist_mat = context_process.dist_mat#on recupere la matrice de distance entre termes
 #p_cooccurrences=context_process.p_cooccurrences#on recupere la matrice de cooccurrences entre termes
 fini=1
 niveau=0
 CF_weight_v = [0.5,0.2,0.5,0.5,0.5]
+#CF_weight_v = [0.4,0.2,0.5,0.5,0.5]
 
 	
 seuil_net_champ_v = [0.,0.,0.,0.,0.]
