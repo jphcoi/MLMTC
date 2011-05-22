@@ -487,7 +487,8 @@ def edges_list_reverse(edges):
 			poid = z[1]
 			distance_champ[(ori,dest,t)]=poid
 	return distance_champ
-	
+
+print 'on recupere le lexique'	
 dico_termes=fonctions.lexique()#on cree le dictionnaire des termes
 #print dico_termes
 import context_process
