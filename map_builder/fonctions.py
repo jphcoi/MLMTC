@@ -56,7 +56,7 @@ def build_dico(termsandblogs='n'):
 		for x,y in zip(lesidstermes,lestermes):
 			print x[0],y[0]
 			dico_termes[x[0] + N]= y[0] 
-
+		
 	print 'dictionnaire des termes écrit, taille: '+str(len(dico_termes))
 	return dico_termes
 	

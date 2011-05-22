@@ -50,6 +50,12 @@ seuil=0
 ###################################
 	
 
+try:
+	termsandblogs=parameters.termsandblogs
+except:
+	termsandblogs='n'
+print termsandblogs
+
 def verif_sym(dictionnaire_temp, sym=0):
 	print 'on contrôle la matrice symétrique'
 	for x,y in dictionnaire_temp.iteritems():
@@ -471,7 +477,7 @@ def get_distance(inter):
 
 
 
-dico_termes=fonctions.build_dico()
+dico_termes=fonctions.build_dico(termsandblogs)
 #print dico_termes	
 
 

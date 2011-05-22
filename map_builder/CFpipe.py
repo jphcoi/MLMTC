@@ -489,7 +489,7 @@ def edges_list_reverse(edges):
 	return distance_champ
 
 print 'on recupere le lexique'	
-dico_termes=fonctions.lexique()#on cree le dictionnaire des termes
+dico_termes=fonctions.lexique(termsandblogs)#on cree le dictionnaire des termes
 #print dico_termes
 import context_process
 dist_mat = context_process.dist_mat#on recupere la matrice de distance entre termes
