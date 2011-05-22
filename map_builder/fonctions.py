@@ -40,12 +40,23 @@ treetagger_dir =parameters.treetagger_dir
 years_bins = parameters.years_bins
 dist_type=parameters.dist_type
 
-def build_dico():
+def build_dico(termsandblogs='n'):
 	lesidstermes = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'concepts','id')
 	lestermes = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'concepts','forme_principale')
 	dico_termes ={}
 	for x,y in zip(lesidstermes,lestermes):
 		dico_termes[x[0]]=y[0]
+	if termsandblogs=='y':
+		N = len(dico_termes.keys())
+		print 'authors and concepts are merged'
+		print N
+
+		lesidstermes = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'auteurs','id')
+		lestermes = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'auteurs','auteurs')
+		for x,y in zip(lesidstermes,lestermes):
+			print x[0],y[0]
+			dico_termes[x[0] + N]= y[0] 
+
 	print 'dictionnaire des termes écrit, taille: '+str(len(dico_termes))
 	return dico_termes
 	
