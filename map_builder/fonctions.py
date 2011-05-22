@@ -60,9 +60,13 @@ def lexique(termsandblogs='n'):
 	
 	if termsandblogs=='y':
 		N = len(dico_termes.keys())
+		print 'authors and concepts are merged'
+		print N
+		
 		lesidstermes = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'auteurs','id')
 		lestermes = fonctions_bdd.select_bdd_table_champ_simple(name_bdd,'auteurs','auteurs')
 		for x,y in zip(lesidstermes,lestermes):
+			print x[0],y[0]
 			dico_termes[x[0] + N]= y[0] 
 		
 	return dico_termes
