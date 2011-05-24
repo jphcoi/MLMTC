@@ -32,6 +32,11 @@ except:
 dist_type=parameters.dist_type
 sep_label = ' --- '
 seuil=0.0
+try:
+	termsandblogs=parameters.termsandblogs
+except:
+	termsandblogs='n'
+print termsandblogs
 
 
 
@@ -454,7 +459,7 @@ sortie = path_req + 'gexf/' + 'reseau_multilevel_temporel'+'_'+ dist_type +'_'+s
 	
 gexf.gexf_builder_3d(noeuds_labelbis,map_edgesbis,sortie,levelsbis,timesbis,attribut,sonsbis,fathersbis)
 
-dico_termes=fonctions.lexique()#on cree le dictionnaire des termes
+dico_termes=fonctions.lexique(termsandblogs)#on cree le dictionnaire des termes
 
 try:
 	fonctions_bdd.drop_table(name_bdd,'phylo')
